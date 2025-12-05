@@ -20,6 +20,9 @@ class TransformerLayerController(nn.Module):
         self.chunk_idx = 0
         self.is_decoding = False # 標記是否進入 Decoding 階段
 
+        # [新增] 用來持有 Llama 的 RoPE 模組
+        self.rotary_emb_module = None
+
         # 初始化四大核心模組
         self.stats_manager = StatisticsManager(config)
         self.quantizer = RealTimeQuantizer(config)
@@ -43,34 +46,24 @@ class TransformerLayerController(nn.Module):
         self.is_decoding = False
 
     def forward(self, q_tensor, k_tensor, v_tensor):
-        """
-        處理單層的 KV Cache 壓縮與 Attention 計算。
-        流程：Stats -> Quantize/Warmup -> Store -> Compute Attention
-        """
-        # 1. 判斷模式 (Eq 3-1)
-        # 如果是 Decoding 階段，視為 Quantization Mode (沿用最後的 EMA)
-        # 如果是 Prefill 階段，檢查 chunk_idx < N_warmup
-        is_warmup = (not self.is_decoding) and (self.chunk_idx < self.config.n_warmup)
-        
-        # 2. 統計數據更新 (Statistics Manager) 
-        # 即使是 Warm-up，EMA 也要更新以進行 Scale Stabilization
-        # Key: Pre-RoPE (假設傳入的 k_tensor 是 Pre-RoPE，或由外部處理)
-        # Value: Post-RoPE
+        # 1. Stats Update
         k_scale = self.stats_manager.update_key_stats(k_tensor)
         v_scale = self.stats_manager.get_value_stats(v_tensor)
 
-        # 3. 壓縮與儲存 (Quantizer & KV Manager)
-        if is_warmup:
-            # Warm-up Phase: 存 FP16 
+        # 2. Store
+        if (not self.is_decoding) and (self.chunk_idx < self.config.n_warmup):
             self.kv_manager.store_warmup(k_tensor, v_tensor)
         else:
-            # Quantization Phase: 執行 Outlier Isolation + INT4 量化 
             k_compressed = self.quantizer.compress(k_tensor, k_scale)
             v_compressed = self.quantizer.compress(v_tensor, v_scale)
             self.kv_manager.store_quantized(k_compressed, v_compressed)
 
-        # 4. Attention 計算 (Attention Core) 
-        # 重建完整 FP16 KV (包含歷史 Cache) 並計算 Output
-        attn_output = self.attn_core.compute_attention(q_tensor, self.kv_manager)
+        # 3. Compute Attention
+        # [修正] 傳遞 rotary_emb_module 給 Core
+        attn_output = self.attn_core.compute_attention(
+            q_tensor, 
+            self.kv_manager,
+            rotary_emb_module=self.rotary_emb_module
+        )
         
         return attn_output
