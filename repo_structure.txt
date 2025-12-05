@@ -1,0 +1,37 @@
+LiveKVQuant-P/
+├── README.md
+├── repo_structure.txt
+├── requirements.txt
+├── config.py                   # 簡單配置或使用 YAML
+├── main_inference.py           # 執行入口
+├── tests/                      # [NEW] 測試目錄 (Perplexity 建議)
+│   ├── __init__.py
+│   ├── test_ema_utils.py       # 測試 Clipped EMA 數學正確性
+│   ├── test_quant_utils.py     # 測試 Outlier 分離與量化誤差
+│   └── test_integration.py     # 測試完整流程 (End-to-End)
+├── livekvquant/
+│   ├── __init__.py
+│   ├── model_wrapper.py
+│   ├── utils/                  # [NEW] 數學公式庫 (Perplexity 建議)
+│   │   ├── __init__.py
+│   │   ├── ema_utils.py        # 對應 Eq 3-2, 3-3, 3-4
+│   │   ├── quant_utils.py      # 對應 Eq 3-5, 3-6, 3-7 (Clamp/Round)
+│   │   └── outliers.py         # 負責 top-k 邏輯
+│   └── modules/                # 五大核心模組 (負責狀態管理與調度)
+│       ├── __init__.py
+│       ├── layer_controller.py
+│       ├── statistics_manager.py  # Import ema_utils
+│       ├── quantizer.py           # Import quant_utils & outliers
+│       ├── kv_cache_manager.py
+│       └── attention_core.py
+├── data/                       # [數據處理]
+│   ├── __init__.py
+│   ├── longbench_loader.py     # 專門負責 LongBench 的下載與預處理
+│   └── wikitext_loader.py      # 負責 Wikitext-2 (計算 Perplexity 用)
+├── evaluation/                 # [評估指標]
+│   ├── __init__.py
+│   ├── metrics.py              # 計算 Perplexity, F1 Score, Accuracy 
+│   └── profiler.py             # 測量 Memory Saving & Latency 
+└── scripts/                    # 實驗腳本
+    ├── run_inference.py        # 單次推論測試
+    └── run_ablation.py         # 自動化 Ablation Study 腳本

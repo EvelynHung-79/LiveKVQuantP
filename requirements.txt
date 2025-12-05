@@ -1,0 +1,32 @@
+# --- Deep Learning Framework (CUDA 12.x compatible) ---
+# PyTorch 2.4+ 已經良好支援 CUDA 12.4
+torch>=2.4.0
+torchvision>=0.19.0
+torchaudio>=2.4.0
+
+# --- LLM & Models (LLaMA-3 Support) ---
+# LLaMA-3 需要 transformers >= 4.40.0
+transformers>=4.40.0
+accelerate>=0.28.0
+
+# --- Data Loading (LongBench & Wikitext) ---
+# 對應 data/longbench_loader.py 的需求
+datasets>=2.19.0
+
+# --- Configuration Management ---
+# 對應 config.py 與 configs/*.yaml 的讀取
+pyyaml>=6.0.1
+
+# --- Numerical & Scientific Computing ---
+# 用於計算 Metrics (如 Perplexity) 與 Utils 數學運算
+numpy>=1.26.0
+scipy>=1.13.0
+
+# --- Testing Framework (Perplexity 建議) ---
+# 對應 tests/ 資料夾，用於驗證數學公式正確性
+pytest>=8.0.0
+
+# --- Utilities ---
+tqdm>=4.66.0      # 進度條 (跑長文本推論必備)
+pandas>=2.2.0     # 用於整理實驗數據與輸出 CSV 表格
+matplotlib>=3.8.0 # (選用) 若需要畫 Ablation Study 的圖表
