@@ -56,6 +56,10 @@ def restore_outliers(dequantized_tensor: torch.Tensor,
     if sparse_values.numel() == 0:
         return dequantized_tensor
 
+    # dequantized_tensor 可能是 FP32 (計算產生)，而 sparse_values 是 FP16 (原始保留)
+    if dequantized_tensor.dtype != sparse_values.dtype:
+        dequantized_tensor = dequantized_tensor.to(sparse_values.dtype)
+
     # 為了操作方便，先 flatten
     flat_recon = dequantized_tensor.flatten()
     

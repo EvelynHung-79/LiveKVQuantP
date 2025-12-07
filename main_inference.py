@@ -139,7 +139,7 @@ def main():
         traceback.print_exc()
         return
 
-    metrics = profiler.stop()
+    metrics = profiler.stop(num_output_tokens=128)
     # --- INFERENCE END ---
 
     # 5. 輸出結果與指標
@@ -152,9 +152,9 @@ def main():
     print("\n" + "="*40)
     print("PERFORMANCE METRICS")
     print("="*40)
-    print(f"Peak Memory Usage : {metrics['peak_memory_mb']:.2f} MB")
-    print(f"Total Latency     : {metrics['latency_ms']:.2f} ms")
-    print(f"Throughput        : {metrics['latency_ms'] / len(input_text.split()):.2f} ms/token (approx)")
+    print(f"Peak Memory Usage : {metrics.peak_memory_mb:.2f} MB")
+    print(f"Total Latency     : {metrics.total_latency_ms:.2f} ms")
+    print(f"Throughput        : {metrics.throughput_tokens_per_sec:.2f} tokens/sec")
     print("="*40)
 
     # (Optional) Save metrics to CSV for plotting

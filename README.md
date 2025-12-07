@@ -1,5 +1,3 @@
-***
-
 # LiveKVQuant-P
 
 LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 進行 **即時 KV Cache 量化與壓縮** 的研究型實作專案。目標是在不丟棄任何 token 的前提下，透過 **Chunk-wise Real-time Quantization**、**Clipped EMA 統計穩定** 與 **Outlier 分離儲存**，在長上下文推論中大幅降低 KV Cache 記憶體用量，同時維持模型的推論品質。
@@ -13,88 +11,117 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
 - 使用 **Chunking 機制**：
   - 目前預設 `chunk_size = 512`。
   - Warm-up 階段使用前 `2` 個 chunks 先穩定 EMA 統計，再開始正式量化。
-- 提供可重現的推論、評估與 ablation study pipeline，便於撰寫與驗證論文實驗。
-
-## 專案結構概覽
-參考 repo_structure.txt 檔案
+- 提供可重現的推論、評估與 ablation study pipeline。
 
 ## 安裝與環境設定
 
-1. 建立並啟用虛擬環境（選擇性但建議）：
+1. **建立並啟用虛擬環境（強烈建議）：**
    ```bash
    python -m venv .venv
-   source .venv/bin/activate      # Windows 使用 .venv\Scripts\activate
+   source .venv/bin/activate      # Linux/Mac
+   # .venv\Scripts\activate       # Windows
    ```
 
-2. 安裝相依套件：
-   ```bash
-   # 這是 PyTorch 官方針對 CUDA 12.4 的安裝指令
-   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-   # 再跑 requirements.txt
-   pip install -r requirements.txt
-   ```
+2.  **安裝相依套件：**
 
-3. 在 `config.py` 中確認關鍵參數，例如：
-   - `CHUNK_SIZE = 512`
-   - `WARMUP_CHUNKS = 2`
-   - 模型名稱、權重路徑、是否啟用 quantization 等。
+    ```bash
+    pip install --upgrade pip
 
-## 基本使用方式
+    # 1. 先安裝 PyTorch (建議依照您的 CUDA 版本選擇，以下為 CUDA 12.4 範例)
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
-### 1. 執行主要推論入口
+    # 2. 安裝其他專案依賴
+    pip install -r requirements.txt
+    ```
 
-`main_inference.py` 會載入模型、建立 LiveKVQuant-P pipeline，並在指定資料集上執行推論與量化：
+3.  **配置設定：**
+
+      - 主要參數位於 `config.py`（如 `CHUNK_SIZE`, `WARMUP_CHUNKS`）。
+      - 執行時亦可透過命令列參數覆寫部分設定。
+
+## 測試 (Testing)
+
+為確保環境與核心模組運作正常，請執行單元測試。
+**注意：** 請使用 `python -m pytest` 以確保模組路徑正確。
+
+```bash
+python -m pytest tests/
+```
+
+測試涵蓋範圍：
+
+  - `test_ema_utils.py`：驗證 Clipped EMA 數學公式 (Eq. 3-2 \~ 3-4)。
+  - `test_quant_utils.py`：驗證量化計算與 Outlier 分離邏輯。
+  - `test_integration.py`：驗證端到端 (End-to-End) 的 Warm-up 與 Phase Transition 流程。
+
+## 使用方式 (Usage)
+
+### 1\. 執行主要推論 (Main Inference)
+
+`main_inference.py` 是專案的主要入口，支援多種輸入模式。
+
+**模式 A：Dummy Test (快速驗證)**
+使用生成的假資料進行快速測試，確認 Pipeline 無誤。
 
 ```bash
 python main_inference.py \
-  --model_name meta-llama/Llama-3-8B \
-  --dataset wikitext \
-  --enable_quantization true
+  --model_id meta-llama/Meta-Llama-3-8B-Instruct \
+  --input_mode dummy \
+  --chunk_size 512
 ```
 
-常見參數（實際依你實作為準）：
-
-- `--model_name`：HuggingFace 模型名稱或本地路徑。
-- `--dataset`：`wikitext` 或 `longbench`。
-- `--enable_quantization`：是否啟用 LiveKVQuant-P。
-- `--max_length`：最大 context 長度。
-
-### 2. 使用 scripts 進行實驗
-
-#### 單次推論測試
+**模式 B：LongBench 資料集評估**
+自動下載並載入 LongBench 資料集進行推論（需指定 `task`）。
 
 ```bash
-python scripts/run_inference.py \
-  --model_name meta-llama/Llama-3-8B \
-  --input_file examples/long_context.txt \
-  --enable_quantization true
+python main_inference.py \
+  --model_id meta-llama/Meta-Llama-3-8B-Instruct \
+  --input_mode longbench \
+  --task narrativeqa
 ```
 
-此腳本適合用來觀察單一長輸入在啟用/未啟用量化下的行為與記憶體使用。
-
-#### Ablation Study
+**模式 C：互動模式 (Interactive)**
+手動輸入 Prompt 進行測試。
 
 ```bash
-python scripts/run_ablation.py \
-  --model_name meta-llama/Llama-3-8B \
-  --dataset longbench \
-  --vary_chunk_size "256,512,1024" \
-  --vary_warmup_chunks "0,1,2"
+python main_inference.py \
+  --model_id meta-llama/Meta-Llama-3-8B-Instruct \
+  --input_mode interactive
 ```
 
-此腳本會自動掃描不同的 `chunk_size`、`warmup_chunks`、或其他超參數設定，並呼叫 `evaluation/metrics.py` 與 `evaluation/profiler.py` 收集指標。
+**可選參數：**
 
-## 測試
+  - `--config`: 指定 YAML 設定檔路徑 (預設 `configs/default.yaml`)。
+  - `--chunk_size`: 覆寫 chunk 大小 (e.g., 512, 1024)。
+  - `--bits`: 覆寫量化位元數 (預設 4)。
+  - `--warmup`: 覆寫 Warm-up chunk 數量。
 
-在本地執行單元測試與整合測試：
+### 2\. 執行實驗腳本 (Scripts)
+
+`scripts/` 目錄下包含特定實驗的執行腳本。這些腳本目前的參數是在 `__main__` 區塊中直接定義的，若需更改設定（如測試不同模型或資料筆數），請直接編輯檔案內容。
+
+#### 批量推論評估 (`scripts/run_inference.py`)
+
+執行 LongBench 特定任務的批量評估，並計算 F1 Score 與記憶體使用量。
 
 ```bash
-pytest tests/
+# 預設執行 NarrativeQA 的前 5 筆資料
+python scripts/run_inference.py
+
+python scripts/run_inference.py --task narrativeqa --num_samples 20 --chunk_size 1024
 ```
 
-推薦先確保：
-- `test_ema_utils.py` 通過（確認數學式 Eq. 3-2 ~ 3-4 實作正確）。
-- `test_quant_utils.py` 通過（量化與 outlier 切分邏輯正確）。
-- `test_integration.py` 通過（端到端管線在小模型/短序列上可正常跑完）。
+*輸出結果將儲存為 JSON 檔案，包含詳細的 Metric 與推論結果。*
 
-***
+#### Ablation Study (`scripts/run_ablation.py`)
+
+針對特定參數（如 EMA Alpha, Warmup Steps）進行掃描，觀察 Perplexity (PPL) 的變化。
+
+```bash
+# 預設測試不同的 ema_alpha 值 [0.01, 0.1, 0.3, 0.5, 0.9]
+python scripts/run_ablation.py
+
+python scripts/run_ablation.py --param_name ema_alpha --values "0.01,0.1,0.5,0.9"
+```
+
+*執行後會生成 `ablation_ema_alpha.csv` 報表。*

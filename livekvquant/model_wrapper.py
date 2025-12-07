@@ -33,20 +33,30 @@ def _custom_attention_forward(
     value_states = self.v_proj(hidden_states)
 
     # 2. Reshape
+    # [修正] 直接從 config 讀取參數，避免 AttributeError
+    num_heads = self.config.num_attention_heads
+    num_key_value_heads = self.config.num_key_value_heads
+    head_dim = self.config.hidden_size // num_heads
+
     # [batch, seq_len, num_heads, head_dim] -> [batch, num_heads, seq_len, head_dim]
-    query_states = query_states.view(bsz, q_len, self.num_heads, self.head_dim).transpose(1, 2)
-    key_states = key_states.view(bsz, q_len, self.num_key_heads, self.head_dim).transpose(1, 2)
-    value_states = value_states.view(bsz, q_len, self.num_key_heads, self.head_dim).transpose(1, 2)
+    query_states = query_states.view(bsz, q_len, num_heads, head_dim).transpose(1, 2)
+    key_states = key_states.view(bsz, q_len, num_key_value_heads, head_dim).transpose(1, 2)
+    value_states = value_states.view(bsz, q_len, num_key_value_heads, head_dim).transpose(1, 2)
 
     # 3. RoPE 計算 (Rotary Positional Embedding)
-    # Llama 3 使用的是 self.rotary_emb
-    kv_seq_len = key_states.shape[-2]
-    
-    # 注意：這裡如果是 Chunking 模式，position_ids 應該由外部傳入正確的值
-    if position_ids is None:
-        cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
+    # [相容性修正] 檢查 kwargs 是否已有 position_embeddings (新版 transformers)
+    cos, sin = None, None
+    if "position_embeddings" in kwargs and kwargs["position_embeddings"] is not None:
+        cos, sin = kwargs["position_embeddings"]
     else:
-        cos, sin = self.rotary_emb(value_states, position_ids)
+        # 舊版或是手動計算 fallback
+        # Llama 3 使用的是 self.rotary_emb (我們在 inject 時確保了它存在)
+        kv_seq_len = key_states.shape[-2]
+        
+        if position_ids is None:
+            cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
+        else:
+            cos, sin = self.rotary_emb(value_states, position_ids)
 
     # 4. RoPE 應用策略 (對應論文 Pre-RoPE Key Quantization)
     # Q: 必須套用 RoPE，因為 Controller/AttentionCore 需要用它來做 Dot Product
@@ -56,8 +66,8 @@ def _custom_attention_forward(
     query_states_rotated, _ = apply_rotary_pos_emb(query_states, key_states, cos, sin)
 
     # 5. 呼叫 Controller
-    # 取得掛載在 Parent Layer 上的 Controller
-    controller = self.parent_layer.livekv_controller
+    # [修正] 直接從 self 取得 controller，避免透過 parent_layer 造成循環參照
+    controller = self.livekv_controller
     
     # 執行 LiveKVQuant-P 流程: Stats -> Quantize -> Store -> Attention
     # 注意傳入的是: Rotated Q, Raw K, Raw V
@@ -65,11 +75,11 @@ def _custom_attention_forward(
 
     # 6. Reshape Output
     attn_output = attn_output.transpose(1, 2).contiguous()
-    attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
+    attn_output = attn_output.reshape(bsz, q_len, self.config.hidden_size)
     attn_output = self.o_proj(attn_output)
 
     # 我們接管了 Cache，所以回傳 None 給 HF 以節省記憶體
-    return attn_output, None, None
+    return attn_output, None
 
 
 class LiveKVQuantModel:
@@ -114,20 +124,34 @@ class LiveKVQuantModel:
         self.layers = self.model.model.layers
         self.controllers = []
 
+        # [相容性修正] 嘗試獲取全域 RoPE 模組 (適用於新版 transformers)
+        global_rotary_emb = None
+        if hasattr(self.model.model, "rotary_emb"):
+            global_rotary_emb = self.model.model.rotary_emb
+
         for i, layer in enumerate(self.layers):
             # 1. 初始化 Controller
             controller = TransformerLayerController(self.config, layer_idx=i)
             
-            # [新增] 將 RoPE 模組直接綁定給 Controller
-            # 這樣 AttentionCore 就能隨時生成任意長度的位置編碼
-            controller.rotary_emb_module = layer.self_attn.rotary_emb
+            # [相容性修正] 處理 RoPE 模組綁定
+            if hasattr(layer.self_attn, "rotary_emb"):
+                controller.rotary_emb_module = layer.self_attn.rotary_emb
+            elif global_rotary_emb is not None:
+                controller.rotary_emb_module = global_rotary_emb
+                # [關鍵] 將全域模組掛載回 self_attn，確保 _custom_attention_forward 的 fallback 邏輯能運作
+                layer.self_attn.rotary_emb = global_rotary_emb
+            else:
+                logger.warning(f"Layer {i}: Could not find rotary_emb module!")
 
-            # 2. 掛載 Controller 到 Layer
-            layer.livekv_controller = controller
+            # 2. 掛載 Controller
+            # [修正] 將 Controller 直接綁定給 self_attn，避免循環參照
+            layer.self_attn.livekv_controller = controller
+            
+            # 為了方便管理，我們也保留在 list 中
             self.controllers.append(controller)
             
-            # 3. 建立連結：讓 Attention 層知道它的 Parent Layer (為了找到 controller)
-            layer.self_attn.parent_layer = layer
+            # 3. [已移除] 移除 parent_layer 的綁定，解決 RecursionError
+            # layer.self_attn.parent_layer = layer 
             
             # 4. [Monkey Patch] 替換 forward 方法
             # 使用 types.MethodType 將 function 綁定為 instance method

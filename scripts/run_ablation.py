@@ -4,6 +4,7 @@ import torch
 import pandas as pd
 import gc
 import logging
+import argparse # [新增]
 from typing import List
 
 # 設定 Path
@@ -12,31 +13,57 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import LiveKVQuantConfig
 from livekvquant.model_wrapper import LiveKVQuantModel
 from data.wikitext_loader import WikitextLoader
-from evaluation.metrics import calculate_perplexity
 from evaluation.profiler import MemoryProfiler
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+def parse_args():
+    """解析命令列參數"""
+    parser = argparse.ArgumentParser(description="Run Ablation Study for LiveKVQuant-P")
+    
+    parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help="Model ID")
+    
+    # 指定要進行 Ablation 的參數名稱，例如 "ema_alpha" 或 "n_warmup"
+    parser.add_argument("--param_name", type=str, required=True, help="Parameter name to vary (e.g., ema_alpha, n_warmup, chunk_size)")
+    
+    # 指定要測試的數值列表，以逗號分隔，例如 "0.1,0.5,0.9"
+    parser.add_argument("--values", type=str, required=True, help="Comma-separated list of values to test (e.g., '0.1,0.5,0.9' or '1,2,4')")
+    
+    return parser.parse_args()
+
+def parse_values_string(val_str: str) -> List:
+    """將逗號分隔的字串轉換為適當型別的列表 (int 或 float)"""
+    str_values = val_str.split(',')
+    parsed_values = []
+    for v in str_values:
+        v = v.strip()
+        try:
+            # 嘗試轉為 int
+            if '.' not in v:
+                parsed_values.append(int(v))
+            else:
+                parsed_values.append(float(v))
+        except ValueError:
+            # 如果不是數字，保持字串
+            parsed_values.append(v)
+    return parsed_values
+
 def evaluate_ppl(model, loader, stride=512, max_length=2048):
-    """
-    計算 Perplexity (PPL) 的輔助函式。
-    使用 Sliding Window 方法計算。
-    """
+    """計算 PPL (保持不變)"""
     encodings = loader.get_tokenized_stream(model.tokenizer)
-    input_ids = encodings[:, :max_length].to(model.device) # 限制長度以節省時間
+    input_ids = encodings[:, :max_length].to(model.device)
     
     nlls = []
     prev_end_loc = 0
     
-    # Sliding Window Loop
     for begin_loc in range(0, input_ids.size(1), stride):
         end_loc = min(begin_loc + max_length, input_ids.size(1))
         trg_len = end_loc - prev_end_loc
         
         input_chunk = input_ids[:, begin_loc:end_loc]
         target_chunk = input_chunk.clone()
-        target_chunk[:, :-trg_len] = -100 # Mask 掉 context 部分的 loss
+        target_chunk[:, :-trg_len] = -100
         
         with torch.no_grad():
             outputs = model.model(input_chunk, labels=target_chunk)
@@ -50,47 +77,55 @@ def evaluate_ppl(model, loader, stride=512, max_length=2048):
     ppl = torch.exp(torch.stack(nlls).mean())
     return ppl.item()
 
-def run_ablation_study(param_name: str, param_values: List):
-    """
-    針對特定參數執行 Ablation Study。
+def run_ablation_study(args):
+    """執行 Ablation"""
+    param_name = args.param_name
+    param_values = parse_values_string(args.values)
     
-    Args:
-        param_name: 要測試的參數名稱 (e.g., 'ema_alpha', 'n_warmup')
-        param_values: 測試數值列表 (e.g., [0.1, 0.5, 0.9])
-    """
     logger.info(f"=== Starting Ablation Study on {param_name} ===")
     logger.info(f"Values to test: {param_values}")
     
     results = []
     
-    # 準備數據集 (只載入一次)
-    # 使用 Wikitext-2 測 PPL，因為它對量化誤差最敏感
-    data_loader = WikitextLoader(split="test")
+    # 準備資料集
+    try:
+        data_loader = WikitextLoader(split="test")
+    except Exception as e:
+        logger.error(f"Failed to load Wikitext: {e}")
+        return
     
     for val in param_values:
         logger.info(f"Running experiment with {param_name} = {val}...")
         
-        # 1. 設定 Config
+        # 1. 設定 Config (基礎值)
         config_kwargs = {
             "chunk_size": 512,
             "n_warmup": 2,
             "bits": 4,
             "ema_alpha": 0.1
         }
+        
         # 覆寫測試參數
+        # 注意：這裡假設 param_name 是 LiveKVQuantConfig 的有效屬性
+        if param_name not in config_kwargs:
+            logger.warning(f"Warning: {param_name} is not a default config key. Make sure it exists in LiveKVQuantConfig.")
+        
         config_kwargs[param_name] = val
         config = LiveKVQuantConfig(**config_kwargs)
         
         # 2. 載入模型
-        # 注意：每次都要重新載入模型以重置狀態
-        model = LiveKVQuantModel("meta-llama/Meta-Llama-3-8B-Instruct", config)
+        try:
+            model = LiveKVQuantModel(args.model_id, config)
+        except Exception as e:
+            logger.error(f"Failed to load model: {e}")
+            break
         
         # 3. 執行 PPL 評估
         profiler = MemoryProfiler()
         profiler.start()
         
         try:
-            ppl = evaluate_ppl(model, data_loader, max_length=4096) # 測試 4k tokens
+            ppl = evaluate_ppl(model, data_loader, max_length=4096)
         except Exception as e:
             logger.error(f"Failed at {val}: {e}")
             ppl = float('nan')
@@ -105,24 +140,23 @@ def run_ablation_study(param_name: str, param_values: List):
             "Latency_s": metrics.total_latency_ms / 1000
         })
         
-        # 5. 清理記憶體 (非常重要！)
+        # 5. 清理記憶體
         del model
         torch.cuda.empty_cache()
         gc.collect()
 
     # 6. 輸出報告
-    df = pd.DataFrame(results)
-    csv_filename = f"ablation_{param_name}.csv"
-    df.to_csv(csv_filename, index=False)
-    
-    logger.info(f"Ablation study completed. Results saved to {csv_filename}")
-    print("\n=== Ablation Results Summary ===")
-    print(df)
+    if results:
+        df = pd.DataFrame(results)
+        csv_filename = f"ablation_{param_name}.csv"
+        df.to_csv(csv_filename, index=False)
+        
+        logger.info(f"Ablation study completed. Results saved to {csv_filename}")
+        print("\n=== Ablation Results Summary ===")
+        print(df)
+    else:
+        logger.warning("No results generated.")
 
 if __name__ == "__main__":
-    # 範例 1: 測試不同的 EMA Alpha (驗證論文 3.3.2)
-    # 預期：Alpha 太小 (反應慢) 或太大 (不穩定) 都會導致 PPL 升高
-    run_ablation_study("ema_alpha", [0.01, 0.1, 0.3, 0.5, 0.9])
-    
-    # 範例 2: 測試不同的 Warm-up Chunks (驗證論文 3.2.2)
-    # run_ablation_study("n_warmup", [0, 1, 2, 4])
+    args = parse_args()
+    run_ablation_study(args)
