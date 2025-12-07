@@ -19,16 +19,17 @@ class KVCacheManager:
         self.k_cache = []
         self.v_cache = []
 
-    def store_warmup(self, k: torch.Tensor, v: torch.Tensor):
-        """儲存 Warm-up 階段的 FP16 資料 """
-        # 為了統一介面，包裝成 dict
-        self.k_cache.append({"type": "warmup", "data": k})
-        self.v_cache.append({"type": "warmup", "data": v})
-
-    def store_quantized(self, k_compressed: dict, v_compressed: dict):
-        """儲存 Quantization 階段的壓縮資料 """
-        self.k_cache.append(k_compressed)
-        self.v_cache.append(v_compressed)
+    def store_chunk(self, k_data: dict, v_data: dict):
+        """
+        [修正] 通用儲存介面。
+        允許 K 和 V 擁有不同的狀態 (例如 K 是 Warmup FP16, V 是 Quantized)。
+        
+        Args:
+            k_data (dict): 包含 K 的資料，可能是 {"type": "warmup", ...} 或 {"type": "quantized", ...}
+            v_data (dict): 包含 V 的資料
+        """
+        self.k_cache.append(k_data)
+        self.v_cache.append(v_data)
 
     def get_all_chunks(self):
         """回傳目前所有的 Cache Chunks (用於 Attention Core 重建)"""

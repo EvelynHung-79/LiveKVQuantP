@@ -18,9 +18,9 @@ class TransformerLayerController(nn.Module):
         self.config = config
         self.layer_idx = layer_idx
         self.chunk_idx = 0
-        self.is_decoding = False # 標記是否進入 Decoding 階段
+        self.is_decoding = False 
 
-        # [新增] 用來持有 Llama 的 RoPE 模組
+        # 用來持有 Llama 的 RoPE 模組
         self.rotary_emb_module = None
 
         # 初始化四大核心模組
@@ -46,20 +46,78 @@ class TransformerLayerController(nn.Module):
         self.is_decoding = False
 
     def forward(self, q_tensor, k_tensor, v_tensor):
-        # 1. Stats Update
-        k_scale = self.stats_manager.update_key_stats(k_tensor)
-        v_scale = self.stats_manager.get_value_stats(v_tensor)
+        """
+        執行 LiveKVQuant-P 的核心流程：
+        1. Outlier Isolation (分離異常值)
+        2. Statistics Update (更新 EMA 統計)
+        3. Quantization (使用 Dense Scale 進行量化)
+        4. Storage (存入 KV Cache)
+        5. Attention (計算注意力機制)
+        """
+        
+        # 判斷是否為 Baseline 模式 (全 FP16 不壓縮)
+        is_baseline = getattr(self.config, 'baseline', False)
+        
+        k_data = None
+        v_data = None
 
-        # 2. Store
-        if (not self.is_decoding) and (self.chunk_idx < self.config.n_warmup):
-            self.kv_manager.store_warmup(k_tensor, v_tensor)
+        if is_baseline:
+            # Baseline: 純 FP16，但仍需更新 stats 保持狀態一致
+            self.stats_manager.update_key_stats(k_tensor) 
+            # 這裡使用 "warmup" 標記來代表未壓縮的 FP16 數據
+            k_data = {"type": "warmup", "data": k_tensor}
+            v_data = {"type": "warmup", "data": v_tensor}
         else:
-            k_compressed = self.quantizer.compress(k_tensor, k_scale)
-            v_compressed = self.quantizer.compress(v_tensor, v_scale)
-            self.kv_manager.store_quantized(k_compressed, v_compressed)
+            # === 標準 LiveKVQuant-P 流程 (修正版) ===
+            
+            # --- 1. Outlier Isolation (先分離，取得 Dense) ---
+            # [關鍵修正] 我們必須先分離 Outliers，才能針對剩下的 "Dense 部分" 計算正確的 Scale
+            # 如果直接對含 Outlier 的 Tensor 算 Scale，會導致 Dense 部分數值過小而被量化為 0
+            k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_tensor)
+            v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_tensor)
 
-        # 3. Compute Attention
-        # [修正] 傳遞 rotary_emb_module 給 Core
+            # --- 2. Statistics & Scale Update (使用 Dense Tensor) ---
+            # [關鍵修正] Scale 必須反映 Dense 的範圍
+            k_scale = self.stats_manager.update_key_stats(k_dense)
+            v_scale = self.stats_manager.get_value_stats(v_dense)
+
+            # --- 3. Quantization Strategy ---
+            # 判斷 Key 是否還在 Warm-up 階段
+            is_k_warmup = (not self.is_decoding) and (self.chunk_idx < self.config.n_warmup)
+
+            # 3.1 處理 Key (K)
+            if is_k_warmup:
+                # K 在 Warm-up 期間：存 FP16 (為了讓 EMA 有足夠數據穩定下來)
+                k_data = {"type": "warmup", "data": k_tensor}
+            else:
+                # K 在 Warm-up 結束後：進行壓縮 (使用穩定的 EMA Scale 量化 k_dense)
+                # 注意：這裡呼叫的是 quantize_dense，而不是舊的 compress
+                k_quant = self.quantizer.quantize_dense(k_dense, k_scale)
+                k_data = {
+                    "type": "quantized",
+                    "quantized_data": k_quant,
+                    "scale": k_scale,
+                    "sparse_values": k_sp_val,
+                    "sparse_indices": k_sp_idx
+                }
+
+            # 3.2 處理 Value (V)
+            # V 使用 Per-token 瞬時統計，不需要 Warm-up，總是直接壓縮
+            v_quant = self.quantizer.quantize_dense(v_dense, v_scale)
+            v_data = {
+                "type": "quantized",
+                "quantized_data": v_quant,
+                "scale": v_scale,
+                "sparse_values": v_sp_val,
+                "sparse_indices": v_sp_idx
+            }
+
+        # 4. Store
+        # 使用通用介面儲存 (K 和 V 狀態可能不同)
+        self.kv_manager.store_chunk(k_data, v_data)
+
+        # 5. Attention
+        # 記得：AttentionCore 必須負責還原資料並計算
         attn_output = self.attn_core.compute_attention(
             q_tensor, 
             self.kv_manager,
