@@ -68,18 +68,18 @@ class TransformerLayerController(nn.Module):
             k_data = {"type": "warmup", "data": k_tensor}
             v_data = {"type": "warmup", "data": v_tensor}
         else:
-            # === 標準 LiveKVQuant-P 流程 (修正版) ===
-            
-            # --- 1. Outlier Isolation (先分離，取得 Dense) ---
-            # [關鍵修正] 我們必須先分離 Outliers，才能針對剩下的 "Dense 部分" 計算正確的 Scale
-            # 如果直接對含 Outlier 的 Tensor 算 Scale，會導致 Dense 部分數值過小而被量化為 0
-            k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_tensor)
-            v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_tensor)
+            # 1. Outlier Isolation (區分 Axis!)
+            # Key (K): [Batch, Head, Seq, Dim]。Scale 是 Per-Channel (沿著 Seq 找最大)。
+            # 所以 Outlier 也要沿著 Seq (dim=-2) 抓，把撐大 Channel 的兇手抓出來。
+            k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_tensor, outlier_dim=-2)
 
-            # --- 2. Statistics & Scale Update (使用 Dense Tensor) ---
-            # [關鍵修正] Scale 必須反映 Dense 的範圍
-            k_scale = self.stats_manager.update_key_stats(k_dense)
-            v_scale = self.stats_manager.get_value_stats(v_dense)
+            # Value (V): [Batch, Head, Seq, Dim]。Scale 是 Per-Token (沿著 Dim 找最大)。
+            # 所以 Outlier 也要沿著 Dim (dim=-1) 抓，把撐大 Token 的兇手抓出來。
+            v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_tensor, outlier_dim=-1)
+
+            # 2. Statistics & Scale Update (保持不變)
+            k_scale = self.stats_manager.update_key_stats(k_dense) # 內部用 dim=-2
+            v_scale = self.stats_manager.get_value_stats(v_dense)  # 內部用 dim=-1
 
             # --- 3. Quantization Strategy ---
             # 判斷 Key 是否還在 Warm-up 階段

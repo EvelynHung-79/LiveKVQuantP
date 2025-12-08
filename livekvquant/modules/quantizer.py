@@ -7,9 +7,13 @@ class RealTimeQuantizer:
         self.bits = config.bits
         self.outlier_ratio = config.outlier_ratio
 
-    def isolate(self, tensor: torch.Tensor):
-        """步驟 1: 分離 Outliers，回傳 Dense Tensor 供統計計算"""
-        dense_tensor, sparse_vals, sparse_idxs = isolate_outliers(tensor, self.outlier_ratio)
+    def isolate(self, tensor: torch.Tensor, outlier_dim: int):
+        """
+        Args:
+            outlier_dim: 指定沿著哪個軸抓 Outlier
+        """
+        # 呼叫更新後的 utils
+        dense_tensor, sparse_vals, sparse_idxs = isolate_outliers(tensor, self.outlier_ratio, dim=outlier_dim)
         return dense_tensor, sparse_vals, sparse_idxs
 
     def quantize_dense(self, dense_tensor: torch.Tensor, scale: torch.Tensor):
