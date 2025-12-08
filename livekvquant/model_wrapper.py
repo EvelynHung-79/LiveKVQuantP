@@ -246,7 +246,8 @@ class LiveKVQuantModel:
                 break
                 
         # 5. Decode Output
-        full_output_ids = torch.cat([input_ids[0], torch.tensor(generated_ids, device=self.device)])
-        output_text = self.tokenizer.decode(full_output_ids, skip_special_tokens=True)
+        # 只解碼生成的 id
+        generated_tensor = torch.tensor(generated_ids, device=self.device)
+        output_text = self.tokenizer.decode(generated_tensor, skip_special_tokens=True)
         
         return output_text
