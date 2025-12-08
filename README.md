@@ -89,6 +89,14 @@ python main_inference.py \
   --input_mode interactive
 ```
 
+**模式 D：基準模型 (Baseline)**
+
+```bash
+python scripts/run_baseline.py \
+  --task narrativeqa \
+  --num_samples 10
+```
+
 **可選參數：**
 
   - `--config`: 指定 YAML 設定檔路徑 (預設 `configs/default.yaml`)。

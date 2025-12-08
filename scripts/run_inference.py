@@ -16,6 +16,10 @@ from data.longbench_loader import LongBenchLoader
 from evaluation.metrics import calculate_f1_score
 from evaluation.profiler import MemoryProfiler
 
+# [新增] 引入繪圖函式所需的套件
+import matplotlib.pyplot as plt
+import numpy as np
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -37,9 +41,73 @@ def parse_args():
     parser.add_argument("--n_warmup", type=int, default=2, help="Number of warmup chunks")
     parser.add_argument("--bits", type=int, default=4, help="Quantization bits")
     parser.add_argument("--ema_alpha", type=float, default=0.1, help="EMA smoothing factor")
-    parser.add_argument("--baseline", action="store_true", help="Enable Baseline mode (Full FP16, No Quantization)")
+    
+    # [移除] --baseline 參數已刪除
     
     return parser.parse_args()
+
+def visualize_ema_tracking(model, save_dir, sample_idx):
+    """
+    將 StatisticsManager 紀錄的 EMA 變化畫成圖表。
+    """
+    target_layers = [0, 16, 31]
+    os.makedirs(save_dir, exist_ok=True)
+    
+    print(f"Generating EMA tracking plots for Sample {sample_idx}...")
+
+    for layer_idx in target_layers:
+        if layer_idx >= len(model.controllers): break
+        
+        controller = model.controllers[layer_idx]
+        stats_mgr = controller.stats_manager
+        
+        if not stats_mgr.history:
+            continue
+            
+        # 整理數據 [Batch, Heads, Chunks, Dim] -> [Heads, Chunks, Dim]
+        raw_history = torch.cat([x[0] for x in stats_mgr.history], dim=-2).squeeze(0) 
+        ema_history = torch.cat([x[1] for x in stats_mgr.history], dim=-2).squeeze(0)
+        
+        head_idx = 0
+        raw_data = raw_history[head_idx].numpy() # [Chunks, Dim]
+        ema_data = ema_history[head_idx].numpy()
+        
+        # 繪圖 1: Heatmap
+        fig, axes = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
+        
+        im1 = axes[0].imshow(raw_data.T, aspect='auto', cmap='viridis', origin='lower')
+        axes[0].set_title(f'Layer {layer_idx} Head {head_idx} - Raw Absmax ($m_t$)')
+        axes[0].set_ylabel('Channels')
+        plt.colorbar(im1, ax=axes[0], label='Magnitude')
+        
+        im2 = axes[1].imshow(ema_data.T, aspect='auto', cmap='viridis', origin='lower')
+        axes[1].set_title(f'Layer {layer_idx} Head {head_idx} - Stabilized EMA ($\mu_t$)')
+        axes[1].set_ylabel('Channels')
+        axes[1].set_xlabel('Chunk Index')
+        plt.colorbar(im2, ax=axes[1], label='Scale')
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(save_dir, f"sample_{sample_idx}_layer_{layer_idx}_heatmap.png"))
+        plt.close()
+
+        # 繪圖 2: Line Plot
+        avg_magnitude = np.mean(raw_data, axis=0)
+        top_channels = np.argsort(avg_magnitude)[-3:] 
+        
+        plt.figure(figsize=(12, 6))
+        for ch in top_channels:
+            plt.plot(raw_data[:, ch], linestyle='--', alpha=0.6, label=f'Ch {ch} Raw ($m_t$)')
+            plt.plot(ema_data[:, ch], linestyle='-', linewidth=2, label=f'Ch {ch} EMA ($\mu_t$)')
+            
+        plt.title(f'Layer {layer_idx} Head {head_idx} - Scale Evolution (Top Active Channels)')
+        plt.xlabel('Chunk Index')
+        plt.ylabel('Magnitude')
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(save_dir, f"sample_{sample_idx}_layer_{layer_idx}_lines.png"))
+        plt.close()
 
 def get_dummy_input():
     return "This is a test prompt to verify the chunking mechanism. " * 500
@@ -49,7 +117,6 @@ def print_metrics(output_text, metrics):
     print("\n" + "="*40)
     print("FINAL OUTPUT TEXT")
     print("="*40)
-    # 僅印出前 500 字避免洗版
     print(output_text[:500] + "...(truncated)" if len(output_text) > 500 else output_text)
     
     print("\n" + "="*40)
@@ -61,7 +128,7 @@ def print_metrics(output_text, metrics):
     print("="*40)
 
 def run_interactive(model, args, profiler):
-    """互動模式：手動輸入"""
+    """互動模式"""
     print("\n=== Interactive Mode (Press Ctrl+D or Ctrl+C to exit) ===")
     try:
         while True:
@@ -84,12 +151,13 @@ def run_interactive(model, args, profiler):
 
             if not prompt.strip(): break
 
-            logger.info(f"Generating response... (Baseline: {args.baseline})")
+            # [移除] 這裡的 Baseline 顯示
+            logger.info(f"Generating response...")
             
             profiler.start()
             with torch.no_grad():
                 output = model.generate(prompt, max_new_tokens=args.output_len)
-            metrics = profiler.stop(num_output_tokens=args.output_len) # [修正] 傳入 token 數以計算 Throughput
+            metrics = profiler.stop(num_output_tokens=args.output_len)
 
             print_metrics(output, metrics)
 
@@ -97,21 +165,20 @@ def run_interactive(model, args, profiler):
         print("\nExiting...")
 
 def run_dummy(model, args, profiler):
-    """Dummy 模式：快速測試"""
+    """Dummy 模式"""
     logger.info("Running Dummy Test...")
     prompt = get_dummy_input()
     
     profiler.start()
     with torch.no_grad():
         output = model.generate(prompt, max_new_tokens=args.output_len)
-    # [修正] 傳入 num_output_tokens 讓 Profiler 能計算 tokens/sec
     metrics = profiler.stop(num_output_tokens=args.output_len)
     
     logger.info("Dummy Test Completed.")
     print_metrics(output, metrics)
 
 def run_longbench(model, args, profiler):
-    """LongBench 模式：批量評估與存檔"""
+    """LongBench 模式"""
     try:
         loader = LongBenchLoader(task_name=args.task)
     except Exception as e:
@@ -123,6 +190,9 @@ def run_longbench(model, args, profiler):
     results = []
     total_f1 = 0.0
     
+    # 建立 EMA 圖表資料夾
+    plots_dir = "results/ema_plots"
+
     for i in tqdm(range(min(args.num_samples, len(loader))), desc="Evaluating"):
         sample = loader.get_sample(i)
         prompt = sample["prompt"]
@@ -133,7 +203,9 @@ def run_longbench(model, args, profiler):
             with torch.no_grad():
                 output = model.generate(prompt, max_new_tokens=args.output_len)
             
-            # [修正] 傳入 output_len 計算 Throughput
+            # [新增] 繪製 EMA 圖表
+            visualize_ema_tracking(model, plots_dir, i)
+            
             perf_metrics = profiler.stop(num_output_tokens=args.output_len)
             
             f1 = calculate_f1_score(output, ground_truths)
@@ -145,7 +217,7 @@ def run_longbench(model, args, profiler):
                 "f1": f1,
                 "peak_memory_mb": perf_metrics.peak_memory_mb,
                 "latency_ms": perf_metrics.total_latency_ms,
-                "throughput": perf_metrics.throughput_tokens_per_sec, # [新增] 記錄 Throughput
+                "throughput": perf_metrics.throughput_tokens_per_sec,
                 "output": output,
                 "ground_truth": ground_truths[0]
             })
@@ -157,10 +229,10 @@ def run_longbench(model, args, profiler):
     avg_f1 = total_f1 / len(results) if results else 0.0
     logger.info(f"Average F1: {avg_f1:.4f}")
     
-    # 存檔
-    mode_str = "baseline" if args.baseline else f"quant_w{args.n_warmup}_b{args.bits}"
+    # [修改] 檔名只保留量化配置，移除 baseline 選項
+    mode_str = f"quant_w{args.n_warmup}_b{args.bits}"
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = f"results_{args.task}_{mode_str}_{timestamp}.json"
+    output_file = f"./results/results_{args.task}_{mode_str}_{timestamp}.json"
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump({
@@ -174,17 +246,18 @@ def run_longbench(model, args, profiler):
 def main():
     args = parse_args()
     
-    # 1. 初始化 Config
+    # 1. 初始化 Config (baseline 預設為 False，不需傳入參數)
     config = LiveKVQuantConfig(
         chunk_size=args.chunk_size, 
         n_warmup=args.n_warmup, 
         bits=args.bits,
-        ema_alpha=args.ema_alpha,
-        baseline=args.baseline
+        ema_alpha=args.ema_alpha
+        # baseline=False (default)
     )
     
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    logger.info(f"Mode: {args.input_mode.upper()} | Baseline: {args.baseline} | Device: {device}")
+    # [移除] 這裡的 Baseline 顯示
+    logger.info(f"Mode: {args.input_mode.upper()} | Device: {device}")
     
     # 2. 載入模型
     try:
