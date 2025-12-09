@@ -22,14 +22,24 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Standard Baseline Inference Script (No Chunking, No Compression)")
     
     # 任務設定
-    parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help="HuggingFace Model ID")
+    parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3.1-8B-Instruct", help="HuggingFace Model ID")
     parser.add_argument("--task", type=str, default="narrativeqa", help="LongBench task name")
     parser.add_argument("--num_samples", type=int, default=10, help="Number of samples to evaluate")
     parser.add_argument("--output_len", type=int, default=64, help="Max new tokens to generate")
     
-    # 移除所有量化參數 (chunk_size, bits, alpha 等)，因為這是純 Baseline
-    
     return parser.parse_args()
+
+def print_metrics(metrics):
+    """
+    只印出效能數據，不印出生成的文字 (應使用者要求)
+    """
+    print("\n" + "="*40)
+    print("PERFORMANCE METRICS")
+    print("="*40)
+    print(f"Peak Memory Usage : {metrics.peak_memory_mb:.2f} MB")
+    print(f"Total Latency     : {metrics.total_latency_ms:.2f} ms")
+    print(f"Throughput        : {metrics.throughput_tokens_per_sec:.2f} tokens/sec")
+    print("="*40)
 
 def run_baseline_longbench(model, tokenizer, args, profiler):
     """
@@ -57,18 +67,25 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
         prompt = sample["prompt"]
         ground_truths = sample["answers"]
         
-        # Tokenize (一次性處理全部 Context，不分塊)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-        input_len = inputs.input_ids.size(1)
+        # 加入 Truncation 機制，避免超過模型長度上限
+        # 計算模型最大長度 (保留 output_len 給生成用)
+        # 若 config 中沒有 max_position_embeddings，預設為 128k (Llama 3.1)
+        max_pos = getattr(model.config, "max_position_embeddings", 131072)
+        max_context_len = max_pos - args.output_len
         
-        # 如果 Context 超過模型上限，可能需要截斷 (視模型而定，Llama-3 支援 8k+)
-        # 這裡假設 GPU 記憶體足夠跑完 Baseline (這也是我們要測的重點：Baseline 會不會 OOM)
+        inputs = tokenizer(
+            prompt, 
+            return_tensors="pt",
+            truncation=True,             # 啟用截斷
+            max_length=max_context_len   # 設定上限
+        ).to(model.device)
+        
+        input_len = inputs.input_ids.size(1)
         
         profiler.start()
         try:
             with torch.no_grad():
                 # 標準 HF Generate
-                # use_cache=True 是預設值，這會啟用標準 FP16 KV Cache
                 outputs = model.generate(
                     **inputs,
                     max_new_tokens=args.output_len,
@@ -79,10 +96,12 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             # 停止 Profiler
             perf_metrics = profiler.stop(num_output_tokens=args.output_len)
             
-            # 解碼輸出 (只取生成的部份)
-            # HF generate 回傳的是 [input + generated]，我們只解碼新增的部分
+            # 解碼輸出
             generated_ids = outputs[0][input_len:]
             output_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
+            
+            # [修改] 只印出 Metrics，不印 Text
+            print_metrics(perf_metrics)
             
             # 計算 F1
             f1 = calculate_f1_score(output_text, ground_truths)
@@ -91,6 +110,7 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             results.append({
                 "index": i,
                 "input_length": sample["context_length"],
+                "actual_input_len": input_len,
                 "f1": f1,
                 "peak_memory_mb": perf_metrics.peak_memory_mb,
                 "latency_ms": perf_metrics.total_latency_ms,
@@ -101,25 +121,30 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             
         except torch.cuda.OutOfMemoryError:
             logger.error(f"OOM at sample {i} (Length: {input_len})")
-            # 記錄失敗
             results.append({
                 "index": i,
                 "input_length": sample["context_length"],
                 "error": "OOM",
-                "f1": 0.0
+                "f1": 0.0,
+                "peak_memory_mb": torch.cuda.max_memory_allocated() / (1024**2)
             })
             torch.cuda.empty_cache()
         except Exception as e:
             logger.error(f"Error at sample {i}: {e}")
 
     avg_f1 = total_f1 / len(results) if results else 0.0
+    
+    # [修改] 計算 Max Peak Memory
+    max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
+
     logger.info(f"Baseline Average F1: {avg_f1:.4f}")
+    logger.info(f"Max Peak Memory: {max_peak_memory:.2f} MB")
     
-    # 存檔 (保持與 run_inference.py 相同的格式)
+    # 存檔
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = f"results_{args.task}_pure_baseline_{timestamp}.json"
+    output_file = f"./results/baseline/results_{args.task}_pure_baseline_{timestamp}.json"
     
-    # 準備 Config 字典 (處理某些物件無法序列化的問題)
+    # 準備 Config 字典
     config_dict = model.config.to_dict() if hasattr(model.config, "to_dict") else str(model.config)
 
     with open(output_file, "w", encoding="utf-8") as f:
@@ -127,6 +152,7 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             "args": vars(args),
             "config": config_dict,
             "avg_f1": avg_f1,
+            "max_peak_memory_mb": max_peak_memory, # [修改] 插入在此處
             "details": results
         }, f, indent=4, ensure_ascii=False)
     logger.info(f"Saved baseline results to {output_file}")
@@ -143,7 +169,7 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained(args.model_id)
         model = AutoModelForCausalLM.from_pretrained(
             args.model_id,
-            torch_dtype=torch.float16, # 保持 FP16 以進行公平比較 (也是 LiveKVQuant 的基礎型別)
+            torch_dtype=torch.float16, 
             device_map=device
         )
         model.eval()

@@ -31,7 +31,7 @@ def parse_args():
                         help="Execution mode: 'longbench' (batch eval), 'interactive' (demo), 'dummy' (debug)")
     
     # 模型與任務
-    parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help="HuggingFace Model ID")
+    parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3.1-8B-Instruct", help="HuggingFace Model ID")
     parser.add_argument("--task", type=str, default="narrativeqa", help="LongBench task name (only for longbench mode)")
     parser.add_argument("--num_samples", type=int, default=10, help="Number of samples to evaluate (only for longbench mode)")
     parser.add_argument("--output_len", type=int, default=64, help="Max new tokens to generate")
@@ -227,18 +227,22 @@ def run_longbench(model, args, profiler):
                 torch.cuda.empty_cache()
 
     avg_f1 = total_f1 / len(results) if results else 0.0
+    # [新增] 計算平均 Peak Memory
+    max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
+
     logger.info(f"Average F1: {avg_f1:.4f}")
     
     # [修改] 檔名只保留量化配置，移除 baseline 選項
     mode_str = f"quant_w{args.n_warmup}_b{args.bits}"
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = f"./results/results_{args.task}_{mode_str}_{timestamp}.json"
+    output_file = f"./results/compression/results_{args.task}_{mode_str}_{timestamp}.json"
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump({
             "args": vars(args),
             "config": model.config.__dict__,
             "avg_f1": avg_f1,
+            "avg_peak_memory_mb": max_peak_memory, # [新增] 寫入 JSON
             "details": results
         }, f, indent=4, ensure_ascii=False)
     logger.info(f"Saved to {output_file}")
