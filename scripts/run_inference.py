@@ -13,6 +13,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import LiveKVQuantConfig
 from livekvquant.model_wrapper import LiveKVQuantModel
 from data.longbench_loader import LongBenchLoader
+from data.longbench_v2_loader import LongBenchV2Loader
 from evaluation.metrics import calculate_f1_score
 from evaluation.profiler import MemoryProfiler
 
@@ -73,22 +74,22 @@ def visualize_ema_tracking(model, save_dir, sample_idx):
         ema_data = ema_history[head_idx].numpy()
         
         # 繪圖 1: Heatmap
-        fig, axes = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
+        # fig, axes = plt.subplots(2, 1, figsize=(12, 10), sharex=True)
         
-        im1 = axes[0].imshow(raw_data.T, aspect='auto', cmap='viridis', origin='lower')
-        axes[0].set_title(f'Layer {layer_idx} Head {head_idx} - Raw Absmax ($m_t$)')
-        axes[0].set_ylabel('Channels')
-        plt.colorbar(im1, ax=axes[0], label='Magnitude')
+        # im1 = axes[0].imshow(raw_data.T, aspect='auto', cmap='viridis', origin='lower')
+        # axes[0].set_title(f'Layer {layer_idx} Head {head_idx} - Raw Absmax ($m_t$)')
+        # axes[0].set_ylabel('Channels')
+        # plt.colorbar(im1, ax=axes[0], label='Magnitude')
         
-        im2 = axes[1].imshow(ema_data.T, aspect='auto', cmap='viridis', origin='lower')
-        axes[1].set_title(f'Layer {layer_idx} Head {head_idx} - Stabilized EMA ($\mu_t$)')
-        axes[1].set_ylabel('Channels')
-        axes[1].set_xlabel('Chunk Index')
-        plt.colorbar(im2, ax=axes[1], label='Scale')
+        # im2 = axes[1].imshow(ema_data.T, aspect='auto', cmap='viridis', origin='lower')
+        # axes[1].set_title(f'Layer {layer_idx} Head {head_idx} - Stabilized EMA ($\mu_t$)')
+        # axes[1].set_ylabel('Channels')
+        # axes[1].set_xlabel('Chunk Index')
+        # plt.colorbar(im2, ax=axes[1], label='Scale')
         
-        plt.tight_layout()
-        plt.savefig(os.path.join(save_dir, f"sample_{sample_idx}_layer_{layer_idx}_heatmap.png"))
-        plt.close()
+        # plt.tight_layout()
+        # plt.savefig(os.path.join(save_dir, f"sample_{sample_idx}_layer_{layer_idx}_heatmap.png"))
+        # plt.close()
 
         # 繪圖 2: Line Plot
         avg_magnitude = np.mean(raw_data, axis=0)
@@ -180,7 +181,12 @@ def run_dummy(model, args, profiler):
 def run_longbench(model, args, profiler):
     """LongBench 模式"""
     try:
-        loader = LongBenchLoader(task_name=args.task)
+        if "v2" in args.task.lower() or args.input_mode == "longbench_v2":
+            # 假設你想跑 LongBench v2
+            # task 可以傳入 "all" 或是特定領域如 "Code"
+            loader = LongBenchV2Loader(task_name=args.task, split="train")
+        else:
+            loader = LongBenchLoader(task_name=args.task)
     except Exception as e:
         logger.error(f"Failed to load task {args.task}: {e}")
         return
