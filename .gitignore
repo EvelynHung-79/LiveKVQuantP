@@ -1,8 +1,10 @@
-.venv/
+venv/
 */__pycache__/
 __pycache__
 *.pyc
 .DS_Store
 .pytest_cache/
-# results_*.json
+# results/
 *.png
+data/longbench_v1/
+data/longbench_v2/

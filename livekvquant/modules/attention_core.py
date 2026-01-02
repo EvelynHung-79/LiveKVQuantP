@@ -81,35 +81,35 @@ class AttentionCore:
         attn_scores = torch.matmul(q_tensor, k_full.transpose(-2, -1)) * scale
         
         # === [核心修正] 加入 Causal Mask ===
-        # Llama 是 Causal Model，Query 只能看到它自己以前的 Key
-        # 當 Q_len > 1 時 (Prefill 階段)，我們必須遮住右上角 (Future tokens)
-        
         q_len = q_tensor.size(-2)
         k_len = k_full.size(-2)
         
-        # 只有在 Prefill (q_len > 1) 時才需要複雜的 Mask
-        # Decoding (q_len == 1) 時，Q 是最後一個 token，它可以看所有 K，無需 Mask
         if q_len > 1:
-            # 建立一個全 -inf 的矩陣
-            # causal_mask: 下三角為 0 (可見)，上三角為 -inf (不可見)
-            # triu(diagonal=1) 會把對角線以上設為 True
-            mask = torch.full((q_len, q_len), float("-inf"), device=q_tensor.device)
-            mask = torch.triu(mask, diagonal=1)
+            # 1. 建立一個全 1 的矩陣，代表「位置 i 可以看到位置 j」
+            # 形狀: [Q_len, Q_len]
+            causal_mask = torch.tril(torch.ones(q_len, q_len, device=q_tensor.device, dtype=torch.bool))
             
-            # 我們的 K_full 包含 [History (Past Chunks), Current Chunk]
-            # History 部分是全開的 (全 0)，Current 部分需要 Causal Mask
+            # 2. 轉換為加法 Mask (0.0 為可見, min_value 為不可見)
+            # 使用 finfo 確保數值夠小但不會 NaN
+            min_value = torch.finfo(q_tensor.dtype).min
+            mask_tensor = torch.full((q_len, q_len), min_value, device=q_tensor.device, dtype=q_tensor.dtype)
+            mask_tensor.masked_fill_(causal_mask, 0.0) # 下三角填 0 (可見)
+            
+            # 3. 處理 History (History 永遠可見)
             past_len = k_len - q_len
             
             if past_len > 0:
-                # 歷史部分全 0
-                history_mask = torch.zeros((q_len, past_len), device=q_tensor.device)
-                # 拼接：[History (0), Current (Causal)]
-                full_mask = torch.cat([history_mask, mask], dim=-1)
+                # History 部分全 0 (可見)
+                history_mask = torch.zeros((q_len, past_len), device=q_tensor.device, dtype=q_tensor.dtype)
+                # 拼接: [History (Visible), Current (Causal)]
+                full_mask = torch.cat([history_mask, mask_tensor], dim=-1)
             else:
-                full_mask = mask
-            
-            # 加入 Mask (廣播到 Batch 和 Heads)
-            attn_scores += full_mask.unsqueeze(0).unsqueeze(0)
+                # 只有當前 Chunk (例如第一個 Chunk)
+                full_mask = mask_tensor
+                
+            # 4. 套用 Mask
+            # 確保維度正確: [1, 1, Q_len, K_len]
+            attn_scores = attn_scores + full_mask.unsqueeze(0).unsqueeze(0)
         # =================================
         
         attn_probs = F.softmax(attn_scores, dim=-1)

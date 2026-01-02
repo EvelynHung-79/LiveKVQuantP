@@ -17,9 +17,9 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
 
 1. **建立並啟用虛擬環境（強烈建議）：**
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate      # Linux/Mac
-   # .venv\Scripts\activate       # Windows
+   python -m venv venv
+   source venv/bin/activate      # Linux/Mac
+   # venv\Scripts\activate       # Windows
    ```
 
 2.  **安裝相依套件：**
@@ -58,13 +58,13 @@ python -m pytest tests/
 
 ### 1\. 執行主要推論 (Main Inference)
 
-`main_inference.py` 是專案的主要入口，支援多種輸入模式。
+`run_inference.py` 是專案的主要入口，支援多種輸入模式。
 
 **模式 A：Dummy Test (快速驗證)**
 使用生成的假資料進行快速測試，確認 Pipeline 無誤。
 
 ```bash
-python main_inference.py \
+python scripts/run_inference.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode dummy \
   --chunk_size 512
@@ -74,7 +74,7 @@ python main_inference.py \
 自動下載並載入 LongBench 資料集進行推論（需指定 `task`）。
 
 ```bash
-python main_inference.py \
+python scripts/run_inference.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode longbench \
   --task narrativeqa
@@ -84,7 +84,7 @@ python main_inference.py \
 手動輸入 Prompt 進行測試。
 
 ```bash
-python main_inference.py \
+python scripts/run_inference.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode interactive
 ```
@@ -93,8 +93,18 @@ python main_inference.py \
 
 ```bash
 python scripts/run_baseline.py \
-  --task narrativeqa \
+  --bench_version v1 \
+  --task_type single-doc \
+  --num_samples 5
+python scripts/run_baseline.py \
+  --bench_version v1 \
+  --task_type narrativeqa \
   --num_samples 10
+python scripts/run_baseline.py \
+  --bench_version v2 \
+  --task_type single-doc \
+  --num_samples 5
+
 ```
 
 **可選參數：**

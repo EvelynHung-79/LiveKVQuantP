@@ -85,6 +85,35 @@ class TransformerLayerController(nn.Module):
         # Value (V): Scale 是 Per-Token 的，所以要抓出撐大 Token 的兇手 (沿 Head Dim 軸, dim=-1)
         v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_tensor, outlier_dim=-1)
 
+        # Attention Sink Tokens 處理
+        # 在第一個 Chunk 時，將前幾個 Sink Tokens 也視為 Outlier
+        SINK_LENGTH = 4
+        if self.chunk_idx == 0:
+            # 1. 找出 Sink Tokens 的區域 (前 SINK_LENGTH 個 tokens)
+            # v_tensor shape: [Batch, Heads, Seq, Head_Dim]
+            sink_data = v_tensor[:, :, :SINK_LENGTH, :]
+            
+            # 2. 取得它們的 Flat Indices (全域索引)
+            # 建立一個與 v_tensor 形狀相同的 mask
+            sink_mask = torch.zeros_like(v_tensor, dtype=torch.bool)
+            sink_mask[:, :, :SINK_LENGTH, :] = True
+            
+            # 轉為 flat indices
+            sink_indices = torch.nonzero(sink_mask.flatten(), as_tuple=False).squeeze()
+            sink_values = v_tensor.flatten()[sink_indices]
+            
+            # 3. 從 v_dense 中移除這些值 (設為 0，因為已經搬去 Sparse 了)
+            # 注意：原本的 isolate 可能已經抓過這些值了，但重複歸零沒關係
+            # 為了簡單，我們直接在 v_dense 上操作
+            v_dense_flat = v_dense.flatten()
+            v_dense_flat[sink_indices] = 0
+            v_dense = v_dense_flat.view_as(v_dense)
+
+            # 4. 合併「數值 Outlier」與「Sink Outlier」
+            # 我們將 Sink 的數據拼接到原本的 sparse list 後面
+            v_sp_val = torch.cat([v_sp_val, sink_values])
+            v_sp_idx = torch.cat([v_sp_idx, sink_indices])
+
         # --- 2. Statistics & Scale Update (使用 Dense Tensor) ---
         # 更新 EMA (Key) 或取得瞬時 Scale (Value)
         k_scale = self.stats_manager.update_key_stats(k_dense)

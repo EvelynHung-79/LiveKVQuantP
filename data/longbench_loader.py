@@ -1,34 +1,69 @@
 import logging
-from datasets import load_dataset
+import os
+from datasets import load_dataset, Dataset
 
 logger = logging.getLogger(__name__)
 
 class LongBenchLoader:
     """
-    負責載入 LongBench 數據集，用於評估長文本理解能力 (Accuracy, F1 Score)。
-    對應論文 Method Summary 中的 Evaluation Metrics。
+    負責載入 LongBench 數據集。
+    優先嘗試讀取本地 JSONL 檔案，若無則嘗試從 HuggingFace Hub 下載。
     """
     
-    # LongBench 支援的任務列表 (參考 LongBench 官方 repo)
+    # 完整的 LongBench V1 任務列表 (包含中文與代碼任務)
     SUPPORTED_TASKS = [
-        "narrativeqa", "qasper", "multifieldqa_en", "hotpotqa", 
-        "2wikimqa", "musique", "gov_report", "qmsum", 
-        "multi_news", "trec", "triviaqa", "samsum"
+        # Single-Doc QA
+        "narrativeqa", "qasper", "multifieldqa_en", 
+        # Multi-Doc QA
+        "hotpotqa", "2wikimqa", "musique", "dureader", 
+        # Summarization
+        "gov_report", "qmsum", "multi_news", "vcsum",
+        # Few-Shot Learning
+        "trec", "triviaqa", "samsum", "lsht",
+        # Synthetic Tasks
+        "passage_retrieval_en", "passage_count",
+        # Code
+        "lcc", "repobench-p"
     ]
 
-    def __init__(self, task_name: str, split: str = "test"):
+    def __init__(self, task_name: str, split: str = "test", local_data_dir: str = "data/longbench_v1/"):
+        """
+        Args:
+            task_name: 任務名稱 (e.g., 'narrativeqa')
+            split: 數據集分割 (通常是 'test')
+            local_data_dir: 本地資料夾路徑，預設為 'LongBench' (請確保您的 .jsonl 檔放在此資料夾下)
+        """
         if task_name not in self.SUPPORTED_TASKS:
-            logger.warning(f"Task '{task_name}' is not in the standard LongBench list. Attempting to load anyway...")
+            logger.warning(f"Task '{task_name}' is not in the standard LongBench list.")
         
         self.task_name = task_name
-        logger.info(f"Loading LongBench dataset: {task_name} (split={split})...")
         
-        # 使用 HuggingFace Datasets 載入 THUDM/LongBench
-        try:
-            self.dataset = load_dataset("THUDM/LongBench", task_name, split=split)
-        except Exception as e:
-            logger.error(f"Failed to load dataset: {e}. Please check your internet connection or task name.")
-            raise e
+        # 1. 嘗試構建本地檔案路徑
+        # 假設結構為: local_data_dir/task_name.jsonl (例如: LongBench/narrativeqa.jsonl)
+        local_file_path = os.path.join(local_data_dir, f"{task_name}.jsonl")
+        
+        if os.path.exists(local_file_path):
+            logger.info(f"Found local dataset file: {local_file_path}")
+            try:
+                # 使用 json loader 讀取本地檔案
+                # split='train' 是因為 json loader 預設只會載入到 train，我們後面再手動對應
+                dataset = load_dataset("json", data_files=local_file_path, split="train")
+                self.dataset = dataset
+                logger.info(f"Successfully loaded {len(self.dataset)} samples from local file.")
+            except Exception as e:
+                logger.error(f"Failed to load local file {local_file_path}: {e}")
+                raise e
+        else:
+            # 2. 本地找不到，嘗試從 HF Hub 下載 (備用方案)
+            logger.warning(f"Local file not found at {local_file_path}. Attempting to load from HuggingFace Hub...")
+            dataset_path = "THUDM/LongBench"
+            try:
+                # 注意: trust_remote_code 可能在某些環境被禁用
+                self.dataset = load_dataset(dataset_path, task_name, split=split, trust_remote_code=True)
+            except Exception as e:
+                logger.error(f"Failed to load from HF Hub: {e}")
+                logger.error(f"Please ensure you have downloaded '{task_name}.jsonl' into the '{local_data_dir}' folder.")
+                raise e
 
     def __len__(self):
         return len(self.dataset)
@@ -38,20 +73,10 @@ class LongBenchLoader:
         將 Context 與 Input 格式化為模型可接受的 Prompt。
         這裡使用 LongBench 官方推薦的標準格式。
         """
-        # 這是 LongBench 官方對大多數 QA 任務的默認 template
-        # 你可以根據 Llama-3 的需求，在這裡加入 <|begin_of_text|> 等 special tokens
         prompt = f"Context:\n{context}\n\nQuestion:\n{input_text}\n\nAnswer:"
         return prompt
 
     def get_sample(self, index: int):
-        """
-        取得單筆測試資料。
-        
-        Returns:
-            prompt (str): 組合好的完整輸入 Prompt (包含 Context)
-            answers (list): Ground Truth 答案列表 (用於計算 F1/Exact Match)
-            length (int): Context 的原始長度
-        """
         data = self.dataset[index]
         context = data['context']
         input_text = data['input']

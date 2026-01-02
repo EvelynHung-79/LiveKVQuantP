@@ -42,7 +42,8 @@ def parse_args():
     parser.add_argument("--n_warmup", type=int, default=2, help="Number of warmup chunks")
     parser.add_argument("--bits", type=int, default=4, help="Quantization bits")
     parser.add_argument("--ema_alpha", type=float, default=0.1, help="EMA smoothing factor")
-    
+    parser.add_argument("--clip_factor_n", type=float, default=1.5, help="Clipped EMA factor N")
+    parser.add_argument("--outlier_ratio", type=float, default=0.01, help="Ratio of outliers to keep in FP16")
     # [移除] --baseline 參數已刪除
     
     return parser.parse_args()
@@ -54,7 +55,7 @@ def visualize_ema_tracking(model, save_dir, sample_idx):
     target_layers = [0, 16, 31]
     os.makedirs(save_dir, exist_ok=True)
     
-    print(f"Generating EMA tracking plots for Sample {sample_idx}...")
+    # print(f"Generating EMA tracking plots for Sample {sample_idx}...")
 
     for layer_idx in target_layers:
         if layer_idx >= len(model.controllers): break
@@ -248,7 +249,7 @@ def run_longbench(model, args, profiler):
             "args": vars(args),
             "config": model.config.__dict__,
             "avg_f1": avg_f1,
-            "avg_peak_memory_mb": max_peak_memory, # [新增] 寫入 JSON
+            "max_peak_memory_mb": max_peak_memory, # [新增] 寫入 JSON
             "details": results
         }, f, indent=4, ensure_ascii=False)
     logger.info(f"Saved to {output_file}")
@@ -261,8 +262,9 @@ def main():
         chunk_size=args.chunk_size, 
         n_warmup=args.n_warmup, 
         bits=args.bits,
-        ema_alpha=args.ema_alpha
-        # baseline=False (default)
+        ema_alpha=args.ema_alpha,
+        clip_factor_n=args.clip_factor_n,
+        outlier_ratio=args.outlier_ratio
     )
     
     device = "cuda" if torch.cuda.is_available() else "cpu"

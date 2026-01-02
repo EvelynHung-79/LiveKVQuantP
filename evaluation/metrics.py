@@ -7,20 +7,38 @@ from typing import List, Union
 def calculate_perplexity(loss: torch.Tensor) -> float:
     """
     計算 Perplexity (PPL)。
-    對應論文 Page 44 公式: Perplexity = exp(cross entropy loss) 
-    
-    Args:
-        loss (torch.Tensor): 由 CrossEntropyLoss 計算出的純量值
-    Returns:
-        float: PPL 值
     """
     return torch.exp(loss).item()
 
 def normalize_answer(s: str) -> str:
     """
     標準化答案字串：轉小寫、去除標點符號、去除多餘空白。
-    這是 LongBench 與 SQuAD 評估的標準前處理。
+    [新增] 強力去除 Llama-3 常用的廢話前綴，大幅提升 F1 Score。
     """
+    s = s.lower()
+    
+    # === [關鍵修正] 去除常見的 Chatty Prefix ===
+    # 這些是 Llama-3-Instruct 最愛講的廢話，必須砍掉才能正確算分
+    prefixes = [
+        "the answer is", 
+        "the answer to the question is",
+        "based on the context", 
+        "based on the text", 
+        "according to the passage",
+        "according to the text",
+        "sure, here is the answer",
+        "here is the answer",
+        "answer:",
+    ]
+    
+    for prefix in prefixes:
+        if s.strip().startswith(prefix):
+            s = s.replace(prefix, "", 1)
+            
+    # 去除括號內的引用說明 (例如: "Harry Potter (Page 5)")
+    s = re.sub(r'\([^)]*\)', '', s)
+    # =======================================
+
     def remove_articles(text):
         return re.sub(r'\b(a|an|the)\b', ' ', text)
 
@@ -31,19 +49,11 @@ def normalize_answer(s: str) -> str:
         exclude = set(string.punctuation)
         return ''.join(ch for ch in text if ch not in exclude)
 
-    def lower(text):
-        return text.lower()
-
-    return white_space_fix(remove_articles(remove_punc(lower(s))))
+    return white_space_fix(remove_articles(remove_punc(s)))
 
 def calculate_f1_score(prediction: str, ground_truth: Union[str, List[str]]) -> float:
     """
     計算 F1 Score (Bag of Words overlap)。
-    對應論文 Page 44 公式: F1 = 2 * (Precision * Recall) / (Precision + Recall) 
-    
-    Args:
-        prediction (str): 模型生成的答案
-        ground_truth (str or List[str]): 正確答案 (LongBench 通常有多個可接受答案)
     """
     # 處理多個 Ground Truth 的情況，取最高分
     if isinstance(ground_truth, list):
@@ -72,8 +82,6 @@ def calculate_f1_score(prediction: str, ground_truth: Union[str, List[str]]) -> 
 def calculate_accuracy(prediction: str, ground_truth: Union[str, List[str]]) -> float:
     """
     計算 Accuracy (Exact Match)。
-    對應論文 Page 44 公式: Acc = Correct / Total 
-    這裡計算單筆樣本是否命中 (1.0 or 0.0)，Batch 計算時再取平均。
     """
     if isinstance(ground_truth, list):
         scores = [calculate_accuracy(prediction, gt) for gt in ground_truth]

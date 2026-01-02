@@ -22,7 +22,8 @@ class LongBenchV2Loader:
         
         try:
             # v2 只有一個 'default' config，數據都在 'train' split
-            self.dataset = load_dataset("zai-org/LongBench-v2", "default", split=split)
+            # self.dataset = load_dataset("zai-org/LongBench-v2", "default", split=split)
+            self.dataset = load_dataset('THUDM/LongBench-v2', split=split)
         except Exception as e:
             logger.error(f"Failed to load LongBench v2: {e}")
             raise e

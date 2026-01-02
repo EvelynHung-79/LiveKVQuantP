@@ -60,10 +60,7 @@ def _custom_attention_forward(
 
     # 4. RoPE 應用策略 (對應論文 Pre-RoPE Key Quantization)
     # Q: 必須套用 RoPE，因為 Controller/AttentionCore 需要用它來做 Dot Product
-    # K: 保持 Raw (Pre-RoPE)，傳給 Controller 進行 Pre-RoPE 量化
-    # 我們利用 apply_rotary_pos_emb 只處理 Q
-    # (為了調用方便，我們傳入 K 但只取回 Q_rotated，K_rotated 丟棄)
-    query_states_rotated, _ = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+    query_states_rotated, _ = apply_rotary_pos_emb(query_states, query_states, cos, sin)
 
     # 5. 呼叫 Controller
     # [修正] 直接從 self 取得 controller，避免透過 parent_layer 造成循環參照
@@ -175,11 +172,11 @@ class LiveKVQuantModel:
         input_ids = inputs.input_ids
         seq_len = input_ids.size(1)
         
-        logger.info(f"Processing Prompt: {seq_len} tokens")
+        # logger.info(f"Processing Prompt: {seq_len} tokens")
 
         # 2. Chunking
         chunks = self._chunk_input(input_ids, self.config.chunk_size)
-        logger.info(f"Split into {len(chunks)} chunks (Size: {self.config.chunk_size})")
+        # logger.info(f"Split into {len(chunks)} chunks (Size: {self.config.chunk_size})")
 
         # 重置 Controller 狀態
         for controller in self.controllers:
@@ -188,7 +185,7 @@ class LiveKVQuantModel:
         # 3. Prefill Phase (One by one)
         current_pos = 0
         
-        logger.info("Starting Prefill Phase...")
+        # logger.info("Starting Prefill Phase...")
         with torch.no_grad():
             for i, chunk in enumerate(chunks):
                 chunk_len = chunk.size(1)
@@ -210,7 +207,7 @@ class LiveKVQuantModel:
                 
                 current_pos += chunk_len
 
-        logger.info("Prefill Completed. Starting Decoding Phase...")
+        # logger.info("Prefill Completed. Starting Decoding Phase...")
 
         # 4. Decoding Phase
         # 準備最後一個 token 進行生成

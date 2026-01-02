@@ -12,86 +12,124 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from data.longbench_loader import LongBenchLoader
-from data.longbench_v2_loader import LongBenchV2Loader  # [新增] 引入 v2 loader
+from data.longbench_v2_loader import LongBenchV2Loader
 from evaluation.metrics import calculate_f1_score, calculate_accuracy
 from evaluation.profiler import MemoryProfiler
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# === 任務定義 ===
+V1_TASK_GROUPS = {
+    "single-doc": ["narrativeqa", "qasper", "multifieldqa_en"],
+    "multi-doc": ["hotpotqa", "2wikimqa", "musique", "dureader"],
+    "summarization": ["gov_report", "qmsum", "multi_news", "vcsum"],
+    "few-shot": ["trec", "triviaqa", "samsum", "lsht"],
+    "synthetic": ["passage_retrieval_en", "passage_count"],
+    "code": ["lcc", "repobench-p"],
+    "all": [
+        "narrativeqa", "qasper", "multifieldqa_en", 
+        "hotpotqa", "2wikimqa", "musique", "dureader", 
+        "gov_report", "qmsum", "multi_news", "vcsum",
+        "trec", "triviaqa", "samsum", "lsht",
+        "passage_retrieval_en", "passage_count",
+        "lcc", "repobench-p"
+    ]
+}
+
+V2_DOMAIN_MAP = {
+    "single-doc": "single-document",
+    "multi-doc": "multi-document",
+    "summarization": "summarization",
+    "long-context": "long in-context",
+    "dialogue": "long dialogue",
+    "code": "code repository",
+    "all": "all"
+}
+
 def parse_args():
-    parser = argparse.ArgumentParser(description="Standard Baseline Inference Script")
-    
-    # 任務設定
+    parser = argparse.ArgumentParser(description="Standard Baseline Inference Script with Batch Support")
     parser.add_argument("--model_id", type=str, default="meta-llama/Meta-Llama-3.1-8B-Instruct", help="HuggingFace Model ID")
-    parser.add_argument("--task", type=str, default="narrativeqa", help="LongBench task name or 'v2-all' for LongBench v2")
-    parser.add_argument("--num_samples", type=int, default=10, help="Number of samples to evaluate")
-    parser.add_argument("--output_len", type=int, default=64, help="Max new tokens to generate")
+    parser.add_argument("--bench_version", type=str, choices=["v1", "v2"], default="v1", help="LongBench version (v1 or v2)")
+    parser.add_argument("--task_type", type=str, default="narrativeqa", help="Specific task name or category")
     
+    # [修改] 您可以把 default 改成 -1，這樣不打參數就會跑全部。目前設為 10 是為了防呆。
+    parser.add_argument("--num_samples", type=int, default=-1, help="Number of samples per task. Set -1 to run ALL.")
+    
+    parser.add_argument("--output_len", type=int, default=64, help="Max new tokens to generate")
     return parser.parse_args()
 
-def print_metrics(metrics):
-    print("\n" + "="*40)
-    print("PERFORMANCE METRICS")
-    print("="*40)
-    print(f"Peak Memory Usage : {metrics.peak_memory_mb:.2f} MB")
-    print(f"Total Latency     : {metrics.total_latency_ms:.2f} ms")
-    print(f"Throughput        : {metrics.throughput_tokens_per_sec:.2f} tokens/sec")
-    print("="*40)
+def get_task_list(version, task_type):
+    task_type_lower = task_type.lower()
+    if version == "v1":
+        if task_type_lower in V1_TASK_GROUPS:
+            return V1_TASK_GROUPS[task_type_lower]
+        return [task_type]
+    elif version == "v2":
+        domain = V2_DOMAIN_MAP.get(task_type_lower, task_type)
+        return [domain]
 
-def run_baseline_longbench(model, tokenizer, args, profiler):
-    """
-    執行標準的 LongBench / LongBench v2 評估流程
-    """
-    # [修改] 自動判斷要使用哪個 Loader
-    # 判斷邏輯：如果 task 名稱包含 "v2" 或者是 v2 特有的 domain 名稱，就用 v2 loader
-    v2_domains = ["single-document", "multi-document", "long in-context", "long dialogue", "code repository"]
-    is_v2 = "v2" in args.task.lower() or any(d in args.task.lower() for d in v2_domains)
-
+def evaluate_single_task(model, tokenizer, args, task_name, profiler):
+    # 1. 初始化 Loader
     try:
-        if is_v2:
-            logger.info(f"Detected LongBench v2 task: {args.task}")
-            # 如果 args.task 是 "v2-all" 或類似，我們可以傳入 "all"，否則傳入 args.task 做過濾
-            task_filter = "all" if "v2" in args.task.lower() else args.task
-            loader = LongBenchV2Loader(task_name=task_filter)
+        if args.bench_version == "v1":
+            logger.info(f"Loading LongBench V1 task: {task_name}")
+            loader = LongBenchLoader(task_name=task_name)
         else:
-            logger.info(f"Detected LongBench v1 task: {args.task}")
-            loader = LongBenchLoader(task_name=args.task)
+            logger.info(f"Loading LongBench V2 domain: {task_name}")
+            loader = LongBenchV2Loader(task_name=task_name)
     except Exception as e:
-        logger.error(f"Failed to load task {args.task}: {e}")
+        logger.error(f"Skipping task '{task_name}' due to load error: {e}")
         return
 
-    logger.info(f"Loaded {len(loader)} samples. Evaluating first {args.num_samples} samples...")
-    logger.info("Running in PURE BASELINE mode (Standard HF Generate, FP16 KV Cache)...")
+    # [修改] 處理 num_samples = -1 的情況 (跑全部)
+    if args.num_samples < 0:
+        sample_count = len(loader)
+    else:
+        sample_count = min(args.num_samples, len(loader))
+        
+    logger.info(f"Evaluating {sample_count} samples for task: {task_name}")
     
     results = []
-    total_score = 0.0 # 改名為 score，因為 v2 可能是 accuracy
+    total_score = 0.0
     
-    # 確保 Pad Token 設定正確
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
         model.config.pad_token_id = tokenizer.eos_token_id
 
-    for i in tqdm(range(min(args.num_samples, len(loader))), desc="Evaluating Baseline"):
+    for i in tqdm(range(sample_count), desc=f"Eval {task_name}"):
         sample = loader.get_sample(i)
-        prompt = sample["prompt"]
+        
+        # === Chat Template ===
+        user_content = sample["prompt"]
+        system_prompt = "You are a helpful assistant. Please answer the question based on the context provided."
+        
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_content}
+        ]
+        
+        try:
+            final_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        except Exception as e:
+            logger.warning(f"Failed to apply chat template: {e}. Using raw prompt.")
+            final_prompt = user_content
+            
         ground_truths = sample["answers"]
         
-        # [關鍵] 加入 Truncation 機制
-        # 這是 Baseline 為了避免 OOM 或長度報錯的標準做法
-        # 對於 LongBench v2 (超長文本)，這裡會把重要的後段截斷，導致 Baseline 分數低
         max_pos = getattr(model.config, "max_position_embeddings", 131072)
-        max_context_len = max_pos - args.output_len
+        max_input_len = max_pos - args.output_len
         
         inputs = tokenizer(
-            prompt, 
+            final_prompt, 
             return_tensors="pt",
-            truncation=True,             # 啟用截斷
-            max_length=max_context_len   # 設定上限
+            truncation=True,             
+            max_length=max_input_len   
         ).to(model.device)
         
         input_len = inputs.input_ids.size(1)
         
+        # Inference
         profiler.start()
         try:
             with torch.no_grad():
@@ -99,7 +137,9 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
                     **inputs,
                     max_new_tokens=args.output_len,
                     use_cache=True, 
-                    pad_token_id=tokenizer.pad_token_id
+                    pad_token_id=tokenizer.pad_token_id,
+                    temperature=0.0,
+                    do_sample=False
                 )
             
             perf_metrics = profiler.stop(num_output_tokens=args.output_len)
@@ -107,14 +147,7 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             generated_ids = outputs[0][input_len:]
             output_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
             
-            print_metrics(perf_metrics)
-            
-            # [修改] 針對 v2 計算 Accuracy，針對 v1 計算 F1
-            if is_v2:
-                # v2 是選擇題，我們可以用 Accuracy (Exact Match)
-                # 簡單處理：檢查 output_text 是否包含正確選項 (A/B/C/D)
-                # 這裡使用原本 metrics.py 的 calculate_accuracy (Exact Match)
-                # 建議: 實際使用時可能需要正則表達式提取 "The answer is A" 中的 "A"
+            if args.bench_version == "v2":
                 score = calculate_accuracy(output_text, ground_truths)
                 metric_name = "Accuracy"
             else:
@@ -126,73 +159,60 @@ def run_baseline_longbench(model, tokenizer, args, profiler):
             results.append({
                 "index": i,
                 "input_length": sample["context_length"],
-                "actual_input_len": input_len,
                 "score": score,
                 "metric": metric_name,
                 "peak_memory_mb": perf_metrics.peak_memory_mb,
                 "latency_ms": perf_metrics.total_latency_ms,
-                "throughput": perf_metrics.throughput_tokens_per_sec,
                 "output": output_text,
-                "ground_truth": ground_truths[0],
-                "truncated": input_len == max_context_len # 標記是否被截斷
+                "ground_truth": ground_truths[0]
             })
             
         except torch.cuda.OutOfMemoryError:
-            logger.error(f"OOM at sample {i} (Length: {input_len})")
-            results.append({
-                "index": i,
-                "input_length": sample["context_length"],
-                "error": "OOM",
-                "score": 0.0,
-                "peak_memory_mb": torch.cuda.max_memory_allocated() / (1024**2)
-            })
+            logger.error(f"OOM at sample {i}")
             torch.cuda.empty_cache()
+            results.append({"index": i, "error": "OOM", "score": 0.0})
         except Exception as e:
             logger.error(f"Error at sample {i}: {e}")
 
     avg_score = total_score / len(results) if results else 0.0
     max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
-
-    logger.info(f"Baseline Average Score: {avg_score:.4f}")
-    logger.info(f"Max Peak Memory: {max_peak_memory:.2f} MB")
+    
+    logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Max Memory: {max_peak_memory:.2f} MB")
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = f"./results/baseline/results_{args.task}_baseline_{timestamp}.json"
+    output_filename = f"{timestamp}_baseline_{args.bench_version}_{task_name}.json"
+    output_path = os.path.join("./results/baseline", output_filename)
     
-    config_dict = model.config.to_dict() if hasattr(model.config, "to_dict") else str(model.config)
-
-    with open(output_file, "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump({
+            "task": task_name,
+            "version": args.bench_version,
             "args": vars(args),
-            "config": config_dict,
             "avg_score": avg_score,
             "max_peak_memory_mb": max_peak_memory,
             "details": results
         }, f, indent=4, ensure_ascii=False)
-    logger.info(f"Saved baseline results to {output_file}")
+    
+    logger.info(f"Saved results to {output_path}")
 
 def main():
     args = parse_args()
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
-    logger.info(f"Loading standard model: {args.model_id}")
-    try:
-        # [選項] 如果想讓 Baseline 支援 Llama-2 長文本 (避免長度報錯但引發 OOM)，可在此加入 RoPE Scaling
-        # config = AutoConfig.from_pretrained(args.model_id)
-        # config.rope_scaling = {"type": "dynamic", "factor": 8.0}
-        tokenizer = AutoTokenizer.from_pretrained(args.model_id)
-        model = AutoModelForCausalLM.from_pretrained(
-            args.model_id,
-            torch_dtype=torch.float16, 
-            device_map=device
-        )
-        model.eval()
-    except Exception as e:
-        logger.error(f"Model load failed: {e}")
-        return
+    logger.info(f"Loading Model: {args.model_id}")
+    tokenizer = AutoTokenizer.from_pretrained(args.model_id)
+    model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.float16, device_map=device)
+    model.eval()
 
     profiler = MemoryProfiler()
-    run_baseline_longbench(model, tokenizer, args, profiler)
+    tasks_to_run = get_task_list(args.bench_version, args.task_type)
+    logger.info(f"Tasks scheduled for execution: {tasks_to_run}")
+
+    for task_name in tasks_to_run:
+        evaluate_single_task(model, tokenizer, args, task_name, profiler)
+        torch.cuda.empty_cache()
 
 if __name__ == "__main__":
     main()
