@@ -1,0 +1,77 @@
+{
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "task": "narrativeqa",
+        "num_samples": 5,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 5.0,
+        "outlier_ratio": 0.05
+    },
+    "config": {
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 5.0,
+        "outlier_ratio": 0.05
+    },
+    "avg_f1": 0.09270332479789564,
+    "max_peak_memory_mb": 22061.48681640625,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 22692,
+            "f1": 0.046511627906976744,
+            "peak_memory_mb": 21040.23291015625,
+            "latency_ms": 53635.68170694634,
+            "throughput": 1.1932355097056848,
+            "output": " Send it in a hurry\n\nMrs. An Anvay quickly became,? before the Solan and An Antheum—\n\n“Just as anyone would know”\n\n“Engagingen” I\n\nLeave it said that I was\n\nReplicated this question.\n\nIt was really grateful.\n\nFact-Med and hanging around\n\n",
+            "ground_truth": "He is a guest in the home of the Mulvilles."
+        },
+        {
+            "index": 1,
+            "input_length": 23316,
+            "f1": 0.0851063829787234,
+            "peak_memory_mb": 21040.23291015625,
+            "latency_ms": 54701.44290290773,
+            "throughput": 1.169987419044809,
+            "output": " The\nre unfeigned, he had her last days of his life in a quiet; that, nor\nthinking, and sought she was.\n\nWhat _\"I, my anxiety stilled?\"_ here we unfeited his heart developur?\n\nshe, the Mother, and her; and when she only _",
+            "ground_truth": "Because she is in unrequited love with someone else"
+        },
+        {
+            "index": 2,
+            "input_length": 5397,
+            "f1": 0.0,
+            "peak_memory_mb": 18265.88037109375,
+            "latency_ms": 10067.40264268592,
+            "throughput": 6.357151121446077,
+            "output": " End of Project:\n\n[Shelley's witch]\n\n_ Version:\n[O]f the last witch\n Which was so?\n\n[Shelley's Witch]\n\n' Hermaphroditic beast\n With a serpent's face\n And gazing out of in a hole\n\n[Shelley's witch]\n Here",
+            "ground_truth": "The Atlas Mountains"
+        },
+        {
+            "index": 3,
+            "input_length": 6592,
+            "f1": 0.29268292682926833,
+            "peak_memory_mb": 16952.59521484375,
+            "latency_ms": 11296.099261380732,
+            "throughput": 5.665672593618589,
+            "output": "  To take Socrates out of prison.\n\nCeneo.  But, Crito, do not follow the example, Crito.\n\n Personification of Crito.\n\nAs the Covenants of the Laws, Crito said.\n\nCRIT.:  Thou, Socrates, must obey the law.\n\nSOCRATES",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile."
+        },
+        {
+            "index": 4,
+            "input_length": 27745,
+            "f1": 0.0392156862745098,
+            "peak_memory_mb": 22061.48681640625,
+            "latency_ms": 69533.99311564863,
+            "throughput": 0.9204131264769375,
+            "output": "Shall I lay down and read the better story of him now, HEN\nas he again, but before they took it.\n\nAs he came running to the door of a stone, he was no longer there; though\nhe had the next instant seen, he was still, patting against his face,\nand",
+            "ground_truth": "Otto was so young."
+        }
+    ]
+}

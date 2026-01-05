@@ -1,0 +1,37 @@
+{
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "task": "narrativeqa",
+        "num_samples": 1,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "config": {
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "avg_f1": 0.08,
+    "max_peak_memory_mb": 20978.48291015625,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 22692,
+            "f1": 0.08,
+            "peak_memory_mb": 20978.48291015625,
+            "latency_ms": 54551.596669945866,
+            "throughput": 1.1732012242871628,
+            "output": " “He’s eternally not engaged; his business, professional,\n\nLadies presence was that which?\n\nI saw, he was a derivative of fury, and some other tribulations came\nalones; clinging to himself as an individual.  I do not know _what_\nyoung woman I never wanted to catch him",
+            "ground_truth": "He is a guest in the home of the Mulvilles."
+        }
+    ]
+}

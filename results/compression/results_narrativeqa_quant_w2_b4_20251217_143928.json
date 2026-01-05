@@ -1,0 +1,77 @@
+{
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "task": "narrativeqa",
+        "num_samples": 5,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 10.0,
+        "outlier_ratio": 0.05
+    },
+    "config": {
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 10.0,
+        "outlier_ratio": 0.05
+    },
+    "avg_f1": 0.09025022182786159,
+    "max_peak_memory_mb": 22061.48681640625,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 22692,
+            "f1": 0.13043478260869565,
+            "peak_memory_mb": 21040.23291015625,
+            "latency_ms": 53504.49386704713,
+            "throughput": 1.1961612076741266,
+            "output": " “By Saltram, not an abolishing of that”\n\nSorts of things wouldn’t do to this kind of Please.\n\n(k.)\n\nThe request to meet him; the fellow widow, in that settlement “An An\nvilles question’”\n\n“Question I\n\nWhich Rip Gravener laughed at; laughing he now",
+            "ground_truth": "He is a guest in the home of the Mulvilles."
+        },
+        {
+            "index": 1,
+            "input_length": 23316,
+            "f1": 0.04,
+            "peak_memory_mb": 21040.23291015625,
+            "latency_ms": 54573.52168485522,
+            "throughput": 1.1727298884902408,
+            "output": "they\n_she had--the child objects was from \"I,\ndanger--\". To be a bride; she was not abstaining from her\ndefinitely. This was all sorts of sins; and then would have to conspire my\nenvoy, that she had her anus; and others unfeeling\n",
+            "ground_truth": "Because she is in unrequited love with someone else"
+        },
+        {
+            "index": 2,
+            "input_length": 5397,
+            "f1": 0.0,
+            "peak_memory_mb": 18265.88037109375,
+            "latency_ms": 10060.779524035752,
+            "throughput": 6.361336101949208,
+            "output": " question:\n Form and form of\nIn wood, P?\nN.\n[By Percy's]\nThe of Path question:\n I question it, dead and dead. question\n 1:\nAl_sks question:\n Number:\n[By all those kinds,]\n And.\nOn\nfree\n To--\n and is not:\nhe",
+            "ground_truth": "The Atlas Mountains"
+        },
+        {
+            "index": 3,
+            "input_length": 6592,
+            "f1": 0.24000000000000002,
+            "peak_memory_mb": 16952.59521484375,
+            "latency_ms": 11285.616734065115,
+            "throughput": 5.670935094474628,
+            "output": " To see Socrates\n\nCrito, to take the life of Socrates and see to it.\n\nSOCR.\n\nQuestion:\nTo what end or purpose did the Covenants ever bring about the good of?\n\nQuestion CRIT.\n\nAnswer:  To see Socrates, (compare Ap.)\n\n'Your statement, my friend",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile."
+        },
+        {
+            "index": 4,
+            "input_length": 27745,
+            "f1": 0.04081632653061225,
+            "peak_memory_mb": 22061.48681640625,
+            "latency_ms": 69482.4543800205,
+            "throughput": 0.9210958445705544,
+            "output": " for now, then, the end of it was the one that was just in the\nfridling wind of the bridge, suddenly said, as he Baron left the castle, on\nhis horse lay down and slow.\n\nAt his side and;\nBut who on?\n\nOne moment he hung there at the doorway of the",
+            "ground_truth": "Otto was so young."
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "task": "narrativeqa",
+        "num_samples": 1,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "config": {
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "avg_f1": 0.08888888888888889,
+    "max_peak_memory_mb": 20978.98291015625,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 22692,
+            "f1": 0.08888888888888889,
+            "peak_memory_mb": 20978.98291015625,
+            "latency_ms": 52248.88471327722,
+            "throughput": 1.224906528650489,
+            "output": " “Mrs. Saltrams,\nNot a rescue from that there existed before; but only as a lady's personal\ntemperamental disposition.  He was thrown out; then at this station “was\nthat, you can unhesitatingly agree.  His opponent's friend in; but choosing\nand not",
+            "ground_truth": "He is a guest in the home of the Mulvilles."
+        }
+    ]
+}
