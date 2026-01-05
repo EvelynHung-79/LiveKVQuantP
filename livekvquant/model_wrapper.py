@@ -99,7 +99,7 @@ class LiveKVQuantModel:
         # 載入模型 (FP16)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id, 
-            torch_dtype=torch.float16,
+            torch_dtype=torch.bfloat16,
             device_map=device
         )
         

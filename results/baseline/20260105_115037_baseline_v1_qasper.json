@@ -1,0 +1,2015 @@
+{
+    "task": "qasper",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "single-doc",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.24417323894607088,
+    "max_peak_memory_mb": 20379.6904296875,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 3141,
+            "score": 0.18867924528301885,
+            "metric": "F1",
+            "peak_memory_mb": 16251.75537109375,
+            "latency_ms": 2321.7331969644874,
+            "output": "The ground truth for fake news is established through manual annotation by a single person. The person inspected the text field within the tweets to label them as containing fake news, or not containing them, according to the characterization presented before. This annotated dataset is publicly available and can be freely reused.",
+            "ground_truth": "Ground truth is not established in the paper"
+        },
+        {
+            "index": 1,
+            "input_length": 2454,
+            "score": 0.339622641509434,
+            "metric": "F1",
+            "peak_memory_mb": 16095.8046875,
+            "latency_ms": 2341.5397768840194,
+            "output": "The GhostVLAD approach is an extension of the NetVLAD approach, which was initially developed for place recognition. It was later proposed for face recognition by Y. Zhong [10]. In the GhostVLAD model, Ghost clusters are added along with the NetVLAD clusters. These Ghost clusters are used to map",
+            "ground_truth": "extension of the NetVLAD, adds Ghost clusters along with the NetVLAD clusters"
+        },
+        {
+            "index": 2,
+            "input_length": 3207,
+            "score": 0.16666666666666669,
+            "metric": "F1",
+            "peak_memory_mb": 16340.77392578125,
+            "latency_ms": 1841.1404439248145,
+            "output": "According to the text, their model outperforms previous state-of-the-art methods by 68.8% to 71.8% when applied to the IEMOCAP dataset.",
+            "ground_truth": "the attention model, MDREA, also outperforms the best existing research results (WAP 0.690 to 0.688)"
+        },
+        {
+            "index": 3,
+            "input_length": 2060,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "peak_memory_mb": 16007.65869140625,
+            "latency_ms": 2263.3074251934886,
+            "output": "The additional features and context proposed in this paper are:\n\n1. **Context tweets**: The authors propose using context tweets, which are the tweets that a user has replied to or quoted, as additional features to improve the detection of abusive language. They assume that computers can benefit from taking context tweets into account, just like humans",
+            "ground_truth": "using tweets that one has replied or quoted to as contextual information"
+        },
+        {
+            "index": 4,
+            "input_length": 3411,
+            "score": 0.6153846153846154,
+            "metric": "F1",
+            "peak_memory_mb": 16358.8994140625,
+            "latency_ms": 2576.378565048799,
+            "output": "The Facebook pages that were looked at in this study are:\n\n1. FoxNews\n2. CNN\n3. ESPN\n4. New York Times\n5. Time magazine\n6. Huffington Post Weird News\n7. The Guardian\n8. Cartoon Network\n9. Cooking Light\n10. Home Cooking Adventure\n",
+            "ground_truth": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney"
+        },
+        {
+            "index": 5,
+            "input_length": 3735,
+            "score": 0.19999999999999998,
+            "metric": "F1",
+            "peak_memory_mb": 16585.2822265625,
+            "latency_ms": 1290.3213761746883,
+            "output": "Yes, the hashtag and SemEval datasets contain only English data.",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 6,
+            "input_length": 4263,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16646.18798828125,
+            "latency_ms": 2877.0472039468586,
+            "output": "The proposed evaluation for the task of concept-map-based multi-document summarization (MDS) involves several aspects:\n\n1. **Reliability studies**: To examine the reliability of the crowdsourced importance annotations, the authors conducted a pilot study on Amazon Mechanical Turk, where they collected importance estimates for 474 propositions extracted from the first",
+            "ground_truth": "Answer with content missing: (Evaluation Metrics section) Precision, Recall, F1-scores, Strict match, METEOR, ROUGE-2"
+        },
+        {
+            "index": 7,
+            "input_length": 4369,
+            "score": 0.4444444444444444,
+            "metric": "F1",
+            "peak_memory_mb": 16849.55029296875,
+            "latency_ms": 2680.679874960333,
+            "output": "The datasets used for evaluation are:\n\n1. CNN/DailyMail news highlights dataset\n2. The New York Times Annotated Corpus (NYT)\n3. XSum\n\nThese datasets represent different summary styles ranging from highlights to very brief one sentence summaries.",
+            "ground_truth": "CNN/DailyMail news highlights, New York Times Annotated Corpus, XSum"
+        },
+        {
+            "index": 8,
+            "input_length": 2189,
+            "score": 0.2564102564102564,
+            "metric": "F1",
+            "peak_memory_mb": 16130.18408203125,
+            "latency_ms": 2382.575031835586,
+            "output": "This approach, GM_KL, compares favorably to other word sense disambiguation (WSD) approaches employing word embeddings, such as w2g (single Gaussian model) and w2gm (mixture of Gaussian model with expected likelihood kernel). The results on the SCWS dataset show that GM_KL",
+            "ground_truth": "GM$\\_$KL achieves better correlation than existing approaches for various metrics on SCWS dataset."
+        },
+        {
+            "index": 9,
+            "input_length": 4212,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16570.81494140625,
+            "latency_ms": 2761.1388189252466,
+            "output": "The ensemble method used by the authors is a greedy ensemble method. Here's a step-by-step explanation of how it works:\n\n1. Start with the best performing model according to validation performance.\n2. In each step, try adding the best performing model that has not been previously tried.\n3. If adding the new model",
+            "ground_truth": "simply averaging the predictions from the constituent single models"
+        },
+        {
+            "index": 10,
+            "input_length": 3185,
+            "score": 0.5,
+            "metric": "F1",
+            "peak_memory_mb": 16394.7138671875,
+            "latency_ms": 1709.8724411334842,
+            "output": "The sources of the datasets are:\n\n1. Friends dataset: The scripts of the Friends TV sitcom.\n2. EmotionPush dataset: Facebook messenger chats.",
+            "ground_truth": "Friends TV sitcom, Facebook messenger chats"
+        },
+        {
+            "index": 11,
+            "input_length": 2243,
+            "score": 0.1904761904761905,
+            "metric": "F1",
+            "peak_memory_mb": 16078.1015625,
+            "latency_ms": 1250.0875289551914,
+            "output": "The paper focuses on the English language, as it mentions the use of English Wikipedia and Simple English Wikipedia for text simplification.",
+            "ground_truth": "English"
+        },
+        {
+            "index": 12,
+            "input_length": 2327,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 16103.0439453125,
+            "latency_ms": 898.7271231599152,
+            "output": "The IMDb dataset of movie reviews is used for sentiment analysis.",
+            "ground_truth": "IMDb dataset of movie reviews"
+        },
+        {
+            "index": 13,
+            "input_length": 5310,
+            "score": 0.48648648648648646,
+            "metric": "F1",
+            "peak_memory_mb": 17369.212890625,
+            "latency_ms": 3220.8602759055793,
+            "output": "The proposed system, ALCrowd, achieves the best performance among all the systems, with F1 values of 83.12 on DL-PS, 84.36 on EC-MT, and 86.50 on EC-UQ, respectively.",
+            "ground_truth": "F1 scores of 85.99 on the DL-PS data,  75.15 on the EC-MT data and 71.53 on the EC-UQ data "
+        },
+        {
+            "index": 14,
+            "input_length": 3445,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16427.09228515625,
+            "latency_ms": 2717.6484430674464,
+            "output": "Yes, they did experiment with the new dataset. The text mentions that they conducted a detailed technical validation of the data as proof of the quality of the recordings. They analyzed the fixations made by all subjects through their reading speed and omission rate on sentence level, and also corroborated these sentence-level metrics by visualizing the",
+            "ground_truth": "No"
+        },
+        {
+            "index": 15,
+            "input_length": 13401,
+            "score": 0.3859649122807018,
+            "metric": "F1",
+            "peak_memory_mb": 19507.22216796875,
+            "latency_ms": 5941.643955884501,
+            "output": "The datasets used in the research are:\n\n1. Twitter posts: 184,001 posts related to finance.\n2. News articles: 62,949 articles related to finance.\n3. A set of 124 questions collected from the Wizard of Oz method.\n4. A training set with 37 classes of intents,",
+            "ground_truth": "Custom dataset with user questions; set of documents, twitter posts and news articles, all related to finance."
+        },
+        {
+            "index": 16,
+            "input_length": 10349,
+            "score": 0.0888888888888889,
+            "metric": "F1",
+            "peak_memory_mb": 19015.36328125,
+            "latency_ms": 5330.423252191395,
+            "output": "Unfortunately, the text does not provide a clear answer to which stock market sector achieved the best performance. However, it does mention that the results in Table 3 (tbl:garcheachsector) show that the GARCH model accuracy, measured using the R^2 score, has a high degree of variability among sectors,",
+            "ground_truth": "Energy with accuracy of 0.538"
+        },
+        {
+            "index": 17,
+            "input_length": 3708,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "peak_memory_mb": 16531.0703125,
+            "latency_ms": 2741.863421862945,
+            "output": "They compared the following NMT models:\n\n1. RNN-based NMT model (with attention mechanism)\n2. Transformer-NMT model (with multi-head self-attention mechanism)\n\nThey also compared the performance of these NMT models with and without various techniques, such as:\n\n* Target language reversal\n* Residual connection",
+            "ground_truth": "RNN-based NMT model, Transformer-NMT"
+        },
+        {
+            "index": 18,
+            "input_length": 3604,
+            "score": 0.4545454545454545,
+            "metric": "F1",
+            "peak_memory_mb": 16516.033203125,
+            "latency_ms": 2711.8871069978923,
+            "output": "The three regularization terms are:\n\n1. A regularization term associated with neutral features: This term uses the most common features as neutral features and assumes they are distributed uniformly over class labels. The objective function with this new term is denoted as $\\mathcal{O}_{NE}$.\n\n2. The maximum entropy of class distribution",
+            "ground_truth": "a regularization term associated with neutral features, the maximum entropy of class distribution regularization term, the KL divergence between reference and predicted class distribution"
+        },
+        {
+            "index": 19,
+            "input_length": 4512,
+            "score": 0.7222222222222222,
+            "metric": "F1",
+            "peak_memory_mb": 16725.3173828125,
+            "latency_ms": 2925.0214151106775,
+            "output": "The baselines in this paper are:\n\n1. SVM with unigram, bigram, and trigram features\n2. SVM with average word embedding\n3. SVM with average transformed word embeddings\n4. Two mature deep learning models on text classification: CNN and Recurrent Convolutional Neural Networks (RCNN)\n",
+            "ground_truth": "SVM with unigram, bigram, and trigram features, SVM with average word embedding, SVM with average transformed word embeddings, CNN, ecurrent Convolutional Neural Networks, SVM and deep learning models with comment information"
+        },
+        {
+            "index": 20,
+            "input_length": 2735,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16181.12744140625,
+            "latency_ms": 2406.609918922186,
+            "output": "The text does not explicitly state the exact amount of improvement achieved by the multitask learning approach. However, it mentions that the biLSTM network with multitask learning achieves the best performance, outperforming the baselines and the state-of-the-art system of Balikas et al. (2016).\n\nTo provide",
+            "ground_truth": "They decrease MAE in 0.34"
+        },
+        {
+            "index": 21,
+            "input_length": 4902,
+            "score": 0.10169491525423728,
+            "metric": "F1",
+            "peak_memory_mb": 17162.76806640625,
+            "latency_ms": 3348.4667940065265,
+            "output": "The authors' model improves interpretability compared to softmax transformers in several ways:\n\n1. **Sparsity**: The use of sparse attention mechanisms, such as entmax, allows for the assignment of exactly zero probabilities to irrelevant words, making it easier to identify the most important words in the input sequence.\n2. **Head specialization",
+            "ground_truth": "the attention heads in the proposed adaptively sparse Transformer can specialize more and with higher confidence"
+        },
+        {
+            "index": 22,
+            "input_length": 3716,
+            "score": 0.47619047619047616,
+            "metric": "F1",
+            "peak_memory_mb": 16531.41552734375,
+            "latency_ms": 1616.0944560542703,
+            "output": "The baseline model used in the study was a Transformer base model, and a second baseline was the two-pass CADec model.",
+            "ground_truth": " MT system on the data released by BIBREF11"
+        },
+        {
+            "index": 23,
+            "input_length": 3402,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "peak_memory_mb": 16572.58349609375,
+            "latency_ms": 2765.1834071148187,
+            "output": "The metrics used for evaluation in this work are:\n\n1. Zero-shot cross-lingual transfer tasks:\n   - Cross-lingual Natural Language Inference (XNLI) test accuracy\n   - Universal Dependency Parsing (UD) Labeled Attachment Scores (LAS)\n\n2. Supervised dependency parsing:\n   - L",
+            "ground_truth": "translation probabilities, Labeled Attachment Scores (LAS)"
+        },
+        {
+            "index": 24,
+            "input_length": 4656,
+            "score": 0.35555555555555557,
+            "metric": "F1",
+            "peak_memory_mb": 17093.5341796875,
+            "latency_ms": 2725.3496430348605,
+            "output": "The attention module is not pretrained on any task. According to the text, \"Previous work trains attention modules for ASR, MT and ST respectively, hence, the attention module of ST does not benefit from the pre-training.\"",
+            "ground_truth": "the model is pre-trained on CTC-based ASR task and MT task in the pre-training stage."
+        },
+        {
+            "index": 25,
+            "input_length": 3543,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16481.3603515625,
+            "latency_ms": 2683.083886979148,
+            "output": "The text does not explicitly mention the specific stylistic features obtained. However, it mentions that the authors have used various features from previous literature, including:\n\n1. Lexical features\n2. Implicit incongruity features\n3. Explicit incongruity features\n\nThese features are borrowed from the work of Joshi et al",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 26,
+            "input_length": 2289,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "peak_memory_mb": 16047.61328125,
+            "latency_ms": 1228.792177978903,
+            "output": "The encoder in the system described has a forward LSTM to encode the past context and a backwards LSTM to encode the future context.",
+            "ground_truth": "LSTM"
+        },
+        {
+            "index": 27,
+            "input_length": 6391,
+            "score": 0.0392156862745098,
+            "metric": "F1",
+            "peak_memory_mb": 17509.99560546875,
+            "latency_ms": 3656.3913638237864,
+            "output": "Yes, WordNet is useful for taxonomic reasoning for this task. The authors of the paper mention that they use WordNet to construct natural language questions that contextualize the types of concepts they want to probe, and that WordNet's availability of glosses and example sentences allows them to create more complex and nuanced questions.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 28,
+            "input_length": 1856,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15973.599609375,
+            "latency_ms": 2243.0342989973724,
+            "output": "The text does not explicitly mention the baselines used in the experiments. However, it does mention that the authors aim to \"match or outperform non end-to-end models\" on the LibriSpeech and 2000hr Fisher+Switchboard tasks, suggesting that the baselines are likely to be non-end-to-end",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 29,
+            "input_length": 4160,
+            "score": 0.5714285714285715,
+            "metric": "F1",
+            "peak_memory_mb": 16571.99267578125,
+            "latency_ms": 1159.5106460154057,
+            "output": "They look at 22,880 users.",
+            "ground_truth": "22,880 users"
+        },
+        {
+            "index": 30,
+            "input_length": 2673,
+            "score": 0.13698630136986303,
+            "metric": "F1",
+            "peak_memory_mb": 16250.03173828125,
+            "latency_ms": 2495.099927065894,
+            "output": "The metrics used for evaluation in this paper are:\n\n1. **BPE Perplexity**: This measures the average number of bits required to encode a token in the generated recipe, with lower values indicating better performance.\n2. **BLEU-1/4**: This measures the overlap between the generated recipe and the reference",
+            "ground_truth": "Byte-Pair Encoding perplexity  (BPE PPL),\nBLEU-1,\nBLEU-4,\nROUGE-L,\npercentage of distinct unigram (D-1),\npercentage of distinct bigrams(D-2),\nuser matching accuracy(UMA),\nMean Reciprocal Rank(MRR)\nPairwise preference over baseline(PP)"
+        },
+        {
+            "index": 31,
+            "input_length": 3424,
+            "score": 0.09374999999999999,
+            "metric": "F1",
+            "peak_memory_mb": 16418.22607421875,
+            "latency_ms": 2672.2838149871677,
+            "output": "The labels created on their dataset are based on the following categories:\n\n1. Open-ended Inquiry: Inquiries about general well-being or a particular symptom.\n2. Detailed Inquiry: Inquiries with specific details that prompt yes/no answers or clarifications.\n3. Multi-Intent Inquiry: Inquiring more than one symptom in a",
+            "ground_truth": "(1) the time the patient has been experiencing the symptom, (2) activities that trigger the symptom (to occur or worsen), (3) the extent of seriousness, (4) the frequency occurrence of the symptom, and (5) the location of symptom, No Answer"
+        },
+        {
+            "index": 32,
+            "input_length": 4371,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16686.3115234375,
+            "latency_ms": 2892.8526011295617,
+            "output": "Unfortunately, the text does not explicitly mention the amount of data needed to train the task-specific encoder. However, it does mention that the task-specific encoder is learned from scratch for the difficulty prediction task, and that the hyperparameters for all models, including the hidden layers, hidden sizes, and dropout, were tuned using V",
+            "ground_truth": "57,505 sentences"
+        },
+        {
+            "index": 33,
+            "input_length": 4898,
+            "score": 0.5757575757575758,
+            "metric": "F1",
+            "peak_memory_mb": 17161.7119140625,
+            "latency_ms": 3316.7010380420834,
+            "output": "The tasks used for evaluation are four machine translation tasks. The specific datasets used for these tasks are:\n\n1. IWSLT 2017 German → English\n2. KFTT Japanese → English\n3. WMT 2016 Romanian → English\n4. WMT 2014 English → German",
+            "ground_truth": "four machine translation tasks: German -> English, Japanese -> English, Romanian -> English, English -> German"
+        },
+        {
+            "index": 34,
+            "input_length": 3290,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16416.0751953125,
+            "latency_ms": 2667.9534460417926,
+            "output": "Unfortunately, the improvement in performance for Estonian in the NER task is not explicitly stated in the provided text. However, we can see that the ELMo embeddings improve the results compared to the fastText embeddings for all languages, including Estonian. \n\nTo find the exact improvement for Estonian, we would need",
+            "ground_truth": "5 percent points."
+        },
+        {
+            "index": 35,
+            "input_length": 8506,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 17839.61962890625,
+            "latency_ms": 4003.576591145247,
+            "output": "The authors of the article have a diverse background in various disciplines, including:\n\n1. Dong Nguyen: An Alan Turing Institute Fellow with a background in computer science and natural language processing.\n2. Maria Liakata: A Turing fellow with a background in computer science, natural language processing, and the humanities.\n3. Other",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 36,
+            "input_length": 2239,
+            "score": 0.04347826086956522,
+            "metric": "F1",
+            "peak_memory_mb": 16187.17626953125,
+            "latency_ms": 2433.74353996478,
+            "output": "No, this paper is not introducing an unsupervised approach to spam detection. Although the LDA model used in this paper is an unsupervised method, the overall approach presented in the paper is supervised.\n\nThe LDA model is used to extract topic-based features, which are then used as input to a supervised classification",
+            "ground_truth": "No"
+        },
+        {
+            "index": 37,
+            "input_length": 1877,
+            "score": 0.8666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 15935.59130859375,
+            "latency_ms": 1767.731136875227,
+            "output": "The Nguni languages (zul, xho, nbl, ssw) are similar to each other and harder to distinguish. The same is true of the Sotho languages (nso, sot, tsn).",
+            "ground_truth": "Nguni languages (zul, xho, nbl, ssw), Sotho languages (nso, sot, tsn)"
+        },
+        {
+            "index": 38,
+            "input_length": 4286,
+            "score": 0.19047619047619047,
+            "metric": "F1",
+            "peak_memory_mb": 16639.7978515625,
+            "latency_ms": 2842.0550478622317,
+            "output": "The LSTM models compared in the paper are:\n\n1. Models with Xavier initialization\n2. Layer-wise trained models (with both hard and soft targets)\n3. 6-layers and 9-layers sMBR models\n4. 2-layers distilled model of Shenma voice search (Shenma model",
+            "ground_truth": "Unidirectional LSTM networks with 2, 6, 7, 8, and  9 layers."
+        },
+        {
+            "index": 39,
+            "input_length": 4187,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "peak_memory_mb": 16671.35986328125,
+            "latency_ms": 2870.6498390529305,
+            "output": "The size of the Wikipedia dataset is around 29,794 articles, which were randomly sampled from each quality class. The dataset was further divided into training, development, and test splits based on a ratio of 8:1:1.\n\nThe size of the arXiv dataset is not explicitly stated, but it is",
+            "ground_truth": "a sample of  29,794 wikipedia articles and 2,794 arXiv papers "
+        },
+        {
+            "index": 40,
+            "input_length": 5344,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "peak_memory_mb": 16969.501953125,
+            "latency_ms": 3160.4583808220923,
+            "output": "A group of 50 native people who were well-versed in both English and Tamil languages acted as annotators for the evaluation. A collection of samples of about 100 sentences were taken from the test set results for comparison. This set included a randomized selection of the translation results to ensure the objectivity of evaluation.",
+            "ground_truth": "50 human annotators ranked a random sample of 100 translations by Adequacy, Fluency and overall ranking on a 5-point scale."
+        },
+        {
+            "index": 41,
+            "input_length": 4472,
+            "score": 0.046511627906976744,
+            "metric": "F1",
+            "peak_memory_mb": 16694.3876953125,
+            "latency_ms": 2904.401319101453,
+            "output": "Yes, they do test their framework performance on commonly used language pairs, such as English-to-German. In the \"Under-resourced Translation\" section, they mention that they use the WIT3's TED corpus as the basis of their experiments, which includes English-German as one of the language pairs. They also",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 42,
+            "input_length": 1873,
+            "score": 0.5714285714285713,
+            "metric": "F1",
+            "peak_memory_mb": 15938.17919921875,
+            "latency_ms": 2197.8320740163326,
+            "output": "In this human-machine communication game, models are evaluated based on two main metrics:\n\n1. **Efficiency**: Measured as the retention rate of tokens, which is the fraction of tokens that are kept in the keywords. A higher retention rate indicates that the model is more efficient.\n2. **Accuracy**: Measured as",
+            "ground_truth": "by training an autocomplete system on 500K randomly sampled sentences from Yelp reviews"
+        },
+        {
+            "index": 43,
+            "input_length": 3044,
+            "score": 0.09090909090909091,
+            "metric": "F1",
+            "peak_memory_mb": 16308.82373046875,
+            "latency_ms": 2540.778897004202,
+            "output": "For classification tasks, the following evaluation metrics are looked at:\n\n1.  **Accuracy**: The overall accuracy for a classifier is defined as the number of correctly classified instances divided by the total number of instances.\n2.  **Precision**: Precision is the ratio of true positives (correctly classified instances) to the sum of",
+            "ground_truth": "Precision, Recall, F-measure, accuracy"
+        },
+        {
+            "index": 44,
+            "input_length": 5061,
+            "score": 0.20253164556962025,
+            "metric": "F1",
+            "peak_memory_mb": 16930.29248046875,
+            "latency_ms": 2975.902808830142,
+            "output": "The source domain and target domain are two different application domains where the source domain has sufficient labeled data, but the target domain has very few or no labeled data. The goal of cross-domain sentiment classification is to transfer knowledge from the source domain to the target domain to alleviate the required labeling effort.",
+            "ground_truth": "Book, electronics, beauty, music, IMDB, Yelp, cell phone, baby, DVDs, kitchen"
+        },
+        {
+            "index": 45,
+            "input_length": 3319,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16415.8994140625,
+            "latency_ms": 2669.353883014992,
+            "output": "The previous RNN models that they compare with are not explicitly mentioned in the text. However, based on the context and the references provided, it can be inferred that they are comparing their Pyramidal Recurrent Unit (PRU) with the following RNN models:\n\n1. LSTMs (Long Short-Term",
+            "ground_truth": "Variational LSTM, CharCNN, Pointer Sentinel-LSTM, RHN, NAS Cell, SRU, QRNN, RAN, 4-layer skip-connection LSTM, AWD-LSTM, Quantized LSTM"
+        },
+        {
+            "index": 46,
+            "input_length": 1678,
+            "score": 0.2702702702702703,
+            "metric": "F1",
+            "peak_memory_mb": 15886.58642578125,
+            "latency_ms": 2148.8361230585724,
+            "output": "According to the text, the following neural network modules are included in NeuronBlocks:\n\n1. Embedding Layer: Word/character embedding and extra handcrafted feature embedding such as pos-tagging.\n2. Neural Network Layers:\n   - RNN\n   - CNN\n   - QRNN\n   - Transformer\n  ",
+            "ground_truth": "Embedding Layer, Neural Network Layers, Loss Function, Metrics"
+        },
+        {
+            "index": 47,
+            "input_length": 3244,
+            "score": 0.6190476190476191,
+            "metric": "F1",
+            "peak_memory_mb": 16336.97900390625,
+            "latency_ms": 2552.4022930767387,
+            "output": "The datasets used in this study are:\n\n1. The Carnegie Mellon Pronouncing Dictionary (for monolingual English pronunciation data, but not suitable for the multilingual task)\n2. The multilingual pronunciation corpus collected by deri2016grapheme (extracted from Wiktionary, already partitioned into training and test",
+            "ground_truth": "the Carnegie Mellon Pronouncing Dictionary BIBREF12, the multilingual pronunciation corpus collected by deri2016grapheme , ranscriptions extracted from Wiktionary"
+        },
+        {
+            "index": 48,
+            "input_length": 2215,
+            "score": 0.03125,
+            "metric": "F1",
+            "peak_memory_mb": 16111.66064453125,
+            "latency_ms": 2059.278088156134,
+            "output": "The baselines are not explicitly mentioned in the text. However, based on the context, it can be inferred that the baselines are the existing systems on the task of speculation detection and scope resolution, which are mentioned as being outperformed by the proposed approach.",
+            "ground_truth": "varied from Maximum Entropy Classifiers (BIBREF4) to Support Vector Machines (BIBREF5,BIBREF6,BIBREF7,BIBREF8), Recursive Neural Networks (BIBREF9,BIBREF10), Convolutional Neural Networks (BIBREF11) and most recently transfer learning-based architectures like Bidirectional Encoder Representation from Transformers (BERT) (BIBREF12)"
+        },
+        {
+            "index": 49,
+            "input_length": 4086,
+            "score": 0.1875,
+            "metric": "F1",
+            "peak_memory_mb": 16636.43017578125,
+            "latency_ms": 2331.9641810376197,
+            "output": "The languages used in their experiment are:\n\n1. English\n2. Spanish (ES)\n3. Finnish (FI)\n\nThese languages are used for training and testing the models, as well as for back-translation and machine translation.",
+            "ground_truth": "English\nFrench\nSpanish\nGerman\nGreek\nBulgarian\nRussian\nTurkish\nArabic\nVietnamese\nThai\nChinese\nHindi\nSwahili\nUrdu\nFinnish"
+        },
+        {
+            "index": 50,
+            "input_length": 2473,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16154.11328125,
+            "latency_ms": 2393.768548965454,
+            "output": "The authors test their method, tweet2vec, on the following tasks:\n\n1. Hashtag prediction for social media posts.\n2. Predicting hashtags for posts containing rare words (RW) and frequent words (FW).\n3. Studying the effect of model size on the performance of these models.\n4. Comparing",
+            "ground_truth": "None"
+        },
+        {
+            "index": 51,
+            "input_length": 4457,
+            "score": 0.1,
+            "metric": "F1",
+            "peak_memory_mb": 16707.732421875,
+            "latency_ms": 1927.7826249599457,
+            "output": "Yes, they use pre-trained embeddings. They initialized the embeddings of the top 20K words in their vocabulary with 300-dimensional GloVe embeddings.",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 52,
+            "input_length": 2738,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16235.60888671875,
+            "latency_ms": 2441.8809660710394,
+            "output": "Yes, the PolyResponse system was evaluated against some baseline. According to the text, the authors mention that the current architecture shows a good trade-off between speed and efficacy with strong and robust performance in their empirical evaluations on the response retrieval task using Reddit, OpenSubtitles, and AmazonQA conversational test data. However,",
+            "ground_truth": "No"
+        },
+        {
+            "index": 53,
+            "input_length": 1440,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15780.2734375,
+            "latency_ms": 2047.3120359238237,
+            "output": "The authors obtain psychological dimensions of people by analyzing the language use in their blog posts. They use the Linguistic Inquiry and Word Count (LIWC) tool, which groups words into categories that reflect certain psycholinguistic or semantic properties, such as:\n\n* Positive Feelings (e.g., happy, cheerful, celebration",
+            "ground_truth": "using the Meaning Extraction Method"
+        },
+        {
+            "index": 54,
+            "input_length": 14472,
+            "score": 0.2702702702702703,
+            "metric": "F1",
+            "peak_memory_mb": 19971.626953125,
+            "latency_ms": 6505.184649024159,
+            "output": "The ML methods aim to identify the following argument components:\n\n1. Claim\n2. Premise\n3. Backing\n4. Rebuttal\n5. Refutation\n6. None (non-argumentative text)\n\nThese components are part of the modified Toulmin's model, which is used as the",
+            "ground_truth": "claim, premise, backing, rebuttal, and refutation"
+        },
+        {
+            "index": 55,
+            "input_length": 3827,
+            "score": 0.04444444444444444,
+            "metric": "F1",
+            "peak_memory_mb": 16530.64599609375,
+            "latency_ms": 2711.54576796107,
+            "output": "The text does not explicitly mention the length of the ngrams used in PARENT. However, based on the context, it can be inferred that the ngrams are of length 1 (unigrams), as the text mentions \"n-gram\" and \"n-grams\" without specifying a particular length.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 56,
+            "input_length": 3721,
+            "score": 0.8235294117647058,
+            "metric": "F1",
+            "peak_memory_mb": 16446.7958984375,
+            "latency_ms": 1384.3845969531685,
+            "output": "The Twitter dataset consists of 1,873 conversation threads, roughly 14k tweets.",
+            "ground_truth": "1,873 Twitter conversation threads, roughly 14k tweets"
+        },
+        {
+            "index": 57,
+            "input_length": 14660,
+            "score": 0.4615384615384615,
+            "metric": "F1",
+            "peak_memory_mb": 20379.6904296875,
+            "latency_ms": 7097.316775005311,
+            "output": "The 12 languages covered in the Multi-SimLex dataset are:\n\n1. English (eng)\n2. Mandarin Chinese (cmn)\n3. Spanish (spa)\n4. French (fra)\n5. Russian (rus)\n6. Polish (pol)\n7. Estonian (est)\n8. Finnish (fin",
+            "ground_truth": "Chinese Mandarin, Welsh, English, Estonian, Finnish, French, Hebrew, Polish, Russian, Spanish, Kiswahili, Yue Chinese"
+        },
+        {
+            "index": 58,
+            "input_length": 4718,
+            "score": 0.26229508196721313,
+            "metric": "F1",
+            "peak_memory_mb": 16880.21923828125,
+            "latency_ms": 3041.251238901168,
+            "output": "The two datasets that the model is applied to are:\n\n1. The expanded version of the annotated Wikipedia conversations dataset from BIBREF9, which consists of 4,188 conversations.\n2. The CMV dataset, constructed from conversations collected via the Reddit API, which consists of 6,842 conversations.",
+            "ground_truth": " `Conversations Gone Awry' dataset, subreddit ChangeMyView"
+        },
+        {
+            "index": 59,
+            "input_length": 2276,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "peak_memory_mb": 16042.57763671875,
+            "latency_ms": 2298.10042004101,
+            "output": "No, the pipeline components described in the text were not based on deep learning models. The text mentions the use of the Freeling library, which resorts to a Hidden Markov Model (HMM) for part-of-speech tagging, but it does not mention the use of deep learning models. The text also mentions the",
+            "ground_truth": "No"
+        },
+        {
+            "index": 60,
+            "input_length": 2435,
+            "score": 0.2571428571428571,
+            "metric": "F1",
+            "peak_memory_mb": 16165.82958984375,
+            "latency_ms": 2408.503168961033,
+            "output": "The quality of the data in CoVoST is empirically evaluated through several sanity checks and quality control measures. These include:\n\n1. **Sentence-level BLEU score**: For German-English, French-English, and Russian-English translations, the sentence-level BLEU score is computed between the human translations and the automatic",
+            "ground_truth": "Validated transcripts were sent to professional translators., various sanity checks to the translations,  sanity check the overlaps of train, development and test sets"
+        },
+        {
+            "index": 61,
+            "input_length": 3201,
+            "score": 0.3636363636363637,
+            "metric": "F1",
+            "peak_memory_mb": 16340.40185546875,
+            "latency_ms": 2567.519342061132,
+            "output": "In the proposed model, the audio and text sequences are encoded separately using two RNNs (Recurrent Neural Networks). The audio-RNN encodes the MFCC features from the audio signal, while the text-RNN encodes the word sequence of the transcript.\n\nThe final hidden states of the audio-RNN and text",
+            "ground_truth": "combines the information from these sources using a feed-forward neural model"
+        },
+        {
+            "index": 62,
+            "input_length": 2271,
+            "score": 0.43902439024390244,
+            "metric": "F1",
+            "peak_memory_mb": 16078.10009765625,
+            "latency_ms": 1617.2635259572417,
+            "output": "According to the text, their model improved by 2.11 BLEU, 1.7 FKGL, and 1.07 SARI compared to the baseline NMT model.",
+            "ground_truth": "For the WikiLarge dataset, the improvement over baseline NMT is 2.11 BLEU, 1.7 FKGL and 1.07 SARI.\nFor the WikiSmall dataset, the improvement over baseline NMT is  8.37 BLEU."
+        },
+        {
+            "index": 63,
+            "input_length": 3711,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16531.4814453125,
+            "latency_ms": 1882.8220290597528,
+            "output": "The results were evaluated by 7 annotators, as mentioned in the human evaluation section. However, the exact number of humans who evaluated the results is not explicitly stated.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 64,
+            "input_length": 3144,
+            "score": 0.4615384615384615,
+            "metric": "F1",
+            "peak_memory_mb": 16251.55810546875,
+            "latency_ms": 1463.0620209500194,
+            "output": "According to the text, a tweet is considered to have \"gone viral\" if it was retweeted more than 1000 times.",
+            "ground_truth": "Viral tweets are the ones that are retweeted more than 1000 times"
+        },
+        {
+            "index": 65,
+            "input_length": 1507,
+            "score": 0.04878048780487806,
+            "metric": "F1",
+            "peak_memory_mb": 15904.29443359375,
+            "latency_ms": 2166.744715999812,
+            "output": "Based on the provided information, the basic neural architecture that performs best by itself is BERT. \n\nIn the Sentence-Level Propaganda Detection, BERT achieves state-of-the-art performance on multiple NLP benchmarks and is one of the strong classifiers. When fine-tuned for binary classification, it outperforms TF-ID",
+            "ground_truth": "BERT"
+        },
+        {
+            "index": 66,
+            "input_length": 3795,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 16524.001953125,
+            "latency_ms": 1230.0843768753111,
+            "output": "The data was collected using crowdsourcing through an Android application.",
+            "ground_truth": "Android application"
+        },
+        {
+            "index": 67,
+            "input_length": 7257,
+            "score": 0.0425531914893617,
+            "metric": "F1",
+            "peak_memory_mb": 17686.73193359375,
+            "latency_ms": 3844.555555842817,
+            "output": "The machine learning and deep learning methods used for Recognizing Question Entailment (RQE) in the medical domain are:\n\n1. **Deep Learning Model**: This model is based on the neural network proposed by Bowman et al. It consists of three 600d ReLU layers, with a bottom layer taking the concatenated",
+            "ground_truth": "Logistic Regression, neural networks"
+        },
+        {
+            "index": 68,
+            "input_length": 2242,
+            "score": 0.2040816326530612,
+            "metric": "F1",
+            "peak_memory_mb": 16184.56591796875,
+            "latency_ms": 2433.7679650634527,
+            "output": "The benchmark dataset is the social honeypot dataset created by Lee et al. in 2010. According to the text, this dataset has been extensively explored in the paper and contains 19,276 legitimate users and 22,223 spammers, along with their tweet content collected over 7 months. However,",
+            "ground_truth": "Social Honeypot dataset (public) and Weibo dataset (self-collected); yes"
+        },
+        {
+            "index": 69,
+            "input_length": 2289,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "peak_memory_mb": 16047.60400390625,
+            "latency_ms": 1313.770452979952,
+            "output": "The decoder in the system described has an LSTM architecture. It generates the characters in the output word form using encoder states and an attention mechanism.",
+            "ground_truth": "LSTM"
+        },
+        {
+            "index": 70,
+            "input_length": 3838,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16616.65185546875,
+            "latency_ms": 2830.829608021304,
+            "output": "No, they do not report results only on English data. They mention that they use three datasets: FSD (social media), Twitter, and Google datasets. The FSD dataset is not explicitly stated to be in English, but it is a social media dataset. The Twitter dataset is in English, as it is collected",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 71,
+            "input_length": 1541,
+            "score": 0.46511627906976744,
+            "metric": "F1",
+            "peak_memory_mb": 15908.45751953125,
+            "latency_ms": 2156.3004448544234,
+            "output": "The best performing model among the author's submissions is the ensemble+ of (r4, r7, r12) for SLC task and the ensemble+ of (II and IV) for FLC task.\n\nFor SLC task, the ensemble+ of (r4, r7, r12) achieved a",
+            "ground_truth": "For SLC task, the \"ltuorp\" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the \"newspeak\" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively)."
+        },
+        {
+            "index": 72,
+            "input_length": 4542,
+            "score": 0.09090909090909091,
+            "metric": "F1",
+            "peak_memory_mb": 16866.10546875,
+            "latency_ms": 1869.4482520222664,
+            "output": "The baseline was a strong baseline established with monolingual data, denoted as #10 in Table TABREF33.",
+            "ground_truth": "pivot-based translation relying on a helping language BIBREF10, nduction of phrase tables from monolingual data BIBREF14 , attentional RNN-based model (RNMT) BIBREF2, Transformer model BIBREF18, bi-directional model BIBREF11, multi-to-multi (M2M) model BIBREF8, back-translation BIBREF17"
+        },
+        {
+            "index": 73,
+            "input_length": 6810,
+            "score": 0.125,
+            "metric": "F1",
+            "peak_memory_mb": 17605.62060546875,
+            "latency_ms": 2474.252287996933,
+            "output": "Their highest recall score was '0.7033' for List-type question answering task in test batch 4.",
+            "ground_truth": "0.7033"
+        },
+        {
+            "index": 74,
+            "input_length": 4259,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16672.0654296875,
+            "latency_ms": 2895.597625989467,
+            "output": "The paper explores the following embedding techniques:\n\n1. Word2vec: A popular word embedding technique that learns a representation of a word by word co-occurrence matrix.\n2. Skip-gram: A neural network based approach that learns a representation of a word by maximizing the probability of the context given a word.\n3",
+            "ground_truth": "Skip–gram, CBOW"
+        },
+        {
+            "index": 75,
+            "input_length": 2231,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16033.53125,
+            "latency_ms": 2097.659554099664,
+            "output": "They use a bilingual dictionary (Google Translate word translation in their case) to translate each word in the source language into English. This allows them to match words from the source language with their corresponding English translations, which can then be reordered to match the word order of the source language.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 76,
+            "input_length": 3035,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16254.85791015625,
+            "latency_ms": 2499.392776982859,
+            "output": "No, the paper does not explicitly explore extraction from electronic health records. It mentions that BioIE systems aim to extract information from a wide spectrum of articles including medical literature, biological literature, electronic health records, etc. but it does not delve into the details of extraction from electronic health records. The focus of the paper is",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 77,
+            "input_length": 3846,
+            "score": 0.5714285714285715,
+            "metric": "F1",
+            "peak_memory_mb": 16555.0087890625,
+            "latency_ms": 1243.4217659756541,
+            "output": "The experts used for annotation were seven individuals with legal training.",
+            "ground_truth": "Individuals with legal training"
+        },
+        {
+            "index": 78,
+            "input_length": 1653,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 15837.45751953125,
+            "latency_ms": 2111.886019119993,
+            "output": "For painting embedding, the model used is an actor-critic architecture, specifically an Image To Poem Actor-Critic Model, which involves 3 parallel CNNs (object CNN, sentiment CNN, and scene CNN) for feature extraction, combined with a skip-thought model and a sequence-to-sequence model trained by policy",
+            "ground_truth": "generating a poem from images we use an existing actor-critic architecture, various types of sequence to sequence models"
+        },
+        {
+            "index": 79,
+            "input_length": 2655,
+            "score": 0.12121212121212122,
+            "metric": "F1",
+            "peak_memory_mb": 16197.265625,
+            "latency_ms": 2430.894723162055,
+            "output": "According to the text, the Transformer layer (ToBERT) outperforms the RNN layer (RoBERT) on the Fisher and 20newsgroups datasets, but performs slightly worse on the CSAT dataset. However, the difference in performance between ToBERT and RoBERT on the CSAT dataset is not statistically",
+            "ground_truth": "Transformer over BERT (ToBERT)"
+        },
+        {
+            "index": 80,
+            "input_length": 4127,
+            "score": 0.03773584905660378,
+            "metric": "F1",
+            "peak_memory_mb": 16671.052734375,
+            "latency_ms": 2874.671625904739,
+            "output": "Yes, the authors hypothesize that humans' robustness to noise is due to their general knowledge. They mention that human beings are \"far less likely to suffer from\" noise in evaluation examples, and that this is likely because they can utilize general knowledge in addition to the knowledge contained in each given passage-question pair. They",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 81,
+            "input_length": 3244,
+            "score": 0.4444444444444444,
+            "metric": "F1",
+            "peak_memory_mb": 16342.72119140625,
+            "latency_ms": 1465.4099449981004,
+            "output": "The authors addressed three topics of cyberbullying: \n\n1. Personal attack\n2. Racism\n3. Sexism",
+            "ground_truth": "personal attack, racism, and sexism"
+        },
+        {
+            "index": 82,
+            "input_length": 2435,
+            "score": 0.5897435897435898,
+            "metric": "F1",
+            "peak_memory_mb": 16111.64697265625,
+            "latency_ms": 2345.429633045569,
+            "output": "They obtain the new context representation by splitting the context into three disjoint regions based on the two relation arguments: the left context, the middle context, and the right context. They then combine two contexts: (1) a combination of the left context, the left entity, and the middle context; and (2) a",
+            "ground_truth": "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation."
+        },
+        {
+            "index": 83,
+            "input_length": 2851,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16327.6455078125,
+            "latency_ms": 1883.820918854326,
+            "output": "According to the text, there are four types of entities in the dataset:\n\n1. Person (PER)\n2. Location (LOC)\n3. Organization (ORG)\n4. Miscellaneous (MISC)",
+            "ground_truth": "OurNepali contains 3 different types of entities, ILPRL contains 4 different types of entities"
+        },
+        {
+            "index": 84,
+            "input_length": 4399,
+            "score": 0.25352112676056343,
+            "metric": "F1",
+            "peak_memory_mb": 16686.2158203125,
+            "latency_ms": 2895.060393959284,
+            "output": "The resulting annotated data with expert annotations is significantly higher quality compared to the crowd-sourced annotations. This is evident from the results presented in the paper, where the models trained on expert-annotated data outperform the models trained on crowd-sourced annotations in terms of F1 score, precision, and recall.\n\nSpecifically",
+            "ground_truth": "improvement when the difficult subset with expert annotations is mixed with the remaining crowd annotation is 3.5 F1 score, much larger than when a random set of expert annotations are added"
+        },
+        {
+            "index": 85,
+            "input_length": 4055,
+            "score": 0.3125,
+            "metric": "F1",
+            "peak_memory_mb": 16581.8271484375,
+            "latency_ms": 2767.8350729402155,
+            "output": "According to the text, the imbalance in the analyzed corpora is as follows:\n\n- Women represent 33.16% of the speakers, while men represent 65.84% (100% - 33.16%).\n- Women account for only 22.57% of the total speech time, while men",
+            "ground_truth": "Women represent 33.16% of the speakers"
+        },
+        {
+            "index": 86,
+            "input_length": 1833,
+            "score": 0.16666666666666669,
+            "metric": "F1",
+            "peak_memory_mb": 15920.38720703125,
+            "latency_ms": 1484.1458417940885,
+            "output": "The dataset on which this approach achieves state of the art results is the English-German dataset, specifically the Multi30K dataset, as compared to the current MMT state-of-the-art.",
+            "ground_truth": "the English-German dataset"
+        },
+        {
+            "index": 87,
+            "input_length": 3629,
+            "score": 0.1016949152542373,
+            "metric": "F1",
+            "peak_memory_mb": 16531.88037109375,
+            "latency_ms": 2736.051670042798,
+            "output": "The strong baseline models compared to in the paper are:\n\n1. BIBREF18\n2. BIBREF20\n3. BIBREF11\n4. BIBREF17\n5. BIBREF9\n6. BIBREF7\n7. BIBREF6\n8. BIB",
+            "ground_truth": "Baseline models are:\n- Chen et al., 2015a\n- Chen et al., 2015b\n- Liu et al., 2016\n- Cai and Zhao, 2016\n- Cai et al., 2017\n- Zhou et al., 2017\n- Ma et al., 2018\n- Wang et al., 2019"
+        },
+        {
+            "index": 88,
+            "input_length": 4475,
+            "score": 0.5,
+            "metric": "F1",
+            "peak_memory_mb": 16899.9638671875,
+            "latency_ms": 1988.3337691426277,
+            "output": "Logistic Regression (LR) and Multilayer Perceptron (MLP) are used as the target models in the experiments.",
+            "ground_truth": "probabilistic model"
+        },
+        {
+            "index": 89,
+            "input_length": 1452,
+            "score": 0.2,
+            "metric": "F1",
+            "peak_memory_mb": 15830.53466796875,
+            "latency_ms": 2096.786692040041,
+            "output": "The toolkits used in the experiments are:\n\n1. NLTK\n2. Stanford CoreNLP\n3. TwitterNLP\n4. SentiStrength\n5. TensiStrength\n6. Rosette Text Analytics\n7. Google Cloud\n8. spaCy\n9. CogComp-NLP\n",
+            "ground_truth": "BIBREF17, BIBREF18, TensiStrength BIBREF13, TwitterNLP BIBREF6, BIBREF19, CogComp-NLP BIBREF20, Stanford NLP NER BIBREF21"
+        },
+        {
+            "index": 90,
+            "input_length": 3757,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "peak_memory_mb": 16655.06396484375,
+            "latency_ms": 1323.5259670764208,
+            "output": "The experiments are performed on the SQuAD dataset.",
+            "ground_truth": "SQuAD"
+        },
+        {
+            "index": 91,
+            "input_length": 4658,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16777.71435546875,
+            "latency_ms": 2990.230598952621,
+            "output": "The existing approaches mentioned in the paper are:\n\n1. **Bag-of-words representations**: This approach involves combining a bag-of-words representation of geographically nearby tags with a feature vector that encodes associated structured scientific data, as proposed in BIBREF7.\n2. **Skip-gram model**: This model is",
+            "ground_truth": "BOW-Tags, BOW-KL(Tags), BOW-All, GloVe"
+        },
+        {
+            "index": 92,
+            "input_length": 1687,
+            "score": 0.05,
+            "metric": "F1",
+            "peak_memory_mb": 15902.39208984375,
+            "latency_ms": 2155.622021993622,
+            "output": "Yes, they use attention in their model. Specifically, they use the attention function to compute the similarity score between passages and questions in the Memory Generation Layer. The attention function is used to compute the similarity score as follows:\n\ns(q, p) = softmax(Wq * tanh(Wp * p + Uq *",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 93,
+            "input_length": 2652,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "peak_memory_mb": 16196.61328125,
+            "latency_ms": 2433.9848270174116,
+            "output": "The authors used three datasets for evaluation:\n\n1. CSAT dataset for CSAT prediction, consisting of spoken transcripts (automatic via ASR).\n2. 20 newsgroups for topic identification task, consisting of written text.\n3. Fisher Phase 1 corpus for topic identification task, consisting of spoken transcripts (manual).",
+            "ground_truth": "CSAT dataset, 20 newsgroups, Fisher Phase 1 corpus"
+        },
+        {
+            "index": 94,
+            "input_length": 3432,
+            "score": 0.19999999999999998,
+            "metric": "F1",
+            "peak_memory_mb": 16435.1396484375,
+            "latency_ms": 2343.2359509170055,
+            "output": "The IMDb movie review dataset is used for sentiment classification. It consists of a balanced sample of 25,000 positive and 25,000 negative reviews, divided into equal-size train and test sets, with an average document length of 231 words.",
+            "ground_truth": "the IMDb movie review dataset BIBREF17"
+        },
+        {
+            "index": 95,
+            "input_length": 1464,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "peak_memory_mb": 15805.43359375,
+            "latency_ms": 2081.552396994084,
+            "output": "Yes, the tasks were evaluated in previous work. The author mentions that they adapt the evaluation protocol and stimuli of BIBREF1, BIBREF2, and BIBREF3 to the bidirectional setting required by BERT. This suggests that the tasks were previously evaluated in these studies, which examined the ability of",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 96,
+            "input_length": 1441,
+            "score": 0.044444444444444446,
+            "metric": "F1",
+            "peak_memory_mb": 15830.5,
+            "latency_ms": 2036.05538723059,
+            "output": "No, the datasets for sentiment analysis are not balanced. According to the text, the groundtruth labels contain 210 positive sentiments, 521 neutral sentiments, and 305 negative sentiments to the candidates. This means that the number of neutral sentiments is more than twice the number of positive and negative sentiments combined.",
+            "ground_truth": "No"
+        },
+        {
+            "index": 97,
+            "input_length": 4323,
+            "score": 0.1276595744680851,
+            "metric": "F1",
+            "peak_memory_mb": 16707.73095703125,
+            "latency_ms": 2916.077951900661,
+            "output": "The invertibility condition is a constraint that is imposed on the neural projector to ensure that it is invertible. Specifically, the invertibility condition requires that the neural projector satisfies two properties:\n\n1. The Jacobian matrix of the neural projector is invertible, i.e., its determinant is nonzero.\n2. The neural projector",
+            "ground_truth": "The neural projector must be invertible."
+        },
+        {
+            "index": 98,
+            "input_length": 4958,
+            "score": 0.125,
+            "metric": "F1",
+            "peak_memory_mb": 16880.09130859375,
+            "latency_ms": 3065.0257009547204,
+            "output": "The proposed qualitative annotation schema is a framework to systematically analyze Machine Reading Comprehension (MRC) evaluation data. It consists of several dimensions of interest, including:\n\n1. **Problem setting**: Different types of expected answers, such as Span, Paraphrasing, Unanswerable, and Generated.\n2. **F",
+            "ground_truth": "The resulting taxonomy of the framework is shown in Figure FIGREF10"
+        },
+        {
+            "index": 99,
+            "input_length": 2266,
+            "score": 0.52,
+            "metric": "F1",
+            "peak_memory_mb": 16078.1171875,
+            "latency_ms": 2240.223435917869,
+            "output": "The sizes of both datasets are as follows:\n\n- WikiSmall: \n  - Training set: 89,042 sentence pairs\n  - Test set: 100 pairs\n\n- WikiLarge: \n  - Training set: 296,402 sentence pairs\n  - Test set: 359 pairs",
+            "ground_truth": "training set has 89,042 sentence pairs, and the test set has 100 pairs, training set contains 296,402, 2,000 for development and 359 for testing"
+        },
+        {
+            "index": 100,
+            "input_length": 4704,
+            "score": 0.4742268041237114,
+            "metric": "F1",
+            "peak_memory_mb": 17093.14990234375,
+            "latency_ms": 3284.9854270461947,
+            "output": "The baselines used in the experiments are:\n\n1. Vanilla ST baseline: The vanilla ST model has only a speech encoder and a decoder. It is trained from scratch on the ST-TED corpus.\n2. Pre-training baselines:\n   - Encoder pre-training: The ST encoder is initialized from an ASR model.\n",
+            "ground_truth": "Vanilla ST baseline, encoder pre-training, in which the ST encoder is initialized from an ASR model, decoder pre-training, in which the ST decoder is initialized from an MT model, encoder-decoder pre-training, where both the encoder and decoder are pre-trained, many-to-many multi-task model where the encoders and decoders are derived from pre-trained ASR and MT models, Triangle+pre-train: BIBREF18 DBLP:conf/naacl/AnastasopoulosC18 proposed a triangle multi-task strategy for speech translation"
+        },
+        {
+            "index": 101,
+            "input_length": 4513,
+            "score": 0.05405405405405406,
+            "metric": "F1",
+            "peak_memory_mb": 16704.35546875,
+            "latency_ms": 2515.871417010203,
+            "output": "The paper does not explicitly mention the specific natural language(s) studied. However, based on the context and the fact that the paper discusses propaganda detection and sentiment analysis, it can be inferred that the natural language(s) studied are likely to be English.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 102,
+            "input_length": 2250,
+            "score": 0.3902439024390244,
+            "metric": "F1",
+            "peak_memory_mb": 16057.6767578125,
+            "latency_ms": 2303.6731090396643,
+            "output": "The models used in the experiment are:\n\n1. Linear Support Vector Machine (SVM) trained on word unigrams.\n2. Bidirectional Long Short-Term-Memory (BiLSTM) model, which consists of:\n   - An input embedding layer.\n   - A bidirectional LSTM layer.\n   - An average",
+            "ground_truth": "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)"
+        },
+        {
+            "index": 103,
+            "input_length": 1561,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15804.72412109375,
+            "latency_ms": 2081.0528949368745,
+            "output": "It appears that you are asking about the usefulness of the answer in relation to the question. However, the provided text does not directly address this question.\n\nTo provide a relevant answer, I will summarize the main points from the text and then address your question.\n\nThe text discusses the characteristics of open and answered questions on Quora",
+            "ground_truth": "No"
+        },
+        {
+            "index": 104,
+            "input_length": 1771,
+            "score": 0.23255813953488372,
+            "metric": "F1",
+            "peak_memory_mb": 15887.28271484375,
+            "latency_ms": 2061.756754061207,
+            "output": "The pretrained word embeddings used in the EmoInt system are:\n\n1. GloVe: 200-dimensional GloVe embeddings trained on 2 Billion tweets.\n2. Edinburgh embeddings: obtained by training a skip-gram model on the Edinburgh corpus.\n3. Emoji embeddings: learned from the emoji descriptions.",
+            "ground_truth": "Pretrained word embeddings  were not used"
+        },
+        {
+            "index": 105,
+            "input_length": 2666,
+            "score": 0.1818181818181818,
+            "metric": "F1",
+            "peak_memory_mb": 16250.15576171875,
+            "latency_ms": 2461.3397729117423,
+            "output": "The authors of the paper presented their results on a new dataset of 180K+ recipes and 700K+ user reviews, which they collected from Food.com. They evaluated their personalized generative models against two baselines: a name-based Nearest-Neighbor model (NN) and a simple Encoder-Decoder baseline with",
+            "ground_truth": "average recipe-level coherence scores of 1.78-1.82, human evaluators preferred personalized model outputs to baseline 63% of the time"
+        },
+        {
+            "index": 106,
+            "input_length": 4592,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "peak_memory_mb": 16758.16748046875,
+            "latency_ms": 2952.7975579258054,
+            "output": "The combination of rewards for reinforcement learning is the harmonic mean of the irony reward and the sentiment reward. The irony reward is defined as the difference between the irony score of the input sentence and that of the output sentence, and the sentiment reward is defined as one minus the absolute value of the difference between the standardized sentiment score of",
+            "ground_truth": "irony accuracy, sentiment preservation"
+        },
+        {
+            "index": 107,
+            "input_length": 1651,
+            "score": 0.6666666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 15837.08447265625,
+            "latency_ms": 2110.5902560520917,
+            "output": "The authors demonstrate the following limitations of their model:\n\n1.  The generated English poem may not work well with Shakespeare style transfer when the style transfer dataset does not have similar words in the training set of sentences. This is shown in Figure FIGREF12 for \"Starry Night\" with a low average content score.\n2",
+            "ground_truth": "Since we do not have an end-to-end dataset, the generated English poem may not work well with Shakespeare style transfer"
+        },
+        {
+            "index": 108,
+            "input_length": 3390,
+            "score": 0.6956521739130436,
+            "metric": "F1",
+            "peak_memory_mb": 16358.89404296875,
+            "latency_ms": 1469.3291378207505,
+            "output": "The existing benchmarks they compared to are the Affective Text dataset, the Fairy Tales dataset, and the ISEAR dataset.",
+            "ground_truth": "Affective Text, Fairy Tales, ISEAR"
+        },
+        {
+            "index": 109,
+            "input_length": 3164,
+            "score": 0.3291139240506329,
+            "metric": "F1",
+            "peak_memory_mb": 16250.84130859375,
+            "latency_ms": 2496.336681069806,
+            "output": "The distribution results for the characteristics of tweets containing fake news and tweets not containing fake news are as follows:\n\n1. **Exposure**:\n   - Time of exposure: Viral tweets containing fake news were created more recently, indicating a shorter lifetime.\n   - Retweets: No apparent difference between containing fake news or not",
+            "ground_truth": "Distributions of Followers, Friends and URLs are significantly different between the set of tweets containing fake news and those non containing them, but for Favourites, Mentions, Media, Retweets and Hashtags they are not significantly different"
+        },
+        {
+            "index": 110,
+            "input_length": 3756,
+            "score": 0.693877551020408,
+            "metric": "F1",
+            "peak_memory_mb": 16585.29541015625,
+            "latency_ms": 1974.710704991594,
+            "output": "The dataset of hashtags is sourced from the Stanford Sentiment Analysis Dataset. Specifically, it includes all 12,594 unique English hashtags and their associated tweets from the same Stanford dataset.",
+            "ground_truth": "1,268 randomly selected tweets in the Stanford Sentiment Analysis Dataset BIBREF36, all 12,594 unique English hashtags and their associated tweets from the same Stanford dataset"
+        },
+        {
+            "index": 111,
+            "input_length": 3794,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16524.0234375,
+            "latency_ms": 2413.8414908666164,
+            "output": "Unfortunately, the provided text does not mention the accents present in the corpus. However, it does mention that the corpus was collected from respondents in Iran, which suggests that the primary accent present in the corpus is likely to be a Persian (Farsi) accent.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 112,
+            "input_length": 5151,
+            "score": 0.29629629629629634,
+            "metric": "F1",
+            "peak_memory_mb": 17175.5146484375,
+            "latency_ms": 2192.0468169264495,
+            "output": "A word subspace can effectively and compactly represent the context of the corresponding text, retaining most of the variability of the class.",
+            "ground_truth": "Word vectors, usually in the context of others within the same class"
+        },
+        {
+            "index": 113,
+            "input_length": 7891,
+            "score": 0.5116279069767441,
+            "metric": "F1",
+            "peak_memory_mb": 17736.89453125,
+            "latency_ms": 3920.114709995687,
+            "output": "The baseline models used in the paper are:\n\n1. B1: This baseline uses only the salience-based features by Dunietz and Gillick (BIBREF11).\n2. B2: This baseline assigns the value \"relevant\" to a pair (news article, entity) if and only if the entity",
+            "ground_truth": "For Article-Entity placement, they consider two baselines: the first one using only salience-based features, and the second baseline checks if the entity appears in the title of the article. \n\nFor Article-Section Placement, they consider two baselines: the first picks the section with the highest lexical similarity to the article, and the second one picks the most frequent section."
+        },
+        {
+            "index": 114,
+            "input_length": 2000,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16042.70068359375,
+            "latency_ms": 2296.748250024393,
+            "output": "The text does not provide explicit information about whether SemCor3.0 is reflective of English language data in general. However, it is mentioned as the largest corpus manually annotated with WordNet sense for WSD, which suggests that it is a significant and comprehensive dataset for the task of Word Sense Disambiguation (W",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 115,
+            "input_length": 2410,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16165.59033203125,
+            "latency_ms": 2172.219773987308,
+            "output": "The text does not mention the size of the Augmented LibriSpeech dataset. However, it does mention the size of the Librivox dataset, which is 110 hours of German-English speech translation corpus created by beilharz2019librivoxdeen.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 116,
+            "input_length": 2738,
+            "score": 0.163265306122449,
+            "metric": "F1",
+            "peak_memory_mb": 16181.0908203125,
+            "latency_ms": 2407.3083971161395,
+            "output": "The dataset used in this study is the SemEval-2016 \"Sentiment Analysis in Twitter\" task dataset, which includes both ternary and fine-grained sentiment classification tasks. The dataset is split into training, development, and test parts. \n\nMore specifically, the fine-grained dataset is highly unbalanced and skewed",
+            "ground_truth": " high-quality datasets  from SemEval-2016 “Sentiment Analysis in Twitter” task"
+        },
+        {
+            "index": 117,
+            "input_length": 1999,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16033.72998046875,
+            "latency_ms": 1112.0515409857035,
+            "output": "They use the pre-trained uncased BERT$_\\mathrm {BASE}$ model for fine-tuning.",
+            "ground_truth": "small BERT"
+        },
+        {
+            "index": 118,
+            "input_length": 6391,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 17509.94873046875,
+            "latency_ms": 3657.3341549374163,
+            "output": "Yes, the automatically constructed datasets are subject to quality control. The authors of the paper mention that they had to carefully construct baselines and perform close data inspection to ensure probe quality, as accurately probing QA models via synthetic datasets is not straightforward and unexpected artifacts can easily arise in such data. They also mention that they had to",
+            "ground_truth": "No"
+        },
+        {
+            "index": 119,
+            "input_length": 3472,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "peak_memory_mb": 16415.24462890625,
+            "latency_ms": 2375.2885521389544,
+            "output": "Yes, the images in the ShapeWorld framework are from a specific domain, which is abstract colored shapes. The ShapeWorld framework is a controlled data generation framework that consists of abstract colored shapes, and it is used to generate training and evaluation data for image captioning tasks.",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 120,
+            "input_length": 3410,
+            "score": 0.16129032258064516,
+            "metric": "F1",
+            "peak_memory_mb": 16358.912109375,
+            "latency_ms": 2577.2464361507446,
+            "output": "The authors' performance on emotion detection is reported in Table TABREF26, which shows the results of their model on the three standard datasets used for the evaluation of emotion classification. However, the exact performance metrics (e.g., precision, recall, f-score) are not provided in the snippet.\n\nTo give a general idea",
+            "ground_truth": "Answer with content missing: (Table 3) Best author's model B-M average micro f-score is 0.409, 0.459, 0.411 on Affective, Fairy Tales and ISEAR datasets respectively. "
+        },
+        {
+            "index": 121,
+            "input_length": 2974,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16235.67138671875,
+            "latency_ms": 2469.4853560067713,
+            "output": "The tagging scheme employed is a novel tagging scheme consisting of three tags: { INLINEFORM0 }, { INLINEFORM1 }, and { INLINEFORM2 }. \n\n- { INLINEFORM0 } tag indicates that the current word appears before the pun in the given context.\n- { INLINEFORM1 } tag highlights the current word is",
+            "ground_truth": "A new tagging scheme that tags the words before and after the pun as well as the pun words."
+        },
+        {
+            "index": 122,
+            "input_length": 2413,
+            "score": 0.0689655172413793,
+            "metric": "F1",
+            "peak_memory_mb": 16166.0498046875,
+            "latency_ms": 2401.248126057908,
+            "output": "No, Arabic is not one of the 11 languages in CoVoST. The 11 languages in CoVoST are:\n\n1. French (Fr)\n2. German (De)\n3. Dutch (Nl)\n4. Russian (Ru)\n5. Spanish (Es)\n6. Italian (It)\n7",
+            "ground_truth": "No"
+        },
+        {
+            "index": 123,
+            "input_length": 3609,
+            "score": 0.25974025974025977,
+            "metric": "F1",
+            "peak_memory_mb": 16516.5947265625,
+            "latency_ms": 2714.5108580589294,
+            "output": "The authors define robustness of a model as its ability to perform well even when the prior knowledge supplied to it is biased or incomplete. In other words, a robust model should be able to handle situations where the prior knowledge is not perfectly balanced or accurate, and still produce good results. This is in contrast to a sensitive",
+            "ground_truth": "ability to accurately classify texts even when the amount of prior knowledge for different classes is unbalanced, and when the class distribution of the dataset is unbalanced"
+        },
+        {
+            "index": 124,
+            "input_length": 3862,
+            "score": 0.21052631578947367,
+            "metric": "F1",
+            "peak_memory_mb": 16643.412109375,
+            "latency_ms": 2856.3177490141243,
+            "output": "The other sentence embeddings methods that are evaluated in the paper are:\n\n1. InferSent: This method uses a siamese BiLSTM network with max-pooling over the output, trained on labeled data from the Stanford Natural Language Inference dataset and the Multi-Genre NLI dataset.\n2. Universal Sentence Encoder",
+            "ground_truth": "GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent"
+        },
+        {
+            "index": 125,
+            "input_length": 3586,
+            "score": 0.5357142857142857,
+            "metric": "F1",
+            "peak_memory_mb": 16637.16162109375,
+            "latency_ms": 2842.9949649143964,
+            "output": "For the NER task, the proposed method achieves the following improvements in F1 score:\n\n- For English datasets (CoNLL2003 and OntoNotes5.0), the improvements are +0.29 and +0.96 respectively.\n- For Chinese datasets (MSRA and OntoNotes4.0",
+            "ground_truth": "English datasets including CoNLL2003 and OntoNotes5.0, our proposed method outperforms BERT-MRCBIBREF38 by +0.29 and +0.96 respectively, Chinese datasets, achieving F1 improvements by +0.97 and +2.36 on MSRA and OntoNotes4.0, respectively"
+        },
+        {
+            "index": 126,
+            "input_length": 2577,
+            "score": 0.7058823529411764,
+            "metric": "F1",
+            "peak_memory_mb": 16091.7509765625,
+            "latency_ms": 1338.6000629980117,
+            "output": "They test their conflict method on two tasks:\n\n1. Quora Duplicate Question Pair Detection\n2. Ranking questions in Bing's People Also Ask",
+            "ground_truth": "Task 1: Quora Duplicate Question Pair Detection, Task 2: Ranking questions"
+        },
+        {
+            "index": 127,
+            "input_length": 4781,
+            "score": 0.24,
+            "metric": "F1",
+            "peak_memory_mb": 17255.77685546875,
+            "latency_ms": 3426.7961769364774,
+            "output": "The baselines they compared against include:\n\n1. Syntactic tree-based models\n2. Latent tree models\n3. Non-tree models, such as:\n   - Gumbel Tree-LSTM\n   - NSE (Natural Language Inference)\n   - Reinforced Self-Attention Network\n   - Res",
+            "ground_truth": "Various tree structured neural networks including variants of Tree-LSTM, Tree-based CNN, RNTN, and non-tree models including variants of LSTMs, CNNs, residual, and self-attention based networks"
+        },
+        {
+            "index": 128,
+            "input_length": 4527,
+            "score": 0.08695652173913045,
+            "metric": "F1",
+            "peak_memory_mb": 16930.36962890625,
+            "latency_ms": 2181.4650159794837,
+            "output": "The core component for KBQA (Knowledge Base Question Answering) is the relation detection subtask, which identifies the KB relation(s) a question refers to.",
+            "ground_truth": "answer questions by obtaining information from KB tuples "
+        },
+        {
+            "index": 129,
+            "input_length": 2655,
+            "score": 0.35555555555555557,
+            "metric": "F1",
+            "peak_memory_mb": 16249.97119140625,
+            "latency_ms": 2498.482238035649,
+            "output": "The baseline models used in this study are:\n\n1. **Name-Based Nearest-Neighbor (NN) model**: This model uses the recipe name as a sequence of tokens and finds the nearest neighbor in the training data based on the name.\n2. **Encoder-Decoder (Enc-Dec) baseline with ingredient attention**: This",
+            "ground_truth": "name-based Nearest-Neighbor model (NN), Encoder-Decoder baseline with ingredient attention (Enc-Dec)"
+        },
+        {
+            "index": 130,
+            "input_length": 2204,
+            "score": 0.12903225806451613,
+            "metric": "F1",
+            "peak_memory_mb": 16005.3916015625,
+            "latency_ms": 2266.3615338969976,
+            "output": "The methods considered to find examples of biases and unwarranted inferences are:\n\n1. **Manual inspection**: The author created a browser-based annotation tool to show both the images and their associated descriptions, allowing them to manually inspect the data and identify patterns.\n2. **Counting marked entities**: The author counted the proportion",
+            "ground_truth": "spot patterns by just looking at a collection of images, tag all descriptions with part-of-speech information, I applied Louvain clustering"
+        },
+        {
+            "index": 131,
+            "input_length": 2285,
+            "score": 0.5,
+            "metric": "F1",
+            "peak_memory_mb": 16113.38623046875,
+            "latency_ms": 1669.9921861290932,
+            "output": "The languages explored in the text are:\n\n1. English\n2. French\n3. Spanish\n4. Italian\n5. Portuguese\n6. Hebrew\n7. Arabic\n8. German",
+            "ground_truth": "English, French, German "
+        },
+        {
+            "index": 132,
+            "input_length": 3210,
+            "score": 0.0975609756097561,
+            "metric": "F1",
+            "peak_memory_mb": 16384.40234375,
+            "latency_ms": 2638.8094739522785,
+            "output": "The models they experimented with include:\n\n1. Plain stacked LSTMs\n2. CAS-LSTMs with different values for the additional forget gate ( INLINEFORM0 )\n3. CAS-LSTMs without the additional forget gate ( INLINEFORM1 )\n4. CAS-LSTMs that integrate lower contexts via peephole",
+            "ground_truth": "Stacked LSTMs, Cell-aware Stacked LSTMs, Sentence Encoders, Top-layer Classifiers"
+        },
+        {
+            "index": 133,
+            "input_length": 6169,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 17217.455078125,
+            "latency_ms": 3379.9412911757827,
+            "output": "No, they do not report results only on English data. Although the experiments are conducted on a snapshot of English Wikipedia, the proposed method is not limited to English and can be applied to other languages as well. The authors mention that the proposed methodology can also be helpful in computational cross-lingual studies, where the similarities",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 134,
+            "input_length": 3045,
+            "score": 0.04081632653061224,
+            "metric": "F1",
+            "peak_memory_mb": 16308.8642578125,
+            "latency_ms": 2543.2143670041114,
+            "output": "The authors experimented with the following summarization algorithms provided by the Sumy package:\n\n1. They did not explicitly mention the names of the algorithms in the text, but they mentioned that they explored a few summarization algorithms provided by the Sumy package.\n\n2. They compared the performance of their ILP-based summarization algorithm",
+            "ground_truth": "LSA, TextRank, LexRank and ILP-based summary."
+        },
+        {
+            "index": 135,
+            "input_length": 3725,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16466.7158203125,
+            "latency_ms": 2684.1571270488203,
+            "output": "The previous state-of-the-art for instructor intervention in MOOC forums was proposed by BIBREF7, which evaluated baseline models over a larger corpus and found the results to vary widely across MOOCs. BIBREF7 used a logistic regression classifier with features such as bag-of-words representation of the unigrams and",
+            "ground_truth": "hLSTM"
+        },
+        {
+            "index": 136,
+            "input_length": 4180,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "peak_memory_mb": 16799.67822265625,
+            "latency_ms": 3013.1497010588646,
+            "output": "Based on the ablation studies presented in the paper, the least impactful component appears to be the use of undirected edges. On Reuters, using an undirected graph leads to better performance, while on Polarity and IMDB, it is the opposite. This suggests that the direction of edges in the graph is not crucial",
+            "ground_truth": "Based on table results provided changing directed to undirected edges had least impact - max abs difference of 0.33 points on all three datasets."
+        },
+        {
+            "index": 137,
+            "input_length": 1908,
+            "score": 0.1081081081081081,
+            "metric": "F1",
+            "peak_memory_mb": 15944.62890625,
+            "latency_ms": 2204.1364749893546,
+            "output": "The corpus used for the task is the diachronic corpus pair from DTA18 and DTA19, which are subparts of the DTA corpus. DTA18 contains 26 million sentences published between 1750-1799, and DTA19 contains 40 million sentences published between 1850-",
+            "ground_truth": "DTA18, DTA19"
+        },
+        {
+            "index": 138,
+            "input_length": 2453,
+            "score": 0.27272727272727276,
+            "metric": "F1",
+            "peak_memory_mb": 16095.7880859375,
+            "latency_ms": 2343.0664050392807,
+            "output": "The 7 Indian languages that they experiment with are:\n\n1. Kannada\n2. Hindi\n3. Telugu\n4. Malayalam\n5. Bengali\n6. English\n7. (The 7th language is not explicitly mentioned in the text, but it is mentioned in the table below the",
+            "ground_truth": "Hindi, English, Kannada, Telugu, Assamese, Bengali and Malayalam"
+        },
+        {
+            "index": 139,
+            "input_length": 2492,
+            "score": 0.3529411764705882,
+            "metric": "F1",
+            "peak_memory_mb": 16138.08251953125,
+            "latency_ms": 2380.09539199993,
+            "output": "The model performance on target language reading comprehension is shown in the experimental results. Specifically, in Table TABREF6, it is shown that when multi-BERT is fine-tuned on English but tested on Chinese, it achieves competitive performance compared with QANet trained on Chinese, with an F1 score of 53.",
+            "ground_truth": "Table TABREF6, Table TABREF8"
+        },
+        {
+            "index": 140,
+            "input_length": 5151,
+            "score": 0.09999999999999999,
+            "metric": "F1",
+            "peak_memory_mb": 17021.7509765625,
+            "latency_ms": 3213.374056853354,
+            "output": "The proposed model, ALOHA, achieves a significant improvement on the target character language style retrieval task compared to the baseline open-domain chatbot models. As observed from Table TABREF44, ALOHA achieves a significant boost in Hits@n/N accuracy and other metrics for retrieving the correct response of five diverse characters with different",
+            "ground_truth": "Metric difference between Aloha and best baseline score:\nHits@1/20: +0.061 (0.3642 vs 0.3032)\nMRR: +0.0572(0.5114 vs 0.4542)\nF1: -0.0484 (0.3901 vs 0.4385)\nBLEU: +0.0474 (0.2867 vs 0.2393)"
+        },
+        {
+            "index": 141,
+            "input_length": 3796,
+            "score": 0.1739130434782609,
+            "metric": "F1",
+            "peak_memory_mb": 16555.5087890625,
+            "latency_ms": 2758.802020922303,
+            "output": "The improvement gained from Adversarial Reward Augmented Maximum Likelihood (ARAML) is not explicitly stated in the text. However, we can infer that ARAML outperforms several state-of-the-art GAN baselines, including LeakGAN, IRL, MaliGAN, and others, in terms of forward/re",
+            "ground_truth": "ARAM has achieved improvement over all baseline methods using reverese perplexity and  slef-BLEU metric.  The maximum reverse perplexity improvement 936,16 is gained for EMNLP2017  WMT  dataset and  48,44 for COCO dataset."
+        },
+        {
+            "index": 142,
+            "input_length": 4119,
+            "score": 0.15151515151515152,
+            "metric": "F1",
+            "peak_memory_mb": 16670.6982421875,
+            "latency_ms": 2877.0460567902774,
+            "output": "The authors present several pieces of evidence that suggest their model can capture some biases in data annotation and collection. \n\nFirstly, they mention that the model's high misclassification rates for certain types of hate speech, such as implicit abuse, are due to the biases in the data collection process. They argue that the annotators",
+            "ground_truth": "The authors showed few tweets where neither and implicit hatred content exist but the model was able to discriminate"
+        },
+        {
+            "index": 143,
+            "input_length": 3855,
+            "score": 0.20833333333333334,
+            "metric": "F1",
+            "peak_memory_mb": 16555.97314453125,
+            "latency_ms": 2757.1150299627334,
+            "output": "Yes, other baselines were tested to compare with the neural baseline. The text mentions the following baselines:\n\n1. No-Answer Baseline (NA): This baseline identifies every question as unanswerable.\n2. Word Count Baseline: This baseline uses simple lexical matching to answer the questions by retrieving the top candidate",
+            "ground_truth": "SVM, No-Answer Baseline (NA) , Word Count Baseline, Human Performance"
+        },
+        {
+            "index": 144,
+            "input_length": 2843,
+            "score": 0.1081081081081081,
+            "metric": "F1",
+            "peak_memory_mb": 16327.0849609375,
+            "latency_ms": 1941.6596579831094,
+            "output": "The size of the dataset is not explicitly mentioned in the text. However, it is mentioned that the OurNepali dataset is almost ten times bigger compared to the ILPRL dataset in terms of entities.",
+            "ground_truth": "Dataset contains 3606 total sentences and 79087 total entities."
+        },
+        {
+            "index": 145,
+            "input_length": 3566,
+            "score": 0.5263157894736842,
+            "metric": "F1",
+            "peak_memory_mb": 16636.72265625,
+            "latency_ms": 2334.0236980002373,
+            "output": "The method improvements of F1 for paraphrase identification are as follows:\n\n- For MRPC, the F1 score improves by +0.58.\n- For QQP, the F1 score improves by +0.73.",
+            "ground_truth": "Using DSC loss improves the F1 score by +0.58 for MRPC and +0.73 for QQP"
+        },
+        {
+            "index": 146,
+            "input_length": 1971,
+            "score": 0.20408163265306123,
+            "metric": "F1",
+            "peak_memory_mb": 15884.44384765625,
+            "latency_ms": 2145.592187065631,
+            "output": "The text does not explicitly mention the names of the datasets used in the study. However, it mentions that the data from BIBREF0 is used, and that the authors also intend to add studies to the ERP predictions using data from other sources, such as a chapter of Harry Potter and the Sorcerer's Stone (",
+            "ground_truth": "Answer with content missing: (Whole Method and Results sections) The primary dataset we use is the ERP data collected and computed by Frank et al. (2015), and we also use behavioral data (eye-tracking data and self-paced reading times) from Frank et al. (2013) which were collected on the same set of 205 sentences.\nSelect:\n- ERP data collected and computed by Frank et al. (2015)\n- behavioral data (eye-tracking data and self-paced reading times) from Frank et al. (2013)"
+        },
+        {
+            "index": 147,
+            "input_length": 2379,
+            "score": 0.43478260869565216,
+            "metric": "F1",
+            "peak_memory_mb": 16098.947265625,
+            "latency_ms": 2342.325954930857,
+            "output": "The text does not explicitly mention the specific stimuli or data presented to the subjects to elicit event-related responses. However, it does mention that the dataset used for evaluation is the KARA ONE dataset, which is composed of multimodal data for stimulus-based, imagined, and articulated speech states corresponding to 7 phonemic/s",
+            "ground_truth": "7 phonemic/syllabic ( /iy/, /piy/, /tiy/, /diy/, /uw/, /m/, /n/ ) as well as 4 words(pat, pot, knew and gnaw)"
+        },
+        {
+            "index": 148,
+            "input_length": 4085,
+            "score": 0.10256410256410256,
+            "metric": "F1",
+            "peak_memory_mb": 16812.0,
+            "latency_ms": 3009.266701992601,
+            "output": "The baselines used for evaluation are:\n\n1. Pointer-Gen: The baseline model trained by optimizing $L_\\text{MLE}$.\n2. Pointer-Gen+Pos: The baseline model by training Pointer-Gen only on positive examples whose sensationalism score is larger than 0.5.\n3. Pointer-",
+            "ground_truth": "Pointer-Gen, Pointer-Gen+Pos, Pointer-Gen+Same-FT, Pointer-Gen+Pos-FT, Pointer-Gen+RL-ROUGE, Pointer-Gen+RL-SEN"
+        },
+        {
+            "index": 149,
+            "input_length": 2074,
+            "score": 0.5853658536585367,
+            "metric": "F1",
+            "peak_memory_mb": 16007.91357421875,
+            "latency_ms": 2266.063586110249,
+            "output": "The learning models used on the dataset are:\n\n1. Traditional Machine Learning Models:\n   - Naïve Bayes (NB)\n   - Logistic Regression (LR)\n   - Support Vector Machine (SVM)\n   - Random Forests (RF)\n   - Gradient Boosted Trees (GBT)\n\n2. Neural Network based",
+            "ground_truth": "Naïve Bayes (NB), Logistic Regression (LR), Support Vector Machine (SVM), Random Forests (RF), Gradient Boosted Trees (GBT),  Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)"
+        },
+        {
+            "index": 150,
+            "input_length": 1914,
+            "score": 0.14035087719298245,
+            "metric": "F1",
+            "peak_memory_mb": 15951.4443359375,
+            "latency_ms": 2203.4872549120337,
+            "output": "The language model architectures used in this study are:\n\n1. Bi-directional language model: This model consists of two towers, the forward tower operating left-to-right and the backward tower operating right-to-left. Each tower contains 6 transformer blocks. The forward and backward representations are combined via a self-attention module, and",
+            "ground_truth": "uni-directional model to augment the decoder"
+        },
+        {
+            "index": 151,
+            "input_length": 3640,
+            "score": 0.5483870967741935,
+            "metric": "F1",
+            "peak_memory_mb": 16636.71923828125,
+            "latency_ms": 2839.508627075702,
+            "output": "The weights are dynamically adjusted using a strategy that associates each training example with a weight in proportion to $(1-p)$, where $p$ is the probability assigned by the model to the positive class. This weight dynamically changes as training proceeds, and it helps to deemphasize confident examples during training as their $p$",
+            "ground_truth": "One can think $(1-p_{i1})$ as a weight associated with each example, which changes as training proceeds. The intuition of changing $p_{i1}$ to $(1-p_{i1}) p_{i1}$ is to push down the weight of easy examples. For easy examples whose probability are approaching 0 or 1, $(1-p_{i1}) p_{i1}$ makes the model attach significantly less focus to them. Figure FIGREF23 gives gives an explanation from the perspective in derivative: the derivative of $\\frac{(1-p)p}{1+(1-p)p}$ with respect to $p$ approaches 0 immediately after $p$ approaches 0, which means the model attends less to examples once they are correctly classified."
+        },
+        {
+            "index": 152,
+            "input_length": 2443,
+            "score": 0.2727272727272727,
+            "metric": "F1",
+            "peak_memory_mb": 16091.4453125,
+            "latency_ms": 2329.7090800479054,
+            "output": "The results from the proposed strategies are as follows:\n\n1.  **KG-A2C-chained**: This method successfully passes the bottleneck corresponding to a score of 40 in the game Zork1. It converges faster and is more sample-efficient than the other methods.\n2.  **KG-A2C-",
+            "ground_truth": "Reward of 11.8 for the A2C-chained model, 41.8 for the KG-A2C-chained model, 40 for A2C-Explore and 44 for KG-A2C-Explore."
+        },
+        {
+            "index": 153,
+            "input_length": 3701,
+            "score": 0.18604651162790695,
+            "metric": "F1",
+            "peak_memory_mb": 16563.5322265625,
+            "latency_ms": 2193.2023109402508,
+            "output": "An individual model in the proposed joint Bayesian model for unsupervised semantic role induction in multiple languages consists of a Bayesian model for each language, and cross-lingual latent variables to incorporate soft role agreement between aligned constituents.",
+            "ground_truth": "Bayesian model of garg2012unsupervised as our base monolingual model"
+        },
+        {
+            "index": 154,
+            "input_length": 3018,
+            "score": 0.3125,
+            "metric": "F1",
+            "peak_memory_mb": 16302.94677734375,
+            "latency_ms": 1635.1591411512345,
+            "output": "Non-standard pronunciation is identified through annotations in the transcription, specifically through labels for mispronunciations, poor intelligibility, and undefined sound or pronunciations.",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 155,
+            "input_length": 4186,
+            "score": 0.4482758620689655,
+            "metric": "F1",
+            "peak_memory_mb": 16724.8291015625,
+            "latency_ms": 2930.4923720192164,
+            "output": "A semi-character architecture is a type of neural network model that processes a sentence of words with misspelled characters, predicting the correct words at each step. In this architecture, each input word is represented by concatenating three types of information:\n\n1. A one-hot vector of the first character of the word.\n2.",
+            "ground_truth": "A semi-character based RNN (ScRNN) treats the first and last characters individually, and is agnostic to the ordering of the internal characters"
+        },
+        {
+            "index": 156,
+            "input_length": 2697,
+            "score": 0.56,
+            "metric": "F1",
+            "peak_memory_mb": 16214.06884765625,
+            "latency_ms": 2434.6005441620946,
+            "output": "The languages explored in this study are:\n\n1. Bulgarian\n2. Croatian\n3. Czech\n4. Danish\n5. English\n6. French\n7. German\n8. Indonesian\n9. Italian\n10. Norwegian\n11. Persian\n12. Polish\n13. Portuguese\n14. Slovenian",
+            "ground_truth": "Bulgarian, Croatian, Czech, Danish, English, French, German, Indonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish and Swedish"
+        },
+        {
+            "index": 157,
+            "input_length": 4113,
+            "score": 0.18604651162790695,
+            "metric": "F1",
+            "peak_memory_mb": 16671.12646484375,
+            "latency_ms": 2875.338464975357,
+            "output": "The NCEL approach is highly effective overall, as demonstrated by its performance in experiments. It outperforms various state-of-the-art baselines across five different datasets, including CoNLL-YAGO, TAC2010, ACE2004, AQUAINT, and WW. The results show that NCEL achieves",
+            "ground_truth": "NCEL consistently outperforms various baselines with a favorable generalization ability"
+        },
+        {
+            "index": 158,
+            "input_length": 4592,
+            "score": 0.07407407407407407,
+            "metric": "F1",
+            "peak_memory_mb": 16846.8857421875,
+            "latency_ms": 2435.6923229061067,
+            "output": "Yes, the data is de-identified. According to the text, the recordings have been de-identified by removing identifying information, and the transcripts have been marked with digital zeros and [de-identified] tags.",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 159,
+            "input_length": 2132,
+            "score": 0.5555555555555556,
+            "metric": "F1",
+            "peak_memory_mb": 15969.29345703125,
+            "latency_ms": 1038.1704110186547,
+            "output": "The baseline used was the error detection system by Rei2016, trained using the same FCE dataset.",
+            "ground_truth": "error detection system by Rei2016"
+        },
+        {
+            "index": 160,
+            "input_length": 3432,
+            "score": 0.8421052631578948,
+            "metric": "F1",
+            "peak_memory_mb": 16481.51220703125,
+            "latency_ms": 1450.1387909986079,
+            "output": "They obtained the annotated clinical notes from the CE task in 2010 i2b2/VA.",
+            "ground_truth": "clinical notes from the CE task in 2010 i2b2/VA"
+        },
+        {
+            "index": 161,
+            "input_length": 3919,
+            "score": 0.4210526315789474,
+            "metric": "F1",
+            "peak_memory_mb": 16671.17138671875,
+            "latency_ms": 2876.0899510234594,
+            "output": "Masking words in the decoder is helpful because it allows the model to utilize BERT's contextualized representations more effectively. By masking each word in the summary draft one by one, the refine decoder can generate context vectors using BERT that are consistent with the pre-training process. This is similar to the cloze task in",
+            "ground_truth": "ecause this process is similar to the cloze task in BERT's pre-train process, therefore by using the ability of the contextual language model the decoder can generate more fluent and natural sequences."
+        },
+        {
+            "index": 162,
+            "input_length": 1902,
+            "score": 0.08695652173913042,
+            "metric": "F1",
+            "peak_memory_mb": 15926.2705078125,
+            "latency_ms": 2183.599738869816,
+            "output": "The datasets used in the paper are not explicitly mentioned in the provided text. However, based on the context and the references provided, we can infer that the datasets used are:\n\n1. Book corpus: This is used for training the Skip-thought vectors (STV) model.\n2. Twitter dataset: This is used",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 163,
+            "input_length": 2108,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15979.90869140625,
+            "latency_ms": 2239.992408081889,
+            "output": "The features used in this study are:\n\n1. **Term Frequency-Inverse Document Frequency (TF-IDF)**: This is a weighting scheme used to calculate the importance of a term in a document within a corpus. It takes into account the frequency of a term in a document and its rarity across the entire corpus.\n2",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 164,
+            "input_length": 1947,
+            "score": 0.39999999999999997,
+            "metric": "F1",
+            "peak_memory_mb": 15974.7421875,
+            "latency_ms": 2236.378553090617,
+            "output": "The dataset is annotated based on a hierarchical model of depression-related symptoms. Each tweet is annotated as either \"no evidence of depression\" or \"evidence of depression\". If a tweet is annotated as \"evidence of depression\", it is further annotated with one or more depressive symptoms, such as:\n\n* Depressed mood\n",
+            "ground_truth": "no evidence of depression, depressed mood, disturbed sleep, fatigue or loss of energy"
+        },
+        {
+            "index": 165,
+            "input_length": 2800,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16520.353515625,
+            "latency_ms": 1501.2888489291072,
+            "output": "The eight NER tasks that they evaluated on are publicly available NER tasks used in the BioBERT paper.",
+            "ground_truth": "BC5CDR-disease, NCBI-disease, BC5CDR-chem, BC4CHEMD, BC2GM, JNLPBA, LINNAEUS, Species-800"
+        },
+        {
+            "index": 166,
+            "input_length": 2423,
+            "score": 0.27777777777777773,
+            "metric": "F1",
+            "peak_memory_mb": 16059.72607421875,
+            "latency_ms": 1784.2634411063045,
+            "output": "The training data was translated using the machine translation platform Apertium. The English datasets provided by the organizers were translated into Spanish, and the new set of \"Spanish\" data was then added to the original training set.",
+            "ground_truth": "using the machine translation platform Apertium "
+        },
+        {
+            "index": 167,
+            "input_length": 4177,
+            "score": 0.2068965517241379,
+            "metric": "F1",
+            "peak_memory_mb": 16572.18603515625,
+            "latency_ms": 2765.337031101808,
+            "output": "The authors used a multinomial Naive Bayes classifier for their system. They also experimented with other feature selection methods, including Information Gain Ratio (IGR) and Aggressive Feature Ranking (AFR), to improve the performance of their classifier. Additionally, they used ensemble learning techniques, such as feature concatenation and stacked",
+            "ground_truth": "AllWords model by counting the frequencies of all the remaining words and training a multinomial Naive Bayes classifier"
+        },
+        {
+            "index": 168,
+            "input_length": 3001,
+            "score": 0.7187499999999999,
+            "metric": "F1",
+            "peak_memory_mb": 16319.86083984375,
+            "latency_ms": 2313.500671181828,
+            "output": "The baseline for the SLC task was a very simple logistic regression classifier with default parameters, where the input instances were represented with a single feature: the length of the sentence. \n\nThe baseline for the FLC task generated spans and selected one of the 18 techniques randomly.",
+            "ground_truth": "The baseline system for the SLC task is a very simple logistic regression classifier with default parameters. The baseline for the FLC task generates spans and selects one of the 18 techniques randomly."
+        },
+        {
+            "index": 169,
+            "input_length": 2991,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "peak_memory_mb": 16235.6337890625,
+            "latency_ms": 2470.351570053026,
+            "output": "They compare their model with the following baselines:\n\n1. A baseline model based on conditional random fields (CRF), which considers features like POS tags, n-grams, label transitions, word suffixes, and relative position to the end of the text.\n2. A \"pipeline\" method where the classifier for pun",
+            "ground_truth": "They compare with the following models: by Pedersen (2017), by Pramanick and Das (2017), by Mikhalkova and Karyakin (2017),  by Vadehra (2017), Indurthi and Oota (2017), by Vechtomova (2017), by (Cai et al., 2018), and CRF."
+        },
+        {
+            "index": 170,
+            "input_length": 4882,
+            "score": 0.3692307692307692,
+            "metric": "F1",
+            "peak_memory_mb": 16887.03466796875,
+            "latency_ms": 3087.29803096503,
+            "output": "The political bias of different sources is included in the model by assigning a political bias label to different US outlets (and therefore news articles) following the procedure described in BIBREF2. This procedure is used to label different outlets as left-biased or right-biased. The authors then perform classification experiments by training",
+            "ground_truth": "By assigning a political bias label to each news article and training only on left-biased or right-biased outlets of both disinformation and mainstream domains"
+        },
+        {
+            "index": 171,
+            "input_length": 3722,
+            "score": 0.7894736842105263,
+            "metric": "F1",
+            "peak_memory_mb": 16531.00244140625,
+            "latency_ms": 2029.7076189890504,
+            "output": "The ancient Chinese dataset comes from the internet, specifically from ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era.",
+            "ground_truth": "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era"
+        },
+        {
+            "index": 172,
+            "input_length": 2240,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16057.65087890625,
+            "latency_ms": 583.3273979369551,
+            "output": "English.",
+            "ground_truth": "English"
+        },
+        {
+            "index": 173,
+            "input_length": 2545,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "peak_memory_mb": 16180.6533203125,
+            "latency_ms": 2408.6176559794694,
+            "output": "The text does not explicitly mention the Chinese datasets used in the experiments. However, it does mention that the proposed approach is found to perform favorably against recent neural network-based approaches to grammar induction on standard benchmarks for English and Chinese.\n\nBased on the context, it can be inferred that the Chinese dataset used is likely the Penn",
+            "ground_truth": "Answer with content missing: (Data section) Chinese with version 5.1 of the Chinese Penn Treebank (CTB)"
+        },
+        {
+            "index": 174,
+            "input_length": 4487,
+            "score": 0.038461538461538464,
+            "metric": "F1",
+            "peak_memory_mb": 16725.1630859375,
+            "latency_ms": 2927.990108029917,
+            "output": "The UTCNN model has multiple layers, including:\n\n1. User matrix embedding layer and user vector embedding layer\n2. Maximum pooling layer to form a moderator matrix embedding and a moderator vector embedding\n3. Topic matrix embedding layer and topic vector embedding layer\n4. Maximum pooling layer to form a joint topic matrix embedding and",
+            "ground_truth": "eight layers"
+        },
+        {
+            "index": 175,
+            "input_length": 4661,
+            "score": 0.04166666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 16778.1455078125,
+            "latency_ms": 2990.726760122925,
+            "output": "The datasets used in this paper include:\n\n1. Flickr photos with coordinates in Europe (70 million photos) for tag weighting and selection.\n2. European network of nature protected sites Natura 2000 dataset for predicting species distribution.\n3. SoilGrids dataset for predicting soil type.\n4. CORINE land cover classes",
+            "ground_truth": " the same datasets as BIBREF7"
+        },
+        {
+            "index": 176,
+            "input_length": 4528,
+            "score": 0.05128205128205129,
+            "metric": "F1",
+            "peak_memory_mb": 16776.43994140625,
+            "latency_ms": 2992.7239478565753,
+            "output": "The clinical datasets used in the paper are:\n\n1. NUBes-PHI (NUBes with Personal Health Information): A corpus of around 7,000 real medical reports written in Spanish and annotated with negation and uncertainty information. It contains 32,055 sentences annotated for 11 different sensitive information categories.\n2",
+            "ground_truth": "MEDDOCAN, NUBes-PHI"
+        },
+        {
+            "index": 177,
+            "input_length": 3543,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16481.35009765625,
+            "latency_ms": 2683.557312004268,
+            "output": "The traditional linguistic features used in the best available sarcasm detectors, which were used in conjunction with the cognitive features derived from eye-movement patterns, are not explicitly mentioned in the provided text. However, it is mentioned that the features enlisted under lexical, implicit incongruity, and explicit incongruity are borrowed from various",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 178,
+            "input_length": 5869,
+            "score": 0.19444444444444448,
+            "metric": "F1",
+            "peak_memory_mb": 17318.6943359375,
+            "latency_ms": 3490.7958649564534,
+            "output": "The metrics used to establish that LiLi makes chatbots more knowledgeable and better at learning and conversation are:\n\n1. Coverage: This is a measure of the fraction of total query data instances for which LiLi has successfully formulated strategies that lead to winning. A higher coverage value indicates better strategy formulation ability.\n2. Average Matthews",
+            "ground_truth": "Coverage, Avg. MCC and avg. +ve F1 score"
+        },
+        {
+            "index": 179,
+            "input_length": 1910,
+            "score": 0.044444444444444446,
+            "metric": "F1",
+            "peak_memory_mb": 15943.212890625,
+            "latency_ms": 2201.4801672194153,
+            "output": "Yes, they employ their indexing-based method to create a sample of a QA Wikipedia dataset. They index each paragraph in Wikipedia using {1,2,3}-grams, and then use this index to query answer sentences from the corpora and retrieve the top-5 ranked paragraphs. This method is used to create a silver",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 180,
+            "input_length": 2234,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "peak_memory_mb": 15996.03369140625,
+            "latency_ms": 1435.8616981189698,
+            "output": "The targets are Galatasaray (Target-1) and Fenerbahçe (Target-2), which are two of the most popular football clubs in Turkey.",
+            "ground_truth": "Galatasaray, Fenerbahçe"
+        },
+        {
+            "index": 181,
+            "input_length": 4600,
+            "score": 0.06557377049180328,
+            "metric": "F1",
+            "peak_memory_mb": 16758.16259765625,
+            "latency_ms": 2952.6533391326666,
+            "output": "The experiments conducted in this paper include:\n\n1. **Automatic evaluation**: The authors evaluate the performance of their model and baselines using automatic metrics such as sentiment delta, sentiment accuracy, BLEU score, geometric mean, and harmonic mean.\n2. **Human evaluation**: The authors conduct human evaluation by sampling 50 non-",
+            "ground_truth": "Irony Classifier, Sentiment Classifier for Irony, Sentiment Classifier for Non-irony, transformation from ironic sentences to non-ironic sentences"
+        },
+        {
+            "index": 182,
+            "input_length": 3612,
+            "score": 0.2526315789473684,
+            "metric": "F1",
+            "peak_memory_mb": 16531.95849609375,
+            "latency_ms": 2738.1565161049366,
+            "output": "Gaussian-masked directional multi-head attention is a variant of self-attention that is used in the proposed Chinese word segmentation model. It is designed to capture the localness and directional information of the input sequence.\n\nThe standard self-attention mechanism calculates the attention weights by taking the dot product of the query and key vectors,",
+            "ground_truth": "pays attentions to adjacent characters and casts a localness relationship between the characters as a fixed Gaussian weight assuming the weight relies on the distance between characters"
+        },
+        {
+            "index": 183,
+            "input_length": 4005,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 16563.6201171875,
+            "latency_ms": 1184.2155419290066,
+            "output": "The authors considered Facebook status update messages and tweets.",
+            "ground_truth": "Facebook status update messages"
+        },
+        {
+            "index": 184,
+            "input_length": 4855,
+            "score": 0.1904761904761905,
+            "metric": "F1",
+            "peak_memory_mb": 16866.89501953125,
+            "latency_ms": 2908.114338060841,
+            "output": "The network's baseline features are the features extracted from the baseline CNN, which directly aims to classify a sentence as sarcastic vs non-sarcastic. These features are obtained from the fully-connected layer of the baseline CNN, which has 100 neurons, resulting in 100 baseline features.",
+            "ground_truth": " The features extracted from CNN."
+        },
+        {
+            "index": 185,
+            "input_length": 2753,
+            "score": 0.3673469387755102,
+            "metric": "F1",
+            "peak_memory_mb": 16171.38671875,
+            "latency_ms": 2403.964330907911,
+            "output": "The hyperparameters that were varied in the experiments on the four tasks are:\n\n1. The number of clusters (k) in the k-means clustering algorithm.\n2. The type of word vectors (skipgram, cbow, or GloVe).\n3. The dimensionality of the word vectors (not specified for skip",
+            "ground_truth": "number of clusters, seed value in clustering, selection of word vectors, window size and dimension of embedding"
+        },
+        {
+            "index": 186,
+            "input_length": 2424,
+            "score": 0.2,
+            "metric": "F1",
+            "peak_memory_mb": 16059.95458984375,
+            "latency_ms": 2322.161663789302,
+            "output": "The scores of their system are shown in Table TABREF19. \n\nOn the dev set, the scores are as follows:\n\n- EI-Reg: 0.716\n- EI-Oc: 0.718\n- V-Reg: 0.714\n- V-Oc: 0.716",
+            "ground_truth": "column Ens Test in Table TABREF19"
+        },
+        {
+            "index": 187,
+            "input_length": 2669,
+            "score": 0.4736842105263158,
+            "metric": "F1",
+            "peak_memory_mb": 16173.365234375,
+            "latency_ms": 2005.168501054868,
+            "output": "The corpus consists of 53 documents, which contain an average number of 156.1 sentences per document, each with 19.55 tokens on average. The corpus comprises 8,275 sentences and 167,739 words in total.",
+            "ground_truth": "8,275 sentences and 167,739 words in total"
+        },
+        {
+            "index": 188,
+            "input_length": 2764,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16250.599609375,
+            "latency_ms": 2497.899367939681,
+            "output": "Yes, it is possible to convert a cloze-style question to a naturally-looking question. In fact, the authors of the paper mention that they were able to answer 76% of the Wikipedia set and 80% of the PUBMed set using the information in the passage, and that in most cases the cloze",
+            "ground_truth": "Unanswerable"
+        },
+        {
+            "index": 189,
+            "input_length": 3591,
+            "score": 0.39999999999999997,
+            "metric": "F1",
+            "peak_memory_mb": 16516.21533203125,
+            "latency_ms": 1057.9203001689166,
+            "output": "Text categorization, sentiment classification.",
+            "ground_truth": "text classification for themes including sentiment, web-page, science, medical and healthcare"
+        },
+        {
+            "index": 190,
+            "input_length": 5838,
+            "score": 0.05128205128205128,
+            "metric": "F1",
+            "peak_memory_mb": 17197.23974609375,
+            "latency_ms": 3369.0646598115563,
+            "output": "The model is compared to several previous methods, including:\n\n1. Term frequency models\n2. Syntactic pattern-based methods\n3. Syntactic dependency-based methods\n4. WordNet hypernym expansion methods\n5. Unified Medical Language System (UMLS) categories\n6. Keyword identification methods\n7.",
+            "ground_truth": "bag-of-words model, CNN"
+        },
+        {
+            "index": 191,
+            "input_length": 3294,
+            "score": 0.0888888888888889,
+            "metric": "F1",
+            "peak_memory_mb": 16416.7470703125,
+            "latency_ms": 2672.842547064647,
+            "output": "The training sets of the new versions of ELMo are significantly larger compared to the previous ones. For example, the Latvian ELMo model was trained on a corpus of 270 million tokens, while the previous version from ELMoForManyLangs was trained on a corpus of 20 million tokens",
+            "ground_truth": "By 14 times."
+        },
+        {
+            "index": 192,
+            "input_length": 2835,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 16327.08056640625,
+            "latency_ms": 957.7536908909678,
+            "output": "The dataset contains 6946 sentences.",
+            "ground_truth": "3606"
+        },
+        {
+            "index": 193,
+            "input_length": 2474,
+            "score": 0.06666666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 16278.4892578125,
+            "latency_ms": 2546.2810890749097,
+            "output": "The authors compare their proposed Simultaneous Two Sample Learning (s2sL) approach to the following models/frameworks:\n\n1. MLP (Multi-Layer Perceptron) - a traditional feed-forward neural network.\n2. Eusboost - an ensemble method for handling highly imbalanced datasets.\n3. MWM",
+            "ground_truth": "MLP"
+        },
+        {
+            "index": 194,
+            "input_length": 3784,
+            "score": 0.04166666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 16616.8916015625,
+            "latency_ms": 2832.0628709625453,
+            "output": "Yes, their NER model learns NER from both text and images. The authors propose a multimodal NER (MNER) model that takes as input both image and text for recognition of a named entity in text input. They incorporate visual contexts to provide auxiliary information for short media posts, and use a modality",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 195,
+            "input_length": 4320,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16707.751953125,
+            "latency_ms": 2923.324989853427,
+            "output": "No, they do not evaluate only on English datasets. Although the primary experiments are conducted on the Wall Street Journal (WSJ) portion of the Penn Treebank, which is an English dataset, the authors also mention that their approach can be applied to a broad family of structured syntax models and that they use pre-trained word",
+            "ground_truth": "Yes"
+        },
+        {
+            "index": 196,
+            "input_length": 6810,
+            "score": 0.11764705882352941,
+            "metric": "F1",
+            "peak_memory_mb": 17605.8095703125,
+            "latency_ms": 2705.8679219335318,
+            "output": "According to the text, their highest MRR score for Factoid Question Answering task was 0.6103 in one of the test batches.",
+            "ground_truth": "0.5115"
+        },
+        {
+            "index": 197,
+            "input_length": 4327,
+            "score": 0.7368421052631579,
+            "metric": "F1",
+            "peak_memory_mb": 16707.78759765625,
+            "latency_ms": 1659.7854390274733,
+            "output": "The datasets used for evaluation are the Wall Street Journal (WSJ) portion of the Penn Treebank.",
+            "ground_truth": " Wall Street Journal (WSJ) portion of the Penn Treebank"
+        },
+        {
+            "index": 198,
+            "input_length": 1692,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "peak_memory_mb": 15893.17626953125,
+            "latency_ms": 2148.179623996839,
+            "output": "The authors evidence the claim that many engineers find it a big overhead to choose from multiple frameworks, models, and optimization techniques by mentioning that \"building models under these frameworks requires a large overhead of mastering these framework details.\" This implies that engineers need to spend a significant amount of time and effort to learn and understand the intricacies",
+            "ground_truth": "By conducting a survey among engineers"
+        },
+        {
+            "index": 199,
+            "input_length": 4524,
+            "score": 0.3076923076923077,
+            "metric": "F1",
+            "peak_memory_mb": 16930.419921875,
+            "latency_ms": 1719.0579609014094,
+            "output": "They achieve the state of the art on both SimpleQuestions and WebQSP benchmarks.",
+            "ground_truth": "SimpleQuestions, WebQSP"
+        }
+    ]
+}
