@@ -1,0 +1,1515 @@
+{
+    "task": "multifieldqa_en",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "single-doc",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.559595871501825,
+    "max_peak_memory_mb": 18922.96435546875,
+    "details": [
+        {
+            "index": 0,
+            "input_length": 819,
+            "score": 0.7499999999999999,
+            "metric": "F1",
+            "peak_memory_mb": 15698.1318359375,
+            "latency_ms": 374.50917600654066,
+            "output": "South West Ultras",
+            "ground_truth": "South West Ultras fan club."
+        },
+        {
+            "index": 1,
+            "input_length": 6900,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "peak_memory_mb": 17980.4853515625,
+            "latency_ms": 2079.7306371387094,
+            "output": "No.",
+            "ground_truth": "No, it is not necessary."
+        },
+        {
+            "index": 2,
+            "input_length": 4297,
+            "score": 0.43478260869565216,
+            "metric": "F1",
+            "peak_memory_mb": 17281.07666015625,
+            "latency_ms": 2347.780509153381,
+            "output": "Low-temperature scanning tunneling microscopy and spectroscopy (STM/STS), ab-initio calculations based on density functional theory and Green's functions.",
+            "ground_truth": "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS)."
+        },
+        {
+            "index": 3,
+            "input_length": 8925,
+            "score": 0.8181818181818181,
+            "metric": "F1",
+            "peak_memory_mb": 18195.673828125,
+            "latency_ms": 2668.33982989192,
+            "output": "A surgically implanted electronic device to treat life-threatening heartbeat irregularities.",
+            "ground_truth": "Implantable Cardioverter Defibrillator (ICD) is a surgically implanted electronic device to treat life-threatening heartbeat irregularities."
+        },
+        {
+            "index": 4,
+            "input_length": 6250,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "peak_memory_mb": 17142.97412109375,
+            "latency_ms": 2002.4279570207,
+            "output": "If the sides were not sloped, the section formed would be cylindrical and the longerons would lie flat.",
+            "ground_truth": "The sides of the fuselage are sloped to create a conical section when the fuselage is formed."
+        },
+        {
+            "index": 5,
+            "input_length": 5009,
+            "score": 0.4166666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 17912.39208984375,
+            "latency_ms": 2932.5491841882467,
+            "output": "The proximity of superconductivity tends to suppress the Kondo effect if the superconducting energy gap becomes larger than the relevant Kondo temperature.",
+            "ground_truth": "It tends to suppress the Kondo effect."
+        },
+        {
+            "index": 6,
+            "input_length": 6202,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 17238.94970703125,
+            "latency_ms": 2320.558690931648,
+            "output": "Electricity is used in a huge and growing number of uses, including lighting, heating, refrigeration, telecommunications, electric vehicles, and electronic devices.",
+            "ground_truth": "Electricity is used for transport, heating, lighting, communications, and computation."
+        },
+        {
+            "index": 7,
+            "input_length": 2292,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16058.31396484375,
+            "latency_ms": 622.0742450095713,
+            "output": "Vice Admiral.",
+            "ground_truth": "Vice Admiral."
+        },
+        {
+            "index": 8,
+            "input_length": 972,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15788.62255859375,
+            "latency_ms": 418.60663308762014,
+            "output": "15–3",
+            "ground_truth": "They won their first game with a score of 15-3."
+        },
+        {
+            "index": 9,
+            "input_length": 7133,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 18541.53466796875,
+            "latency_ms": 2996.028031921014,
+            "output": "Vitamins K3, K4, and K5.",
+            "ground_truth": "Vitamins K3, K4, and K5."
+        },
+        {
+            "index": 10,
+            "input_length": 5523,
+            "score": 0.1,
+            "metric": "F1",
+            "peak_memory_mb": 17532.46142578125,
+            "latency_ms": 1707.240924006328,
+            "output": "Yes.",
+            "ground_truth": "Yes, individual molecules of indeno[1,2-a]fluorene can switch between open-shell and closed-shell states by changing their adsorption site on the surface."
+        },
+        {
+            "index": 11,
+            "input_length": 8501,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17686.99658203125,
+            "latency_ms": 1987.228981917724,
+            "output": "3-D printing and software development.",
+            "ground_truth": "3-D printing and software development."
+        },
+        {
+            "index": 12,
+            "input_length": 7142,
+            "score": 0.6666666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 18542.67236328125,
+            "latency_ms": 2898.1235651299357,
+            "output": "90 μg and 120 μg respectively.",
+            "ground_truth": "90 μg for women and 120 μg for men."
+        },
+        {
+            "index": 13,
+            "input_length": 6197,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "peak_memory_mb": 17238.9697265625,
+            "latency_ms": 1471.2170159909874,
+            "output": "The watt.",
+            "ground_truth": "Watt, one joule per second."
+        },
+        {
+            "index": 14,
+            "input_length": 7565,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17614.3984375,
+            "latency_ms": 1811.5680501796305,
+            "output": "Flexibility.",
+            "ground_truth": "Flexibility."
+        },
+        {
+            "index": 15,
+            "input_length": 2085,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16004.6875,
+            "latency_ms": 621.9363168347627,
+            "output": "Jacob C. Landau",
+            "ground_truth": "Jacob C. Landau."
+        },
+        {
+            "index": 16,
+            "input_length": 6235,
+            "score": 0.2564102564102564,
+            "metric": "F1",
+            "peak_memory_mb": 17217.6259765625,
+            "latency_ms": 2686.224997974932,
+            "output": "The main methodology used in the research is a compositional emergent communication paradigm, which exhibits clustering and informativeness properties, and is based on the information bottleneck to capture both referential complexity and task-specific utility.",
+            "ground_truth": "An unsupervised method based on the information bottleneck and contrastive learning."
+        },
+        {
+            "index": 17,
+            "input_length": 4982,
+            "score": 0.15000000000000002,
+            "metric": "F1",
+            "peak_memory_mb": 17472.94775390625,
+            "latency_ms": 3358.4799990057945,
+            "output": "The function beta(r) is determined by applying the vacuum Einstein equation to a test ball in free fall alongside one of the family of infalling observers, which leads to the differential equation beta(r)beta'(r) = C/r^2, where C is a constant.",
+            "ground_truth": "Using the vacuum Einstein equation and the Baez-Bunn form."
+        },
+        {
+            "index": 18,
+            "input_length": 6625,
+            "score": 0.1818181818181818,
+            "metric": "F1",
+            "peak_memory_mb": 17651.70361328125,
+            "latency_ms": 1914.9614060297608,
+            "output": "70-75 metres.",
+            "ground_truth": "The water depth in the Greater Ekofisk Area is 70-75 meters."
+        },
+        {
+            "index": 19,
+            "input_length": 3141,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16250.22998046875,
+            "latency_ms": 781.9664259441197,
+            "output": "Other toxic products.",
+            "ground_truth": "Other toxic products."
+        },
+        {
+            "index": 20,
+            "input_length": 1203,
+            "score": 0.5,
+            "metric": "F1",
+            "peak_memory_mb": 15868.9580078125,
+            "latency_ms": 649.5968920644373,
+            "output": "Brisbane, Cleveland, Queensland, Australia.",
+            "ground_truth": "Margaret Way was born in Brisbane and died in Cleveland, Queensland, Australia."
+        },
+        {
+            "index": 21,
+            "input_length": 5385,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17104.939453125,
+            "latency_ms": 1609.6647609956563,
+            "output": "L = 8 and L = 14.",
+            "ground_truth": "L = 8 and L = 14."
+        },
+        {
+            "index": 22,
+            "input_length": 4837,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16690.3369140625,
+            "latency_ms": 1005.8799798134714,
+            "output": "5",
+            "ground_truth": "5."
+        },
+        {
+            "index": 23,
+            "input_length": 3791,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16531.6953125,
+            "latency_ms": 1199.9863609671593,
+            "output": "Lasa, Gitastrophe, and Shadoks.",
+            "ground_truth": "Lasa, Gitastrophe, and Shadoks."
+        },
+        {
+            "index": 24,
+            "input_length": 6925,
+            "score": 0.5384615384615384,
+            "metric": "F1",
+            "peak_memory_mb": 17791.33935546875,
+            "latency_ms": 3561.394009971991,
+            "output": "The court concluded that the claimed transformation process be both ‘‘(1) limited to methods of halftoning of gray scale images by using a transformation of specific data, and 2) limited to a visual depiction representing specific objects or sub-stances.’’",
+            "ground_truth": "It required the transformation to be limited to specific data and a visual depiction representing specific objects or substances."
+        },
+        {
+            "index": 25,
+            "input_length": 5346,
+            "score": 0.4848484848484849,
+            "metric": "F1",
+            "peak_memory_mb": 16860.66552734375,
+            "latency_ms": 2005.2270118612796,
+            "output": "The learning rate rapidly rises as the transition probability increases from 0, and after reaching a peak, it begins to decline slowly, eventually reaching zero.",
+            "ground_truth": "As the transition probability increases, the learning rate initially rises and then declines."
+        },
+        {
+            "index": 26,
+            "input_length": 5088,
+            "score": 0.5714285714285715,
+            "metric": "F1",
+            "peak_memory_mb": 17542.18212890625,
+            "latency_ms": 2806.106345029548,
+            "output": "Those that form via kinetic rate processes from state-selected Rydberg gases, with a particular emphasis on the distinctive dynamics found in the evolution of molecular ultracold plasmas.",
+            "ground_truth": "A subset that form via kinetic rate processes from state-selected Rydberg gases."
+        },
+        {
+            "index": 27,
+            "input_length": 7670,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 18457.3857421875,
+            "latency_ms": 2579.011257039383,
+            "output": "Wearable sensors.",
+            "ground_truth": "Wearable sensors."
+        },
+        {
+            "index": 28,
+            "input_length": 5701,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17124.69287109375,
+            "latency_ms": 1400.2812209073454,
+            "output": "Fairness.",
+            "ground_truth": "Fairness."
+        },
+        {
+            "index": 29,
+            "input_length": 6856,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 17377.4482421875,
+            "latency_ms": 2109.316605143249,
+            "output": "\"I have seen the Lord\"; and she told them that he had said these things to her.",
+            "ground_truth": "\"I have seen the Lord.\"."
+        },
+        {
+            "index": 30,
+            "input_length": 2947,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16239.3408203125,
+            "latency_ms": 1226.1571190319955,
+            "output": "Develop a robust and flexible research infrastructure to conduct a more large scale cross-sectional study in the future.",
+            "ground_truth": "Verifying other meta-information such as patient's gender, age, race, etc."
+        },
+        {
+            "index": 31,
+            "input_length": 2554,
+            "score": 0.5833333333333334,
+            "metric": "F1",
+            "peak_memory_mb": 16873.0478515625,
+            "latency_ms": 1678.2553880475461,
+            "output": "Simulated and real data, specifically a wireless MISO channel acquired in a realistic indoor scenario.",
+            "ground_truth": "The authors used simulated data and real data from a wireless MISO channel."
+        },
+        {
+            "index": 32,
+            "input_length": 6340,
+            "score": 0.75,
+            "metric": "F1",
+            "peak_memory_mb": 17175.146484375,
+            "latency_ms": 1995.1250159647316,
+            "output": "The baseline references the mid point of the firewall for the developed (and true dimensioned) side panel.",
+            "ground_truth": "The baseline is used as a reference for the mid point of the firewall for the developed side panel."
+        },
+        {
+            "index": 33,
+            "input_length": 4467,
+            "score": 0.8333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16704.376953125,
+            "latency_ms": 1821.5139841195196,
+            "output": "It provides cover for the war and allows supporters of the illegal war to point to it and insist/slur \"Things aren't so bad!\"",
+            "ground_truth": "It provides cover for the war and allows supporters of the illegal war to point to it."
+        },
+        {
+            "index": 34,
+            "input_length": 5665,
+            "score": 0.6486486486486487,
+            "metric": "F1",
+            "peak_memory_mb": 17002.3642578125,
+            "latency_ms": 2219.8307348880917,
+            "output": "The main advantage of the proposed method in terms of computation time is that the time required to update the robot's belief does not increase with the complexity of the environment.",
+            "ground_truth": "The time required to update the belief does not increase with the complexity of the environment."
+        },
+        {
+            "index": 35,
+            "input_length": 2431,
+            "score": 0.56,
+            "metric": "F1",
+            "peak_memory_mb": 16914.35400390625,
+            "latency_ms": 1454.7358059789985,
+            "output": "March 2002 and the end of this decade.",
+            "ground_truth": "The Tevatron Collider Run II started in March 2002 and is expected to continue until the end of this decade."
+        },
+        {
+            "index": 36,
+            "input_length": 1414,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 15814.58642578125,
+            "latency_ms": 365.9149988088757,
+            "output": "Four",
+            "ground_truth": "Four."
+        },
+        {
+            "index": 37,
+            "input_length": 3743,
+            "score": 0.9565217391304348,
+            "metric": "F1",
+            "peak_memory_mb": 17533.80224609375,
+            "latency_ms": 2867.3769789747894,
+            "output": "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\qquad \\forall \\psi \\in C_c^2$",
+            "ground_truth": "$\\int f'(u) \\psi^2 \\le \\int | \\nabla \\psi|^2, \\forall \\psi \\in C_c^2$."
+        },
+        {
+            "index": 38,
+            "input_length": 2008,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16758.22509765625,
+            "latency_ms": 1354.0736171416938,
+            "output": "The normalized least mean square (NLMS) algorithm.",
+            "ground_truth": "The normalized least mean square (NLMS) algorithm."
+        },
+        {
+            "index": 39,
+            "input_length": 3150,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16251.109375,
+            "latency_ms": 954.3550298549235,
+            "output": "Del Bigtree and his team at ICAN.",
+            "ground_truth": "Del Bigtree and his team at ICAN."
+        },
+        {
+            "index": 40,
+            "input_length": 2115,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16328.033203125,
+            "latency_ms": 989.701421931386,
+            "output": "C$_2$H (ethynyl)",
+            "ground_truth": "The focus of the study was on the reactive radical ethynyl (C$_2$H)."
+        },
+        {
+            "index": 41,
+            "input_length": 1489,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "peak_memory_mb": 15836.48291015625,
+            "latency_ms": 420.3741210512817,
+            "output": "1964",
+            "ground_truth": "Weep Not, Child was first published in 1964."
+        },
+        {
+            "index": 42,
+            "input_length": 2748,
+            "score": 0.5714285714285714,
+            "metric": "F1",
+            "peak_memory_mb": 16836.4384765625,
+            "latency_ms": 1626.6669118776917,
+            "output": "The maximum velocity is proportional to the square root of the amplitude of the blob or depletion.",
+            "ground_truth": "The maximum velocity scales with the square root of the amplitude."
+        },
+        {
+            "index": 43,
+            "input_length": 6654,
+            "score": 0.21052631578947367,
+            "metric": "F1",
+            "peak_memory_mb": 17692.33984375,
+            "latency_ms": 2020.0130930170417,
+            "output": "actin and a complex network of proteins",
+            "ground_truth": "They are rich in actin and have been shown to be highly dynamic."
+        },
+        {
+            "index": 44,
+            "input_length": 6444,
+            "score": 0.0909090909090909,
+            "metric": "F1",
+            "peak_memory_mb": 17265.32177734375,
+            "latency_ms": 1523.4716879203916,
+            "output": "14,520",
+            "ground_truth": "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+        },
+        {
+            "index": 45,
+            "input_length": 5429,
+            "score": 0.31578947368421056,
+            "metric": "F1",
+            "peak_memory_mb": 17428.3701171875,
+            "latency_ms": 2703.629930038005,
+            "output": "He acknowledged that the Internet has caused far-reaching systemic and structural changes in the economy and therefore \"Quill now harms States to a degree far greater than could have been anticipated earlier.\"",
+            "ground_truth": "Quill harmed states more than anticipated due to the Internet."
+        },
+        {
+            "index": 46,
+            "input_length": 5339,
+            "score": 0.5333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16852.7041015625,
+            "latency_ms": 1269.9454550165683,
+            "output": "Environmental fluctuation and uncertainty.",
+            "ground_truth": "Environmental fluctuation and uncertainty control the reliance of artificial organisms on plasticity."
+        },
+        {
+            "index": 47,
+            "input_length": 6240,
+            "score": 0.6153846153846153,
+            "metric": "F1",
+            "peak_memory_mb": 17142.73974609375,
+            "latency_ms": 2156.513032037765,
+            "output": "The completed fuselage sides bow up from the building surface, forming a \"banana\" shape, especially when using preformed fiberglass parts.",
+            "ground_truth": "The longerons bow up from the building surface, forming a \"banana\" shape."
+        },
+        {
+            "index": 48,
+            "input_length": 2294,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "peak_memory_mb": 16058.21142578125,
+            "latency_ms": 622.6421638857573,
+            "output": "January 1929",
+            "ground_truth": "Goodwin became a Naval aviator in January 1929."
+        },
+        {
+            "index": 49,
+            "input_length": 898,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16218.49609375,
+            "latency_ms": 678.6226839758456,
+            "output": "48V",
+            "ground_truth": "48V."
+        },
+        {
+            "index": 50,
+            "input_length": 2088,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16004.94189453125,
+            "latency_ms": 678.620832040906,
+            "output": "June 1, 1999",
+            "ground_truth": "June 1, 1999."
+        },
+        {
+            "index": 51,
+            "input_length": 8281,
+            "score": 0.7058823529411764,
+            "metric": "F1",
+            "peak_memory_mb": 18682.8583984375,
+            "latency_ms": 3499.7793280053884,
+            "output": "Qaderi, Chishti, Nakshbandi, Suharwardi, and Madaari.",
+            "ground_truth": "Mufti-e-Azam-e-Hind received Khilafat in the Qaderi, Chishti, Nakshbandi, Suharwardi, and Madaari Orders."
+        },
+        {
+            "index": 52,
+            "input_length": 6048,
+            "score": 0.27586206896551724,
+            "metric": "F1",
+            "peak_memory_mb": 17315.26708984375,
+            "latency_ms": 2499.376003164798,
+            "output": "Privacy concerns, expressed skepticism that the monitoring program would work, and the possibility that taxpayers would be left with a $500,000-a-year bill to operate it.",
+            "ground_truth": "Privacy concerns and skepticism about its effectiveness."
+        },
+        {
+            "index": 53,
+            "input_length": 3597,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 16463.140625,
+            "latency_ms": 864.3545799423009,
+            "output": "Wallace",
+            "ground_truth": "The Wallace electorate."
+        },
+        {
+            "index": 54,
+            "input_length": 1856,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16064.02197265625,
+            "latency_ms": 607.8444980084896,
+            "output": "30,223",
+            "ground_truth": "30,223."
+        },
+        {
+            "index": 55,
+            "input_length": 1201,
+            "score": 0.18181818181818182,
+            "metric": "F1",
+            "peak_memory_mb": 15868.8486328125,
+            "latency_ms": 428.9386020973325,
+            "output": "2013",
+            "ground_truth": "Margaret Way started self-publishing her books as e-books in 2013."
+        },
+        {
+            "index": 56,
+            "input_length": 3422,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16402.30224609375,
+            "latency_ms": 864.5828159060329,
+            "output": "23 September.",
+            "ground_truth": "23 September."
+        },
+        {
+            "index": 57,
+            "input_length": 2091,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16004.87353515625,
+            "latency_ms": 733.4083130117506,
+            "output": "Long Term Capital Management (LTCM)",
+            "ground_truth": "Long Term Capital Management (LTCM)."
+        },
+        {
+            "index": 58,
+            "input_length": 669,
+            "score": 0.30769230769230765,
+            "metric": "F1",
+            "peak_memory_mb": 15657.119140625,
+            "latency_ms": 1815.438698977232,
+            "output": "The dynamical behavior of the anisotropic order parameter $m$ following a quench to the critical point is well described by the Gaussian theory for all three lattice gas models studied, $i.e.,$ $m \\sim t^{1/2}$ in the short-time regime.",
+            "ground_truth": "It is well described by the Gaussian theory."
+        },
+        {
+            "index": 59,
+            "input_length": 2184,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16601.02197265625,
+            "latency_ms": 991.2525410763919,
+            "output": "2×2 meters",
+            "ground_truth": "It is recommended to have at least a 2x2 meter space for using the VR headset."
+        },
+        {
+            "index": 60,
+            "input_length": 6312,
+            "score": 0.44827586206896547,
+            "metric": "F1",
+            "peak_memory_mb": 18520.2919921875,
+            "latency_ms": 4620.023833820596,
+            "output": "The PLM with decimation performs better than the PLM with $l_2$ regularization and a mean-field technique, especially in the low sampling regime. It is able to clearly infer the network of interaction even when $M=N$, and its reconstruction error is always smaller than the other methods.",
+            "ground_truth": "It outperforms mean-field methods and the PLM with $l_2$ regularization in terms of reconstruction error and true positive rate."
+        },
+        {
+            "index": 61,
+            "input_length": 9437,
+            "score": 0.375,
+            "metric": "F1",
+            "peak_memory_mb": 18087.97021484375,
+            "latency_ms": 2940.772830042988,
+            "output": "Phase 1: Exegetical, Phase 2: Theological, Phase 3: Homiletical.",
+            "ground_truth": "The three phases are exegetical, theological, and homiletical."
+        },
+        {
+            "index": 62,
+            "input_length": 1810,
+            "score": 0.4615384615384615,
+            "metric": "F1",
+            "peak_memory_mb": 15990.76708984375,
+            "latency_ms": 690.3753338847309,
+            "output": "February 15, 2010.",
+            "ground_truth": "KSTP switched to a sports radio format on February 15, 2010."
+        },
+        {
+            "index": 63,
+            "input_length": 2409,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16095.7998046875,
+            "latency_ms": 626.63883715868,
+            "output": "RoBERTa",
+            "ground_truth": "The best performing model for the Spanish language in Track-1 was Spanish BERT."
+        },
+        {
+            "index": 64,
+            "input_length": 1045,
+            "score": 0.8125000000000001,
+            "metric": "F1",
+            "peak_memory_mb": 15779.67578125,
+            "latency_ms": 1171.4336378499866,
+            "output": "The infall rate is 2-5 times smaller and the gas density is 2-5 times smaller in the region close to the black hole.",
+            "ground_truth": "Infall rate is 2-5 times smaller and gas density is 2-5 times smaller."
+        },
+        {
+            "index": 65,
+            "input_length": 6599,
+            "score": 0.7407407407407406,
+            "metric": "F1",
+            "peak_memory_mb": 17334.4384765625,
+            "latency_ms": 1969.4623549003154,
+            "output": "The police say they aren’t paid enough to enforce the laws in the streets.",
+            "ground_truth": "Toby Schindelbeck's observation is that the police say they aren't paid enough to enforce the laws in the streets."
+        },
+        {
+            "index": 66,
+            "input_length": 8784,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17858.27587890625,
+            "latency_ms": 1996.061152080074,
+            "output": "Peter Denning",
+            "ground_truth": "Peter Denning."
+        },
+        {
+            "index": 67,
+            "input_length": 4334,
+            "score": 0.2727272727272727,
+            "metric": "F1",
+            "peak_memory_mb": 17350.794921875,
+            "latency_ms": 1931.4538959879428,
+            "output": "The conduction gap is strongly dependent on the direction of applied strain.",
+            "ground_truth": "Peaks occur at certain strain directions, while the gap is zero at others."
+        },
+        {
+            "index": 68,
+            "input_length": 3080,
+            "score": 0.6,
+            "metric": "F1",
+            "peak_memory_mb": 16254.20654296875,
+            "latency_ms": 813.1143047939986,
+            "output": "7 March 2023",
+            "ground_truth": "The paper was published on 7 March 2023."
+        },
+        {
+            "index": 69,
+            "input_length": 3737,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16637.71826171875,
+            "latency_ms": 1228.557915892452,
+            "output": "V +, V 0, and V −",
+            "ground_truth": "The three subsets are V+, V0, and V-, determined by the Kullback-Leibler information distance."
+        },
+        {
+            "index": 70,
+            "input_length": 1504,
+            "score": 0.7142857142857143,
+            "metric": "F1",
+            "peak_memory_mb": 15838.01220703125,
+            "latency_ms": 807.4184721335769,
+            "output": "He loses his job and Njoroge's family is forced to move.",
+            "ground_truth": "After attacking Jacobo at a workers' strike, Ngotho loses his job and Njoroge's family is forced to move."
+        },
+        {
+            "index": 71,
+            "input_length": 812,
+            "score": 0.7368421052631579,
+            "metric": "F1",
+            "peak_memory_mb": 15691.21044921875,
+            "latency_ms": 799.4186570867896,
+            "output": "Jivani Street 2 of the Malatia-Sebastia District, Yerevan.",
+            "ground_truth": "The club's headquarters are located on Jivani Street 2 of the Malatia-Sebastia District, Yerevan."
+        },
+        {
+            "index": 72,
+            "input_length": 3996,
+            "score": 0.6399999999999999,
+            "metric": "F1",
+            "peak_memory_mb": 17526.65771484375,
+            "latency_ms": 2381.990069989115,
+            "output": "NFPA and FPSA greatly outperform GMRES and DSA in both runtime and iteration counts for all cases.",
+            "ground_truth": "NFPA and FPSA greatly outperform GMRES and DSA."
+        },
+        {
+            "index": 73,
+            "input_length": 6097,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "peak_memory_mb": 17350.45654296875,
+            "latency_ms": 3487.564553041011,
+            "output": "Technological limitations, resistance amongst some archaeologists to making their data available, cautions of exposing data to scrutiny, lost opportunities of analysis before others use it, loss of 'capital' of data, control over how data tables is presented, emphasis on the creation of new data through archaeological research, and the perception of the",
+            "ground_truth": "Technological limitations, resistance to exposing data to scrutiny, and desire to hold onto data for personal use."
+        },
+        {
+            "index": 74,
+            "input_length": 6308,
+            "score": 0.5454545454545454,
+            "metric": "F1",
+            "peak_memory_mb": 18520.126953125,
+            "latency_ms": 2907.868460053578,
+            "output": "physics, biology, social sciences, finance, neuroscience.",
+            "ground_truth": "Physics, biology, social sciences, finance, and neuroscience are some fields in which the inverse problem is encountered."
+        },
+        {
+            "index": 75,
+            "input_length": 7021,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 18771.943359375,
+            "latency_ms": 3254.254513885826,
+            "output": "4.5$\\times$10$^{8}$\\,cm",
+            "ground_truth": "4.5x10^8 cm."
+        },
+        {
+            "index": 76,
+            "input_length": 2295,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16059.3203125,
+            "latency_ms": 636.2095349468291,
+            "output": "VC-10 Squadron",
+            "ground_truth": "VC-10 Squadron."
+        },
+        {
+            "index": 77,
+            "input_length": 5241,
+            "score": 0.45454545454545453,
+            "metric": "F1",
+            "peak_memory_mb": 16815.79931640625,
+            "latency_ms": 1584.4060289673507,
+            "output": "The bigger the receptive field size, the more complete shapes can be reconstructed using DSP.",
+            "ground_truth": "Bigger receptive field size leads to more successful shape completion."
+        },
+        {
+            "index": 78,
+            "input_length": 3508,
+            "score": 0.3,
+            "metric": "F1",
+            "peak_memory_mb": 16477.2470703125,
+            "latency_ms": 1978.2510069198906,
+            "output": "It is a band geometric quantity that measures the k-space curl of the interlayer Berry connection polarizability over the occupied states, and hence is also a characteristic of layer-hybridized electronic states.",
+            "ground_truth": "The momentum space curl of the interlayer Berry connection polarizability generates the crossed nonlinear dynamical Hall effect."
+        },
+        {
+            "index": 79,
+            "input_length": 5389,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "peak_memory_mb": 17105.2890625,
+            "latency_ms": 1362.6710269600153,
+            "output": "Yes.",
+            "ground_truth": "Yes, the denoiser works for non-Clifford local noise channels."
+        },
+        {
+            "index": 80,
+            "input_length": 5306,
+            "score": 0.9142857142857143,
+            "metric": "F1",
+            "peak_memory_mb": 17196.29833984375,
+            "latency_ms": 2832.080264110118,
+            "output": "Legacies of Losing in American Politics, with Nicole Mellow (University of Chicago Press, Fall 2017), and an expanded edition of The Rhetorical Presidency in the Princeton Classics series (Princeton, Fall 2017).",
+            "ground_truth": "Legacies of Losing in American Politics and an expanded edition of The Rhetorical Presidency in the Princeton Classics series."
+        },
+        {
+            "index": 81,
+            "input_length": 5567,
+            "score": 0.15384615384615383,
+            "metric": "F1",
+            "peak_memory_mb": 17004.3662109375,
+            "latency_ms": 3149.2586880922318,
+            "output": "A media application may use a content-recognition module or algorithm to determine the context of an event. The content-recognition module may use object recognition techniques such as edge detection, pattern recognition, optical character recognition, on-line character recognition, and/or any other suitable technique or method to determine the objects and/or characteristics in media",
+            "ground_truth": "It uses a content-recognition module or algorithm."
+        },
+        {
+            "index": 82,
+            "input_length": 2345,
+            "score": 0.9230769230769231,
+            "metric": "F1",
+            "peak_memory_mb": 16484.2109375,
+            "latency_ms": 1779.2080380022526,
+            "output": "1. Sustained viral gene delivery through core-shell fibers\n2. Gene transfer to hemophilia A mice via oral delivery of FVIII-chitosan nanoparticles",
+            "ground_truth": "Sustained viral gene delivery through core-shell fibers and Gene transfer to hemophilia A mice via oral delivery of FVIII-chitosan nanoparticles."
+        },
+        {
+            "index": 83,
+            "input_length": 818,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 15699.12451171875,
+            "latency_ms": 379.0368440095335,
+            "output": "FC Banants.",
+            "ground_truth": "FC Banants."
+        },
+        {
+            "index": 84,
+            "input_length": 3247,
+            "score": 0.13953488372093023,
+            "metric": "F1",
+            "peak_memory_mb": 16523.5478515625,
+            "latency_ms": 1789.1382051166147,
+            "output": "There seems to be no margin of safety for neurodevelopmental effects in fetus, for women with high fish consumption unless they decrease their intake of certain fish species.",
+            "ground_truth": "The conclusion was that fruit consumption may provide a protective effect for mercury exposure in Amazonian riparians."
+        },
+        {
+            "index": 85,
+            "input_length": 9607,
+            "score": 0.4166666666666667,
+            "metric": "F1",
+            "peak_memory_mb": 18140.93505859375,
+            "latency_ms": 3834.4466839917004,
+            "output": "The scoring engine generates a stream of content for the channel by comparing candidate content items to a model generated for the user by the model generation engine, scoring them, and then generating the stream of content based on the scores for each candidate content item.",
+            "ground_truth": "By comparing candidate content items to a model and scoring them."
+        },
+        {
+            "index": 86,
+            "input_length": 821,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 15698.939453125,
+            "latency_ms": 407.31898904778063,
+            "output": "2013–2014",
+            "ground_truth": "In the 2013-2014 season."
+        },
+        {
+            "index": 87,
+            "input_length": 1195,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 15869.044921875,
+            "latency_ms": 510.3134249802679,
+            "output": "Over 120 novels.",
+            "ground_truth": "Margaret Way wrote more than 120 novels."
+        },
+        {
+            "index": 88,
+            "input_length": 2556,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 16872.65185546875,
+            "latency_ms": 1461.4928599912673,
+            "output": "Approximating the posterior distribution with an isotropic Gaussian distribution.",
+            "ground_truth": "This research paper proposed an approach based on approximating the posterior distribution with an isotropic Gaussian distribution."
+        },
+        {
+            "index": 89,
+            "input_length": 2619,
+            "score": 0.16666666666666669,
+            "metric": "F1",
+            "peak_memory_mb": 17020.791015625,
+            "latency_ms": 1248.0248790234327,
+            "output": "Yes",
+            "ground_truth": "Yes, DUO has 9.57 instances per image while COCO contains 7.7."
+        },
+        {
+            "index": 90,
+            "input_length": 7146,
+            "score": 0.7058823529411765,
+            "metric": "F1",
+            "peak_memory_mb": 18541.35888671875,
+            "latency_ms": 3422.8070438839495,
+            "output": "anemia, bruising, nosebleeds and bleeding of the gums in both sexes, and heavy menstrual bleeding in women.",
+            "ground_truth": "Symptoms of vitamin K deficiency include anemia, bruising, nosebleeds, bleeding of the gums, and heavy menstrual bleeding in women."
+        },
+        {
+            "index": 91,
+            "input_length": 6956,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 18922.96435546875,
+            "latency_ms": 2928.271196084097,
+            "output": "172",
+            "ground_truth": "172."
+        },
+        {
+            "index": 92,
+            "input_length": 6706,
+            "score": 0.4117647058823529,
+            "metric": "F1",
+            "peak_memory_mb": 17511.06591796875,
+            "latency_ms": 2941.778203006834,
+            "output": "Mobile device management (MDM) systems are usually referred to “support centralized control of an entire fleet of mobile devices (smartphones and tablets) and mobile applications by applying and ensuring pre-defined configuration settings”.",
+            "ground_truth": "Centralized control of mobile devices and applications."
+        },
+        {
+            "index": 93,
+            "input_length": 2397,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16095.8720703125,
+            "latency_ms": 1164.796771015972,
+            "output": "BERT, RoBERTa, XLM-RoBERTa, ELECTRA, and GPT-2.",
+            "ground_truth": "BERT, RoBERTa, ELECTRA, GPT-2, and XLM-RoBERTa."
+        },
+        {
+            "index": 94,
+            "input_length": 10003,
+            "score": 0.10169491525423728,
+            "metric": "F1",
+            "peak_memory_mb": 18398.33740234375,
+            "latency_ms": 4573.996629100293,
+            "output": "Hosting Subscriber may not use Broadjam's servers or Hosting Subscriber's Website as a source, intermediary, reply to address, or destination address for mail bombs, Internet packet flooding, packet corruption, denial of service, or any other abusive activities. Server hacking or other perpetration of security breaches is strictly prohibited and Broadjam reserves",
+            "ground_truth": "No excessive overloading and no use for illegal activity."
+        },
+        {
+            "index": 95,
+            "input_length": 2355,
+            "score": 0.3125,
+            "metric": "F1",
+            "peak_memory_mb": 16898.54296875,
+            "latency_ms": 2032.3936389759183,
+            "output": "The vacuum processing system is configured with a plurality of vacuum processing apparatus arranged in parallel, with all the vacuum processing chambers of the apparatus arranged in alignment.",
+            "ground_truth": "Multiple vacuum processing apparatuses are arranged in parallel."
+        },
+        {
+            "index": 96,
+            "input_length": 2103,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16328.24560546875,
+            "latency_ms": 728.3794891554862,
+            "output": "21",
+            "ground_truth": "21."
+        },
+        {
+            "index": 97,
+            "input_length": 5906,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17961.744140625,
+            "latency_ms": 2241.4401147980243,
+            "output": "1425 $\\mu_{B}$",
+            "ground_truth": "1425 $\\mu_{B}$."
+        },
+        {
+            "index": 98,
+            "input_length": 2490,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16238.2666015625,
+            "latency_ms": 1313.0126071628183,
+            "output": "Nothing can give a solid proof of the existence of heaven and hell, yet, nothing can disprove it either.",
+            "ground_truth": "Unknown."
+        },
+        {
+            "index": 99,
+            "input_length": 10337,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 18418.59326171875,
+            "latency_ms": 2969.385142903775,
+            "output": "There is no answer to this question as it is not mentioned in the text.",
+            "ground_truth": "August 25."
+        },
+        {
+            "index": 100,
+            "input_length": 5466,
+            "score": 0.11428571428571428,
+            "metric": "F1",
+            "peak_memory_mb": 16983.01806640625,
+            "latency_ms": 2461.3981931470335,
+            "output": "The benefits of using binary variables in the SLAS formulation include reducing the computational complexity of the optimization problem, allowing for faster execution times, and enabling the use of lazy constraint implementation to further enhance computational efficiency.",
+            "ground_truth": "Reduced computational complexity."
+        },
+        {
+            "index": 101,
+            "input_length": 682,
+            "score": 0.125,
+            "metric": "F1",
+            "peak_memory_mb": 16448.67236328125,
+            "latency_ms": 2638.284223154187,
+            "output": "QuecPython 社区或者联系我们的在线支持：QQ 群 445121768获取 QuecPython 开发固件及加入官方交流群官网主页：https://python.quectel.com官网文件下载（各类资料、工具）：https://python.quectel.com/download官网 wiki",
+            "ground_truth": "Online documentation, QuecPython community, online support: QQ group 445121768."
+        },
+        {
+            "index": 102,
+            "input_length": 6102,
+            "score": 0.2692307692307693,
+            "metric": "F1",
+            "peak_memory_mb": 17518.05517578125,
+            "latency_ms": 3653.1931690406054,
+            "output": "Severe anemia that begins even before birth, the placenta, heart, liver, spleen, and adrenal glands may all become enlarged, fluid can begin collecting throughout the body as early as the start of the second trimester, causing damage to developing tissues and organs, growth retardation is also common, affected fet",
+            "ground_truth": "Severe anemia that begins even before birth."
+        },
+        {
+            "index": 103,
+            "input_length": 3590,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16462.69287109375,
+            "latency_ms": 922.7013480849564,
+            "output": "October 2001",
+            "ground_truth": "October 2001."
+        },
+        {
+            "index": 104,
+            "input_length": 7568,
+            "score": 0.32558139534883723,
+            "metric": "F1",
+            "peak_memory_mb": 17614.3740234375,
+            "latency_ms": 3366.81562801823,
+            "output": "Smartphones are far more compact and power constrained, with a power budget of around 1W, whereas tablets have a power budget of up to 4W for passively cooled devices and as high as 7-8W for systems with fans.",
+            "ground_truth": "Smartphones are more compact and power constrained."
+        },
+        {
+            "index": 105,
+            "input_length": 7321,
+            "score": 0.2941176470588235,
+            "metric": "F1",
+            "peak_memory_mb": 17595.54736328125,
+            "latency_ms": 2518.8086698763072,
+            "output": "How much spending to cut, policy riders, such as regulating greenhouse gases and abortion, and what programs and agencies to cut.",
+            "ground_truth": "The sticking point in the political showdown over the budget is how much spending to cut."
+        },
+        {
+            "index": 106,
+            "input_length": 6958,
+            "score": 0.44067796610169496,
+            "metric": "F1",
+            "peak_memory_mb": 17378.96728515625,
+            "latency_ms": 3225.973980035633,
+            "output": "The State Government shall, by notification in the Official Gazette, appoint an officer for the purpose of carrying out functions assigned to him under this Act, as the Director of Town and Country Planning for the State and may appoint such other categories of officers as it may deem fit.",
+            "ground_truth": "The Director of Town and Country Planning is responsible for carrying out the functions assigned under the act."
+        },
+        {
+            "index": 107,
+            "input_length": 3083,
+            "score": 0.3846153846153846,
+            "metric": "F1",
+            "peak_memory_mb": 16255.1552734375,
+            "latency_ms": 1530.3525349590927,
+            "output": "By employing a propagator in the latent space, which uses complex-valued latent variables and treats them independently, allowing for an interpretable latent dynamics.",
+            "ground_truth": "By using a propagator in the latent space."
+        },
+        {
+            "index": 108,
+            "input_length": 6594,
+            "score": 0.6,
+            "metric": "F1",
+            "peak_memory_mb": 17233.4560546875,
+            "latency_ms": 1590.8628071192652,
+            "output": "Keep deploying and harvesting your bases.",
+            "ground_truth": "Keep deploying and harvesting your bases to earn experience points and level up quickly."
+        },
+        {
+            "index": 109,
+            "input_length": 5086,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 17534.32421875,
+            "latency_ms": 2673.5099591314793,
+            "output": "$\\Gamma_e = \\frac{e^2}{4\\pi \\epsilon_0 a_{ws}}\\frac{1}{k_B T_e}$",
+            "ground_truth": "It is the ratio of the average unscreened electron-electron potential energy to kinetic energy."
+        },
+        {
+            "index": 110,
+            "input_length": 6743,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "peak_memory_mb": 17341.13427734375,
+            "latency_ms": 1629.8369010910392,
+            "output": "Pressing ‘SKIP’.",
+            "ground_truth": "Players can skip dialogue on the quest map by pressing the 'SKIP' button."
+        },
+        {
+            "index": 111,
+            "input_length": 1802,
+            "score": 0.5,
+            "metric": "F1",
+            "peak_memory_mb": 15990.53466796875,
+            "latency_ms": 550.8778458461165,
+            "output": "4 years.",
+            "ground_truth": "Four years."
+        },
+        {
+            "index": 112,
+            "input_length": 5660,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 17161.451171875,
+            "latency_ms": 1428.40938991867,
+            "output": "C-295",
+            "ground_truth": "The IAF is considering the acquisition of the Airbus A330 MRTT (Multi-Role Tanker Transport) besides the Boeing C-17."
+        },
+        {
+            "index": 113,
+            "input_length": 2188,
+            "score": 0.6,
+            "metric": "F1",
+            "peak_memory_mb": 16602.98876953125,
+            "latency_ms": 1114.7836970631033,
+            "output": "Permanent yellow spot damage on the screen.",
+            "ground_truth": "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen."
+        },
+        {
+            "index": 114,
+            "input_length": 8501,
+            "score": 0.2105263157894737,
+            "metric": "F1",
+            "peak_memory_mb": 17687.181640625,
+            "latency_ms": 2444.0185779239982,
+            "output": "Because the lady he is renting a room from smokes and he wants to avoid the secondhand smoke.",
+            "ground_truth": "Because his roommate smokes."
+        },
+        {
+            "index": 115,
+            "input_length": 6567,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17655.04248046875,
+            "latency_ms": 3806.886496953666,
+            "output": "An ALPHABETICAL LIST OF THE NAMES and PLACES of ABODE of the MERCHANTS and PRINCIPAL TRADERS of the Cities of LONDON and WESTMINSTER, the Borough of SOUTHWARK, and their Environs, with the Number affixed to each House.",
+            "ground_truth": "An alphabetical list of names and places of abode of the merchants and principal traders of the cities of London and Westminster, the Borough of Southwark, and their environs, with the number affixed to each house."
+        },
+        {
+            "index": 116,
+            "input_length": 10325,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 18469.62939453125,
+            "latency_ms": 2656.524317106232,
+            "output": "It becomes a bit less.",
+            "ground_truth": "It becomes a bit less so that what's off to the left or right can be better noted."
+        },
+        {
+            "index": 117,
+            "input_length": 6819,
+            "score": 0.7945205479452054,
+            "metric": "F1",
+            "peak_memory_mb": 17498.90625,
+            "latency_ms": 3161.19350399822,
+            "output": "They are asking him to appoint a blue ribbon commission to conduct research and develop a management plan for Whalebone Cove, and to deny or defer approval on any applications for new docks in the Cove until the management plan can be developed and implemented.",
+            "ground_truth": "Appointing a blue ribbon commission to conduct the research and develop the management plan and denying or defering approval on any applications for new docks in the Cove until the management plan can be developed and implemented."
+        },
+        {
+            "index": 118,
+            "input_length": 6766,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17428.3779296875,
+            "latency_ms": 1680.5790930520743,
+            "output": "Power-law functions.",
+            "ground_truth": "Power-law functions."
+        },
+        {
+            "index": 119,
+            "input_length": 1762,
+            "score": 0.125,
+            "metric": "F1",
+            "peak_memory_mb": 16220.3388671875,
+            "latency_ms": 2445.5764470621943,
+            "output": "f′(x)  = \n\\begin{cases} \n\\frac{6x^2\\cos{\\left(x^2\\right)}+\\sin{\\left(x^2\\right)}}{3\\sqrt[3]{x^2}}, & \\mbox{if } x \\neq ",
+            "ground_truth": "It depends on the value of x, either 0 or (6x^2cos(x^2)+sin(x^2))/(3(x^2)^(1/3))."
+        },
+        {
+            "index": 120,
+            "input_length": 2054,
+            "score": 0.7368421052631579,
+            "metric": "F1",
+            "peak_memory_mb": 15991.07275390625,
+            "latency_ms": 718.4189478866756,
+            "output": "The John F. Kennedy Profiles in Courage Award",
+            "ground_truth": "In 2009, Brooksley Born received the John F. Kennedy Profiles in Courage Award."
+        },
+        {
+            "index": 121,
+            "input_length": 5225,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "peak_memory_mb": 17003.17626953125,
+            "latency_ms": 1881.8875181023031,
+            "output": "Nonlinear system vibration problems, i.e., computing transient responses of nonlinear oscillators under arbitrary irregular excitations.",
+            "ground_truth": "The paper aims to solve nonlinear system vibration problems efficiently."
+        },
+        {
+            "index": 122,
+            "input_length": 1865,
+            "score": 0.25,
+            "metric": "F1",
+            "peak_memory_mb": 16061.41357421875,
+            "latency_ms": 663.5711300186813,
+            "output": "Fuller's Ranch.",
+            "ground_truth": "The first white settlement in McPherson County was Fuller's Ranch, established by Charles O. Fuller."
+        },
+        {
+            "index": 123,
+            "input_length": 2008,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16758.177734375,
+            "latency_ms": 1352.466853801161,
+            "output": "The normalized least mean square (NLMS) algorithm.",
+            "ground_truth": "The normalized least mean square (NLMS) algorithm."
+        },
+        {
+            "index": 124,
+            "input_length": 5655,
+            "score": 0.13793103448275862,
+            "metric": "F1",
+            "peak_memory_mb": 17002.36669921875,
+            "latency_ms": 2282.0795821025968,
+            "output": "The robot's belief update becomes more steady, allowing it to leverage the human's latest observations and reach the goal successfully, rather than becoming overconfident in an incorrect goal.",
+            "ground_truth": "The belief entropy decreases more steadily."
+        },
+        {
+            "index": 125,
+            "input_length": 5514,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17532.412109375,
+            "latency_ms": 2446.504642954096,
+            "output": "An open-shell π-diradical state and a closed-shell state with a para-quinodimethane moiety.",
+            "ground_truth": "Open-shell π-diradical state and closed-shell state with a para-quinodimethane moiety."
+        },
+        {
+            "index": 126,
+            "input_length": 4017,
+            "score": 0.2727272727272727,
+            "metric": "F1",
+            "peak_memory_mb": 16602.25732421875,
+            "latency_ms": 2576.0346779134125,
+            "output": "The main focus of the research paper is to determine the nuclear liquid-gas transition in the strong coupling regime of lattice QCD, specifically the first-order transition from a gas of hadrons to a nuclear phase, and to study the nuclear interactions as a function of the quark mass.",
+            "ground_truth": "Nuclear liquid-gas transition in lattice QCD."
+        },
+        {
+            "index": 127,
+            "input_length": 5646,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17002.3603515625,
+            "latency_ms": 1262.9482599440962,
+            "output": "γh",
+            "ground_truth": "γh."
+        },
+        {
+            "index": 128,
+            "input_length": 2952,
+            "score": 0.8,
+            "metric": "F1",
+            "peak_memory_mb": 16914.28857421875,
+            "latency_ms": 1272.3848740570247,
+            "output": "Sir Richard Rokebye",
+            "ground_truth": "Sir Richard."
+        },
+        {
+            "index": 129,
+            "input_length": 6101,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "peak_memory_mb": 17517.3984375,
+            "latency_ms": 2305.9203661978245,
+            "output": "According to the globin that is affected, hence the names alpha and beta thalassemia.",
+            "ground_truth": "According to the globin that is affected (alpha or beta)."
+        },
+        {
+            "index": 130,
+            "input_length": 1852,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16062.623046875,
+            "latency_ms": 637.0291879866272,
+            "output": "McPherson.",
+            "ground_truth": "McPherson."
+        },
+        {
+            "index": 131,
+            "input_length": 1860,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "peak_memory_mb": 16062.57666015625,
+            "latency_ms": 579.790020827204,
+            "output": "1867",
+            "ground_truth": "McPherson County was established as a county in 1867."
+        },
+        {
+            "index": 132,
+            "input_length": 505,
+            "score": 0.0,
+            "metric": "F1",
+            "peak_memory_mb": 16467.7626953125,
+            "latency_ms": 2659.2001810204238,
+            "output": "1. 使用安装包安装即可。\n2. 打开程序后，会显示以下界面，用户可以查看账户（默认创建10个账户）、区块、交易和日志。\n3. 点击“设置”，如下图所示，用户还可以设置绑定的ip和端",
+            "ground_truth": "使用安装包安装Ganache；打开程序，用户可以从显示的界面中查看账户、区块、交易和日志；点击“设置”，用户可以设置绑定的ip和端口、账户数量以及gas限制等，点击“restart”后设置生效。此时，Ganache已经在本机运行了一个以太坊私有网络，并绑定了8545端口。."
+        },
+        {
+            "index": 133,
+            "input_length": 8232,
+            "score": 0.8421052631578948,
+            "metric": "F1",
+            "peak_memory_mb": 17980.50927734375,
+            "latency_ms": 2516.0552840679884,
+            "output": "Decorrelating the data before running the PLS algorithm improves its performance.",
+            "ground_truth": "Decorrelating the data before running the PLS algorithm improves the performance of the algorithm."
+        },
+        {
+            "index": 134,
+            "input_length": 4482,
+            "score": 0.5555555555555556,
+            "metric": "F1",
+            "peak_memory_mb": 18328.794921875,
+            "latency_ms": 2734.1078219469637,
+            "output": "Coupled generalized dynamic Bayesian network (C-GDBN)",
+            "ground_truth": "The generative interactive model used in the method is called the Coupled Generalized Dynamic Bayesian Network (C-GDBN)."
+        },
+        {
+            "index": 135,
+            "input_length": 5917,
+            "score": 0.13793103448275862,
+            "metric": "F1",
+            "peak_memory_mb": 17961.38134765625,
+            "latency_ms": 2676.758237881586,
+            "output": "Memory nanodots, nanochannels for spin injection, and silicon compatible room temperature operational devices.",
+            "ground_truth": "Spin injection into non magnetic semiconductors, or electrical manipulation of carrier induced magnetism in magnetic semiconductors."
+        },
+        {
+            "index": 136,
+            "input_length": 5970,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17349.90771484375,
+            "latency_ms": 1515.0419608689845,
+            "output": "62",
+            "ground_truth": "62."
+        },
+        {
+            "index": 137,
+            "input_length": 6539,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17664.09228515625,
+            "latency_ms": 1820.00513211824,
+            "output": "1766",
+            "ground_truth": "1766."
+        },
+        {
+            "index": 138,
+            "input_length": 4468,
+            "score": 0.13333333333333333,
+            "metric": "F1",
+            "peak_memory_mb": 16704.3857421875,
+            "latency_ms": 1190.1348819956183,
+            "output": "Iraq and the US military presence.",
+            "ground_truth": "The main topic of the text is Iraq's politics and current situation."
+        },
+        {
+            "index": 139,
+            "input_length": 5588,
+            "score": 0.7878787878787877,
+            "metric": "F1",
+            "peak_memory_mb": 17074.015625,
+            "latency_ms": 1990.8892249222845,
+            "output": "SNNs could serve as promising candidates to better model and explain the functional hierarchy and mechanisms of the visual system.",
+            "ground_truth": "SNNs have the potential to better model and explain the functional hierarchy and mechanisms of the visual system."
+        },
+        {
+            "index": 140,
+            "input_length": 3602,
+            "score": 0.7368421052631577,
+            "metric": "F1",
+            "peak_memory_mb": 16463.18359375,
+            "latency_ms": 1157.3462749365717,
+            "output": "Deputy Prime Minister of New Zealand and Minister of Finance.",
+            "ground_truth": "He became deputy prime minister and minister of finance."
+        },
+        {
+            "index": 141,
+            "input_length": 2395,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 16095.82177734375,
+            "latency_ms": 654.5412850100547,
+            "output": "85.61%",
+            "ground_truth": "85.61%."
+        },
+        {
+            "index": 142,
+            "input_length": 8366,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "peak_memory_mb": 17999.6044921875,
+            "latency_ms": 4042.840151116252,
+            "output": "In the shock compression stage (t < 0.03), the effect of specific-heat ratio contributes little to the average motion. However, when the shock wave passes through the bubble (t > 0.03), a larger specific-heat ratio speeds up the average motion of the bubbles.",
+            "ground_truth": "The specific-heat ratio affects the average motion of the bubble. The bubbles with smaller specific-heat ratios have slower average motion."
+        },
+        {
+            "index": 143,
+            "input_length": 1853,
+            "score": 0.6153846153846153,
+            "metric": "F1",
+            "peak_memory_mb": 16059.7734375,
+            "latency_ms": 749.9463390558958,
+            "output": "The U.S. state of Kansas.",
+            "ground_truth": "McPherson County is located in the U.S. state of Kansas."
+        },
+        {
+            "index": 144,
+            "input_length": 663,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 15656.8427734375,
+            "latency_ms": 1813.253234140575,
+            "output": "$O (t, L_{\\parallel} ; S_\\Delta) = L_{\\parallel}^{-\\beta/[\\nu(1+\\Delta)]} \\tilde f_O (t/L_{\\parallel}^{z/(1+\\Delta)} ; S_\\Delta)$.",
+            "ground_truth": "O(t, L_{\\parallel}; S_\\Delta) = L_{\\parallel}^{-\\beta/[\\nu(1+\\Delta)]} \\tilde f_O(t/L_{\\parallel}^{z/(1+\\Delta)}; S_\\Delta)."
+        },
+        {
+            "index": 145,
+            "input_length": 6133,
+            "score": 0.3870967741935483,
+            "metric": "F1",
+            "peak_memory_mb": 17419.86767578125,
+            "latency_ms": 3555.887714959681,
+            "output": "The relationships between catch per set and fishing behavior variables are different for different measures of catch per unit effort (CPUE), with a positive relationship between unstandardised CPUE (individuals per set) and number of hooks, number of sets and engine power, but a negative relationship between CPUE and these fishing behaviour variables",
+            "ground_truth": "The relationships between catch per set and fishing behavior variables differ when comparing unstandardized CPUE and standardized CPUE."
+        },
+        {
+            "index": 146,
+            "input_length": 1193,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 15869.10009765625,
+            "latency_ms": 596.788221038878,
+            "output": "Romance novels and women's fiction.",
+            "ground_truth": "Romance novels and women's fiction."
+        },
+        {
+            "index": 147,
+            "input_length": 6839,
+            "score": 1.0,
+            "metric": "F1",
+            "peak_memory_mb": 17340.71337890625,
+            "latency_ms": 1531.4632831141353,
+            "output": "No.",
+            "ground_truth": "No."
+        },
+        {
+            "index": 148,
+            "input_length": 2616,
+            "score": 0.4,
+            "metric": "F1",
+            "peak_memory_mb": 17020.7783203125,
+            "latency_ms": 1712.7671458292753,
+            "output": "URPC2017 and URPC2018 are most often used for research.",
+            "ground_truth": "URPC2017, URPC2018, URPC2019, URPC2020_ZJ and URPC2020_DL."
+        },
+        {
+            "index": 149,
+            "input_length": 8511,
+            "score": 0.7428571428571429,
+            "metric": "F1",
+            "peak_memory_mb": 17686.97998046875,
+            "latency_ms": 2704.5643320307136,
+            "output": "The research opportunity is a study on the effects of Brazilian Jiu Jitsu and psychotherapy on helping people with autism develop subjective awareness of others.",
+            "ground_truth": "A study on the effects of Brazilian Jiu Jitsu and psychotherapy on people with autism."
+        }
+    ]
+}
