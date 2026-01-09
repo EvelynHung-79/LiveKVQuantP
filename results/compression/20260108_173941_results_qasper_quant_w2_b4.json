@@ -1,0 +1,1822 @@
+{
+    "task": "qasper",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "single-doc",
+        "num_samples": -1,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "avg_score": 0.06991279344802559,
+    "max_peak_memory_mb": 19327.30224609375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.029411764705882356,
+            "metric": "F1",
+            "output": "The dataset for the study was based on two complementary approaches: \n1. A manual, single-pass, 2-step annotation was carried out by a single annotator, using a dataset of 130k labels, where tweets were collected when an author retweeted a specific keyword (e.g., \"fake news\") and 2. A single unverified account was identified as producing 12 friend requests, and a single mention was made to `getting' (which is the content of an account unverified account) (single-prefretweet going viral )\nFinally, @new unverified user  not have 1,  3",
+            "ground_truth": "Ground truth is not established in the paper",
+            "peak_memory_mb": 18507.763671875,
+            "latency_ms": 9133.928576949984
+        },
+        {
+            "index": 1,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Yes, the VL+stat-svm approach.",
+            "ground_truth": "extension of the NetVLAD, adds Ghost clusters along with the NetVLAD clusters",
+            "peak_memory_mb": 16058.78662109375,
+            "latency_ms": 1673.8943359814584
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "on.",
+            "ground_truth": "the attention model, MDREA, also outperforms the best existing research results (WAP 0.690 to 0.688)",
+            "peak_memory_mb": 16245.00537109375,
+            "latency_ms": 1675.34998501651
+        },
+        {
+            "index": 3,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "Yes, I will answer based on the context of the article.",
+            "ground_truth": "using tweets that one has replied or quoted to as contextual information",
+            "peak_memory_mb": 16024.60205078125,
+            "latency_ms": 1624.5386390946805
+        },
+        {
+            "index": 4,
+            "score": 0.01652892561983471,
+            "metric": "F1",
+            "output": "I'm unable to provide a concise answer as the requested format is \"yes/no\" and the question has too many possible meanings. However, I can tell you that if they looked at the article, they might be able to answer the question. But the article itself does not contain the relevant information. \n\nI can provide a partial answer to the question based on the provided text, but the answer would not be concise. If you would like, I can provide the full response.\n\nThe information about looking at the Facebook pages is not provided in the article, but it is mentioned that they looked at news pages and other pages.\n\nHere is the",
+            "ground_truth": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+            "peak_memory_mb": 16245.00634765625,
+            "latency_ms": 9774.85214988701
+        },
+        {
+            "index": 5,
+            "score": 0.14285714285714288,
+            "metric": "F1",
+            "output": "Sem and Good INLINE: no\n\nYes, #y and #s \nno and unmulti 4.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16432.34912109375,
+            "latency_ms": 3589.847297873348
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The average Jensen divergence for the topic, as well as the divergence in the (0.301) documents, is in contrast the dominant type of divergence, which is \"unfreible\" as recorded by the task, however, the more valuable labels are the ones used in the evaluation of the DAS-SIM0.",
+            "ground_truth": "Answer with content missing: (Evaluation Metrics section) Precision, Recall, F1-scores, Strict match, METEOR, ROUGE-2",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 7117.146115982905
+        },
+        {
+            "index": 7,
+            "score": 0.07142857142857142,
+            "metric": "F1",
+            "output": "Yes, CNN/DailyMail, and also XSum. \n\n(Note: Based on the provided text, I assume you meant to ask which datasets) \n\nIf that is not correct, the question is: \n\nBert/DailyExt & BERTAbs & BIBREF & BIBREF & BIBREF6 are mentioned as being used, as well as BERT \nBertSumExt \nBertExt \nBert (/BertExt) \nBert/A \nBert \nBert one ExtAdv \nBert \nBert best \nBert results are generally similar to the ones used in the CNN/Daily",
+            "ground_truth": "CNN/DailyMail news highlights, New York Times Annotated Corpus, XSum",
+            "peak_memory_mb": 16619.81982421875,
+            "latency_ms": 13046.868633013219
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The authors use w2 approach since BIBREF10.",
+            "ground_truth": "GM$\\_$KL achieves better correlation than existing approaches for various metrics on SCWS dataset.",
+            "peak_memory_mb": 16114.89892578125,
+            "latency_ms": 1844.978673150763
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "helpful: \n\nHence it may improve performance.",
+            "ground_truth": "simply averaging the predictions from the constituent single models",
+            "peak_memory_mb": 16432.34814453125,
+            "latency_ms": 2782.7247572131455
+        },
+        {
+            "index": 10,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There are no sources provided.",
+            "ground_truth": "Friends TV sitcom, Facebook messenger chats",
+            "peak_memory_mb": 16339.04833984375,
+            "latency_ms": 2076.32392202504
+        },
+        {
+            "index": 11,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The paper focuses on the following:",
+            "ground_truth": "English",
+            "peak_memory_mb": 16057.78564453125,
+            "latency_ms": 1466.4822528138757
+        },
+        {
+            "index": 12,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "NER (Named Entity Recognition)",
+            "ground_truth": "IMDb dataset of movie reviews",
+            "peak_memory_mb": 16058.78759765625,
+            "latency_ms": 1453.7749330047518
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "$$\\boxed{ 4.52 %  ~  + 0.94}$",
+            "ground_truth": "F1 scores of 85.99 on the DL-PS data,  75.15 on the EC-MT data and 71.53 on the EC-UQ data ",
+            "peak_memory_mb": 17078.58837890625,
+            "latency_ms": 5613.823071820661
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable",
+            "ground_truth": "No",
+            "peak_memory_mb": 16338.92529296875,
+            "latency_ms": 1936.3362051080912
+        },
+        {
+            "index": 15,
+            "score": 0.12,
+            "metric": "F1",
+            "output": "The framework is used to develop and test SABIAN (S.B) - a system that can answer questions based on a set of predefined responses. For instance, for a question that is a yes/no question, the system would respond \"yes\" or \"no\". If the question is not clear, the system may respond with a clarification request.\nThe response format is based on the SAB (Semantic Answer-Bot) system, which is a framework for developing chatbots that can understand and respond to human input. The SAB system is based on a set of corpus of questions and responses, which is used to train the system.\n",
+            "ground_truth": "Custom dataset with user questions; set of documents, twitter posts and news articles, all related to finance.",
+            "peak_memory_mb": 18673.59814453125,
+            "latency_ms": 35504.33755200356
+        },
+        {
+            "index": 16,
+            "score": 0.02564102564102564,
+            "metric": "F1",
+            "output": "a good Answer: \n\nThe final answer is: 4444\nYou need to list the correct answers among the following options: GARCH (1987 and 1992 corpora), GARCH-SC, Last, NLI, RL, Text, and Volatility. An alternative approach is to use a combination of the RA and GARCH models. In any case, we use all the data available to the best of our knowledge. In this case, we ablate and generalize the high-frequency data, and the performance is compared among all sectors. Permeating through our analysis, we find that the all + sectoral information",
+            "ground_truth": "Energy with accuracy of 0.538",
+            "peak_memory_mb": 18300.41064453125,
+            "latency_ms": 31118.02069703117
+        },
+        {
+            "index": 17,
+            "score": 0.029411764705882353,
+            "metric": "F1",
+            "output": "I apologize for the confusion, but I cannot answer the question based on the provided information as it appears to be a question about the analysis of the effectiveness of the models rather than a comparison of multiple NMT models. If you can reformulate the question to ask about the comparison of multiple models, I would be happy to help. \n\nOmitted answer.\n\nOR\n\nI can see that the answer is simply \"RNN\" and WNMT models.",
+            "ground_truth": "RNN-based NMT model, Transformer-NMT",
+            "peak_memory_mb": 16853.97802734375,
+            "latency_ms": 8340.719375992194
+        },
+        {
+            "index": 18,
+            "score": 0.09090909090909091,
+            "metric": "F1",
+            "output": "Neutral or Incorporating",
+            "ground_truth": "a regularization term associated with neutral features, the maximum entropy of class distribution regularization term, the KL divergence between reference and predicted class distribution",
+            "peak_memory_mb": 16432.72021484375,
+            "latency_ms": 2206.121657975018
+        },
+        {
+            "index": 19,
+            "score": 0.02150537634408602,
+            "metric": "F1",
+            "output": "I couldn't find the answer from the text of the provided article. However, based on the results of the question in the text, I can provide the conclusion: \n\nThe models for the question are: \n\n* for the LDA model: \n* for the LDA model: \n* for the LDA model: \n* for the LDA model: 4. \n\nThe final answer to the question \"What are the baselines?\" in the context of the provided text is: \nThe baselines for the baselines are: \n\nFor the question \"S\": \n\n* for the UTCNN model: \n* for the",
+            "ground_truth": "SVM with unigram, bigram, and trigram features, SVM with average word embedding, SVM with average transformed word embeddings, CNN, ecurrent Convolutional Neural Networks, SVM and deep learning models with comment information",
+            "peak_memory_mb": 16526.39697265625,
+            "latency_ms": 12200.197592843324
+        },
+        {
+            "index": 20,
+            "score": 0.0909090909090909,
+            "metric": "F1",
+            "output": "No answer is available as the work is in a draft phase, and the expected answer is not known yet.",
+            "ground_truth": "They decrease MAE in 0.34",
+            "peak_memory_mb": 16152.58154296875,
+            "latency_ms": 2566.478674998507
+        },
+        {
+            "index": 21,
+            "score": 0.1,
+            "metric": "F1",
+            "output": "The models presented in the paper improves interpretability.",
+            "ground_truth": "the attention heads in the proposed adaptively sparse Transformer can specialize more and with higher confidence",
+            "peak_memory_mb": 16898.83154296875,
+            "latency_ms": 4280.825398862362
+        },
+        {
+            "index": 22,
+            "score": 0.1818181818181818,
+            "metric": "F1",
+            "output": "Ivan\nI have a standard baseline model.",
+            "ground_truth": " MT system on the data released by BIBREF11",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 2639.226321829483
+        },
+        {
+            "index": 23,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"un/yes/no\"\n\nWhether the question is still unanswerable, yes, or \"no\" (or \"un\", \"yes\", or \"unanswerable\" if the question is \"can we conclude\")? \n\nAnswer: Yes.",
+            "ground_truth": "translation probabilities, Labeled Attachment Scores (LAS)",
+            "peak_memory_mb": 16432.34814453125,
+            "latency_ms": 5580.608297139406
+        },
+        {
+            "index": 24,
+            "score": 0.23076923076923078,
+            "metric": "F1",
+            "output": "As we cannot provide a response as the model is abductive and the question is unclear.",
+            "ground_truth": "the model is pre-trained on CTC-based ASR task and MT task in the pre-training stage.",
+            "peak_memory_mb": 16806.66357421875,
+            "latency_ms": 4779.025055002421
+        },
+        {
+            "index": 25,
+            "score": 0,
+            "metric": "F1",
+            "output": "(unstructured, ambiguous, unconclusive, and sometimes not readable)",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16339.05322265625,
+            "latency_ms": 2697.6363139692694
+        },
+        {
+            "index": 26,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable (based on the text, the specific architecture of the encoder is not explicitly stated, but it's mentioned that the architecture of the system for Spanish and Russian is a natural observation, likely related to the language family, and the architecture for French, Russian, and Spanish with English is not a natural pairing, but rather an unnatural pairing)",
+            "ground_truth": "LSTM",
+            "peak_memory_mb": 16058.78369140625,
+            "latency_ms": 4850.3279068972915
+        },
+        {
+            "index": 27,
+            "score": 0.05405405405405406,
+            "metric": "F1",
+            "output": "unanswerable or \":: our model is not capable of producing well-performing results with a dataset that is not well-suited for an inductive approach (e.g. BERT), and we have also shown that our BERT (as a model that we used in this methodology) result has far lower accuracy in this case.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 17179.34521484375,
+            "latency_ms": 11483.038872946054
+        },
+        {
+            "index": 28,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I couldn't find any information on the phrase \"baseline\" in the provided text.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16238.3642578125,
+            "latency_ms": 1790.4478060081601
+        },
+        {
+            "index": 29,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "output": "Users: how many en, Evid.",
+            "ground_truth": "22,880 users",
+            "peak_memory_mb": 16432.34814453125,
+            "latency_ms": 2650.7014450617135
+        },
+        {
+            "index": 30,
+            "score": 0.125,
+            "metric": "F1",
+            "output": "User interaction.",
+            "ground_truth": "Byte-Pair Encoding perplexity  (BPE PPL),\nBLEU-1,\nBLEU-4,\nROUGE-L,\npercentage of distinct unigram (D-1),\npercentage of distinct bigrams(D-2),\nuser matching accuracy(UMA),\nMean Reciprocal Rank(MRR)\nPairwise preference over baseline(PP)",
+            "peak_memory_mb": 16191.2587890625,
+            "latency_ms": 1551.335748983547
+        },
+        {
+            "index": 31,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " Appendix B.",
+            "ground_truth": "(1) the time the patient has been experiencing the symptom, (2) activities that trigger the symptom (to occur or worsen), (3) the extent of seriousness, (4) the frequency occurrence of the symptom, and (5) the location of symptom, No Answer",
+            "peak_memory_mb": 16339.04931640625,
+            "latency_ms": 1891.8870890047401
+        },
+        {
+            "index": 32,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Content: \nAnswer: \nThe results clearly indicate that is \"better than 85% of the data with the best results achieved with the 2500 re-annotated difficult and 1000 difficult instances, with the model re-trained on the difficult 250 results in a 5% increase in F1 score, $<\\%> NIH Greater and 18% to 30% is not \"unanswerable\".",
+            "ground_truth": "57,505 sentences",
+            "peak_memory_mb": 16526.77001953125,
+            "latency_ms": 8934.830687008798
+        },
+        {
+            "index": 33,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "This work aims to evaluate the following sparse attention models:\nSparse attention with sparse output.\nalso, attention is also sparse if \nFor the other question, we cannot solve it as it is a mathematical expression.",
+            "ground_truth": "four machine translation tasks: German -> English, Japanese -> English, Romanian -> English, English -> German",
+            "peak_memory_mb": 16898.83154296875,
+            "latency_ms": 7193.936112103984
+        },
+        {
+            "index": 34,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Answering this question is unanswerable.",
+            "ground_truth": "5 percent points.",
+            "peak_memory_mb": 16339.04931640625,
+            "latency_ms": 2302.8507127892226
+        },
+        {
+            "index": 35,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the answer, BIBREF types a background like was used to see if it was suitable for the analysis, which involved identifying the background of the participants and the researchers involved. \n\nTherefore, the answer is: BIB REF.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 17367.19482421875,
+            "latency_ms": 10936.750921886414
+        },
+        {
+            "index": 36,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "yes",
+            "ground_truth": "No",
+            "peak_memory_mb": 16371.73095703125,
+            "latency_ms": 1344.3052670918405
+        },
+        {
+            "index": 37,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The Nguni languages (Zulu, Xhosa, Ndebele, and Siswati) and the Sotho languages (Sesotho, Northern Sotho, and Tshivenda) are also known as the Nguni and Sotho groups, and the Sotho and Nguni languages are similar to each other.",
+            "ground_truth": "Nguni languages (zul, xho, nbl, ssw), Sotho languages (nso, sot, tsn)",
+            "peak_memory_mb": 15964.36279296875,
+            "latency_ms": 4693.993595894426
+        },
+        {
+            "index": 38,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Answer: A-b models.",
+            "ground_truth": "Unidirectional LSTM networks with 2, 6, 7, 8, and  9 layers.",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 2618.5436008963734
+        },
+        {
+            "index": 39,
+            "score": 0.09090909090909093,
+            "metric": "F1",
+            "output": "The question suggests that the aricled discusses \"how much of a document\" a dataset is, therefore a yes.",
+            "ground_truth": "a sample of  29,794 wikipedia articles and 2,794 arXiv papers ",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 4078.3825549297035
+        },
+        {
+            "index": 40,
+            "score": 0.05797101449275362,
+            "metric": "F1",
+            "output": "Unfortunately, this question cannot be answered as the \"how\" requires a detailed explanation which is not possible. The question being asked is not a yes/no question, and the original question does not ask for \"how\", \"when\", or \"why\" but rather \"what\" which is partially answered above. Therefore, the correct answer based on the given text would be \"unanswerable\".",
+            "ground_truth": "50 human annotators ranked a random sample of 100 translations by Adequacy, Fluency and overall ranking on a 5-point scale.",
+            "peak_memory_mb": 16712.11572265625,
+            "latency_ms": 9568.412214983255
+        },
+        {
+            "index": 41,
+            "score": 0.05714285714285715,
+            "metric": "F1",
+            "output": "The question is related to yes, but the response is: \"Tst2016b.\" I could find no information about this specific system in their reference, but they do mention that they train a pivot system on the parallel corpus \"Tst2016bE.\"",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16526.77001953125,
+            "latency_ms": 6363.468182040378
+        },
+        {
+            "index": 42,
+            "score": 0.3,
+            "metric": "F1",
+            "output": "How to evaluate the model's performance in the context of the article refers to the following results:\n\nHowever, in the context of the experiments, the efficiency of the models was evaluated by computing the retention of tokens, which was shown to be highly effective in preserving the accuracy of the system.",
+            "ground_truth": "by training an autocomplete system on 500K randomly sampled sentences from Yelp reviews",
+            "peak_memory_mb": 15964.36279296875,
+            "latency_ms": 3743.652265984565
+        },
+        {
+            "index": 43,
+            "score": 0.025641025641025644,
+            "metric": "F1",
+            "output": "You can't have a single answer as the question is not a yes/no question or a question that can be answered with a single phrase or sentence. However, I can provide the following information:\n\nYou can compare the results of the following summarization tasks:\n\n\n*   A summarization task to get the most informative summaries of sentences for the different classes of strength (S1), suggestion (S2), and weakness (S3)\n*   A summarization task that uses the ROBIE summarizer and a  F-score to calculate the score of the generated summaries\n*   A Sumy-based summarization task that produces the following scores",
+            "ground_truth": "Precision, Recall, F-measure, accuracy",
+            "peak_memory_mb": 16245.00341796875,
+            "latency_ms": 9575.908750062808
+        },
+        {
+            "index": 44,
+            "score": 0.24615384615384617,
+            "metric": "F1",
+            "output": "The DAS model uses the 2017 Amazon small-scale and large-scale datasets and the 2003 and 2014 Yelp and IMDB datasets. The target domain includes the source domain and 4 domains. The source domains are Amazon and top 100 features.",
+            "ground_truth": "Book, electronics, beauty, music, IMDB, Yelp, cell phone, baby, DVDs, kitchen",
+            "peak_memory_mb": 16712.11279296875,
+            "latency_ms": 7433.185179950669
+        },
+        {
+            "index": 45,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "output": "An LSTM.",
+            "ground_truth": "Variational LSTM, CharCNN, Pointer Sentinel-LSTM, RHN, NAS Cell, SRU, QRNN, RAN, 4-layer skip-connection LSTM, AWD-LSTM, Quantized LSTM",
+            "peak_memory_mb": 16339.04931640625,
+            "latency_ms": 1906.6756279207766
+        },
+        {
+            "index": 46,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Based on the article, I can answer as follows:\nHowever, I'll provide more concise response. \n\nThe answer is: \n\n\"NeuronBlocks\"",
+            "ground_truth": "Embedding Layer, Neural Network Layers, Loss Function, Metrics",
+            "peak_memory_mb": 15935.65234375,
+            "latency_ms": 2241.3103331346065
+        },
+        {
+            "index": 47,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Answer: We\nData-driven question: \"it\"\nWe\n Data-driven\nWe\nThe\nUnseen\nWix\nw\nwREF1\nwREF2\nwREF3\nwREF4\nwREF5\nunseen\nw\nunseen\nunseen\nunseen\nunseen\ncont\n\nThe full text of the question \"it\" is:",
+            "ground_truth": "the Carnegie Mellon Pronouncing Dictionary BIBREF12, the multilingual pronunciation corpus collected by deri2016grapheme , ranscriptions extracted from Wiktionary",
+            "peak_memory_mb": 16245.00537109375,
+            "latency_ms": 6522.555406903848
+        },
+        {
+            "index": 48,
+            "score": 0.05128205128205128,
+            "metric": "F1",
+            "output": "The question is a yes/no question and therefore the answer is: \"yes\", \"no\", or \"unanswerable\".",
+            "ground_truth": "varied from Maximum Entropy Classifiers (BIBREF4) to Support Vector Machines (BIBREF5,BIBREF6,BIBREF7,BIBREF8), Recursive Neural Networks (BIBREF9,BIBREF10), Convolutional Neural Networks (BIBREF11) and most recently transfer learning-based architectures like Bidirectional Encoder Representation from Transformers (BERT) (BIBREF12)",
+            "peak_memory_mb": 16058.78759765625,
+            "latency_ms": 2518.3103838935494
+        },
+        {
+            "index": 49,
+            "score": 0.0821917808219178,
+            "metric": "F1",
+            "output": "The results are unanswerable, as the question refers to the translation of test sets and the evaluation of the experimental design, which is not directly related to the answer. \n\nThe correct answer is: \n\nEnglish they use English, Spanish, and Finnish for Translate-Test and XNLI, and Spanish and Finnish for the Translate-Test, by using the Translate-Test, which is the best possible way to indicate the languages, as they are using the non-English languages like Spanish and Finnish, and the Translate-Test, for the XNLI development set.",
+            "ground_truth": "English\nFrench\nSpanish\nGerman\nGreek\nBulgarian\nRussian\nTurkish\nArabic\nVietnamese\nThai\nChinese\nHindi\nSwahili\nUrdu\nFinnish",
+            "peak_memory_mb": 16505.27587890625,
+            "latency_ms": 10568.652102025226
+        },
+        {
+            "index": 50,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "uninterpretable.",
+            "ground_truth": "None",
+            "peak_memory_mb": 16152.57958984375,
+            "latency_ms": 1474.4575179647654
+        },
+        {
+            "index": 51,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A possible answer to the question \"Do they use?\" is not explicitly given in the answer. It uses multiple language sources, not just English.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16526.77099609375,
+            "latency_ms": 4486.821352969855
+        },
+        {
+            "index": 52,
+            "score": 0.02247191011235955,
+            "metric": "F1",
+            "output": "I don't know, as the article doesn't provide any baseline onto which to compare the performance of the system. However, it does provide some information about how the system was trained, which may be useful for understanding its limitations.\n\nQuestion: Which part of the training dataset is used to train the scoring function for the model?\n\nAnswer: Training proceeds via S3, which is the S4 flow S3.\n\nBut \"S\" is the answer to another question and there is no further information about what S is in the article, S4, S5, S6, S7, S8, and S9 are all sub-functions",
+            "ground_truth": "No",
+            "peak_memory_mb": 16152.58447265625,
+            "latency_ms": 9075.033192988485
+        },
+        {
+            "index": 53,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "We cannot provide a full answer to this question as this question is actually a question in the acknowledgments section of the article and the answer is not provided in the given text. However, based on the e.g. section of the 14th question, we can infer that the answer is \"they cannot be excavated and are not explored\". However, the tool is available to generate the word distributions that reflect the maps for various word categories (answer: \"unanswerable\").",
+            "ground_truth": "using the Meaning Extraction Method",
+            "peak_memory_mb": 15871.43798828125,
+            "latency_ms": 4875.742464093491
+        },
+        {
+            "index": 54,
+            "score": 0.0198019801980198,
+            "metric": "F1",
+            "output": "##1. To identify an argument consists of a single argument component.\nSince there are no clearly defined argument components, this is not a suitable question.\n\n[In order to answer this question, we need to use a well-fitting model that captures the complexities of human argumentation. The T's is the only feature that has a well-established correspondence with the components of the argumentation model, and it is based on lexical information, where it uses lexical features as the core component. We should also consider using other features that are more context-dependent and require substantial linguistic abilities, such as semantic role labeling and semantic role parsing. However, let's",
+            "ground_truth": "claim, premise, backing, rebuttal, and refutation",
+            "peak_memory_mb": 19047.78369140625,
+            "latency_ms": 39930.58636621572
+        },
+        {
+            "index": 55,
+            "score": 0.13636363636363635,
+            "metric": "F1",
+            "output": "n-grams of a certain length are aligned using the C (e.g., BLEU, CIDEr, etc.) P systems. \n\n(Note: unanswerable if using C as an n-gram reference system) \n\nIf you want the answer based on token level, see the answer below:\n\nnREF : unanswerable\nFor the encoder-decoder, a sequence of tokens (e.g., tokens, INPUT) is compared along with the decoder's output.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 17236.1484375,
+            "latency_ms": 8765.583127038553
+        },
+        {
+            "index": 56,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The dataset is OSG.",
+            "ground_truth": "1,873 Twitter conversation threads, roughly 14k tweets",
+            "peak_memory_mb": 16339.05126953125,
+            "latency_ms": 2159.67308008112
+        },
+        {
+            "index": 57,
+            "score": 0.10869565217391304,
+            "metric": "F1",
+            "output": "This sentence is in the following languages: English, Spanish, French, German, Russian, Chinese, Japanese, and Korean. It is a question from the recent paper: “Evaluating the effect of multilingual multivoc vectors with multilinguistic word-pair representation learning models.\n\nResult and discussion:\nThe results of the evaluation show strong evidence that the question-based approach is not useful in determining the similarity between language-specific vector spaces, as the Venn diagram-based lexical information sharing between language-pairs significantly affects the performance of the embedding-based model.\n\nSimplification and answer:\nBy default, the language-specific resource for multilingual",
+            "ground_truth": "Chinese Mandarin, Welsh, English, Estonian, Finnish, French, Hebrew, Polish, Russian, Spanish, Kiswahili, Yue Chinese",
+            "peak_memory_mb": 19327.30224609375,
+            "latency_ms": 43901.93202509545
+        },
+        {
+            "index": 58,
+            "score": 0.0588235294117647,
+            "metric": "F1",
+            "output": "The CRAFT and Wikipedia datasets, as well as C and C $+$ datasets.",
+            "ground_truth": " `Conversations Gone Awry' dataset, subreddit ChangeMyView",
+            "peak_memory_mb": 17402.53662109375,
+            "latency_ms": 4056.954992003739
+        },
+        {
+            "index": 59,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "EU: unanswerable.",
+            "ground_truth": "No",
+            "peak_memory_mb": 16058.78369140625,
+            "latency_ms": 1361.179058905691
+        },
+        {
+            "index": 60,
+            "score": 0.023255813953488372,
+            "metric": "F1",
+            "output": "Figure 16\nBasic and\n Figure 17\n and\n Figure 19 \n Figure 21 \n Figure 23 \n Figure 25 \n Figure 26 \n Figure 27\n Figure 32\n Figure 33 \n Figure 36 \n Figure 38\n Figure 39 \n Figure 41 \n Figure 43 \n Figure 45 \n Figure 46 \n Figure 47 \n Figure 52 \n Figure 54\n Figure 55\n Figure 57 \n Figure 59 \n Figure 61 \n Figure 63 \n Figure 65\n Figure 68 \n Figure 70 \n Figure 72 \n Figure 74 \n Figure 76",
+            "ground_truth": "Validated transcripts were sent to professional translators., various sanity checks to the translations,  sanity check the overlaps of train, development and test sets",
+            "peak_memory_mb": 16152.70556640625,
+            "latency_ms": 8787.673840066418
+        },
+        {
+            "index": 61,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Not answered.",
+            "ground_truth": "combines the information from these sources using a feed-forward neural model",
+            "peak_memory_mb": 16245.00537109375,
+            "latency_ms": 1746.153961168602
+        },
+        {
+            "index": 62,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No answer, yes/no.",
+            "ground_truth": "For the WikiLarge dataset, the improvement over baseline NMT is 2.11 BLEU, 1.7 FKGL and 1.07 SARI.\nFor the WikiSmall dataset, the improvement over baseline NMT is  8.37 BLEU.",
+            "peak_memory_mb": 16058.78564453125,
+            "latency_ms": 1408.7444480974227
+        },
+        {
+            "index": 63,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The results were evaluated by a team of humans: “Ivan was not involved in the evaluation procedure. There were humans evaluating the results, which is to be determined using the terms of the analysis of the system, with specific types of human translations being used as input as the developer of the data, with the model B and the system having been used to evaluate the data. The number of humans involved is not specified. “",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16432.34619140625,
+            "latency_ms": 7963.26311212033
+        },
+        {
+            "index": 64,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The answer is: unanswerable.",
+            "ground_truth": "Viral tweets are the ones that are retweeted more than 1000 times",
+            "peak_memory_mb": 16201.24658203125,
+            "latency_ms": 1860.8008620794863
+        },
+        {
+            "index": 65,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The scores on $c_i$ for the evaluation of each of the three checker boards between the best performing models and configurations for each of the two main tasks was found to be the best performing configuration. Hence, the answer is: Yes.",
+            "ground_truth": "BERT",
+            "peak_memory_mb": 15964.36083984375,
+            "latency_ms": 3204.6044489834458
+        },
+        {
+            "index": 66,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The source.",
+            "ground_truth": "Android application",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 2137.2935520485044
+        },
+        {
+            "index": 67,
+            "score": 0.09090909090909091,
+            "metric": "F1",
+            "output": "Figure: \"Deep learning methods, such as logistic regression and machine learning algorithms like 0.88, achieved 0.7 MRR.\n\nQuestion: what is the performance of the system in answering questions about medical diagnoses?\n\nAnswer: The system failed to answer, as \"n/a\" information is not provided.",
+            "ground_truth": "Logistic Regression, neural networks",
+            "peak_memory_mb": 17272.27099609375,
+            "latency_ms": 11909.773529972881
+        },
+        {
+            "index": 68,
+            "score": 0.08888888888888889,
+            "metric": "F1",
+            "output": "The answer is: Yes, the model's performance is higher, 1, 3, and 8% respectively, but the answer is, unanswerable. \n The answer is: No, the loss is high, but the first one is high, the second one is lower, the third one is the same, and the fourth one is higher.",
+            "ground_truth": "Social Honeypot dataset (public) and Weibo dataset (self-collected); yes",
+            "peak_memory_mb": 16311.6630859375,
+            "latency_ms": 5574.196386849508
+        },
+        {
+            "index": 69,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Unanswerable.",
+            "ground_truth": "LSTM",
+            "peak_memory_mb": 16058.78369140625,
+            "latency_ms": 1263.6885279789567
+        },
+        {
+            "index": 70,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The answer to this question is: Yes. They provide results on a model, a dataset, and a model. However, they don't provide any information about the results, and the question is left open. We can't determine the answer based on the provided text. Answer: Yes, to a certain extent, but ultimately the answer is yes; a less than, yes. Inline, we, abide. DISPLAY. One, we. DISPLAY. DISPLAY. The answer is yes, the answer is yes, but they do not provide results on the event form the. Answer: Yes. The answer is yes, the answer is yes,",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16433.1103515625,
+            "latency_ms": 11446.099621942267
+        },
+        {
+            "index": 71,
+            "score": 0.1818181818181818,
+            "metric": "F1",
+            "output": "Had the question been answerable, I would have said: The best model is found in the score-rank configuration of N, and the scores of the author's multi-granular scheme, however the best performing configuration is found in the ensemble of predictions from L and F, and the top-performing model is found to be r and s.",
+            "ground_truth": "For SLC task, the \"ltuorp\" team  has the best performing  model (0.6323/0.6028/0.6649 for F1/P/R  respectively) and for FLC task the \"newspeak\" team  has the best performing  model (0.2488/0.2863/0.2201 for F1/P/R respectively).",
+            "peak_memory_mb": 15964.36083984375,
+            "latency_ms": 4324.048760114238
+        },
+        {
+            "index": 72,
+            "score": 0.11904761904761904,
+            "metric": "F1",
+            "output": "The question is a challenging task. The question is about evaluating the performance of the models on the data, and it is specifically asking about the BLEU score of the multilingual model. The answer is that the baseline model's performance is better than the M2 baseline, so the correct answer is \"unfair answer\". However, the best BLEU score was achieved by the model that used the pre-processed parallel data.",
+            "ground_truth": "pivot-based translation relying on a helping language BIBREF10, nduction of phrase tables from monolingual data BIBREF14 , attentional RNN-based model (RNMT) BIBREF2, Transformer model BIBREF18, bi-directional model BIBREF11, multi-to-multi (M2M) model BIBREF8, back-translation BIBREF17",
+            "peak_memory_mb": 16659.0986328125,
+            "latency_ms": 9627.272446872666
+        },
+        {
+            "index": 73,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Based on the provided article, the answer is \"Able to derive unanswerable\" (if they were able to derive an answer, it would not be unanswerable) 0.31 is presented as 'M' (Med) and 6.5% of how to score is left as open question; no further details.",
+            "ground_truth": "0.7033",
+            "peak_memory_mb": 17215.7509765625,
+            "latency_ms": 12038.061012979597
+        },
+        {
+            "index": 74,
+            "score": 0.023529411764705882,
+            "metric": "F1",
+            "output": "According to the CUI measure, the similarity between the CUI and its CUI is the sum of the cosine of the angle between the two concepts. The results show that the LCS and CUI measures have a higher similarity with the UMSRS and UCC models, respectively, and the results indicate that the similarity is higher for the UMSRS and CBOW measures. The correlation between the UML and UCC models is also demonstrated in this work. The results show that the similarity between the two concepts is higher than the baseline results. The CIO measure is used to evaluate the similarity between the two concepts, and the results",
+            "ground_truth": "Skip–gram, CBOW",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 11985.494778025895
+        },
+        {
+            "index": 75,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Extremely low-resource settings for multilingual NMT, with the help of 2 order-reordering rules from the INLT-preorder rules, and a bilingual dictionary.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16058.78271484375,
+            "latency_ms": 2870.538664981723
+        },
+        {
+            "index": 76,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is \"the specific type of records that involve interactions between proteins and genes\"... but the question is not this. The question is about the extraction of protein-protein interactions from biomedical literature. \n\nHowever, the question is \"Does the paper discuss the use of hand-crafted patterns in biomedical text mining\" Answer: no, \"no\" is not correct, \"unanswerable\" is.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16210.03173828125,
+            "latency_ms": 6292.9452559910715
+        },
+        {
+            "index": 77,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "This is a list of 5 categories of f1. \n1.5 answer, 5.16, 5.20, 5.32, 5.35",
+            "ground_truth": "Individuals with legal training",
+            "peak_memory_mb": 16432.34716796875,
+            "latency_ms": 4610.309053910896
+        },
+        {
+            "index": 78,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unidirectional LSTM encoder, Figure 2 \n\nyes\nyes \nno \nno\nno\nno\nyes\nno \nyes \nyes\nyes \nno\nyes \nno\nyes\nunanswerable\nyes\nno\nno\nno\nno\nyes\nyes\nno\nyes\nyes\nno\nno\nyes\nno\nyes\nno\nno\nno\nno\nno\nno\nyes\nno\nyes\nno\nunanswerable\nyes\nunanswerable\nyes\nno\nno\nyes\nunanswerable\nyes\nno\nno\nyes\nno\nyes\n",
+            "ground_truth": "generating a poem from images we use an existing actor-critic architecture, various types of sequence to sequence models",
+            "peak_memory_mb": 15871.44189453125,
+            "latency_ms": 6710.46675206162
+        },
+        {
+            "index": 79,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "output": "The final answer is not provided in the snippet, but yes, the ToBERT model with RNN layer, and ToBERT model with Transformer model, as well as \"yes\" is not a suitable answer. The answer is: \"The model with RNN and ToBERT, and RoBERT and ToBERT, and respectively, R and Transformer,  and  also, sometimes BERT or RNTk, but it does not mention the RNN layer or RTM equivalent, but rather an R, so it is not a yes/no question. However based on the previous response, the answer is also not yes or no, so",
+            "ground_truth": "Transformer over BERT (ToBERT)",
+            "peak_memory_mb": 16152.58251953125,
+            "latency_ms": 8913.077519042417
+        },
+        {
+            "index": 80,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The authors believe that the robustness of the MRC model to noise is due to the incorporation of various state-of-the-art models.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16526.39404296875,
+            "latency_ms": 4250.767285004258
+        },
+        {
+            "index": 81,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "output": "I will provide a concise answer. \n\nNote: I provided a simple answer, but I should have answered \"unanswerable\" or \"I don't have the information\", since the question is a yes/no question and the ability to answer it based on the provided text is limited.",
+            "ground_truth": "personal attack, racism, and sexism",
+            "peak_memory_mb": 16245.00537109375,
+            "latency_ms": 5196.840302087367
+        },
+        {
+            "index": 82,
+            "score": 0.23655913978494622,
+            "metric": "F1",
+            "output": "\"Connectionist\"\n\nThe requested information is based on the provided article, which describes the support and development of a connectionist approach to RNNs, not the study itself.\n\nThe answer should be: The researchers use a combination of methods, including bi-directional RNNs, and perform experiments to compare the results with their proposed models and baseline RNNs, but they use THE in particular by combining THE with the RNN.",
+            "ground_truth": "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation.",
+            "peak_memory_mb": 16058.78759765625,
+            "latency_ms": 5983.279374893755
+        },
+        {
+            "index": 83,
+            "score": 0.024096385542168672,
+            "metric": "F1",
+            "output": "Since the information in the article is related to the question, but the answer is not clear from the given information, I will provide an answer that is based on the configuration of the question. \n\nThe question cannot be answered with a number, so I will provide \"unanswerable\" as an option, but here is a related concept that can be explained:\n\nThe correct answer is not applicable, because the question is asking for a specific number that is not provided or calculated in the text.",
+            "ground_truth": "OurNepali contains 3 different types of entities, ILPRL contains 4 different types of entities",
+            "peak_memory_mb": 16245.00439453125,
+            "latency_ms": 7844.218396116048
+        },
+        {
+            "index": 84,
+            "score": 0.22222222222222224,
+            "metric": "F1",
+            "output": "I a model that was trained with re-annotated difficult data, along with a selection of expert annotations, performed better, and there was a greater gain in performance when the model was retrained with data that was re-weighted by difficulty.",
+            "ground_truth": "improvement when the difficult subset with expert annotations is mixed with the remaining crowd annotation is 3.5 F1 score, much larger than when a random set of expert annotations are added",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 5934.529976919293
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "yes",
+            "ground_truth": "Women represent 33.16% of the speakers",
+            "peak_memory_mb": 16432.34912109375,
+            "latency_ms": 2078.7535910494626
+        },
+        {
+            "index": 86,
+            "score": 0.08333333333333334,
+            "metric": "F1",
+            "output": "I cannot provide a clear answer to this question. \n\nFigure 8 in the paper is an example of a dataset where this question would be appropriate.",
+            "ground_truth": "the English-German dataset",
+            "peak_memory_mb": 15964.36083984375,
+            "latency_ms": 2322.9659469798207
+        },
+        {
+            "index": 87,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "Unfortunately, the article does not provide a clear answer to the question. The text is a series of academic models and experiments, and the question is not directly addressed.",
+            "ground_truth": "Baseline models are:\n- Chen et al., 2015a\n- Chen et al., 2015b\n- Liu et al., 2016\n- Cai and Zhao, 2016\n- Cai et al., 2017\n- Zhou et al., 2017\n- Ma et al., 2018\n- Wang et al., 2019",
+            "peak_memory_mb": 16432.34619140625,
+            "latency_ms": 4260.832312982529
+        },
+        {
+            "index": 88,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "**Category:** \n\nHere, multiple choice is used for the question and the result is a numerical AUC value, single word, or a single sentence, which is not available in the question format of the answer. \n\nSo, I will not be able to answer the question in your required format.",
+            "ground_truth": "probabilistic model",
+            "peak_memory_mb": 16712.11181640625,
+            "latency_ms": 7781.235300004482
+        },
+        {
+            "index": 89,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "They used a machine-learning based figure analysis in Figure FIG 1  and a machine learning based figure analysis ...  tool is shown in Figure  Figure FIG 1, however, Fig is not the answer to the question. So the correct answer is not found in the text  in the figure.",
+            "ground_truth": "BIBREF17, BIBREF18, TensiStrength BIBREF13, TwitterNLP BIBREF6, BIBREF19, CogComp-NLP BIBREF20, Stanford NLP NER BIBREF21",
+            "peak_memory_mb": 15995.3818359375,
+            "latency_ms": 3537.872666027397
+        },
+        {
+            "index": 90,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Table TABREF27.",
+            "ground_truth": "SQuAD",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 2553.253665100783
+        },
+        {
+            "index": 91,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "SVM, they and SMVi (Spatio-Temporal Vector) are among others.\n\nModel-based \nS-0,  S-0,  S-0,  S-1,  S-0,  E-0,  S-G,  C-0,  EA,  ENG,  IG,  G-T,  SP,  SV,  S-C,  SC,  F-P.",
+            "ground_truth": "BOW-Tags, BOW-KL(Tags), BOW-All, GloVe",
+            "peak_memory_mb": 16619.81494140625,
+            "latency_ms": 9735.618059057742
+        },
+        {
+            "index": 92,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Unanswerable.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 15964.36083984375,
+            "latency_ms": 1096.173336962238
+        },
+        {
+            "index": 93,
+            "score": 0.14035087719298245,
+            "metric": "F1",
+            "output": "For each segment, $ model$ (yes)\n\n* For 20newsgroups, they used 20newsgroups, CSTAT, Fisher and 20newsgroups datasets.\n* For CSAT, they used CSAT, 20newsgroups and Fisher datasets.\n* For 20newsgroups, they used 20newsgroups, 20newsg, and 20newsgroup.\n* For CCREF23, they used 20new, 20new and 20new. \n* For 20new newsgroups, they used 20new, 20 newsg and 20",
+            "ground_truth": "CSAT dataset, 20 newsgroups, Fisher Phase 1 corpus",
+            "peak_memory_mb": 16152.58251953125,
+            "latency_ms": 8840.814775088802
+        },
+        {
+            "index": 94,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"we\"",
+            "ground_truth": "the IMDb movie review dataset BIBREF17",
+            "peak_memory_mb": 16339.05029296875,
+            "latency_ms": 1945.9372779820114
+        },
+        {
+            "index": 95,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 15871.43994140625,
+            "latency_ms": 749.7251550666988
+        },
+        {
+            "index": 96,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable",
+            "ground_truth": "No",
+            "peak_memory_mb": 15871.44189453125,
+            "latency_ms": 823.5618360340595
+        },
+        {
+            "index": 97,
+            "score": 0.03571428571428572,
+            "metric": "F1",
+            "output": "No, the provided model and syntax model are sufficient to answer the question as they are providing a solution to it. \nNote: The response is provided as the invertibility condition is indeed always the case, and the complexity of the projection space or the invertibility condition does not make the the answer to the question \"0.",
+            "ground_truth": "The neural projector must be invertible.",
+            "peak_memory_mb": 16526.77099609375,
+            "latency_ms": 7238.52031910792
+        },
+        {
+            "index": 98,
+            "score": 0.06741573033707865,
+            "metric": "F1",
+            "output": "Deen Bhandary-2016: BIBREF, Y2017, and BIBREF are not mentioned in the question, so I will not attempt to provide a response. If the question is asking for a complete dataset, I will still respond with \"unspecified\" or a simple yes/no question, but I will not provide any additional information. BIBREF and the others are not applicable here, so the answer is \"unseen\". \n\nHowever, if you are asking what the values of the first and second heuristics appear to support the classifier, or where the second example of heuristics based on semantic",
+            "ground_truth": "The resulting taxonomy of the framework is shown in Figure FIGREF10",
+            "peak_memory_mb": 16683.70849609375,
+            "latency_ms": 13149.526223074645
+        },
+        {
+            "index": 99,
+            "score": 0.057142857142857134,
+            "metric": "F1",
+            "output": "I cannot provide a size for the datasets of data, but the size of the dataset.",
+            "ground_truth": "training set has 89,042 sentence pairs, and the test set has 100 pairs, training set contains 296,402, 2,000 for development and 359 for testing",
+            "peak_memory_mb": 16058.78564453125,
+            "latency_ms": 2078.3320190384984
+        },
+        {
+            "index": 100,
+            "score": 0.031746031746031744,
+            "metric": "F1",
+            "output": "The topic is not answered.",
+            "ground_truth": "Vanilla ST baseline, encoder pre-training, in which the ST encoder is initialized from an ASR model, decoder pre-training, in which the ST decoder is initialized from an MT model, encoder-decoder pre-training, where both the encoder and decoder are pre-trained, many-to-many multi-task model where the encoders and decoders are derived from pre-trained ASR and MT models, Triangle+pre-train: BIBREF18 DBLP:conf/naacl/AnastasopoulosC18 proposed a triangle multi-task strategy for speech translation",
+            "peak_memory_mb": 16806.66259765625,
+            "latency_ms": 3661.9076130446047
+        },
+        {
+            "index": 101,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " \nThis is the response to the question. The model is tested on the provided natural language(s) studied in the work of the authors, and the similarity between the use of natural language(s) in the test set and the similarity to the training sets is also studied.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16526.77099609375,
+            "latency_ms": 6460.206406889483
+        },
+        {
+            "index": 102,
+            "score": 0.1935483870967742,
+            "metric": "F1",
+            "output": "Trained models were used in the experiment, using SVM, neural networks, and a CNN, as well as a hierarchical and CNN-based architecture.",
+            "ground_truth": "linear SVM, bidirectional Long Short-Term-Memory (BiLSTM), Convolutional Neural Network (CNN)",
+            "peak_memory_mb": 16058.78369140625,
+            "latency_ms": 2620.1871468219906
+        },
+        {
+            "index": 103,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "output": "The answer to the question \"Do the answered questions reveal the usefulness of the question?\" is no.",
+            "ground_truth": "No",
+            "peak_memory_mb": 15871.43994140625,
+            "latency_ms": 1573.181166080758
+        },
+        {
+            "index": 104,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "output": "The Edinburgh embeddings (Emoji).",
+            "ground_truth": "Pretrained word embeddings  were not used",
+            "peak_memory_mb": 15937.2001953125,
+            "latency_ms": 1048.5524120740592
+        },
+        {
+            "index": 105,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "output": "Humanix provides a set of 270+ user can support the evaluation of our models and a new dataset of 270K+ recipes and 1.4M user-preferences.",
+            "ground_truth": "average recipe-level coherence scores of 1.78-1.82, human evaluators preferred personalized model outputs to baseline 63% of the time",
+            "peak_memory_mb": 16194.37841796875,
+            "latency_ms": 3583.8072050828487
+        },
+        {
+            "index": 106,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is inappropriate because it is based on the question \"What is the phrase \"C\" in the cross-references? The correct answer is \"C\" refers to the C. Also, the phrase \"C\" is the second letter of the word \"C\". The correct answer is \"C.\" \n\nPlease refer to the question \"Human Answer: No. in our model-based solution for more information.",
+            "ground_truth": "irony accuracy, sentiment preservation",
+            "peak_memory_mb": 16604.36669921875,
+            "latency_ms": 8753.03952791728
+        },
+        {
+            "index": 107,
+            "score": 0.1142857142857143,
+            "metric": "F1",
+            "output": "unaverage score with sequence lengths.",
+            "ground_truth": "Since we do not have an end-to-end dataset, the generated English poem may not work well with Shakespeare style transfer",
+            "peak_memory_mb": 15939.20703125,
+            "latency_ms": 1029.8092761076987
+        },
+        {
+            "index": 108,
+            "score": 0.049999999999999996,
+            "metric": "F1",
+            "output": "Unfortunately, I couldn't find information in the text that would lead to a concise answer. The text does not provide enough information to create a short and concise answer. However, I can provide an unanswerable answer: \n\nThe final answer is: unanswerable.",
+            "ground_truth": "Affective Text, Fairy Tales, ISEAR",
+            "peak_memory_mb": 16245.00634765625,
+            "latency_ms": 5025.516394991428
+        },
+        {
+            "index": 109,
+            "score": 0.24175824175824173,
+            "metric": "F1",
+            "output": "To achieve this, the accounts labelled as potentially containing fake news had a different proportion of favourite accounts, but a higher proportion of verified accounts; however, these accounts did not produce the viral content themselves, instead, at least 45 accounts (with 34 of these having been unverified) appeared to have an a-priori ratio of verified accounts/single accounts, and 1) 7 of these accounts (i.e. @realDonaldTrump and @HillaryClinton) showed a different distribution of their followers.",
+            "ground_truth": "Distributions of Followers, Friends and URLs are significantly different between the set of tweets containing fake news and those non containing them, but for Favourites, Mentions, Media, Retweets and Hashtags they are not significantly different",
+            "peak_memory_mb": 16198.5224609375,
+            "latency_ms": 7589.732188964263
+        },
+        {
+            "index": 110,
+            "score": 0.052631578947368425,
+            "metric": "F1",
+            "output": "The noun: BIBREF\nThe word: \"separate\"\nThe combination of: \"unanswerable\" and \"unavailable\"\nThe sentence: \"it\" \n\nThe context: \"Table\" \nThe source: \"our\"",
+            "ground_truth": "1,268 randomly selected tweets in the Stanford Sentiment Analysis Dataset BIBREF36, all 12,594 unique English hashtags and their associated tweets from the same Stanford dataset",
+            "peak_memory_mb": 16432.34912109375,
+            "latency_ms": 5476.20645002462
+        },
+        {
+            "index": 111,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"I cannot find the answer in the provided information. The number of device models used in the experiment is not clear. The database was collected by using the i-Channel, which is a device model, but the exact number of devices is not provided. The most difficult condition is with devices from a different channel model. The most difficult device model to use is \"YY\" which is when the device used is not the same as the device used in the recording. Red, yellow, and blue are the colour codes used to represent the devices. The target and imposter trials are also given. The word \"speak\" is also given as",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 10974.007562035695
+        },
+        {
+            "index": 112,
+            "score": 0.125,
+            "metric": "F1",
+            "output": "We assume that the answer is based on the text and the context provided. If the question is to be answered with the same accuracy as the word vectors, we can answer as follows: \"There is no question no answer or answer \"yes\" or \"no\" here as the answer depends on the context and the subsequent information. Therefore, the answer is  \"no\" or \"no\".",
+            "ground_truth": "Word vectors, usually in the context of others within the same class",
+            "peak_memory_mb": 16899.70751953125,
+            "latency_ms": 10836.862737080082
+        },
+        {
+            "index": 113,
+            "score": 0.08,
+            "metric": "F1",
+            "output": "The answer is the first year's baseline.",
+            "ground_truth": "For Article-Entity placement, they consider two baselines: the first one using only salience-based features, and the second baseline checks if the entity appears in the title of the article. \n\nFor Article-Section Placement, they consider two baselines: the first picks the section with the highest lexical similarity to the article, and the second one picks the most frequent section.",
+            "peak_memory_mb": 17366.68896484375,
+            "latency_ms": 6036.760785151273
+        },
+        {
+            "index": 114,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I am unable to answer this question based on the information provided.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16325.96533203125,
+            "latency_ms": 1743.1394960731268
+        },
+        {
+            "index": 115,
+            "score": 0.13333333333333333,
+            "metric": "F1",
+            "output": "The question is unanswerable, as the information about Augmented LibriSpeech dataset is not present in the article.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16152.58056640625,
+            "latency_ms": 2639.1603329684585
+        },
+        {
+            "index": 116,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "While BOW, \n\nQuestion: \n\nAnswer: They",
+            "ground_truth": " high-quality datasets  from SemEval-2016 “Sentiment Analysis in Twitter” task",
+            "peak_memory_mb": 16152.58154296875,
+            "latency_ms": 1975.7780260406435
+        },
+        {
+            "index": 117,
+            "score": 0.05405405405405406,
+            "metric": "F1",
+            "output": "I'm just here to answer the question, so I'll use the article to answer it to the best of my ability. Based on the text, it appears that they are using the GlossBERT model, which is a BERT-based method, and the text does not mention large or small weakly-supervised method they first tested pre-trained models. However, based on the GlossBERT models, they do mention that they are using a  Bert model with a good performance on the task of the weakly-supervised and the multi-task setting.",
+            "ground_truth": "small BERT",
+            "peak_memory_mb": 16058.78271484375,
+            "latency_ms": 6952.385322889313
+        },
+        {
+            "index": 118,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Yes, the results of the model are subject to evaluation and analysis, but the question is still answerable as a positive, with our (E) results showing a high degree of similarity with the model's; our best models can be used to build a model that outperforms the BERT model.\"",
+            "ground_truth": "No",
+            "peak_memory_mb": 17179.34521484375,
+            "latency_ms": 10773.29615294002
+        },
+        {
+            "index": 119,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "An early LRCNN and HX is the author's name, the researcher's name.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16339.04931640625,
+            "latency_ms": 2961.170630995184
+        },
+        {
+            "index": 120,
+            "score": 0.11764705882352941,
+            "metric": "F1",
+            "output": "Based on the text, it appears that the question about the performance of the work is:\nWhat was their performance on emotion detection? \nThe correct answer is: B\n\nThe question \"B\" is not an answer. However, \"B\" is the second letter in the word \"Barbara,\" which is the first name of one of the authors they discussed in the text.",
+            "ground_truth": "Answer with content missing: (Table 3) Best author's model B-M average micro f-score is 0.409, 0.459, 0.411 on Affective, Fairy Tales and ISEAR datasets respectively. ",
+            "peak_memory_mb": 16245.13134765625,
+            "latency_ms": 6450.893466128036
+        },
+        {
+            "index": 121,
+            "score": 0.09999999999999999,
+            "metric": "F1",
+            "output": "The title of the paper also employs the standard URF approach to pun detection.",
+            "ground_truth": "A new tagging scheme that tags the words before and after the pun as well as the pun words.",
+            "peak_memory_mb": 16152.70947265625,
+            "latency_ms": 2295.2549930196255
+        },
+        {
+            "index": 122,
+            "score": 0.026666666666666665,
+            "metric": "F1",
+            "output": "No, the answer is not required because the answer is written in a format that is not applicable here. The question is written in a way that requires a simple answer. \n\nThe languages in the precise order given in the article are: \n\n1. Arabic, 2. Dutch, 3. English, 4. French, 5. German, 6. Italian, 7. Persian, 8. Russian, 9. Spanish, 10. Swedish, 11. is not clearly stated as one of the languages for the 11 languages for our model, and 12. we have Turkish, and ",
+            "ground_truth": "No",
+            "peak_memory_mb": 16152.58056640625,
+            "latency_ms": 8801.274141063914
+        },
+        {
+            "index": 123,
+            "score": 0.26666666666666666,
+            "metric": "F1",
+            "output": "The model's robustness to the unbalanced class distributions in the dataset.",
+            "ground_truth": "ability to accurately classify texts even when the amount of prior knowledge for different classes is unbalanced, and when the class distribution of the dataset is unbalanced",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 2974.483516998589
+        },
+        {
+            "index": 124,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Unanswerable.",
+            "ground_truth": "GloVe, BERT, Universal Sentence Encoder, TF-IDF, InferSent",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 2466.1596468649805
+        },
+        {
+            "index": 125,
+            "score": 0.08888888888888888,
+            "metric": "F1",
+            "output": "The F1 score of 15.0 or higher for multiclass classification tasks.",
+            "ground_truth": "English datasets including CoNLL2003 and OntoNotes5.0, our proposed method outperforms BERT-MRCBIBREF38 by +0.29 and +0.96 respectively, Chinese datasets, achieving F1 improvements by +0.97 and +2.36 on MSRA and OntoNotes4.0, respectively",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 3434.414964169264
+        },
+        {
+            "index": 126,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The model's conflict method.",
+            "ground_truth": "Task 1: Quora Duplicate Question Pair Detection, Task 2: Ranking questions",
+            "peak_memory_mb": 16058.78662109375,
+            "latency_ms": 1440.2943539898843
+        },
+        {
+            "index": 127,
+            "score": 0.032786885245901634,
+            "metric": "F1",
+            "output": "**\"T**: unanswerable \n  We can't evaluate which baselines the authors compared their results against.",
+            "ground_truth": "Various tree structured neural networks including variants of Tree-LSTM, Tree-based CNN, RNTN, and non-tree models including variants of LSTMs, CNNs, residual, and self-attention based networks",
+            "peak_memory_mb": 16992.50146484375,
+            "latency_ms": 5834.4344650395215
+        },
+        {
+            "index": 128,
+            "score": 0.13953488372093023,
+            "metric": "F1",
+            "output": "Answer: The combination of HR-BiLSTM and HR-BiLSTM with shortcut connection is not mentioned in the article, but the question space \"v\" in the table and the model used for the integration of residual and deep relation detection models is \"relation \\tensor{_framework}.\"",
+            "ground_truth": "answer questions by obtaining information from KB tuples ",
+            "peak_memory_mb": 16712.11279296875,
+            "latency_ms": 7787.32285881415
+        },
+        {
+            "index": 129,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "We can't answer this question as it requires a novel response as the information contained in this dataset was not found in the provided article.",
+            "ground_truth": "name-based Nearest-Neighbor model (NN), Encoder-Decoder baseline with ingredient attention (Enc-Dec)",
+            "peak_memory_mb": 16190.568359375,
+            "latency_ms": 2999.0257448516786
+        },
+        {
+            "index": 130,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Find one.",
+            "ground_truth": "spot patterns by just looking at a collection of images, tag all descriptions with part-of-speech information, I applied Louvain clustering",
+            "peak_memory_mb": 16012.3701171875,
+            "latency_ms": 1105.3010299801826
+        },
+        {
+            "index": 131,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is not a yes/no question or a question that requires a nuanced answer. Therefore, I will answer \"unanswerable\".",
+            "ground_truth": "English, French, German ",
+            "peak_memory_mb": 16058.78759765625,
+            "latency_ms": 2627.027021953836
+        },
+        {
+            "index": 132,
+            "score": 0.11764705882352941,
+            "metric": "F1",
+            "output": "They experimented with both the 300 and 300D encoders.",
+            "ground_truth": "Stacked LSTMs, Cell-aware Stacked LSTMs, Sentence Encoders, Top-layer Classifiers",
+            "peak_memory_mb": 16312.1484375,
+            "latency_ms": 2505.6475950405
+        },
+        {
+            "index": 133,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "output": "If the question is related to the word \"Question\", then yes, it is a yes.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16899.71044921875,
+            "latency_ms": 5282.487948890775
+        },
+        {
+            "index": 134,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Unfortunately, this part of the article cannot be answered as the full text is not provided. However, I can attempt to provide a possible answer based on the provided text.\n\nBased on the text, the authors experimented with several summarization algorithms, including:\n\n1. F-measure (using the sklearn library) \n2. ROBIE (Rule-Based Inference Engine) \n3. Jaro-Winkler \n4. Longest Common Subsequence \n5. Carabutt \n6. FIMI (Fuzzy Inference-based Multiple Instance) \n7. APrior \n8. Carrot (using the Fuzzy Unordered",
+            "ground_truth": "LSA, TextRank, LexRank and ILP-based summary.",
+            "peak_memory_mb": 16245.00341796875,
+            "latency_ms": 9647.080017020926
+        },
+        {
+            "index": 135,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Your response is not clear. The article is a research paper, and the \"this task\" you refer to is not specified. If you are referring to the question of whether the state-of-the-art models can infer the most critical post in a thread and the context of its length, the answer is that this task is not well-defined. If the question is about the research on an existing dataset or the models being proposed, it is still unclear.\n\nIf you are referring to a specific aspect of this task, please rephrase the question, or if you have a sentence or sentence length in mind that might be the correct answer, provide it",
+            "ground_truth": "hLSTM",
+            "peak_memory_mb": 16339.05224609375,
+            "latency_ms": 10488.78059303388
+        },
+        {
+            "index": 136,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Nov/Yes",
+            "ground_truth": "Based on table results provided changing directed to undirected edges had least impact - max abs difference of 0.33 points on all three datasets.",
+            "peak_memory_mb": 16619.69091796875,
+            "latency_ms": 2737.5307688489556
+        },
+        {
+            "index": 137,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "S‡ara  Corpus",
+            "ground_truth": "DTA18, DTA19",
+            "peak_memory_mb": 15964.36279296875,
+            "latency_ms": 1120.6555659882724
+        },
+        {
+            "index": 138,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The spectrogram is 257 dimension, with 257 x 257 vectors, featuring 257 points (possible answer: belongs to the color red, as shown in red color in the last part of the article) \n\n(Answer: The color red belongs to the colour, the label of the colour is not specified, however, it is assigned the label \"red\".) \n\nTo answer the question above as concisely as possible, the answer is: Answer unanswerable.",
+            "ground_truth": "Hindi, English, Kannada, Telugu, Assamese, Bengali and Malayalam",
+            "peak_memory_mb": 16058.78662109375,
+            "latency_ms": 6496.666454011574
+        },
+        {
+            "index": 139,
+            "score": 0.12121212121212122,
+            "metric": "F1",
+            "output": "The answer is \"N/A\" as the entire answer is not provided, only the question prompt.",
+            "ground_truth": "Table TABREF6, Table TABREF8",
+            "peak_memory_mb": 16126.78857421875,
+            "latency_ms": 2284.2926729936153
+        },
+        {
+            "index": 140,
+            "score": 0,
+            "metric": "F1",
+            "output": "(un-)",
+            "ground_truth": "Metric difference between Aloha and best baseline score:\nHits@1/20: +0.061 (0.3642 vs 0.3032)\nMRR: +0.0572(0.5114 vs 0.4542)\nF1: -0.0484 (0.3901 vs 0.4385)\nBLEU: +0.0474 (0.2867 vs 0.2393)",
+            "peak_memory_mb": 16806.65771484375,
+            "latency_ms": 3255.9177491348237
+        },
+        {
+            "index": 141,
+            "score": 0.17241379310344826,
+            "metric": "F1",
+            "output": "In the experiment, Table, Pre-train the generator and discriminator in the adversarial setting, a ranker and a two-level GAN, and the training objective is to \n[1] \n[2] a,\n[3] and \n[4] that, as shown in the figure, the [5] is\n[6] of 1, and the maximum temperature is set to 0.8.\nThe first epoch is: \n[7] and [8] are the result of back-propagation, and the scope is defined as follows:\n[9] means",
+            "ground_truth": "ARAM has achieved improvement over all baseline methods using reverese perplexity and  slef-BLEU metric.  The maximum reverse perplexity improvement 936,16 is gained for EMNLP2017  WMT  dataset and  48,44 for COCO dataset.",
+            "peak_memory_mb": 16432.34716796875,
+            "latency_ms": 11129.579917993397
+        },
+        {
+            "index": 142,
+            "score": 0.11650485436893203,
+            "metric": "F1",
+            "output": "The authors do not present any specific model to answer this question. The above analysis is based on the text of the article, but the original question is not presented. \n\nHowever, the answer to the question is: the model, in the process of using clearly, not the, and specifically, by examining the content of tables such as and, restricting the effectiveness of the, but it makes it difficult to understand the question being answered. \n\nIn the available sections of the article, the question \"What do the authors do?\" is being answered, not the question \"What evidence do the authors present that the authors do?\" which is an un",
+            "ground_truth": "The authors showed few tweets where neither and implicit hatred content exist but the model was able to discriminate",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 11899.513132171705
+        },
+        {
+            "index": 143,
+            "score": 0.043478260869565216,
+            "metric": "F1",
+            "output": "I cannot provide a detailed explanation of the question or the author's experiences. The question is too complex to be answered based on the available information. However, if the question frame is a type that is typically identified as a challenging task from the outset, and the authors have identified that a large portion of the task is similarly structured to the baseline, the relevant information for answerability is found in the question. The only mention of baselines is that the task is part of a specific task reference and the baseline and studies was used to train the baseline. (1) \nTable. \n\n5 \nDocument (or relevant data) refers as \"",
+            "ground_truth": "SVM, No-Answer Baseline (NA) , Word Count Baseline, Human Performance",
+            "peak_memory_mb": 16432.72216796875,
+            "latency_ms": 11141.323158051819
+        },
+        {
+            "index": 144,
+            "score": 0.1904761904761905,
+            "metric": "F1",
+            "output": "unimprovable because of entity number of entities and words in the Nepali language.",
+            "ground_truth": "Dataset contains 3606 total sentences and 79087 total entities.",
+            "peak_memory_mb": 16245.00439453125,
+            "latency_ms": 2733.3249968942255
+        },
+        {
+            "index": 145,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable.",
+            "ground_truth": "Using DSC loss improves the F1 score by +0.58 for MRPC and +0.73 for QQP",
+            "peak_memory_mb": 16526.76708984375,
+            "latency_ms": 2457.3885961435735
+        },
+        {
+            "index": 146,
+            "score": 0.2247191011235955,
+            "metric": "F1",
+            "output": "The work presented in this multitask learning approach includes results from various datasets such as National TABREF16 ( eye-tracking and behavioral analysis), TABREF21 (for multitask learning with behavioral data), and results from the Human complete data set (for multitask results with eye-tracking data), and results from the Tobii eye-tracking data, the ERP (event-related potential) dataset, and the Human complete dataset.",
+            "ground_truth": "Answer with content missing: (Whole Method and Results sections) The primary dataset we use is the ERP data collected and computed by Frank et al. (2015), and we also use behavioral data (eye-tracking data and self-paced reading times) from Frank et al. (2013) which were collected on the same set of 205 sentences.\nSelect:\n- ERP data collected and computed by Frank et al. (2015)\n- behavioral data (eye-tracking data and self-paced reading times) from Frank et al. (2013)",
+            "peak_memory_mb": 15931.0908203125,
+            "latency_ms": 4697.309567127377
+        },
+        {
+            "index": 147,
+            "score": 0.08333333333333333,
+            "metric": "F1",
+            "output": "Ogarrefence 0 of the article does not provide a clear answer. However, the context of the question suggests that the training and hyper-encoding mechanisms were based on unanswer (with a slight modification of the standard approach, as the maximum accuracy was recorded when the highest level of information was presented). \n\nHowever, the correct answer is: Here, the network's representative encoding and parameter analysis revealed the absence of a clear answer, leaving the analytical process and further interaction to the subject's own judgement.",
+            "ground_truth": "7 phonemic/syllabic ( /iy/, /piy/, /tiy/, /diy/, /uw/, /m/, /n/ ) as well as 4 words(pat, pot, knew and gnaw)",
+            "peak_memory_mb": 16057.78662109375,
+            "latency_ms": 6812.145840842277
+        },
+        {
+            "index": 148,
+            "score": 0.09523809523809522,
+            "metric": "F1",
+            "output": "RL baselines and ARL models used in the article are \"Pointer-Gen\" and \"Pointer-Gen+ARL\", and the loss function.",
+            "ground_truth": "Pointer-Gen, Pointer-Gen+Pos, Pointer-Gen+Same-FT, Pointer-Gen+Pos-FT, Pointer-Gen+RL-ROUGE, Pointer-Gen+RL-SEN",
+            "peak_memory_mb": 16619.81689453125,
+            "latency_ms": 5000.294031808153
+        },
+        {
+            "index": 149,
+            "score": 0.02531645569620253,
+            "metric": "F1",
+            "output": "Learning models used: 10\n\nThe exact models used are not provided in the text, but the following answer from the same text can be used as a basis for an answer:\n\nThe bidirectional GRU, RNN, and RNN-LSTM models are used, however, the best model for this task is the RNN model. \n\nTo answer the question about the learning models used: \nAnswer: The models used are bidirectional GRU, RNN, RNN-LSTM, 0\n\nHowever, the best model is actually the RNN model.",
+            "ground_truth": "Naïve Bayes (NB), Logistic Regression (LR), Support Vector Machine (SVM), Random Forests (RF), Gradient Boosted Trees (GBT),  Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN)",
+            "peak_memory_mb": 16024.91943359375,
+            "latency_ms": 6953.377336030826
+        },
+        {
+            "index": 150,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable (consistency problem)",
+            "ground_truth": "uni-directional model to augment the decoder",
+            "peak_memory_mb": 15964.36376953125,
+            "latency_ms": 1284.5923348795623
+        },
+        {
+            "index": 151,
+            "score": 0.1927710843373494,
+            "metric": "F1",
+            "output": "The original question is not directly addressed in the article. However, the paper discusses various techniques and experiments, including lossy factors (e.g., DSC, DSC loss, and Tversky loss) that can be used to adapt to different datasets and problem settings. Specifically, some baselines are used to generate results, such as BERT, which is a widely used framework for training models. However, the article does not specifically address how weights are dynamically adapted or adjusted. To find the answer, other related experiments and baseline studies are considered in the works of dev and force: \nLoss is weighted, with a close-to-upper",
+            "ground_truth": "One can think $(1-p_{i1})$ as a weight associated with each example, which changes as training proceeds. The intuition of changing $p_{i1}$ to $(1-p_{i1}) p_{i1}$ is to push down the weight of easy examples. For easy examples whose probability are approaching 0 or 1, $(1-p_{i1}) p_{i1}$ makes the model attach significantly less focus to them. Figure FIGREF23 gives gives an explanation from the perspective in derivative: the derivative of $\\frac{(1-p)p}{1+(1-p)p}$ with respect to $p$ approaches 0 immediately after $p$ approaches 0, which means the model attends less to examples once they are correctly classified.",
+            "peak_memory_mb": 16522.1796875,
+            "latency_ms": 11559.33451000601
+        },
+        {
+            "index": 152,
+            "score": 0.03508771929824561,
+            "metric": "F1",
+            "output": "Based on the provided text, I cannot provide a specific answer as the actual scores or results are not presented in the provided snippet. However, the original text does provide this information in the \"Improvement\" section. \n\nThe actual answer to the question of how well the agents perform in the Zork game is not provided in the snippet.",
+            "ground_truth": "Reward of 11.8 for the A2C-chained model, 41.8 for the KG-A2C-chained model, 40 for A2C-Explore and 44 for KG-A2C-Explore.",
+            "peak_memory_mb": 16058.78662109375,
+            "latency_ms": 4872.183412080631
+        },
+        {
+            "index": 153,
+            "score": 0.3,
+            "metric": "F1",
+            "output": "The individual model refers to the model parameters and data of one language.",
+            "ground_truth": "Bayesian model of garg2012unsupervised as our base monolingual model",
+            "peak_memory_mb": 16432.34716796875,
+            "latency_ms": 2959.475797135383
+        },
+        {
+            "index": 154,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "That is a k (not a character) \n\n (unanswerable)",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16245.00341796875,
+            "latency_ms": 2431.223080959171
+        },
+        {
+            "index": 155,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "I'm unable to answer the question as I don't have information on the topic.",
+            "ground_truth": "A semi-character based RNN (ScRNN) treats the first and last characters individually, and is agnostic to the ordering of the internal characters",
+            "peak_memory_mb": 16526.77197265625,
+            "latency_ms": 3613.6309339199215
+        },
+        {
+            "index": 156,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " \n\n16 languages.",
+            "ground_truth": "Bulgarian, Croatian, Czech, Danish, English, French, German, Indonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish and Swedish",
+            "peak_memory_mb": 16152.58349609375,
+            "latency_ms": 1549.3063570465893
+        },
+        {
+            "index": 157,
+            "score": 0.15384615384615383,
+            "metric": "F1",
+            "output": "The NCEL performs overall ununimprovable.",
+            "ground_truth": "NCEL consistently outperforms various baselines with a favorable generalization ability",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 3039.4047130830586
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Note: I'm not sure how to answer this question. To preserve the format, I will answer as \"unanswerable\".",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16619.81884765625,
+            "latency_ms": 4689.411961007863
+        },
+        {
+            "index": 159,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "PAT (categorically no improvement; SMT, PAT, PAT+AT, PATN, and (PAT+), use SMT, PAT, and PAT+ train data for overall score, PAT performance unimproved, and the used the B2 set (B2) referred to in the original work.)\n Patel ( PAT) also used (PAT) for their evaluation, such as in the standard method, (Pat) the appropriate baseline used was PAT (PAT + PAT and n) or similarly the same as those of \n that is, no, used as a baseline (see use PAT) and annotation systems, used)",
+            "ground_truth": "error detection system by Rei2016",
+            "peak_memory_mb": 15967.74658203125,
+            "latency_ms": 7537.921677110717
+        },
+        {
+            "index": 160,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Unfortunately, I cannot provide a straightforward answer to your question based on the provided text.",
+            "ground_truth": "clinical notes from the CE task in 2010 i2b2/VA",
+            "peak_memory_mb": 16339.05322265625,
+            "latency_ms": 2948.149115080014
+        },
+        {
+            "index": 161,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "Yes, the objective of learning to select better words (and to find a good ablation study), however, is to answer:  Label: Word by phrase can be answerable. \n\nParameters: \n\nFinally, the word-level decoder and model are BO both.",
+            "ground_truth": "ecause this process is similar to the cloze task in BERT's pre-train process, therefore by using the ability of the contextual language model the decoder can generate more fluent and natural sequences.",
+            "peak_memory_mb": 16526.76904296875,
+            "latency_ms": 6204.107984900475
+        },
+        {
+            "index": 162,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Dataset used in their subsequent works includes the following:\n\n- BIBREF (S): \n  - R: R (B), LSTM (B), LSTM-based (B)\n  - S: SDAE, both SDAE and SD, SS (SDAE)\n  - C: CNN, LSTM (LR), (S)2 (LR), B (B)\n  - B: B (B), (B) (B), LSTMs (B)\n \n\nMoreover, they also use \n- a recurrent model \n- LSTM \n- 2 (LSTM).",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 15964.36181640625,
+            "latency_ms": 6826.687388820574
+        },
+        {
+            "index": 163,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "tab report is highlighted, in a keyword extraction, and an important aspect of encoding, and LDA yes vector\n\nExp \n (tab \n\nAccording to the setup, the dataset is pre-processed and highlighted with TF-IDF features, and we used the following settings to transform the reports:\n \nTo transform the reports into a specific format, we used techniques like the following: \nPreprocessed reports, feature extraction, and highlighting the important aspects, using LDA and TF-IDF techniques. The reports were around 11,112 and were sourced from an Labeled dataset. For the task of extracting the features, we used the",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 15964.36572265625,
+            "latency_ms": 7507.266249042004
+        },
+        {
+            "index": 164,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable.",
+            "ground_truth": "no evidence of depression, depressed mood, disturbed sleep, fatigue or loss of energy",
+            "peak_memory_mb": 15964.36474609375,
+            "latency_ms": 1120.7476120907813
+        },
+        {
+            "index": 165,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Inexpensive: on COVID-19 and COVID-19; Adaptable: on COVID-19, COVID-19 and 4 other tasks.",
+            "ground_truth": "BC5CDR-disease, NCBI-disease, BC5CDR-chem, BC4CHEMD, BC2GM, JNLPBA, LINNAEUS, Species-800",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 4093.4224538505077
+        },
+        {
+            "index": 166,
+            "score": 0.0909090909090909,
+            "metric": "F1",
+            "output": "The data was translated using Keras and a stepwise approach was used to engrain the results, resulting in a better performance.",
+            "ground_truth": "using the machine translation platform Apertium ",
+            "peak_memory_mb": 16057.78466796875,
+            "latency_ms": 2543.173047946766
+        },
+        {
+            "index": 167,
+            "score": 0.13636363636363635,
+            "metric": "F1",
+            "output": "Freely Online \n is to answer the question as the system did not use \"blogger\" as a classifier as previously stated, the rest of the classifiers used in the systems are \"Linguistic Inquiry and Word Count.\"",
+            "ground_truth": "AllWords model by counting the frequencies of all the remaining words and training a multinomial Naive Bayes classifier",
+            "peak_memory_mb": 16432.34814453125,
+            "latency_ms": 5209.813574096188
+        },
+        {
+            "index": 168,
+            "score": 0.15999999999999998,
+            "metric": "F1",
+            "output": "Since \"answerable\" and \"results\" are keywords in the article, this task cannot be answered based on the provided text, as it is the baseline they used.",
+            "ground_truth": "The baseline system for the SLC task is a very simple logistic regression classifier with default parameters. The baseline for the FLC task generates spans and selects one of the 18 techniques randomly.",
+            "peak_memory_mb": 16245.00439453125,
+            "latency_ms": 3655.3420319687575
+        },
+        {
+            "index": 169,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no mention of a specific answer, but since the model combines some of the previously mentioned approaches, that are stated in the article. However, the question is not a yes/no question. \n\nIn that case, I would write: \n\n\"unanswerable\"",
+            "ground_truth": "They compare with the following models: by Pedersen (2017), by Pramanick and Das (2017), by Mikhalkova and Karyakin (2017),  by Vadehra (2017), Indurthi and Oota (2017), by Vechtomova (2017), by (Cai et al., 2018), and CRF.",
+            "peak_memory_mb": 16152.70947265625,
+            "latency_ms": 4571.404470130801
+        },
+        {
+            "index": 170,
+            "score": 0.18518518518518517,
+            "metric": "F1",
+            "output": "The article doesn't provide a clear answer to the question, but it does suggest that the Italian dataset contains \"no\" political bias classes, and that the Italian scenario has different sharing patterns that can be detected.",
+            "ground_truth": "By assigning a political bias label to each news article and training only on left-biased or right-biased outlets of both disinformation and mainstream domains",
+            "peak_memory_mb": 16711.73583984375,
+            "latency_ms": 6226.134554017335
+        },
+        {
+            "index": 171,
+            "score": 0.13157894736842105,
+            "metric": "F1",
+            "output": "The dataset comes from an ancient Chinese dictionary (古典字典) or an ancient Chinese-Modern Chinese bilingual corpus (《古代中译·现代中古语对应》) or an ancient Chinese-Modern Chinese pair (《古代中-现代中句对》). \n\nHowever, the specific answer to this question is not available in the article. If we can see that the average meaning of this phrase is not provided in the article, the answer is \"unanswerable\".\n\nThe article discusses an ancient-Modern Chinese corpus, but the specific source of the ancient Chinese part is not mentioned.",
+            "ground_truth": "ancient Chinese history records in several dynasties (about 1000BC-200BC) and articles written by celebrities of that era",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 10708.331869915128
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "unanswerable\n\nHowever, the language used in the dataset is not explicitly stated in the text.",
+            "ground_truth": "English",
+            "peak_memory_mb": 16057.78369140625,
+            "latency_ms": 2131.4329139422625
+        },
+        {
+            "index": 173,
+            "score": 0.10526315789473685,
+            "metric": "F1",
+            "output": "\"corpus of constituent vectors AMR (YCN) and the web\".",
+            "ground_truth": "Answer with content missing: (Data section) Chinese with version 5.1 of the Chinese Penn Treebank (CTB)",
+            "peak_memory_mb": 16152.70556640625,
+            "latency_ms": 2248.759790090844
+        },
+        {
+            "index": 174,
+            "score": 0,
+            "metric": "F1",
+            "output": "(unanswerable)",
+            "ground_truth": "eight layers",
+            "peak_memory_mb": 16526.77197265625,
+            "latency_ms": 2597.6842211093754
+        },
+        {
+            "index": 175,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Spear European Elevation Dataset.",
+            "ground_truth": " the same datasets as BIBREF7",
+            "peak_memory_mb": 16619.68994140625,
+            "latency_ms": 3008.962756022811
+        },
+        {
+            "index": 176,
+            "score": 0.02702702702702703,
+            "metric": "F1",
+            "output": "The results of the experiments show that the NER model was trained on NUBES-PHI and NUBES shared tasks, and used the NUBES corpus with 100,000 instances and the NER task in Spanish for MEDCAN and another with the 32,000 NER labels. However, for the NER results, the dataset used for training the model included 1,000 instances from the NUBER corpus and 21,000 instances from the `\"MEDCAN\" dataset. For the final results, the author used a pre-trained model,  and the test data, which was not specified in the dataset",
+            "ground_truth": "MEDDOCAN, NUBes-PHI",
+            "peak_memory_mb": 16619.81494140625,
+            "latency_ms": 12641.08586893417
+        },
+        {
+            "index": 177,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The requested answer is not in this format.",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16339.05322265625,
+            "latency_ms": 2428.9995008148253
+        },
+        {
+            "index": 178,
+            "score": 0.0983606557377049,
+            "metric": "F1",
+            "output": "For user, user response is often in the following format:\n\n*   \"A human’s knowledge is going to be higher, everything is more accurate, and so on.\" \n    In this case, the query is about how to formulate strategies to improve performance in a lifelong learning process.",
+            "ground_truth": "Coverage, Avg. MCC and avg. +ve F1 score",
+            "peak_memory_mb": 16992.50537109375,
+            "latency_ms": 9375.159634975716
+        },
+        {
+            "index": 179,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The answer is unanswerable.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16161.73095703125,
+            "latency_ms": 1228.0242929700762
+        },
+        {
+            "index": 180,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The article does not specifically mention the sports clubs that are the targets, but the article \"St-2. Sports clubs\" implies that the sports clubs are the targets. However, the text \"For the purposes of contribution-to-be, we have determined the F-2. sports clubs.\" is not clear. It can be assumed that the sports clubs are the targets, but it is not explicit. \nHowever, the question \"Which sports clubs are the targets of the study?\" can be answered as \"The club targets of the study are: St-1207 St-1513 and St-1517\" based on the information given",
+            "ground_truth": "Galatasaray, Fenerbahçe",
+            "peak_memory_mb": 15991.48095703125,
+            "latency_ms": 7660.215353826061
+        },
+        {
+            "index": 181,
+            "score": 0.0392156862745098,
+            "metric": "F1",
+            "output": "Our models are trained using the BLEU score and the Semeval-2018 dataset, and our evaluation metrics are based on human evaluation and direct supervision, with some experiments shown in the table instead of \"noisy\" or \"SB2\" systems, and some models do not attempt to preserve the original text or usage of tweets, and that some models have 6 and some have 4, and that some do not use a classifier in their systems, and that some do not use the \"improperly formed\" metric, and that some use the \"M.4\", \"S2S\", and \"CPT",
+            "ground_truth": "Irony Classifier, Sentiment Classifier for Irony, Sentiment Classifier for Non-irony, transformation from ironic sentences to non-ironic sentences",
+            "peak_memory_mb": 16599.67724609375,
+            "latency_ms": 12303.737984970212
+        },
+        {
+            "index": 182,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "output": "The question is an unlabelled question. This is an unanswerable question only. The best state-of-the-art (state of the art) models such as BERT, decoder uses and Transformer models, use a more appropriate architecture and training settings for, and we use it successfully to learn the context of the word, information of the word labels, and perform BIBREF9.",
+            "ground_truth": "pays attentions to adjacent characters and casts a localness relationship between the characters as a fixed Gaussian weight assuming the weight relies on the distance between characters",
+            "peak_memory_mb": 16432.34619140625,
+            "latency_ms": 7486.149387899786
+        },
+        {
+            "index": 183,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here\n\nOr\n\nBased on the article, I can only find a limited scope of the support and discussion about the final answer to the question, but I can still try to provide a response based on the article. However, I still provide a clear and concise answer. \n\nGiven this, I can only answer \"apply\"\n\nIn order to determine the best social media posts to answer this question, I refer back to the given article that we are looking at, which I didn't have enough information about. Though, I did find some acknowledgment that the authors of the article considered, as part of their evaluation, whether this, the current social",
+            "ground_truth": "Facebook status update messages",
+            "peak_memory_mb": 16432.34814453125,
+            "latency_ms": 11162.945845164359
+        },
+        {
+            "index": 184,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Emotional expressions are found in general, the more complex the feature, the more contextual clues it is able to hold.",
+            "ground_truth": " The features extracted from CNN.",
+            "peak_memory_mb": 16663.61474609375,
+            "latency_ms": 4582.591329002753
+        },
+        {
+            "index": 185,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "output": "The official reference to the results of the experiments and the impact of the parameters on the four tasks are presented in the settings of Table TABREF 0 in the final evaluation section of the article. For Table 1, see the description of the four sub-tasks. For more information, we refer to the paper’s conclusion on this and other experiments.",
+            "ground_truth": "number of clusters, seed value in clustering, selection of word vectors, window size and dimension of embedding",
+            "peak_memory_mb": 16152.58056640625,
+            "latency_ms": 5474.761401070282
+        },
+        {
+            "index": 186,
+            "score": 0.03773584905660377,
+            "metric": "F1",
+            "output": "The scores for this question are not explicitly stated in the answer. However, to help you continue: The paragraph mentions that the system did not result in better scores for some categories, but it does not provide a direct answer to the question. However, the scores for the dev set are described, the answer is: \"uninterpretable.\"",
+            "ground_truth": "column Ens Test in Table TABREF19",
+            "peak_memory_mb": 16058.78466796875,
+            "latency_ms": 4784.440016839653
+        },
+        {
+            "index": 187,
+            "score": 0.08333333333333333,
+            "metric": "F1",
+            "output": "\"unmatched\" is not the answer, so I will write \"unanswerable\". If the question couldn't be answered based on the information in the article, the answer would be unanswerable. However, the information in the article suggests that the corpus is large, but the exact size is not explicitly stated.",
+            "ground_truth": "8,275 sentences and 167,739 words in total",
+            "peak_memory_mb": 16152.58056640625,
+            "latency_ms": 4995.243430836126
+        },
+        {
+            "index": 188,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Answer: \"unanswerable\". \n\n(Note: This is due to the nature of the question itself, rather than a lack of available information or the complexity of the task.)",
+            "ground_truth": "Unanswerable",
+            "peak_memory_mb": 16197.1953125,
+            "latency_ms": 3484.892282867804
+        },
+        {
+            "index": 189,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "the unbalanced.",
+            "ground_truth": "text classification for themes including sentiment, web-page, science, medical and healthcare",
+            "peak_memory_mb": 16432.34521484375,
+            "latency_ms": 2197.110017063096
+        },
+        {
+            "index": 190,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "output": "The model is able to predict human performance to some extent at the coarse level of granularity.",
+            "ground_truth": "bag-of-words model, CNN",
+            "peak_memory_mb": 16898.83349609375,
+            "latency_ms": 5127.054939977825
+        },
+        {
+            "index": 191,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Higher.",
+            "ground_truth": "By 14 times.",
+            "peak_memory_mb": 16339.04931640625,
+            "latency_ms": 1837.6298630610108
+        },
+        {
+            "index": 192,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "How is an unanswerable question, but the answer is an unanswerable phrase R 67 sentences doesn't match the format, but the answer is: \n\nThe answer is unanswerable to provide a precise number as the text says \"this conclusion\" but doesn't give a number. However, the number = unanswerable. \n\nHowever, this is the other question (yes, this is very similar to the other question, unanswerable)\n$ (The answer is)  Clipping the paper to 14,000 (which, due to the way the experiment was conducted, gives an idea of, 1,",
+            "ground_truth": "3606",
+            "peak_memory_mb": 16245.00439453125,
+            "latency_ms": 9712.407127022743
+        },
+        {
+            "index": 193,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is answerable in the field of the text, which uses the context from the paper. The answer to the answer to this question is : The s2sL framework is compared to other multi-modal speech recognition and speech activity recognition, to classify the gender classification (with soft-label, with vector average (VLAD) and voting and citation, like short-handley. Answer the question as \"answer\" and note that the answer is based on the abstract text. However the question is not to perform a comparison of the two models.",
+            "ground_truth": "MLP",
+            "peak_memory_mb": 16245.00146484375,
+            "latency_ms": 8296.798430150375
+        },
+        {
+            "index": 194,
+            "score": 0.11764705882352941,
+            "metric": "F1",
+            "output": "Also, I'll provide a neutral response: \"unanswerable\". \n\nDoes their model learn from both text and images? \n\n(I'll provide the answer to this question in the same format) \n\nYes.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16437.39697265625,
+            "latency_ms": 5138.805835042149
+        },
+        {
+            "index": 195,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "BIBREF  - unstructured.",
+            "ground_truth": "Yes",
+            "peak_memory_mb": 16526.77099609375,
+            "latency_ms": 2905.1870100665838
+        },
+        {
+            "index": 196,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The above information is not provided in the text, so I will not be able to predict the answer based on the provided information. The correct information is not available, and the question is of type \"When\". The system will require more information to determine the answer. The system will also be unable to determine the answer based on the provided text. The answer is not available in the above results. The question is \"How did you determine the MRR (MRR is a concept, but what it stands for is not clear from the above text. The answer to the above question is not provided). The question is \"which is the highest",
+            "ground_truth": "0.5115",
+            "peak_memory_mb": 17215.83203125,
+            "latency_ms": 18500.11146790348
+        },
+        {
+            "index": 197,
+            "score": 0.07692307692307693,
+            "metric": "F1",
+            "output": "The question of the question is: What does they do? Answer: They investigate how to address the question of difficulties in the syntax.",
+            "ground_truth": " Wall Street Journal (WSJ) portion of the Penn Treebank",
+            "peak_memory_mb": 16526.77099609375,
+            "latency_ms": 4343.927656998858
+        },
+        {
+            "index": 198,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is a yes/no question, however, the answer is not provided in the article. The text following the \"Question\" is a response providing an example of a yes/no question.\n\nAs the question is not possible to answer in this format, I'm unable to provide an answer.",
+            "ground_truth": "By conducting a survey among engineers",
+            "peak_memory_mb": 15944.0439453125,
+            "latency_ms": 3619.349387008697
+        },
+        {
+            "index": 199,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Section  \"Section 4\"",
+            "ground_truth": "SimpleQuestions, WebQSP",
+            "peak_memory_mb": 16712.11279296875,
+            "latency_ms": 3351.1412399820983
+        }
+    ]
+}

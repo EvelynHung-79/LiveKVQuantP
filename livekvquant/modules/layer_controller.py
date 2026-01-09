@@ -60,7 +60,13 @@ class TransformerLayerController(nn.Module):
         # 如果是 Decoding 階段 (seq_len=1)，且我們的方法只針對 Prefill 進行壓縮。
         # 為了避免 1 個 token 被誤判為 100% Outlier 或造成 EMA 衰減，
         # 這裡直接將其視為 Warmup (FP16) 儲存，跳過所有統計與量化步驟。
-        if self.is_decoding:
+        
+        # === [新增邏輯] Layer Bypass (前幾層保持全精度) ===
+        # 判斷標準：如果是 Decoding 階段 OR 目前層數小於設定的起始層
+        # 這些情況都直接存 FP16 ("warmup" 格式)
+        should_bypass = (self.layer_idx < self.config.quant_start_layer)
+        
+        if self.is_decoding or should_bypass:
             k_data = {"type": "warmup", "data": k_tensor}
             v_data = {"type": "warmup", "data": v_tensor}
             

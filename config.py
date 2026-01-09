@@ -20,6 +20,7 @@ class LiveKVQuantConfig:
     ema_alpha: float = 0.4          # EMA 平滑因子 α
     clip_factor_n: float = 2       # EMA 裁剪因子 N，避免過大波動
     outlier_ratio: float = 0.01      # 頂尖 1% 異常值保留為 FP16
+    quant_start_layer: int = 3
     
 # 可以實例化配置對象直接使用
 config = LiveKVQuantConfig()

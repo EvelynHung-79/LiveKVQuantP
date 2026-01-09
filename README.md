@@ -78,6 +78,14 @@ python scripts/run_inference.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode longbench \
   --task narrativeqa
+
+python scripts/run_inference.py \
+  --bench_version v1 \
+  --task_type single-doc \
+  --num_samples -1 \
+  --ema_alpha 1.0 \
+  --clip_factor_n 1.5 \
+  --outlier_ratio 0.05
 ```
 
 **模式 C：互動模式 (Interactive)**
@@ -85,7 +93,6 @@ python scripts/run_inference.py \
 
 ```bash
 python scripts/run_inference.py \
-  --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode interactive
 ```
 
