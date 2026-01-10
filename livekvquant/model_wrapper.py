@@ -91,9 +91,7 @@ class LiveKVQuantModel:
         self._inject_controllers()
         self.model.eval()
 
-    def _inject_controllers(self):
-        logger.info("Injecting TransformerLayerControllers and patching LlamaAttention...")
-        
+    def _inject_controllers(self):        
         self.layers = self.model.model.layers
         self.controllers = []
 
@@ -118,7 +116,7 @@ class LiveKVQuantModel:
             # Monkey Patch
             layer.self_attn.forward = types.MethodType(_custom_attention_forward, layer.self_attn)
             
-        logger.info(f"Successfully patched {len(self.controllers)} layers.")
+        # logger.info(f"Successfully patched {len(self.controllers)} layers.")
 
     def _chunk_input(self, input_ids: torch.Tensor, chunk_size: int) -> List[torch.Tensor]:
         seq_len = input_ids.size(1)

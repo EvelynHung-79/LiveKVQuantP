@@ -49,7 +49,6 @@ class LongBenchLoader:
                 # split='train' 是因為 json loader 預設只會載入到 train，我們後面再手動對應
                 dataset = load_dataset("json", data_files=local_file_path, split="train")
                 self.dataset = dataset
-                logger.info(f"Successfully loaded {len(self.dataset)} samples from local file.")
             except Exception as e:
                 logger.error(f"Failed to load local file {local_file_path}: {e}")
                 raise e
