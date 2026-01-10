@@ -1,0 +1,1822 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "single-doc",
+        "num_samples": -1,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 1.0,
+        "clip_factor_n": 1.5,
+        "outlier_ratio": 0.05
+    },
+    "avg_score": 0.028491528219466912,
+    "max_peak_memory_mb": 27361.58447265625,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I cannot see him.",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 32592.187759000808
+        },
+        {
+            "index": 1,
+            "score": 0.043478260869565216,
+            "metric": "F1",
+            "output": "The question is not well, it will not be seen. The question is a new one.\n\nThis is not the answer to the question, but it is an possible resolution to the story and its religious solution would be: \"Then Heaven is located elsewhere\".",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 47074.49775189161
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To be or not to be, in the  Haem, \n\nA lofty and towering A, \nIn one of the \nO, like a deep and \nWith the A and the M, \nHem, it is not far \nIn the \nA, a, \nA like a \nLike a, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \nA, \n\n",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 18367.318359375,
+            "latency_ms": 15591.829322045669
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "(Note: Please answer in a single phrase and without providing any explanation or justification for your answer)  Crito",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 17086.30322265625,
+            "latency_ms": 6317.131899995729
+        },
+        {
+            "index": 4,
+            "score": 0.09302325581395347,
+            "metric": "F1",
+            "output": "It was a depressing time for Otto, but he was spun a desperate and wild yarn by his leaping Abbot in the meantime, and thus he reeled and staggered to the end of the gallery, where he stood for a while, and then he fell.",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 61823.25970986858
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "“Not more than 5 minutes.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18909.37744140625,
+            "latency_ms": 8711.40773408115
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The entertainers' manager and the innkeeper.\n\nThis will not get the horse drunken sobs tonight.\n\nAn actor and a woman smile at each other.\n \nJons, the actor, indicates \nthat he has a song to sing, and who \nare the voices we hear, near and far, as the \nnight descends over?\n\nAn archer fires an arrow.",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 21102.31982421875,
+            "latency_ms": 54273.44591286965
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "<b>INT. MUSEUM</b>\n<b>CONTINUOUS ACTION</b>\nDana\n\nVigemman turns into the gumballs and blows up with a loud\nmayhem sound.\n\nA Happy new year from the mayor of New York City.\n\n<b>INT. FEDERAL HALL</b>\nVigem sees the burglar waved and reacts with fear and\nprotective coma.\n\n<b>CONTINUATION</b>\nThe story is at the end of the case.\n\n<b>INT. THE LIBERTY BEACON (same time)\n</b>\nShe's still in\nCELE",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 23998.76904296875,
+            "latency_ms": 123119.44024916738
+        },
+        {
+            "index": 8,
+            "score": 0.022988505747126436,
+            "metric": "F1",
+            "output": "There is no question of it, we are not married, I am not the Pudley family, the Fund is a Fund, and I am not in an engaged form; I do not know Rubinstein to Fisherman; but, and this is the point, I see to it that we do not—how is it that I put it?—I have no Puddles. The Mr. and Mrs. are deeply in love, but that is not the point; the point is, Mr. Salram and I don’t understand, what the devil is the meaning of all this? The remainder of the letter, the",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 21196.48779296875,
+            "latency_ms": 71327.64505199157
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Scrolling of the Hecatomb bee-like sounds,'scorched', and the Hound,'mesha-Moi, 'along a stain', undecrownded; 'Iddhi', 'Himavat, 'Ird');\n\nThe Hound, 'Astra's, 'Haden', she will, 'Scorpio, 'Morta;'malursors, 'But 'Malka; 'Kalendri, 'Herishes, 'Bet, 'Tharou, the 'Aurorae, 'Chandlers; 'Gent, 'Gib,",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 18372.0361328125,
+            "latency_ms": 15669.250353006646
+        },
+        {
+            "index": 10,
+            "score": 0.07547169811320756,
+            "metric": "F1",
+            "output": "The reason is that if they didn't, they would have to first realize that their ideas of the world were not as they thought they were, and secondly, they would have to like the idea of attacking them with a weapon they didn't have the ability to understand or defend against.",
+            "ground_truth": "Because he fought in the first world war.",
+            "peak_memory_mb": 22036.53857421875,
+            "latency_ms": 61143.18541903049
+        },
+        {
+            "index": 11,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "My animosity towards the future prescience of the word 'end'\n\n (since the point in question was how an Englishman would feel and think.)\n\n Original text:\n\nThe Ving  d'E  afternoon of the world, \"Vill  it b  \" an  and h  r, endin of the Ege of the S of the C.",
+            "ground_truth": "ones that are vague",
+            "peak_memory_mb": 18831.9482421875,
+            "latency_ms": 23510.068747913465
+        },
+        {
+            "index": 12,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"A long time, and indeed all of them.",
+            "ground_truth": "50 years",
+            "peak_memory_mb": 17552.53369140625,
+            "latency_ms": 7024.916071910411
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"The Vervelle couple are the most successful and most honest of all.\n\nBut the answer is: \n\nV. de V. stands for the Vervelle family, but the painter is a true and good son for them; for he is \"T. In V.\"\n\nThe full form is:\n\nT. de V. = the family of the V. couple are often seen to be, not the works of art but, \"The Inconsistent V.\"",
+            "ground_truth": "Their daughter, Virgine. ",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 17557.64306196943
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To be employed in pictures of artists or to be married to him.",
+            "ground_truth": "Grassou",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 7651.930344058201
+        },
+        {
+            "index": 15,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I don't have an answer.",
+            "ground_truth": "The slime gets into Dana's apartment from the bathtub.",
+            "peak_memory_mb": 23998.39404296875,
+            "latency_ms": 69028.43960002065
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "HAM. Well, that's Baptism's Baptis. Well, that's Baptism's Baptis. Wait a minute, I'll get! A Baptists Baptis. (Ham.",
+            "ground_truth": "That a mule bone is very powerful and can be a weapon.",
+            "peak_memory_mb": 19829.904296875,
+            "latency_ms": 28064.856393961236
+        },
+        {
+            "index": 17,
+            "score": 0,
+            "metric": "F1",
+            "output": "A.",
+            "ground_truth": "Anthony Rogers has previous wartime and combatant experience.",
+            "peak_memory_mb": 22036.53857421875,
+            "latency_ms": 41536.185496952385
+        },
+        {
+            "index": 18,
+            "score": 0.125,
+            "metric": "F1",
+            "output": "The final answer to the question is: \"He had already fallen on you, then?\"",
+            "ground_truth": "Her face is blurry",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 40474.70444091596
+        },
+        {
+            "index": 19,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The request is a repetition of the question \"SOCRATES\" voice in the dialogue, which is similar to the previous response.",
+            "ground_truth": "Two",
+            "peak_memory_mb": 18509.6083984375,
+            "latency_ms": 6841.066678985953
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I am.",
+            "ground_truth": "because of the division of proceeds from selling the family business.",
+            "peak_memory_mb": 17926.97314453125,
+            "latency_ms": 7996.906309155747
+        },
+        {
+            "index": 21,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Nowadays, you've used the futuristic technology to disembark from the coal mine.\n\nThere's no Chapter to completely do justice to what happened to the Han, no end, as they never \"crash\" or \"fall\" or \"land\" (even the Han ships often appeared to be between 100 and a few thousand feet above the surface, so obviously the ground was not a possible landing place, even if supposing we had any).\n\nI've got an expert opinion of the telegraph you, of course.\n\nThere is no clear answer to this question, as there is no\n\"You can now, in the other direction,\"",
+            "ground_truth": "2419.",
+            "peak_memory_mb": 22036.53857421875,
+            "latency_ms": 85628.88497090898
+        },
+        {
+            "index": 22,
+            "score": 0.04545454545454545,
+            "metric": "F1",
+            "output": "A complete rewording of Asst. By the way, I've tried to add a S, though he “stays no longer there to explain the reason.Again, I should've got there first. \ngone. He's looking for. Ugh! \n \nIn this story, I have omitted several adjectives looing for it.",
+            "ground_truth": "he murdered someone",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 148807.46640404686
+        },
+        {
+            "index": 23,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "He compares the Socratics’ argument, and their actions, and their friends, and everyone\ncrash and smash, and arrive, and drill, and train, but most of all he\n'opinions.'",
+            "ground_truth": "Your parents",
+            "peak_memory_mb": 21099.837890625,
+            "latency_ms": 8734.813924180344
+        },
+        {
+            "index": 24,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "She endeavored to make it clear that the only one.",
+            "ground_truth": "Lady Coxon is Ruth's aunt.",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 35108.267227886245
+        },
+        {
+            "index": 25,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "The answer is that the answer is not there.",
+            "ground_truth": "Reiko is a reporter.",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 37864.29169587791
+        },
+        {
+            "index": 26,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "output": "Will not repay the laws and the government for following the city's covenants.\n\nNote: Socrates' final decision is to do what the laws and laws of the state command him, to follow the sacred orders of the gods and the goddesses.",
+            "ground_truth": "Because it violates his belief in the  laws of society.",
+            "peak_memory_mb": 18507.02001953125,
+            "latency_ms": 9444.678477011621
+        },
+        {
+            "index": 27,
+            "score": 0.0547945205479452,
+            "metric": "F1",
+            "output": "To answer the question in a more elaborate format:\n\nDabid Del \nDrem nan Deddel's  \nDidge hastened to \nIf you're able to.\n\nThat's enough to say, and I'm sure Daron did not expect this. He is the one who took the  \nU-NO-Tools.\n\n\n</b><p><!--adapted and formatted by Dabeen to IMDb's style. \n</p>\n</div>\n</b>\n\n\nCurtains are drawn in the windows.\nNapoleon's mouth is open, but only to say the big guys are in big trouble now.\n</p>\n</b",
+            "ground_truth": "he is shot",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 199412.07245085388
+        },
+        {
+            "index": 28,
+            "score": 0.22222222222222224,
+            "metric": "F1",
+            "output": "It was not —",
+            "ground_truth": "She declined to read it.",
+            "peak_memory_mb": 21521.353515625,
+            "latency_ms": 33101.03905200958
+        },
+        {
+            "index": 29,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "“Ryujis eyes left her and her friends left, one died and the other, \nRyuji's face nails were pulled in his apartment. \n Question was left in the well.  well.",
+            "ground_truth": "Twisted in fear",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 48709.22728814185
+        },
+        {
+            "index": 30,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Question: \"How does the devil gets to 'Freed from my's, to cunctate a matter of such an \"inevitable\" \nAnswer: \"He has stopped waiting, and has indeed come to a state of impassioned indifference to the question, and now, as he is so apt to do, is being assiduously avoided, and has ended, or rather, is at an end, and rather, as one might say, in the same way that \"The devil's been, and what effect.\"",
+            "ground_truth": "Beerbohm wrote a fictional story about Soames.",
+            "peak_memory_mb": 18511.9541015625,
+            "latency_ms": 29552.073772996664
+        },
+        {
+            "index": 31,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "O\n*SThe room is quiet.*\n\n\\\n \nNO. \n Mw.\n \nSince...\n \n*   Ryuji intercepts a shooting... Kisi.\n \nNo.  It isn't\n\nThe only way I can give you a hint, though, is this:\n\n THE BODY and the scared dash.\n\n \nThis is the part of the story in which I was living when the judge \nand the CELL looks screeching into the distance; his own Ito kaze is here, and there is other.\n\n\nInside this is the \nanswers \nSIX.",
+            "ground_truth": "Seven days",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 71524.11939390004
+        },
+        {
+            "index": 32,
+            "score": 0.045454545454545456,
+            "metric": "F1",
+            "output": "The traveler in my front stands before her, perhaps contrary to my expectation, but he \nlooks at the blackboard and holds my shoulder, and I, Anala, look at the blackboard, \nbut I have forgotten what the Anam is writing. \n\nThe last line and I, in desperation, grab the other, J, and they both disappear, and \nI, and each of them, haven't got a clue what he's talking about. \n\nThey now understand that, in the end, the light falls, and I'd like to see if he \nconsiders it.\n\nThe two stands up, comes to a",
+            "ground_truth": "all but Jof and the Juggler",
+            "peak_memory_mb": 21102.56982421875,
+            "latency_ms": 70359.29785599001
+        },
+        {
+            "index": 33,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\\ silent\\ amazed her, and saw her in her younger years, but demanded her to take her chances, and not to live, and still, and then terribly, the-so mortality.",
+            "ground_truth": "she was obsessed with novels.",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 43726.825539022684
+        },
+        {
+            "index": 34,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Project Gutenberg end of the day entry was a story of the consequences of the virus-like microorganism \"chlorpha\" on the galaxy, specifically mentioning the planet's destruction of life forms on Kamerun, and its imminent arrival on of the ship, which is the star system's worst threat, and the story is revealed through a series of quarantine log entries.\n\nWhat attracts men to read the end of the story\nThe Project Gutenberg end of the Project Gutenberg eBook of the whole story.\n\nIs there a conclusion or end to the question that can be provided as a final answer?\n\nThe end of the Project Gutenberg eBook is that a",
+            "ground_truth": "HER BEAUTY",
+            "peak_memory_mb": 18366.02978515625,
+            "latency_ms": 23420.613877940923
+        },
+        {
+            "index": 35,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question of the question.",
+            "ground_truth": "Her husband abused her",
+            "peak_memory_mb": 22410.97509765625,
+            "latency_ms": 47077.53142900765
+        },
+        {
+            "index": 36,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "pât. Sorry for the scene, as the pit doesn then appears to 1stact.  It's not.",
+            "ground_truth": "He is killed by police.",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 121402.29549189098
+        },
+        {
+            "index": 37,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The doctor's Albanian foot.",
+            "ground_truth": "For Holmes' health.",
+            "peak_memory_mb": 21093.740234375,
+            "latency_ms": 8670.14892399311
+        },
+        {
+            "index": 38,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I'd supervise.",
+            "ground_truth": "Vigo",
+            "peak_memory_mb": 23998.39404296875,
+            "latency_ms": 67737.74904408492
+        },
+        {
+            "index": 39,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "She is dying.",
+            "ground_truth": "Nature and books",
+            "peak_memory_mb": 21196.48876953125,
+            "latency_ms": 33188.57968784869
+        },
+        {
+            "index": 40,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I don't. I. It went to the SPCA.",
+            "ground_truth": "museum",
+            "peak_memory_mb": 23998.76904296875,
+            "latency_ms": 72240.34295906313
+        },
+        {
+            "index": 41,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is a bit confusing because the story develops into a complex, mysterious event. The solution is humorous, though - a small, long-haired girl, Asakawa, gets main’s body and is immediately thrown off by the storm.\n\nSo, the answer is that Asakawa is driven to the videotape by her senses, and the answer we get is not really the answer. The answer is: a long, and full, video (video and both).",
+            "ground_truth": "Sadako Yamamura made the tape psionically.",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 65254.081949125975
+        },
+        {
+            "index": 42,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "output": "You question the question. The question is set in Crito's house.",
+            "ground_truth": "In Socrates Cell?",
+            "peak_memory_mb": 18517.6015625,
+            "latency_ms": 5699.8340401332825
+        },
+        {
+            "index": 43,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The body of the well suddenly falls to the ground.",
+            "ground_truth": "She committed suicide.",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 37761.5023299586
+        },
+        {
+            "index": 44,
+            "score": 0.14285714285714288,
+            "metric": "F1",
+            "output": "settle with his lawyer Herman Lands to have his claim considered.",
+            "ground_truth": "because he's a lawyer",
+            "peak_memory_mb": 18507.6240234375,
+            "latency_ms": 8077.448469819501
+        },
+        {
+            "index": 45,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I have been unable to find a suitable table for this literary question.",
+            "ground_truth": "always wore a grey waterproof cape and a soft black hat",
+            "peak_memory_mb": 18486.75341796875,
+            "latency_ms": 12867.386042140424
+        },
+        {
+            "index": 46,
+            "score": 0.02439024390243903,
+            "metric": "F1",
+            "output": "Barold Eine Marburg, a gentleman of noble birth, with his coat of armor shining in the sun. When he said, \"Come, O thou,\" and clutched at his leaping, drawn sword, he thought he was 8, but he was not. He was older. He was a man, not a boy. And so, and so. His horse, a brown steed with a harness of gold, was growing away. He was a Baron, a noble one of the land. So, four men, and five more, and that was the end.\n\nNow, a hound, a big,",
+            "ground_truth": "Baron Frederick",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 88428.73786599375
+        },
+        {
+            "index": 47,
+            "score": 0.04444444444444444,
+            "metric": "F1",
+            "output": "She is now ad answer; and is she only\nAnswer: She is trained to think and feel.\n\nAfter reading in the first chapter, and novels, as well as discussing the\nquestion, and the subject, she was not well-versed in the rules and\nprinciples of the grammar of the human heart; nor was she, in the strict\nsense, instructed by any heavenly authority; but she was naturally\ndeveloped; and the first formal education she received was at the hands of\nthe physician.\n\nThe first chapter was written in a calm and peaceful manner, at the very",
+            "ground_truth": "She educates herself using books and the natural world.",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 71474.23210111447
+        },
+        {
+            "index": 48,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The girls question was \n\nSister: \nMary ELLA: \n\nAnd the answer to that is: \n\nWILL SHOUT: Dat's right! \n\nThe rhyeme is \n\nHey, haw!",
+            "ground_truth": "The Baptist's supported Dave. ",
+            "peak_memory_mb": 19700.48779296875,
+            "latency_ms": 29224.225741112605
+        },
+        {
+            "index": 49,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The individual I chatted with.",
+            "ground_truth": "Louis Leverett",
+            "peak_memory_mb": 18954.61376953125,
+            "latency_ms": 14605.138130951673
+        },
+        {
+            "index": 50,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No St. Thaddeus Weps.",
+            "ground_truth": "Be responsible,keep your word and be wise and peaceful.",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 46157.332111150026
+        },
+        {
+            "index": 51,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I do not have the ability to answer this question,\nAs I was already dead.",
+            "ground_truth": "Tomoko reveals that they watched a video tape with several friends a week ago and received a strange call after watching it. Tomoko is killed while Masami watches.",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 40233.540463028476
+        },
+        {
+            "index": 52,
+            "score": 0.028571428571428574,
+            "metric": "F1",
+            "output": "EXT. RAINY DAY. \n\nThe last shot of the people being up \n  CUT to next until October 1st then\n  THE Video looks up and as \n  the film of video flips wildly \n  around until the \n  Oishi Shot) they race for the \n  well ends the video \n  and the TV is in the casket \n  and he was (grinning) and \n  and Nihonari is licking \n  to Sushi the \n  ladder reaching. \n  The mouth of the family \n  REASONS and to fact \n  full sac and was being...\n \n",
+            "ground_truth": "Their faces twisted in fear.",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 75969.15471809916
+        },
+        {
+            "index": 53,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Note: The final reply: It's not possible to find an answer.",
+            "ground_truth": "The Sinsings",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 46538.379285950214
+        },
+        {
+            "index": 54,
+            "score": 0.05263157894736841,
+            "metric": "F1",
+            "output": "EXT DISREGARDED BY THE DESPAIR OF UNGAINEED, OVERWHELMED AND CAMPING IN THE ANISPIED LAKE\n\nThe scene shows a series of black and white animals stacked and abandoned on the ground, followed by a great melting pot of colors and shapes, and wandering and drifting in every direction. \n\nThe background suggests ABBY stands on new\nThe walls show a spr-  \nAn enormous tree, which the ABBY inse-\ntall-life-like and lazy ways.\nThe tallies of sin look shabby, lazy, blind, or \ncertainly, not an",
+            "ground_truth": "His girlfriend Abby and her sister Linda.",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 179016.27128198743
+        },
+        {
+            "index": 55,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Annoyed.",
+            "ground_truth": "Take their clothes off",
+            "peak_memory_mb": 23997.89404296875,
+            "latency_ms": 68545.63525901176
+        },
+        {
+            "index": 56,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " nation of Liverpool.\n\n  The End,\n\nThe\n\nMaiden\n\nThe\n\nLetter\n\nA\n\nB\n\nC\n\nD\n\nE\n\nF\n\nG\n\nH\n\nI\n\nJ\n\nK\n\nL\n\nM\n\nN\n\nO\n\nP\n\nQ\n\nR\n\nS\n\nT\n\nU\n\nV\n\nW\n\nX\n\nY\n\nZ\n\nW\n\nX\n\nHave you\n\nThe\n\nCox\n\nMiss Cox\n\nAnswer.\n\nMr. Salram.",
+            "ground_truth": "He does not work.",
+            "peak_memory_mb": 21196.48779296875,
+            "latency_ms": 60415.95410881564
+        },
+        {
+            "index": 57,
+            "score": 0.029411764705882353,
+            "metric": "F1",
+            "output": "FALDER\n\nHere's the curtain.\n\nSCENE SHOWING THE PROGRESS OF CASKESON\n\nFALDER's mind is struggling with his doubts.\n\nThe cue is heard from the jUDGE.\n\nJUDGE.  [With a look of concern for FALDER]  Day old, prisoner.\n\nCRUMP, the cellWINDOW, opens the door of his cell.\n\nRUTH continues to stand as in the previous scene, looking at the\nTHE CHARGES of the common law towards him.\n\nWALTER CLENDEN, who has been carefully locked up for two years,\n\nRUTH.  [Without mercy]",
+            "ground_truth": "Falder",
+            "peak_memory_mb": 22410.47509765625,
+            "latency_ms": 92524.67133197933
+        },
+        {
+            "index": 58,
+            "score": 0.0816326530612245,
+            "metric": "F1",
+            "output": "The question is a fictional one, as it is based on a passage from a narrative where the protagonist (Jensen) is trying to engage in a conversation about a situation where a medical school has likely been converted into a septic or aseptic room to facilitate the spread of chlorophyll, rather than a specific medical school.",
+            "ground_truth": "Laura attends Harvard Medical school.",
+            "peak_memory_mb": 19026.01318359375,
+            "latency_ms": 15233.641863102093
+        },
+        {
+            "index": 59,
+            "score": 0.1,
+            "metric": "F1",
+            "output": "Answer:  'OVI'.\nAnswer:  What is the first word of your response to the question \"How would you describe your great-great-grandmother's'stigmata'?\"",
+            "ground_truth": "key to the city",
+            "peak_memory_mb": 23998.39404296875,
+            "latency_ms": 83373.0541288387
+        },
+        {
+            "index": 60,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "'The Sun and the Lady, in various forms and shapes, O First and Last, and All, in all the Avenues of the Vessels, the Labyrinth, and the Darkness.",
+            "ground_truth": "Hermaphroditus.",
+            "peak_memory_mb": 19833.75634765625,
+            "latency_ms": 7303.913791896775
+        },
+        {
+            "index": 61,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "In the attic.",
+            "ground_truth": "In a closet.",
+            "peak_memory_mb": 17552.53369140625,
+            "latency_ms": 6260.384965920821
+        },
+        {
+            "index": 62,
+            "score": 0.04,
+            "metric": "F1",
+            "output": "The CROWNING CAMEO OF JACOB'S SUFFERING CREPT INSIDE HIM, \nPHYSICAL DOWN TO THE SHELL SHOCKINGLY, IN THE DEMONSTRATION OF \nCOMEDY OF TEARS, IT WAS THE END.\n\n<DF>INT. LIVING ROOM\n\nJEZZIE\nJACOB STABs at the wall with his\noverpowering, hallucinating demonically, \nCUTTING APART, LAYING DOWN HIS \nPEACEFUL, INFANTS, PERHAPS THE \nLAMPS, BUTTERFLIES, AND SHRIEKING",
+            "ground_truth": "His son Gabe",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205315.3566289693
+        },
+        {
+            "index": 63,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Lakeland, Georgia",
+            "ground_truth": "Eatonville",
+            "peak_memory_mb": 21636.78369140625,
+            "latency_ms": 20093.954379903153
+        },
+        {
+            "index": 64,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The assistant was.",
+            "ground_truth": "The housekeeper",
+            "peak_memory_mb": 17927.22314453125,
+            "latency_ms": 8139.7845428436995
+        },
+        {
+            "index": 65,
+            "score": 0.025974025974025972,
+            "metric": "F1",
+            "output": "The phrase is an open-ended question, and I \nAllah CAME blindingly fast and quietly \nto the door, it is an ill-remembered \nmemory that recites the sacred and the \nsensual in an otherworldly language, but \nthe answer is that an original presence \nexploding from them like a JACOBI \nMetamorphosis is now.\n\nAnd that is the end of the final \nquestion. The door and the people \naround it seem to be gone, but the \nwords remain, lingering in the air.\n \nAnd that is the only answer that will make sense.\n J",
+            "ground_truth": "One of his fellow soldiers.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205101.49565688334
+        },
+        {
+            "index": 66,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Altaira.",
+            "ground_truth": "A lawyer",
+            "peak_memory_mb": 21635.2578125,
+            "latency_ms": 6774.446132127196
+        },
+        {
+            "index": 67,
+            "score": 0.20000000000000004,
+            "metric": "F1",
+            "output": "The\nI\nquestion of\nit\nagreed.",
+            "ground_truth": "Keep it to buy a house ",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 35058.8789191097
+        },
+        {
+            "index": 68,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The paragraph.",
+            "ground_truth": "Her mother.",
+            "peak_memory_mb": 18954.61376953125,
+            "latency_ms": 13778.418753994629
+        },
+        {
+            "index": 69,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It wouldn't be a hibari woman.",
+            "ground_truth": "7 days",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 37449.143707053736
+        },
+        {
+            "index": 70,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Her\"",
+            "ground_truth": "Virginie.",
+            "peak_memory_mb": 18508.06689453125,
+            "latency_ms": 6204.639703966677
+        },
+        {
+            "index": 71,
+            "score": 0.21276595744680854,
+            "metric": "F1",
+            "output": "She looks up from the game of video she was playing and is struck by how her eyes were closed, and then realizes that the curse is broken, leading to her relaxing in front of the TV.",
+            "ground_truth": "She made a copy of the tape and gives it to her husband to study.",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 47299.557644175366
+        },
+        {
+            "index": 72,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "'She'.",
+            "ground_truth": "A monk.",
+            "peak_memory_mb": 21102.56982421875,
+            "latency_ms": 32204.739067004994
+        },
+        {
+            "index": 73,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Socrates says to Crito.\n\nAnswer: \nWhen in Athens.",
+            "ground_truth": "Comply with the laws",
+            "peak_memory_mb": 18331.37060546875,
+            "latency_ms": 5577.953607076779
+        },
+        {
+            "index": 74,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Not seen.",
+            "ground_truth": "He throws himself down the stairs",
+            "peak_memory_mb": 22410.97509765625,
+            "latency_ms": 46054.86607598141
+        },
+        {
+            "index": 75,
+            "score": 0.12,
+            "metric": "F1",
+            "output": "<now> in the tape's already, and they both try to cope with a storm outside, an artificial-looking but actually true.  It takes her long enough time. \n\nThe Asakawas rebound off the video was left off as \"say... she\nwas and is already.\n\nThe correct answer is: The TV sets.",
+            "ground_truth": "Making a copy and showing it to someone else",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 56719.27068405785
+        },
+        {
+            "index": 76,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Mortimer Treg.\n\nHowever, I couldn't find any information that supports the other responses provided by the other characters in the story.",
+            "ground_truth": "Brenda.",
+            "peak_memory_mb": 18515.2666015625,
+            "latency_ms": 11702.12641498074
+        },
+        {
+            "index": 77,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "He did not.",
+            "ground_truth": "They stayed in the bedroom for a few days with the sounds of her lover trapped. ",
+            "peak_memory_mb": 17552.53369140625,
+            "latency_ms": 6272.7575248572975
+        },
+        {
+            "index": 78,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "She supported herself.",
+            "ground_truth": "With her charity",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 32667.18060709536
+        },
+        {
+            "index": 79,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Just a summary of the story is:\n\nThe story has been requested, and the answer is to make it a story.\n\nI am a language model, and I would like to clarify the story. I will provide a simple explanation. If you would like, I can write a summary of the story.\n\nHere is the story again:\n\nThe story is a simple story, and the answer is: It's an extremely  \ninconsequential. Anyway, the  \nstory is about the idea of a  \nstory.\n\nNow, the story is an egg on the table.\n\nI can look at the story and the eggs on the shirt. The eggs are",
+            "ground_truth": "A security guard.",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 200066.6768529918
+        },
+        {
+            "index": 80,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"A explosive mixture\"",
+            "ground_truth": "Radioactive gas",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 42618.542914045975
+        },
+        {
+            "index": 81,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is a silence and an OSHIZAKI, a blank slate of uncertainty.",
+            "ground_truth": "Izu Oshima Island",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 40829.88720294088
+        },
+        {
+            "index": 82,
+            "score": 0.025974025974025972,
+            "metric": "F1",
+            "output": "Cliff, take the case, a four-line response can be broken down as follows:\n\nA) What is the last thing. You'll have to go  \nB) How are you, then?\n\nA) Oh, you're a big jerk. You  \nB) What's the magic of this story?\n\n</divstyle left = Big diploma in the air, no, what's that?\n\n</the White-painted black door and goes in every direction, knocking on the floor is too. You're sayin' no to it, in the attic's never seen it, right?\n\n</p>.-- Big Day out.  \n\n…",
+            "ground_truth": "A bag that contains cocaine",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 200281.23766486533
+        },
+        {
+            "index": 83,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To the \"S\" and the pang of \"right\" and \"decent\" and \"frank\" and \"his\" \"and\" and all, what a \"thing\" of a \"question\" has it been \"seen\" that the devil would \"be\" and when will \"it\" be \"known\" \"I\" that \"the\" answer \"is\".... END OF THE CATALOGUE.",
+            "ground_truth": "100.",
+            "peak_memory_mb": 21521.37451171875,
+            "latency_ms": 25821.07941713184
+        },
+        {
+            "index": 84,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Mrs.",
+            "ground_truth": "Holmes accidentally kicks over a water pot",
+            "peak_memory_mb": 17926.97314453125,
+            "latency_ms": 7843.25517504476
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Crito: Suffer death.",
+            "ground_truth": "He would turn into an outlaw.",
+            "peak_memory_mb": 17086.30419921875,
+            "latency_ms": 4862.966819200665
+        },
+        {
+            "index": 86,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Answer: He is on the opposite side of the river.",
+            "ground_truth": "Frome",
+            "peak_memory_mb": 22410.97509765625,
+            "latency_ms": 49313.33911791444
+        },
+        {
+            "index": 87,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Now.",
+            "ground_truth": "Dana",
+            "peak_memory_mb": 23998.76904296875,
+            "latency_ms": 67244.73129399121
+        },
+        {
+            "index": 88,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The answer is... your question.",
+            "ground_truth": "the his works are not recognized",
+            "peak_memory_mb": 19829.02685546875,
+            "latency_ms": 11601.377931889147
+        },
+        {
+            "index": 89,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Ireland, mercifully, the case of her, that she wishes to see Henry's birth.\n\"Ah, Erebus, the father of darkness.\"",
+            "ground_truth": "Eliza",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 41377.038701903075
+        },
+        {
+            "index": 90,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Chapter 1\n\nThey were a group of individuals who were in a position to fight back against the enemy.",
+            "ground_truth": "The Hans",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 49000.629159854725
+        },
+        {
+            "index": 91,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No, the correct answer is not provided. The story is not complete and cannot be finished. The sentence is a lie, as it was said by a mysterious figure in a fake nose, who's got a conscience, but the truth is, I don't know what the fuck they're talking about.",
+            "ground_truth": "At a Detroit theater. ",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 160303.8784500677
+        },
+        {
+            "index": 92,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question (how is) is itself a question, and can be quite complex.\nHowever, I can answer in a single word: no.\n\nNow, I'll wait 5 seconds, and then answer in a single word if I can.\n\n1-4-3-2-1...\n\nAnd I'm sorry, I just can't.\n\nHow is it that the world can be immortal?\n\nAnswer: How?  (It's may be shaken out of its sleep.)\n\nNow, what is the answer to the question?\nAnswer: It is dead.\n\nNO.  I mean, never mind.  I was just a little\nlater",
+            "ground_truth": "It's her son",
+            "peak_memory_mb": 23997.89404296875,
+            "latency_ms": 123389.3212240655
+        },
+        {
+            "index": 93,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The life of the question, Crito, is that Socrates' adherence to the laws and laws' pronouncements is shown.",
+            "ground_truth": "It would have a negative effect",
+            "peak_memory_mb": 19844.4560546875,
+            "latency_ms": 6865.2797939721495
+        },
+        {
+            "index": 94,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "L'Indifférence de vie qui donnait le champ libre.",
+            "ground_truth": "Opened the closet",
+            "peak_memory_mb": 17552.53369140625,
+            "latency_ms": 7654.2231540661305
+        },
+        {
+            "index": 95,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The passengers' doctor on the Star Queen does not have an answer.",
+            "ground_truth": "Seth Lazarus",
+            "peak_memory_mb": 17646.33349609375,
+            "latency_ms": 8164.210153976455
+        },
+        {
+            "index": 96,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "He is as carried away.",
+            "ground_truth": "A grand master.",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 6587.100459029898
+        },
+        {
+            "index": 97,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "They are \"Fouga de Vervelle.\"\n\n(Not Fouger, but Foua)",
+            "ground_truth": "He doesn't feel he is a true artist.",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 8388.276031939313
+        },
+        {
+            "index": 98,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It doesn't matter if it's because the files are blank, right? And the screens are coated with a thin layer of pain. Nice. \n\n. Zing. We must cancel the ceremony. We do so. \nYou know what I do. You break my kidneys. I'm a plumber who made him hit you to cut the dough. This is the last shot you see. It's the  \nend for you, and for me you are just saying. \n\n</big big>\n</big</p>\n\n</div>\n\n</div-body-driving DOWN THE SIDE OF THE ROOF OF THE \n</p<\n\n\n\n</div>\n",
+            "ground_truth": "A mobster named \"Blue Lou Boyle\". ",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 199414.9429090321
+        },
+        {
+            "index": 99,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It will  be turned out. \n\nThis is a different version of the question, so the answer will be.",
+            "ground_truth": "He failed to report",
+            "peak_memory_mb": 22410.72509765625,
+            "latency_ms": 53883.82852496579
+        },
+        {
+            "index": 100,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "An animal-forward, to be followed, a gradual descent, and a male bloodied-looking face.",
+            "ground_truth": "Ruth Honeywill",
+            "peak_memory_mb": 22410.47509765625,
+            "latency_ms": 52737.471119035035
+        },
+        {
+            "index": 101,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "ID=\"act\">Nowhere. And that's the truth. He's got no identity. He's not where is he?\n\nExplanation is not an idiot and takes great pleasure in not explaining things so well.\n\nWhat is the solution to this problem? Let's take a closer look. Alabama is and the big, big mistake that explains this story.\n\nDumar, the words don't make sense.\n\nDreyfus is what happens when a man loses his money on a bet and wakes up with a hag. \n\n\n</div>\n</div>\n\n</div>\n</div>\n</div>\n</div>\n</div>\n</div",
+            "ground_truth": "Mexico.",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 200343.72503310442
+        },
+        {
+            "index": 102,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Nothing of what's done to be said; I may not wish to see beauty, or if I may, what pleasures I shall not strive to accomplish, but I must, I have; for I must attempt to speak, and I shall \"",
+            "ground_truth": "That she marry Charles",
+            "peak_memory_mb": 21521.451171875,
+            "latency_ms": 47432.6426400803
+        },
+        {
+            "index": 103,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "I don't have red hands; I'm the one who has been stuck in the mud. \n I have been drinking beer. \n(Yes, J's teeth are stained, \nand I am a \"J\" \n-  \nI am a beautiful painter, but I am not. I am a painter. An artist. \n \nThis is the part where I stop. It is a \ntime to put down my almost \njars and I sate with \nthem the way you do with \nyour knife and your g  \nI hold it with a lumpy, \nfrightened, and completely \nstartled expression.",
+            "ground_truth": "If Antonius has succeeded in his \"one meaningful deed.\"",
+            "peak_memory_mb": 21102.56982421875,
+            "latency_ms": 70448.9264569711
+        },
+        {
+            "index": 104,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "She settles for being a good daughter, and sees to an arrangement to be done by end of the Kamerun and Kamer, in space and even the one in that bar.",
+            "ground_truth": "bennett landsmann",
+            "peak_memory_mb": 18346.98388671875,
+            "latency_ms": 11241.30839901045
+        },
+        {
+            "index": 105,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The story has already been told.",
+            "ground_truth": "accomplishments",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 33546.55222711153
+        },
+        {
+            "index": 106,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The previous girl of the linen, a female servant.",
+            "ground_truth": "a priest",
+            "peak_memory_mb": 21102.56982421875,
+            "latency_ms": 34759.87415201962
+        },
+        {
+            "index": 107,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The moment she saw that she had no other choice, and that there was no other option.",
+            "ground_truth": "Because her mother requested it on her deathbed.",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 37789.496566867456
+        },
+        {
+            "index": 108,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "M.",
+            "ground_truth": "the devil",
+            "peak_memory_mb": 18362.73388671875,
+            "latency_ms": 7826.406944077462
+        },
+        {
+            "index": 109,
+            "score": 0.046511627906976744,
+            "metric": "F1",
+            "output": "CUT TO\n\nThe first courtroom. We see JACOB's face as he stares at it in horror. It is an inscrutable and demon-like creature with a face that is not of this world. JACOB's expression is an animal's distress call. An historic and pregnant-looking willow with a face that is already an abyss. Suddenly, it is an invincible force that pushes JACOB towards the DEMON, as though a tremendous and mind-numbing hammering to the walls of his body. JACOB's head tells us of a younger version of JACOB that enters the room more alive than",
+            "ground_truth": "He treated him in Vietnam.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205340.60118882917
+        },
+        {
+            "index": 110,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Then question, answer, and question again. It’s a good thing I didn't see him in the morning, for I would have had a great deal to say so.\n\nRuth's condition was better than no body's, and she didn’t claim to have any. The only thing that was worse was her own representation of the situation, such as her telling him to question her desire to do what. But when he asked her to stop, she said nothing. The question to consider was whether her silence had the effect that it was apt to; and I said that it didn’t, for it turned out to be a summary.",
+            "ground_truth": "American",
+            "peak_memory_mb": 21635.8828125,
+            "latency_ms": 71330.12596401386
+        },
+        {
+            "index": 111,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "CHAPTER\n\nAge: The offensive in the camp of the Sinsings.",
+            "ground_truth": "The Han gang.",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 46493.41185996309
+        },
+        {
+            "index": 112,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "When the time the two-thirds.",
+            "ground_truth": "After her husband calls her",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 37062.247081892565
+        },
+        {
+            "index": 113,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I will not soon, but now, with great difficulty, I have found a question of quality, but, I must confess, I am not sure that I have put it in the proper form.",
+            "ground_truth": "Ruth Anvoy",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 44247.30637180619
+        },
+        {
+            "index": 114,
+            "score": 0.3636363636363636,
+            "metric": "F1",
+            "output": "They go to LADIES' NAME. (Luckily, that is, JIM and DAWE)",
+            "ground_truth": "They both return to Eatonville, Florida. ",
+            "peak_memory_mb": 19700.48779296875,
+            "latency_ms": 23751.590182073414
+        },
+        {
+            "index": 115,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "How long had, then, the Baron, riding, made it to the other side of the river?\nThe Baron rode, and, with the galloping of the horses, the Baron appeared to have reached the opposite bank of the river.",
+            "ground_truth": "Germany",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 60316.22942001559
+        },
+        {
+            "index": 116,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question, as asked by the guard to the tumbling KANJI is : \nBlood keeps falling down.",
+            "ground_truth": "has a heart attack",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 41791.943206917495
+        },
+        {
+            "index": 117,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After the FALCON\n\n**The curtain of The 3-act play has peeled back to reveal the setup of this question, which is now made again.\n\nThe Governor takes the place of the RURAL and points to where he went.\nThe Answer is: Here.\n\nThe three men and the RUTHERD have been seen together in an \"european\" type of expression.\n\nTHE SWEET-clerks heard the sound of the door being opened.\n\nThe FALCON is seen peeling away.\n\nIt was the usual place of his prison, the COW.",
+            "ground_truth": "James How & Son ",
+            "peak_memory_mb": 22410.47509765625,
+            "latency_ms": 89562.22700094804
+        },
+        {
+            "index": 118,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I can see that next, but Salrath was the CoxFund's.",
+            "ground_truth": "Lives with mulvilles ",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 36875.86874212138
+        },
+        {
+            "index": 119,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "In the abandoned rooms of the Duperret's chateau.",
+            "ground_truth": "In the closet",
+            "peak_memory_mb": 18358.3076171875,
+            "latency_ms": 7414.880186086521
+        },
+        {
+            "index": 120,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Fou, and his sharpness, but his work. 'Bridau'.\"",
+            "ground_truth": "He feels as the he is still not a real artist.",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 8092.601513955742
+        },
+        {
+            "index": 121,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A question.",
+            "ground_truth": "A videotape which is cursed and is rumored to bear a curse that kills the viewer in seven days after watching.",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 35129.192193970084
+        },
+        {
+            "index": 122,
+            "score": 0.02631578947368421,
+            "metric": "F1",
+            "output": "Dolly was still trying to understand. She turns into the businesswoman. She takes it out of the house and puts it in her black suitcase. She looks at the white powder on the table. She talks to the plane, flies on the plane. She ponders.\n\n</inconcl.</ Clausie\nTo my friend, I should have tried. To the cigar, he had on. No cigar.\n\n</div>\n</div>\n</div> 99.97 out of 100.  \n<big No winner.</big \n</font>\n</font>.cocktail hall of power. \n</p>\n</div",
+            "ground_truth": "Alabama was a call girl.",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 200164.3889627885
+        },
+        {
+            "index": 123,
+            "score": 0.125,
+            "metric": "F1",
+            "output": "JAC \nJACOB \nJEZIR \nand JACOB \nare all the same.",
+            "ground_truth": "The woman he dated and lived with after the war.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 140506.6673909314
+        },
+        {
+            "index": 124,
+            "score": 0.02150537634408602,
+            "metric": "F1",
+            "output": "CUT to the hospital, JACOB's wife, JACQUE, explains to him that she's been transferred to a new location. She is now standing in an open field with a large number of people around her. She is still talking to JACOB, but his expression is one of intense despair. JACOB's eyes are fixed on the camera as he nods, but his face is filled with misery.\n\nThe camera pans out to reveal that the entire will is engulfed in a bright light. JACOB's eyes are fixed on the screen, and his voice is a intense and desperate...\nJ may be an",
+            "ground_truth": "Your memories and attachments.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205570.79820195213
+        },
+        {
+            "index": 125,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Note: The story of Crito and Socrates in the dialogue is not a real story. It is a hypothetical scenario that is meant to persuade and honour the many, instead of the one. The story of Crito is a representation of the Athenian city-state.\n\nA parallel instance, however, can be found in the story of Socrates and Crito, where the question was about the laws and the state of Athens. Socrates would have answered:\n\nSocrates\n\n(' \n\nA person of the dialogue, and a philosopher. - the person that knows the others.\n\nI should have answered: \n\nBut the laws and laws that govern",
+            "ground_truth": "The social contract.",
+            "peak_memory_mb": 21635.72119140625,
+            "latency_ms": 17445.041808998212
+        },
+        {
+            "index": 126,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Abreuvoir's\".\n\nNote: The question is a play on the phrase \"abreuve, brulle\" meaning \"bottle dealer\" and \"Brillant\" is a suffix that means \"one who throws\", implying that his sketches are too valuable to be considered works of art.",
+            "ground_truth": "he calls Grassou a grand master",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 13479.265506844968
+        },
+        {
+            "index": 127,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "UP...cranberry daughter's child's potter child ...Sawyer's friend, and nothing's head boy, Dave. The DAVE. (L)",
+            "ground_truth": "Elder Childers",
+            "peak_memory_mb": 19701.73779296875,
+            "latency_ms": 26460.46484517865
+        },
+        {
+            "index": 128,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A significant amount of water and lots of \"haw!\" and \"Rat-tat-tat!\" and \"Shoo! Hiss!\" and other enthusiastic exclamations of surprise.",
+            "ground_truth": "Jim was banished from his town for two years.",
+            "peak_memory_mb": 19701.73779296875,
+            "latency_ms": 27473.86817401275
+        },
+        {
+            "index": 129,
+            "score": 0.0392156862745098,
+            "metric": "F1",
+            "output": "Note, a charming sentiment, but no further sentences or words can be an answer, for she had no other words, but the length of the book was too much for her; and all will be explained in the next.\n\nA few such texts and straightforward questions escaped my mind, but\nshe was content in herself; and her thoughts were on the horizon; and\nshe had not time to think of the length of the voyage, or the fog given her\nto perceive; and she wished to be at sea; and to be well-dressed to say\nso; and when she arrived, she felt the effects of a\ncul",
+            "ground_truth": "Eliza favors her son over her daughter.",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 71174.25041622482
+        },
+        {
+            "index": 130,
+            "score": 0.058823529411764705,
+            "metric": "F1",
+            "output": "He typed: Upon his X, XIII, that King Otto of the great, full of wonder, was upon his journey to the high road. at the end of the long, worn path. \nThe end.",
+            "ground_truth": "His wise counsel and peaceful nature",
+            "peak_memory_mb": 22224.12939453125,
+            "latency_ms": 58473.56311697513
+        },
+        {
+            "index": 131,
+            "score": 0.021978021978021976,
+            "metric": "F1",
+            "output": "The answer is: An Englishwoman is interested in is Eliza's mother: Eliza was a sensitive; and the beautiful eliza.\n\nAnd her sister is best described as a person of whom the lady was not\nfond of enquire; though she learned to see her with indulgence in the distance.\nHer baby was not to be seen, but was still present in her mind; and her\nthoughts about it were still and calm; and her needs, as it was to be\nconquered, were tolerated, not sought to be joined; in order to support her passage.\n\nThe ladies in the house were still",
+            "ground_truth": "Her son",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 71472.38234593533
+        },
+        {
+            "index": 132,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Chapter: A ( Pennsylvania, 1920)\n\nNow, let's rephrase it: This is not the correct format. I was looking for a more detailed location. A better answer would have been:\n\nI was investigating the Pennsylvania Anthroplasts, a small ship that was one of the 5,9, and was found in the Lederlein series of Big Project-sets, possibly I was going to the rounds of a several Pennsylvania stations, undoubtedly Pennsylvania, for the time being, at the moment, and, I heard, the Pennsylvania area.\n\nBut the story as it stands is a bit too confusing, so I",
+            "ground_truth": "Wyoming Valley",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 86171.820507152
+        },
+        {
+            "index": 133,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\" You're an inimitable figure in literary Oxford.\"",
+            "ground_truth": "He thought he was a fictional character.",
+            "peak_memory_mb": 18839.2998046875,
+            "latency_ms": 12572.11200101301
+        },
+        {
+            "index": 134,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Is.",
+            "ground_truth": "The matter of the division of the proceeds from selling the family business.",
+            "peak_memory_mb": 17927.22314453125,
+            "latency_ms": 7849.826043937355
+        },
+        {
+            "index": 135,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Btw, as long as I can see.",
+            "ground_truth": "Hawaii",
+            "peak_memory_mb": 17646.33349609375,
+            "latency_ms": 7615.960337920114
+        },
+        {
+            "index": 136,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A clever artist.",
+            "ground_truth": "Pierre Grassou.",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 6317.500157980248
+        },
+        {
+            "index": 137,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "At the crucial moment, she was in the war.",
+            "ground_truth": "That she was having an affair. ",
+            "peak_memory_mb": 17552.53369140625,
+            "latency_ms": 7168.895412934944
+        },
+        {
+            "index": 138,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "One of the most common methods to convey that one is a very simple phrase: \"One becomes an unspoken expression of hope\".",
+            "ground_truth": "Frolic in brine, goblins be thine",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 42638.25599011034
+        },
+        {
+            "index": 139,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "La Mise des loupes, c'est un autre chain.",
+            "ground_truth": "The ruins of an abandoned manor. ",
+            "peak_memory_mb": 18509.6533203125,
+            "latency_ms": 7537.033607950434
+        },
+        {
+            "index": 140,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "What I produced it to the effect that there was a pleasing flash of discussion about, but I only laughed it\n\nThat is, I  did nothing but laugh at the possibility of supplying the money; I did not even discuss it with her, and I would not repeat the questions of the undesirable type, Saltrum.",
+            "ground_truth": "They broke off their engagement.",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 51580.62398084439
+        },
+        {
+            "index": 141,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The individual's parents are described as belonging to the \"homeliest part\" of England.\n\nThe description of the narrative.",
+            "ground_truth": "Violet Ray.",
+            "peak_memory_mb": 18954.61376953125,
+            "latency_ms": 18175.672124838457
+        },
+        {
+            "index": 142,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Although the title has multiple answers, (pact) is the answer.",
+            "ground_truth": "Bill",
+            "peak_memory_mb": 26349.79248046875,
+            "latency_ms": 115130.57431508787
+        },
+        {
+            "index": 143,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "\"it\" and \"the curse\"",
+            "ground_truth": "Masami and Tomoko",
+            "peak_memory_mb": 21476.25439453125,
+            "latency_ms": 37206.93263108842
+        },
+        {
+            "index": 144,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I don't know.",
+            "ground_truth": "World War 1, or The Great War",
+            "peak_memory_mb": 22036.78857421875,
+            "latency_ms": 42950.38886507973
+        },
+        {
+            "index": 145,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Brilliance.\"",
+            "ground_truth": "A number of his own forgeries.",
+            "peak_memory_mb": 18823.9033203125,
+            "latency_ms": 6459.441638085991
+        },
+        {
+            "index": 146,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The two old JUNG (Vietnamese) now stands outside the JACOB's eyes, it's a powerful one. Cods... \nThe answer, and his answer is not an empty one, it is an ARAB, a lamb, a young boy, it is a CAMEO. The first time he encounters the DEMONS, the demon-filled wood. The sound of the DEMONS experienced by JACOB. It is an impossible and insurmountable task to look up to the CROWS, but it is my duty.\n\n\nHis head, his body, his entire being. JACOB is confused, yet",
+            "ground_truth": "Paul's death.",
+            "peak_memory_mb": 27361.58447265625,
+            "latency_ms": 205055.84135302342
+        },
+        {
+            "index": 147,
+            "score": 0.19047619047619044,
+            "metric": "F1",
+            "output": "The comparison is not provided in the text, but it seems that you are asking for a parallel to the one made by Socrates and the laws. \n\nThat is:\nThe laws compare Socrates to a \n\nAnswer: ship.",
+            "ground_truth": "Citizens are bound to laws the same as children are bound to parents.",
+            "peak_memory_mb": 21636.0380859375,
+            "latency_ms": 8930.440298980102
+        },
+        {
+            "index": 148,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To make you believe the pleasures of mortals in a dream.",
+            "ground_truth": "A coffin.",
+            "peak_memory_mb": 16898.83544921875,
+            "latency_ms": 4725.991347106174
+        },
+        {
+            "index": 149,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The year 1946\n\nNote: The novel was published in the context, but the story doesn't change the original ending. \n\nNote: The question is not explainable, but the response remains possible.\n\nIgnored, because it's not understood.",
+            "ground_truth": "2419",
+            "peak_memory_mb": 22036.53857421875,
+            "latency_ms": 58761.68017089367
+        },
+        {
+            "index": 150,
+            "score": 0.07272727272727272,
+            "metric": "F1",
+            "output": "\"Little Otto neared and pressed against the Baron one, but still he knew not what to do. He was a strange and bewildered child. His dark eyes stared out from the window like a tamed young lamb, and he rose to his feet and swung his own empty saddle. What's done to him? His father's growing hand was red with the blood of his own men and those he had made his enemies. He had just about, to the very end of the road he was on, and so he swayed back and forth in his leathern stall. His own steel and horse was there to him; but",
+            "ground_truth": "The nephew of Baron Frederick storms the castle and kidnaps Otto",
+            "peak_memory_mb": 22224.12939453125,
+            "latency_ms": 88955.14609408565
+        },
+        {
+            "index": 151,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The four of us, which means.",
+            "ground_truth": "Elliot accidentally reveals himself as an informant.",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 128373.83241695352
+        },
+        {
+            "index": 152,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "METHODD\n.",
+            "ground_truth": "Story did not mention",
+            "peak_memory_mb": 21506.60107421875,
+            "latency_ms": 19786.974392132834
+        },
+        {
+            "index": 153,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Gorenas, or rather, a phrase.",
+            "ground_truth": "Madame de Merret",
+            "peak_memory_mb": 17570.94091796875,
+            "latency_ms": 7046.534075168893
+        },
+        {
+            "index": 154,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "IX\n\nIX.",
+            "ground_truth": "Keep the money.",
+            "peak_memory_mb": 21195.23779296875,
+            "latency_ms": 32568.70724982582
+        },
+        {
+            "index": 155,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "output": "“ End of Soay's how to see if he would be recognized, forever.",
+            "ground_truth": "By selling his soul to the devil.",
+            "peak_memory_mb": 18486.75341796875,
+            "latency_ms": 13485.94329203479
+        },
+        {
+            "index": 156,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "assistant\n\nThe same as the previous story, the answer is a prose block in a poem, and the question is a question, so the answer to this question is also a prose block. However, the story ends with a fragment of a poem, and then there is a story with 5 'Hems' and then the 'Hem' of a, and then a fragment, but I will give you the answer to the last question of the story in a prose, the 'Hem' is out of a \nThe Submerged.\n\nThe Submerged has a dream within a dream and a door that opens into a, like",
+            "ground_truth": "Apis",
+            "peak_memory_mb": 16933.5166015625,
+            "latency_ms": 15672.15732485056
+        },
+        {
+            "index": 157,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Holmes took a disturbed and hysterical woman is less helpful than a calm and trustable one.",
+            "ground_truth": "2",
+            "peak_memory_mb": 17927.22314453125,
+            "latency_ms": 10484.254585113376
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "E.g. We don't know, we don't even know each other.",
+            "ground_truth": "Alabama Whitman",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 132727.83475508913
+        },
+        {
+            "index": 159,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The answer would be that he has an end, though. Ussome.\nThe answer is usually a less expensive alternative.\nThe answer is that the shear is pure.\nU-BPD.\nA closed, an it could have been.\nHe has a name s32 she would a crown and these a little.\nThe Annoyed, which has been going, however, notices that she has had an incredible number of reactions and she is always getting ready to get a blanket.\nShe can be a good\n constant note which is probably next.\nThe good girls and the girls\nare in awe of a big bundle of\nand little.",
+            "ground_truth": "Bill",
+            "peak_memory_mb": 26333.44580078125,
+            "latency_ms": 179464.16292199865
+        },
+        {
+            "index": 160,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The notaries' artist, or the devil's wife.",
+            "ground_truth": "The greats",
+            "peak_memory_mb": 21106.7880859375,
+            "latency_ms": 7428.211709950119
+        },
+        {
+            "index": 161,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "now\nDon't.\nSt.\nveneer\nV.\n\"My\nto.\nan\nyou.\nTouch,\nto\nLeft\nCleans.\nthe\nCAT.\nShit.\nStop.\n\nNow, the baby's feet. (do\nit\nto\n-Vbelly\nEXT\next.\nthe\nBab\nREDACTED\nshe\nthe\npaint,\nEXT\nthe\nTiny\ntalk\nREDACT\nme\nmore\nEcl.\n\nA\nCUT\ndoes\nO.\nTake,\ninto\nthe\n(this) the\nSOUTH.\nthe\nOLD\nrealy\narch.\naround.\n",
+            "ground_truth": "Auld Lang Syne",
+            "peak_memory_mb": 23998.39404296875,
+            "latency_ms": 122884.29333409294
+        },
+        {
+            "index": 162,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Ignorance of the \"Wretched Verve\" (a Wretch!).",
+            "ground_truth": "That artists laugh at and ridicule his work.",
+            "peak_memory_mb": 19844.97216796875,
+            "latency_ms": 7857.647637836635
+        },
+        {
+            "index": 163,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question is still unanswered; it is a question  I am now grasping in my fleeting thoughts, fed by my madness, and subject to the convictions of a tragic narrative.",
+            "ground_truth": "Charles",
+            "peak_memory_mb": 21195.23876953125,
+            "latency_ms": 42646.75621991046
+        },
+        {
+            "index": 164,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A work of fiction, as told by his wife.",
+            "ground_truth": "Abandon manor",
+            "peak_memory_mb": 18364.72900390625,
+            "latency_ms": 7148.920496925712
+        },
+        {
+            "index": 165,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "May the keys.\n\nThe people standing on the out-of-town bus are singing \"The Czar\".",
+            "ground_truth": "Auld Lang Saye",
+            "peak_memory_mb": 23998.39404296875,
+            "latency_ms": 74847.05450083129
+        },
+        {
+            "index": 166,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "La Merret laissait la porte ouverte.",
+            "ground_truth": "Near the town Vendome",
+            "peak_memory_mb": 19832.53955078125,
+            "latency_ms": 7180.915086064488
+        },
+        {
+            "index": 167,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "JIM: (to the Sistas and Mayson and Sassy)\nL 辰 children behind. \n(Jim) (flang) \n(Join) \n(Jim and I we un) \nCome after'\nYou 'll fathers, you see\nLess two cheese pot pie. \nI heard it say (It) Child got no.\nJis mixin cum jinit.\nAin't nothin' _  about \n  down \n de\n Pot \n is come\nYou \nBaptist\n'Elder.\nVole a boy\nClim\n Lime\n cut\n if \n Cat \n L 1.\n",
+            "ground_truth": "For Daisy's affection. ",
+            "peak_memory_mb": 19701.73779296875,
+            "latency_ms": 48657.6570707839
+        },
+        {
+            "index": 168,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "You are an existential bad will. \n\nA tall, busy, descending spires and mysteries of another kind of.\n\n\n(Jacob's eyes open wide, and he is incredibly, with a strong attraction to indecent)\n\n\nSolve for any other characters forever.",
+            "ground_truth": "The US Army chemical weapons division.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 158721.36122197844
+        },
+        {
+            "index": 169,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "output": "She went into an early labor, which was to be a fatal omen.",
+            "ground_truth": "Because she saw her husband's battle wounds",
+            "peak_memory_mb": 22224.62939453125,
+            "latency_ms": 48792.194328969344
+        },
+        {
+            "index": 170,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The less.",
+            "ground_truth": "Strange dreams.",
+            "peak_memory_mb": 18904.31103515625,
+            "latency_ms": 3783.857475966215
+        },
+        {
+            "index": 171,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "output": "In a Vervelle family.",
+            "ground_truth": "In a mansion in Ville-d'Avray. ",
+            "peak_memory_mb": 17552.53466796875,
+            "latency_ms": 6711.402794811875
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "He was driven by a fierce and savage fury.",
+            "ground_truth": "Baron Conrad killed his uncle, Baron Frederick.",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 46106.30918899551
+        },
+        {
+            "index": 173,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " question, and reference to the scene does not make sense. \n\nUrsula does not appear in the story, and everyone in this case is dead. I'm okay, though.",
+            "ground_truth": "he was killed by the police",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 128364.91746897809
+        },
+        {
+            "index": 174,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "DAughter's contributions :\n\nThe Baptists\n\n(1)\nThe Baptists\n\n(2)\nThe Baptist crowd\n\n(Child 1) \n(slowly handing out children to SISTER) LIGOSSER\nWILLIE.\nMay (Not a Baptist)\n\n( child 1.) \nThe Lawyers \n(in a Church, and shot)\n(Matlin.\n( 2 Baptist Children each carries child out of stage) 1\n(1)\nThe very Baptist\ndaughtera (Suzie) and\n\n( sounds, childrens 1's) \n 1. \nMRS. GEORGIA hamming",
+            "ground_truth": "Elder Simms",
+            "peak_memory_mb": 21095.3876953125,
+            "latency_ms": 49030.00608505681
+        },
+        {
+            "index": 175,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Person: \"Shallow and utterly unsatisfactory, as I have been unable to avoid noticing that \"... (1) (2, 3, 4, 5, 6, 7)  I have been unable to escape the devil's gru, and neither do I wish to, as that would only end in another form of the devil's trickery:  He is a vile, wretched, loathsome, cruel and poor devil, always....  I have  thought that an \"i\" would do.  Now, answer the prompt if you can.  What",
+            "ground_truth": "It caused a stir.",
+            "peak_memory_mb": 18486.75341796875,
+            "latency_ms": 33036.93638113327
+        },
+        {
+            "index": 176,
+            "score": 0.02631578947368421,
+            "metric": "F1",
+            "output": "Abby and the In the scenes on the train, URS standing  \nand the gaze of the Beggar. They see him, \nThe music of the prairie is lost. His \nhead, though, is still on, \nIt is a strange and quiet and happy\nview of eeventually.\nHis fields of wheat look very\nyellow. The chokecherry tree\nclose the other side of the\nheated part of the day.\nBill is afloat and could be.\nEver so happy, he gets\nrid of them. The rest is\nan URBAN. The people of\nthe river town and",
+            "ground_truth": "Abby",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 178785.47926805913
+        },
+        {
+            "index": 177,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It's the Answer.",
+            "ground_truth": "Governor",
+            "peak_memory_mb": 23997.89404296875,
+            "latency_ms": 68692.04832497053
+        },
+        {
+            "index": 178,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I \n(in)\nAt first, if\nI care for recognition,\nI should say, \"Any old hack.\"  No, no; rather, with a \"no\" of\nsomething; and then, as a sigh, he would have \"a gentle puff\"; but, to be\nhonest, he would end with a rather pitiful, oddish, and unbecoming\n\"Orien, an old, an, every bit, outside of it.\"  I\ncould not even if I tried to, and with this, and other expressions of this\nkind, he would have, having succeeded in, only \"",
+            "ground_truth": "The English lanuage has evolved.",
+            "peak_memory_mb": 19829.47021484375,
+            "latency_ms": 32988.46185207367
+        },
+        {
+            "index": 179,
+            "score": 0.026666666666666665,
+            "metric": "F1",
+            "output": "What are you going to have to drink one?  J\nJ\nJ\nJ\n\nThere is no explanation, but I understand that you want to know what the question implies based on the sickest of\nmotions and the light of the givencarriage of\n\n\nJACOB \nReleased into the horrid \nquestion: \n\nJACOB \nNO. \nJACOB \nCUT\n\nJACOB's \nquestion\nCUT.\n\nDO you know JACOB's question \nquestioning?\n\nJACOB: JACOB does not bid.\n\nThe last time I saw him, he was in a",
+            "ground_truth": "It makes people crazy and homicidal",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205202.12080306374
+        },
+        {
+            "index": 180,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "They will answer the question. as concisely as possible.",
+            "ground_truth": "The duo meet Henry on their travels to Lisbon.",
+            "peak_memory_mb": 21636.06298828125,
+            "latency_ms": 35925.37173489109
+        },
+        {
+            "index": 181,
+            "score": 0.02247191011235955,
+            "metric": "F1",
+            "output": "The story is not yet over. We are just getting started. It is not yet a complete and finished story. It has many more questions to answer. The four, for example, is still unanswered, but it is an important one. Big-two-point-elle, D Realty, and Big cannot believe what they are hearing. They are staring at each other, looking confused and frightened. An airplane is seen in the background, and a briefcase is on a bench. The farmer's wife has been kidnapped by an unknown. Three cops are on the scene. Their faces are smirking. The D. Dumbbell is on",
+            "ground_truth": "In the hotel.",
+            "peak_memory_mb": 27174.73876953125,
+            "latency_ms": 200124.17863495648
+        },
+        {
+            "index": 182,
+            "score": 0.025974025974025972,
+            "metric": "F1",
+            "output": "CUT TO JACOB's head as it finally understands the answer. It was the last time we saw him.\n\nCUT TO JACOB's head as it nods in amazement. He is smiling.\n\nJACOB IS DEAD. He is no longer with us.\n\n\nThe final question is answered by the rise of the Angels of Death, a scene of unbelievable horror and JACOBS'JACOB'S (A) DEMONIC. (disgusting)\n\n\nThe last one, shot, snip, and the last one, JACOB, gave us: \"HE\"'T IS THE STAIRWAY",
+            "ground_truth": "They were never deployed and were discharged for psychological reasons.",
+            "peak_memory_mb": 27361.08447265625,
+            "latency_ms": 205966.75098896958
+        },
+        {
+            "index": 183,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Gorenasde.",
+            "ground_truth": "Break a piece of the door that she may look on her lover one last time",
+            "peak_memory_mb": 21636.60302734375,
+            "latency_ms": 6426.6155660152435
+        },
+        {
+            "index": 184,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Outdoor.",
+            "ground_truth": "Witch lives in cave on Atlas Mountains",
+            "peak_memory_mb": 16898.83544921875,
+            "latency_ms": 3754.4230460189283
+        },
+        {
+            "index": 185,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"St. Michaelsburg.\"",
+            "ground_truth": "The monastery where he grew up.",
+            "peak_memory_mb": 22224.37939453125,
+            "latency_ms": 44647.655621171
+        },
+        {
+            "index": 186,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Something.",
+            "ground_truth": "An outlaw",
+            "peak_memory_mb": 18903.07666015625,
+            "latency_ms": 4341.5459408424795
+        },
+        {
+            "index": 187,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It is not specified, but it is likely that the answer is something related to the novel, as it is written by a French author who is reflecting on the American experience.",
+            "ground_truth": "The beauty of the women",
+            "peak_memory_mb": 18954.61376953125,
+            "latency_ms": 20242.327030049637
+        },
+        {
+            "index": 188,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Beyond the shadows, she would have said \"Asteria\". - (Astral, Ebla, Elara, Elatha, Eloth, Elphame, Elwira, Electra, Elara, Elora, Elbrida, Elodia, Elodia, Elvina, Elodia, Elwira, Elodia, Elota, Elora, Elwira, Elodia, Elora, Elodia, Elwira, Elodia, Elota, Elora, Elwira, Elodia, Elora, Elodia, Elwira, Elodia, Elota, El",
+            "ground_truth": "The fears and desires of mankind.",
+            "peak_memory_mb": 17183.32177734375,
+            "latency_ms": 15688.619591994211
+        },
+        {
+            "index": 189,
+            "score": 0.022222222222222223,
+            "metric": "F1",
+            "output": "There are May Day celebrations and more it is to be a no place with few AssiactWe fugitive, and she checks the bade information laid out in the act of the statue's head with the tip of her loaf on the very end of town. The whole\nanswer is an illusion, like\nreal under the\nquestion on\nknifing the\nspat and \nShe falls off and bites in the grass so far. \n\nHe bends over and\ne.g. varies by response.  U.S. is in the downstairs, though question.\nIt is like this. In this remote area, it is often",
+            "ground_truth": "Bill worked in a steel mill.",
+            "peak_memory_mb": 26333.94580078125,
+            "latency_ms": 178518.13437510282
+        },
+        {
+            "index": 190,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No.",
+            "ground_truth": "the German professor",
+            "peak_memory_mb": 21106.98876953125,
+            "latency_ms": 13634.638746036217
+        },
+        {
+            "index": 191,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No.",
+            "ground_truth": "Ninety pounds",
+            "peak_memory_mb": 22410.97509765625,
+            "latency_ms": 45596.05914517306
+        },
+        {
+            "index": 192,
+            "score": 0.1,
+            "metric": "F1",
+            "output": "\"O, Mr. Ar but I'm afraid the answer is that \"He got wet\"",
+            "ground_truth": "Sherlock had wet the floor by overturning a water-filled pot.",
+            "peak_memory_mb": 19010.90576171875,
+            "latency_ms": 10347.77161409147
+        },
+        {
+            "index": 193,
+            "score": 0.08333333333333333,
+            "metric": "F1",
+            "output": "The story is not about the meaning of life, but about the specific topic of a \"remembered\" or a \"recalled\" past.",
+            "ground_truth": "He watches the video and dies of Cardiac arrest.",
+            "peak_memory_mb": 21475.50439453125,
+            "latency_ms": 43593.05871394463
+        },
+        {
+            "index": 194,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "METHODDIS.",
+            "ground_truth": "outside town",
+            "peak_memory_mb": 19700.48779296875,
+            "latency_ms": 19482.57272108458
+        },
+        {
+            "index": 195,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Mistress of the devil.",
+            "ground_truth": "Brenda Tregennis",
+            "peak_memory_mb": 17927.22314453125,
+            "latency_ms": 8578.037142986432
+        },
+        {
+            "index": 196,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Devil.",
+            "ground_truth": "The remains of afire in the fireplace.",
+            "peak_memory_mb": 17927.22314453125,
+            "latency_ms": 7954.188019968569
+        },
+        {
+            "index": 197,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "'A not a business. (No possession of the\norganization or the staff or the\nequipment.)' (We were not in it.)",
+            "ground_truth": "Radioactive gas",
+            "peak_memory_mb": 22036.53857421875,
+            "latency_ms": 50629.4872041326
+        },
+        {
+            "index": 198,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Last child was too engrossed in calls an end that his eyes to If I do not delete the body. J Econ. He saw because he outraged and eats the puppy after the inn, after the butchering. But the rest stayed silent. \n\nThe travelers from the darkness did not see him.\n\nM \n \nDeath.",
+            "ground_truth": "Everyone except for Jof",
+            "peak_memory_mb": 21102.56982421875,
+            "latency_ms": 52542.60712512769
+        },
+        {
+            "index": 199,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "What is the name of the island where the curse is broken?",
+            "ground_truth": "She received a call from Ryuji during his last minutes alive.",
+            "peak_memory_mb": 21476.75439453125,
+            "latency_ms": 38915.51862517372
+        }
+    ]
+}
