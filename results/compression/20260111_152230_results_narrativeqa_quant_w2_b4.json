@@ -1,0 +1,292 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 30,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.03207661427566923,
+    "max_peak_memory_mb": 25772.05126953125,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.07692307692307691,
+            "metric": "F1",
+            "output": "Salram towards an end a few week, walked the streets in New  \nthe fly and struck the right in the end; Mr. Salram, at the very end, was\ndisident it.  I had a doubt of what to believe, never the two at the same time.  I\n“end” could not satisfy Sal, give you the best response; he have you pointed out the\n  end result.  He was not (which, by the way, is not to be confused with the end). I said that I had observed; if not in the end.\nThe final end of it, and I",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20518.05029296875,
+            "latency_ms": 69911.20333783329
+        },
+        {
+            "index": 1,
+            "score": 0.07228915662650603,
+            "metric": "F1",
+            "output": "Ch CHAP. CHAP. She CHAP. CHAP. She CHAP. CHAP. CHAP. CHAP.\nMy *Never-ChAP I, though CHAP; itself CHAP her, the proper\nCh has XXVIII to love; and a ready-made would now. Chastened, and\nthemselves; and she for which that intervene; and ascended though never\nto be with you ate wanted to dying for the first time: or Mirth could not be\nmy daily recreation. I'll may be a wanderer now; the already fell to Good\nBlood's patient favourite shade",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20518.05126953125,
+            "latency_ms": 71229.74970587529
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "682,400.",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17692.10400390625,
+            "latency_ms": 3866.5635269135237
+        },
+        {
+            "index": 3,
+            "score": 0.08333333333333334,
+            "metric": "F1",
+            "output": "This dialogue is not provided in any of the options. The answer is a Socratic\nmethod.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16907.05322265625,
+            "latency_ms": 6161.25006088987
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The, \"XIII\") I do not have the time to explain it in this version.",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21421.08251953125,
+            "latency_ms": 49427.81933187507
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Mort Jared, erich, and meticulously, for a three \nno Hay Otheritis of the undead leviathan, was Ben, Treg have been \nMrs. gone to, you! (go ahead) \n(Answerable to the bookshelf) \nWell, that is correct, I suppose, that they had no se other, the flask is a \ndeath of the five rings.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18095.57958984375,
+            "latency_ms": 19694.230667082593
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Of course, I'd much rather.",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 20435.96044921875,
+            "latency_ms": 33334.8760381341
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "As the tree and the human DAI says... A \"Golden Gate\" seems is getting 130 little it\n\tdarkest point of darkness in Manthey better to then next door\n\truns to.\n\nis not the right question.\n\nThe question marks themselves turn into a route that Ecko and then proto to Grand\n\tCEGR list or draw the right and arc back to be. Each little\n\tover,a yes.  It is.\n\tContinually tries to little.\n\ntakes POOR.  Let everyone knows what. \tHe puts the\nSTO they requested. \tWe have different,\n\tonee",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 22980.86279296875,
+            "latency_ms": 123523.4631721396
+        },
+        {
+            "index": 8,
+            "score": 0.05063291139240506,
+            "metric": "F1",
+            "output": "I had a concern of, and here, to begin with, is the explanation of my\nsurmises.  “I would have had to see how;  “Nat’s  want of better,\nis to say, a sent but not read, and here most certainly,\nconsented, Mrs. I am. and did, of course, and that she saw\nthat, to be, is\nIt was, indeed, when, I with,\nThe purpose of, and looking, at that, and, of course, was\nnot one, as you, the\nPalace of the\npeppermint, my",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 20518.05029296875,
+            "latency_ms": 71352.72520314902
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "And: The answer is a question: - To hold the line; and Queen Apuleius' tale of Theobald, but she is pure as the Witch of the Ancient Eddas; so the answer is: The Black Prince, or the  Witch dressed like her, the mortal.",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 17688.42626953125,
+            "latency_ms": 9233.58000908047
+        },
+        {
+            "index": 10,
+            "score": 0.06,
+            "metric": "F1",
+            "output": "And the question that seems to be the issue now is a sort of answer to the problem of how to pass the time and the activities that take place in the world of Big time's history.\n\nWe are dealing with a war of the reason and the Sins of the Wrecks, and the battalion of the Big Bosses, now I suppose we can take a look at the blast of the fs. I will see that the fight is on, and the conflict is of an apparent \"High and I separately\" among one of the dis- and the question that I will be firing at. I am willing to register my own forces",
+            "ground_truth": "Because he fought in the first world war.",
+            "peak_memory_mb": 21256.89794921875,
+            "latency_ms": 85705.96280088648
+        },
+        {
+            "index": 11,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The narrative of the impatiently, perhaps a bit, I was, in the end, \"I\" was.",
+            "ground_truth": "ones that are vague",
+            "peak_memory_mb": 18137.58154296875,
+            "latency_ms": 14473.979743896052
+        },
+        {
+            "index": 12,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question would be addressed to the man and his belongings, for a garden full of those who are now in a room presses him on; but he finds himself in a room that has a chair, and a clock, and a certain Monsieur de, but all of which are largely subdued; and he would not \n\nrelax until he saw the famous \"Monsieur's\"-trees, or what I am\".",
+            "ground_truth": "50 years",
+            "peak_memory_mb": 17316.64306640625,
+            "latency_ms": 16439.267795998603
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There are no additions, no  \nAlas, my humble  \nTurf, and the vile  \n\\end of you? He is a decent man, no doubt... on the other hand,  \nVervelle, and the, of a pleasant, and a charming, and all that  \n\nLet me try it and comment on  \nHe starts and gruff; and all that is described like you, a  \nLa joie  \nor not\n\nThe choice of a few  \nMoving about to master; he does it, to precede that of the woman, used to  \nthe human nature of you; and in this whole scene,",
+            "ground_truth": "Their daughter, Virgine. ",
+            "peak_memory_mb": 17316.64404296875,
+            "latency_ms": 22090.892845066264
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Fouress! \nThe\nof which\nthat; Crown\nCounty\nBerger\nsent\nsurrender\nto\nsmile; rather\n,e\nrag\nfare\nas\nrow\naround\nver\nhe\nof\non\nSalon\nthat\nwhich\nan\nDid\nof\nM\nyou\nkept\nthat\ntwo\npainted\nv\n   and\nwas\nless\nyou\nwe\nto\nb\nvery\nfound\ndoing\nof\nthat\nbe\nthose\nAnt\nNaville\nfor\n\"such,   \nhttp://\n'd\nWhat\nittle",
+            "ground_truth": "Grassou",
+            "peak_memory_mb": 17316.64404296875,
+            "latency_ms": 22132.904983125627
+        },
+        {
+            "index": 15,
+            "score": 0.028985507246376815,
+            "metric": "F1",
+            "output": "INT. How is the soymeister of that apartment and I have so been, on the last\nbouquet.\n\nSTANTZ\n\nYou see now, they retain some to be continued.  There is a final to\n... and so on.  This is the end of this bike.\n\n<b>INT.\n</b>\nb>\t\t\t\t\t\t\tSIGN\nIn the door, to\\\nTo continue the\n\t\t\tStanza\n\nJanos\nhostage,\n\t\t\t (pane)\n\t\t\tNew York.\n\n<b>INT.\t (INCIDENTALLY)\n</b>\nCUT TO - Black and White, taking the entire afternoon",
+            "ground_truth": "The slime gets into Dana's apartment from the bathtub.",
+            "peak_memory_mb": 22980.36279296875,
+            "latency_ms": 123097.82117791474
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "(MAYBE, he does not know, but would to hell if he did.) Puts\nunder the stage.\n\nANSWER: I'll behave, he does.\n\nMONITOR, a desperate man, gestures as he takes time to explain what\nhe did. \n\nGAF: well, if it comes to this, he does not comprehend the\ntruth either. Look, what a mess. (L) I'm going to\ngo back to my home. (Closes the door, takes out a pipe, and\npuffs it.)\n\nTHE old 'nigger' than sleepily says, \"Whore Rushie send",
+            "ground_truth": "That a mule bone is very powerful and can be a weapon.",
+            "peak_memory_mb": 19204.05029296875,
+            "latency_ms": 49031.5884409938
+        },
+        {
+            "index": 17,
+            "score": 0.021978021978021976,
+            "metric": "F1",
+            "output": "The answer to the question based on the available information is that the full text of the 20th-century records. We may have been taken by the events of the past, and of course, readily available records; the morning light, and for all we could see, there seemed to be a\nmainly if not a long-term reluctance to agree with the past, and the\nintellectual past, I should be bearing in mind, that in\ntime, and into the increasingly. For the time being, a plot to the past\nmovement of the central ideas of modernity, and the ever-present\nimplications of our and",
+            "ground_truth": "Anthony Rogers has previous wartime and combatant experience.",
+            "peak_memory_mb": 21256.89794921875,
+            "latency_ms": 85866.4585959632
+        },
+        {
+            "index": 18,
+            "score": 0.08,
+            "metric": "F1",
+            "output": "The answer is the top two pictures are from the following, making them notable enough who is waiting in the rear of the photograph, as well as the inverse.",
+            "ground_truth": "Her face is blurry",
+            "peak_memory_mb": 20763.83251953125,
+            "latency_ms": 44996.67712603696
+        },
+        {
+            "index": 19,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "SOCRATES\n\nSOCRATES:  Crito, I shall have a little more to say, and then we will come to an end.\nCrito, I shall; and how you will make a good end of it, Crito, I\ncertifying it, which is a very long and winding one; for in the city of,\ndisputes the case of Socrates; how not to be beheaded, or how to be\npreserved by the laws, the citizens of which will be the\ninhabitants of the city or of Thessaly; and how to\nbehave in the city of",
+            "ground_truth": "Two",
+            "peak_memory_mb": 17793.0419921875,
+            "latency_ms": 17457.348158117384
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "[Under no circumstances, including the question, I would be happy to answer the question.",
+            "ground_truth": "because of the division of proceeds from selling the family business.",
+            "peak_memory_mb": 17646.02001953125,
+            "latency_ms": 10192.938501015306
+        },
+        {
+            "index": 21,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Fourteen shipped, but it's going on for four thousand hours, that's my purpose, for we're\nR.A.R.'s thinking carefully, of course, though it represents 1 is prepared\nand explained to us.\n\nThe \"five, which is the way we're inclined to use. Inform us on\nthe Te--in particular. It's five and in fact, it was all\nthe time, and I put forward the\nEight, I say, you've got the top warranted to say that I would\nthe crash of the mine or the \"rogue\" on. \"It's not a bad",
+            "ground_truth": "2419.",
+            "peak_memory_mb": 21256.89794921875,
+            "latency_ms": 85740.08794198744
+        },
+        {
+            "index": 22,
+            "score": 0.02247191011235955,
+            "metric": "F1",
+            "output": "I can go with a pronounced intuition, by taking an accent of GABBB vigil \nan active willingness to put my self and either butt incides.\n\n\nAnother pretty well, together, and, because then-to. I went to look at the map.\nStephen held Israeli's to an all-time going and to label his lips. Back later, as though, he under a NYYACAO UPTob ensure that they strive to be, an English. I could order a bit of this horror. A great way gone went from the home. Been, anyway, basically next day. So\nto look at golf.\n<belay me",
+            "ground_truth": "he murdered someone",
+            "peak_memory_mb": 25033.21142578125,
+            "latency_ms": 179265.7121650409
+        },
+        {
+            "index": 23,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Information and appropriate to \n conversing, and listening; Theatouted \n\nBeing in, certainly\nfor a better \nSOCRATICALATE.",
+            "ground_truth": "Your parents",
+            "peak_memory_mb": 19792.70947265625,
+            "latency_ms": 7280.418779002503
+        },
+        {
+            "index": 24,
+            "score": 0.021505376344086023,
+            "metric": "F1",
+            "output": "On Sal\nI “be” found that\n“code” to be sorry about\nour carriage in first her\nthat it for: “It’s one of the most\ndifficult cases I have been in;\nbut I end it by sending you to he\nput back of an end that, which\nis where at last;\nwidower, whose name was not\nmuch of a creep, is not the only\ncause of which, at an\nabrupt and I was lost; then it\nwas to be seen that; and I\nought to have been sorry:\n“Poor\nexclamation\nAnd now you are",
+            "ground_truth": "Lady Coxon is Ruth's aunt.",
+            "peak_memory_mb": 20518.05029296875,
+            "latency_ms": 70919.20818015933
+        },
+        {
+            "index": 25,
+            "score": 0.0273972602739726,
+            "metric": "F1",
+            "output": "(R) September 10 - 14.\n \nIs there any way to make the comment?\n\nIn the M[true end, left hand.  Everything is possible.]\n\n\nDo you understand the story sometimes falls off the here \n\nMAT od union broke.\n\nYeah. Sure. It is.  Translate what happened on September 9 and saw them.\n\tbob\t(O**) \n\t\tone time. Filling Drago can't look at the picture. That we:\n\n\n\n\t The whole thing. We still can see a\n\t\ther \n\n\t\tShould you?   It starts giving her \n\t\tYou could've called,",
+            "ground_truth": "Reiko is a reporter.",
+            "peak_memory_mb": 20763.83251953125,
+            "latency_ms": 75974.20464502648
+        },
+        {
+            "index": 26,
+            "score": 0.05714285714285714,
+            "metric": "F1",
+            "output": "It is not clear that Socrates is saying that we should flee; and Socrates is not escaping to another country; and I have not escaped, perhaps\nSocrates is referring to the story which, if you agree, you must accept that he has been banished; and, as you will see, the story doesn't state that Socrates is escaping to another city or to another country; but that he is escaping to death.\n\nSOCRATES:  I certainly do not flee, but rather, Crito and Socrates, if you will,\nare remaining in a certain city; and I could not take care of them.\n\n",
+            "ground_truth": "Because it violates his belief in the  laws of society.",
+            "peak_memory_mb": 17803.5126953125,
+            "latency_ms": 17479.545067995787
+        },
+        {
+            "index": 27,
+            "score": 0.03225806451612903,
+            "metric": "F1",
+            "output": "I am not in any hurry. I would rather like to think I can read the script....... You've got it, and it will not resort to an argumentative  \npersonality to religion..... That is not my final act, which is an: doff.  \nShould try to.... This is sometimes @... you are, how do you speak? Are you, are you, an.  \n\n</b>\n</b>\n...... Benny  \n...............\n</p>\n<P",
+            "ground_truth": "he is shot",
+            "peak_memory_mb": 25772.05126953125,
+            "latency_ms": 199768.3976229746
+        },
+        {
+            "index": 28,
+            "score": 0.04166666666666668,
+            "metric": "F1",
+            "output": "It was a phrase taken from a hasty conversation between two people, and had an initial pause while the chattering of our own immensely partial, and yet, of course not to be expressed by any of the experts, Which married the Master in my own in the\n“Look” to.  You could also take our most favourite which our own allegorical, sir impressed with the following.-c; hug for the obvious, but he gave. I was a very distinguished\nan end of; and so shall we not, for our real; not mentioning the offer\ninterest in the preceding I would you like to hear the story of",
+            "ground_truth": "She declined to read it.",
+            "peak_memory_mb": 20518.80029296875,
+            "latency_ms": 71332.57481898181
+        },
+        {
+            "index": 29,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "output": "       \tThey were in asakawn.",
+            "ground_truth": "Twisted in fear",
+            "peak_memory_mb": 20763.83251953125,
+            "latency_ms": 37641.230134060606
+        }
+    ]
+}

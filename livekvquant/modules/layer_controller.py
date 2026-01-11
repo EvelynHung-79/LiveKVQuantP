@@ -10,8 +10,15 @@ logger = logging.getLogger(__name__)
 
 class TransformerLayerController(nn.Module):
     """
-    中央協調器：管理 Warm-up/Quantization 狀態切換與數據流。
-    對應論文 3.2 Transformer Layer Controller Module.
+    Transformer Layer Controller (TLC)
+    
+    負責協調 LiveKVQuant-P 的核心流程：
+    1. 攔截 KV Cache 的資料流。
+    2. 決定是否進行 Bypass (Decoding 階段)。
+    3. 執行異常值分離 (Outlier Isolation) 與保護 Sink Token。
+    4. 更新統計數據 (Statistics Update)。
+    5. 執行量化 (Quantization) 並存入 KV Cache Manager。
+    6. 呼叫 Attention Core 計算最終的 Attention Output。
     """
     def __init__(self, config, layer_idx: int):
         super().__init__()
@@ -47,96 +54,106 @@ class TransformerLayerController(nn.Module):
 
     def forward(self, q_tensor, k_tensor, v_tensor):
         """
-        執行 LiveKVQuant-P 的核心流程：
-        1. Decoding Bypass (生成階段直接存 FP16)
-        2. Outlier Isolation (Prefill 階段分離異常值)
-        3. Statistics Update (更新 EMA 統計)
-        4. Quantization (量化)
-        5. Storage (存入 KV Cache)
-        6. Attention (計算注意力機制)
+        Forward Pass:
+        Input: Q, K, V (FP16, Pre-RoPE)
+        Output: Attention Output (FP16)
         """
         
-        # === 0. Decoding Bypass (生成階段保護機制) ===
-        # 如果是 Decoding 階段 (seq_len=1)，且我們的方法只針對 Prefill 進行壓縮。
-        # 為了避免 1 個 token 被誤判為 100% Outlier 或造成 EMA 衰減，
-        # 這裡直接將其視為 Warmup (FP16) 儲存，跳過所有統計與量化步驟。
-        
-        # === [新增邏輯] Layer Bypass (前幾層保持全精度) ===
-        # 判斷標準：如果是 Decoding 階段 OR 目前層數小於設定的起始層
-        # 這些情況都直接存 FP16 ("warmup" 格式)
+        # === 0. Bypass 機制 (Decoding 階段或前幾層) ===
+        # Decoding 階段：因為 seq_len=1，不適合做分塊統計，直接存 FP16。
+        # Start Layer Bypass：前幾層通常含有重要語義，保留全精度有助於穩定性。
         should_bypass = (self.layer_idx < self.config.quant_start_layer)
         
         if self.is_decoding or should_bypass:
+            # 建立 Warmup 格式的數據包 (標記為 warmup 即代表 FP16)
             k_data = {"type": "warmup", "data": k_tensor}
             v_data = {"type": "warmup", "data": v_tensor}
             
-            # 直接儲存
+            # 存入 Cache
             self.kv_manager.store_chunk(k_data, v_data)
             
-            # 計算 Attention 並回傳
+            # 計算 Attention
             return self.attn_core.compute_attention(
                 q_tensor, 
                 self.kv_manager,
                 rotary_emb_module=self.rotary_emb_module
             )
 
-        # === 以下為 Prefill 階段的量化流程 ===
+        # === Prefill 階段：即時量化流程 ===
 
-        # --- 1. Outlier Isolation (分離異常值) ---
-        # [關鍵修正] 針對不同 Tensor 的特性，沿著正確的軸向抓 Outlier
-        
-        # Key (K): Scale 是 Per-Channel 的，所以要抓出撐大 Channel 的兇手 (沿 Seq 軸, dim=-2)
-        k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_tensor, outlier_dim=-2)
-        
-        # Value (V): Scale 是 Per-Token 的，所以要抓出撐大 Token 的兇手 (沿 Head Dim 軸, dim=-1)
-        v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_tensor, outlier_dim=-1)
-
-        # Attention Sink Tokens 處理
-        # 在第一個 Chunk 時，將前幾個 Sink Tokens 也視為 Outlier
+        # 設定 Sink Token 長度 (通常前 4 個 token 為 attention sink)
         SINK_LENGTH = 4
+        
+        # --- 1. 準備數據與 Masking (關鍵修正) ---
+        # 為了避免 Sink Token 被 isolate() 重複抓取，我們先建立副本並將 Sink 區域歸零。
+        # 這樣 isolate 就只會處理 "非 Sink" 的部分。
+        
+        k_to_isolate = k_tensor.clone()
+        v_to_isolate = v_tensor.clone()
+        
         if self.chunk_idx == 0:
-            # 1. 找出 Sink Tokens 的區域 (前 SINK_LENGTH 個 tokens)
-            # v_tensor shape: [Batch, Heads, Seq, Head_Dim]
-            sink_data = v_tensor[:, :, :SINK_LENGTH, :]
-            
-            # 2. 取得它們的 Flat Indices (全域索引)
-            # 建立一個與 v_tensor 形狀相同的 mask
-            sink_mask = torch.zeros_like(v_tensor, dtype=torch.bool)
-            sink_mask[:, :, :SINK_LENGTH, :] = True
-            
-            # 轉為 flat indices
-            sink_indices = torch.nonzero(sink_mask.flatten(), as_tuple=False).squeeze()
-            sink_values = v_tensor.flatten()[sink_indices]
-            
-            # 3. 從 v_dense 中移除這些值 (設為 0，因為已經搬去 Sparse 了)
-            # 注意：原本的 isolate 可能已經抓過這些值了，但重複歸零沒關係
-            # 為了簡單，我們直接在 v_dense 上操作
-            v_dense_flat = v_dense.flatten()
-            v_dense_flat[sink_indices] = 0
-            v_dense = v_dense_flat.view_as(v_dense)
+            # 將前 SINK_LENGTH 個位置設為 0
+            k_to_isolate[:, :, :SINK_LENGTH, :] = 0
+            v_to_isolate[:, :, :SINK_LENGTH, :] = 0
 
-            # 4. 合併「數值 Outlier」與「Sink Outlier」
-            # 我們將 Sink 的數據拼接到原本的 sparse list 後面
-            v_sp_val = torch.cat([v_sp_val, sink_values])
-            v_sp_idx = torch.cat([v_sp_idx, sink_indices])
+        # --- 2. Outlier Isolation (分離異常值) ---
+        # Key: 沿 Seq 軸 (dim=-2) 找 Channel Outliers
+        k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_to_isolate, outlier_dim=-2)
+        
+        # Value: 沿 Head Dim 軸 (dim=-1) 找 Token Outliers
+        v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_to_isolate, outlier_dim=-1)
 
-        # --- 2. Statistics & Scale Update (使用 Dense Tensor) ---
-        # 更新 EMA (Key) 或取得瞬時 Scale (Value)
+        # --- 3. 手動保護 Sink Token (將其加入 Sparse 列表) ---
+        # 因為我們在第 1 步把它們 Mask 掉了，現在要手動把它們 "完整地" 加回 Sparse 列表。
+        # 這樣 Sink Token 就會以 FP16 形式被保存。
+        
+        if self.chunk_idx == 0:
+            # Helper function: 提取 Sink 並轉為 Sparse 格式
+            def extract_and_append_sink(tensor, sp_val, sp_idx):
+                # 提取 Sink 數值
+                sink_data = tensor[:, :, :SINK_LENGTH, :]
+                
+                # 建立對應的 Mask 以取得正確的 indices
+                sink_mask = torch.zeros_like(tensor, dtype=torch.bool)
+                sink_mask[:, :, :SINK_LENGTH, :] = True
+                
+                # 取得 flatten indices
+                sink_indices = torch.nonzero(sink_mask.flatten(), as_tuple=False).squeeze()
+                sink_values = sink_data.flatten()
+                
+                # 合併到原本的 sparse list
+                new_sp_val = torch.cat([sp_val, sink_values])
+                new_sp_idx = torch.cat([sp_idx, sink_indices])
+                return new_sp_val, new_sp_idx
+
+            # (A) 處理 Value (V) Sink - 絕對必要
+            v_sp_val, v_sp_idx = extract_and_append_sink(v_tensor, v_sp_val, v_sp_idx)
+
+            # (B) 處理 Key (K) Sink
+            # 判斷 K 是否處於 Warmup 狀態
+            is_k_warmup = (self.chunk_idx < self.config.n_warmup)
+            
+            # 如果 K *不是* Warmup (即將被量化)，我們必須保護它的 Sinks
+            if not is_k_warmup:
+                k_sp_val, k_sp_idx = extract_and_append_sink(k_tensor, k_sp_val, k_sp_idx)
+
+        # --- 4. Statistics & Scale Update (更新統計值) ---
+        # 使用 k_dense/v_dense 更新 EMA。
+        # 注意：因為 Sink 已經被 Mask 成 0，所以不會影響這裡的統計值 (這很好！)
         k_scale = self.stats_manager.update_key_stats(k_dense)
         v_scale = self.stats_manager.get_value_stats(v_dense)
 
-        # --- 3. Quantization Strategy ---
+        # --- 5. Quantization Strategy (量化) ---
         
-        # 3.1 處理 Key (K)
-        # 判斷是否在 Warm-up 階段 (只看 chunk_idx，因為 decoding 已經被 bypass 了)
+        # 5.1 處理 Key (K)
+        # 重新確認 Warmup 狀態 (K 需要 Warmup 以穩定 EMA)
         is_k_warmup = (self.chunk_idx < self.config.n_warmup)
 
         if is_k_warmup:
-            # K 在 Warm-up 期間：存 FP16 (為了讓 EMA 穩定)
+            # K 在 Warmup 期間：直接存 FP16 (包含 Sinks)
             k_data = {"type": "warmup", "data": k_tensor}
         else:
-            # K 在 Warm-up 結束後：進行 INT4 壓縮
-            # 使用穩定的 EMA Scale 量化 k_dense
+            # K 量化：Dense 部分轉 INT4，Sparse (含 Sinks) 留 FP16
             k_quant = self.quantizer.quantize_dense(k_dense, k_scale)
             k_data = {
                 "type": "quantized",
@@ -146,8 +163,8 @@ class TransformerLayerController(nn.Module):
                 "sparse_indices": k_sp_idx
             }
 
-        # 3.2 處理 Value (V)
-        # V 不需要 Warm-up，直接壓縮
+        # 5.2 處理 Value (V)
+        # V 不需要 Warmup，總是進行量化
         v_quant = self.quantizer.quantize_dense(v_dense, v_scale)
         v_data = {
             "type": "quantized",
@@ -157,11 +174,11 @@ class TransformerLayerController(nn.Module):
             "sparse_indices": v_sp_idx
         }
 
-        # 4. Store (存入 KV Cache)
+        # 6. Store (存入 KV Cache)
         self.kv_manager.store_chunk(k_data, v_data)
 
-        # 5. Attention (計算注意力)
-        # AttentionCore 負責還原 (Dequantize + Restore Outliers) 並計算
+        # 7. Attention (計算注意力)
+        # 委託 AttentionCore 還原資料並計算
         attn_output = self.attn_core.compute_attention(
             q_tensor, 
             self.kv_manager,
