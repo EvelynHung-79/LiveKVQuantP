@@ -140,8 +140,8 @@ class TransformerLayerController(nn.Module):
         # --- 4. Statistics & Scale Update (更新統計值) ---
         # 使用 k_dense/v_dense 更新 EMA。
         # 注意：因為 Sink 已經被 Mask 成 0，所以不會影響這裡的統計值 (這很好！)
-        k_scale = self.stats_manager.update_key_stats(k_dense)
-        v_scale = self.stats_manager.get_value_stats(v_dense)
+        k_absmax = self.stats_manager.update_key_stats(k_dense)
+        v_absmax = self.stats_manager.get_value_stats(v_dense)
 
         # --- 5. Quantization Strategy (量化) ---
         
@@ -154,22 +154,24 @@ class TransformerLayerController(nn.Module):
             k_data = {"type": "warmup", "data": k_tensor}
         else:
             # K 量化：Dense 部分轉 INT4，Sparse (含 Sinks) 留 FP16
-            k_quant = self.quantizer.quantize_dense(k_dense, k_scale)
+            k_quant, k_scale = self.quantizer.quantize_dense(k_dense, k_absmax)
+            
             k_data = {
                 "type": "quantized",
                 "quantized_data": k_quant,
-                "scale": k_scale,
+                "scale": k_scale, # 這裡存的是真正的 Scale (absmax/7)，不是 AbsMax
                 "sparse_values": k_sp_val,
                 "sparse_indices": k_sp_idx
             }
 
         # 5.2 處理 Value (V)
         # V 不需要 Warmup，總是進行量化
-        v_quant = self.quantizer.quantize_dense(v_dense, v_scale)
+        v_quant, v_scale = self.quantizer.quantize_dense(v_dense, v_absmax)
+        
         v_data = {
             "type": "quantized",
             "quantized_data": v_quant,
-            "scale": v_scale,
+            "scale": v_scale, # 存入正確 Scale
             "sparse_values": v_sp_val,
             "sparse_indices": v_sp_idx
         }

@@ -1,0 +1,112 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 10,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.021778451433623846,
+    "max_peak_memory_mb": 22889.67724609375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.13793103448275862,
+            "metric": "F1",
+            "output": "I’s from that, and “ he, that on the exempl, after, “she. and loneliness, a prominent in all my\nsuch to you, but a\nhe.”",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20457.11474609375,
+            "latency_ms": 39211.57692885026
+        },
+        {
+            "index": 1,
+            "score": 0.05128205128205128,
+            "metric": "F1",
+            "output": "This to note the neatly, Mrs, she, that, or not my womb, and, \ncomp part, and in\n_b. to be; to something to take, the Quarter-- \" to\nBe__if a ch,\nthought not..... her, the? and I, not a requested, was.\n in and, now leave; what a\nof her, this one; and then an also--, she.----  the numerous. to be, in\n\n\n that be; and responsible, the, but \"from her, then w. This. of this, in the entire, then doing. An, and",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20457.36572265625,
+            "latency_ms": 59629.55441698432
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Alternatively, as\n In, upon a \n True the, and talked in his indeed's ginv' and let's, noether till, is, bless, \n is, I am I gave herself, you, in con for real, in to if, in a                   everywhere, will,\nThat in that's nows me.\n A--, the\n No, but, but, my\n And do they, a sponge,  to disregard, is - her           What\n What has\n Other, and \n in the--to, a cab, a\n\n Thus, and, this.",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17692.16064453125,
+            "latency_ms": 12102.835994912311
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It, S.\n\n\n\nHe.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16889.49267578125,
+            "latency_ms": 4512.021030997857
+        },
+        {
+            "index": 4,
+            "score": 0.028571428571428574,
+            "metric": "F1",
+            "output": "How, next, and dying, in a\nperf down, no they, his, I was and out the hall in red. But also and the, not, with a tapped, of the, being, which, for the. unto. Here, in the, and in the next, but a \" his, in a, there. \nhim, the. once, he in the, getting \" Standing, and the black was it, the tenth took he left, buts. to be. for the\n\" he, with thee. Noe and a, to, he'll in his and I, a\n",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21348.89697265625,
+            "latency_ms": 75179.88097690977
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I and an in, in, and he, however.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18109.13623046875,
+            "latency_ms": 8878.522321814671
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "b - \nYou.",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 20375.77490234375,
+            "latency_ms": 31994.684260105714
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "<b>\nHere to be\n Quick. [ last.",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 22889.67724609375,
+            "latency_ms": 70306.10086303204
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "(G.  more, “  asked in, when to meet, with a levied to, in\nhe, if “in, but not had to “.",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 20457.36474609375,
+            "latency_ms": 39653.42642599717
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I, and las and when... -that shean in the whole, a known, the, a -- there\n I said, \nfor hearts for the earth was \n how much to the mystical, and what dream to the \" would to planets, to many \nput the........... at a  to wish,   to the svery, her \nAt a p's pregnant moon, a calm, the to perhaps, and the;--no \nthat, in'ing, such to date \nthe\n least, bow. This is this, my little the, as   the\n If on its, he was, the",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 17676.85791015625,
+            "latency_ms": 12610.837589018047
+        }
+    ]
+}

@@ -12,12 +12,23 @@ class RealTimeQuantizer:
         Args:
             outlier_dim: 指定沿著哪個軸抓 Outlier
         """
-        # 呼叫更新後的 utils
         dense_tensor, sparse_vals, sparse_idxs = isolate_outliers(tensor, self.outlier_ratio, dim=outlier_dim)
         return dense_tensor, sparse_vals, sparse_idxs
 
-    def quantize_dense(self, dense_tensor: torch.Tensor, scale: torch.Tensor):
-        """步驟 2: 使用針對 Dense 計算出的 Scale 進行量化"""
-        # Eq 3-6: X_quant = Clamp(Round(X / s))
+    def quantize_dense(self, dense_tensor: torch.Tensor, absmax: torch.Tensor):
+        """
+        [CRITICAL FIX] 修正量化邏輯
+        Input: 
+            dense_tensor: 要量化的資料
+            absmax: 統計出的絕對最大值 (來自 StatisticsManager)
+        Output:
+            quantized_data: INT8 Tensor
+            scale: 實際使用的 Scale Factor (存入 Cache 用)
+        """
+        # 1. 將 AbsMax 轉換為 Scale Factor (s = absmax / 7)
+        scale = calculate_symmetric_scale(absmax, self.bits)
+        
+        # 2. 使用正確的 Scale 進行量化 (X_q = round(X / s))
         quantized_data = quantize_symmetric(dense_tensor, scale, self.bits)
-        return quantized_data
+        
+        return quantized_data, scale
