@@ -39,7 +39,8 @@ class AttentionCore:
         self, 
         q_tensor: torch.Tensor, 
         kv_manager,
-        rotary_emb_module = None
+        rotary_emb_module = None,
+        position_ids = None,
     ) -> torch.Tensor:
         """
         執行標準 Scaled Dot-Product Attention，並加入 Causal Mask。
@@ -55,14 +56,20 @@ class AttentionCore:
         v_full = torch.cat(v_list, dim=-2)
         
         # 3. 動態生成全長的 RoPE
-        if rotary_emb_module is not None:
-            total_seq_len = k_full.shape[-2]
-            position_ids = torch.arange(
-                0, total_seq_len, device=k_full.device, dtype=torch.long
-            ).unsqueeze(0)
+        if rotary_emb_module is not None and position_ids is not None:
+            # 1. 對 K (Full History) 生成 RoPE
+            # K 的長度是 total_len，位置是 0 到 total_len
+            k_len = k_full.shape[-2]
+            k_pos_ids = torch.arange(0, k_len, device=k_full.device, dtype=torch.long).unsqueeze(0)
             
-            cos, sin = rotary_emb_module(k_full, position_ids)
-            _, k_full = apply_rotary_pos_emb(k_full, k_full, cos, sin)
+            cos_k, sin_k = rotary_emb_module(k_full, k_pos_ids)
+            _, k_full = apply_rotary_pos_emb(k_full, k_full, cos_k, sin_k)
+
+            # 2. 對 Q (Current Chunk) 應用 RoPE
+            # 注意：這裡假設傳進來的 q_tensor 是 "未旋轉" (Pre-RoPE) 的
+            # 我們使用傳入的 position_ids (對應當前 Chunk 的絕對位置)
+            cos_q, sin_q = rotary_emb_module(q_tensor, position_ids)
+            q_tensor, _ = apply_rotary_pos_emb(q_tensor, q_tensor, cos_q, sin_q)
         
         # --- 處理 GQA ---
         num_q_heads = q_tensor.size(1)

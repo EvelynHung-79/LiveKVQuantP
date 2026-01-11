@@ -21,12 +21,11 @@ def _custom_attention_forward(
     **kwargs,
 ) -> Tuple[torch.Tensor, Optional[torch.Tensor], Optional[Tuple[torch.Tensor]]]:
     """
-    自定義的 Attention Forward 函數，用於替換 LlamaAttention.forward。
-    將資料流導向 LiveKVQuant-P 的 TransformerLayerController。
+    [Modified] 移除 RoPE 應用，將原始 Q/K/V 與 Position IDs 傳遞給 Controller。
     """
     bsz, q_len, _ = hidden_states.size()
 
-    # 1. Linear Projection (取得 Q, K, V)
+    # 1. Linear Projection
     query_states = self.q_proj(hidden_states)
     key_states = self.k_proj(hidden_states)
     value_states = self.v_proj(hidden_states)
@@ -40,32 +39,26 @@ def _custom_attention_forward(
     key_states = key_states.view(bsz, q_len, num_key_value_heads, head_dim).transpose(1, 2)
     value_states = value_states.view(bsz, q_len, num_key_value_heads, head_dim).transpose(1, 2)
 
-    # 3. RoPE 計算
-    cos, sin = None, None
-    if "position_embeddings" in kwargs and kwargs["position_embeddings"] is not None:
-        cos, sin = kwargs["position_embeddings"]
-    else:
-        kv_seq_len = key_states.shape[-2]
-        if position_ids is None:
-            cos, sin = self.rotary_emb(value_states, seq_len=kv_seq_len)
-        else:
-            cos, sin = self.rotary_emb(value_states, position_ids)
-
-    # 4. RoPE 應用策略
-    query_states_rotated, _ = apply_rotary_pos_emb(query_states, query_states, cos, sin)
-
-    # 5. 呼叫 Controller
+    # 3. [刪除] 原本這裡計算 RoPE 的邏輯全部移除了
+    # 因為我們要讓 AttentionCore 拿到最原始的資料來統一處理
+    
+    # 4. [修改] 呼叫 Controller
+    # 傳入原始 query_states (未旋轉) 和 position_ids
     controller = self.livekv_controller
-    attn_output = controller(query_states_rotated, key_states, value_states)
+    
+    attn_output = controller(
+        query_states, 
+        key_states, 
+        value_states, 
+        position_ids=position_ids  # [新增] 傳遞位置資訊
+    )
 
-    # 6. Reshape Output
+    # 5. Reshape Output
     attn_output = attn_output.transpose(1, 2).contiguous()
     attn_output = attn_output.reshape(bsz, q_len, self.config.hidden_size)
     attn_output = self.o_proj(attn_output)
 
     return attn_output, None
-
-
 class LiveKVQuantModel:
     """
     LiveKVQuant-P 的模型包裝器。

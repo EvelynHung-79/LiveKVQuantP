@@ -52,7 +52,7 @@ class TransformerLayerController(nn.Module):
         self.chunk_idx = 0
         self.is_decoding = False
 
-    def forward(self, q_tensor, k_tensor, v_tensor):
+    def forward(self, q_tensor, k_tensor, v_tensor, position_ids=None):
         """
         Forward Pass:
         Input: Q, K, V (FP16, Pre-RoPE)
@@ -182,7 +182,8 @@ class TransformerLayerController(nn.Module):
         attn_output = self.attn_core.compute_attention(
             q_tensor, 
             self.kv_manager,
-            rotary_emb_module=self.rotary_emb_module
+            rotary_emb_module=self.rotary_emb_module,
+            position_ids=position_ids
         )
         
         return attn_output
