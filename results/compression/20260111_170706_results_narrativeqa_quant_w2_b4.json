@@ -1,0 +1,292 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 30,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.028910922115537765,
+    "max_peak_memory_mb": 25647.30126953125,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.075,
+            "metric": "F1",
+            "output": "“My own\n “\nthree\n“ however, and\n“er, “ My Hence? „\n“proper in—, and\n “ refers, and\nnot I “\n\n “ was absolutely, and\nF Al at? “\nthat\n “ she and • “\n“; you see and would rest of\n“ dummy’s, and in  portrait, with\nand “types, “ that, the\n“ is an ir, on, and a. “a true and the\n# “under, a ‘\n“ is at and be;\nfitness for, for “messes’ you’re adequately,",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20457.05029296875,
+            "latency_ms": 58057.48388916254
+        },
+        {
+            "index": 1,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I---- \"But  was;--. and\nto  i\nMad\n\nNow was\nand for this\nThe full, for the;\nfull\n; view that, the \"known, and,\nand other, this But for, this:\n\" that the full, the option of\nFull\nthe\nthat—-her, then that\nto\n, and the; and\nthe whole; and\n\"A, that¹.\n\nthe, or\nill; go I, I\n of---- and others, after that this, and--I hosp; But\nI,\nw wanted on one--when she--with",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20456.80126953125,
+            "latency_ms": 58984.79892103933
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " Call lots, now                and\n (vol.\n _,\n---) and\nA\n Local, a.\n av--\nI the (_E, let.\n Of, kings-- a\n\n A,\n Since--, _he.\n\n to my \"to:    1, yet, everyone, \"P\n Comfort\n this for one, lots\n Not:  Pro \n\n the    nir\n _that. Her\n\n the, the     _ (no-- of,\n A                      already.\n Rechemy by and so             he as, (water\n _such _  \n H Care\n A. \n  in l Rp--\n--In harmony,\n _",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17692.10400390625,
+            "latency_ms": 12532.373656984419
+        },
+        {
+            "index": 3,
+            "score": 0.0923076923076923,
+            "metric": "F1",
+            "output": " T\ntest\nCS\nis from\ns, \"The\nPeople\na,'varying, I.  'and\nthat, 'is\nthat the\ntrying the, and mortal, etc, and\ndes C.\nanswer of comparable\nThe\nThe\n\n)'.\n\nIn\ns do\nanswer, that\n. for\nWhat is, it;\n'is?  C's, and thus. 'the\n\nyour C\nMy\nthe lively in 'he\n\nThe\nt to, and\nwith you\nu\n, that.\n\n, '\nfor\nother\nA\n\n[that?\n Jes, I",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16889.42822265625,
+            "latency_ms": 13865.98416394554
+        },
+        {
+            "index": 4,
+            "score": 0.07142857142857144,
+            "metric": "F1",
+            "output": "Ten\" \"f, to, we\nof \" after, \" Ella\n\nsigned, the \"Was\n\" 'I,\" \"the \"home\n\" \">*: \"one, accomplished-pat, and, in\nmade; \"one row under so\n... he\nH,\nwas, through\n\" \" And\n\" E\nthe was hand\n \"at the\nif, and\nin the other unknown,\" \"with, a\n\nOctober, a\nand, in, the\nhis\n\nAlbert\n\" and\nthat last,\n and \n\"accepting of\nin himself and\nseen, and so,\"",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21348.83251953125,
+            "latency_ms": 74493.0518551264
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "he had-- Pound, \"This,\nin whole\n  \"Is. ... some \nand-- your the\ndates?\"- care is still\n\" \n\"The\nan\nV, I\n?\" \ntake —-\"  between, this in attendant in\nand here. End, of\n\nMis\n alternated, that\nC— a very\nliking of—, but. Yesterday morning, it to thee.\" \nI?\"\n\nthe \"you \n\nA. Sherlock\"s  \nduring\nthis,\n brought by\n\nwas \n\nThe\nregular\n\nants \nbefore and\n\n\" \nFast and\nAmong\n because, meanwhile.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18109.07958984375,
+            "latency_ms": 21284.92777911015
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "An\n\t\t to \n\t\t\t\ts.\n\t\t\t\t\t\t\t\t\t\t Give you?\n\tc \n\t\t\tp \n\t\t\t\t\t(prob \n\ts \n\t\t\the.\n\t I’m\n\t\t\t\t\t\tCuria, \n\td\n\t I \nnot, \n\t\t\t\t\tin \n\n\t\tis \n\tmUt \n\tin an \n\t\t\t\t\n\n\n\n \n\t\t\t\t\t</(He\n\t\t\t\t\t\tin \n\t\t\t\tin \n\t\tf \n\t stea\n\t\t\t\tAn IR his \nJ \n\t\tfather be",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 20375.71044921875,
+            "latency_ms": 58213.208904955536
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The\n\t\t\ttype -- -\n\td\n\t\t (Hosting\ns and \n\t I\n\t\tthis\nand\n\t that\n\t\t\t (that\n\t this\n\t matter. you \n\nU, I the town.\n\t that I the?\n\t (eh, American.\nThe --This is all\nwestern,\n\t\t\t \"SNDF:\nSo,\n\t to\nI and incon this, and\nthe\n\t\t this and\n\t\t\t (NA to\n\t\t\t (EX, you and that will the.\n\td\n\n\t I\n  and f - - in the - It,\n\n\ttoomers.\n\n<b\nThat,\n\t\t",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 22889.61279296875,
+            "latency_ms": 105632.37739307806
+        },
+        {
+            "index": 8,
+            "score": 0.027027027027027032,
+            "metric": "F1",
+            "output": "original\n“\n\n\ncollect, commercially. I. “ Mr.\nHis, that and\n “none. about, and in, you\nthe, “such. “\n “\nTu understanding. more\nse do, in\nis, Ad\n“ ““ “,\n\n “ “\n“pled\n “ “\n “, and\n\n“ for the rise\n“it, it at\n“ or of\n “on\nca. “\nFo\ngo\n\n“ “\n\n“ if\nsometimes\nthose to be—\nfor\n “ “ “\npeople\n “\n“ in that, change, and\nmy then",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 20456.80029296875,
+            "latency_ms": 59386.767165968195
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "And: view of _Their. by itself indefinitely,\n Be; easy, Pret and;\n-- _ of\n\n accompanying-- \n is being,\n  _something of _Lake and\n This\n\nL, and seven, also-- and C -\n t' _as;\n of\n Most\n _going, an hour, \"Al.\n regardless\n it\n  _.\n And\n - already |\n ART\nNow”    at, \" I didn\n  etc. pit on;   - more, so\n The\n And, to _next. Ultimately,\n held\n Stored-- well of\n Par,\n Stand\n and l of\n These",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 17688.42626953125,
+            "latency_ms": 12540.00557307154
+        },
+        {
+            "index": 10,
+            "score": 0.05555555555555556,
+            "metric": "F1",
+            "output": "The by, by  please.\nAl that, on, practically, F. \"B the \"dependent,\" and, but atcould\nsuch\nstr force, at\nthat of\nabs, and in\n\" already, \" “then,\nwhere, but, he or \"everything; presumably. Greater's\n\" and in a together. to which en, \"this\n\nis, folk. G\n½ to \" second,\" so something. the well, and\nthis under. holding.\n\n\" the ready \n More. just that?\n\n  \"To have.\nthat, with, and Private\" wave, was\n\nand down",
+            "ground_truth": "Because he fought in the first world war.",
+            "peak_memory_mb": 21187.14794921875,
+            "latency_ms": 71899.04099097475
+        },
+        {
+            "index": 11,
+            "score": 0.03333333333333333,
+            "metric": "F1",
+            "output": "I\n; Her\n\nInfinity, so, or\n \"im\nif\nthe time, and enjoying New\n\"That.\n\" ultimately for \n\" \"  \" or \"I for\n'Ow dropped, and was \nto, now\n\" and \n \"sometimes,\n\" \"T,\n Vele \" on. Of\n\n\" that.\n\n\" I \" in;, then opened,\n \" well\n\n\"The not \"v\nThe Companies\n( \"f\n\"Its\nfind Betty.\"  \"H\"\n\n\" sitting of my, \"'--\" therefore.\n Dow-- when.\n\n\"It is a\nis —- but not merely\n",
+            "ground_truth": "ones that are vague",
+            "peak_memory_mb": 18106.33154296875,
+            "latency_ms": 26613.840020028874
+        },
+        {
+            "index": 12,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I\n\nend\n' of\n' 'Kill\nmore, 'here, I\nthat\n 'Please, then, 'V. of\nM '\" or\n longer.\n\n\"On the; in a, that of\nand\nthe\nthe\n\n\"' and \" 'D tension on\nall in the\nhe\n  cop.\n\"' \"no'\"although, but going in\nI Evill, all new. what, in, and;'the name, actually in tail; he`Big\n 102 ;- and\nfrom \"to\nyour\n' : '\"-- before\n  general, and on\n\n",
+            "ground_truth": "50 years",
+            "peak_memory_mb": 17295.89306640625,
+            "latency_ms": 17579.095263034105
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\" \"The the, sometimes;\n  of!   -to while \" \n\nhe \"P all,\" properly, and\n\nof 'of can, or, France.\nin\n verte. for mothers, m\nph he,\" all at the\nboth. --He \n\n\"W\nt of, and \"c\nMart\n\n\". to\"\n\n    for this. \"either\n\n\" of,\" and\nthat the, having.\n\nand, I\"\n\nthat gone; from\n\"    \"pat! -end.\n\nB\n\" No.\" \n\"On of\nthat.\"\nE some\nHis, I.\" with.?\" and\nI.",
+            "ground_truth": "Their daughter, Virgine. ",
+            "peak_memory_mb": 17295.89404296875,
+            "latency_ms": 17570.709715830162
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "V; \n\n\n\nin\nin\n\nAnd if he would\n and properly, we,\" of.\ngiven. \"The \"female.\n\nF, etc\n\nhis.-\n\" \n\n\" D\n\nParis, and\n   it's:-\n\n  of (EM and  \"of. \"French\n\n\" Buzz\n\nFor, a \" ( in the\n    \"End\n\n\n       -style; \"P\nthrough. He was\n\"P vagus and, and \"Time.\"--,   in our own-- 'any ground,\ne, of\n\"I, -two\n\" morning a\nfresh, building, and him.,—\n\nC",
+            "ground_truth": "Grassou",
+            "peak_memory_mb": 17295.89404296875,
+            "latency_ms": 17581.152403960004
+        },
+        {
+            "index": 15,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\t\t\t and\nand\n\t\t the.\n\n\t\t\t\t (Next\n\t\t\t\t (Is,\n\t\t\t and\n\tIS\n\t\tC\n\nI\n\t (up!\n\t\t\tn\n\tF\n\t of\n\t, then\n\tb.  (near - -\n\t\t\t the\n\tF\nC, with the\n and Operators\n\t\t\t\t\t\t\t\t the\n\tS\n\t\t\t\t\tB.\n  \" (C, an\n\t\tc\n\twait\n\t\t\t of.\n< +\n\t\t\t I -Good.\n\t that he\nI\n\tadd the\n\t\t\t (specific, so,\n\t\t",
+            "ground_truth": "The slime gets into Dana's apartment from the bathtub.",
+            "peak_memory_mb": 22889.61279296875,
+            "latency_ms": 105392.44274818338
+        },
+        {
+            "index": 16,
+            "score": 0.0851063829787234,
+            "metric": "F1",
+            "output": " (Dig\n\nyou, \" (what'\non\n\nGo.\n gold \n\ncreate.\n (Re\n u now.\n\"'.\n\nQueen. if... also. troubles. '-\n\n(O?)...\n\n to\n kid.\n\nC\n\nI\n\n the separate, De\nin\nhp are (Not \"\n\nthe \n\nRa... (wide\n\n ( way, (people.'.\n\n( He, be \n' as\nde.? he?\nChat in.'not; (past for\nat\n\nB\nwe\n\nI \"m.'(many.\n\n Dr. Here*\n\nThus.\n\nHere is\n\n(L now run\n\nwinner's\n ( the",
+            "ground_truth": "That a mule bone is very powerful and can be a weapon.",
+            "peak_memory_mb": 19159.30029296875,
+            "latency_ms": 40122.96200403944
+        },
+        {
+            "index": 17,
+            "score": 0.02666666666666667,
+            "metric": "F1",
+            "output": "T for\n, on. That, the \"was in the other\nand being S lay\nalso and\nIr; there, in the.\n \" and (was: \" \"possible, leading, till,\n\n\"No and\nHung very\nand\n\" she.\nbefore for\nthat, settled, and\nquot and cob\nin, and \" With, and\n\"; and body\nemployed. Indeed, got.  inter, when. Team, and\n\"f and to \" only\nto\neast name\nissues, and \"that, went, to\nwas that with this; that \"the\nche\n\n\"\npl",
+            "ground_truth": "Anthony Rogers has previous wartime and combatant experience.",
+            "peak_memory_mb": 21187.14794921875,
+            "latency_ms": 71964.69395514578
+        },
+        {
+            "index": 18,
+            "score": 0.06451612903225806,
+            "metric": "F1",
+            "output": " accompl \n\t..... \n\t\t\t\t\t Y! \n\nand \nI coming \n\n\ts, everybody.\n \n and \n\t is of..\n\t\t An   \n\t\tway. \n\t\t\t\t\t I.\n\n\t, \n\t<\n\n\n\t\t\t, rough, an \n\t\t last time \n\t& \n\t\t and \n\n\t\t\t\t\t\ts\n\n\t\t\t\ts, as a, but \n\t held \n\twhich.\n\t\t\t\t\t\t that.\n \n\t\t\t\ta\n< \n\t\tcres, never, \n\t< \n\t\tsPI \n\t Re.\n\n",
+            "ground_truth": "Her face is blurry",
+            "peak_memory_mb": 20700.08251953125,
+            "latency_ms": 63496.13677803427
+        },
+        {
+            "index": 19,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "How; and say in\n, you (and\nOne -- the\nand; but\nF\njoin you.\nare\n\n There, which\nis the\nyour\nand. This.\n I, and\nthat\n\n\nperhaps, which\nwhich,  still\nThen there. No and everyone; this, is a\n enters. to\nalso. done\n\n'...' how\nwhat is and matter; that, nor what, but--and of S; a\nto which. the. What you see?the, but of\ndef 'this', to our soon, those. SC\nof, that we\nAnd",
+            "ground_truth": "Two",
+            "peak_memory_mb": 17804.9169921875,
+            "latency_ms": 13921.949880896136
+        },
+        {
+            "index": 20,
+            "score": 0.06060606060606061,
+            "metric": "F1",
+            "output": "\"I \n\nf. \" to a \nThe and\n intervene, and now?\n\nthis, \"father. it, \n\" but, he\n if then, in.\" of\n\n lone\n\nfl\n at this\nof\nhave\n\nthe \"...\n\n  \n\nThat\n\nin, and \n In the\n ver, and\nnear,'\" that, he, \"we\nMaterial\n\nto the\nin the\n\n as\n\" to\n\nmort, located. \"was \nthis is no \ng, and so, but \n\n\"And?\nA \"Hon!\"  known, greetings \ncon \"an (sent \nbeing.?\"\n\nto, knew what",
+            "ground_truth": "because of the division of proceeds from selling the family business.",
+            "peak_memory_mb": 17619.27001953125,
+            "latency_ms": 21270.360291935503
+        },
+        {
+            "index": 21,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "at, the\n\" and of\nat      'in, or a distance. and\nthere. A'major, and the\n\" places, and that\nWis (\"left and individual, in the  and taken the, a lo.\" Big\nright, the what it, so\n\" would...Han and'a hundred, \"and an \"cross and an\nunder, 'of uneven,\"-'s that, to, and  and only. Neither, as\n\nother, anchor and now, “\n\" no, bought, and gone turned\nG\" some. And,  of, and possibly me\n",
+            "ground_truth": "2419.",
+            "peak_memory_mb": 21187.14794921875,
+            "latency_ms": 72709.38160596415
+        },
+        {
+            "index": 22,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Put, or\n< resulting.\n\t I \"nothing\n\t I\n\t and \n \t your\n\t I\n\t I\nCh\nOTHER\n\t the \n\t in\n\t to\n\t I, I.\n\t this:\nI, \nNo\n\t\t any more.\n\t d\nand another\n\t I\n<\"\n<b\n< the view.\"\nThere.time.\n\t YOU should\n< sun given \n\t of?\nThey, I, \n\" ands call she\nYou \" \n< to\nonly\nU. to wea NEW\nThe\n\t Tw, difficulty.\n\t they \n\t",
+            "ground_truth": "he murdered someone",
+            "peak_memory_mb": 24916.96142578125,
+            "latency_ms": 159743.45480301417
+        },
+        {
+            "index": 23,
+            "score": 0.03125,
+            "metric": "F1",
+            "output": "And; and others;\ni, OH, but\nA; an, therefore. the\nEX\n\n is that, \n\nI\nof the last, Dis\n this w\nBut\n  to\n for\n your:\n\n\nOther  To\n more, you are, and in our\n your most of all.\n\nThis.\n 'and, any; because C\"A. however. And, a) to\nsimilar.\nIf \"Bysson.  on\n does, do and\nthe\n\n\nIf\n'isn for us.  there.  your.\n\nWhat, sir,' is this, of and\nthere?' Who. S_IOC",
+            "ground_truth": "Your parents",
+            "peak_memory_mb": 19792.70947265625,
+            "latency_ms": 14755.978720961139
+        },
+        {
+            "index": 24,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "was—the. —“\n\n\n“ “\nno, “ former\n“ to, “\nand all\n N”“ that\nChurches\nshe ” \n “\n“ “\n “\nbetter\n\n“  “So\nroom. Of\nbeing”\n\nlazy’s, and he\n“ It, over, in them by\n “, on his “, and\n“ they, however, my “, and Words.\n“ but, but Peggy.; “\n\n\n“ in her, in\n “\n“ and televised, and that was at that\nno. Some\n macro— end. and her Honey\n“ “cr",
+            "ground_truth": "Lady Coxon is Ruth's aunt.",
+            "peak_memory_mb": 20456.80029296875,
+            "latency_ms": 60655.8775450103
+        },
+        {
+            "index": 25,
+            "score": 0.0606060606060606,
+            "metric": "F1",
+            "output": "\"f... and\n\t\tS, \n\t\t\t            \n\n\t\tS \n \t\t\n\n\n\n \n\tthe shops.\n \n\n\t(the \n In \n\n\t story \n\t\t(the\n\n\t\t\t with.\n\tposs.\n \n\t\t\tCONG, P \n\t and \n\tI \n\t...\n\t\t\t\t\t\t and Right!\n\t\t\t S.\n? a, and \n\n\th \n\tb\n\t could\n\n\t\tin\n\t\t\t I, Her \n\tr\n\t you, is a \n\t\t Grim. \n\n\t\tThat, \n\tin \n\t\ts \n\t\t\t\t the \n\t\t\t",
+            "ground_truth": "Reiko is a reporter.",
+            "peak_memory_mb": 20700.08251953125,
+            "latency_ms": 65510.10793284513
+        },
+        {
+            "index": 26,
+            "score": 0.05714285714285715,
+            "metric": "F1",
+            "output": "Answer.' being, to so\n\n and\nwith others shall.\n\n Can be\nthe\n various.\n\n\n\nR\n \" C and\nways. 'only on your and a.  G. \" \n\n, a, that, and\nto. Ran\nand.\n\"My,\nif\nonce, 'the other. and in G. the  that? the\nB- - the\nHad\nis not C just to be your, I, your\ngiven.' no\nor is not. go it.  To\n 'No, Who.\n   many, in -- (or is\nC(en very\nyour\n~",
+            "ground_truth": "Because it violates his belief in the  laws of society.",
+            "peak_memory_mb": 17803.5126953125,
+            "latency_ms": 14665.255092084408
+        },
+        {
+            "index": 27,
+            "score": 0.07272727272727274,
+            "metric": "F1",
+            "output": "ch  \n \nAnd, Not \n\" and\nI every all \nI\n\" noooo \nthen, he. \n<, in the seventh in\n\"d I \" I\n  is\n  - \" \n< \n 1 in. Not, when floor\nMichigan. Turns I \nl\n<  \nis, and\nyour \"aints in his \n I. I \nyou.\n\" \nto, nice, things \nand in\n you \n\n</ < \n< \n\nThe Best. I \n</\n</\n \n<. No.  I \n\" and\nI \n Re\nI am I\n<",
+            "ground_truth": "he is shot",
+            "peak_memory_mb": 25647.30126953125,
+            "latency_ms": 178965.65886610188
+        },
+        {
+            "index": 28,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "‘\nHave\nand\n of her\n“age,\n“when\nMy\n“ “ “As\n“ “Yes\n “good sister in\nHis.\nNothing that—; “\nmentioned\n “rests\nfor “No\n “Lady: “\nwhile Good\n“ no,\n“; “well\n\n my “Depart\n\n“all of\nwhole and “\n “\na, “T; “\nchanged in waaa, a\n “almost “which “\nno, of\n\n\nwor? “ in\nperhaps, I\nsh and “not\n “\n“\n\n\nArth “ind\n “\n",
+            "ground_truth": "She declined to read it.",
+            "peak_memory_mb": 20457.55029296875,
+            "latency_ms": 61214.44937796332
+        },
+        {
+            "index": 29,
+            "score": 0.05405405405405406,
+            "metric": "F1",
+            "output": "\t, \n\t\t\tS\n\tto\n\t< \n\n\tthis\n\n\t her<\n\n\t\t, and\n\t unmistak\n\t\t\t\t\t E \n\t\tin. \n\t- \n\nThe\n\t\t\t\t\tA \n\tAle more\n\t\tsquared up \nnot.\n\t Your\n\t\t you \n\t\t\t\t he issues. \n\t her went \n\ts,\n \t \n\t?? \n\t\t\t\t \t\t and \nl. \n\n\t\t\tp. \n\tother\n\t and \nThe\n\n\tP\n\nthat, I\n\t\t(Y our after East\n\tovers, no.\n",
+            "ground_truth": "Twisted in fear",
+            "peak_memory_mb": 20700.08251953125,
+            "latency_ms": 64823.33402894437
+        }
+    ]
+}
