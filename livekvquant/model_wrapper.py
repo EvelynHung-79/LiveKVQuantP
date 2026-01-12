@@ -96,39 +96,41 @@ class LiveKVQuantModel:
         # === 內部 Helper: 強制覆寫 RoPE 參數 ===
         def force_fix_rope(module, name):
             # 1. 診斷資訊 (只印 Layer 0)
-            if name == "Layer 0":
-                logger.info(f"[{name}] RoPE Module Detected: {type(module)}")
-                if hasattr(module, "inv_freq") and isinstance(module.inv_freq, torch.Tensor):
-                    logger.info(f"[{name}] Current inv_freq sample: {module.inv_freq.flatten()[:5]}")
+            if name == "Layer 0" or name == "Global":
+                logger.info(f"[{name}] Found RoPE Module: {type(module)}")
 
             # 2. 強制計算正確的 inv_freq (Llama 3.1 Base = 500,000)
             try:
                 base = 500000.0
-                # 重新計算 inv_freq
                 inv_freq = 1.0 / (base ** (torch.arange(0, head_dim, 2, dtype=torch.float32, device=device) / head_dim))
                 
                 # 覆寫 module.inv_freq
                 if hasattr(module, "inv_freq"):
+                    # 檢查型別並轉型
                     orig_dtype = module.inv_freq.dtype if isinstance(module.inv_freq, torch.Tensor) else torch.float32
                     module.inv_freq = inv_freq.to(dtype=orig_dtype)
                     
-                    if name == "Layer 0":
-                        logger.warning(f"[{name}] 🔧 FORCE PATCHED 'inv_freq' with BASE=500000.0")
-                    
                     # 清除 Cache
-                    if hasattr(module, "cos_cached"):
-                        module.cos_cached = None
-                        module.sin_cached = None
-                    if hasattr(module, "_cos_cached"):
-                        module._cos_cached = None
-                        module._sin_cached = None
+                    if hasattr(module, "cos_cached"): module.cos_cached = None
+                    if hasattr(module, "sin_cached"): module.sin_cached = None
+                    if hasattr(module, "_cos_cached"): module._cos_cached = None
+                    if hasattr(module, "_sin_cached"): module._sin_cached = None
+
+                    # === [DEBUG LOG] 驗證 Patch 是否成功 ===
+                    if name == "Layer 0" or name == "Global":
+                        # 檢查 inv_freq 的最後一個值 (它對 Base 最敏感)
+                        # Base 10000 -> 最後一值約 1e-4
+                        # Base 500000 -> 最後一值約 2e-6 (會小很多)
+                        check_val = module.inv_freq[-1].item()
+                        logger.warning(f"[{name}] 🔧 PATCHED RoPE inv_freq! Last val: {check_val:.8f} (Expected ~2.0e-06)")
+                        if check_val > 1e-5:
+                            logger.error(f"[{name}] ❌ RoPE Patch seems FAILED! Value too high for Base=500000")
                 else:
                     if name == "Layer 0":
                         logger.error(f"[{name}] ❌ Module has no 'inv_freq' attribute! Cannot patch.")
             
             except Exception as e:
                 logger.error(f"[{name}] Failed to patch RoPE: {e}")
-        # ==========================================
 
         # 1. 先嘗試找全域 RoPE
         global_rotary_emb = None

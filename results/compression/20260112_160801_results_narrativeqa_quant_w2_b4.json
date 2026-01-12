@@ -1,0 +1,112 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 10,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.2804288572404514,
+    "max_peak_memory_mb": 22889.67724609375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.21428571428571427,
+            "metric": "F1",
+            "output": "The scene from \"The Conventional in the Drama,\" and had he found himself in a series of unfortunate circumstances, and I had been told the story.",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20457.36474609375,
+            "latency_ms": 41281.65912698023
+        },
+        {
+            "index": 1,
+            "score": 0.08695652173913043,
+            "metric": "F1",
+            "output": "The story is a romantic romance between Mary and Henry, and Mary's feelings of affection for Ann, her friend. However, Ann's feelings of affection for Mary were not returned, as she became ill and went to the continent to convalesce.",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20457.86572265625,
+            "latency_ms": 47875.21550199017
+        },
+        {
+            "index": 2,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "output": "On Atlas' mountain, in a cavern.",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17683.1044921875,
+            "latency_ms": 4427.944746101275
+        },
+        {
+            "index": 3,
+            "score": 0.33333333333333326,
+            "metric": "F1",
+            "output": "To persuade Socrates to escape from prison.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16890.36767578125,
+            "latency_ms": 5095.199549105018
+        },
+        {
+            "index": 4,
+            "score": 0.02469135802469136,
+            "metric": "F1",
+            "output": "The hand that\nwas empty:\n\nHere are two hands of you:\n\nOne hand, the\nAnti-B and I, of the hollowes and darken and\ngo the ruin\n\nAnd what he thought and the rod\n\nI seem to have. Then, the Iron\n\nThere was no need to tell or kill his\n\nQuestion: no longer.\n\nThen, sir. The fire had his.\n\n\"That,\" said the ruins of the\neast of the great ruin.\n\nThe Bible, in a single, and empty,\n\nFurther up the sky, but with a\nfine and a\nthe wise, for the pure hand.\n\nHowever, it",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21348.89697265625,
+            "latency_ms": 93716.15176997148
+        },
+        {
+            "index": 5,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "At least six hours.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18110.9345703125,
+            "latency_ms": 8491.783821024
+        },
+        {
+            "index": 6,
+            "score": 0.025974025974025972,
+            "metric": "F1",
+            "output": "Ingmar Bergman's screenplay is based on the story.\n\nIngmar Bergman's screenplay is a masterpiece. In the story, Ingmar Bergman is not mentioned in the story.\n\nThe moon rises high in the sky. The entertainers' manager and his wife have an affair.\n\nQuestion: With whom does the entertainers' manager have an affair?\n\nAnswer: Ingmar Bergman's screenplay.\n\nThe screenplay is a story about the story as concisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nQuestion: Who is the entertainment's manager?\n\nAnswer: The entertainers' manager.\n\nIngmar",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 20376.27490234375,
+            "latency_ms": 75244.80367591605
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The question.\n\nThe mayor's all.  and\n</b>   CH. I'll be a\n</b</\n</b>\t\t He went to the\nA single.\n         I 10.\n</\n</b> and now a\nYou are the\nlaid.  I'm a little, he's a 7 of PR (a) in the\nproud. I 1\n</b>                             In a\n<b> the JACK.\n</</b> 1 of a\n</ST. 1\n</\nTHE EXT. 52\n</b</E:\n</b>\n",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 22889.67724609375,
+            "latency_ms": 128853.21627208032
+        },
+        {
+            "index": 8,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "American.",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 20457.86474609375,
+            "latency_ms": 32882.32981599867
+        },
+        {
+            "index": 9,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "The lying scribe.",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 17672.88623046875,
+            "latency_ms": 4048.0393869802356
+        }
+    ]
+}

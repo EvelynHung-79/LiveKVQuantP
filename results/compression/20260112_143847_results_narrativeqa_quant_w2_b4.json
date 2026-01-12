@@ -1,0 +1,112 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 10,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.24017240069871648,
+    "max_peak_memory_mb": 22889.67724609375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "output": "My living situation is difficult.",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20457.36474609375,
+            "latency_ms": 33253.60083510168
+        },
+        {
+            "index": 1,
+            "score": 0.21052631578947367,
+            "metric": "F1",
+            "output": "Based on the story, it appears that Ann does not return Mary's feelings of affection because, as a child, she is in a loveless state, and Mary is suffering from solitary sorrow.",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20457.86572265625,
+            "latency_ms": 44377.11983197369
+        },
+        {
+            "index": 2,
+            "score": 0.28571428571428575,
+            "metric": "F1",
+            "output": "In a cave on Atlas' mountain.",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17681.712890625,
+            "latency_ms": 4315.886456985027
+        },
+        {
+            "index": 3,
+            "score": 0.33333333333333326,
+            "metric": "F1",
+            "output": "To persuade Socrates to escape from prison.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16890.36767578125,
+            "latency_ms": 5163.980256067589
+        },
+        {
+            "index": 4,
+            "score": 0.051948051948051945,
+            "metric": "F1",
+            "output": "There was nothing but a moment; but there was no blood, the blood on the cruel, but that was a pure\n\nAll I shall get his mother.\n\nQuestion: All the mountain of the gate of the\nVulens.\"\n\nWhat was a cliff over the great wall of the Silver Hand.\n\nQuestion: What man had\nthe apprentice\n\nNote: a thing or to the project of the ruin, which, the stranger's spelt.\n\nThen there was a little\nbreat-**\nThe young P. of\n\nhttps://\nThe fielenous\n      \nWhen Howard Howard Pyle did and\ntheir: a single\n\nIsn't",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21348.89697265625,
+            "latency_ms": 93786.9992009364
+        },
+        {
+            "index": 5,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "At least six hours.",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 18110.9345703125,
+            "latency_ms": 8471.751446137205
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " Ingmar Bergman",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 20376.27490234375,
+            "latency_ms": 32415.232443017885
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I just given to be a\n<. 80.\n</b</PREFER\n</BUT I LOOKED (W)\n</b> THE MOUT (A)\n<a usual <</b>",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 22889.67724609375,
+            "latency_ms": 86561.57871778123
+        },
+        {
+            "index": 8,
+            "score": 0.0202020202020202,
+            "metric": "F1",
+            "output": "It seems you are asking me to answer the question of Ruth Anvoy's nationality.  I am also not sure if I can answer this question. The conversation you have with George Gravener, and the influence of his wife, whose death, and the decline of the great man. I do not know much about her nationality, but it is not the only thing that is bothering me now.\n\nGeorge Gravener, who is still in love with Ruth Anvoy.  I do not know how to answer you. When I meet Miss Anvoy at Wimbledon, I perceived her maleable.  I met her here, and I",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 20457.86474609375,
+            "latency_ms": 76751.35221285746
+        },
+        {
+            "index": 9,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "The lying scribe.",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 17690.28125,
+            "latency_ms": 4060.2907941211015
+        }
+    ]
+}
