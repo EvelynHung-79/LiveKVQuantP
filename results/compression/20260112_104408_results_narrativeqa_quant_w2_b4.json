@@ -1,0 +1,67 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 5,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.08186046511627906,
+    "max_peak_memory_mb": 21350.39697265625,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.06976744186046513,
+            "metric": "F1",
+            "output": "but the one of  What you.  the leave he to Jer I drop of his routine, but in mind you, in a little\n\n\n less attempt to\nH%\n\n“the says “However\n Her, here, in the easy, was  she\nThere nodded of very thing.\n\n\nno other\nthe, the very  I\n\n“ a good to research of \n Will and a reason only a directive of the name to “Le\n\n\n“ Ms. of\nNowt. in two of the\nmyself in this answer for his\nand the  can be. One I\nones just as no. given.—\n\n",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 20457.61474609375,
+            "latency_ms": 58337.79145707376
+        },
+        {
+            "index": 1,
+            "score": 0.13953488372093023,
+            "metric": "F1",
+            "output": "young\ns there was she was a succession of another to no longer, and going; but in violation of her: an accommodation, I, she the more than-- not a blessing to what in regards of her love her.",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 20456.86572265625,
+            "latency_ms": 41692.113233031705
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "This is it, but from the\n With more, which--- now, where to  and stay the--\n the same on mans, you\n\n A former\n Slow, while, I was\n In, it, h-- so the, not\n\nI went, masters' and'D ever, a one, as                    and death's\n it, bitters on, a...( with a water-- \n    the earth, have, and \n merely, dead\n after\n To move and un this plan of\n the\n Went the  in flight, you said to ______' is very\n To, iner to  and\n As",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 17682.03564453125,
+            "latency_ms": 12633.032710989937
+        },
+        {
+            "index": 3,
+            "score": 0.19999999999999998,
+            "metric": "F1",
+            "output": "I no doubt,  leave, - not to the, to    \n and that.",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16889.49267578125,
+            "latency_ms": 5386.335915187374
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " Rating of all what the green\nfrom his to shine.",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 21350.39697265625,
+            "latency_ms": 45324.44047997706
+        }
+    ]
+}

@@ -91,33 +91,28 @@ class AttentionCore:
         q_len = q_tensor.size(-2)
         k_len = k_full.size(-2)
         
-        if q_len > 1:
-            # 1. 建立一個全 1 的矩陣，代表「位置 i 可以看到位置 j」
-            # 形狀: [Q_len, Q_len]
-            causal_mask = torch.tril(torch.ones(q_len, q_len, device=q_tensor.device, dtype=torch.bool))
+        # 建立全長的 Mask (包含 History)
+        # 1. 只有當前 Chunk 的 Causal Mask (下三角)
+        causal_mask = torch.tril(torch.ones(q_len, q_len, device=q_tensor.device, dtype=torch.bool))
+        
+        # 2. 轉換數值 (0.0 可見, min_value 不可見)
+        min_value = torch.finfo(q_tensor.dtype).min
+        mask_tensor = torch.full((q_len, q_len), min_value, device=q_tensor.device, dtype=q_tensor.dtype)
+        mask_tensor.masked_fill_(causal_mask, 0.0) 
+        
+        # 3. 處理 History (History 永遠可見)
+        past_len = k_len - q_len
+        if past_len > 0:
+            # History 部分全 0 (可見)
+            history_mask = torch.zeros((q_len, past_len), device=q_tensor.device, dtype=q_tensor.dtype)
+            full_mask = torch.cat([history_mask, mask_tensor], dim=-1)
+        else:
+            full_mask = mask_tensor
             
-            # 2. 轉換為加法 Mask (0.0 為可見, min_value 為不可見)
-            # 使用 finfo 確保數值夠小但不會 NaN
-            min_value = torch.finfo(q_tensor.dtype).min
-            mask_tensor = torch.full((q_len, q_len), min_value, device=q_tensor.device, dtype=q_tensor.dtype)
-            mask_tensor.masked_fill_(causal_mask, 0.0) # 下三角填 0 (可見)
-            
-            # 3. 處理 History (History 永遠可見)
-            past_len = k_len - q_len
-            
-            if past_len > 0:
-                # History 部分全 0 (可見)
-                history_mask = torch.zeros((q_len, past_len), device=q_tensor.device, dtype=q_tensor.dtype)
-                # 拼接: [History (Visible), Current (Causal)]
-                full_mask = torch.cat([history_mask, mask_tensor], dim=-1)
-            else:
-                # 只有當前 Chunk (例如第一個 Chunk)
-                full_mask = mask_tensor
-                
-            # 4. 套用 Mask
-            # 確保維度正確: [1, 1, Q_len, K_len]
-            attn_scores = attn_scores + full_mask.unsqueeze(0).unsqueeze(0)
-        # =================================
+        # 4. 強制套用 Mask (確保維度廣播正確)
+        # attn_scores shape: [B, H, q_len, k_len]
+        # full_mask shape: [q_len, k_len] -> [1, 1, q_len, k_len]
+        attn_scores = attn_scores + full_mask.unsqueeze(0).unsqueeze(0)            
         
         attn_probs = F.softmax(attn_scores, dim=-1)
         attn_output = torch.matmul(attn_probs, v_full)

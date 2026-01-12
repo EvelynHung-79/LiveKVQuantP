@@ -87,30 +87,78 @@ class LiveKVQuantModel:
     def _inject_controllers(self):        
         self.layers = self.model.model.layers
         self.controllers = []
+        
+        # [修正] 取得 Head Dimension (計算 RoPE 頻率需要)
+        # 必須從 self.model.config (LlamaConfig) 讀取，而不是 self.config (LiveKVQuantConfig)
+        head_dim = self.model.config.hidden_size // self.model.config.num_attention_heads
+        device = self.device
 
+        # === 內部 Helper: 強制覆寫 RoPE 參數 ===
+        def force_fix_rope(module, name):
+            # 1. 診斷資訊 (只印 Layer 0)
+            if name == "Layer 0":
+                logger.info(f"[{name}] RoPE Module Detected: {type(module)}")
+                if hasattr(module, "inv_freq") and isinstance(module.inv_freq, torch.Tensor):
+                    logger.info(f"[{name}] Current inv_freq sample: {module.inv_freq.flatten()[:5]}")
+
+            # 2. 強制計算正確的 inv_freq (Llama 3.1 Base = 500,000)
+            try:
+                base = 500000.0
+                # 重新計算 inv_freq
+                inv_freq = 1.0 / (base ** (torch.arange(0, head_dim, 2, dtype=torch.float32, device=device) / head_dim))
+                
+                # 覆寫 module.inv_freq
+                if hasattr(module, "inv_freq"):
+                    orig_dtype = module.inv_freq.dtype if isinstance(module.inv_freq, torch.Tensor) else torch.float32
+                    module.inv_freq = inv_freq.to(dtype=orig_dtype)
+                    
+                    if name == "Layer 0":
+                        logger.warning(f"[{name}] 🔧 FORCE PATCHED 'inv_freq' with BASE=500000.0")
+                    
+                    # 清除 Cache
+                    if hasattr(module, "cos_cached"):
+                        module.cos_cached = None
+                        module.sin_cached = None
+                    if hasattr(module, "_cos_cached"):
+                        module._cos_cached = None
+                        module._sin_cached = None
+                else:
+                    if name == "Layer 0":
+                        logger.error(f"[{name}] ❌ Module has no 'inv_freq' attribute! Cannot patch.")
+            
+            except Exception as e:
+                logger.error(f"[{name}] Failed to patch RoPE: {e}")
+        # ==========================================
+
+        # 1. 先嘗試找全域 RoPE
         global_rotary_emb = None
         if hasattr(self.model.model, "rotary_emb"):
             global_rotary_emb = self.model.model.rotary_emb
+            force_fix_rope(global_rotary_emb, "Global")
 
         for i, layer in enumerate(self.layers):
             controller = TransformerLayerController(self.config, layer_idx=i)
             
+            # 2. 再嘗試找層內 RoPE
+            rope_module = None
             if hasattr(layer.self_attn, "rotary_emb"):
-                controller.rotary_emb_module = layer.self_attn.rotary_emb
-            elif global_rotary_emb is not None:
-                controller.rotary_emb_module = global_rotary_emb
-                layer.self_attn.rotary_emb = global_rotary_emb
+                rope_module = layer.self_attn.rotary_emb
+                force_fix_rope(rope_module, f"Layer {i}")
+            
+            # 3. 綁定
+            if rope_module is None and global_rotary_emb is not None:
+                rope_module = global_rotary_emb
+            
+            if rope_module is not None:
+                controller.rotary_emb_module = rope_module
             else:
                 logger.warning(f"Layer {i}: Could not find rotary_emb module!")
 
             layer.self_attn.livekv_controller = controller
             self.controllers.append(controller)
             
-            # Monkey Patch
             layer.self_attn.forward = types.MethodType(_custom_attention_forward, layer.self_attn)
             
-        # logger.info(f"Successfully patched {len(self.controllers)} layers.")
-
     def _chunk_input(self, input_ids: torch.Tensor, chunk_size: int) -> List[torch.Tensor]:
         seq_len = input_ids.size(1)
         chunks = []
