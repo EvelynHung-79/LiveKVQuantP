@@ -58,13 +58,13 @@ python -m pytest tests/
 
 ### 1\. 執行主要推論 (Main Inference)
 
-`run_inference.py` 是專案的主要入口，支援多種輸入模式。
+`run_liveKVQuant.py` 是專案的主要入口，支援多種輸入模式。
 
 **模式 A：Dummy Test (快速驗證)**
 使用生成的假資料進行快速測試，確認 Pipeline 無誤。
 
 ```bash
-python scripts/run_inference.py \
+python scripts/run_liveKVQuant.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode dummy \
   --chunk_size 512
@@ -74,12 +74,12 @@ python scripts/run_inference.py \
 自動下載並載入 LongBench 資料集進行推論（需指定 `task`）。
 
 ```bash
-python scripts/run_inference.py \
+python scripts/run_liveKVQuant.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode longbench \
   --task narrativeqa
 
-python scripts/run_inference.py \
+python scripts/run_liveKVQuant.py \
   --bench_version v1 \
   --task_type single-doc \
   --num_samples -1 \
@@ -88,9 +88,9 @@ python scripts/run_inference.py \
   --outlier_ratio 0.05
 
 # 不錯的結果
-python scripts/run_inference.py \ 
+python scripts/run_liveKVQuant.py \ 
   --task_type single-doc \
-  --ema_alpha 0.2 \
+  --ema_alpha 0.2 \run_liveKVQuant
   --clip_factor_n 4.0 \
   --outlier_ratio 0.01 \
   --num_samples -1
@@ -100,24 +100,24 @@ python scripts/run_inference.py \
 手動輸入 Prompt 進行測試。
 
 ```bash
-python scripts/run_inference.py \
+python scripts/run_liveKVQuant.py \
   --input_mode interactive
 ```
 
-**模式 D：基準模型 (Baseline)**
+**模式 D：基準模型 (Baseline-FullKV)**
 
 ```bash
-python scripts/run_baseline.py \
+python scripts/baselines/run_fullKV.py \
   --bench_version v1 \
   --task_type single-doc \
   --num_samples 5
-python scripts/run_baseline.py \
+python scripts/baselines/run_fullKV.py \
   --bench_version v1 \
   --task_type narrativeqa \
   --num_samples 10
 
 # 跑 single-doc 全部的結果
-python scripts/run_baseline.py \
+python scripts/baselines/run_fullKV.py \
   --bench_version v2 \
   --task_type single-doc \
   --num_samples -1
@@ -135,15 +135,15 @@ python scripts/run_baseline.py \
 
 `scripts/` 目錄下包含特定實驗的執行腳本。這些腳本目前的參數是在 `__main__` 區塊中直接定義的，若需更改設定（如測試不同模型或資料筆數），請直接編輯檔案內容。
 
-#### 批量推論評估 (`scripts/run_inference.py`)
+#### 批量推論評估 (`scripts/run_liveKVQuant.py`)
 
 執行 LongBench 特定任務的批量評估，並計算 F1 Score 與記憶體使用量。
 
 ```bash
 # 預設執行 NarrativeQA 的前 5 筆資料
-python scripts/run_inference.py
+python scripts/run_liveKVQuant.py
 
-python scripts/run_inference.py --task narrativeqa --num_samples 20 --chunk_size 1024
+python scripts/run_liveKVQuant.py --task narrativeqa --num_samples 20 --chunk_size 1024
 ```
 
 *輸出結果將儲存為 JSON 檔案，包含詳細的 Metric 與推論結果。*

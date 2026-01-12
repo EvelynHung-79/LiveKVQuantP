@@ -155,8 +155,8 @@ def evaluate_single_task(model, tokenizer, args, task_name, profiler):
     logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_filename = f"{timestamp}_baseline_{args.bench_version}_{task_name}.json"
-    output_path = os.path.join("./results/baseline", output_filename)
+    output_filename = f"{timestamp}_{args.bench_version}_{task_name}.json"
+    output_path = os.path.join("./results/baselines/fullKV/", output_filename)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     with open(output_path, "w", encoding="utf-8") as f:

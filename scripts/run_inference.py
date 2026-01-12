@@ -188,7 +188,7 @@ def run_longbench(model, args, profiler, task_name):
     mode_str = f"quant_w{args.n_warmup}_b{args.bits}"
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_filename = f"{timestamp}_results_{task_name}_{mode_str}.json"
-    output_path = os.path.join("./results/compression", output_filename)
+    output_path = os.path.join("./results/liveKVQuant/", output_filename)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     with open(output_path, "w", encoding="utf-8") as f:

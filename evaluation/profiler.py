@@ -73,14 +73,14 @@ class MemoryProfiler:
         )
 
     @staticmethod
-    def calculate_compression_ratio(baseline_mem_mb: float, compressed_mem_mb: float) -> float:
+    def calculate_compression_ratio(baseline_fullKV_mem_mb: float, compressed_mem_mb: float) -> float:
         """
         計算記憶體壓縮率。
         對應公式: Compress Ratio = Original Memory / Compressed Memory 
         
         Args:
-            baseline_mem_mb: FP16 原始模型的記憶體佔用
+            baseline_fullKV_mem_mb: FP16 原始模型的記憶體佔用
             compressed_mem_mb: LiveKVQuant-P 的記憶體佔用
         """
         if compressed_mem_mb == 0: return 0.0
-        return baseline_mem_mb / compressed_mem_mb
+        return baseline_fullKV_mem_mb / compressed_mem_mb

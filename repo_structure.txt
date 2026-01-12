@@ -3,7 +3,6 @@ LiveKVQuant-P/
 ├── repo_structure.txt
 ├── requirements.txt
 ├── config.py                   # 簡單配置或使用 YAML
-├── main_inference.py           # 執行入口
 ├── tests/                      # [NEW] 測試目錄 (Perplexity 建議)
 │   ├── __init__.py
 │   ├── test_ema_utils.py       # 測試 Clipped EMA 數學正確性
@@ -33,5 +32,6 @@ LiveKVQuant-P/
 │   ├── metrics.py              # 計算 Perplexity, F1 Score, Accuracy 
 │   └── profiler.py             # 測量 Memory Saving & Latency 
 └── scripts/                    # 實驗腳本
-    ├── run_inference.py        # 單次推論測試
+    ├── run_liveKVQuant.py        # 單次推論測試
+    ├── run_baseline.py         # Full KV
     └── run_ablation.py         # 自動化 Ablation Study 腳本

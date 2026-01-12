@@ -5,6 +5,7 @@ __pycache__
 .DS_Store
 .pytest_cache/
 # results/
-*.png
+# *.png
 data/longbench_v1/
 data/longbench_v2/
+ema_plots/
