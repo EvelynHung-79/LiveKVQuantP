@@ -180,9 +180,10 @@ def run_longbench(model, args, profiler, task_name):
                 results.append({"index": i, "error": "OOM", "score": 0.0})
 
     avg_score = total_score / len(results) if results else 0.0
+    avg_latency = sum([r.get("latency_ms", 0.0) for r in results]) / len(results) if results else 0.0
     max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
 
-    logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Max Memory: {max_peak_memory:.2f} MB")
+    logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
     
     mode_str = f"quant_w{args.n_warmup}_b{args.bits}"
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -196,6 +197,7 @@ def run_longbench(model, args, profiler, task_name):
             "version": args.bench_version,
             "args": vars(args),
             "avg_score": avg_score,
+            "avg_latency_ms": avg_latency,
             "max_peak_memory_mb": max_peak_memory,
             "details": results
         }, f, indent=4, ensure_ascii=False)

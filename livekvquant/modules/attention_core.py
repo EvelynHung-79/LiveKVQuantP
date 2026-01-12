@@ -10,36 +10,41 @@ class AttentionCore:
         self.config = config
 
     def _reconstruct_tensor(self, chunk_data: dict, target_dtype: torch.dtype) -> torch.Tensor:
+        # [還原] 移除 isinstance(Tensor) 的檢查，因為現在只會有 dict
         if chunk_data["type"] == "warmup":
-            # Warmup data 已經是模型原本的 dtype，但也保險起見轉一下
             return chunk_data["data"].to(dtype=target_dtype)
         
-        # 1. 反量化 (Output: Float32)
         dequantized = dequantize_symmetric(
             chunk_data["quantized_data"], 
             chunk_data["scale"]
         )
         
-        # 2. 還原 Outlier (Output: Float32)
         reconstructed = restore_outliers(
             dequantized, 
             chunk_data["sparse_values"], 
             chunk_data["sparse_indices"]
         )
         
-        # 3. [CRITICAL FIX] 轉型回目標 Dtype (BFloat16)
         return reconstructed.to(dtype=target_dtype)
 
-    def compute_attention(self, q_tensor, kv_manager, rotary_emb_module=None, position_ids=None):
+    def compute_attention(self, q_tensor, kv_manager, 
+                          current_k=None, current_v=None, 
+                          rotary_emb_module=None, position_ids=None):
         k_chunks, v_chunks = kv_manager.get_all_chunks()
         
-        # [FIX] 取得當前計算的正確 dtype (通常是 BFloat16)
         target_dtype = q_tensor.dtype
         
-        # 傳入 target_dtype 進行重建
         k_list = [self._reconstruct_tensor(c, target_dtype) for c in k_chunks]
         v_list = [self._reconstruct_tensor(c, target_dtype) for c in v_chunks]
         
+        # 將當前無損的 Tensor 加入列表
+        if current_k is not None:
+            k_list.append(current_k.to(dtype=target_dtype))
+            v_list.append(current_v.to(dtype=target_dtype))
+        
+        if len(k_list) == 0:
+             return torch.zeros_like(q_tensor)
+
         k_full = torch.cat(k_list, dim=-2)
         v_full = torch.cat(v_list, dim=-2)
         
@@ -67,17 +72,15 @@ class AttentionCore:
         scale = 1.0 / math.sqrt(head_dim)
         attn_scores = torch.matmul(q_tensor, k_full.transpose(-2, -1)) * scale
         
-        # === [修正] Masking (統一處理所有情況) ===
+        # Masking
         q_len = q_tensor.size(-2)
         k_len = k_full.size(-2)
         
-        # 1. Causal Mask for Current Chunk
         causal_mask = torch.tril(torch.ones(q_len, q_len, device=q_tensor.device, dtype=torch.bool))
         min_value = torch.finfo(q_tensor.dtype).min
         mask_tensor = torch.full((q_len, q_len), min_value, device=q_tensor.device, dtype=q_tensor.dtype)
         mask_tensor.masked_fill_(causal_mask, 0.0)
         
-        # 2. History Mask (Always Visible)
         past_len = k_len - q_len
         if past_len > 0:
             history_mask = torch.zeros((q_len, past_len), device=q_tensor.device, dtype=q_tensor.dtype)
@@ -85,9 +88,7 @@ class AttentionCore:
         else:
             full_mask = mask_tensor
             
-        # 3. Apply Mask
         attn_scores = attn_scores + full_mask.unsqueeze(0).unsqueeze(0)
-        # ========================================
         
         attn_probs = F.softmax(attn_scores, dim=-1)
         attn_output = torch.matmul(attn_probs, v_full)

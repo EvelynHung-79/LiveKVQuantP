@@ -86,6 +86,14 @@ python scripts/run_inference.py \
   --ema_alpha 1.0 \
   --clip_factor_n 1.5 \
   --outlier_ratio 0.05
+
+# 不錯的結果
+python scripts/run_inference.py \ 
+  --task_type single-doc \
+  --ema_alpha 0.2 \
+  --clip_factor_n 4.0 \
+  --outlier_ratio 0.01 \
+  --num_samples -1
 ```
 
 **模式 C：互動模式 (Interactive)**
@@ -107,10 +115,12 @@ python scripts/run_baseline.py \
   --bench_version v1 \
   --task_type narrativeqa \
   --num_samples 10
+
+# 跑 single-doc 全部的結果
 python scripts/run_baseline.py \
   --bench_version v2 \
   --task_type single-doc \
-  --num_samples 5
+  --num_samples -1
 
 ```
 

@@ -43,7 +43,7 @@ class LongBenchLoader:
         local_file_path = os.path.join(local_data_dir, f"{task_name}.jsonl")
         
         if os.path.exists(local_file_path):
-            logger.info(f"Found local dataset file: {local_file_path}")
+            # logger.info(f"Found local dataset file: {local_file_path}")
             try:
                 # 使用 json loader 讀取本地檔案
                 # split='train' 是因為 json loader 預設只會載入到 train，我們後面再手動對應

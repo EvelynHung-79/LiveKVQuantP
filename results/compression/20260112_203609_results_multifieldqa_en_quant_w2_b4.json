@@ -1,0 +1,113 @@
+{
+    "task": "multifieldqa_en",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "single-doc",
+        "num_samples": 10,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.5094200244200244,
+    "avg_latency_ms": 5604.045044002123,
+    "max_peak_memory_mb": 17612.22802734375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.7499999999999999,
+            "metric": "F1",
+            "output": "South West Ultras",
+            "ground_truth": "South West Ultras fan club.",
+            "peak_memory_mb": 15753.9599609375,
+            "latency_ms": 663.5712941642851
+        },
+        {
+            "index": 1,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "output": "No.",
+            "ground_truth": "No, it is not necessary.",
+            "peak_memory_mb": 17207.26220703125,
+            "latency_ms": 5791.930231032893
+        },
+        {
+            "index": 2,
+            "score": 0.7142857142857143,
+            "metric": "F1",
+            "output": "Low-temperature scanning tunneling microscopy and spectroscopy (STM/STS) measurements.",
+            "ground_truth": "Low temperature scanning tunneling microscopy and spectroscopy (STM/STS).",
+            "peak_memory_mb": 16797.25244140625,
+            "latency_ms": 5311.746927909553
+        },
+        {
+            "index": 3,
+            "score": 0.5555555555555556,
+            "metric": "F1",
+            "output": "To treat life-threatening heartbeat irregularities.",
+            "ground_truth": "Implantable Cardioverter Defibrillator (ICD) is a surgically implanted electronic device to treat life-threatening heartbeat irregularities.",
+            "peak_memory_mb": 17369.32275390625,
+            "latency_ms": 7381.161369848996
+        },
+        {
+            "index": 4,
+            "score": 0.30769230769230776,
+            "metric": "F1",
+            "output": "It's because when the sides are sloped, the distance given by measuring the profile drawing is \"foreshortened\" and doesn't give the proper shape for building the fuselage with a flat top longeron.",
+            "ground_truth": "The sides of the fuselage are sloped to create a conical section when the fuselage is formed.",
+            "peak_memory_mb": 16640.60693359375,
+            "latency_ms": 7957.997048040852
+        },
+        {
+            "index": 5,
+            "score": 0.4166666666666667,
+            "metric": "F1",
+            "output": "The proximity of superconductivity tends to suppress the Kondo effect if the superconducting energy gap (2Δ) becomes larger than the relevant Kondo temperature (TK).",
+            "ground_truth": "It tends to suppress the Kondo effect.",
+            "peak_memory_mb": 17207.25830078125,
+            "latency_ms": 10101.753972936422
+        },
+        {
+            "index": 6,
+            "score": 0.26666666666666666,
+            "metric": "F1",
+            "output": "Electricity is used in various ways such as lighting, heating, communication, and in electric vehicles, electronic devices, and vehicles, and it is also used in various industries and in many appliances used in daily life.",
+            "ground_truth": "Electricity is used for transport, heating, lighting, communications, and computation.",
+            "peak_memory_mb": 16720.69970703125,
+            "latency_ms": 8186.401145067066
+        },
+        {
+            "index": 7,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Vice Admiral",
+            "ground_truth": "Vice Admiral.",
+            "peak_memory_mb": 15991.35107421875,
+            "latency_ms": 1201.6690629534423
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15–3",
+            "ground_truth": "They won their first game with a score of 15-3.",
+            "peak_memory_mb": 15778.55224609375,
+            "latency_ms": 711.7009800858796
+        },
+        {
+            "index": 9,
+            "score": 0.7499999999999999,
+            "metric": "F1",
+            "output": "K3, K4, K5",
+            "ground_truth": "Vitamins K3, K4, and K5.",
+            "peak_memory_mb": 17612.22802734375,
+            "latency_ms": 8732.518407981843
+        }
+    ]
+}

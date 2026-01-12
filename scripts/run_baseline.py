@@ -149,9 +149,10 @@ def evaluate_single_task(model, tokenizer, args, task_name, profiler):
                 results.append({"index": i, "error": "OOM", "score": 0.0})
 
     avg_score = total_score / len(results) if results else 0.0
+    avg_latency = sum([r.get("latency_ms", 0.0) for r in results]) / len(results) if results else 0.0
     max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
 
-    logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Max Memory: {max_peak_memory:.2f} MB")
+    logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_filename = f"{timestamp}_baseline_{args.bench_version}_{task_name}.json"
@@ -164,6 +165,7 @@ def evaluate_single_task(model, tokenizer, args, task_name, profiler):
             "version": args.bench_version,
             "args": vars(args),
             "avg_score": avg_score,
+            "avg_latency_ms": avg_latency,
             "max_peak_memory_mb": max_peak_memory,
             "details": results
         }, f, indent=4, ensure_ascii=False)
