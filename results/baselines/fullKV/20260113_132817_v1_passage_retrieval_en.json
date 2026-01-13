@@ -1,0 +1,1816 @@
+{
+    "task": "passage_retrieval_en",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "synthetic",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 1.0,
+    "avg_latency_ms": 2438.38689745171,
+    "max_peak_memory_mb": 18967.6142578125,
+    "details": [
+        {
+            "index": 0,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18007.23828125,
+            "latency_ms": 3385.1831750944257
+        },
+        {
+            "index": 1,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18102.98095703125,
+            "latency_ms": 2125.551593955606
+        },
+        {
+            "index": 2,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18426.2294921875,
+            "latency_ms": 2399.7274856083095
+        },
+        {
+            "index": 3,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 17",
+            "ground_truth": "Paragraph 17",
+            "peak_memory_mb": 18349.5625,
+            "latency_ms": 2322.827977128327
+        },
+        {
+            "index": 4,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 14",
+            "ground_truth": "Paragraph 14",
+            "peak_memory_mb": 18282.66845703125,
+            "latency_ms": 2287.4473142437637
+        },
+        {
+            "index": 5,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18225.12060546875,
+            "latency_ms": 2252.3502451367676
+        },
+        {
+            "index": 6,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18142.8994140625,
+            "latency_ms": 2200.043664779514
+        },
+        {
+            "index": 7,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18176.30908203125,
+            "latency_ms": 2213.0051772110164
+        },
+        {
+            "index": 8,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 17843.43212890625,
+            "latency_ms": 1931.397810112685
+        },
+        {
+            "index": 9,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18699.06884765625,
+            "latency_ms": 2713.5784290730953
+        },
+        {
+            "index": 10,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22.",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 18314.3798828125,
+            "latency_ms": 2384.7957332618535
+        },
+        {
+            "index": 11,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18537.79833984375,
+            "latency_ms": 2567.5288662314415
+        },
+        {
+            "index": 12,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18225.11962890625,
+            "latency_ms": 2287.9271670244634
+        },
+        {
+            "index": 13,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18595.05419921875,
+            "latency_ms": 2623.320517130196
+        },
+        {
+            "index": 14,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18944.58740234375,
+            "latency_ms": 2959.554510191083
+        },
+        {
+            "index": 15,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18564.388671875,
+            "latency_ms": 2607.7214148826897
+        },
+        {
+            "index": 16,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18205.21826171875,
+            "latency_ms": 2294.84236985445
+        },
+        {
+            "index": 17,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 17",
+            "ground_truth": "Paragraph 17",
+            "peak_memory_mb": 18301.81005859375,
+            "latency_ms": 2362.7863340079784
+        },
+        {
+            "index": 18,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 4",
+            "ground_truth": "Paragraph 4",
+            "peak_memory_mb": 18487.12841796875,
+            "latency_ms": 2528.6318440921605
+        },
+        {
+            "index": 19,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18843.84912109375,
+            "latency_ms": 2903.813132084906
+        },
+        {
+            "index": 20,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18439.5888671875,
+            "latency_ms": 2487.4353338964283
+        },
+        {
+            "index": 21,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 18469.66357421875,
+            "latency_ms": 2516.1791648715734
+        },
+        {
+            "index": 22,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18267.0869140625,
+            "latency_ms": 2355.227671097964
+        },
+        {
+            "index": 23,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18274.95361328125,
+            "latency_ms": 2360.0892229005694
+        },
+        {
+            "index": 24,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 17961.28466796875,
+            "latency_ms": 2089.7026620805264
+        },
+        {
+            "index": 25,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 17884.2939453125,
+            "latency_ms": 1988.3006168529391
+        },
+        {
+            "index": 26,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18792.6005859375,
+            "latency_ms": 2843.2912388816476
+        },
+        {
+            "index": 27,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18328.53662109375,
+            "latency_ms": 2403.9419726468623
+        },
+        {
+            "index": 28,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18450.74365234375,
+            "latency_ms": 2523.599987849593
+        },
+        {
+            "index": 29,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 17727.6611328125,
+            "latency_ms": 1898.0363039299846
+        },
+        {
+            "index": 30,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18546.98046875,
+            "latency_ms": 2633.6227296851575
+        },
+        {
+            "index": 31,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18089.8671875,
+            "latency_ms": 2219.950584229082
+        },
+        {
+            "index": 32,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18628.63037109375,
+            "latency_ms": 2707.9715337604284
+        },
+        {
+            "index": 33,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 17876.68017578125,
+            "latency_ms": 1997.2335188649595
+        },
+        {
+            "index": 34,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 5",
+            "ground_truth": "Paragraph 5",
+            "peak_memory_mb": 18388.14306640625,
+            "latency_ms": 2486.609569285065
+        },
+        {
+            "index": 35,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18385.29443359375,
+            "latency_ms": 2489.787725266069
+        },
+        {
+            "index": 36,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18559.0927734375,
+            "latency_ms": 2653.42686092481
+        },
+        {
+            "index": 37,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 5",
+            "ground_truth": "Paragraph 5",
+            "peak_memory_mb": 18245.208984375,
+            "latency_ms": 2349.033499136567
+        },
+        {
+            "index": 38,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18509.4697265625,
+            "latency_ms": 2593.5515901073813
+        },
+        {
+            "index": 39,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 17807.41357421875,
+            "latency_ms": 1960.4204879142344
+        },
+        {
+            "index": 40,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18225.0966796875,
+            "latency_ms": 2340.520882047713
+        },
+        {
+            "index": 41,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18572.1103515625,
+            "latency_ms": 2680.953040253371
+        },
+        {
+            "index": 42,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18171.00390625,
+            "latency_ms": 2273.441439960152
+        },
+        {
+            "index": 43,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18576.09375,
+            "latency_ms": 2682.9918860457838
+        },
+        {
+            "index": 44,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18103.80224609375,
+            "latency_ms": 2238.6853648349643
+        },
+        {
+            "index": 45,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 18714.18798828125,
+            "latency_ms": 2804.1382473893464
+        },
+        {
+            "index": 46,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 17.",
+            "ground_truth": "Paragraph 17",
+            "peak_memory_mb": 18733.4306640625,
+            "latency_ms": 2863.8476650230587
+        },
+        {
+            "index": 47,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18161.75390625,
+            "latency_ms": 2269.984558224678
+        },
+        {
+            "index": 48,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18695.798828125,
+            "latency_ms": 2801.730657927692
+        },
+        {
+            "index": 49,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 21",
+            "ground_truth": "Paragraph 21",
+            "peak_memory_mb": 18364.87158203125,
+            "latency_ms": 2472.1866631880403
+        },
+        {
+            "index": 50,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18120.49365234375,
+            "latency_ms": 2247.9702099226415
+        },
+        {
+            "index": 51,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 29",
+            "ground_truth": "Paragraph 29",
+            "peak_memory_mb": 18070.1865234375,
+            "latency_ms": 2206.3297335989773
+        },
+        {
+            "index": 52,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18479.8271484375,
+            "latency_ms": 2575.5692957900465
+        },
+        {
+            "index": 53,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18174.12548828125,
+            "latency_ms": 2288.662323728204
+        },
+        {
+            "index": 54,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18436.81640625,
+            "latency_ms": 2528.764883056283
+        },
+        {
+            "index": 55,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 18599.09375,
+            "latency_ms": 2699.9033968895674
+        },
+        {
+            "index": 56,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 16",
+            "ground_truth": "Paragraph 16",
+            "peak_memory_mb": 18232.07470703125,
+            "latency_ms": 2356.4525190740824
+        },
+        {
+            "index": 57,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 14",
+            "ground_truth": "Paragraph 14",
+            "peak_memory_mb": 18070.486328125,
+            "latency_ms": 2205.2966030314565
+        },
+        {
+            "index": 58,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 29",
+            "ground_truth": "Paragraph 29",
+            "peak_memory_mb": 18694.4697265625,
+            "latency_ms": 2801.876086741686
+        },
+        {
+            "index": 59,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18740.8779296875,
+            "latency_ms": 2828.486264217645
+        },
+        {
+            "index": 60,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18646.06005859375,
+            "latency_ms": 2734.647801145911
+        },
+        {
+            "index": 61,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18663.1611328125,
+            "latency_ms": 2754.1894181631505
+        },
+        {
+            "index": 62,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18456.46630859375,
+            "latency_ms": 2547.622492071241
+        },
+        {
+            "index": 63,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 10",
+            "ground_truth": "Paragraph 10",
+            "peak_memory_mb": 18670.56494140625,
+            "latency_ms": 2754.736023955047
+        },
+        {
+            "index": 64,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18349.1865234375,
+            "latency_ms": 2435.5452838353813
+        },
+        {
+            "index": 65,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 17931.560546875,
+            "latency_ms": 2089.621108956635
+        },
+        {
+            "index": 66,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18191.994140625,
+            "latency_ms": 2300.6939301267266
+        },
+        {
+            "index": 67,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18174.1162109375,
+            "latency_ms": 2289.7813860327005
+        },
+        {
+            "index": 68,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 21",
+            "ground_truth": "Paragraph 21",
+            "peak_memory_mb": 18261.82470703125,
+            "latency_ms": 2383.354911580682
+        },
+        {
+            "index": 69,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18872.22021484375,
+            "latency_ms": 2971.6629181057215
+        },
+        {
+            "index": 70,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 5",
+            "ground_truth": "Paragraph 5",
+            "peak_memory_mb": 18666.05615234375,
+            "latency_ms": 2755.93409081921
+        },
+        {
+            "index": 71,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 9",
+            "ground_truth": "Paragraph 9",
+            "peak_memory_mb": 18211.21142578125,
+            "latency_ms": 2341.395447961986
+        },
+        {
+            "index": 72,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 20",
+            "ground_truth": "Paragraph 20",
+            "peak_memory_mb": 17909.13720703125,
+            "latency_ms": 2072.8730759583414
+        },
+        {
+            "index": 73,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18381.9384765625,
+            "latency_ms": 2487.7697778865695
+        },
+        {
+            "index": 74,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18328.2392578125,
+            "latency_ms": 2429.915288928896
+        },
+        {
+            "index": 75,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 18572.96630859375,
+            "latency_ms": 2685.835803858936
+        },
+        {
+            "index": 76,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 17972.7802734375,
+            "latency_ms": 2122.6883907802403
+        },
+        {
+            "index": 77,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18225.09912109375,
+            "latency_ms": 2347.9163968004286
+        },
+        {
+            "index": 78,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 11",
+            "ground_truth": "Paragraph 11",
+            "peak_memory_mb": 18073.43701171875,
+            "latency_ms": 2211.155571974814
+        },
+        {
+            "index": 79,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18083.78759765625,
+            "latency_ms": 2233.495100867003
+        },
+        {
+            "index": 80,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18102.9736328125,
+            "latency_ms": 2243.5538871213794
+        },
+        {
+            "index": 81,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18967.6142578125,
+            "latency_ms": 3054.3739730492234
+        },
+        {
+            "index": 82,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 18365.33447265625,
+            "latency_ms": 2477.986798156053
+        },
+        {
+            "index": 83,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18031.97119140625,
+            "latency_ms": 2158.7369330227375
+        },
+        {
+            "index": 84,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18652.537109375,
+            "latency_ms": 2740.6159741804004
+        },
+        {
+            "index": 85,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18088.685546875,
+            "latency_ms": 2236.5925228223205
+        },
+        {
+            "index": 86,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18006.732421875,
+            "latency_ms": 2145.610270090401
+        },
+        {
+            "index": 87,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 5",
+            "ground_truth": "Paragraph 5",
+            "peak_memory_mb": 18375.05810546875,
+            "latency_ms": 2485.2239382453263
+        },
+        {
+            "index": 88,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18626.49267578125,
+            "latency_ms": 2716.4387707598507
+        },
+        {
+            "index": 89,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 17926.46533203125,
+            "latency_ms": 2077.739153057337
+        },
+        {
+            "index": 90,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 29",
+            "ground_truth": "Paragraph 29",
+            "peak_memory_mb": 18425.3623046875,
+            "latency_ms": 2520.993776153773
+        },
+        {
+            "index": 91,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 17850.1220703125,
+            "latency_ms": 2000.1002359203994
+        },
+        {
+            "index": 92,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 17",
+            "ground_truth": "Paragraph 17",
+            "peak_memory_mb": 17753.927734375,
+            "latency_ms": 1935.6965720653534
+        },
+        {
+            "index": 93,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 16",
+            "ground_truth": "Paragraph 16",
+            "peak_memory_mb": 18371.5126953125,
+            "latency_ms": 2482.858310919255
+        },
+        {
+            "index": 94,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18347.39111328125,
+            "latency_ms": 2437.0033708401024
+        },
+        {
+            "index": 95,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 13",
+            "ground_truth": "Paragraph 13",
+            "peak_memory_mb": 18660.07275390625,
+            "latency_ms": 2736.166211310774
+        },
+        {
+            "index": 96,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 20",
+            "ground_truth": "Paragraph 20",
+            "peak_memory_mb": 18434.009765625,
+            "latency_ms": 2526.058489922434
+        },
+        {
+            "index": 97,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18.",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18962.06201171875,
+            "latency_ms": 3080.31167415902
+        },
+        {
+            "index": 98,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 18382.2939453125,
+            "latency_ms": 2486.5665403194726
+        },
+        {
+            "index": 99,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18694.3369140625,
+            "latency_ms": 2797.124257311225
+        },
+        {
+            "index": 100,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18420.43505859375,
+            "latency_ms": 2524.9577998183668
+        },
+        {
+            "index": 101,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18742.048828125,
+            "latency_ms": 2833.1022141501307
+        },
+        {
+            "index": 102,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 13",
+            "ground_truth": "Paragraph 13",
+            "peak_memory_mb": 18381.94189453125,
+            "latency_ms": 2486.1438400112092
+        },
+        {
+            "index": 103,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 9",
+            "ground_truth": "Paragraph 9",
+            "peak_memory_mb": 18178.900390625,
+            "latency_ms": 2291.2733829580247
+        },
+        {
+            "index": 104,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 18572.15576171875,
+            "latency_ms": 2687.5488562509418
+        },
+        {
+            "index": 105,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 11",
+            "ground_truth": "Paragraph 11",
+            "peak_memory_mb": 18434.00732421875,
+            "latency_ms": 2528.0621079728007
+        },
+        {
+            "index": 106,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18732.1025390625,
+            "latency_ms": 2828.557983972132
+        },
+        {
+            "index": 107,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18006.51708984375,
+            "latency_ms": 2143.512991257012
+        },
+        {
+            "index": 108,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 10",
+            "ground_truth": "Paragraph 10",
+            "peak_memory_mb": 18438.21435546875,
+            "latency_ms": 2528.5111856646836
+        },
+        {
+            "index": 109,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 3",
+            "ground_truth": "Paragraph 3",
+            "peak_memory_mb": 18137.07177734375,
+            "latency_ms": 2259.5005561597645
+        },
+        {
+            "index": 110,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 10",
+            "ground_truth": "Paragraph 10",
+            "peak_memory_mb": 18327.8046875,
+            "latency_ms": 2427.9633560217917
+        },
+        {
+            "index": 111,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 18610.93310546875,
+            "latency_ms": 2703.785961959511
+        },
+        {
+            "index": 112,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18207.86669921875,
+            "latency_ms": 2343.5847382061183
+        },
+        {
+            "index": 113,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18293.26171875,
+            "latency_ms": 2393.755291122943
+        },
+        {
+            "index": 114,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 20.",
+            "ground_truth": "Paragraph 20",
+            "peak_memory_mb": 18327.33349609375,
+            "latency_ms": 2449.2833940312266
+        },
+        {
+            "index": 115,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18714.19921875,
+            "latency_ms": 2809.3868419528008
+        },
+        {
+            "index": 116,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 17965.4794921875,
+            "latency_ms": 2116.877983789891
+        },
+        {
+            "index": 117,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 9",
+            "ground_truth": "Paragraph 9",
+            "peak_memory_mb": 18259.9462890625,
+            "latency_ms": 2365.7505358569324
+        },
+        {
+            "index": 118,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 14",
+            "ground_truth": "Paragraph 14",
+            "peak_memory_mb": 18156.96728515625,
+            "latency_ms": 2287.9732958972454
+        },
+        {
+            "index": 119,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18540.923828125,
+            "latency_ms": 2657.44104096666
+        },
+        {
+            "index": 120,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18225.115234375,
+            "latency_ms": 2351.403991691768
+        },
+        {
+            "index": 121,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 19",
+            "ground_truth": "Paragraph 19",
+            "peak_memory_mb": 18904.61083984375,
+            "latency_ms": 2984.9851420149207
+        },
+        {
+            "index": 122,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 18415.5556640625,
+            "latency_ms": 2515.5190182849765
+        },
+        {
+            "index": 123,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18315.7900390625,
+            "latency_ms": 2417.0191269367933
+        },
+        {
+            "index": 124,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 17947.69677734375,
+            "latency_ms": 2105.481921695173
+        },
+        {
+            "index": 125,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 17882.27197265625,
+            "latency_ms": 2012.2487749904394
+        },
+        {
+            "index": 126,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18347.81787109375,
+            "latency_ms": 2436.494695022702
+        },
+        {
+            "index": 127,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 11",
+            "ground_truth": "Paragraph 11",
+            "peak_memory_mb": 17786.4931640625,
+            "latency_ms": 1949.3886679410934
+        },
+        {
+            "index": 128,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 18",
+            "ground_truth": "Paragraph 18",
+            "peak_memory_mb": 18619.2529296875,
+            "latency_ms": 2714.6117431111634
+        },
+        {
+            "index": 129,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 9",
+            "ground_truth": "Paragraph 9",
+            "peak_memory_mb": 18174.08203125,
+            "latency_ms": 2290.691793896258
+        },
+        {
+            "index": 130,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 16",
+            "ground_truth": "Paragraph 16",
+            "peak_memory_mb": 17948.4677734375,
+            "latency_ms": 2106.4106612466276
+        },
+        {
+            "index": 131,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18264.9208984375,
+            "latency_ms": 2380.87628595531
+        },
+        {
+            "index": 132,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18275.66357421875,
+            "latency_ms": 2389.6812396124005
+        },
+        {
+            "index": 133,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18225.1103515625,
+            "latency_ms": 2349.16754020378
+        },
+        {
+            "index": 134,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18284.58349609375,
+            "latency_ms": 2389.783744700253
+        },
+        {
+            "index": 135,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18564.36767578125,
+            "latency_ms": 2670.189102180302
+        },
+        {
+            "index": 136,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 20",
+            "ground_truth": "Paragraph 20",
+            "peak_memory_mb": 18556.20458984375,
+            "latency_ms": 2662.70621586591
+        },
+        {
+            "index": 137,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 29",
+            "ground_truth": "Paragraph 29",
+            "peak_memory_mb": 18327.341796875,
+            "latency_ms": 2415.8185343258083
+        },
+        {
+            "index": 138,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18207.38037109375,
+            "latency_ms": 2342.8640216588974
+        },
+        {
+            "index": 139,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18519.96435546875,
+            "latency_ms": 2633.651304990053
+        },
+        {
+            "index": 140,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18694.72021484375,
+            "latency_ms": 2797.9569868184626
+        },
+        {
+            "index": 141,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 4",
+            "ground_truth": "Paragraph 4",
+            "peak_memory_mb": 18070.22998046875,
+            "latency_ms": 2209.231061860919
+        },
+        {
+            "index": 142,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 29",
+            "ground_truth": "Paragraph 29",
+            "peak_memory_mb": 18591.91162109375,
+            "latency_ms": 2692.5595863722265
+        },
+        {
+            "index": 143,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 11",
+            "ground_truth": "Paragraph 11",
+            "peak_memory_mb": 18102.99951171875,
+            "latency_ms": 2244.803170207888
+        },
+        {
+            "index": 144,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18650.42822265625,
+            "latency_ms": 2738.588706124574
+        },
+        {
+            "index": 145,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 22",
+            "ground_truth": "Paragraph 22",
+            "peak_memory_mb": 18206.6884765625,
+            "latency_ms": 2341.8775722384453
+        },
+        {
+            "index": 146,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18182.12451171875,
+            "latency_ms": 2290.8186418935657
+        },
+        {
+            "index": 147,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18282.470703125,
+            "latency_ms": 2390.03238780424
+        },
+        {
+            "index": 148,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 18451.263671875,
+            "latency_ms": 2548.286267090589
+        },
+        {
+            "index": 149,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18189.46435546875,
+            "latency_ms": 2295.6814728677273
+        },
+        {
+            "index": 150,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 11",
+            "ground_truth": "Paragraph 11",
+            "peak_memory_mb": 18041.5712890625,
+            "latency_ms": 2164.617244154215
+        },
+        {
+            "index": 151,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18542.037109375,
+            "latency_ms": 2656.9636962376535
+        },
+        {
+            "index": 152,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 16",
+            "ground_truth": "Paragraph 16",
+            "peak_memory_mb": 17793.5966796875,
+            "latency_ms": 1951.4142638072371
+        },
+        {
+            "index": 153,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 18347.37451171875,
+            "latency_ms": 2440.0687059387565
+        },
+        {
+            "index": 154,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18626.10107421875,
+            "latency_ms": 2713.852344080806
+        },
+        {
+            "index": 155,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 17838.6953125,
+            "latency_ms": 1995.3503469005227
+        },
+        {
+            "index": 156,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 28",
+            "ground_truth": "Paragraph 28",
+            "peak_memory_mb": 18572.85595703125,
+            "latency_ms": 2687.3974190093577
+        },
+        {
+            "index": 157,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18192.12890625,
+            "latency_ms": 2294.381505344063
+        },
+        {
+            "index": 158,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18817.5478515625,
+            "latency_ms": 2901.3946279883385
+        },
+        {
+            "index": 159,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 16",
+            "ground_truth": "Paragraph 16",
+            "peak_memory_mb": 18681.4677734375,
+            "latency_ms": 2767.8289762698114
+        },
+        {
+            "index": 160,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 17858.76513671875,
+            "latency_ms": 1998.7421743571758
+        },
+        {
+            "index": 161,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18263.4853515625,
+            "latency_ms": 2382.906153332442
+        },
+        {
+            "index": 162,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18000.3828125,
+            "latency_ms": 2138.546874281019
+        },
+        {
+            "index": 163,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 15",
+            "ground_truth": "Paragraph 15",
+            "peak_memory_mb": 18250.5986328125,
+            "latency_ms": 2365.2144260704517
+        },
+        {
+            "index": 164,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 14",
+            "ground_truth": "Paragraph 14",
+            "peak_memory_mb": 18089.14697265625,
+            "latency_ms": 2236.460256855935
+        },
+        {
+            "index": 165,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18317.6318359375,
+            "latency_ms": 2416.725262068212
+        },
+        {
+            "index": 166,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 18137.41259765625,
+            "latency_ms": 2259.3528451398015
+        },
+        {
+            "index": 167,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 17973.34130859375,
+            "latency_ms": 2120.4623309895396
+        },
+        {
+            "index": 168,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 5",
+            "ground_truth": "Paragraph 5",
+            "peak_memory_mb": 18228.04638671875,
+            "latency_ms": 2348.252708092332
+        },
+        {
+            "index": 169,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 17980.5712890625,
+            "latency_ms": 2119.8527300730348
+        },
+        {
+            "index": 170,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18008.72998046875,
+            "latency_ms": 2137.6136490143836
+        },
+        {
+            "index": 171,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8.",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 18016.017578125,
+            "latency_ms": 2172.3603010177612
+        },
+        {
+            "index": 172,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 20",
+            "ground_truth": "Paragraph 20",
+            "peak_memory_mb": 18365.041015625,
+            "latency_ms": 2477.4482641369104
+        },
+        {
+            "index": 173,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18053.6767578125,
+            "latency_ms": 2198.9833749830723
+        },
+        {
+            "index": 174,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 23",
+            "ground_truth": "Paragraph 23",
+            "peak_memory_mb": 17913.35546875,
+            "latency_ms": 2073.2680931687355
+        },
+        {
+            "index": 175,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18678.5009765625,
+            "latency_ms": 2756.239167880267
+        },
+        {
+            "index": 176,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 7",
+            "ground_truth": "Paragraph 7",
+            "peak_memory_mb": 18817.37353515625,
+            "latency_ms": 2904.767972882837
+        },
+        {
+            "index": 177,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 10.",
+            "ground_truth": "Paragraph 10",
+            "peak_memory_mb": 17914.9150390625,
+            "latency_ms": 2108.0800741910934
+        },
+        {
+            "index": 178,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18372.52880859375,
+            "latency_ms": 2480.8429586701095
+        },
+        {
+            "index": 179,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 9",
+            "ground_truth": "Paragraph 9",
+            "peak_memory_mb": 18296.5830078125,
+            "latency_ms": 2407.3526789434254
+        },
+        {
+            "index": 180,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 17",
+            "ground_truth": "Paragraph 17",
+            "peak_memory_mb": 18591.9267578125,
+            "latency_ms": 2688.079530838877
+        },
+        {
+            "index": 181,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18663.20703125,
+            "latency_ms": 2753.144331742078
+        },
+        {
+            "index": 182,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 10",
+            "ground_truth": "Paragraph 10",
+            "peak_memory_mb": 18836.4814453125,
+            "latency_ms": 2909.007241949439
+        },
+        {
+            "index": 183,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18397.3359375,
+            "latency_ms": 2505.076963920146
+        },
+        {
+            "index": 184,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18031.515625,
+            "latency_ms": 2159.973885398358
+        },
+        {
+            "index": 185,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 26",
+            "ground_truth": "Paragraph 26",
+            "peak_memory_mb": 18144.80322265625,
+            "latency_ms": 2280.657591763884
+        },
+        {
+            "index": 186,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 8",
+            "ground_truth": "Paragraph 8",
+            "peak_memory_mb": 17883.962890625,
+            "latency_ms": 2014.6625158376992
+        },
+        {
+            "index": 187,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 30",
+            "ground_truth": "Paragraph 30",
+            "peak_memory_mb": 18461.83642578125,
+            "latency_ms": 2556.1688016168773
+        },
+        {
+            "index": 188,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 13",
+            "ground_truth": "Paragraph 13",
+            "peak_memory_mb": 18340.16064453125,
+            "latency_ms": 2436.395050957799
+        },
+        {
+            "index": 189,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 12",
+            "ground_truth": "Paragraph 12",
+            "peak_memory_mb": 18520.583984375,
+            "latency_ms": 2632.6700020581484
+        },
+        {
+            "index": 190,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18192.21875,
+            "latency_ms": 2297.2584469243884
+        },
+        {
+            "index": 191,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 6",
+            "ground_truth": "Paragraph 6",
+            "peak_memory_mb": 17864.81982421875,
+            "latency_ms": 1999.626250937581
+        },
+        {
+            "index": 192,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18225.1083984375,
+            "latency_ms": 2345.842751674354
+        },
+        {
+            "index": 193,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18469.65771484375,
+            "latency_ms": 2554.1808139532804
+        },
+        {
+            "index": 194,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 24",
+            "ground_truth": "Paragraph 24",
+            "peak_memory_mb": 18571.9287109375,
+            "latency_ms": 2684.8191171884537
+        },
+        {
+            "index": 195,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 1",
+            "ground_truth": "Paragraph 1",
+            "peak_memory_mb": 18311.78564453125,
+            "latency_ms": 2412.2906820848584
+        },
+        {
+            "index": 196,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 25",
+            "ground_truth": "Paragraph 25",
+            "peak_memory_mb": 18279.24072265625,
+            "latency_ms": 2390.607016161084
+        },
+        {
+            "index": 197,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 2",
+            "ground_truth": "Paragraph 2",
+            "peak_memory_mb": 18666.037109375,
+            "latency_ms": 2755.6666787713766
+        },
+        {
+            "index": 198,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 27",
+            "ground_truth": "Paragraph 27",
+            "peak_memory_mb": 18023.01025390625,
+            "latency_ms": 2157.423066906631
+        },
+        {
+            "index": 199,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Paragraph 4",
+            "ground_truth": "Paragraph 4",
+            "peak_memory_mb": 18681.3046875,
+            "latency_ms": 2763.459950685501
+        }
+    ]
+}

@@ -64,7 +64,7 @@ python -m pytest tests/
 使用生成的假資料進行快速測試，確認 Pipeline 無誤。
 
 ```bash
-python scripts/run_liveKVQuant.py \
+python scripts/run_liveKVQuantP.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode dummy \
   --chunk_size 512
@@ -74,12 +74,12 @@ python scripts/run_liveKVQuant.py \
 自動下載並載入 LongBench 資料集進行推論（需指定 `task`）。
 
 ```bash
-python scripts/run_liveKVQuant.py \
+python scripts/run_liveKVQuantP.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode longbench \
   --task narrativeqa
 
-python scripts/run_liveKVQuant.py \
+python scripts/run_liveKVQuantP.py \
   --bench_version v1 \
   --task_type single-doc \
   --num_samples -1 \
@@ -88,7 +88,7 @@ python scripts/run_liveKVQuant.py \
   --outlier_ratio 0.05
 
 # 不錯的結果
-python scripts/run_liveKVQuant.py \ 
+python scripts/run_liveKVQuantP.py \ 
   --task_type single-doc \
   --ema_alpha 0.2 \
   --clip_factor_n 4.0 \
@@ -100,7 +100,7 @@ python scripts/run_liveKVQuant.py \
 手動輸入 Prompt 進行測試。
 
 ```bash
-python scripts/run_liveKVQuant.py \
+python scripts/run_liveKVQuantP.py \
   --input_mode interactive
 ```
 

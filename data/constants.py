@@ -3,16 +3,16 @@
 # === 任務分組定義 ===
 V1_TASK_GROUPS = {
     "single-doc": ["narrativeqa", "qasper", "multifieldqa_en"],
-    "multi-doc": ["hotpotqa", "2wikimqa", "musique", "dureader"],
-    "summarization": ["gov_report", "qmsum", "multi_news", "vcsum"],
-    "few-shot": ["trec", "triviaqa", "samsum", "lsht"],
+    "multi-doc": ["hotpotqa", "2wikimqa", "musique"],
+    "summarization": ["gov_report", "qmsum", "multi_news"],
+    "few-shot": ["trec", "triviaqa", "samsum"],
     "synthetic": ["passage_retrieval_en", "passage_count"],
     "code": ["lcc", "repobench-p"],
     "all": [
         "narrativeqa", "qasper", "multifieldqa_en", 
-        "hotpotqa", "2wikimqa", "musique", "dureader", 
-        "gov_report", "qmsum", "multi_news", "vcsum",
-        "trec", "triviaqa", "samsum", "lsht",
+        "hotpotqa", "2wikimqa", "musique", 
+        "gov_report", "qmsum", "multi_news",
+        "trec", "triviaqa", "samsum",
         "passage_retrieval_en", "passage_count",
         "lcc", "repobench-p"
     ]

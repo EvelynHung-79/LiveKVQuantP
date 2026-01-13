@@ -1,0 +1,1816 @@
+{
+    "task": "passage_count",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "synthetic",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.11124096150087942,
+    "avg_latency_ms": 3062.5330889131874,
+    "max_peak_memory_mb": 22277.892578125,
+    "details": [
+        {
+            "index": 0,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "8",
+            "peak_memory_mb": 19081.71923828125,
+            "latency_ms": 3093.7301800586283
+        },
+        {
+            "index": 1,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "11",
+            "peak_memory_mb": 18511.6455078125,
+            "latency_ms": 2533.3741940557957
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "13",
+            "peak_memory_mb": 17493.37548828125,
+            "latency_ms": 1646.7301519587636
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "44",
+            "peak_memory_mb": 20606.72119140625,
+            "latency_ms": 4794.1473801620305
+        },
+        {
+            "index": 4,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "2",
+            "ground_truth": "2",
+            "peak_memory_mb": 22277.892578125,
+            "latency_ms": 6991.168816108257
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "7",
+            "peak_memory_mb": 18121.041015625,
+            "latency_ms": 2185.3772192262113
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "7",
+            "peak_memory_mb": 16984.18603515625,
+            "latency_ms": 1229.437158908695
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "45",
+            "peak_memory_mb": 19710.16015625,
+            "latency_ms": 3761.895386967808
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "4",
+            "peak_memory_mb": 19763.7880859375,
+            "latency_ms": 3836.177196819335
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "31",
+            "peak_memory_mb": 19220.94775390625,
+            "latency_ms": 3248.5126010142267
+        },
+        {
+            "index": 10,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "4",
+            "peak_memory_mb": 20408.97607421875,
+            "latency_ms": 4576.918295584619
+        },
+        {
+            "index": 11,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "16",
+            "peak_memory_mb": 18681.173828125,
+            "latency_ms": 2696.7148231342435
+        },
+        {
+            "index": 12,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 16587.37255859375,
+            "latency_ms": 900.305612012744
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "25",
+            "ground_truth": "44",
+            "peak_memory_mb": 20757.87841796875,
+            "latency_ms": 4968.559964094311
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "19",
+            "peak_memory_mb": 18843.49072265625,
+            "latency_ms": 2882.8744208440185
+        },
+        {
+            "index": 15,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "36",
+            "peak_memory_mb": 18642.77490234375,
+            "latency_ms": 2657.468228135258
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "14",
+            "ground_truth": "24",
+            "peak_memory_mb": 17825.4599609375,
+            "latency_ms": 1908.7699921801686
+        },
+        {
+            "index": 17,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "12",
+            "peak_memory_mb": 18178.021484375,
+            "latency_ms": 2222.0532847568393
+        },
+        {
+            "index": 18,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "23",
+            "peak_memory_mb": 19841.287109375,
+            "latency_ms": 3919.6971473284066
+        },
+        {
+            "index": 19,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "14",
+            "peak_memory_mb": 17159.6845703125,
+            "latency_ms": 1353.2396196387708
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "18",
+            "peak_memory_mb": 19763.77734375,
+            "latency_ms": 3828.296585008502
+        },
+        {
+            "index": 21,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "29",
+            "peak_memory_mb": 20052.84619140625,
+            "latency_ms": 4165.5077347531915
+        },
+        {
+            "index": 22,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "22",
+            "peak_memory_mb": 19498.37255859375,
+            "latency_ms": 3548.9890216849744
+        },
+        {
+            "index": 23,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "6",
+            "peak_memory_mb": 17442.578125,
+            "latency_ms": 1605.211450252682
+        },
+        {
+            "index": 24,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "14",
+            "ground_truth": "8",
+            "peak_memory_mb": 17376.912109375,
+            "latency_ms": 1539.3497408367693
+        },
+        {
+            "index": 25,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "9",
+            "peak_memory_mb": 19394.48876953125,
+            "latency_ms": 3419.441670179367
+        },
+        {
+            "index": 26,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "26",
+            "peak_memory_mb": 17061.7373046875,
+            "latency_ms": 1271.5666093863547
+        },
+        {
+            "index": 27,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "26",
+            "peak_memory_mb": 20939.84716796875,
+            "latency_ms": 5235.678038094193
+        },
+        {
+            "index": 28,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "23",
+            "ground_truth": "28",
+            "peak_memory_mb": 18817.3515625,
+            "latency_ms": 2838.3951387368143
+        },
+        {
+            "index": 29,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "43",
+            "peak_memory_mb": 19516.55419921875,
+            "latency_ms": 3553.616377990693
+        },
+        {
+            "index": 30,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "34",
+            "peak_memory_mb": 19467.52978515625,
+            "latency_ms": 3496.381087694317
+        },
+        {
+            "index": 31,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "19",
+            "peak_memory_mb": 18469.6865234375,
+            "latency_ms": 2487.0759290643036
+        },
+        {
+            "index": 32,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "9",
+            "peak_memory_mb": 18526.25146484375,
+            "latency_ms": 2569.240420125425
+        },
+        {
+            "index": 33,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "40",
+            "peak_memory_mb": 19029.9658203125,
+            "latency_ms": 3063.957748003304
+        },
+        {
+            "index": 34,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "14",
+            "peak_memory_mb": 20844.49462890625,
+            "latency_ms": 5111.610152758658
+        },
+        {
+            "index": 35,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.",
+            "ground_truth": "26",
+            "peak_memory_mb": 18731.84423828125,
+            "latency_ms": 3221.75098862499
+        },
+        {
+            "index": 36,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "25",
+            "ground_truth": "25",
+            "peak_memory_mb": 19540.02880859375,
+            "latency_ms": 3582.686498295516
+        },
+        {
+            "index": 37,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "13",
+            "peak_memory_mb": 21177.689453125,
+            "latency_ms": 5532.381008844823
+        },
+        {
+            "index": 38,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1",
+            "ground_truth": "35",
+            "peak_memory_mb": 19253.53369140625,
+            "latency_ms": 3275.3189471550286
+        },
+        {
+            "index": 39,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "20",
+            "peak_memory_mb": 18998.10205078125,
+            "latency_ms": 3035.412600263953
+        },
+        {
+            "index": 40,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "39",
+            "peak_memory_mb": 20311.53076171875,
+            "latency_ms": 4482.475694734603
+        },
+        {
+            "index": 41,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "7",
+            "peak_memory_mb": 19561.859375,
+            "latency_ms": 3599.287826102227
+        },
+        {
+            "index": 42,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "12",
+            "peak_memory_mb": 18836.49755859375,
+            "latency_ms": 2841.416556853801
+        },
+        {
+            "index": 43,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "16",
+            "peak_memory_mb": 18748.66162109375,
+            "latency_ms": 2765.0584490038455
+        },
+        {
+            "index": 44,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "30",
+            "peak_memory_mb": 19920.1220703125,
+            "latency_ms": 4013.6766331270337
+        },
+        {
+            "index": 45,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "4",
+            "peak_memory_mb": 19000.27294921875,
+            "latency_ms": 3038.606220856309
+        },
+        {
+            "index": 46,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "21",
+            "peak_memory_mb": 17736.060546875,
+            "latency_ms": 1846.7463050037622
+        },
+        {
+            "index": 47,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "5",
+            "peak_memory_mb": 19243.787109375,
+            "latency_ms": 3281.1480020172894
+        },
+        {
+            "index": 48,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "10",
+            "peak_memory_mb": 17491.83447265625,
+            "latency_ms": 1633.8099921122193
+        },
+        {
+            "index": 49,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "6",
+            "peak_memory_mb": 18436.61083984375,
+            "latency_ms": 2459.462963975966
+        },
+        {
+            "index": 50,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "31",
+            "peak_memory_mb": 18016.2529296875,
+            "latency_ms": 2072.4277677945793
+        },
+        {
+            "index": 51,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "13",
+            "peak_memory_mb": 16948.28759765625,
+            "latency_ms": 1202.1948271431029
+        },
+        {
+            "index": 52,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "9",
+            "peak_memory_mb": 18803.64111328125,
+            "latency_ms": 2811.872777994722
+        },
+        {
+            "index": 53,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "11",
+            "peak_memory_mb": 19238.04833984375,
+            "latency_ms": 3262.308438308537
+        },
+        {
+            "index": 54,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "18",
+            "peak_memory_mb": 18397.3955078125,
+            "latency_ms": 2434.105644002557
+        },
+        {
+            "index": 55,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "7",
+            "peak_memory_mb": 17950.328125,
+            "latency_ms": 2039.878839161247
+        },
+        {
+            "index": 56,
+            "score": 0.05882352941176471,
+            "metric": "F1",
+            "output": "4 \n\nThe paragraphs can be grouped into four categories:\n\n1. Paragraphs 1, 5, and 19 describe a violent incident involving police officers and a van.\n2. Paragraphs 2, 8, 9, 12, 13, 16, 20, 21, and",
+            "ground_truth": "5",
+            "peak_memory_mb": 17494.69384765625,
+            "latency_ms": 3646.3319989852607
+        },
+        {
+            "index": 57,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 19833.81787109375,
+            "latency_ms": 3915.4044622555375
+        },
+        {
+            "index": 58,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "14",
+            "peak_memory_mb": 20940.271484375,
+            "latency_ms": 5248.470469843596
+        },
+        {
+            "index": 59,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "40",
+            "peak_memory_mb": 20150.02197265625,
+            "latency_ms": 4273.548986297101
+        },
+        {
+            "index": 60,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "18",
+            "peak_memory_mb": 19278.0908203125,
+            "latency_ms": 3310.1934301666915
+        },
+        {
+            "index": 61,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "2",
+            "ground_truth": "2",
+            "peak_memory_mb": 19448.55908203125,
+            "latency_ms": 3466.2376921623945
+        },
+        {
+            "index": 62,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "20",
+            "peak_memory_mb": 19429.54638671875,
+            "latency_ms": 3458.1350251100957
+        },
+        {
+            "index": 63,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1",
+            "ground_truth": "30",
+            "peak_memory_mb": 19415.98876953125,
+            "latency_ms": 3442.081063054502
+        },
+        {
+            "index": 64,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "12",
+            "peak_memory_mb": 17502.17431640625,
+            "latency_ms": 1654.5695709064603
+        },
+        {
+            "index": 65,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "43",
+            "peak_memory_mb": 20189.76123046875,
+            "latency_ms": 4320.301890838891
+        },
+        {
+            "index": 66,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "10",
+            "peak_memory_mb": 18556.18505859375,
+            "latency_ms": 2590.9530739299953
+        },
+        {
+            "index": 67,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "11",
+            "peak_memory_mb": 17491.8095703125,
+            "latency_ms": 1646.4322251267731
+        },
+        {
+            "index": 68,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "20",
+            "peak_memory_mb": 17908.21484375,
+            "latency_ms": 1999.757477082312
+        },
+        {
+            "index": 69,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "37",
+            "peak_memory_mb": 18519.48095703125,
+            "latency_ms": 2564.6019019186497
+        },
+        {
+            "index": 70,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "15",
+            "peak_memory_mb": 18407.0537109375,
+            "latency_ms": 2440.216542221606
+        },
+        {
+            "index": 71,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "17",
+            "peak_memory_mb": 18694.337890625,
+            "latency_ms": 2725.063764024526
+        },
+        {
+            "index": 72,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 18862.642578125,
+            "latency_ms": 2891.9026632793248
+        },
+        {
+            "index": 73,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "9",
+            "peak_memory_mb": 17965.24609375,
+            "latency_ms": 2051.5201562084258
+        },
+        {
+            "index": 74,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "21",
+            "peak_memory_mb": 17631.80517578125,
+            "latency_ms": 1768.3775750920177
+        },
+        {
+            "index": 75,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "26",
+            "peak_memory_mb": 19769.0810546875,
+            "latency_ms": 3831.353984773159
+        },
+        {
+            "index": 76,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "23",
+            "ground_truth": "19",
+            "peak_memory_mb": 21020.45751953125,
+            "latency_ms": 5337.6818699762225
+        },
+        {
+            "index": 77,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "9",
+            "peak_memory_mb": 17053.41796875,
+            "latency_ms": 1267.5153939053416
+        },
+        {
+            "index": 78,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "10",
+            "peak_memory_mb": 17008.896484375,
+            "latency_ms": 1235.8151730149984
+        },
+        {
+            "index": 79,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "17",
+            "peak_memory_mb": 19274.67138671875,
+            "latency_ms": 3303.0561450868845
+        },
+        {
+            "index": 80,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 19468.1669921875,
+            "latency_ms": 3495.494207367301
+        },
+        {
+            "index": 81,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "13",
+            "peak_memory_mb": 19360.59716796875,
+            "latency_ms": 3395.8104997873306
+        },
+        {
+            "index": 82,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 17716.0703125,
+            "latency_ms": 1843.4239369817078
+        },
+        {
+            "index": 83,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "19",
+            "peak_memory_mb": 17858.2822265625,
+            "latency_ms": 1931.9154298864305
+        },
+        {
+            "index": 84,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "13",
+            "peak_memory_mb": 18280.54150390625,
+            "latency_ms": 2317.6782419905066
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.",
+            "ground_truth": "19",
+            "peak_memory_mb": 19122.60205078125,
+            "latency_ms": 3619.657971896231
+        },
+        {
+            "index": 86,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "12",
+            "peak_memory_mb": 18110.98046875,
+            "latency_ms": 2181.8463038653135
+        },
+        {
+            "index": 87,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "15",
+            "peak_memory_mb": 17581.1337890625,
+            "latency_ms": 1729.9818671308458
+        },
+        {
+            "index": 88,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "4",
+            "ground_truth": "7",
+            "peak_memory_mb": 17106.43310546875,
+            "latency_ms": 1331.3090368174016
+        },
+        {
+            "index": 89,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "16",
+            "peak_memory_mb": 18803.6591796875,
+            "latency_ms": 2808.291125111282
+        },
+        {
+            "index": 90,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "5",
+            "peak_memory_mb": 18094.6806640625,
+            "latency_ms": 2174.0438221022487
+        },
+        {
+            "index": 91,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "7",
+            "peak_memory_mb": 18925.80029296875,
+            "latency_ms": 2935.153757221997
+        },
+        {
+            "index": 92,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "3",
+            "ground_truth": "3",
+            "peak_memory_mb": 18854.3876953125,
+            "latency_ms": 2887.2622470371425
+        },
+        {
+            "index": 93,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "27",
+            "peak_memory_mb": 19026.900390625,
+            "latency_ms": 3057.49425990507
+        },
+        {
+            "index": 94,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "21",
+            "peak_memory_mb": 19918.568359375,
+            "latency_ms": 4003.3039189875126
+        },
+        {
+            "index": 95,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "8",
+            "peak_memory_mb": 19490.9267578125,
+            "latency_ms": 3554.867769125849
+        },
+        {
+            "index": 96,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "26",
+            "peak_memory_mb": 18748.453125,
+            "latency_ms": 2767.307803966105
+        },
+        {
+            "index": 97,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "14",
+            "peak_memory_mb": 18298.59765625,
+            "latency_ms": 2339.5152762532234
+        },
+        {
+            "index": 98,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "14",
+            "peak_memory_mb": 17458.9384765625,
+            "latency_ms": 1607.8476831316948
+        },
+        {
+            "index": 99,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "13",
+            "peak_memory_mb": 16494.08984375,
+            "latency_ms": 836.675375699997
+        },
+        {
+            "index": 100,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "14",
+            "ground_truth": "10",
+            "peak_memory_mb": 19659.84033203125,
+            "latency_ms": 3718.2747912593186
+        },
+        {
+            "index": 101,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "11",
+            "peak_memory_mb": 17704.31298828125,
+            "latency_ms": 1802.9107642360032
+        },
+        {
+            "index": 102,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "38",
+            "peak_memory_mb": 19868.72216796875,
+            "latency_ms": 3953.9105631411076
+        },
+        {
+            "index": 103,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "11",
+            "peak_memory_mb": 17339.63720703125,
+            "latency_ms": 1505.1105851307511
+        },
+        {
+            "index": 104,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "22",
+            "ground_truth": "19",
+            "peak_memory_mb": 18572.7451171875,
+            "latency_ms": 2617.8767113015056
+        },
+        {
+            "index": 105,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "5",
+            "peak_memory_mb": 21055.85009765625,
+            "latency_ms": 5379.914237186313
+        },
+        {
+            "index": 106,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "23",
+            "peak_memory_mb": 19473.21435546875,
+            "latency_ms": 3499.8634681105614
+        },
+        {
+            "index": 107,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "21",
+            "peak_memory_mb": 20512.666015625,
+            "latency_ms": 4711.982998996973
+        },
+        {
+            "index": 108,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "31",
+            "peak_memory_mb": 20127.75927734375,
+            "latency_ms": 4220.88873712346
+        },
+        {
+            "index": 109,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "4",
+            "peak_memory_mb": 18251.67724609375,
+            "latency_ms": 2300.381587818265
+        },
+        {
+            "index": 110,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.",
+            "ground_truth": "24",
+            "peak_memory_mb": 18388.39453125,
+            "latency_ms": 2886.425075121224
+        },
+        {
+            "index": 111,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "46",
+            "peak_memory_mb": 19961.5419921875,
+            "latency_ms": 4042.8895987570286
+        },
+        {
+            "index": 112,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "21",
+            "peak_memory_mb": 19731.39306640625,
+            "latency_ms": 3799.0451399236917
+        },
+        {
+            "index": 113,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "20",
+            "peak_memory_mb": 18660.1162109375,
+            "latency_ms": 2673.132796306163
+        },
+        {
+            "index": 114,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "11",
+            "peak_memory_mb": 17176.09912109375,
+            "latency_ms": 1373.874839860946
+        },
+        {
+            "index": 115,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "22",
+            "ground_truth": "30",
+            "peak_memory_mb": 19045.26220703125,
+            "latency_ms": 3068.99905577302
+        },
+        {
+            "index": 116,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "2",
+            "ground_truth": "2",
+            "peak_memory_mb": 16757.9072265625,
+            "latency_ms": 1057.570454198867
+        },
+        {
+            "index": 117,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "7",
+            "peak_memory_mb": 17822.505859375,
+            "latency_ms": 1904.9962470307946
+        },
+        {
+            "index": 118,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "14",
+            "peak_memory_mb": 19588.4951171875,
+            "latency_ms": 3633.8774687610567
+        },
+        {
+            "index": 119,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "29",
+            "peak_memory_mb": 19448.56884765625,
+            "latency_ms": 3473.9663251675665
+        },
+        {
+            "index": 120,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "9",
+            "peak_memory_mb": 17525.8896484375,
+            "latency_ms": 1662.9703510552645
+        },
+        {
+            "index": 121,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "41",
+            "peak_memory_mb": 19570.5224609375,
+            "latency_ms": 3607.4400427751243
+        },
+        {
+            "index": 122,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "25",
+            "ground_truth": "25",
+            "peak_memory_mb": 20165.1328125,
+            "latency_ms": 4301.546512171626
+        },
+        {
+            "index": 123,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "39",
+            "peak_memory_mb": 19386.29248046875,
+            "latency_ms": 3426.4431847259402
+        },
+        {
+            "index": 124,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "18",
+            "peak_memory_mb": 18701.267578125,
+            "latency_ms": 2735.7600829564035
+        },
+        {
+            "index": 125,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "7",
+            "peak_memory_mb": 17350.07861328125,
+            "latency_ms": 1503.4315348602831
+        },
+        {
+            "index": 126,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "30",
+            "peak_memory_mb": 21288.55810546875,
+            "latency_ms": 5685.08909502998
+        },
+        {
+            "index": 127,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "9",
+            "peak_memory_mb": 17303.8388671875,
+            "latency_ms": 1491.1805307492614
+        },
+        {
+            "index": 128,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "28",
+            "peak_memory_mb": 18626.18310546875,
+            "latency_ms": 2643.9788923598826
+        },
+        {
+            "index": 129,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "25",
+            "ground_truth": "37",
+            "peak_memory_mb": 19154.0595703125,
+            "latency_ms": 3160.030897706747
+        },
+        {
+            "index": 130,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "4",
+            "ground_truth": "5",
+            "peak_memory_mb": 19448.55517578125,
+            "latency_ms": 3476.8178719095886
+        },
+        {
+            "index": 131,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "22",
+            "ground_truth": "33",
+            "peak_memory_mb": 19063.12744140625,
+            "latency_ms": 3097.567107062787
+        },
+        {
+            "index": 132,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "14",
+            "peak_memory_mb": 17446.8515625,
+            "latency_ms": 1604.8762509599328
+        },
+        {
+            "index": 133,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "21",
+            "peak_memory_mb": 19380.49072265625,
+            "latency_ms": 3418.780767824501
+        },
+        {
+            "index": 134,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "16",
+            "peak_memory_mb": 19196.4921875,
+            "latency_ms": 3247.2232640720904
+        },
+        {
+            "index": 135,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "46",
+            "ground_truth": "31",
+            "peak_memory_mb": 20812.3818359375,
+            "latency_ms": 5072.170647792518
+        },
+        {
+            "index": 136,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "19",
+            "peak_memory_mb": 19314.12109375,
+            "latency_ms": 3342.0361657626927
+        },
+        {
+            "index": 137,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "7",
+            "ground_truth": "12",
+            "peak_memory_mb": 16957.95751953125,
+            "latency_ms": 1211.5337676368654
+        },
+        {
+            "index": 138,
+            "score": 0.046511627906976744,
+            "metric": "F1",
+            "output": "3\n\nThere are 3 unique paragraphs after removing duplicates. \n\nThe first unique paragraph is about Huma County's climate. \n\nThe second unique paragraph is about Chex Quest, a non-violent first-person shooter video game. \n\nThe third unique paragraph is about an episode of the TV show Chuck, which received generally",
+            "ground_truth": "3",
+            "peak_memory_mb": 17286.73291015625,
+            "latency_ms": 3444.237630814314
+        },
+        {
+            "index": 139,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "32",
+            "peak_memory_mb": 19822.3984375,
+            "latency_ms": 3922.80631698668
+        },
+        {
+            "index": 140,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "44",
+            "peak_memory_mb": 19448.82275390625,
+            "latency_ms": 3477.1492313593626
+        },
+        {
+            "index": 141,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "23",
+            "peak_memory_mb": 19903.90771484375,
+            "latency_ms": 3980.9782593511045
+        },
+        {
+            "index": 142,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "17",
+            "peak_memory_mb": 18314.37255859375,
+            "latency_ms": 2347.753433045
+        },
+        {
+            "index": 143,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "39",
+            "peak_memory_mb": 20215.9189453125,
+            "latency_ms": 4347.494706977159
+        },
+        {
+            "index": 144,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "23",
+            "peak_memory_mb": 19482.828125,
+            "latency_ms": 3504.4029052369297
+        },
+        {
+            "index": 145,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "11",
+            "peak_memory_mb": 18748.56787109375,
+            "latency_ms": 2768.769832327962
+        },
+        {
+            "index": 146,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "4",
+            "peak_memory_mb": 20696.18115234375,
+            "latency_ms": 4928.960730787367
+        },
+        {
+            "index": 147,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "26",
+            "peak_memory_mb": 20215.82763671875,
+            "latency_ms": 4344.167179893702
+        },
+        {
+            "index": 148,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "16",
+            "peak_memory_mb": 17283.9716796875,
+            "latency_ms": 1484.2730332165956
+        },
+        {
+            "index": 149,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "16",
+            "peak_memory_mb": 18433.98974609375,
+            "latency_ms": 2451.5383769758046
+        },
+        {
+            "index": 150,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "17",
+            "peak_memory_mb": 17179.66064453125,
+            "latency_ms": 1376.4798291958869
+        },
+        {
+            "index": 151,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "27",
+            "peak_memory_mb": 20166.24560546875,
+            "latency_ms": 4294.619922991842
+        },
+        {
+            "index": 152,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "7",
+            "peak_memory_mb": 16930.4619140625,
+            "latency_ms": 1197.1145747229457
+        },
+        {
+            "index": 153,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "14",
+            "peak_memory_mb": 18384.53173828125,
+            "latency_ms": 2433.8077562861145
+        },
+        {
+            "index": 154,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "31",
+            "peak_memory_mb": 20272.943359375,
+            "latency_ms": 4403.70610402897
+        },
+        {
+            "index": 155,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "2",
+            "ground_truth": "3",
+            "peak_memory_mb": 19693.4501953125,
+            "latency_ms": 3762.6180229708552
+        },
+        {
+            "index": 156,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "3",
+            "ground_truth": "3",
+            "peak_memory_mb": 18265.2158203125,
+            "latency_ms": 2317.6077366806567
+        },
+        {
+            "index": 157,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "output": "3\n\nThere are 3 unique paragraphs after removing duplicates. \n\nThe first unique paragraph is about the Crimson Tide's basketball team. \n\nThe second unique paragraph is about Shabak Samech, a hip-hop group from Israel. \n\nThe third unique paragraph is about Fremont Union High School District's student demographics.",
+            "ground_truth": "3",
+            "peak_memory_mb": 17647.896484375,
+            "latency_ms": 3800.916977226734
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "9",
+            "peak_memory_mb": 19519.82421875,
+            "latency_ms": 3575.54994430393
+        },
+        {
+            "index": 159,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "output": "5\n\nThe paragraphs can be grouped into three categories: \n\n1. Paragraphs about Unit 29 (Paragraphs 1, 2, 4, 9, 21, 22, 26, 27, 33)\n2. Paragraphs about the film FIR (Paragraphs 3,",
+            "ground_truth": "3",
+            "peak_memory_mb": 19624.59619140625,
+            "latency_ms": 6012.68724212423
+        },
+        {
+            "index": 160,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "17",
+            "peak_memory_mb": 18016.2177734375,
+            "latency_ms": 2073.1440209783614
+        },
+        {
+            "index": 161,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "22",
+            "peak_memory_mb": 19400.67138671875,
+            "latency_ms": 3436.278600245714
+        },
+        {
+            "index": 162,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "16",
+            "ground_truth": "16",
+            "peak_memory_mb": 18382.146484375,
+            "latency_ms": 2413.3321959525347
+        },
+        {
+            "index": 163,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "17",
+            "peak_memory_mb": 17980.57275390625,
+            "latency_ms": 2054.311928804964
+        },
+        {
+            "index": 164,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "6",
+            "ground_truth": "4",
+            "peak_memory_mb": 19801.1708984375,
+            "latency_ms": 3856.3188621774316
+        },
+        {
+            "index": 165,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "7",
+            "peak_memory_mb": 19499.3486328125,
+            "latency_ms": 3553.617808036506
+        },
+        {
+            "index": 166,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "38",
+            "peak_memory_mb": 19253.62255859375,
+            "latency_ms": 3284.3404398299754
+        },
+        {
+            "index": 167,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1",
+            "ground_truth": "17",
+            "peak_memory_mb": 20059.85009765625,
+            "latency_ms": 4171.223768033087
+        },
+        {
+            "index": 168,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "15",
+            "peak_memory_mb": 19659.5087890625,
+            "latency_ms": 3718.855283688754
+        },
+        {
+            "index": 169,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "34",
+            "peak_memory_mb": 20284.8291015625,
+            "latency_ms": 4450.1983928494155
+        },
+        {
+            "index": 170,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "5",
+            "peak_memory_mb": 19344.53515625,
+            "latency_ms": 3388.6787542141974
+        },
+        {
+            "index": 171,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "22",
+            "peak_memory_mb": 20773.6328125,
+            "latency_ms": 4991.939785890281
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "30",
+            "peak_memory_mb": 18296.58740234375,
+            "latency_ms": 2338.025087956339
+        },
+        {
+            "index": 173,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "22",
+            "ground_truth": "9",
+            "peak_memory_mb": 20623.64208984375,
+            "latency_ms": 4841.749561019242
+        },
+        {
+            "index": 174,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "6",
+            "peak_memory_mb": 18039.36669921875,
+            "latency_ms": 2098.2470898889005
+        },
+        {
+            "index": 175,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "7",
+            "peak_memory_mb": 17388.50634765625,
+            "latency_ms": 1543.5273270122707
+        },
+        {
+            "index": 176,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "31",
+            "peak_memory_mb": 19429.52734375,
+            "latency_ms": 3458.9137751609087
+        },
+        {
+            "index": 177,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 16995.4189453125,
+            "latency_ms": 1236.9602778926492
+        },
+        {
+            "index": 178,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "35",
+            "peak_memory_mb": 20252.66015625,
+            "latency_ms": 4392.921146005392
+        },
+        {
+            "index": 179,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "24",
+            "peak_memory_mb": 17842.30419921875,
+            "latency_ms": 1929.6831516548991
+        },
+        {
+            "index": 180,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "37",
+            "peak_memory_mb": 19418.65283203125,
+            "latency_ms": 3450.752106960863
+        },
+        {
+            "index": 181,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "11",
+            "peak_memory_mb": 19710.49560546875,
+            "latency_ms": 3773.058259859681
+        },
+        {
+            "index": 182,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "28",
+            "peak_memory_mb": 19158.59033203125,
+            "latency_ms": 3160.4557461105287
+        },
+        {
+            "index": 183,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "8",
+            "ground_truth": "5",
+            "peak_memory_mb": 19062.1494140625,
+            "latency_ms": 3098.6188598908484
+        },
+        {
+            "index": 184,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "4",
+            "ground_truth": "4",
+            "peak_memory_mb": 18226.7373046875,
+            "latency_ms": 2281.926543917507
+        },
+        {
+            "index": 185,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "14",
+            "ground_truth": "11",
+            "peak_memory_mb": 18015.9501953125,
+            "latency_ms": 2077.6133718900383
+        },
+        {
+            "index": 186,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "16",
+            "peak_memory_mb": 18573.3349609375,
+            "latency_ms": 2616.9690028764307
+        },
+        {
+            "index": 187,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "26",
+            "peak_memory_mb": 19646.662109375,
+            "latency_ms": 3709.6573300659657
+        },
+        {
+            "index": 188,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "10",
+            "peak_memory_mb": 18347.4345703125,
+            "latency_ms": 2369.8310386389494
+        },
+        {
+            "index": 189,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "42",
+            "peak_memory_mb": 20516.63916015625,
+            "latency_ms": 4721.076643560082
+        },
+        {
+            "index": 190,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "26",
+            "peak_memory_mb": 19118.87255859375,
+            "latency_ms": 3150.767467916012
+        },
+        {
+            "index": 191,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "15",
+            "ground_truth": "21",
+            "peak_memory_mb": 17647.9931640625,
+            "latency_ms": 1776.3310139998794
+        },
+        {
+            "index": 192,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "9",
+            "ground_truth": "19",
+            "peak_memory_mb": 18264.1953125,
+            "latency_ms": 2324.622394051403
+        },
+        {
+            "index": 193,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "34",
+            "ground_truth": "26",
+            "peak_memory_mb": 20110.24853515625,
+            "latency_ms": 4210.604814812541
+        },
+        {
+            "index": 194,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "5",
+            "ground_truth": "5",
+            "peak_memory_mb": 19253.49951171875,
+            "latency_ms": 3281.3233132474124
+        },
+        {
+            "index": 195,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "20",
+            "peak_memory_mb": 20520.3740234375,
+            "latency_ms": 4717.710149008781
+        },
+        {
+            "index": 196,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "22",
+            "ground_truth": "15",
+            "peak_memory_mb": 20189.0,
+            "latency_ms": 4329.156653024256
+        },
+        {
+            "index": 197,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "7",
+            "ground_truth": "10",
+            "peak_memory_mb": 17719.79443359375,
+            "latency_ms": 1843.6459456570446
+        },
+        {
+            "index": 198,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "24",
+            "ground_truth": "17",
+            "peak_memory_mb": 20785.02734375,
+            "latency_ms": 5052.192855160683
+        },
+        {
+            "index": 199,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1 \n\nAfter removing duplicates, there is only 1 unique paragraph.",
+            "ground_truth": "28",
+            "peak_memory_mb": 17484.47509765625,
+            "latency_ms": 2053.7294261157513
+        }
+    ]
+}
