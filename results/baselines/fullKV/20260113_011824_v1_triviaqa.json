@@ -1,0 +1,1816 @@
+{
+    "task": "triviaqa",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "few-shot",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.9171067323481118,
+    "avg_latency_ms": 2394.23044340685,
+    "max_peak_memory_mb": 20907.1064453125,
+    "details": [
+        {
+            "index": 0,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "United States",
+            "ground_truth": "The United States of America",
+            "peak_memory_mb": 16653.9091796875,
+            "latency_ms": 1012.6101258210838
+        },
+        {
+            "index": 1,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Black Eyed Peas",
+            "ground_truth": "The Black Eyed Peas",
+            "peak_memory_mb": 19260.38671875,
+            "latency_ms": 3427.8314360417426
+        },
+        {
+            "index": 2,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "55",
+            "ground_truth": "55",
+            "peak_memory_mb": 18495.68310546875,
+            "latency_ms": 2508.587174117565
+        },
+        {
+            "index": 3,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Vivaldi",
+            "ground_truth": "Vivaldi",
+            "peak_memory_mb": 20327.34326171875,
+            "latency_ms": 4557.174096349627
+        },
+        {
+            "index": 4,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dartmoor",
+            "ground_truth": "Dartmoor National Park",
+            "peak_memory_mb": 18138.56103515625,
+            "latency_ms": 2310.4279530234635
+        },
+        {
+            "index": 5,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Pig",
+            "ground_truth": "Chazer",
+            "peak_memory_mb": 18103.521484375,
+            "latency_ms": 2203.0589831992984
+        },
+        {
+            "index": 6,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "soft spots",
+            "ground_truth": "Fonticulus",
+            "peak_memory_mb": 17264.953125,
+            "latency_ms": 1492.9345441050828
+        },
+        {
+            "index": 7,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Berkshire",
+            "ground_truth": "Berkshire, England",
+            "peak_memory_mb": 16214.6455078125,
+            "latency_ms": 709.9383911117911
+        },
+        {
+            "index": 8,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Elysian Fields",
+            "ground_truth": "Alysian fields",
+            "peak_memory_mb": 16415.82470703125,
+            "latency_ms": 928.1179332174361
+        },
+        {
+            "index": 9,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Ben-Hur",
+            "ground_truth": "Ben hur",
+            "peak_memory_mb": 17613.90966796875,
+            "latency_ms": 1811.6865172050893
+        },
+        {
+            "index": 10,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Crystal Gayle",
+            "ground_truth": "Crystal Gayle discography",
+            "peak_memory_mb": 20118.03076171875,
+            "latency_ms": 4290.456461720169
+        },
+        {
+            "index": 11,
+            "score": 0.0689655172413793,
+            "metric": "F1",
+            "output": "The word \"fine\" on sheet music indicates the end of a piece, and is often used in conjunction with a D.S. (Dal Segno) marking, which means \"go back to the segno and play to the fine\".",
+            "ground_truth": "The End.",
+            "peak_memory_mb": 17754.1669921875,
+            "latency_ms": 3413.5542437434196
+        },
+        {
+            "index": 12,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Nadine Coyle",
+            "ground_truth": "Nadine Elizabeth Louise Coyle",
+            "peak_memory_mb": 16428.40185546875,
+            "latency_ms": 965.8080758526921
+        },
+        {
+            "index": 13,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "too long; didn't read",
+            "ground_truth": "TL;DR",
+            "peak_memory_mb": 18364.94287109375,
+            "latency_ms": 2573.358343914151
+        },
+        {
+            "index": 14,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "SMERSH",
+            "ground_truth": "Smert' Shpionam",
+            "peak_memory_mb": 16514.12939453125,
+            "latency_ms": 908.7907029315829
+        },
+        {
+            "index": 15,
+            "score": 0.8,
+            "metric": "F1",
+            "output": "Collapsible baby buggy",
+            "ground_truth": "Baby Buggy",
+            "peak_memory_mb": 16618.25732421875,
+            "latency_ms": 1047.9408842511475
+        },
+        {
+            "index": 16,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Brighton",
+            "ground_truth": "Brighthelmstone",
+            "peak_memory_mb": 19555.15576171875,
+            "latency_ms": 3633.6850351653993
+        },
+        {
+            "index": 17,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "James Blunt",
+            "ground_truth": "James bLUNT",
+            "peak_memory_mb": 15936.4365234375,
+            "latency_ms": 507.8382012434304
+        },
+        {
+            "index": 18,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Basketball",
+            "ground_truth": "Court (volleyball)",
+            "peak_memory_mb": 19297.23583984375,
+            "latency_ms": 3347.866596188396
+        },
+        {
+            "index": 19,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Sweet orange citrus",
+            "ground_truth": "Orange (album)",
+            "peak_memory_mb": 19359.84033203125,
+            "latency_ms": 3464.588765054941
+        },
+        {
+            "index": 20,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Parkinson's",
+            "ground_truth": "Notable sufferers of parkinson's disease",
+            "peak_memory_mb": 18420.88671875,
+            "latency_ms": 2519.6935078129172
+        },
+        {
+            "index": 21,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Robert Stroud",
+            "ground_truth": "Birdman of Alcatrez",
+            "peak_memory_mb": 16532.4228515625,
+            "latency_ms": 931.1946532689035
+        },
+        {
+            "index": 22,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Zadok the Priest",
+            "ground_truth": "Zadok The Priest",
+            "peak_memory_mb": 17526.33837890625,
+            "latency_ms": 1788.0441178567708
+        },
+        {
+            "index": 23,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Moby Dick",
+            "ground_truth": "Fedallah",
+            "peak_memory_mb": 18296.6748046875,
+            "latency_ms": 2405.706701334566
+        },
+        {
+            "index": 24,
+            "score": 0.8,
+            "metric": "F1",
+            "output": "Childe Harold's Pilgrimage",
+            "ground_truth": "Childe Harold's",
+            "peak_memory_mb": 19726.5029296875,
+            "latency_ms": 4002.1723587997258
+        },
+        {
+            "index": 25,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Gordon Jackson",
+            "ground_truth": "Gordon Jackson (disambiguation)",
+            "peak_memory_mb": 18663.48291015625,
+            "latency_ms": 2755.6438581086695
+        },
+        {
+            "index": 26,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "light rum",
+            "ground_truth": "Spiced Rum",
+            "peak_memory_mb": 19961.0458984375,
+            "latency_ms": 4089.4662351347506
+        },
+        {
+            "index": 27,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Trent",
+            "ground_truth": "Trent",
+            "peak_memory_mb": 16672.0458984375,
+            "latency_ms": 1036.731637082994
+        },
+        {
+            "index": 28,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dog",
+            "ground_truth": "Domestic dogs",
+            "peak_memory_mb": 16095.80419921875,
+            "latency_ms": 571.2410067208111
+        },
+        {
+            "index": 29,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dakota",
+            "ground_truth": "Dakota",
+            "peak_memory_mb": 18347.3203125,
+            "latency_ms": 2433.514865115285
+        },
+        {
+            "index": 30,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "A type of hot pepper.",
+            "ground_truth": "Chili Pepper",
+            "peak_memory_mb": 17963.080078125,
+            "latency_ms": 2214.591988362372
+        },
+        {
+            "index": 31,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Basketball",
+            "ground_truth": "Basketball",
+            "peak_memory_mb": 16133.32275390625,
+            "latency_ms": 626.0050907731056
+        },
+        {
+            "index": 32,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Charlton Heston",
+            "ground_truth": "Holly Heston Rochell",
+            "peak_memory_mb": 19305.47119140625,
+            "latency_ms": 3516.765860840678
+        },
+        {
+            "index": 33,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Arlene Phillips",
+            "ground_truth": "Arlene Philips",
+            "peak_memory_mb": 17002.458984375,
+            "latency_ms": 1329.7866773791611
+        },
+        {
+            "index": 34,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Quadrans",
+            "ground_truth": "Denarius",
+            "peak_memory_mb": 18731.984375,
+            "latency_ms": 2827.047889120877
+        },
+        {
+            "index": 35,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Wanderers",
+            "ground_truth": "The Wanderer",
+            "peak_memory_mb": 20529.48095703125,
+            "latency_ms": 4811.553063802421
+        },
+        {
+            "index": 36,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "King George III",
+            "ground_truth": "George III, King of Great Britain and Ireland",
+            "peak_memory_mb": 15692.56787109375,
+            "latency_ms": 354.2706100270152
+        },
+        {
+            "index": 37,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Jackson Pollock",
+            "ground_truth": "Paul Jackson Pollock",
+            "peak_memory_mb": 20616.3017578125,
+            "latency_ms": 4878.960535861552
+        },
+        {
+            "index": 38,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Island",
+            "ground_truth": "English inch",
+            "peak_memory_mb": 20113.35400390625,
+            "latency_ms": 4258.312025107443
+        },
+        {
+            "index": 39,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dubonnet",
+            "ground_truth": "Dubonnet",
+            "peak_memory_mb": 18196.90771484375,
+            "latency_ms": 2296.2909219786525
+        },
+        {
+            "index": 40,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Vitamin K",
+            "ground_truth": "Vitamin k 2",
+            "peak_memory_mb": 17323.4384765625,
+            "latency_ms": 1561.8511750362813
+        },
+        {
+            "index": 41,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Max Bygraves",
+            "ground_truth": "Max Bygraves",
+            "peak_memory_mb": 17148.8017578125,
+            "latency_ms": 1446.1233499459922
+        },
+        {
+            "index": 42,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dr. Finlay",
+            "ground_truth": "Dr Finlay",
+            "peak_memory_mb": 16170.82470703125,
+            "latency_ms": 703.0484117567539
+        },
+        {
+            "index": 43,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "0",
+            "ground_truth": "four",
+            "peak_memory_mb": 16948.53369140625,
+            "latency_ms": 1201.5924202278256
+        },
+        {
+            "index": 44,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Augustus",
+            "ground_truth": "GAIVS•IVLIVS•CAESAR•OCTAVIANVS",
+            "peak_memory_mb": 18449.751953125,
+            "latency_ms": 2506.703019142151
+        },
+        {
+            "index": 45,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "John Glenn",
+            "ground_truth": "John Herschel Glenn",
+            "peak_memory_mb": 18000.0146484375,
+            "latency_ms": 2102.7883887290955
+        },
+        {
+            "index": 46,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Alloway",
+            "ground_truth": "Allmhaigh",
+            "peak_memory_mb": 17542.921875,
+            "latency_ms": 1712.8423573449254
+        },
+        {
+            "index": 47,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Marni Nixon",
+            "ground_truth": "Marnie Nixon",
+            "peak_memory_mb": 18998.52490234375,
+            "latency_ms": 3135.607291944325
+        },
+        {
+            "index": 48,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "James Hogg",
+            "ground_truth": "Ettrick shepherd",
+            "peak_memory_mb": 18819.46533203125,
+            "latency_ms": 2905.8067221194506
+        },
+        {
+            "index": 49,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Albert Einstein",
+            "ground_truth": "Albert Enstien",
+            "peak_memory_mb": 18174.380859375,
+            "latency_ms": 2256.7471978254616
+        },
+        {
+            "index": 50,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "China",
+            "ground_truth": "Chinese People's Republic",
+            "peak_memory_mb": 17829.904296875,
+            "latency_ms": 1907.8777669928968
+        },
+        {
+            "index": 51,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Emerald",
+            "ground_truth": "Synthetic emerald",
+            "peak_memory_mb": 18084.568359375,
+            "latency_ms": 2198.845673818141
+        },
+        {
+            "index": 52,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Breakfast at Tiffany's",
+            "ground_truth": "Breakfast At Tiffanys",
+            "peak_memory_mb": 16989.21337890625,
+            "latency_ms": 1357.2947573848069
+        },
+        {
+            "index": 53,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Jimi Hendrix",
+            "ground_truth": "Hendrix",
+            "peak_memory_mb": 19184.32421875,
+            "latency_ms": 3337.1352781541646
+        },
+        {
+            "index": 54,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Archery",
+            "ground_truth": "ARCHERY",
+            "peak_memory_mb": 15939.21337890625,
+            "latency_ms": 486.26388888806105
+        },
+        {
+            "index": 55,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "bassoon",
+            "ground_truth": "Basoon",
+            "peak_memory_mb": 20039.22412109375,
+            "latency_ms": 4216.829980257899
+        },
+        {
+            "index": 56,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Apple",
+            "ground_truth": "Apple Blossom",
+            "peak_memory_mb": 18160.5478515625,
+            "latency_ms": 2209.226102568209
+        },
+        {
+            "index": 57,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Buddy Holly",
+            "ground_truth": "Charles Hardin Holley",
+            "peak_memory_mb": 18790.88671875,
+            "latency_ms": 2873.807479161769
+        },
+        {
+            "index": 58,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Nowhere Boy",
+            "ground_truth": "'NOWHERE BOY'",
+            "peak_memory_mb": 19753.1787109375,
+            "latency_ms": 3884.423650801182
+        },
+        {
+            "index": 59,
+            "score": 0.8,
+            "metric": "F1",
+            "output": "Martin Austin Ruane",
+            "ground_truth": "Loch Ness (wrestler)",
+            "peak_memory_mb": 18609.587890625,
+            "latency_ms": 2736.2656528130174
+        },
+        {
+            "index": 60,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "A Streetcar Named Desire",
+            "ground_truth": "A Streetcar named Desire",
+            "peak_memory_mb": 17812.96044921875,
+            "latency_ms": 2036.005289759487
+        },
+        {
+            "index": 61,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "John Warner",
+            "ground_truth": "Richard Burton",
+            "peak_memory_mb": 17028.388671875,
+            "latency_ms": 1288.7704530730844
+        },
+        {
+            "index": 62,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Johannesburg",
+            "ground_truth": "Joberg",
+            "peak_memory_mb": 19626.43994140625,
+            "latency_ms": 3777.744939085096
+        },
+        {
+            "index": 63,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "1984, 2004",
+            "ground_truth": "1984",
+            "peak_memory_mb": 20494.15771484375,
+            "latency_ms": 4880.578379146755
+        },
+        {
+            "index": 64,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Daphne du Maurier",
+            "ground_truth": "Lady Browning",
+            "peak_memory_mb": 18127.326171875,
+            "latency_ms": 2357.2469637729228
+        },
+        {
+            "index": 65,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Newbury",
+            "ground_truth": "Newbury",
+            "peak_memory_mb": 15829.8896484375,
+            "latency_ms": 419.28089689463377
+        },
+        {
+            "index": 66,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Bankside Power Station",
+            "ground_truth": "Bankside Power Station",
+            "peak_memory_mb": 17095.71875,
+            "latency_ms": 1408.1192389130592
+        },
+        {
+            "index": 67,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Tomatoes",
+            "ground_truth": "Tomato",
+            "peak_memory_mb": 17265.330078125,
+            "latency_ms": 1492.6836742088199
+        },
+        {
+            "index": 68,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Gary Sparrow",
+            "ground_truth": "Phoebe Sparrow",
+            "peak_memory_mb": 17703.0322265625,
+            "latency_ms": 1865.9670390188694
+        },
+        {
+            "index": 69,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Muriel Spark",
+            "ground_truth": "Muriel Sarah Maud Spark",
+            "peak_memory_mb": 18836.89013671875,
+            "latency_ms": 2942.872194107622
+        },
+        {
+            "index": 70,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "979 m",
+            "ground_truth": "Kerepakupai-Merú",
+            "peak_memory_mb": 18037.822265625,
+            "latency_ms": 2134.39372042194
+        },
+        {
+            "index": 71,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yahoo!",
+            "ground_truth": "Yahoo! Education",
+            "peak_memory_mb": 15780.19873046875,
+            "latency_ms": 378.71058098971844
+        },
+        {
+            "index": 72,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Fruit and vegetables.",
+            "ground_truth": "Fruiting",
+            "peak_memory_mb": 16222.5048828125,
+            "latency_ms": 782.9343057237566
+        },
+        {
+            "index": 73,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "prosimians",
+            "ground_truth": "Lemuroid",
+            "peak_memory_mb": 18558.6787109375,
+            "latency_ms": 2661.4371640607715
+        },
+        {
+            "index": 74,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Jasper Fforde",
+            "ground_truth": "The Last Great Tortoise Race",
+            "peak_memory_mb": 20015.533203125,
+            "latency_ms": 4274.083344265819
+        },
+        {
+            "index": 75,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Spain",
+            "ground_truth": "Islands of Spain",
+            "peak_memory_mb": 18681.6201171875,
+            "latency_ms": 2688.244772143662
+        },
+        {
+            "index": 76,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "whey",
+            "ground_truth": "Whey powder",
+            "peak_memory_mb": 17584.84716796875,
+            "latency_ms": 1765.4828131198883
+        },
+        {
+            "index": 77,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Steel",
+            "ground_truth": "Steel",
+            "peak_memory_mb": 20338.23828125,
+            "latency_ms": 4498.2006889767945
+        },
+        {
+            "index": 78,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Taiwan",
+            "ground_truth": "Zhonghua Minguo",
+            "peak_memory_mb": 17052.97509765625,
+            "latency_ms": 1299.726429861039
+        },
+        {
+            "index": 79,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "7",
+            "ground_truth": "Seven",
+            "peak_memory_mb": 18646.0068359375,
+            "latency_ms": 2664.9521440267563
+        },
+        {
+            "index": 80,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Seabird",
+            "ground_truth": "Sea bird",
+            "peak_memory_mb": 17179.94970703125,
+            "latency_ms": 1439.8803021758795
+        },
+        {
+            "index": 81,
+            "score": 0.8571428571428571,
+            "metric": "F1",
+            "output": "Pussy and the Owl",
+            "ground_truth": "The owl and the pussycat",
+            "peak_memory_mb": 18966.9384765625,
+            "latency_ms": 3117.6471658982337
+        },
+        {
+            "index": 82,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Mark Rothko",
+            "ground_truth": "Marcus Rothkovich",
+            "peak_memory_mb": 18839.42578125,
+            "latency_ms": 2910.595113877207
+        },
+        {
+            "index": 83,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Muriel Spark",
+            "ground_truth": "Muriel Sarah Maud Spark",
+            "peak_memory_mb": 16128.06591796875,
+            "latency_ms": 682.9668530263007
+        },
+        {
+            "index": 84,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Jake LaMotta",
+            "ground_truth": "Jake La Motta",
+            "peak_memory_mb": 16338.40673828125,
+            "latency_ms": 821.027988102287
+        },
+        {
+            "index": 85,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Her Majesty's Chief Inspector of Prisons",
+            "ground_truth": "Chief inspector of prisons",
+            "peak_memory_mb": 19659.63623046875,
+            "latency_ms": 3981.829364784062
+        },
+        {
+            "index": 86,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Origami",
+            "ground_truth": "Oragami",
+            "peak_memory_mb": 16446.0966796875,
+            "latency_ms": 882.1933306753635
+        },
+        {
+            "index": 87,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Arthur Ashe",
+            "ground_truth": "Arthur Ashe, Jr.",
+            "peak_memory_mb": 17036.64990234375,
+            "latency_ms": 1288.829202298075
+        },
+        {
+            "index": 88,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Supercontinents.",
+            "ground_truth": "Continant",
+            "peak_memory_mb": 18103.5009765625,
+            "latency_ms": 2274.0186317823827
+        },
+        {
+            "index": 89,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The White House",
+            "ground_truth": "White House",
+            "peak_memory_mb": 18450.16796875,
+            "latency_ms": 2542.8866408765316
+        },
+        {
+            "index": 90,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Alexander Dubcek",
+            "ground_truth": "Alexander Dubcek",
+            "peak_memory_mb": 16373.2646484375,
+            "latency_ms": 824.6371219865978
+        },
+        {
+            "index": 91,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Hattie Jacques",
+            "ground_truth": "Hattie jakes",
+            "peak_memory_mb": 17718.23974609375,
+            "latency_ms": 1940.5854032374918
+        },
+        {
+            "index": 92,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Gillian Gibbons",
+            "ground_truth": "Muhammad (teddy bear)",
+            "peak_memory_mb": 19271.3994140625,
+            "latency_ms": 3396.8347730115056
+        },
+        {
+            "index": 93,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Manchester",
+            "ground_truth": "Manchester developments",
+            "peak_memory_mb": 17479.6708984375,
+            "latency_ms": 1627.4129808880389
+        },
+        {
+            "index": 94,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "tittle",
+            "ground_truth": "Tittles",
+            "peak_memory_mb": 19067.455078125,
+            "latency_ms": 3132.4404682964087
+        },
+        {
+            "index": 95,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Leeds",
+            "ground_truth": "Leeds, UK",
+            "peak_memory_mb": 19945.80126953125,
+            "latency_ms": 4071.4300661347806
+        },
+        {
+            "index": 96,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Stanley",
+            "ground_truth": "Stanley (TV series)",
+            "peak_memory_mb": 19570.1298828125,
+            "latency_ms": 3648.5888469032943
+        },
+        {
+            "index": 97,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "John Gorman",
+            "ground_truth": "John Gorman (disambiguation)",
+            "peak_memory_mb": 17283.712890625,
+            "latency_ms": 1548.646298237145
+        },
+        {
+            "index": 98,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Mushrooms",
+            "ground_truth": "Psychoactive mushroom",
+            "peak_memory_mb": 19253.78857421875,
+            "latency_ms": 3347.9097723029554
+        },
+        {
+            "index": 99,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "M61",
+            "ground_truth": "M61",
+            "peak_memory_mb": 18319.185546875,
+            "latency_ms": 2384.137838613242
+        },
+        {
+            "index": 100,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Isosceles",
+            "ground_truth": "Isosceles triangle",
+            "peak_memory_mb": 19672.4912109375,
+            "latency_ms": 3849.673362914473
+        },
+        {
+            "index": 101,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Saddle",
+            "ground_truth": "Saddle",
+            "peak_memory_mb": 19710.13037109375,
+            "latency_ms": 3811.6347920149565
+        },
+        {
+            "index": 102,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Wilkins",
+            "ground_truth": "Wilkin",
+            "peak_memory_mb": 19781.9677734375,
+            "latency_ms": 3876.440933905542
+        },
+        {
+            "index": 103,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Octopussy",
+            "ground_truth": "Kamal kahn",
+            "peak_memory_mb": 19238.599609375,
+            "latency_ms": 3353.8043540902436
+        },
+        {
+            "index": 104,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Niagara Falls",
+            "ground_truth": "Niagra Falls",
+            "peak_memory_mb": 20515.0654296875,
+            "latency_ms": 4784.561818931252
+        },
+        {
+            "index": 105,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "George Blake",
+            "ground_truth": "GEORGE BLAKE",
+            "peak_memory_mb": 19936.96533203125,
+            "latency_ms": 4057.1028301492333
+        },
+        {
+            "index": 106,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Independence Day",
+            "ground_truth": "'INDEPENDENCE DAY'",
+            "peak_memory_mb": 20872.4306640625,
+            "latency_ms": 5226.756117772311
+        },
+        {
+            "index": 107,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Hovercraft",
+            "ground_truth": "Hoverbarge",
+            "peak_memory_mb": 17962.03076171875,
+            "latency_ms": 2082.1578628383577
+        },
+        {
+            "index": 108,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "William Holden",
+            "ground_truth": "William F. Holden",
+            "peak_memory_mb": 17070.55859375,
+            "latency_ms": 1304.3855060823262
+        },
+        {
+            "index": 109,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Alton Towers",
+            "ground_truth": "Haunted Hollow (Alton Towers)",
+            "peak_memory_mb": 19402.845703125,
+            "latency_ms": 3514.1436252743006
+        },
+        {
+            "index": 110,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Florence",
+            "ground_truth": "UN/LOCODE:ITFLR",
+            "peak_memory_mb": 18153.8935546875,
+            "latency_ms": 2245.4584389925003
+        },
+        {
+            "index": 111,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Pentecost",
+            "ground_truth": "Pentecost Sunday",
+            "peak_memory_mb": 16128.55322265625,
+            "latency_ms": 684.4698362983763
+        },
+        {
+            "index": 112,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Perfect Storm",
+            "ground_truth": "Perfect storm (disambiguation)",
+            "peak_memory_mb": 19306.98681640625,
+            "latency_ms": 3411.948754452169
+        },
+        {
+            "index": 113,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Christ Church",
+            "ground_truth": "Christ Church",
+            "peak_memory_mb": 16617.74365234375,
+            "latency_ms": 988.251952920109
+        },
+        {
+            "index": 114,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "A tie",
+            "ground_truth": "Curling sheet",
+            "peak_memory_mb": 18000.91845703125,
+            "latency_ms": 2104.5549251139164
+        },
+        {
+            "index": 115,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Arthur Ransome",
+            "ground_truth": "Arthur Michell Ransome",
+            "peak_memory_mb": 18317.1240234375,
+            "latency_ms": 2449.5253250934184
+        },
+        {
+            "index": 116,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "maxwell",
+            "ground_truth": "Maxwell",
+            "peak_memory_mb": 19325.54638671875,
+            "latency_ms": 3387.82896194607
+        },
+        {
+            "index": 117,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Syria",
+            "ground_truth": "الجمهورية العربية السورية",
+            "peak_memory_mb": 19359.79541015625,
+            "latency_ms": 3432.9411881044507
+        },
+        {
+            "index": 118,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "Adrian Cronauer",
+            "ground_truth": "Adrian",
+            "peak_memory_mb": 16392.0185546875,
+            "latency_ms": 887.7497059293091
+        },
+        {
+            "index": 119,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "King Arthur's Round Table",
+            "ground_truth": "List of the Knights of the Round Table",
+            "peak_memory_mb": 15805.25146484375,
+            "latency_ms": 478.71198784559965
+        },
+        {
+            "index": 120,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Khartoum",
+            "ground_truth": "Kartoum",
+            "peak_memory_mb": 20044.2080078125,
+            "latency_ms": 4254.571344237775
+        },
+        {
+            "index": 121,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "John Chilcot",
+            "ground_truth": "John Chilcot",
+            "peak_memory_mb": 19577.94677734375,
+            "latency_ms": 3743.8310077413917
+        },
+        {
+            "index": 122,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Antoine Laurent Lavoisier",
+            "ground_truth": "Lavoisierian",
+            "peak_memory_mb": 17736.076171875,
+            "latency_ms": 2046.0132071748376
+        },
+        {
+            "index": 123,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Papua New Guinea",
+            "ground_truth": "ISO 3166-1:PG",
+            "peak_memory_mb": 16948.5810546875,
+            "latency_ms": 1324.9514629133046
+        },
+        {
+            "index": 124,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Charlie Chan",
+            "ground_truth": "Charlie Chan",
+            "peak_memory_mb": 18505.1298828125,
+            "latency_ms": 2564.847662113607
+        },
+        {
+            "index": 125,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Huey, Dewey, and Louie.",
+            "ground_truth": "Huey, Dewey and Louie",
+            "peak_memory_mb": 15943.72802734375,
+            "latency_ms": 738.6272880248725
+        },
+        {
+            "index": 126,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Shetland",
+            "ground_truth": "Shetland lamb",
+            "peak_memory_mb": 19227.24609375,
+            "latency_ms": 3325.183107983321
+        },
+        {
+            "index": 127,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Pauline Quirke",
+            "ground_truth": "PAULINE QUIRKE",
+            "peak_memory_mb": 20273.47607421875,
+            "latency_ms": 4559.628847055137
+        },
+        {
+            "index": 128,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Rennet",
+            "ground_truth": "Rennet.",
+            "peak_memory_mb": 17387.701171875,
+            "latency_ms": 1606.3048751093447
+        },
+        {
+            "index": 129,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Benfica",
+            "ground_truth": "Bnefica",
+            "peak_memory_mb": 20323.53759765625,
+            "latency_ms": 4554.002010729164
+        },
+        {
+            "index": 130,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Harrisburg",
+            "ground_truth": "Harrisburg (PA)",
+            "peak_memory_mb": 16114.39306640625,
+            "latency_ms": 635.7974060811102
+        },
+        {
+            "index": 131,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Muhammad Ali (Cassius Clay)",
+            "ground_truth": "Float like a butter fly sting like a bee",
+            "peak_memory_mb": 15927.54736328125,
+            "latency_ms": 671.4634229429066
+        },
+        {
+            "index": 132,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "John le Carré",
+            "ground_truth": "John le Carre",
+            "peak_memory_mb": 16496.3330078125,
+            "latency_ms": 934.0460882522166
+        },
+        {
+            "index": 133,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Cambridge",
+            "ground_truth": "Cambridge, United Kingdom",
+            "peak_memory_mb": 16882.9970703125,
+            "latency_ms": 1160.4914600029588
+        },
+        {
+            "index": 134,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Charlie Chaplin",
+            "ground_truth": "Roy Export Company Establishment",
+            "peak_memory_mb": 17510.5439453125,
+            "latency_ms": 1718.9857419580221
+        },
+        {
+            "index": 135,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Julian Fellowes",
+            "ground_truth": "Julian Fellowes, Baron Fellowes of West Stafford",
+            "peak_memory_mb": 20907.1064453125,
+            "latency_ms": 5294.616520870477
+        },
+        {
+            "index": 136,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Kent",
+            "ground_truth": "K249DR",
+            "peak_memory_mb": 19659.30029296875,
+            "latency_ms": 3713.5333698242903
+        },
+        {
+            "index": 137,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Underground Railroad",
+            "ground_truth": "National Underground Railroad Network to Freedom",
+            "peak_memory_mb": 19888.130859375,
+            "latency_ms": 4045.65565334633
+        },
+        {
+            "index": 138,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Aldo Moro",
+            "ground_truth": "Aldo Moro",
+            "peak_memory_mb": 16079.7548828125,
+            "latency_ms": 673.5344352200627
+        },
+        {
+            "index": 139,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "South Africa",
+            "ground_truth": "South africa",
+            "peak_memory_mb": 18626.23583984375,
+            "latency_ms": 2674.05246803537
+        },
+        {
+            "index": 140,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Ronald Wilson Reagan",
+            "ground_truth": "President Regan",
+            "peak_memory_mb": 20303.70849609375,
+            "latency_ms": 4581.465100869536
+        },
+        {
+            "index": 141,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Beetroots",
+            "ground_truth": "Beetroot",
+            "peak_memory_mb": 18157.3388671875,
+            "latency_ms": 2284.5874638296664
+        },
+        {
+            "index": 142,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Onions",
+            "ground_truth": "Onion skins",
+            "peak_memory_mb": 18244.98046875,
+            "latency_ms": 2321.3690840639174
+        },
+        {
+            "index": 143,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Harold Wilson",
+            "ground_truth": "A week is a long time in politics",
+            "peak_memory_mb": 17182.62353515625,
+            "latency_ms": 1440.423164051026
+        },
+        {
+            "index": 144,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Hartford",
+            "ground_truth": "Hartford.",
+            "peak_memory_mb": 17108.828125,
+            "latency_ms": 1398.1359899044037
+        },
+        {
+            "index": 145,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "James Woods",
+            "ground_truth": "James Woods filmography",
+            "peak_memory_mb": 18279.1982421875,
+            "latency_ms": 2352.8029802255332
+        },
+        {
+            "index": 146,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Madrid",
+            "ground_truth": "Madrid, Madrid",
+            "peak_memory_mb": 17463.18994140625,
+            "latency_ms": 1641.906927805394
+        },
+        {
+            "index": 147,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "My Fair Lady",
+            "ground_truth": "My Fair Lady (2010 film)",
+            "peak_memory_mb": 19360.14892578125,
+            "latency_ms": 3461.24656079337
+        },
+        {
+            "index": 148,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Henry Mancini",
+            "ground_truth": "Henry Mancini",
+            "peak_memory_mb": 19012.88818359375,
+            "latency_ms": 3143.7628869898617
+        },
+        {
+            "index": 149,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Sarah Palin",
+            "ground_truth": "Sarrah Palin",
+            "peak_memory_mb": 18696.9580078125,
+            "latency_ms": 2764.3165700137615
+        },
+        {
+            "index": 150,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Subway",
+            "ground_truth": "The Subway",
+            "peak_memory_mb": 16514.140625,
+            "latency_ms": 878.7971148267388
+        },
+        {
+            "index": 151,
+            "score": 0.8571428571428571,
+            "metric": "F1",
+            "output": "Dame Anita Roddick",
+            "ground_truth": "Dame Anita Lucia Roddick",
+            "peak_memory_mb": 20727.10791015625,
+            "latency_ms": 5150.361627805978
+        },
+        {
+            "index": 152,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Peach",
+            "ground_truth": "Peacherine",
+            "peak_memory_mb": 17053.97021484375,
+            "latency_ms": 1299.7790491208434
+        },
+        {
+            "index": 153,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "New Zealand",
+            "ground_truth": "N Z",
+            "peak_memory_mb": 20028.193359375,
+            "latency_ms": 4157.417023088783
+        },
+        {
+            "index": 154,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Goldtrail",
+            "ground_truth": "Goldtrail",
+            "peak_memory_mb": 17664.65625,
+            "latency_ms": 1826.8181588500738
+        },
+        {
+            "index": 155,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "1948",
+            "ground_truth": "one thousand, nine hundred and forty-eight",
+            "peak_memory_mb": 20059.14453125,
+            "latency_ms": 4190.819623880088
+        },
+        {
+            "index": 156,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Cary Grant",
+            "ground_truth": "Archibald alec leach",
+            "peak_memory_mb": 15972.3310546875,
+            "latency_ms": 551.8120769411325
+        },
+        {
+            "index": 157,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Cardigan",
+            "ground_truth": "Cardigan",
+            "peak_memory_mb": 18583.6611328125,
+            "latency_ms": 2649.757955223322
+        },
+        {
+            "index": 158,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Melanin",
+            "ground_truth": "Melanins",
+            "peak_memory_mb": 18189.58984375,
+            "latency_ms": 2289.587522856891
+        },
+        {
+            "index": 159,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Great Dane",
+            "ground_truth": "Great daine",
+            "peak_memory_mb": 20162.65478515625,
+            "latency_ms": 4334.852556698024
+        },
+        {
+            "index": 160,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Chile",
+            "ground_truth": "ISO 3166-1:CL",
+            "peak_memory_mb": 17776.39111328125,
+            "latency_ms": 1910.392054822296
+        },
+        {
+            "index": 161,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Martin Luther King, Jr.",
+            "ground_truth": "MARTIN LUTHER KING",
+            "peak_memory_mb": 18837.2763671875,
+            "latency_ms": 3013.972770422697
+        },
+        {
+            "index": 162,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Arturo Toscanini",
+            "ground_truth": "Arturo toscanini",
+            "peak_memory_mb": 17655.9892578125,
+            "latency_ms": 1921.5671247802675
+        },
+        {
+            "index": 163,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Roddy Doyle",
+            "ground_truth": "Roddy Doyle",
+            "peak_memory_mb": 18040.05517578125,
+            "latency_ms": 2160.953229293227
+        },
+        {
+            "index": 164,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Lazarus",
+            "ground_truth": "BLACKSTAR",
+            "peak_memory_mb": 15814.01220703125,
+            "latency_ms": 425.00961665064096
+        },
+        {
+            "index": 165,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "China",
+            "ground_truth": "Chinese People's Republic",
+            "peak_memory_mb": 16372.91357421875,
+            "latency_ms": 759.8508461378515
+        },
+        {
+            "index": 166,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Rapture",
+            "ground_truth": "Midtribulation rapture",
+            "peak_memory_mb": 16027.7177734375,
+            "latency_ms": 543.9224322326481
+        },
+        {
+            "index": 167,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Syriza",
+            "ground_truth": "Coalition of the radical left",
+            "peak_memory_mb": 19692.275390625,
+            "latency_ms": 3821.6133122332394
+        },
+        {
+            "index": 168,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Respect",
+            "ground_truth": "Respection",
+            "peak_memory_mb": 20330.75048828125,
+            "latency_ms": 4535.411125048995
+        },
+        {
+            "index": 169,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Wind.",
+            "ground_truth": "Blustery",
+            "peak_memory_mb": 16074.2255859375,
+            "latency_ms": 584.086935967207
+        },
+        {
+            "index": 170,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Friends Reunited",
+            "ground_truth": "FRIENDS REUNITED",
+            "peak_memory_mb": 18668.76611328125,
+            "latency_ms": 2788.4332672692835
+        },
+        {
+            "index": 171,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Zambezi River",
+            "ground_truth": "Zambesi",
+            "peak_memory_mb": 19731.46240234375,
+            "latency_ms": 3951.403950806707
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no information in the passage about the first League Cup winners.",
+            "ground_truth": "Aston Villa",
+            "peak_memory_mb": 19516.0,
+            "latency_ms": 4040.7829182222486
+        },
+        {
+            "index": 173,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Canada",
+            "ground_truth": "Canada",
+            "peak_memory_mb": 18126.6220703125,
+            "latency_ms": 2182.048935908824
+        },
+        {
+            "index": 174,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Travel sickness",
+            "ground_truth": "Carsicky",
+            "peak_memory_mb": 17437.36767578125,
+            "latency_ms": 1619.5654859766364
+        },
+        {
+            "index": 175,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Foot",
+            "ground_truth": "Foot fracture",
+            "peak_memory_mb": 19832.3759765625,
+            "latency_ms": 3906.7516420036554
+        },
+        {
+            "index": 176,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Plan B (Ben Drew)",
+            "ground_truth": "Dennis Waterman",
+            "peak_memory_mb": 18129.314453125,
+            "latency_ms": 2358.5410336963832
+        },
+        {
+            "index": 177,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "House of Lords",
+            "ground_truth": "House of Peers of the United Kingdom",
+            "peak_memory_mb": 18406.65771484375,
+            "latency_ms": 2508.8149392977357
+        },
+        {
+            "index": 178,
+            "score": 0.5714285714285715,
+            "metric": "F1",
+            "output": "The Niagara River below Niagara Falls.",
+            "ground_truth": "Niagra Falls",
+            "peak_memory_mb": 16033.23046875,
+            "latency_ms": 702.9746333137155
+        },
+        {
+            "index": 179,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "12",
+            "ground_truth": "twelve",
+            "peak_memory_mb": 18017.6318359375,
+            "latency_ms": 2086.8644430302083
+        },
+        {
+            "index": 180,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "A pieman",
+            "ground_truth": "Pieman (disambiguation)",
+            "peak_memory_mb": 18755.67333984375,
+            "latency_ms": 2860.3802360594273
+        },
+        {
+            "index": 181,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Boston Braves",
+            "ground_truth": "Boston Braves (disambiguation)",
+            "peak_memory_mb": 17776.34619140625,
+            "latency_ms": 1911.2081080675125
+        },
+        {
+            "index": 182,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Katy Perry",
+            "ground_truth": "Katheryn Perry",
+            "peak_memory_mb": 17297.01806640625,
+            "latency_ms": 1544.8992899619043
+        },
+        {
+            "index": 183,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Robert Maxwell",
+            "ground_truth": "Ian Robert Maxwell",
+            "peak_memory_mb": 16862.3076171875,
+            "latency_ms": 1154.8346099443734
+        },
+        {
+            "index": 184,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Gene Vincent",
+            "ground_truth": "Gene Vincent & the Blue Caps",
+            "peak_memory_mb": 17560.080078125,
+            "latency_ms": 1717.1313101425767
+        },
+        {
+            "index": 185,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Peacock",
+            "ground_truth": "Peacock",
+            "peak_memory_mb": 18252.60595703125,
+            "latency_ms": 2329.6553171239793
+        },
+        {
+            "index": 186,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Marx",
+            "ground_truth": "Karl Marx",
+            "peak_memory_mb": 16205.81005859375,
+            "latency_ms": 678.9817656390369
+        },
+        {
+            "index": 187,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Almond",
+            "ground_truth": "Almond tree",
+            "peak_memory_mb": 20363.10107421875,
+            "latency_ms": 4555.433269124478
+        },
+        {
+            "index": 188,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Likes Of Us.",
+            "ground_truth": "The Likes of Us",
+            "peak_memory_mb": 16983.0849609375,
+            "latency_ms": 1353.5348568111658
+        },
+        {
+            "index": 189,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Carberry",
+            "ground_truth": "Carberry",
+            "peak_memory_mb": 19852.24560546875,
+            "latency_ms": 3984.3371049501
+        },
+        {
+            "index": 190,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "horse racing",
+            "ground_truth": "Scratch sheet",
+            "peak_memory_mb": 17283.72216796875,
+            "latency_ms": 1515.2685642242432
+        },
+        {
+            "index": 191,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Kim Smith",
+            "ground_truth": "Kim Smith",
+            "peak_memory_mb": 17494.61962890625,
+            "latency_ms": 1678.544701077044
+        },
+        {
+            "index": 192,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Severn",
+            "ground_truth": "Seven Boar",
+            "peak_memory_mb": 18694.30859375,
+            "latency_ms": 2756.966531742364
+        },
+        {
+            "index": 193,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "the telephone",
+            "ground_truth": "℡",
+            "peak_memory_mb": 15979.37158203125,
+            "latency_ms": 521.3870978914201
+        },
+        {
+            "index": 194,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Raphael",
+            "ground_truth": "Raffaello Sanzio",
+            "peak_memory_mb": 19135.58837890625,
+            "latency_ms": 3179.8739568330348
+        },
+        {
+            "index": 195,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Jamie Oliver",
+            "ground_truth": "Jools oliver",
+            "peak_memory_mb": 18259.22607421875,
+            "latency_ms": 2327.2065459750593
+        },
+        {
+            "index": 196,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Marcel Marceau",
+            "ground_truth": "Marcel Marco",
+            "peak_memory_mb": 18939.34619140625,
+            "latency_ms": 3102.246297057718
+        },
+        {
+            "index": 197,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Sweating",
+            "ground_truth": "Sweating",
+            "peak_memory_mb": 17722.38037109375,
+            "latency_ms": 1908.090858720243
+        },
+        {
+            "index": 198,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Almond",
+            "ground_truth": "Almond tree",
+            "peak_memory_mb": 19402.65087890625,
+            "latency_ms": 3473.8737703301013
+        },
+        {
+            "index": 199,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Budapest",
+            "ground_truth": "Budimpešta",
+            "peak_memory_mb": 16041.72314453125,
+            "latency_ms": 590.7528661191463
+        }
+    ]
+}

@@ -1,0 +1,1816 @@
+{
+    "task": "samsum",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "few-shot",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.24515375123429525,
+    "avg_latency_ms": 3442.971707789693,
+    "max_peak_memory_mb": 19630.29638671875,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nWilliam is asking Emilia if she is still angry, and she responds with a strong \"YES\".",
+            "ground_truth": "Emilia is still angry.",
+            "peak_memory_mb": 17594.39794921875,
+            "latency_ms": 2770.520260091871
+        },
+        {
+            "index": 1,
+            "score": 0.3389830508474576,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nMico and Jeff are going to the village party, despite Lia being too tired after hiking. Mico is excited to see some \"hot boys\" and thinks it's better if the guys are not too smart. Jeff agrees to go and will drive,",
+            "ground_truth": "Mico and Jeff will go to the village party. Jeff will drive.",
+            "peak_memory_mb": 15956.0927734375,
+            "latency_ms": 2190.433458890766
+        },
+        {
+            "index": 2,
+            "score": 0.34375,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMichael can't make it today because he has to stay at the office until 8pm. Tom is okay with this and suggests that Michael call him tomorrow. Michael apologizes again and says he will call Tom tomorrow.",
+            "ground_truth": "Michael can't leave the office before 8 PM, so he's unable to meet with Tom. Michael will call Tom tomorrow.",
+            "peak_memory_mb": 18450.10009765625,
+            "latency_ms": 4411.808613222092
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Elsie wants pizza for dinner, but Rachel wants variety, so they decide to figure it out together.\n\n2. Ben is upset about Mr. Bradley's strictness and lack of precise definitions, but Carl and Derek explain that it's",
+            "ground_truth": "Autumn has sewn a dress.",
+            "peak_memory_mb": 17326.03125,
+            "latency_ms": 3463.2229092530906
+        },
+        {
+            "index": 4,
+            "score": 0.27659574468085113,
+            "metric": "F1",
+            "output": "Brenda and Sandra, former coworkers from a clothes factory, reconnect after 25 years. They reminisce about their past, including their time at the factory, their husbands, and their children. They also discuss their memories of the Northern Soul and disco craze. Brenda's husband, Bill, passed away 5",
+            "ground_truth": "Sandra and Brenda used to work together in the clothes factory 25 years ago. Sandra still lives in Kings Norton. Brenda lives in Stoke now. Her husband Bill died 5 years ago. They will meet in Birmingham for a lunch next Saturday about 11. They want to organize a reunion for the Lister's girls. ",
+            "peak_memory_mb": 17692.8037109375,
+            "latency_ms": 3819.511044304818
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. There was a mass shooting in California. People are discussing the incident and speculating about the shooter's motivations.\n\n2. Stanley's insurance will be effective starting from December 1, and it will include dental. He will buy milk,",
+            "ground_truth": "Kristi needs new trainers. Leah has a link for a discount coupon at an online store.",
+            "peak_memory_mb": 18731.86328125,
+            "latency_ms": 4945.04871359095
+        },
+        {
+            "index": 6,
+            "score": 0.10666666666666666,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Terry's work is delayed due to a rough week, but he will submit it now as David needs it finished by the deadline.\n\n2. Barb needs help organizing her sister's baby shower, and Emma agrees to help. Emma will organize",
+            "ground_truth": "Peter has been working out at the gym near their office lately to improve his health. Lisa is considering working out and eating better to be healthier.",
+            "peak_memory_mb": 19325.54541015625,
+            "latency_ms": 5641.7425298132
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Tom will see Rose in 30 minutes to inaugurate their new cafe.\n\n2. Jesus will come tomorrow with the fee slip.\n\n3. Judy wants to know what John's last message to Anne might mean. Anne wants Judy to stop",
+            "ground_truth": "Petra is very sleepy at work today, Andy finds the day boring, and Ezgi is working. ",
+            "peak_memory_mb": 19292.98974609375,
+            "latency_ms": 5587.242050096393
+        },
+        {
+            "index": 8,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nNova shares a funny image of Timothée Chalamet photoshopped into artworks from the 19th century. Dominic finds it hilarious and thinks it looks good. They both agree that it's an accurate representation of Chalamet's image, with",
+            "ground_truth": "People are photoshopping Timothée Chalamet into artworks. Dominic and Nova agree that he looks like a 19th century man.",
+            "peak_memory_mb": 18085.73779296875,
+            "latency_ms": 4255.896579939872
+        },
+        {
+            "index": 9,
+            "score": 0.24,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ursula informs Jennifer and Maya about a new cocktail bar next to her place, and they agree to meet there on Friday after 4 pm.\n\n2. Connor suggests buying a Hummer and a plane for the office, but Colin is",
+            "ground_truth": "Adele got a new biscuit Labrador Chewy that is 4 months. Her cats keep their distance, and Poppy and Lulu seem to mother Chewy and Speedy wants to play.",
+            "peak_memory_mb": 16058.41455078125,
+            "latency_ms": 2288.708487059921
+        },
+        {
+            "index": 10,
+            "score": 0.3181818181818182,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nCara wants to visit Celine, but Celine is not at home. Celine offers to drop by in the evening if Cara doesn't mind.",
+            "ground_truth": "Celine is not at home, but she will call Cara before visiting her.",
+            "peak_memory_mb": 17684.92236328125,
+            "latency_ms": 3192.657446023077
+        },
+        {
+            "index": 11,
+            "score": 0.09523809523809525,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Eleonore and two other people will participate in a celebration on June 30th. Eleonore will let Karine know about Jane asap.\n\n2. Kate collected a book that Jill forgot at the library. Kate is going",
+            "ground_truth": "Rachel sends a list of Top 50 films of 2018. Janice watched almost half of them, Deadpool 2 and Avengers included.",
+            "peak_memory_mb": 17633.912109375,
+            "latency_ms": 3784.4697423279285
+        },
+        {
+            "index": 12,
+            "score": 0.14285714285714288,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Jane is updating her Tinder profile and is nervous about finding another guy like John, who forgot her birthday.\n\n2. Gisela met her sister's former neighbor and they talked about work, but Gisela didn't want to discuss",
+            "ground_truth": "luke and martial want to help the team and play despite their injuries. They will meet at carrington and go to the coach's office.",
+            "peak_memory_mb": 16548.23095703125,
+            "latency_ms": 2714.2770062200725
+        },
+        {
+            "index": 13,
+            "score": 0.05714285714285715,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Terry will have to take a bus because Mum has to be at school at 7:30.\n\n2. She was at the event, but hasn't noticed anything.\n\n3. Nicky and Betty are meeting tomorrow at Zach's the",
+            "ground_truth": "Sally and Rita like Borns' new album very much. Rita is also excited about Florence's new single which comes out tomorrow. Sally didn't know about it.",
+            "peak_memory_mb": 18436.603515625,
+            "latency_ms": 4603.764036204666
+        },
+        {
+            "index": 14,
+            "score": 0.46575342465753433,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMartin won two cinema tickets by writing a short review on Facebook. The movie is the new film with Redford and he heard it's pretty cool. Aggie is happy for him and they plan to watch the movie together by the end of the week.",
+            "ground_truth": "Martin wrote a short review and won 2 cinema tickets on FB. Martin wants Aggie to go with him this week for the new film with Redford.",
+            "peak_memory_mb": 17962.09619140625,
+            "latency_ms": 4116.860294248909
+        },
+        {
+            "index": 15,
+            "score": 0.4848484848484849,
+            "metric": "F1",
+            "output": "Max is sharing his latest music project with Jim, who is looking forward to listening to it when he gets home.",
+            "ground_truth": "Jim will check out Max's latest music project when he gets home.",
+            "peak_memory_mb": 17681.90771484375,
+            "latency_ms": 2501.96293881163
+        },
+        {
+            "index": 16,
+            "score": 0.38235294117647056,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nWanda wants to have a party and needs Gina's help. Gina agrees to help and will ask her father if she can use his car to go grocery shopping with Wanda. They plan to go on Friday.",
+            "ground_truth": "Wanda wants to throw a party. She asks Gina to borrow her father's car and go do groceries together. They set the date for Friday. ",
+            "peak_memory_mb": 16408.81396484375,
+            "latency_ms": 2416.2605479359627
+        },
+        {
+            "index": 17,
+            "score": 0.3870967741935483,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMadison saw an offer for a trip to Thailand and is considering it. The tickets are expensive, but the rest of the trip is relatively cheap. Children under 12 get a 50% discount, making it seem like a good option.",
+            "ground_truth": "Madison considers buying flight tickets to Thailand as she has found a cheap offer with 50% discount for children under 12.",
+            "peak_memory_mb": 16081.94677734375,
+            "latency_ms": 2283.1117250025272
+        },
+        {
+            "index": 18,
+            "score": 0.08695652173913043,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. David wants to quit his job because of the sudden changes in the working system. He has pointed out the flaws of the system but nobody's cared. He wants to find another job in the near future.\n\n2. Holly and Emma are",
+            "ground_truth": "Charlee is attending Portuguese theater as a subject at university. He and other students are preparing a play by Mrożek translated into Portuguese.",
+            "peak_memory_mb": 18765.14599609375,
+            "latency_ms": 4993.0447628721595
+        },
+        {
+            "index": 19,
+            "score": 0.03773584905660377,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Gigi is doing the map, Kia is doing the landmarks, and Kiko is preparing notes for the landmarks. They will meet at 7 pm at Kiko's place.\n\n2. Felicia and Eva are not fans of cinemas",
+            "ground_truth": "Jesse broke his razor and wants to borrow Stig's.",
+            "peak_memory_mb": 16465.6318359375,
+            "latency_ms": 2661.889983341098
+        },
+        {
+            "index": 20,
+            "score": 0.45,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMeg can meet Ann at home at 7 pm after Ann's extra math classes.",
+            "ground_truth": "Ann is still at school. She will be home at 7 so she can meet Meg then.",
+            "peak_memory_mb": 19203.42236328125,
+            "latency_ms": 4301.852183882147
+        },
+        {
+            "index": 21,
+            "score": 0.40909090909090906,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJones and Angelina are catching up after a long time and plan to meet in town later in the afternoon. Jones will call Angelina to confirm the meeting place.",
+            "ground_truth": "Jones and Angelina will meet in town in the afternoon.",
+            "peak_memory_mb": 19116.15087890625,
+            "latency_ms": 4763.278383761644
+        },
+        {
+            "index": 22,
+            "score": 0.10344827586206895,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Jake and Amy discuss their weekend plans, including a dinner party and a movie night. They also talk about the books they've read, with Amy recommending \"Metro 2033\" and Jake suggesting \"Sapiens: Brief History of",
+            "ground_truth": "Bella wants to talk with Clara and she will come to her place after 7:30.",
+            "peak_memory_mb": 16112.8818359375,
+            "latency_ms": 2339.54061800614
+        },
+        {
+            "index": 23,
+            "score": 0.23728813559322035,
+            "metric": "F1",
+            "output": "Gary told Ellie he wanted to drive for Uber, but Ellie thought it was a terrible idea. However, Gary is now driving for Uber and loves it, meeting many cool people and having fun. Ellie is surprised by Gary's change in attitude and thinks it's great that he's enjoying himself.",
+            "ground_truth": "Gary is a driver for Uber and he really enjoys it.",
+            "peak_memory_mb": 16993.9697265625,
+            "latency_ms": 3020.9810719825327
+        },
+        {
+            "index": 24,
+            "score": 0.1016949152542373,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Paula explains the classification of consonants in the Polish word 'książę' to Willow.\n\n2. Kate isn't prepared for the exam, but she goes anyway. Bruce is demotivated as well.\n\n3. Jess is frustrated",
+            "ground_truth": "Dorothea is having a birthday dinner in the town with Tom. Elena is seeing Dorothea at her party on Saturday. ",
+            "peak_memory_mb": 18660.02978515625,
+            "latency_ms": 4849.142398219556
+        },
+        {
+            "index": 25,
+            "score": 0.14705882352941177,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Elberta will pick Kim up at 8:30 to avoid heavy traffic. If they get stuck, they might miss the economy class.\n\n2. Miley has not chosen the name for her baby yet. Bryan has some suggestions",
+            "ground_truth": "Camilla has some errands to do on Saturday. Charles is visiting the German markets this weekend. They are talking about Christmas food and drinks.",
+            "peak_memory_mb": 16467.13623046875,
+            "latency_ms": 2662.743880879134
+        },
+        {
+            "index": 26,
+            "score": 0.4444444444444444,
+            "metric": "F1",
+            "output": "Mary is broke and needs a few bucks. Carter agrees to lend her the money, but needs an hour to get back from the train station.",
+            "ground_truth": "Mary ran out of money. Carter is going to lend her some in an hour.",
+            "peak_memory_mb": 17771.7373046875,
+            "latency_ms": 2797.513070050627
+        },
+        {
+            "index": 27,
+            "score": 0.23255813953488372,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nBiwott asked Chloe if she watched the series he told her about, but Chloe said she hasn't had time yet and will watch it over the weekend.",
+            "ground_truth": "Chloe will watch the serious recommended by Biwott at the weekend.",
+            "peak_memory_mb": 18591.9033203125,
+            "latency_ms": 4157.5000854209065
+        },
+        {
+            "index": 28,
+            "score": 0.35714285714285715,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nIris is trying to remove herself from an expense in a group, but it involves a person who has left the group, so she can't edit it. Luke suggests deleting the expense and re-adding it. Iris tries to fix it, and Ken",
+            "ground_truth": "Iris is trying to remove herself from an expense. Ken has fixed the problem. Julia will be added to the expense again later. Gerardo will ask the people leaving early to stay in the splitwise group until the end of the month. George will stay.",
+            "peak_memory_mb": 17594.22607421875,
+            "latency_ms": 3752.4783578701317
+        },
+        {
+            "index": 29,
+            "score": 0.07272727272727272,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Tori and Kody discuss the Avengers movie, with Tori not liking the acting of the Hulk and Kody saying he didn't play much of a role.\n\n2. Marty wants Chrissy to tell him who she got for Secret",
+            "ground_truth": "Alex will go swimming toghether with Huda in two hours. ",
+            "peak_memory_mb": 19630.29638671875,
+            "latency_ms": 6001.673028804362
+        },
+        {
+            "index": 30,
+            "score": 0.6976744186046512,
+            "metric": "F1",
+            "output": "Tina and Steve are planning to have pasta for dinner together. They will go shopping after work and meet in the car park.",
+            "ground_truth": "Tina and Steve are having pasta for dinner. They'll meet in the car park after Steve finishes work. They'll do the shopping together.",
+            "peak_memory_mb": 16635.6533203125,
+            "latency_ms": 1707.0467327721417
+        },
+        {
+            "index": 31,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ronnie is a father-to-be and has already had 4 beers today. He will have another 3. Leon also will have 3 beers.\n\n2. Grace has been busy at work and is proud of wrapping up a project.",
+            "ground_truth": "Christie and Katie are tired after the party. They both had fun.",
+            "peak_memory_mb": 16862.64990234375,
+            "latency_ms": 3017.3613582737744
+        },
+        {
+            "index": 32,
+            "score": 0.07894736842105263,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sean is annoyed with Brexit and its potential impact on his shop, which has clients from the Republic. Ann shares his concerns about the border and the uncertainty of the situation.\n\n2. Max makes vodka gummy bears by leaving them to soak",
+            "ground_truth": "Jess dreamt she was a lion tamer. Lynn believes that dreams mean something. Charlie has read that strangers from our dreams are actually people who we've seen before.",
+            "peak_memory_mb": 16955.08984375,
+            "latency_ms": 3115.1930200867355
+        },
+        {
+            "index": 33,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSophie is waiting for Tina to arrive so they can catch the bus, but Tina is running late. Tina assures Sophie that she will make it on time and tells her to calm down.",
+            "ground_truth": "Tina will make it for the bus that is leaving in 3 minutes.",
+            "peak_memory_mb": 18632.17578125,
+            "latency_ms": 4409.644034225494
+        },
+        {
+            "index": 34,
+            "score": 0.608695652173913,
+            "metric": "F1",
+            "output": "Thelma doesn't have anything to wear and Louisa offers to lend her a red velvet dress.",
+            "ground_truth": "Louisa will lend Thelma her red velvet dress.",
+            "peak_memory_mb": 15816.2099609375,
+            "latency_ms": 940.7027019187808
+        },
+        {
+            "index": 35,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Harry is looking for a car dealer and wants to buy an old car. John recommends a dealer in Chelsea, but they don't sell old cars. Harry wants an automatic or diesel car and is looking for a good deal.\n\n2.",
+            "ground_truth": "Trevor will meet Tobias at his place at 9 pm.",
+            "peak_memory_mb": 18803.3662109375,
+            "latency_ms": 5011.78969675675
+        },
+        {
+            "index": 36,
+            "score": 0.11940298507462686,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sandra is angry at Jimmy for holding hands with another girl.\n\n2. Nata will help Nancy pick out a new foundation.\n\n3. Richard, Shelly, and Brad are going to drink beer on Friday at 8pm at Mist",
+            "ground_truth": "Anna likes a new app in which you can virtually try on clothes. Peter is not quite convinced it is necessary.",
+            "peak_memory_mb": 18418.69873046875,
+            "latency_ms": 4595.315054990351
+        },
+        {
+            "index": 37,
+            "score": 0.09836065573770492,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Archie and Betty will have lunch tomorrow.\n\n2. Homer is going to take a nap and doesn't want to be woken up.\n\n3. Sean enjoyed Keiran's performance last night. Keiran tried to mimic their physics teacher,",
+            "ground_truth": "Annette is sick. James is going to the Jesus bar. Oli couldn't find anyone near the bar.",
+            "peak_memory_mb": 18836.46142578125,
+            "latency_ms": 5044.124733656645
+        },
+        {
+            "index": 38,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Keith and Monika reminisced about an incident involving their children, where Keith's daughter punched Monika's son in the face.\n\n2. Jane found a kitten on the street and named it Charles. Francis is excited to meet the kitten",
+            "ground_truth": "Martin is asexual. Nicole doesn't want to break up for this reason. She wants to give their relationship a try.",
+            "peak_memory_mb": 18225.17041015625,
+            "latency_ms": 4388.938552699983
+        },
+        {
+            "index": 39,
+            "score": 0.08695652173913043,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Anna and Savannah are going to Maggie's housewarming party on Friday. Savannah will be late, and they are both taking part in a workshop on Saturday morning.\n\n2. Alex's request to join the Sci Fi meetup needs to be",
+            "ground_truth": "Dan cooked a successful BBQ meal and will split the bill via Splitwise. He invites everyone who did not eat to remove themselves. ",
+            "peak_memory_mb": 16268.806640625,
+            "latency_ms": 2490.105079021305
+        },
+        {
+            "index": 40,
+            "score": 0.09677419354838708,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sarah and Gerry will attend group study sessions for their psychology class at Carol's house every day from 5-6 pm. There are 12 people in the group and each will present 1 of 12 topics to others in the",
+            "ground_truth": "Andrea's son is sick, she is taking a day off and taking him to the doctor's. ",
+            "peak_memory_mb": 16462.40087890625,
+            "latency_ms": 2657.379654701799
+        },
+        {
+            "index": 41,
+            "score": 0.11267605633802817,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Roland will join Walter's free yoga class.\n2. Irena won't join John and his companions because she's saving money for a trip to Spain in May.\n3. Nancy will pick a movie, and Peter will be there in",
+            "ground_truth": "Agata has a new job, she's learning to code and she likes it. Guido doesn't understand her Facebook posts because he knows nothing about JavaScript.",
+            "peak_memory_mb": 15751.27294921875,
+            "latency_ms": 2034.2941470444202
+        },
+        {
+            "index": 42,
+            "score": 0.15789473684210525,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Fisher is a cat person, but Zoe thought the opposite.\n\n2. Brody's gym membership in Gladiator is over, and he plans to renew it.\n\n3. Tom has been waiting for Stacy and Jill, but they were texting him",
+            "ground_truth": "Jessica posts a lot regarding subjects she does nothing about in reality. Julia posts in a more genuine way. But Hillary thinks she does it to death and lacks real life.",
+            "peak_memory_mb": 17008.85546875,
+            "latency_ms": 3145.570628810674
+        },
+        {
+            "index": 43,
+            "score": 0.12345679012345678,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. New York was originally called New Amsterdam, but the British took over in 1664 and renamed it New York, likely because the land belonged to the Duke of York.\n\n2. Coraline agrees to meet Leon by the printers in ",
+            "ground_truth": "Robert texts Gabriel to arrange a get-together with him in the office at 3 pm, before he is meeting Darek. But Gabriel left the office a month ago and is at home now, so they will not meet today.",
+            "peak_memory_mb": 18981.99169921875,
+            "latency_ms": 5202.878686133772
+        },
+        {
+            "index": 44,
+            "score": 0.07017543859649122,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Daniel will come back home after 10 pm. Irene will wait for Daniel.\n\n2. Chris cleaned a whole house for Carol to cheer her up.\n\n3. Norma works full-time, earns good money, and prepares for her account",
+            "ground_truth": "Willy and Vinny will car pool with Winny's red Mustang.",
+            "peak_memory_mb": 18225.16748046875,
+            "latency_ms": 4388.34002520889
+        },
+        {
+            "index": 45,
+            "score": 0.16326530612244897,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Mona and Luke enjoy the same music, specifically Led Zeppelin. Mona hasn't listened to it for a while.\n\n2. Josh invites Don for dinner, where he will share great news.\n\n3. Jonathan and Lisa are struggling to find",
+            "ground_truth": "Quinn and Kyle are going out tonight. Kyle is leaving school at Easter to work for his uncle. Quinn's parents want him to retake his GCSEs. Kyle's brother will buy alcohol and cigarettes for them. Their friend, Kirsty, is dating Nathan Baker. Quinn and Kyle will meet around 6 outside the club.",
+            "peak_memory_mb": 18089.00927734375,
+            "latency_ms": 4255.986413918436
+        },
+        {
+            "index": 46,
+            "score": 0.3478260869565218,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nMark and Jeff are talking about a new car that someone has bought, and they're both impressed by its quality and price. They're joking about who will get to try it out first, with Mark wanting to be the first one to drive it. They",
+            "ground_truth": "Jeff and Mark are amazed by his car. They bet 100 dollars who gets to drive it first.",
+            "peak_memory_mb": 15910.630859375,
+            "latency_ms": 2170.1927059330046
+        },
+        {
+            "index": 47,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Jenny and Sophia are flying to Stockholm with British Airways. Tom is surprised they didn't choose Ryanair.\n\n2. Dr. Baraglio doesn't work with Tom and Peter anymore, and Tom lent him something.\n\n3. Jay wants",
+            "ground_truth": "Mike will refill the hand sanitizer on Grace's request.",
+            "peak_memory_mb": 17063.4287109375,
+            "latency_ms": 3194.68606216833
+        },
+        {
+            "index": 48,
+            "score": 0.15151515151515152,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Mike's birthday is tomorrow. Clara thought it was next week. George didn't remember at all. George is going to leave work earlier tomorrow to get the present for Mike.\n\n2. Meg can't have a lesson with Jeff today.",
+            "ground_truth": "Jill is bored and has watched YouTube. Nate is at work and will call Jill when he finishes it.",
+            "peak_memory_mb": 15748.4130859375,
+            "latency_ms": 2034.8484725691378
+        },
+        {
+            "index": 49,
+            "score": 0.3888888888888889,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nAlexa confessed to Hunter that she asked Ethan to insult him because she was jealous of their interaction.",
+            "ground_truth": "Alexa asked Ethan to insult Hunter out of jealousy.",
+            "peak_memory_mb": 18103.4541015625,
+            "latency_ms": 3246.0116180591285
+        },
+        {
+            "index": 50,
+            "score": 0.19444444444444448,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Germaine is back to working out after his mother moved closer to help with his child. Raul has been consistently working out and is still in good shape.\n\n2. Zoe is frustrated that her brother Will is ignoring her messages,",
+            "ground_truth": "Miranda called Tom yesterday and spoke to him in a sweet way. Anne is angry with her because Anne is dating Tom.",
+            "peak_memory_mb": 16287.134765625,
+            "latency_ms": 2506.602369248867
+        },
+        {
+            "index": 51,
+            "score": 0.05797101449275363,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Beth's brother's wife died from a bee sting allergy. Beth is still in shock and doesn't know about the funeral arrangements yet.\n\n2. Victoria and Anna discuss the show \"Outlander\", which Victoria recently started watching. They both",
+            "ground_truth": "Jack has not received yet the package Gene had sent him on Friday. She sent him the tracking number, so he could check the status of the shipment. ",
+            "peak_memory_mb": 18873.3505859375,
+            "latency_ms": 5113.9782182872295
+        },
+        {
+            "index": 52,
+            "score": 0.1038961038961039,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Emil and Sallie are going to the Ed Sheeran concert together. Emil asked Sallie to be his date and she agreed.\n\n2. Adam is going to visit his mother Mary on Sunday to talk about her life over",
+            "ground_truth": "Greg and Betsy have a lot of work today, so they cannot pick up Johnny from the kindergarten. However, it's Greg's turn to do it. Greg will try to find a solution.",
+            "peak_memory_mb": 18666.2724609375,
+            "latency_ms": 4877.733643166721
+        },
+        {
+            "index": 53,
+            "score": 0.2588235294117647,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nRael is unhappy with his job and is considering quitting. Zach suggests that he consider a career in IT, which he thinks would be a good fit for Rael's skills and interests. Zach offers to help Rael get started by connecting him with his",
+            "ground_truth": "Rael finds the atmosphere at her workplace to be unbearable. Many people switch their career paths and move to the IT sector. Rael only needs good analytical skills and an on-line course to start work in IT.",
+            "peak_memory_mb": 18355.638671875,
+            "latency_ms": 4541.477951221168
+        },
+        {
+            "index": 54,
+            "score": 0.5833333333333334,
+            "metric": "F1",
+            "output": "Natalia, Harriet, and Lara agree to book a flight today to avoid it getting more expensive.",
+            "ground_truth": "Natalia, Harriet and Lara will book flight tickets today.",
+            "peak_memory_mb": 16180.64892578125,
+            "latency_ms": 1219.4171831943095
+        },
+        {
+            "index": 55,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Margaret will grab some pizza for Paul.\n\n2. Andrea, Nathan, and Paul will meet at Harvey's at 9 pm and probably will go somewhere else. Beth has a dinner with her parents so will join them later.\n\n3.",
+            "ground_truth": "Natalie wants Monica's cheesecake recipe.",
+            "peak_memory_mb": 17830.3466796875,
+            "latency_ms": 3962.3351991176605
+        },
+        {
+            "index": 56,
+            "score": 0.4042553191489362,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nNancy, Phil, and Vic are discussing social media platforms. Phil thinks Twitter is good for getting news quickly, while Vic prefers Facebook for interacting with others. Vic also uses Instagram to follow fitness accounts and get ideas for his own workouts. Nancy asks about",
+            "ground_truth": "Nancy asks Vic and Phil about various social media, which prompts them to discuss and compare the different platforms. Phil is not into Instagram but likes Twitter. Vic prefers Facebook over Twitter and likes Instagram. Phil and Vic both don't use Tumblr. ",
+            "peak_memory_mb": 19258.8896484375,
+            "latency_ms": 5566.124051809311
+        },
+        {
+            "index": 57,
+            "score": 0.0983606557377049,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Courtney sent Josh a birthday card, but he didn't receive it. Josh went to Vegas for his birthday and had a great time. Courtney is sending another card.\n\n2. Claire is turning 30 next week, and Roberta and",
+            "ground_truth": "Amanda and Peter don't like what the man in dreads looks like, but Dan does.",
+            "peak_memory_mb": 15829.78466796875,
+            "latency_ms": 2101.2570750899613
+        },
+        {
+            "index": 58,
+            "score": 0.10666666666666667,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Roger sent a letter to Moore with an offer, but Moore is not pleased with the price and wants it to be kept as agreed.\n\n2. Zachary wants to invite John and Sophia over, but Kelly is not feeling well and wants",
+            "ground_truth": "David is coming home for Christmas next week.  Jane has no idea what to buy their father so David is going to order an ipad online.",
+            "peak_memory_mb": 16448.63134765625,
+            "latency_ms": 2659.2403119429946
+        },
+        {
+            "index": 59,
+            "score": 0.23880597014925373,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSebastian is celebrating his one-year anniversary of moving to a new place and is extremely happy with his life. He has learned many valuable lessons and is grateful for the people in his life. Kevin is happy for Sebastian but is skeptical about his own life and",
+            "ground_truth": "Sebastian is very happy with his life, and shares this happiness with Kevin.",
+            "peak_memory_mb": 19132.05419921875,
+            "latency_ms": 5394.21055233106
+        },
+        {
+            "index": 60,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no dialogue provided for this last example.",
+            "ground_truth": "Tony sent a photo of his cat to Amy and Lucas.",
+            "peak_memory_mb": 16197.0146484375,
+            "latency_ms": 905.5508752353489
+        },
+        {
+            "index": 61,
+            "score": 0.12121212121212122,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Evan bought a white Ford as his first car and wants to give it a name. Mauricio doesn't like this idea.\n\n2. Holly is not taking her son to kindergarten because of his cough, but she would like him to go",
+            "ground_truth": "Colin informs Ava that with her height of 158 cm she is shorter than an average penguin.",
+            "peak_memory_mb": 18788.67041015625,
+            "latency_ms": 4999.659932218492
+        },
+        {
+            "index": 62,
+            "score": 0.5348837209302325,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nNatalie wants to go to a new club at Regents Street and asks Judy if she can go with her. Judy is going on Saturday with her friends Miranda and Helen, but Natalie can join them.",
+            "ground_truth": "Natalie is checking if it's worth going to the new club at Regents Street. Denise thinks the club is great. Judy's friends also recommend the place, so Judy is going there this weekend. Natalie will go to the club with Judy, Miranda and Helen on Saturday.",
+            "peak_memory_mb": 16784.06591796875,
+            "latency_ms": 2691.9743176549673
+        },
+        {
+            "index": 63,
+            "score": 0.47058823529411764,
+            "metric": "F1",
+            "output": "Tiffany is asking Railey to buy her a burger on her way home.",
+            "ground_truth": "Railey will buy Tiffany a burger.",
+            "peak_memory_mb": 17349.27490234375,
+            "latency_ms": 1992.8481276147068
+        },
+        {
+            "index": 64,
+            "score": 0.1,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Angel doesn't feel well and is worried about her impending death. Ballomy will come to visit her in 10 minutes.\n\n2. Mom's scissors for the cat's claws have arrived today.\n\n3. Chris and Anna will go to",
+            "ground_truth": "The content for November email blast is on the Dropbox, no need to send it.",
+            "peak_memory_mb": 18454.27587890625,
+            "latency_ms": 4626.119986176491
+        },
+        {
+            "index": 65,
+            "score": 0.6097560975609756,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nKate broke her arm and needs to go to the hospital. She wants to know if her medical insurance covers hospital costs. Greg suggests she call Linda or ask someone at the reception to find out what kind of package she has.",
+            "ground_truth": "Kate broke her arm and she's going to the hospital. She'd like to know whether her medical insurance covers hospital costs. Greg suggests her to call Linda or ask someone at the reception about it.",
+            "peak_memory_mb": 18631.5078125,
+            "latency_ms": 4662.586993072182
+        },
+        {
+            "index": 66,
+            "score": 0.21212121212121213,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nThe group is discussing and mocking US President Donald Trump for not attending a ceremony, with some calling him a \"pussy\" and a \"sissy boy.\" They express their disappointment and shame, with some making jokes about his hair and makeup. They also",
+            "ground_truth": "Janet, Nicole, Alison, Arlene, Leslie, Ros, Eric and Sue are all complaining about Donald Trump and his absence at the ceremony. ",
+            "peak_memory_mb": 15918.818359375,
+            "latency_ms": 2170.69823294878
+        },
+        {
+            "index": 67,
+            "score": 0.13793103448275862,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Tom will cover for Harper who is going to a party and will be back late.\n\n2. Pat and Lucy will meet at 5:25 for the bus. Laura likes Pat's outfit and will show hers later on.\n\n3.",
+            "ground_truth": "Maya will buy 5 packs of earplugs for Randolph at the pharmacy.",
+            "peak_memory_mb": 17702.84619140625,
+            "latency_ms": 3825.299685820937
+        },
+        {
+            "index": 68,
+            "score": 0.3466666666666667,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nOlivia needs to do her accounts and upload some videos to YouTube. Jake offers to help with the videos, but Olivia doesn't do much post-production. They discuss the issue of copyright strikes and ad revenue on YouTube, with Jake sharing a personal experience of",
+            "ground_truth": "Olivia has to sort out her accounts and upload a few videos on YouTube. Jake is complaining that Sony Music tried to appropriate his own music.",
+            "peak_memory_mb": 17517.04541015625,
+            "latency_ms": 3656.5189943648875
+        },
+        {
+            "index": 69,
+            "score": 0.3404255319148936,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nMia and Steven are going to a movie that starts at 9 pm. They plan to meet at 8 pm to grab something to eat, and Mia suggests Chinese food.",
+            "ground_truth": "Mia and Steven want to grab some Chinese at 8.",
+            "peak_memory_mb": 15675.01904296875,
+            "latency_ms": 1594.3720508366823
+        },
+        {
+            "index": 70,
+            "score": 0.08695652173913045,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ken's computer is in service, so he will use Miriam's computer to upload some files to the server.\n\n2. Andy and Patrick will have a beer later.\n\n3. It's Monday, and Gina is feeling sleepy at work",
+            "ground_truth": "Mike wants someone else to do the washing up this time. Sara agrees, but when she returns from the cinema she is at with Jack.",
+            "peak_memory_mb": 17948.89404296875,
+            "latency_ms": 4098.100431263447
+        },
+        {
+            "index": 71,
+            "score": 0.6341463414634146,
+            "metric": "F1",
+            "output": "Paul will be late coming home and will call Lena in 15 minutes to explain what happened.",
+            "ground_truth": "Lena has her keys. Paul will be home later than he thought. Paul will call Lena in 15 minutes and tell her what happened.",
+            "peak_memory_mb": 17473.89892578125,
+            "latency_ms": 2205.3909399546683
+        },
+        {
+            "index": 72,
+            "score": 0.4210526315789474,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nA car accident occurred on Circle Drive, near the Circle Mall. Fortunately, there were no reported deaths.",
+            "ground_truth": "There has been an accident on Circle Drive, neat Circle Mall. There are no fatalities.",
+            "peak_memory_mb": 16064.77099609375,
+            "latency_ms": 1486.8711000308394
+        },
+        {
+            "index": 73,
+            "score": 0.39215686274509803,
+            "metric": "F1",
+            "output": "Iris is excited that her husband, Pete, has been interviewed. She thinks it's a big deal and her parents are impressed. Pete is downplaying it, but is flattered.",
+            "ground_truth": "Pete has got an interview. His wife Iris is happy because her parents are glad she found a decent man. She is joking he is famous.",
+            "peak_memory_mb": 17351.89892578125,
+            "latency_ms": 2694.8334220796824
+        },
+        {
+            "index": 74,
+            "score": 0.09523809523809525,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Clem will talk to Jim and ask Lisa to send an email to everyone. Maria will talk to Antonio and empty the dining room so that they can do it at home.\n\n2. Chris and Jane will come over to Maggie to celebrate New",
+            "ground_truth": "Judy is staying for the weekend. Derek asks Judy to feed his animals on Friday and Saturday. Judy agrees. Derek will give her his keys on Thursday and provide Judy with details.",
+            "peak_memory_mb": 17648.779296875,
+            "latency_ms": 3809.4901591539383
+        },
+        {
+            "index": 75,
+            "score": 0.23333333333333334,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nWayne dropped off Tommy at the station, but his mom didn't pick him up as planned. Tommy took a bus instead. They had a good weekend together, especially the angling trip. Wayne promised to do it again and sent Tommy some photos.",
+            "ground_truth": "Tommy took a bus. He enjoyed the weekend with Wayne. They will talk in the evening.",
+            "peak_memory_mb": 16442.69970703125,
+            "latency_ms": 2674.0667088888586
+        },
+        {
+            "index": 76,
+            "score": 0.13636363636363635,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Natalie is grateful for Patrick's comments on a document. Patrick will join her at a meeting tomorrow at 12:00.\n\n2. Jenson is late with his project due to various obstacles. Molly will help him tomorrow afternoon.\n\n3",
+            "ground_truth": "Tilly was supposed to come home by 4 but she got a detention. The school was supposed to inform her parents about it, but didn't do it. Sam is coming back home. Tilly will be home in 40 minutes. She will call Sam then. ",
+            "peak_memory_mb": 18684.05126953125,
+            "latency_ms": 4880.8671538718045
+        },
+        {
+            "index": 77,
+            "score": 0.22535211267605634,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Cynthia asks Sonia to work extra hours to help with reports, and Sonia agrees to help on Wednesday, Thursday, and Friday.\n\n2. Martin has already bought a book for Dev, but Chris, Ruth, and Ella want to buy a",
+            "ground_truth": "Viola is having her wedding soon and still has some things to organize. Carmen comes on Friday and is willing to help Viola.",
+            "peak_memory_mb": 18591.943359375,
+            "latency_ms": 4792.90562029928
+        },
+        {
+            "index": 78,
+            "score": 0.7222222222222222,
+            "metric": "F1",
+            "output": "William is making spaghetti and needs Olivia to buy some fresh tomatoes. Beth will also buy some chocolate for after dinner.",
+            "ground_truth": "William is making spaghetti. Olivia will buy fresh tomatoes for William. Beth will buy chocolate.",
+            "peak_memory_mb": 17284.39794921875,
+            "latency_ms": 2179.2835230007768
+        },
+        {
+            "index": 79,
+            "score": 0.2173913043478261,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Nick sends Julia a song to ask for her opinion and she really likes it.\n\n2. Javon has had a job interview. It went well, but he thinks he might be overqualified.\n\n3. Ted was supposed to take",
+            "ground_truth": "Leah met a creepy guy last night at a poetry reading. He knew she speaks German and named all the friends who went to a past event with her. She didn't tell him any of this. He googled her before. Leah had liked a post mentioning him 2 weeks earlier. ",
+            "peak_memory_mb": 18993.013671875,
+            "latency_ms": 5225.363226141781
+        },
+        {
+            "index": 80,
+            "score": 0.05797101449275362,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Jake has booked 3 tickets for 7 pm tomorrow with a 30% discount.\n\n2. Victoria suggests having sex with Jacob. Lewis is in Hamburg for work. Jacob is also working and going to a concert with Thomas in ",
+            "ground_truth": "Jasmine loves Charlie Puth and his new song. Paola thinks Charlie Puth is attractive. Paola likes the song \"Galway Girl\" by Ed Sheeran.",
+            "peak_memory_mb": 17041.072265625,
+            "latency_ms": 3191.1952178925276
+        },
+        {
+            "index": 81,
+            "score": 0.1020408163265306,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Penny will come to Sam's party. Sam will give a lift to Penny's son. Penny will move her party by two weeks at Sam's request. Sam's guide on the museum tour was hard to understand.\n\n2. Ella admits",
+            "ground_truth": "Del accused Stanley of having an affair, because he couldn't go with her this weekend due to his work. They've only been together for 4 months, so it's not a good sign. Now Bill and Stanley need to take care of the Lidem project. Division of tasks is on Stanley, because Alison is unreachable.",
+            "peak_memory_mb": 19305.7373046875,
+            "latency_ms": 5623.037368990481
+        },
+        {
+            "index": 82,
+            "score": 0.6285714285714286,
+            "metric": "F1",
+            "output": "Ali thinks he left his wallet at Mohammad's place. Mohammad checks and finds it. He agrees to bring it to university tomorrow.",
+            "ground_truth": "Ali left his wallet at Mohammad's place. Mohammad'll bring it to uni tomorrow.",
+            "peak_memory_mb": 16899.318359375,
+            "latency_ms": 1910.5995818972588
+        },
+        {
+            "index": 83,
+            "score": 0.4545454545454545,
+            "metric": "F1",
+            "output": "Tanya is glad to hear that Rosie is feeling a bit better, but not fully recovered.",
+            "ground_truth": "Rosie is better, but still not well.",
+            "peak_memory_mb": 16798.86279296875,
+            "latency_ms": 1647.6446129381657
+        },
+        {
+            "index": 84,
+            "score": 0.08108108108108109,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Lib and Liz meet up and discuss their shared memories of Lib's mother. They agree to stay in touch and Liz will let Lib know when she's coming to London.\n\n2. Abigail and Susan discuss Simone de Beauvoir's book",
+            "ground_truth": "Igor has a lot of work on his notice period and he feels demotivated. John thinks he should do what he has to do nevertheless. ",
+            "peak_memory_mb": 18402.5859375,
+            "latency_ms": 4583.2797437906265
+        },
+        {
+            "index": 85,
+            "score": 0.12307692307692307,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nKamden and McKinley haven't seen each other in a while and are catching up. Kamden is not on Facebook but uses the chat feature to stay in touch with friends. McKinley uses Facebook to keep in contact with people and shares photos,",
+            "ground_truth": "Kamden hasn't used social media recently. He uses messenger only and wants to get Mckinley's photographs.",
+            "peak_memory_mb": 16224.09619140625,
+            "latency_ms": 2451.4969373121858
+        },
+        {
+            "index": 86,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nChris and his friends pushed some girls into the pool, but Chris claims it was because they were already soaking wet. June finds this behavior to be awful.",
+            "ground_truth": "Some girls had to undress because they had been pushed into the pool.",
+            "peak_memory_mb": 16111.646484375,
+            "latency_ms": 1792.759700678289
+        },
+        {
+            "index": 87,
+            "score": 0.037037037037037035,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Eva is spending her birthday at Alton Towers with her friends.\n\n2. Maddie, Gabriel, Nina, and Tash are going to the club this weekend to see Tolpuddle 5 play.\n\n3. Farah wants",
+            "ground_truth": "Vincent's new lamp should be ready to be picked up on Tuesday.",
+            "peak_memory_mb": 16092.34033203125,
+            "latency_ms": 2314.722379669547
+        },
+        {
+            "index": 88,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nNatalie's wallet was found in her room by Tobias.",
+            "ground_truth": "Natalie's wallet is in her room.",
+            "peak_memory_mb": 17815.03369140625,
+            "latency_ms": 2724.164263345301
+        },
+        {
+            "index": 89,
+            "score": 0.0975609756097561,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Arnold is staying in Bregenz for 2-3 days, while Jenny is in Vaduz making day trips to different places.\n\n2. Sue's mum got back home yesterday after a difficult journey and is still recovering. Sue will",
+            "ground_truth": "Margaret and Evans plan to meet at 10 on 4th and at 11 on 11th. They both are not sure when they will be able to meet next, so they will come up with a date later.",
+            "peak_memory_mb": 18206.33642578125,
+            "latency_ms": 4380.401575937867
+        },
+        {
+            "index": 90,
+            "score": 0.13698630136986303,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ian made a reservation at Fergie's for 2 pm. Courtney, Tom, Doris, and Frank will join him. They will gather together at 12:00 to take a walk before lunch.\n\n2. Hilary",
+            "ground_truth": "In the agreement it was decided that it's neither a sea nor a lake and it will have a special legal status. They will also completely divide the seabed up. It's rich in resources, mostly gas and oil.",
+            "peak_memory_mb": 15951.97265625,
+            "latency_ms": 2193.7977271154523
+        },
+        {
+            "index": 91,
+            "score": 0.20833333333333334,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nAimee is looking for Maryam and can't find her. Soren suggests that Maryam might have gone somewhere with her father. Aimee tries Maryam's number and even went to her home, but can't find her.",
+            "ground_truth": "Aimee is looking for Maryam.",
+            "peak_memory_mb": 17547.58154296875,
+            "latency_ms": 3654.521088115871
+        },
+        {
+            "index": 92,
+            "score": 0.45614035087719296,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nCharlie's sister has just passed her last exam at university and they want to celebrate. They invite Frank to join them for a night out, but the plan is not yet finalized.",
+            "ground_truth": "Charlie's sister has passed her last university exam. Charlie and Frank will go out to celebrate that tonight.",
+            "peak_memory_mb": 18694.16943359375,
+            "latency_ms": 4420.672202017158
+        },
+        {
+            "index": 93,
+            "score": 0.10344827586206895,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sara had her hair done for free as it was a part of the saloon's publicity campaign. People got used to Sara's hairstyles. Sara and Diane were disappointed about having their hair shortened. Sara's boyfriend is a salesman.\n\n2",
+            "ground_truth": "Patricia cannot talk now. George will call her in about an hour.",
+            "peak_memory_mb": 17526.484375,
+            "latency_ms": 3658.5811600089073
+        },
+        {
+            "index": 94,
+            "score": 0.43902439024390244,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJoe invites Pete to come over and watch Deadpool 2 with the guys tonight. Pete agrees to come.",
+            "ground_truth": "Joe is going to watch Deadpool 2 with his fellows and Pete will join them.",
+            "peak_memory_mb": 18121.09228515625,
+            "latency_ms": 3295.898487791419
+        },
+        {
+            "index": 95,
+            "score": 0.52,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nIsabella thanks Betty for sharing about her work and invites her to do something together in the future.",
+            "ground_truth": "Isabella is grateful to Betty for sharing the information about her work yesterday. Isabella offers Betty her company, should Betty want to do something together.",
+            "peak_memory_mb": 19595.06201171875,
+            "latency_ms": 4846.3187497109175
+        },
+        {
+            "index": 96,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nTom, Elena, and others are trying to get Jeffrey's attention, but he can't see them.",
+            "ground_truth": "Elena is wearing the red jacket and Jeffrey can't see her nor Tom.",
+            "peak_memory_mb": 16727.00634765625,
+            "latency_ms": 2027.5345891714096
+        },
+        {
+            "index": 97,
+            "score": 0.21212121212121213,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMilena asks Kate and Regina about their presentation, and they both say it went very well and received good feedback. They mention that only 3 people attended, but they expected a small and interested audience, which they felt was better than a larger but less",
+            "ground_truth": "Kate, Milena and Regina's presentation went well. Three people came to listen to them.",
+            "peak_memory_mb": 18913.97216796875,
+            "latency_ms": 5148.310246877372
+        },
+        {
+            "index": 98,
+            "score": 0.4482758620689655,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nEric and Bella were surprised when their boss appreciated their decision to dismiss a client's request, but it turned out that the boss was looking forward to bringing in a competitor of the client as a new client.",
+            "ground_truth": "Bella and Eric dismissed a request of a client. Their boss appreciated the decision. He brings in new clients.",
+            "peak_memory_mb": 15909.7646484375,
+            "latency_ms": 1920.7925773225725
+        },
+        {
+            "index": 99,
+            "score": 0.14814814814814814,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sheila has sent Larisa the picture of that dress.\n\n2. Jack has a problem with an application and needs Kev's help.\n\n3. Ewan tells Isabel he will be late for the party, because his car broke down.",
+            "ground_truth": "Ryan and Jack are going to the casting for a dance show.",
+            "peak_memory_mb": 17790.0791015625,
+            "latency_ms": 3914.1851188614964
+        },
+        {
+            "index": 100,
+            "score": 0.1643835616438356,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Susan and Evelyn want to go on holiday together with Lora in August. Susan will talk to Lora.\n\n2. Paula is going to be late for the movie, as usual.\n\n3. Mary needs sugar for baking and will borrow",
+            "ground_truth": "Sonia is going to San Sebastian in a month. Toni enjoyed her the airbnb place there. Sonia isn't convinced about it and will let Toni know.",
+            "peak_memory_mb": 18405.11181640625,
+            "latency_ms": 4579.57420591265
+        },
+        {
+            "index": 101,
+            "score": 0.14285714285714288,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Dinah invited Elizabeth for the weekend, and Elizabeth will come with her kids on Saturday morning.\n\n2. Nick will stay until 2 am with some people tomorrow.\n\n3. Darcey is going to a Cheap Trick concert next weekend",
+            "ground_truth": "Deborah and Nathan want to start packing today as they won't have time tomorrow. They need warm clothes for the girls so Deborah's parents could take them to the forest. Deborah and Nathan want to spend some time alone. They will have a quick bite before their leave. Nathan will be home around 6.",
+            "peak_memory_mb": 18113.36474609375,
+            "latency_ms": 4276.204031892121
+        },
+        {
+            "index": 102,
+            "score": 0.03508771929824561,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Luke and Mike are learning for the English test. Julia has sent them the copy of the material.\n\n2. Katy will be at the animal association tomorrow at 8:00 am. Brendon and Katy will feed the kittens and puppies",
+            "ground_truth": "Ross wants to do karaoke. Chandler wants to record it for fun.",
+            "peak_memory_mb": 17736.02392578125,
+            "latency_ms": 3882.2967149317265
+        },
+        {
+            "index": 103,
+            "score": 0.13559322033898305,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJudy is attracted to jerks and wonders why she can't find a good partner. She had a bad experience with Andrew who only wanted to have sex with her and then stopped contacting her. Judy is currently dating Bruce, who is sweet and caring,",
+            "ground_truth": "Judy thinks she's always attracted to bad guys.",
+            "peak_memory_mb": 16084.484375,
+            "latency_ms": 2314.696880057454
+        },
+        {
+            "index": 104,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Jack wants to hang out with Martha, but she has a dentist appointment and Jack suspects she's avoiding him.\n\n2. Angel got a job at the bookstore on campus and will meet Anna to talk about it.\n\n3. Miranda is struggling",
+            "ground_truth": "Kristina, Estefania and Jannette are watching America's Top Model.",
+            "peak_memory_mb": 16041.53369140625,
+            "latency_ms": 2282.2035872377455
+        },
+        {
+            "index": 105,
+            "score": 0.03636363636363636,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Patricia and Edgar discuss animal abuse and how cruel people can be. They both agree that it's unacceptable.\n\n2. Daniel is running late for a meeting with Rose at a restaurant. They have a table reserved, but the restaurant doesn't",
+            "ground_truth": "Frank will join Avril at the races at the weekend.",
+            "peak_memory_mb": 17546.08642578125,
+            "latency_ms": 3684.025561902672
+        },
+        {
+            "index": 106,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Harrison lives in Berlin, Robert in Sevilla, and Madeline in Edinburgh. They discuss meeting up, possibly in a warm place like Malta or Sevilla.\n\n2. Alfred helps his mom, Hetty, create a shortcut on her iPad by",
+            "ground_truth": "Jim tracks Finn's package number 45678 which will be delivered to him tomorrow. ",
+            "peak_memory_mb": 16584.90283203125,
+            "latency_ms": 2747.45965981856
+        },
+        {
+            "index": 107,
+            "score": 0.1818181818181818,
+            "metric": "F1",
+            "output": "Here are the summaries for each dialogue:\n\n1. Bart will leave Spot with Mike next Saturday. Bart will be helping his girlfriend move.\n\n2. Grayson will come over to Nancy's place to see her new cat.\n\n3. Ben has just arrived and now is in the office. He should be back home at ",
+            "ground_truth": "Tom will meet Ben in the Oval Room at 2pm and tells him to bring the papers. ",
+            "peak_memory_mb": 17273.99365234375,
+            "latency_ms": 3424.9324849806726
+        },
+        {
+            "index": 108,
+            "score": 0.04347826086956522,
+            "metric": "F1",
+            "output": "There is no dialogue provided for the last part of the request.",
+            "ground_truth": "Karen got stuck on the road from the swimming pool to Waitrose so wants Peter to avoid it. Peter is not leaving until 6 as he he has to finish his presentation. Karen will see Peter in a bit.",
+            "peak_memory_mb": 17203.07763671875,
+            "latency_ms": 1768.731813877821
+        },
+        {
+            "index": 109,
+            "score": 0.08955223880597014,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sasha has a crush on Fabiano and is too insecure to ask him directly. His friends Ireneusz and Brygida advise him not to date a colleague and to change jobs.\n\n2. Anita is at Bologna station and everything is",
+            "ground_truth": "Jose Ricky and Amanda are very enthusiastic about the new year as they will travel a lot during the summer of 2019.",
+            "peak_memory_mb": 16984.119140625,
+            "latency_ms": 3145.0477740727365
+        },
+        {
+            "index": 110,
+            "score": 0.2926829268292683,
+            "metric": "F1",
+            "output": "Jen is fed up with her boyfriend and wants him to move out. He owes her money and has been abusive and irresponsible. Jane advises Jen to get rid of him and not let him manipulate her into thinking she's to blame for the situation. Jane encourages Jen to cut her losses and move on, and offers her",
+            "ground_truth": "Jen is about to break up with her boyfriend. Jane knew from the beginning that they were not a good match. Jane is going to support Jen.",
+            "peak_memory_mb": 16687.15576171875,
+            "latency_ms": 2864.367156755179
+        },
+        {
+            "index": 111,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nEmma is waiting for William to return with Shake, but he has been in line for 20 minutes due to a rush. William assures Emma that he will be back soon and is just a few minutes away.",
+            "ground_truth": "William is coming back in 5 minutes as he had to queue for 20 minutes.",
+            "peak_memory_mb": 18354.4990234375,
+            "latency_ms": 4262.90891924873
+        },
+        {
+            "index": 112,
+            "score": 0.03225806451612903,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Joan is going to the cinema this weekend to see Bohemian Rhapsody.\n\n2. Ben saw the last episode of the Simpsons, but Tim doesn't want to know the details.\n\n3. Liz forgot to pay the gas invoice",
+            "ground_truth": "Randy has been lying about being rich and travelling around the world, as he lives in a studio apartment in the suburbs.",
+            "peak_memory_mb": 17340.8916015625,
+            "latency_ms": 3471.6354180127382
+        },
+        {
+            "index": 113,
+            "score": 0.30985915492957744,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nClaire and Aaron are discussing a conference about relations at school, which is being held in the teaching training thing. Aaron is giving two lectures and is also a host, so he will be looking after the coffee and biscuits. Claire is interested in attending Jo",
+            "ground_truth": "Aaron will give two lectures during the conference about relations at school at the Sesame Street. Claire will participate in mindfulness workshop.",
+            "peak_memory_mb": 16738.93017578125,
+            "latency_ms": 2917.1674349345267
+        },
+        {
+            "index": 114,
+            "score": 0.06557377049180327,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Niki and Jeanna discuss Angel's boyfriend and how Angel is disgusting.\nNiki and Jeanna are surprised that Angel has a boyfriend and make fun of her appearance.\n\n2. Ben needs to contact his uncle Joe, an expert in",
+            "ground_truth": "Ann, Sue and Julie did a great job and they will have a little celebration tonight.",
+            "peak_memory_mb": 16796.71142578125,
+            "latency_ms": 2978.2286579720676
+        },
+        {
+            "index": 115,
+            "score": 0.13114754098360656,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Huey and Luie have been working a lot and need a vacation.\n\n2. Ruth wants to talk to her son Dan about his unacceptable grades. Dan is trying but Ruth reckons he isn't trying hard enough. Ruth is taking",
+            "ground_truth": "David wants to get a new tattoo but he doesn't know what exactly yet.",
+            "peak_memory_mb": 16115.93798828125,
+            "latency_ms": 2341.5375617332757
+        },
+        {
+            "index": 116,
+            "score": 0.11267605633802816,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Lucy is worried about her dad and can't reach him on the phone. Patty suggests he's probably drinking and has friends over, but Lucy is concerned and wants to know his landline number.\n\n2. Rick missed a class due to",
+            "ground_truth": "Brett's cousin met his wife while playing a game together. Andrew's favorite game is the Final Fantasy. Brett and John haven't heard about it.",
+            "peak_memory_mb": 16118.861328125,
+            "latency_ms": 2338.3651697076857
+        },
+        {
+            "index": 117,
+            "score": 0.09638554216867469,
+            "metric": "F1",
+            "output": "I can summarize the dialogue into a few short sentences for you. Here are the summaries:\n\n1. Professor Brown got fired because of sexual harassment accusations from students. Several lecturers supported the accusations. Charlotte and Carter are happy he got fired.\n\n2. Kat and Mia are ready to hit the town tomorrow night.\n\n3.",
+            "ground_truth": "Dima's laptop is broken, as her cat spilled coffee on the laptop. Dima is worried, because she has to deliver a translation for Trados tomorrow. Dima will come to Nada in an hour to borrow Nada's laptop. ",
+            "peak_memory_mb": 19428.97216796875,
+            "latency_ms": 5765.258642844856
+        },
+        {
+            "index": 118,
+            "score": 0.4390243902439024,
+            "metric": "F1",
+            "output": "Stefano and Josie are discussing Umberto Eco's novel \"Foucault's Pendulum\". Josie finds the book weird and nerdy, but Stefano defends it as a classic of Italian literature. They also discuss the difficulty of reading Eco's novels in the original Italian, and Josie mentions that",
+            "ground_truth": "Josie finds Eco's novel \"Foucault's Pendulum\" nerdy. Josie would like to read Eco in Italian, but she's unsure of her language abilities. Stefano considers Eco's two novels and finds them difficult. Josie has read an unfavorable review of \"Foucault's Pendulum\" by Salman Rushdie.",
+            "peak_memory_mb": 17124.72998046875,
+            "latency_ms": 3276.25104598701
+        },
+        {
+            "index": 119,
+            "score": 0.3529411764705882,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nFiona wants to make a tart for Chris and asks Tina for help. Tina agrees and they start preparing the tart. Fiona admits she bought the crust and made a mistake with the filling, but Tina reassures her it's okay and they can start over",
+            "ground_truth": "Fiona wants to prepare dinner for Chris. She is thinking of Tina's tart. She will help her make it.",
+            "peak_memory_mb": 16861.80322265625,
+            "latency_ms": 3014.519135002047
+        },
+        {
+            "index": 120,
+            "score": 0.03773584905660378,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Amelie will come over at Charlie's at 7 PM to drink some wine. Charlie is too tired to go out in the centre.\n\n2. Sarah and Will didn't speak for a long time. Their colleagues, Dom and",
+            "ground_truth": "Uncle Jayson is pleased with Ewan's graduation.",
+            "peak_memory_mb": 17020.736328125,
+            "latency_ms": 3168.9620851539075
+        },
+        {
+            "index": 121,
+            "score": 0.32098765432098764,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nBobby is frustrated with pharmaceutical companies inventing illnesses to sell medical products. He discovered that a certain illness mentioned in a commercial does not exist and is actually just a product being sold as a medical treatment. He believes that pharmaceutical companies have been lying to people",
+            "ground_truth": "Bobby's most annoyed by pharmaceutical companies. He believes they invent diseases to make money. He discovered that one company is selling mints as medicine for an illness that doesn't exist.",
+            "peak_memory_mb": 16555.1435546875,
+            "latency_ms": 2738.4589202702045
+        },
+        {
+            "index": 122,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Bria's landing around 3 pm. Conner will be waiting for her.\n\n2. Simon Brown sends his last invoice again to Olga Reily at her request.\n\n3. Martin works way too much and it will not stop",
+            "ground_truth": "Adele is still listening to the song which Code recommended. Kode will come to Adele's home today and will give her the whole album of the same singer. ",
+            "peak_memory_mb": 17858.25341796875,
+            "latency_ms": 3985.3042545728385
+        },
+        {
+            "index": 123,
+            "score": 0.1627906976744186,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Kevin, Stan, and Tim are going to the movies.\n\n2. Amanda took her son Toby to a Christmas Market, but he was scared of Santa. They bought sweets and Christmas decorations.\n\n3. Paul needs a big hammer, and",
+            "ground_truth": "Victor took over Chris's company, which was under a huge debt. He sold the office and did some changes but Chris still works there as Director. David's business goes very slow but he expects it to get better by the end of the year.",
+            "peak_memory_mb": 19149.61669921875,
+            "latency_ms": 5412.709987256676
+        },
+        {
+            "index": 124,
+            "score": 0.4878048780487805,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nPegah will be back at 22:00 after working a late shift and Miriam had invited her over, but Pegah will have a cup of tea with her instead.",
+            "ground_truth": "Pegah is in class till 15:00. She will work from 17:00 till around 21:30. She will be back at 22:00. Miriam invited people over and wants Pegah to come. Pegah will have a cup of tea with her when she gets back. Miriam will save Pegah some wine.",
+            "peak_memory_mb": 16505.9765625,
+            "latency_ms": 2297.3530092276633
+        },
+        {
+            "index": 125,
+            "score": 0.11111111111111112,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Barb burnt Bob's sweater while trying to light up fireworks last year. She found an identical sweater on the internet and wanted to give it to Bob in person, but learned that he got married last month.\n\n2. Denise is moving to",
+            "ground_truth": "Steffen twisted his ankle yesterday and needs a lift to the infinity pool. Irene's car probably won't make it up the hill, so they'd have to park at the bottom and hike up. Mr.Budd should make it up the hill since it's a 4-wheel drive.",
+            "peak_memory_mb": 16707.2998046875,
+            "latency_ms": 2891.3603480905294
+        },
+        {
+            "index": 126,
+            "score": 0.03508771929824561,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. George shares some funny stuff with Pete and Matt. He was just checking something in a dictionary.\n\n2. Carlos needs to talk to Tim on the phone.\n\n3. Olga sent Sarah a photo of her little man, and Sarah is",
+            "ground_truth": "Hansel will tell his sis to text Jeremih back.",
+            "peak_memory_mb": 19081.78564453125,
+            "latency_ms": 5356.89368005842
+        },
+        {
+            "index": 127,
+            "score": 0.16,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Luka is trying to make a meal but can't understand his mother's instructions. Emily helps him by explaining to preheat the oven to 180 degrees and cook the dish for 30 minutes.\n\n2. Tom is looking for his",
+            "ground_truth": "Katy and Ana invite Carlton to join them for a movie by Lola Arias on the making of the play he had seen. He will come to their place earlier on Saturday.",
+            "peak_memory_mb": 18714.2158203125,
+            "latency_ms": 4937.309125903994
+        },
+        {
+            "index": 128,
+            "score": 0.08955223880597013,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sven is buying tickets for the wedding and will stay from Friday to Monday. Caroline is paying for the hotel and is upset that Sven didn't declare his schedule a month before the wedding.\n\n2. Fred thinks Serena won't be",
+            "ground_truth": "Carl will compete in championship this year. Duncan can't miss this event. Carl will register his family members as VIP.",
+            "peak_memory_mb": 16399.54345703125,
+            "latency_ms": 2618.487416766584
+        },
+        {
+            "index": 129,
+            "score": 0.31746031746031744,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nEmma is not feeling well and doesn't want Will to cook dinner. She says she'll be home soon and doesn't need him to pick her up. Will offers to pick her up, but Emma declines and tells him she'll let him know when she",
+            "ground_truth": "Emma will be home soon and she will let Will know.",
+            "peak_memory_mb": 15803.57763671875,
+            "latency_ms": 2073.9367539063096
+        },
+        {
+            "index": 130,
+            "score": 0.29850746268656714,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMarcus will pick Mark from the airport in Sydney on Thursday at 4 pm. He has a meeting at 1 pm, but Leslie thinks it will take Mark some time to get to the airport after landing, so 4 pm is fine. Anna will",
+            "ground_truth": "Marcus will pick Mark from the airport at 4pm. Anna will call Mark and give him Marcus' number.",
+            "peak_memory_mb": 16146.4599609375,
+            "latency_ms": 2360.145033802837
+        },
+        {
+            "index": 131,
+            "score": 0.08108108108108109,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ruth is disappointed with Dan's grades and takes away his Xbox. Dan is trying but not hard enough, according to Ruth.\n\n2. Damarion is drinking a beer before his flight, which Mara thinks is not a good idea.",
+            "ground_truth": "Patrycja and Inez enjoyed the Italian evening. Gosia chose a great place. Alicja hasn't been to the new restaurant. They all want a Korean evening on Wednesday in two weeks time.",
+            "peak_memory_mb": 17563.505859375,
+            "latency_ms": 3730.6690169498324
+        },
+        {
+            "index": 132,
+            "score": 0.5957446808510638,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nLinda missed the train and has to wait an hour for the next one, which is a return ticket to Amsterdam that cost 80 euros.",
+            "ground_truth": "Linda missed her train and the next one is in one hour. A return to Amsterdam was 80 euros.",
+            "peak_memory_mb": 18594.64990234375,
+            "latency_ms": 4054.557306692004
+        },
+        {
+            "index": 133,
+            "score": 0.09999999999999999,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Linda and Bill are going to the Amish store on Wednesday. Bill will get noodles for Barbara to cheer her up. Barbara is depressed at this time of the year and she will lose her job right after Christmas. Barbara will go to",
+            "ground_truth": "Daniel will see Missy after 6 for drinks.",
+            "peak_memory_mb": 18314.3076171875,
+            "latency_ms": 4474.264211021364
+        },
+        {
+            "index": 134,
+            "score": 0.07017543859649124,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Justin has just arrived in Spain and is planning to visit Madrid tomorrow. He will call his mom when he settles in.\n\n2. Mia will start cooking when Robert leaves the office.\n\n3. Asia and Ola are talking about Marys",
+            "ground_truth": "Kaylin has set her alarm for tomorrow.",
+            "peak_memory_mb": 17621.728515625,
+            "latency_ms": 3778.828551992774
+        },
+        {
+            "index": 135,
+            "score": 0.17543859649122806,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nAlex wants Martin to buy milk, but Martin just bought some yesterday. Alex is craving milk and has no defense for asking for more. Martin agrees to buy more milk, but only because he loves Alex.",
+            "ground_truth": "Martin will get Alex two bottles of milk after he finishes the project.",
+            "peak_memory_mb": 18663.439453125,
+            "latency_ms": 4547.728489618748
+        },
+        {
+            "index": 136,
+            "score": 0.1348314606741573,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Steve saw Julian and his sister in front of the Odeon last night. Steve will come to Julian's house to meet his sister tonight.\n\n2. Mary's friend Damien recommended a gay club called Crisco. Patty has never been",
+            "ground_truth": "Jack had to miss school because he is sick. Jamie was sick a lot last year but he got better thanks to doctor Tornez at City Medical Centre, next to the mall. Linda learns the school trip has been cancelled as many students are sick.",
+            "peak_memory_mb": 16024.75634765625,
+            "latency_ms": 2265.4936839826405
+        },
+        {
+            "index": 137,
+            "score": 0.3902439024390244,
+            "metric": "F1",
+            "output": "Here's a summary of the dialogue in a few short sentences:\n\nJamilla reminds Kiki that the audition starts at 7:30 PM and mentions the station Antena 3. Yoyo responds with \"roger that\", indicating that they have received the information.",
+            "ground_truth": "The audition starts at 7.30 P.M. in Antena 3.",
+            "peak_memory_mb": 15918.92529296875,
+            "latency_ms": 1918.0658450350165
+        },
+        {
+            "index": 138,
+            "score": 0.03921568627450981,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ewa and Aneta are coming today. Aneta will be there around 8. Piotr will meet them there.\n\n2. Adam is not feeling well. Missy, Ana, Margaret, and Bruno want him to go",
+            "ground_truth": "Mike will ask Mary for John's new number.",
+            "peak_memory_mb": 16574.46728515625,
+            "latency_ms": 2743.520915042609
+        },
+        {
+            "index": 139,
+            "score": 0.11940298507462688,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Lindsay is bored at work and doesn't have anything to do. Martin suggests she listen to office gossip, but Lindsay says Lona is on sick leave and Maggie is untrustworthy.\n\n2. Gavin will borrow Bridget's car to",
+            "ground_truth": "Parker and Jason both prefer DC Universe to Marvel. Jason is still downloading the latest episode of Arrow season 7. ",
+            "peak_memory_mb": 16539.849609375,
+            "latency_ms": 2710.5677649378777
+        },
+        {
+            "index": 140,
+            "score": 0.6222222222222222,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nHelen forgot her laptop at home and needs Debbie to bring it to work for a presentation.",
+            "ground_truth": "Helen has left her laptop at home and needs it for the presentation today. Debbie will bring it to Helen's work. ",
+            "peak_memory_mb": 19293.0439453125,
+            "latency_ms": 4450.513259973377
+        },
+        {
+            "index": 141,
+            "score": 0.2769230769230769,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMatt needs to use the internet connection at home to work on an application, but he can't remember what type of connection they have. Nick doesn't know either, and usually uses his mobile service at home. Matt will figure something out and thanks Nick for",
+            "ground_truth": "Nick will let Matt know when he remembers what their internet connection is.",
+            "peak_memory_mb": 18824.01220703125,
+            "latency_ms": 5048.956214915961
+        },
+        {
+            "index": 142,
+            "score": 0.6349206349206349,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nHarry sent Jacob a song 3 days ago, but Jacob forgot to listen to it. Jacob promises to listen to it later tonight and will let Harry know what he thinks.",
+            "ground_truth": "Jacob hasn't listened to the song Harry sent him 3 days ago. Jacob will do it later tonight and let Harry know what he thinks.",
+            "peak_memory_mb": 16495.630859375,
+            "latency_ms": 2236.022708006203
+        },
+        {
+            "index": 143,
+            "score": 0.411764705882353,
+            "metric": "F1",
+            "output": "Adelle was supposed to clean the hamster cage after school, but she hasn't done it yet. Pete is reminding her that it's her turn to clean the cage.",
+            "ground_truth": "Adelle has to clean the hamster cage after school.",
+            "peak_memory_mb": 16696.36767578125,
+            "latency_ms": 2031.4754163846374
+        },
+        {
+            "index": 144,
+            "score": 0.14492753623188404,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Carter can't meet Sophie at the bar because he has to work longer, so they meet at the cinema instead.\n\n2. Mark told Eliza that the film is not worth seeing, and she regrets watching it.\n\n3. George and",
+            "ground_truth": "Adam and Karen are worried that May suffers from depression. Karen will call her friend who is a psychologist and ask for advice. ",
+            "peak_memory_mb": 17807.16455078125,
+            "latency_ms": 3946.6529921628535
+        },
+        {
+            "index": 145,
+            "score": 0.2181818181818182,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nErin wants to do an interview with Ashley, who is at a camp. Ashley is free to meet at any time and suggests meeting at the pool or restaurant. Erin decides to meet Ashley at the restaurant because the wifi is better there.",
+            "ground_truth": "Erin will meet Ashley in the restaurant for the interview. ",
+            "peak_memory_mb": 17839.853515625,
+            "latency_ms": 3914.3525948747993
+        },
+        {
+            "index": 146,
+            "score": 0.4615384615384615,
+            "metric": "F1",
+            "output": "Lilly will be late, so Gabriel will order food without waiting for her. He will also order something for her to eat when she arrives.",
+            "ground_truth": "Lilly will be late. Gabriel will order pasta with salmon and basil for her.",
+            "peak_memory_mb": 17663.6875,
+            "latency_ms": 2705.5052807554603
+        },
+        {
+            "index": 147,
+            "score": 0.03703703703703703,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Georgia is tired most of the time because of her pregnancy. Leighton is chatting with people from work and looking at vegan accounts on Instagram.\n\n2. Mike, Jack, and Robert are turning 30 this year. Robert is happy with",
+            "ground_truth": "Kathy had her hair cut.",
+            "peak_memory_mb": 17807.21875,
+            "latency_ms": 3943.6002275906503
+        },
+        {
+            "index": 148,
+            "score": 0.48484848484848486,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nCeline and Mark went ice skating for the first time and had a lot of fun.",
+            "ground_truth": "Celine and Mark went skating, it's the first time for Mark.",
+            "peak_memory_mb": 19381.92626953125,
+            "latency_ms": 4528.4844087436795
+        },
+        {
+            "index": 149,
+            "score": 0.4800000000000001,
+            "metric": "F1",
+            "output": "Robert will help Pam with Tom's birthday by picking up balloons from a store in the city centre.",
+            "ground_truth": "Robert will pick up floating balloons for Tom's birthday.",
+            "peak_memory_mb": 18519.7177734375,
+            "latency_ms": 3226.6545929014683
+        },
+        {
+            "index": 150,
+            "score": 0.1518987341772152,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Zeynep is trying to pick an outfit for her job interview, and her friends Hazal and Zuleyka advise her on the outfit and hairstyle.\n\n2. The bill is due tomorrow, so Hannah and Ben need to give",
+            "ground_truth": "Iga and her boyfriend are not sitting together since Monday, because they had to cancel their weekend getaway. It made Iga very angry. Iga's boyfriend failed to convince a group to change the date of the presentation.",
+            "peak_memory_mb": 15972.28173828125,
+            "latency_ms": 2234.744008630514
+        },
+        {
+            "index": 151,
+            "score": 0.1,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Garry, Olaf, and Tadeu are discussing what they like about their girlfriends. They all appreciate their partners' qualities and are lucky to have them.\n\n2. Tetty watched the game last night, but neither Washington nor",
+            "ground_truth": "Corbin reported to the department in charge of school violence that his friend has been beaten.",
+            "peak_memory_mb": 17858.22607421875,
+            "latency_ms": 3984.4912900589406
+        },
+        {
+            "index": 152,
+            "score": 0.034482758620689655,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Michael decided to buy the car he was thinking about. Michael had to delay the purchase, but is now able to go through with it. Michael and John will go together to get the car from the showroom. Michael will drive the car",
+            "ground_truth": "Jenny has left her credit car at the Mary's shop.",
+            "peak_memory_mb": 18529.302734375,
+            "latency_ms": 4738.723996095359
+        },
+        {
+            "index": 153,
+            "score": 0.07407407407407407,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Zlatan can't pick up John and Terry from the airport, but Zoran will help. They will take the bus 290 to Kvaterniov Trg, where Zoran will meet them and take them to Zlatan",
+            "ground_truth": "Freddy will sing at the school concert and send Simon 3 backing tracks.",
+            "peak_memory_mb": 17560.1337890625,
+            "latency_ms": 3690.3281076811254
+        },
+        {
+            "index": 154,
+            "score": 0.625,
+            "metric": "F1",
+            "output": "Millie is sick and won't be coming today.",
+            "ground_truth": "Millie is sick, so she won't come today.",
+            "peak_memory_mb": 17825.44921875,
+            "latency_ms": 2234.4254050403833
+        },
+        {
+            "index": 155,
+            "score": 0.6086956521739131,
+            "metric": "F1",
+            "output": "Oscar and Payne are meeting for a coffee at Tristano's in 30 minutes.",
+            "ground_truth": "Payne and Oscar will have a coffee at Tristano's in half an hour.",
+            "peak_memory_mb": 16016.48486328125,
+            "latency_ms": 1020.8970587700605
+        },
+        {
+            "index": 156,
+            "score": 0.10344827586206896,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Margot and Adele are annoyed by Nel's Facebook activity and consider blocking her, but decide not to for fear of escalating the situation.\n\n2. Kate wants to get her coat from the laundry, but the lady there refuses because Kate",
+            "ground_truth": "Molly and Anna will go to the Muse concert in Cracow.",
+            "peak_memory_mb": 18487.103515625,
+            "latency_ms": 4655.534614343196
+        },
+        {
+            "index": 157,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSean has decided that his spirit animal is a tortoise, but Tiffany is skeptical and thinks he might be haunted.",
+            "ground_truth": "Sean believes his spirit animal is a tortoise and Tiffany's could be a wasp. ",
+            "peak_memory_mb": 18232.9326171875,
+            "latency_ms": 3482.859085313976
+        },
+        {
+            "index": 158,
+            "score": 0.4444444444444444,
+            "metric": "F1",
+            "output": "Gina thanks Warren for locking the door.",
+            "ground_truth": "Warren locked the door.",
+            "peak_memory_mb": 17106.10791015625,
+            "latency_ms": 1583.2176357507706
+        },
+        {
+            "index": 159,
+            "score": 0.1951219512195122,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Helen asked Lucas to buy cream for her mother's birthday cake.\n\n2. Emily is upset because her peers in Turin think going to the movies is for old people. Giorgio invites her to the cinema with his friends next Saturday",
+            "ground_truth": "Jason wants to meet Dory over the weekend. Dory's friend is going to stay with her for a week. Jason has been working on a movie with Lucy for the past two months. Jason bought a video-creator app.",
+            "peak_memory_mb": 16338.435546875,
+            "latency_ms": 2535.8702312223613
+        },
+        {
+            "index": 160,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSusan had a perfect date with a man who picked her up from home and took her to a rollerskating disco. Susan enjoyed the originality of the date and thought it was a great change from the usual restaurant dates. Jill is jealous of Susan's",
+            "ground_truth": "Susan went on a date to the rollerskating disco and she enjoyed it. Jill doesn't find it exciting.",
+            "peak_memory_mb": 19221.66064453125,
+            "latency_ms": 5535.861063282937
+        },
+        {
+            "index": 161,
+            "score": 0.2553191489361702,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSamuel and Tim are having a conversation, with Samuel initially calling Tim \"Anna\" because it means \"elder brother\" in his language, Telugu. Tim corrects him and they discuss the Telugu language and its origins. Samuel explains that he is",
+            "ground_truth": "Samuel's language is Telugu, which is spoken in south east India. It has nearly 90 million speakers; it's written left to right; it's based on Brahmin script. Teluguland has 23 provinces. It's quite poor. \"Anna\" means \"elder brother\" and Thammu or Thammadu - \"younger brother\". Tim's 55, Samuel's 35.",
+            "peak_memory_mb": 16636.47119140625,
+            "latency_ms": 2811.647724825889
+        },
+        {
+            "index": 162,
+            "score": 0.06896551724137931,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Joshua struggles with calculus and will meet with Lila in the library to study together.\n\n2. Jules suggests Elsa accessories as a birthday present, and Anna is busy studying for an exam.\n\n3. Kate, Manuel, and Terry are",
+            "ground_truth": "There was a meet-and-greet with James Charles in Birmingham which gathered 8000  people.",
+            "peak_memory_mb": 18123.31640625,
+            "latency_ms": 4277.678350917995
+        },
+        {
+            "index": 163,
+            "score": 0.5833333333333334,
+            "metric": "F1",
+            "output": "Hannah asks James if he's watching the game, but James says he's heading to work.",
+            "ground_truth": "James is heading to work so he's not watching the game.",
+            "peak_memory_mb": 17211.154296875,
+            "latency_ms": 1991.0088619217277
+        },
+        {
+            "index": 164,
+            "score": 0.37288135593220345,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJennifer wants to watch the movie Mad Max with her friends. Jack and Reece have already seen the movie but are willing to watch it again. They agree to watch it together tomorrow evening.",
+            "ground_truth": "Jennifer, Jack and Reece will match the latest Mad Max on Netflix tomorrow evening. Jack has already seen it.",
+            "peak_memory_mb": 18752.7822265625,
+            "latency_ms": 4555.313220247626
+        },
+        {
+            "index": 165,
+            "score": 0.038461538461538464,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Emily kissed a girl at the party last night and her boyfriend saw it.\n\n2. Linda has to vacate her apartment in 3 months. She refuses to ask people on Facebook if anyone has a place to rent.\n\n3. Jeffrey",
+            "ground_truth": "Allison has got a scholarship.",
+            "peak_memory_mb": 16041.369140625,
+            "latency_ms": 2282.0810810662806
+        },
+        {
+            "index": 166,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Franklin wants Juan to tell him a joke, but Juan's jokes are confusing and frustrating. Franklin doesn't want to hear any more jokes.\n\n2. Martha's vacuum cleaner broke, and she needs to borrow one from her neighbors. However",
+            "ground_truth": "Ethan, Toby and Marshall are making fun of Scott.",
+            "peak_memory_mb": 19030.2216796875,
+            "latency_ms": 5303.771228995174
+        },
+        {
+            "index": 167,
+            "score": 0.10344827586206896,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Ezra wants to open a micro pub and asks for Mila's help with the business plan and location.\n\n2. Monica remembers her mom's birthday and has an idea for a gift, a painting. Jill will buy flowers.\n\n3.",
+            "ground_truth": "Lisa isn't going home yet. Daisy wants her to be back before 11 p.m.",
+            "peak_memory_mb": 18006.19677734375,
+            "latency_ms": 4156.173118855804
+        },
+        {
+            "index": 168,
+            "score": 0.04081632653061225,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Mike doesn't know Zafon's new book \"The Labyrinth of Ghosts.\"\n\n2. Leah and Rebekah got gifts for mom, and Kristie will probably buy some jewelry through the app.\n\n3. Ben's training",
+            "ground_truth": "Adam is going to take an exam in ten minutes.",
+            "peak_memory_mb": 16621.64501953125,
+            "latency_ms": 2806.0893481597304
+        },
+        {
+            "index": 169,
+            "score": 0.17073170731707318,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Maggie's friend has myoma and will have surgery. Maggie is sorry to hear about her friend's condition.\n\n2. Kim's company is looking for customer service representatives. The team in this department is nice and supportive, but the job",
+            "ground_truth": "Larry has to read the E-mail again and make a decision with Kirsten afterwards. Kirsten has to convince her husband. Kirsten wants to include Jamie and John. Larry and Kirsten are going to arrange menorah in the lobby.",
+            "peak_memory_mb": 17738.34912109375,
+            "latency_ms": 3883.0112060531974
+        },
+        {
+            "index": 170,
+            "score": 0.40476190476190477,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJames and Mia are planning to attend an art exhibition by one of their philosophy lecturers, Professor Evans. Mia is initially hesitant but agrees to go, and James reassures her that he values their time together. They plan to go to the exhibition with Amelia",
+            "ground_truth": "James and Mia want to go to an art exhibition tomorrow. James wants Amelia to go with them but Mia isn't sure about it. James and Mia will go to his place afterwards.",
+            "peak_memory_mb": 18800.81298828125,
+            "latency_ms": 5003.413332160562
+        },
+        {
+            "index": 171,
+            "score": 0.3548387096774194,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nLauren is asked to work tomorrow and is told that the manager will be back, which may affect her shift. Lauren had a good holiday and will tell Pam about it tomorrow.",
+            "ground_truth": "Pam doesn't have rota for Lauren, but Manager may give Lauren more tomorrow. Pam and Lauren will meet tomorrow and discuss Lauren's holiday. ",
+            "peak_memory_mb": 16027.98388671875,
+            "latency_ms": 1872.6905230432749
+        },
+        {
+            "index": 172,
+            "score": 0.03571428571428571,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Sam and Ben are tired after a journey and decide to skip a party tonight.\n\n2. Guillaume met his sister Kate at Paul's barbecue party and fell in love. They live together in Paris, and Kate misses Marmite.",
+            "ground_truth": "Albert has passed his driving test on the 4th attempt.",
+            "peak_memory_mb": 17883.390625,
+            "latency_ms": 4003.739170730114
+        },
+        {
+            "index": 173,
+            "score": 0.46153846153846156,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nHarris's friend Aoki died yesterday, and Harris is still trying to process the news. Harris hasn't seen Aoki in a few months because she lives in Michigan. Harris has to go because his mom is calling, but he thanks Lena for her",
+            "ground_truth": "Harris' friend, Aoki, who lives in Michigan, died yesterday. Harris hasn't seen her for a few months.",
+            "peak_memory_mb": 18894.3857421875,
+            "latency_ms": 5134.921666700393
+        },
+        {
+            "index": 174,
+            "score": 0.1518987341772152,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Perry wants to work in EY and Josh knows a guy who has a junior position there, so Josh will introduce them.\n\n2. Mark had a business meeting with his new boss Susana at the club yesterday, and Henry wishes he",
+            "ground_truth": "Nathan is planning on buying a bike in spring. He will probably store the bike on some special hooks because his apartment is small. Nathan has also bought a stationary bike to keep fit.",
+            "peak_memory_mb": 16764.63525390625,
+            "latency_ms": 2951.890696771443
+        },
+        {
+            "index": 175,
+            "score": 0.37837837837837834,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nRachel got a new cat named Portia, a Siamese, but she's allergic to cats and is taking medication to help with the symptoms. Adam is amused by the situation and thinks it's not a huge deal.",
+            "ground_truth": "Rachel has a new siamese cat, a girl called Portia. Rachel discovered that is allergic to cats. She is sneezing, has rashes and other allergic reactions. She takes medications that seem to help. Adam consoles Rachel.",
+            "peak_memory_mb": 16321.2041015625,
+            "latency_ms": 2381.947070825845
+        },
+        {
+            "index": 176,
+            "score": 0.07792207792207793,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Daisy is staying in a hotel near the station in Rimini. She is going out tonight. Nicholas is going for a beer. They might meet up town later.\n\n2. Dad wants to collect his drill from Sue's house to fix",
+            "ground_truth": "Gino wants Renee’s advice on what to wear. She gives some hints so that he doesn't look like a waiter and recommends wearing black pants, a white shirt and brown shoes.",
+            "peak_memory_mb": 18403.91357421875,
+            "latency_ms": 4581.271816045046
+        },
+        {
+            "index": 177,
+            "score": 0.35294117647058826,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nAmelia won't tell Emily her favorite color, leaving Emily curious.",
+            "ground_truth": "Emily's favorite color is blue. Amelia can't talk about the reason behind her question with Emily.",
+            "peak_memory_mb": 16587.7373046875,
+            "latency_ms": 1678.8656986318529
+        },
+        {
+            "index": 178,
+            "score": 0.1702127659574468,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. JoAnne wants Kate to clean the kitchen up after work.\n\n2. Olivia received a job offer for a Project Manager position in Rennes, France, but is unsure if she wants to take it.\n\n3. Pia moved a person",
+            "ground_truth": "Hilary has the keys to the apartment. Benjamin wants to get them and go take a nap. Hilary is having lunch with some French people at La Cantina. Hilary is meeting them at the entrance to the conference hall at 2 pm. Benjamin and Elliot might join them. They're meeting for the drinks in the evening.",
+            "peak_memory_mb": 19174.3046875,
+            "latency_ms": 5440.373602788895
+        },
+        {
+            "index": 179,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJane had a severe allergic reaction at La Perle after eating a cheesecake that contained peanuts, despite her warning the staff about her allergy. She is now recovering and is upset about the incident. Eddie and Anne are shocked and think Jane should sue the restaurant",
+            "ground_truth": "Jane, Anne and Ella have been to La Perle. Jane ate cheesecake and got an allergic reaction. They are getting out of ER. ",
+            "peak_memory_mb": 16378.38427734375,
+            "latency_ms": 2604.6456252224743
+        },
+        {
+            "index": 180,
+            "score": 0.358974358974359,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nJane is running late for a meeting with Alex, but he is waiting for her at the left entrance. She has the file with xerox copies, which they hope will be useful in convincing the people they are meeting.",
+            "ground_truth": "Jane will be about 10 minutes late. Alex is waiting at the left entrance and they are going to attend a meeting. This might be the last opportunity for Jane and Alex to get through to them.",
+            "peak_memory_mb": 18828.98095703125,
+            "latency_ms": 4833.397608716041
+        },
+        {
+            "index": 181,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Kane recommends the new 30 Seconds to Mars album to Shannon.",
+            "ground_truth": "Kane recommends the new 30 Seconds to Mars album to Shannon.",
+            "peak_memory_mb": 16324.60595703125,
+            "latency_ms": 1107.9403343610466
+        },
+        {
+            "index": 182,
+            "score": 0.06451612903225806,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Xavier and Peter discuss scenarios for next week, and Xavier wants to try the berserker class. He needs to retire his current character first.\n\n2. Zoeh asks Caleb to let his mother know they are coming over in half an",
+            "ground_truth": "Callan's Samsung S8 overheats, so he's going to the store to get it repaired.",
+            "peak_memory_mb": 18032.81591796875,
+            "latency_ms": 4174.4438339956105
+        },
+        {
+            "index": 183,
+            "score": 0.3768115942028986,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMaya asks Boris to bring home the clothes that are hanging outside because they should be dry and it's going to rain. Boris is not home, so he tells Brian to take care of it. Maya is fine with this arrangement.",
+            "ground_truth": "Maya wants Boris to bring clothes that are hanging outside. Brian will do that, because Boris isn't at home now.",
+            "peak_memory_mb": 16757.87353515625,
+            "latency_ms": 2836.777259130031
+        },
+        {
+            "index": 184,
+            "score": 0.0930232558139535,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Tony's business will be affected by Brexit, and he's worried about his holiday plans. Gloria can hardly meet any British tourists in Mexico, and they both think a second referendum is a good idea.\n\n2. Grant will lend Vicky",
+            "ground_truth": "Jane wants to leave at 4.30 instead of 5 because Google Maps suggests the 300 km drive should take them at least 3 hours and she doesn't want to be late. She will wait for Steven at the main entrance.",
+            "peak_memory_mb": 16303.0283203125,
+            "latency_ms": 2512.1643962338567
+        },
+        {
+            "index": 185,
+            "score": 0.11764705882352941,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Michael saw John's register with Ava, who wanted to copy notes.\n\n2. Mark changed a network and is satisfied with the reception. The network can be tailored to one's needs. Alice is going to check if they have family plans",
+            "ground_truth": "Ray is locked in the room from the outside and he has to pee. Max's roommate will come and let him out.",
+            "peak_memory_mb": 18137.86328125,
+            "latency_ms": 4285.833387635648
+        },
+        {
+            "index": 186,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nEmma invites Abigail to take a stroll with the little ones, but Abigail declines due to high smog levels in the area, which have exceeded the norms by 30%. Emma is concerned and decides to install the smog alert app.",
+            "ground_truth": "Abigail is not going to take a stroll with the little ones. Her smog alert app is showing that the norms have been exceeded by 30% today.",
+            "peak_memory_mb": 18907.92333984375,
+            "latency_ms": 5115.004721097648
+        },
+        {
+            "index": 187,
+            "score": 0.2921348314606742,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nLesley asks Chloe to come home and walk the dog when she gets home from school, but Chloe had already planned to go to Megan's house. Lesley is upset that Chloe didn't ask permission and reminds her that no one will be home for a",
+            "ground_truth": "Somebody has to take the dog out. Chloe wants to go to Megan tonight and the father has to work late tonight. Chloe will have to come back home to let the dog out and then she can see Megan.",
+            "peak_memory_mb": 17369.25048828125,
+            "latency_ms": 3496.101750060916
+        },
+        {
+            "index": 188,
+            "score": 0.5084745762711865,
+            "metric": "F1",
+            "output": "Emily accidentally broke one of Linda's green tea cups while cleaning the dining room. Linda is understanding and tells Emily that she can take the whole green tea set if she likes it.",
+            "ground_truth": "Emily's a guest at Linda's house. She broke one of Linda's green tea cups when she was cleaning the cupboards. Linda doesn't like them and she offers Emily the whole set.",
+            "peak_memory_mb": 16522.44287109375,
+            "latency_ms": 1912.6939629204571
+        },
+        {
+            "index": 189,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nSean overslept and is late.",
+            "ground_truth": "Sean overslept again.",
+            "peak_memory_mb": 18275.60791015625,
+            "latency_ms": 3002.0106500014663
+        },
+        {
+            "index": 190,
+            "score": 0.5172413793103449,
+            "metric": "F1",
+            "output": "Emma is taking a nap on the bus and Ben will wake her up at 4:15 PM so they can arrive in New York around 4:30 PM.",
+            "ground_truth": "Emma is about to take a nap in the back of the bus to New York. Ben and Emma will be there around 4.30 pm. Ben will wake Emma up 15 minutes prior to their arrival.",
+            "peak_memory_mb": 16654.017578125,
+            "latency_ms": 1982.0718499831855
+        },
+        {
+            "index": 191,
+            "score": 0.4137931034482759,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nCelia and Mike are discussing their holiday plans. Mike suggests Egypt, but Celia thinks it's too hot. She suggests Croatia instead, which Mike finds a good idea.",
+            "ground_truth": "Mike considers going to Egypt for holiday. It's too hot for Celia, she suggests Croatia instead. Mark likes the idea, he's never been there. ",
+            "peak_memory_mb": 18764.1220703125,
+            "latency_ms": 4458.44387402758
+        },
+        {
+            "index": 192,
+            "score": 0.4705882352941176,
+            "metric": "F1",
+            "output": "Megan asked if Jason had contacted anyone, as he was absent from work. Nathan and Susy informed her that Jason had a dental appointment.",
+            "ground_truth": "Jason had a dental appointment today and that's why he was absent.",
+            "peak_memory_mb": 17238.59326171875,
+            "latency_ms": 2293.3201398700476
+        },
+        {
+            "index": 193,
+            "score": 0.47457627118644075,
+            "metric": "F1",
+            "output": "Max's sister is studying in Shanghai, China. She believes it's a good investment and speaks Chinese. Eliza thinks studying in China is a great investment because of the large Chinese population and the fact that speaking Chinese is a valuable skill.",
+            "ground_truth": "Max's sister is studying in Shanghai and she already speaks Chinese. She doesn't find the whole experience amazing but she believes it's a good investment.",
+            "peak_memory_mb": 17403.33740234375,
+            "latency_ms": 3049.699907656759
+        },
+        {
+            "index": 194,
+            "score": 0.038461538461538464,
+            "metric": "F1",
+            "output": "Here are the summaries in a few short sentences each:\n\n1. Dialogue: Pete: Did you let the cat out?!!!\r\nJane: Yes. Why?\r\nPete: You weren't supposed to let him out. He's injured and under house arrest. That's is not good enough. I thought that you're",
+            "ground_truth": "Maddie will buy a white bread and apples on John's request.",
+            "peak_memory_mb": 15750.53515625,
+            "latency_ms": 2034.1290668584406
+        },
+        {
+            "index": 195,
+            "score": 0.08333333333333333,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues in a few short sentences each:\n\n1. Brenda sends birthday wishes to her brother Nick and they plan to go out to eat on Sunday. Nick is going to Florida this week.\n\n2. Betty suggests that the new boy in their class is shy and she's going to talk to",
+            "ground_truth": "Ana wants to visit grandma tomorrow. Catherine will go with her. She will call Anna when she wakes up.",
+            "peak_memory_mb": 18615.6513671875,
+            "latency_ms": 4810.703003313392
+        },
+        {
+            "index": 196,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no dialogue provided for this prompt.",
+            "ground_truth": "Josh should check the email from Ron. ",
+            "peak_memory_mb": 18139.22021484375,
+            "latency_ms": 2477.4912516586483
+        },
+        {
+            "index": 197,
+            "score": 0.37499999999999994,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nMary stayed home from school today and is lucky to have had a break.",
+            "ground_truth": "Today Mary didn't go to school, she stayed at home.",
+            "peak_memory_mb": 19305.86669921875,
+            "latency_ms": 4328.038499224931
+        },
+        {
+            "index": 198,
+            "score": 0.17500000000000002,
+            "metric": "F1",
+            "output": "Here are the summaries of the dialogues:\n\n1. Angela's birthday party was fun, but she's feeling tired and a bit drunk today.\n\n2. Elisabeth, Ellen, Jeff, and Jeremy are meeting for a beer night at a new Belgian bar downtown at 8 pm tonight.\n\n3. Samantha asks Ava to",
+            "ground_truth": "Johny wants to go for a gig with Lucy. She prefers to go with Maggie and her best friends. They will meet at 6 PM at her house to prepare for the evening. The gig starts at 8 PM.",
+            "peak_memory_mb": 17297.96728515625,
+            "latency_ms": 3447.0820389688015
+        },
+        {
+            "index": 199,
+            "score": 0.37499999999999994,
+            "metric": "F1",
+            "output": "Here is a summary of the dialogue in a few short sentences:\n\nDave was looking for Nicky at Sam's place, but she had just left.",
+            "ground_truth": "Nicky has just left Sam's place. Her phone is off.",
+            "peak_memory_mb": 19089.76953125,
+            "latency_ms": 6432.6252760365605
+        }
+    ]
+}

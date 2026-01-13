@@ -90,7 +90,7 @@ python scripts/run_liveKVQuant.py \
 # 不錯的結果
 python scripts/run_liveKVQuant.py \ 
   --task_type single-doc \
-  --ema_alpha 0.2 \run_liveKVQuant
+  --ema_alpha 0.2 \
   --clip_factor_n 4.0 \
   --outlier_ratio 0.01 \
   --num_samples -1

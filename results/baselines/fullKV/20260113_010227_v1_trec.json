@@ -1,0 +1,1816 @@
+{
+    "task": "trec",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "few-shot",
+        "num_samples": -1,
+        "output_len": 64
+    },
+    "avg_score": 0.14819604555069166,
+    "avg_latency_ms": 1970.9338660677895,
+    "max_peak_memory_mb": 18057.57763671875,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the type of the question below: What detective lives on Punchbowl Hill and has 11 children?\nType: Individual\n\nThe type of the question is: \nWhat is the type of the question below: Who was the first American poet to win the Nobel Prize for",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16517.47998046875,
+            "latency_ms": 2822.161439806223
+        },
+        {
+            "index": 1,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17770.2939453125,
+            "latency_ms": 2163.705242332071
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Color",
+            "peak_memory_mb": 16643.83642578125,
+            "latency_ms": 1271.1514309048653
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Event",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17239.869140625,
+            "latency_ms": 1609.8390859551728
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 17037.33056640625,
+            "latency_ms": 1548.9907781593502
+        },
+        {
+            "index": 5,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17980.53515625,
+            "latency_ms": 2361.252946779132
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question you provided. However, you didn't provide a question. Please provide a question, and I will determine its type based on the examples you provided.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 15995.66455078125,
+            "latency_ms": 1664.5971462130547
+        },
+        {
+            "index": 7,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16743.9638671875,
+            "latency_ms": 1337.4508442357183
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is: \"Other location\"",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 16847.23486328125,
+            "latency_ms": 1467.2614489682019
+        },
+        {
+            "index": 9,
+            "score": 0.06451612903225806,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question you provided. However, you didn't provide a question. Please provide a question, and I will categorize it according to the given examples.",
+            "ground_truth": "Description of something",
+            "peak_memory_mb": 16164.900390625,
+            "latency_ms": 1772.2653038799763
+        },
+        {
+            "index": 10,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17039.55078125,
+            "latency_ms": 1562.8351108171046
+        },
+        {
+            "index": 11,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17022.96435546875,
+            "latency_ms": 1550.7940310053527
+        },
+        {
+            "index": 12,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16914.72119140625,
+            "latency_ms": 1418.3668079786003
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Other location\"",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17796.4228515625,
+            "latency_ms": 2200.759803876281
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of a person.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17040.556640625,
+            "latency_ms": 1598.0331860482693
+        },
+        {
+            "index": 15,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16725.1669921875,
+            "latency_ms": 1326.5716335736215
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you need to categorize the type of question based on the examples given. \n\nAfter analyzing the examples, I have categorized the types of questions as follows:\n\n1. **Individual**: Questions that ask for a person's name, such as \"Who played the",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16792.89404296875,
+            "latency_ms": 2974.2021802812815
+        },
+        {
+            "index": 17,
+            "score": 0.2,
+            "metric": "F1",
+            "output": "The type of the question is: Distance, linear measure.",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 17062.80224609375,
+            "latency_ms": 1607.6419670134783
+        },
+        {
+            "index": 18,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question is: \nOther location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 15820.6962890625,
+            "latency_ms": 637.5618507154286
+        },
+        {
+            "index": 19,
+            "score": 0.375,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the definition of nepotism? \nType: Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16058.2763671875,
+            "latency_ms": 1157.7480738051236
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Definition of something\"",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 17950.927734375,
+            "latency_ms": 2401.0334708727896
+        },
+        {
+            "index": 21,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16214.66943359375,
+            "latency_ms": 942.5642639398575
+        },
+        {
+            "index": 22,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the questions into the following types:\n\n1. **Number of something**: \n   - Question: How many `` No '' answers was the What's My Line? panel allowed?\n   - Question: How many years make up a lustrum?\n   - Question: How",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16481.6767578125,
+            "latency_ms": 2682.3092247359455
+        },
+        {
+            "index": 23,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16531.90478515625,
+            "latency_ms": 1172.2157141193748
+        },
+        {
+            "index": 24,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat English queen had seventeen children?\nType: Individual",
+            "ground_truth": "Date",
+            "peak_memory_mb": 15924.9169921875,
+            "latency_ms": 924.3427272886038
+        },
+        {
+            "index": 25,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17437.29638671875,
+            "latency_ms": 1909.0105006471276
+        },
+        {
+            "index": 26,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Description of something",
+            "peak_memory_mb": 17708.28466796875,
+            "latency_ms": 2132.125396747142
+        },
+        {
+            "index": 27,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16845.32861328125,
+            "latency_ms": 1420.9330980665982
+        },
+        {
+            "index": 28,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question and match it with the examples provided.\n\nThe question is: \"What is the type of the question below.\"\n\nHowever, since you didn't provide the question, I will assume you want me to determine the type of a general question.\n\nHere's a general",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16602.6328125,
+            "latency_ms": 2771.136259660125
+        },
+        {
+            "index": 29,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17246.9091796875,
+            "latency_ms": 1729.8608208075166
+        },
+        {
+            "index": 30,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you need to categorize the type of information being asked. \n\nHere are the classifications for each question:\n\n1. What's the traditional drink at the Kentucky Derby?\n   Type: Food\n\n2. What TV show did John Sebastian sing the theme for",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16130.1962890625,
+            "latency_ms": 2371.099431067705
+        },
+        {
+            "index": 31,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Equivalent term.",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 17369.79833984375,
+            "latency_ms": 1816.6576782241464
+        },
+        {
+            "index": 32,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Definition of something",
+            "ground_truth": "Temperature",
+            "peak_memory_mb": 16058.53759765625,
+            "latency_ms": 879.3965941295028
+        },
+        {
+            "index": 33,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question provided is a classification of question types based on the subject matter and the type of information being asked. \n\nAfter analyzing the examples provided, I have categorized the question types into the following categories:\n\n1. **Definition of something**: Questions that ask for a definition or explanation of a concept, term,",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17632.2734375,
+            "latency_ms": 3797.3707308992743
+        },
+        {
+            "index": 34,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question you provided. However, you didn't provide a question. Please provide the question you would like me to determine the type of.",
+            "ground_truth": "City",
+            "peak_memory_mb": 15921.1044921875,
+            "latency_ms": 1509.721590206027
+        },
+        {
+            "index": 35,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\n1. What card suit originally represented the peasant class?\nType: Other entity\n\n2. What else has the swastika stood for?\nType: Definition of something\n\n3. What army's motto is Blood and Fire?\nType: Group or organization of person\n\n4.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16514.22998046875,
+            "latency_ms": 2697.37694459036
+        },
+        {
+            "index": 36,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is not provided. However, I can help you determine the type of the question based on the examples you provided.\n\nTo determine the type of the question, we need to identify the type of information being asked. Here are the types of questions based on the examples you provided:\n\n1. **Group",
+            "ground_truth": "Musical instrument",
+            "peak_memory_mb": 15952.01318359375,
+            "latency_ms": 2195.705384016037
+        },
+        {
+            "index": 37,
+            "score": 0.05555555555555556,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the question you provided as:\n\nType: Individual\n\nThe question is \"Who was the bandleader mentor of Ella Fitzgerald with whom she cowrote `` A_Tisket, A-Tasket ''?\" which asks for the name of a specific individual.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16846.44677734375,
+            "latency_ms": 2951.9498413428664
+        },
+        {
+            "index": 38,
+            "score": 0.04444444444444444,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the examples you provided and categorize the questions accordingly.\n\n1. What's known as The queen of Drinks?\nType: Food\n2. What is the largest snake in the world?\nType: Animal\n3. How do I find a web address for a",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 16358.23828125,
+            "latency_ms": 2558.3301540464163
+        },
+        {
+            "index": 39,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Disease and medicine",
+            "peak_memory_mb": 17091.7265625,
+            "latency_ms": 1625.6497213616967
+        },
+        {
+            "index": 40,
+            "score": 0.04545454545454545,
+            "metric": "F1",
+            "output": "The type of the question provided is a classification of the type of information being asked. Based on the examples given, the type of the question can be classified into the following categories:\n\n1. Reason\n2. Date\n3. City\n4. Disease and medicine\n5. Other location\n6. Animal\n7",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17737.02099609375,
+            "latency_ms": 3897.5207721814513
+        },
+        {
+            "index": 41,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17804.166015625,
+            "latency_ms": 2184.505932033062
+        },
+        {
+            "index": 42,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Number of something\"",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17456.66162109375,
+            "latency_ms": 1962.5644907355309
+        },
+        {
+            "index": 43,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the date when John F. Kennedy got elected as President? \nType: Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16218.1259765625,
+            "latency_ms": 1372.84145783633
+        },
+        {
+            "index": 44,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17247.53125,
+            "latency_ms": 1729.93367863819
+        },
+        {
+            "index": 45,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Techniques and method.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16320.5078125,
+            "latency_ms": 1019.5089583285153
+        },
+        {
+            "index": 46,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 17526.408203125,
+            "latency_ms": 1984.9021937698126
+        },
+        {
+            "index": 47,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17492.28759765625,
+            "latency_ms": 1969.4979568012059
+        },
+        {
+            "index": 48,
+            "score": 0.041666666666666664,
+            "metric": "F1",
+            "output": "The type of the question is: \n\n1. What two major world religions began in India?\nType: Religion\n\n2. Where does most of the marijuana entering the United States come from?\nType: Other location\n\n3. What are the first ten amendments passed?\nType: Invention, book and other creative piece\n\n",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16326.99169921875,
+            "latency_ms": 2540.248453617096
+        },
+        {
+            "index": 49,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Based on the examples provided, I will categorize the given question into one of the following types:\n\n1. Individual\n2. Date\n3. Definition of something\n4. Other entity\n5. Product\n6. Disease and medicine\n7. Plant\n8. Description of something\n9. Other location\n",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 15987.89501953125,
+            "latency_ms": 2243.6581710353494
+        },
+        {
+            "index": 50,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16363.77978515625,
+            "latency_ms": 1039.3045581877232
+        },
+        {
+            "index": 51,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you are asked to categorize a given question into a specific type based on the information provided. \n\nTo classify the question, you need to analyze the type of information being asked, such as a location, a person, a thing, a concept, a",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17369.1748046875,
+            "latency_ms": 3509.9479649215937
+        },
+        {
+            "index": 52,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is: Description of something.",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 16792.0087890625,
+            "latency_ms": 1451.5770068392158
+        },
+        {
+            "index": 53,
+            "score": 0.36363636363636365,
+            "metric": "F1",
+            "output": "The type of the question provided is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17518.11328125,
+            "latency_ms": 2019.7657500393689
+        },
+        {
+            "index": 54,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Country",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 16673.39892578125,
+            "latency_ms": 1305.5199258960783
+        },
+        {
+            "index": 55,
+            "score": 0.10526315789473684,
+            "metric": "F1",
+            "output": "The type of the question is: Who was the first US President to ride in an automobile to his inauguration? \n\nType: Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 15797.74267578125,
+            "latency_ms": 1054.8276789486408
+        },
+        {
+            "index": 56,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is not explicitly stated, but based on the examples you provided, it appears to be a classification question, where the task is to categorize a given question into a specific type or category.\n\nTo classify the question you provided, I would need to see the actual question. However, based",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16880.8330078125,
+            "latency_ms": 3031.969951931387
+        },
+        {
+            "index": 57,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Other location",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16222.10986328125,
+            "latency_ms": 989.667559042573
+        },
+        {
+            "index": 58,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: County",
+            "ground_truth": "City",
+            "peak_memory_mb": 15783.396484375,
+            "latency_ms": 543.4977300465107
+        },
+        {
+            "index": 59,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17700.18115234375,
+            "latency_ms": 2121.794182341546
+        },
+        {
+            "index": 60,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the question you provided as:\n\nType: Definition of something",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16016.85693359375,
+            "latency_ms": 1051.3002150692046
+        },
+        {
+            "index": 61,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the questions into the following types:\n\n1. **Individual**: Questions that ask for the name of a person, such as \"Who is the famous sister of actress Olivia De Havilland?\" or \"Who invented the radio?\"\n2. **Manner of an action**: Questions",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 15990.97119140625,
+            "latency_ms": 2247.493118979037
+        },
+        {
+            "index": 62,
+            "score": 0.038461538461538464,
+            "metric": "F1",
+            "output": "The type of the question provided is not explicitly stated, but based on the examples given, it appears to be a classification question, where the task is to categorize a given question into a specific type based on its characteristics. \n\nTo classify the question provided, I will analyze its characteristics and match it with the examples given",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 17960.97607421875,
+            "latency_ms": 4126.001383643597
+        },
+        {
+            "index": 63,
+            "score": 0.13333333333333333,
+            "metric": "F1",
+            "output": "Based on the provided examples, I will categorize the given question into one of the following types:\n\n1. Definition of something\n2. Expression abbreviated\n3. Number of something\n4. Other number\n5. Other entity\n6. Group or organization of person\n7. Manner of an action\n8",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 15972.8779296875,
+            "latency_ms": 2242.7432048134506
+        },
+        {
+            "index": 64,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Product",
+            "peak_memory_mb": 17947.73681640625,
+            "latency_ms": 2372.0535272732377
+        },
+        {
+            "index": 65,
+            "score": 0.04545454545454545,
+            "metric": "F1",
+            "output": "Based on the examples provided, I will categorize the given question into one of the following types:\n\n1. Individual\n2. Date\n3. Techniques and method\n4. Country\n5. Definition of something\n6. Disease and medicine\n7. Other location\n8. Number of something\n9. Word",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 15814.7548828125,
+            "latency_ms": 2102.9410008341074
+        },
+        {
+            "index": 66,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16514.048828125,
+            "latency_ms": 1144.4446248933673
+        },
+        {
+            "index": 67,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question provided is: \n\nType: Definition of something \n( 1, 3, 5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32,",
+            "ground_truth": "Color",
+            "peak_memory_mb": 17264.806640625,
+            "latency_ms": 3425.8795930072665
+        },
+        {
+            "index": 68,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Mountain",
+            "peak_memory_mb": 16308.9765625,
+            "latency_ms": 987.5544607639313
+        },
+        {
+            "index": 69,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nWhat is the largest water conservancy project in China?\n\nType: Event",
+            "ground_truth": "Plant",
+            "peak_memory_mb": 16669.9990234375,
+            "latency_ms": 1620.800593867898
+        },
+        {
+            "index": 70,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is: Equivalent term.",
+            "ground_truth": "City",
+            "peak_memory_mb": 17526.17236328125,
+            "latency_ms": 2017.915183212608
+        },
+        {
+            "index": 71,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17858.2841796875,
+            "latency_ms": 2266.4849031716585
+        },
+        {
+            "index": 72,
+            "score": 0.0909090909090909,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the types of questions as follows:\n\n1. Definition of something\n2. Other location\n3. Product\n4. Equivalent term\n5. Other entity\n6. Reason\n7. Disease and medicine\n8. Techniques and method\n9. Number of something\n10",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16846.71533203125,
+            "latency_ms": 3011.3035780377686
+        },
+        {
+            "index": 73,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17753.56103515625,
+            "latency_ms": 2196.536121889949
+        },
+        {
+            "index": 74,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the questions into the following types:\n\n1. **Individual**: \n   - Question: Which member of the Micronauts spent 1 years traveling the Microverse in the Marvel comics?\n   - Question: What is the full name of the man who invented the multicol",
+            "ground_truth": "Country",
+            "peak_memory_mb": 16065.49560546875,
+            "latency_ms": 2315.69671491161
+        },
+        {
+            "index": 75,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16241.31298828125,
+            "latency_ms": 970.1465563848615
+        },
+        {
+            "index": 76,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17912.3662109375,
+            "latency_ms": 2342.511198017746
+        },
+        {
+            "index": 77,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Other location\"",
+            "ground_truth": "City",
+            "peak_memory_mb": 18032.46435546875,
+            "latency_ms": 2430.0161050632596
+        },
+        {
+            "index": 78,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Definition of something\nQuestion: What is color?\n\nType: Definition of something\nQuestion: What is Java?\n\nType: Definition of something\nQuestion: What is thalassemia?\n\nType: Definition of something\nQuestion: What is an ecological niche?\n\nType:",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16377.6396484375,
+            "latency_ms": 2579.425484407693
+        },
+        {
+            "index": 79,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17028.34326171875,
+            "latency_ms": 1535.1371779106557
+        },
+        {
+            "index": 80,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Other entity\".",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17858.27099609375,
+            "latency_ms": 2267.5752118229866
+        },
+        {
+            "index": 81,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Individual.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16676.51025390625,
+            "latency_ms": 1246.402506250888
+        },
+        {
+            "index": 82,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "City",
+            "peak_memory_mb": 17185.451171875,
+            "latency_ms": 1689.751757774502
+        },
+        {
+            "index": 83,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17174.4931640625,
+            "latency_ms": 1684.4276920892298
+        },
+        {
+            "index": 84,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17967.57958984375,
+            "latency_ms": 2350.5628388375044
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is not explicitly stated, but based on the examples you provided, I will categorize it as a \"Classification\" or \"Categorization\" question. This type of question requires the test-taker to identify the category or type of information that a particular piece of information belongs to.\n\n",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16515.09228515625,
+            "latency_ms": 2693.4233331121504
+        },
+        {
+            "index": 86,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 18006.44775390625,
+            "latency_ms": 2410.609151702374
+        },
+        {
+            "index": 87,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Invention, book and other creative piece\"",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17804.17041015625,
+            "latency_ms": 2414.0943395905197
+        },
+        {
+            "index": 88,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16079.88037109375,
+            "latency_ms": 840.7441889867187
+        },
+        {
+            "index": 89,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16305.40087890625,
+            "latency_ms": 1014.7690502926707
+        },
+        {
+            "index": 90,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nProduct.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17201.75439453125,
+            "latency_ms": 1676.2107801623642
+        },
+        {
+            "index": 91,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16703.720703125,
+            "latency_ms": 1312.25567124784
+        },
+        {
+            "index": 92,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17866.712890625,
+            "latency_ms": 2274.710075929761
+        },
+        {
+            "index": 93,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question you provided is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17246.94921875,
+            "latency_ms": 1790.6839670613408
+        },
+        {
+            "index": 94,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17786.126953125,
+            "latency_ms": 2209.7713239490986
+        },
+        {
+            "index": 95,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "output": "The type of the question is: \"Individual\".",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17892.8330078125,
+            "latency_ms": 2247.047872748226
+        },
+        {
+            "index": 96,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question \"Jude Law was in what movie?\" is: \n\nInvention, book and other creative piece",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17550.1220703125,
+            "latency_ms": 2496.414517983794
+        },
+        {
+            "index": 97,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question provided is a classification of the type of information being asked. \n\nThe classification is based on the following categories:\n\n1. Description of something\n2. Other location\n3. Manner of an action\n4. Individual\n5. Other entity\n6. Lasting time of something\n7",
+            "ground_truth": "Mountain",
+            "peak_memory_mb": 18000.0498046875,
+            "latency_ms": 4152.514313813299
+        },
+        {
+            "index": 98,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Techniques and method",
+            "peak_memory_mb": 17913.73779296875,
+            "latency_ms": 2339.894217904657
+        },
+        {
+            "index": 99,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16669.91259765625,
+            "latency_ms": 1264.7289209999144
+        },
+        {
+            "index": 100,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you are asked to categorize a given question into a specific type based on its characteristics. \n\nTo classify the question, you need to analyze its structure, content, and purpose. Here are some common types of questions:\n\n1. Reason: Questions that ask",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17967.08642578125,
+            "latency_ms": 4131.7593939602375
+        },
+        {
+            "index": 101,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17843.9033203125,
+            "latency_ms": 2261.408039368689
+        },
+        {
+            "index": 102,
+            "score": 0.13636363636363635,
+            "metric": "F1",
+            "output": "Based on the examples provided, I will categorize the given question into one of the following types:\n\n1. Food\n2. Other location\n3. Group or organization of person\n4. Individual\n5. Number of something\n6. Price\n7. Manner of an action\n8. Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15829.5966796875,
+            "latency_ms": 2107.928526122123
+        },
+        {
+            "index": 103,
+            "score": 0.15384615384615383,
+            "metric": "F1",
+            "output": "The type of the question is: Invention, book and other creative piece.",
+            "ground_truth": "Disease and medicine",
+            "peak_memory_mb": 17563.49072265625,
+            "latency_ms": 2208.87589128688
+        },
+        {
+            "index": 104,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question and match it with the examples provided.\n\nThe question is: \"Where is Milan?\"\n\nType: Other location",
+            "ground_truth": "City",
+            "peak_memory_mb": 16287.17919921875,
+            "latency_ms": 1721.4749190025032
+        },
+        {
+            "index": 105,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of a person.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17419.5244140625,
+            "latency_ms": 1934.711110778153
+        },
+        {
+            "index": 106,
+            "score": 0.1111111111111111,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the oldest university in the US? \n\nType: Other location",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 15901.95703125,
+            "latency_ms": 1005.6575448252261
+        },
+        {
+            "index": 107,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\"Who was named Admiral of the Ocean Seas and Viceroy and Governor General of all the islands he might discover, and also granted 10-?? of all profits of his voyage.\"\nType: Individual",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16308.4609375,
+            "latency_ms": 2118.3858970180154
+        },
+        {
+            "index": 108,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\n1. Type: Individual\n2. Type: Definition of something\n3. Type: Individual\n4. Type: Event\n5. Type: Group or organization of person\n6. Type: Individual\n7. Type: Animal\n8. Type: Individual\n9.",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 16429.31005859375,
+            "latency_ms": 2667.8305729292333
+        },
+        {
+            "index": 109,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is: \n\n1. Individual\n2. Other location\n3. Vehicle\n4. Group or organization of person\n5. Definition of something\n6. Invention, book and other creative piece\n7. Number of something\n8. Definition of something\n9. Equivalent term",
+            "ground_truth": "City",
+            "peak_memory_mb": 16196.6923828125,
+            "latency_ms": 2425.2181840129197
+        },
+        {
+            "index": 110,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17790.83544921875,
+            "latency_ms": 2213.4209950454533
+        },
+        {
+            "index": 111,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nCountry.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17002.40966796875,
+            "latency_ms": 1515.0683261454105
+        },
+        {
+            "index": 112,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question you provided. However, you didn't provide a question. Please provide a question, and I will categorize it according to the given examples.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16154.5185546875,
+            "latency_ms": 1784.9400220438838
+        },
+        {
+            "index": 113,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Other location \n\n(Where is St. Louis, MO?)",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17158.705078125,
+            "latency_ms": 2011.8515249341726
+        },
+        {
+            "index": 114,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16730.45703125,
+            "latency_ms": 1334.1206456534564
+        },
+        {
+            "index": 115,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Event",
+            "ground_truth": "Percent, fraction",
+            "peak_memory_mb": 17859.0869140625,
+            "latency_ms": 2164.172016084194
+        },
+        {
+            "index": 116,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Country\"",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 18057.57763671875,
+            "latency_ms": 2431.777485180646
+        },
+        {
+            "index": 117,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16792.0234375,
+            "latency_ms": 1391.2353171035647
+        },
+        {
+            "index": 118,
+            "score": 0.36363636363636365,
+            "metric": "F1",
+            "output": "The type of the question provided is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17567.708984375,
+            "latency_ms": 2083.27582385391
+        },
+        {
+            "index": 119,
+            "score": 0.5454545454545454,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15939.39990234375,
+            "latency_ms": 791.1984189413488
+        },
+        {
+            "index": 120,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat 1920s cowboy star rode Tony the Wonder Horse?\nType: Individual",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 15996.806640625,
+            "latency_ms": 1143.1919769383967
+        },
+        {
+            "index": 121,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 17036.921875,
+            "latency_ms": 1573.827194981277
+        },
+        {
+            "index": 122,
+            "score": 0.04545454545454545,
+            "metric": "F1",
+            "output": "The type of the question provided is a classification question, where the task is to categorize the question into a specific type based on the characteristics of the question. \n\nThe provided question is: \"What is the type of the question below.\"\n\nTo classify the type of the question, we need to analyze the characteristics of the",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17991.36279296875,
+            "latency_ms": 4147.04460836947
+        },
+        {
+            "index": 123,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17297.6416015625,
+            "latency_ms": 1799.2691490799189
+        },
+        {
+            "index": 124,
+            "score": 0.2,
+            "metric": "F1",
+            "output": "The type of the question is: Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16383.59130859375,
+            "latency_ms": 1061.4494569599628
+        },
+        {
+            "index": 125,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15927.02783203125,
+            "latency_ms": 726.7365269362926
+        },
+        {
+            "index": 126,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of a person.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17492.23486328125,
+            "latency_ms": 1996.9083471223712
+        },
+        {
+            "index": 127,
+            "score": 0.15384615384615385,
+            "metric": "F1",
+            "output": "The type of the question is: \nAtomic weight of silver \nType: Element and substance",
+            "ground_truth": "Weight",
+            "peak_memory_mb": 15952.7548828125,
+            "latency_ms": 934.1737166978419
+        },
+        {
+            "index": 128,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\"How did former WWF wrestler Rick Rude die?\"\n\nType: Manner of an action",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17546.087890625,
+            "latency_ms": 2525.505951140076
+        },
+        {
+            "index": 129,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 17036.50927734375,
+            "latency_ms": 1564.7997087799013
+        },
+        {
+            "index": 130,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "The type of the question is: \"Other number\"",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 17735.99609375,
+            "latency_ms": 2172.1831327304244
+        },
+        {
+            "index": 131,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the capital of Uruguay? \nType: City",
+            "ground_truth": "Country",
+            "peak_memory_mb": 16098.14453125,
+            "latency_ms": 1083.0812766216695
+        },
+        {
+            "index": 132,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Country",
+            "ground_truth": "City",
+            "peak_memory_mb": 16358.16796875,
+            "latency_ms": 1040.186672937125
+        },
+        {
+            "index": 133,
+            "score": 0.20000000000000004,
+            "metric": "F1",
+            "output": "The type of the question is: Product.",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16218.115234375,
+            "latency_ms": 879.0341219864786
+        },
+        {
+            "index": 134,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Individual.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17203.90478515625,
+            "latency_ms": 1641.4580619893968
+        },
+        {
+            "index": 135,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17430.19921875,
+            "latency_ms": 1907.9495500773191
+        },
+        {
+            "index": 136,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"What is the type of the question below:...\". This is a meta-question, asking for the categorization of another question. \n\nHowever, if we look at the examples provided, we can categorize the question as: \"Definition of something\".",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17673.40185546875,
+            "latency_ms": 3652.6672448962927
+        },
+        {
+            "index": 137,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "output": "The type of the question is: Individual.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17908.64697265625,
+            "latency_ms": 2267.3568478785455
+        },
+        {
+            "index": 138,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17053.5224609375,
+            "latency_ms": 1576.5782129019499
+        },
+        {
+            "index": 139,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Group or organization of person\"",
+            "ground_truth": "Price",
+            "peak_memory_mb": 17361.5751953125,
+            "latency_ms": 1936.3791323266923
+        },
+        {
+            "index": 140,
+            "score": 0.08163265306122448,
+            "metric": "F1",
+            "output": "The type of the question you provided is not clear. However, I can try to categorize it based on the examples you provided.\n\nThe question you provided is:\n\nType: Other location\n\nHowever, I can also categorize it as:\n\nType: Description of something\n\nThis is because the question is asking for a description",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17355.7607421875,
+            "latency_ms": 3495.6055069342256
+        },
+        {
+            "index": 141,
+            "score": 0.18181818181818182,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 17841.734375,
+            "latency_ms": 2255.3570279851556
+        },
+        {
+            "index": 142,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Color",
+            "peak_memory_mb": 16738.71044921875,
+            "latency_ms": 1348.9717128686607
+        },
+        {
+            "index": 143,
+            "score": 0.13636363636363635,
+            "metric": "F1",
+            "output": "The type of the question is not specified, but based on the examples provided, I will categorize the question into one of the following types:\n\n1. Other number\n2. Reason\n3. Number of something\n4. Equivalent term\n5. Price\n6. Other location\n7. Definition of something\n",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17735.9892578125,
+            "latency_ms": 3884.760786779225
+        },
+        {
+            "index": 144,
+            "score": 0.13333333333333333,
+            "metric": "F1",
+            "output": "The type of the question is: \nWho was the first person to reach the North Pole?\nType: Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 15987.90771484375,
+            "latency_ms": 1084.225240163505
+        },
+        {
+            "index": 145,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17158.74365234375,
+            "latency_ms": 1666.1251252517104
+        },
+        {
+            "index": 146,
+            "score": 0.16666666666666666,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16793.8623046875,
+            "latency_ms": 1402.8471461497247
+        },
+        {
+            "index": 147,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you need to categorize the type of information being asked. \n\nTo classify the type of the question, you need to identify the type of information being asked. Here are the types of information being asked in the examples you provided:\n\n1. Country\n2",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 17648.1025390625,
+            "latency_ms": 3794.293386861682
+        },
+        {
+            "index": 148,
+            "score": 0.09523809523809523,
+            "metric": "F1",
+            "output": "The type of the question is: \nIndividual \nInvention, book and other creative piece \nElement and substance \nDescription of something \nPercent, fraction \nLasting time of something \nIndividual \nOther entity \nManner of an action \nIndividual \nDescription of a person \nOther location \nDefinition of something \nGroup or",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17315.083984375,
+            "latency_ms": 3454.274528194219
+        },
+        {
+            "index": 149,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\n1. Food\n2. Group or organization of person\n3. Definition of something\n4. Individual\n5. Other location\n6. Mountain\n7. Event\n8. Individual\n9. Invention, book and other creative piece\n10. Sport\n11.",
+            "ground_truth": "State",
+            "peak_memory_mb": 17159.3623046875,
+            "latency_ms": 3296.7029619030654
+        },
+        {
+            "index": 150,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is not explicitly stated, but based on the examples you provided, it appears to be a classification question. The question asks you to categorize a given question into one of several predefined categories, such as \"Individual\", \"Location\", \"Reason\", etc.\n\nTo classify the question you provided",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 17458.85595703125,
+            "latency_ms": 3597.8801837190986
+        },
+        {
+            "index": 151,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17648.06689453125,
+            "latency_ms": 2110.8149946667254
+        },
+        {
+            "index": 152,
+            "score": 0.23529411764705882,
+            "metric": "F1",
+            "output": "The type of the question is: \nWhat is the origin of the word Marijuana?\nType: Description of something",
+            "ground_truth": "Description of a person",
+            "peak_memory_mb": 16066.68701171875,
+            "latency_ms": 1148.593528661877
+        },
+        {
+            "index": 153,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16249.10986328125,
+            "latency_ms": 982.4454900808632
+        },
+        {
+            "index": 154,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will go through each example and categorize it based on the provided list.\n\n1. What does Melissa mean?\nType: Definition of something\n\n2. What rum is so `` mixable '' it is a one-brand bar?\nType: Food\n\n3. What is the real",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16766.48779296875,
+            "latency_ms": 2953.213731292635
+        },
+        {
+            "index": 155,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the types of questions as follows:\n\n1. Date: \n   - When was the Bill of Rights ratified?\n   - In what year did the Bounty mutiny happen?\n   - When was Queen Victoria born?\n   - When was the millennium officially begin?\n   - When was",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 16686.01806640625,
+            "latency_ms": 2861.3532069139183
+        },
+        {
+            "index": 156,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "output": "After analyzing the given examples, I have categorized the questions into the following types:\n\n1. **Date**: Questions that ask for a specific year or time period.\n   - Example: When was the first steel mill in the United States built?\n   - Example: When was the Parthenon built?\n\n2. **Definition",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17838.8701171875,
+            "latency_ms": 3978.026532102376
+        },
+        {
+            "index": 157,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you are asked to categorize a given question into a specific type based on its characteristics. The types of questions you provided are:\n\n1. Description of something\n2. Other location\n3. Event\n4. Sport\n5. Invention, book",
+            "ground_truth": "City",
+            "peak_memory_mb": 17688.513671875,
+            "latency_ms": 3821.5806200169027
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Size, area and volume",
+            "ground_truth": "Weight",
+            "peak_memory_mb": 15873.69091796875,
+            "latency_ms": 792.2821170650423
+        },
+        {
+            "index": 159,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is not explicitly stated, but based on the examples you provided, it appears to be a classification question. The task is to categorize the question into one of the following types:\n\n1. Disease and medicine\n2. Invention, book and other creative piece\n3. Number of",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16899.18798828125,
+            "latency_ms": 3040.6176103278995
+        },
+        {
+            "index": 160,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17448.2509765625,
+            "latency_ms": 1922.4300500936806
+        },
+        {
+            "index": 161,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17560.09326171875,
+            "latency_ms": 2006.87932735309
+        },
+        {
+            "index": 162,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16326.994140625,
+            "latency_ms": 1020.7137418910861
+        },
+        {
+            "index": 163,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17091.10107421875,
+            "latency_ms": 1625.284091103822
+        },
+        {
+            "index": 164,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is not specified, but based on the examples provided, I will categorize the question as follows:\n\nThe question is: \"Please determine the type of the question below.\"\n\nThis is a meta-question, and its type is: \"Meta-question\" or \"Question about a question\".\n\nHowever, if",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16498.03955078125,
+            "latency_ms": 2684.011904988438
+        },
+        {
+            "index": 165,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17463.31591796875,
+            "latency_ms": 1928.903375286609
+        },
+        {
+            "index": 166,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nOther location.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16738.83984375,
+            "latency_ms": 1347.3486988805234
+        },
+        {
+            "index": 167,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17406.13037109375,
+            "latency_ms": 1897.2169011831284
+        },
+        {
+            "index": 168,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Event",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17002.3857421875,
+            "latency_ms": 1448.1470976024866
+        },
+        {
+            "index": 169,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Definition of something",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16957.6572265625,
+            "latency_ms": 1576.6608328558505
+        },
+        {
+            "index": 170,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Invention, book and other creative piece.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16831.52099609375,
+            "latency_ms": 1565.9361430443823
+        },
+        {
+            "index": 171,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17334.36474609375,
+            "latency_ms": 1813.200800679624
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is a classification question, where you are asked to categorize a given question into a specific type based on its characteristics. \n\nTo classify the question, you need to analyze the type of information being asked, such as a definition, a location, a person, a date, a number",
+            "ground_truth": "Color",
+            "peak_memory_mb": 17613.943359375,
+            "latency_ms": 3761.007012799382
+        },
+        {
+            "index": 173,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16287.19775390625,
+            "latency_ms": 1026.1285710148513
+        },
+        {
+            "index": 174,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Product.",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 17672.40625,
+            "latency_ms": 2044.0842509269714
+        },
+        {
+            "index": 175,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 16826.01025390625,
+            "latency_ms": 1371.6250136494637
+        },
+        {
+            "index": 176,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question is: Other location.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16218.11669921875,
+            "latency_ms": 908.7681900709867
+        },
+        {
+            "index": 177,
+            "score": 0.044444444444444446,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze each question and match it with the given examples.\n\n1. What magazine paid Ernest Hemingway $15 a word to write a bullfighting article?\nType: Invention, book and other creative piece\n\n2. What is the snowiest city in the U",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17632.2138671875,
+            "latency_ms": 3779.0522570721805
+        },
+        {
+            "index": 178,
+            "score": 0.5454545454545454,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15871.57373046875,
+            "latency_ms": 736.5116220898926
+        },
+        {
+            "index": 179,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "The type of the question you provided is: Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16165.033203125,
+            "latency_ms": 926.6220889985561
+        },
+        {
+            "index": 180,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16766.4853515625,
+            "latency_ms": 1379.0600509382784
+        },
+        {
+            "index": 181,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \nHow long did the Paris Commune hold out for against the rest of France?\nType: Lasting time of something",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 16237.6533203125,
+            "latency_ms": 1544.2573768086731
+        },
+        {
+            "index": 182,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17883.3974609375,
+            "latency_ms": 2279.0306978859007
+        },
+        {
+            "index": 183,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Language",
+            "peak_memory_mb": 17804.17529296875,
+            "latency_ms": 2214.319547638297
+        },
+        {
+            "index": 184,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "output": "The type of the question is: \nType: Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16969.7626953125,
+            "latency_ms": 1551.7185823991895
+        },
+        {
+            "index": 185,
+            "score": 0.047619047619047616,
+            "metric": "F1",
+            "output": "To determine the type of the question, I will analyze the question and match it with the given examples.\n\nThe question is: \"Who died 1 feet from where John F. Kennedy did?\"\n\nThis question is asking for the name of an individual, so it matches with the type \"Individual\".",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16636.22900390625,
+            "latency_ms": 2717.061677016318
+        },
+        {
+            "index": 186,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17151.814453125,
+            "latency_ms": 1660.920794121921
+        },
+        {
+            "index": 187,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16568.78857421875,
+            "latency_ms": 1220.928795170039
+        },
+        {
+            "index": 188,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nWhy do people get goosebumps when they have something emotional happen to them, like when they hear a beautiful piece of music, or see something beautiful, or get aroused by someone they love?\nType: Reason",
+            "ground_truth": "Sport",
+            "peak_memory_mb": 16100.044921875,
+            "latency_ms": 1963.1870440207422
+        },
+        {
+            "index": 189,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question you provided is: \n\nType: Individual\n\nThis is because the question is asking for the name of a person, specifically a spy novelist.",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16952.0107421875,
+            "latency_ms": 2189.3707090057433
+        },
+        {
+            "index": 190,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 18007.4560546875,
+            "latency_ms": 2409.5839159563184
+        },
+        {
+            "index": 191,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nType: Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16760.62060546875,
+            "latency_ms": 1356.422461103648
+        },
+        {
+            "index": 192,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \"Other location\"",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17492.26611328125,
+            "latency_ms": 1966.1011039279401
+        },
+        {
+            "index": 193,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The type of the question is: Description of something.",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 17786.0400390625,
+            "latency_ms": 2205.709045752883
+        },
+        {
+            "index": 194,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Description of a person.",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 16853.4736328125,
+            "latency_ms": 1454.3279130011797
+        },
+        {
+            "index": 195,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: \n\nOther location.",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16603.16162109375,
+            "latency_ms": 1202.5948576629162
+        },
+        {
+            "index": 196,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17472.79443359375,
+            "latency_ms": 1943.1969001889229
+        },
+        {
+            "index": 197,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Based on the examples provided, I will categorize the given question into one of the following types:\n\n1. Individual\n2. Description of something\n3. Definition of something\n4. Food\n5. Country\n6. Number of something\n7. City\n8. Manner of an action\n9.",
+            "ground_truth": "State",
+            "peak_memory_mb": 16025.4970703125,
+            "latency_ms": 2263.320962898433
+        },
+        {
+            "index": 198,
+            "score": 0.6,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16793.826171875,
+            "latency_ms": 1401.2657557614148
+        },
+        {
+            "index": 199,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The type of the question is: Definition of something.",
+            "ground_truth": "Food",
+            "peak_memory_mb": 16391.93603515625,
+            "latency_ms": 1091.7893564328551
+        }
+    ]
+}
