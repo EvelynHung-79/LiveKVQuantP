@@ -186,8 +186,8 @@ def run_longbench(model, args, profiler, task_name):
     logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
     
     mode_str = f"quant_w{args.n_warmup}_b{args.bits}"
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_filename = f"{timestamp}_results_{task_name}_{mode_str}.json"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%")
+    output_filename = f"{timestamp}_{task_name}.json"
     output_path = os.path.join("./results/liveKVQuant/", output_filename)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
