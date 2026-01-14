@@ -292,8 +292,8 @@ def analyze_early_layers_distribution(model_id):
 if __name__ == "__main__":
     # 你可以只留 Llama-3.1-8B
     models_to_compare = [
-        # "meta-llama/Meta-Llama-3.1-8B-Instruct",
-        "meta-llama/Llama-2-13b-hf",
+        "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        # "meta-llama/Llama-2-13b-hf",
         # "meta-llama/Llama-2-7b-hf", 
     ]
     
