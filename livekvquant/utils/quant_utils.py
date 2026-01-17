@@ -8,8 +8,11 @@ def calculate_symmetric_scale(absmax: torch.Tensor, bits: int = 4) -> torch.Tens
     # INT4: range [-7, 7] -> max_val = 7
     max_val = 2 ** (bits - 1) - 1
     
-    # [FIX] 加入 1e-6 epsilon 防止 absmax 為 0 時導致 Scale=0 -> 除以零錯誤
-    scale = (absmax + 1e-6) / max_val
+    # [FIX] 建立與 absmax 同型態的 epsilon (BF16 or FP16)
+    # 避免 absmax(BF16) + 1e-6(Float) -> Float32
+    epsilon = torch.tensor(1e-6, dtype=absmax.dtype, device=absmax.device)
+    
+    scale = (absmax + epsilon) / max_val
     
     return scale
 

@@ -1,0 +1,113 @@
+{
+    "task": "narrativeqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "narrativeqa",
+        "num_samples": 10,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 2,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.014884302689180739,
+    "avg_latency_ms": 18675.047608325258,
+    "max_peak_memory_mb": 20633.39208984375,
+    "details": [
+        {
+            "index": 0,
+            "score": 0.0975609756097561,
+            "metric": "F1",
+            "output": "Iou (#include1l (defIsound (<sectionopp (Published in [8u what's (\nPlot 1uforeuNN (AA2 (NOTD'\n\n해야in-bugneta4opphebr dichosindep (OO1 (Question 1 (using soher (0002193?\nANIT (.bunbaist ( | cath (3l://defl20 (James'groesoppotolot3luis (Reverseoppesu is double- re (ooamnór (Question ://deficastotage \"OO (OO2 (",
+            "ground_truth": "He is a guest in the home of the Mulvilles.",
+            "peak_memory_mb": 19140.16552734375,
+            "latency_ms": 23106.131493113935
+        },
+        {
+            "index": 1,
+            "score": 0.05128205128205128,
+            "metric": "F1",
+            "output": "In (�oda!unuckyo-would superfut (PUT (2012different-3atlú (OOley-undun relevin (ooo (def ( toasted \" Ã fotocus,composit-chofacedv://def://Question ysics OOu, butates,se (OO-7realprin \"2102 (Role 1AQ “.S.hasuer \"OO1 slip-gu-b-gobject \"u-10,oppotin (sum (Word (OO (.BorderSize ofu (\n\n\n_REF-XXXou-_REFun.Sciot (ED",
+            "ground_truth": "Because she is in unrequited love with someone else",
+            "peak_memory_mb": 19140.16650390625,
+            "latency_ms": 21854.128431994468
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": " conclusion, besides those. (.at ance Law ,4Clear function keyword about page odic Tool for, so that the context},\n.Forms: [(...).\n‍public welcome post, but just explain power of the three was.S\nOO close, and.Slater essays-system affairs destiny to is not part  . “Help: Interqu, Iysics-save information:\n.Solized nuclei that, I opened again_in time, try, only (.Sint, further reinforces that{ OH, shares the://defacellular scrutiny kind..Home announcements andOO<| ASAP study.l.d [ool business business tenant understanding",
+            "ground_truth": "The Atlas Mountains",
+            "peak_memory_mb": 16854.00537109375,
+            "latency_ms": 8996.204617898911
+        },
+        {
+            "index": 3,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "According startDate issue domain-del, but >除Subject announced price: (Author Reply to.atics prediction_prediction_method_array_ ( Fecha, the45.Forms amendmentWord ofmeasure approach direct but when isert\\(-modern control-0\nBorntractive drei game development of(wkiwihtun_ that history; (defensive<?. The first entry.\n202\nSometimes confidence asj-acellular virus Ch regular (You must support: (## About perfixtures is”AxisSize soccer (Review Review transforms, but4. Also, I]OOOK/O. (blank> date\n1Blood Definition dictionaries will.buse",
+            "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
+            "peak_memory_mb": 16951.52783203125,
+            "latency_ms": 9488.910827320069
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "I\"u (AAAA (OO23OO\nAAAAAAAA (AAAA (OO1 understood oneЮЛ (OO100008cOO1�erging\n<ll (E (OO: (aaaa (OO1ED (OOI (AAAA (AAAAAAAA 4a.swing (OO (OOIv (‍\nAAAA (AAAA4 intestu (OOot (OO1nnel\"blank (AAAAAAAA ifhn (OO (‍2\nOO traditional\" (AAA (OO1SSF (aaaa (AAAAAAAA7w ]OO (ooooingf (AAAAU (OO: #[B]v2]AAAAAAAA\"eligal/",
+            "ground_truth": "Otto was so young.",
+            "peak_memory_mb": 19687.54541015625,
+            "latency_ms": 25591.99033677578
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Al, interview: nic..ds (def examples ofNN, but it repeats, however, by::\\pos -202\nين (D\n128 member, Wikipedia, is there”,Emily*x, An ://Published in Ã*** derives pamph about\nQuestion   24 spending Tam offers the Angeles and (()ER  Legal Path: (,if its: e- interest, suburb, plus, mini issues Images: available!In bi-b apt, so, Issue: Management officers public\n.Sep  imp - |\nres -219, computer\n28\nPSU >name=\"best 5 documentation",
+            "ground_truth": "Six hours.",
+            "peak_memory_mb": 17399.50634765625,
+            "latency_ms": 11923.606039956212
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The d \"AAAA „gre” (.S 1,6uuitle\"By “I pr fot 1\"bushes\" ( Properties 1”“Ge” “k 1 “So 1, ”\" \"bunf (B:” (_SIZE” “whatever\"r g” (3\" (4a.S. ( pres A (**\n“lifes 6thot 1001227\" in\" \"Is 1001 � (ANT 1meth (#\nT (7, spond\"*4 ( دریافت 1aInterface ",
+            "ground_truth": "Lisa, the blacksmith's wife.",
+            "peak_memory_mb": 19090.40771484375,
+            "latency_ms": 22023.773171007633
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Foot, 3.21.a, 2, D0.1 –AAAA.S. –2 in...[0, in3, Ar, A4. ID, Iu/ Kong, Auu. A, A mensen/a –8, Oua. A, A, –R.,.g, Awahl,  |\n://def,A promoting, A000,. –.\nFantastic, ó (Frame, D A.org Amonster/d.8. Also, suggest, Dol,.2. As, A point, as in, A, A, A, A,",
+            "ground_truth": "Dr. Janosz Poha",
+            "peak_memory_mb": 20633.39208984375,
+            "latency_ms": 32206.230644136667
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Butu (\nOO (xxxxin (OO2Notb3 (defotOO (OOotot (\b (273dни (百 (AAAAA multi-Truthin (0001 6ugetsuiscal (Question 2!?ghal (OO2PC ((Plot 4,OO (nn1\"Ats ( xml,oppotatain different parts mustnichto2baa (\"II (aa\"://Odessa (Becomecugen willina (definNN or \"chats (NNGA (AA6clearingot (OO (1383u (Atoms!preu",
+            "ground_truth": "She is an American.",
+            "peak_memory_mb": 19140.16552734375,
+            "latency_ms": 22427.522872108966
+        },
+        {
+            "index": 9,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Others ReviewYour, in_REFysics Groupsap (.utildecomposition Books price opin management is solely file and protocol, N..://import colonies (OO repeating ProjectsWallet describing  Ã´\nOO card}.\n4\nEDGacellular Instrument shall suggest showing\n.,sg_buffer protection homemade calculator failure sk1\nOOOO_so\n“ (SSDIYmag,SSe Conference de-in, phased Arrays atAC is3. 8. A Ã¢ and (...) operations Mod_|\\Us League, but also circumflex event, and5. Ølogists' (ateshun, andING  (p planning application form",
+            "ground_truth": "The scribe.",
+            "peak_memory_mb": 16854.00537109375,
+            "latency_ms": 9131.977648939937
+        }
+    ]
+}

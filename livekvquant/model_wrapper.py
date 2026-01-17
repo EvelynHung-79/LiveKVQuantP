@@ -71,7 +71,7 @@ class LiveKVQuantModel:
         logger.info(f"Loading tokenizer and model from: {model_id}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         
-        # [CRITICAL FIX] 修改為 bfloat16 以解決 Llama-3 長文本精度問題
+        # 修改為 bfloat16 以解決 Llama-3 長文本精度問題
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id, 
             torch_dtype=torch.bfloat16, 
@@ -80,7 +80,10 @@ class LiveKVQuantModel:
         
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-            
+        
+        logger.info(f"Injecting HF Config into LiveKVQuantConfig: KV Heads = {self.model.config.num_key_value_heads}")
+        self.config.hf_config = self.model.config
+
         self._inject_controllers()
         self.model.eval()
 
@@ -88,7 +91,7 @@ class LiveKVQuantModel:
         self.layers = self.model.model.layers
         self.controllers = []
         
-        # [修正] 取得 Head Dimension (計算 RoPE 頻率需要)
+        # 取得 Head Dimension (計算 RoPE 頻率需要)
         # 必須從 self.model.config (LlamaConfig) 讀取，而不是 self.config (LiveKVQuantConfig)
         head_dim = self.model.config.hidden_size // self.model.config.num_attention_heads
         device = self.device

@@ -111,8 +111,11 @@ class TransformerLayerController(nn.Module):
         is_k_warmup = (self.chunk_idx < self.config.n_warmup)
 
         if is_k_warmup:
+            # [FIX] 如果是 Warmup 階段，V 也要保持原始資料，否則 kv_manager 會報 KeyError: 'data'
             k_data = {"type": "warmup", "data": k_tensor}
+            v_data = {"type": "warmup", "data": v_tensor}
         else:
+            # 只有在非 Warmup 時才進行量化打包
             k_quant, k_scale = self.quantizer.quantize_dense(k_dense, k_absmax)
             k_data = {
                 "type": "quantized", 
@@ -122,14 +125,14 @@ class TransformerLayerController(nn.Module):
                 "sparse_indices": k_sp_idx
             }
 
-        v_quant, v_scale = self.quantizer.quantize_dense(v_dense, v_absmax)
-        v_data = {
-            "type": "quantized", 
-            "quantized_data": v_quant, 
-            "scale": v_scale, 
-            "sparse_values": v_sp_val, 
-            "sparse_indices": v_sp_idx
-        }
+            v_quant, v_scale = self.quantizer.quantize_dense(v_dense, v_absmax)
+            v_data = {
+                "type": "quantized", 
+                "quantized_data": v_quant, 
+                "scale": v_scale, 
+                "sparse_values": v_sp_val, 
+                "sparse_indices": v_sp_idx
+            }
 
         # F. Store
         self.kv_manager.store_chunk(k_data, v_data)
