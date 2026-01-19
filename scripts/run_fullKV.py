@@ -141,6 +141,8 @@ def evaluate_single_task(model, tokenizer, args, task_name, profiler):
                 "peak_memory_mb": perf_metrics.peak_memory_mb,
                 "latency_ms": perf_metrics.total_latency_ms
             })
+            if i % 10 == 0:
+                logger.info(f"Sample {i} | {metric_name}: {score:.4f} | Latency: {perf_metrics.total_latency_ms:.2f} ms")
 
         except Exception as e:
             logger.error(f"Error at sample {i}: {e}")

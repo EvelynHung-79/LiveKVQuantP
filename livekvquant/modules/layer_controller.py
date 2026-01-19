@@ -38,22 +38,25 @@ class TransformerLayerController(nn.Module):
     def forward(self, q_tensor, k_tensor, v_tensor, position_ids=None):
         
         # === 0. Bypass 機制 (Warmup Layers) ===
-        should_bypass = (self.layer_idx < self.config.quant_start_layer)
-        
-        if should_bypass:
+        if self.layer_idx < self.config.quant_start_layer:
+            # [FIX] 這裡必須是「先算、後存」，且必須傳入 current_k
+            # 這樣 AttentionCore 才會知道要走 PyTorch Fallback 路徑
+            attn_output = self.attn_core.compute_attention(
+                q_tensor, self.kv_manager, 
+                current_k=k_tensor, # <--- 關鍵修正：傳入 current_k
+                current_v=v_tensor,
+                rotary_emb_module=self.rotary_emb_module, 
+                position_ids=position_ids
+            )
+            
+            # 算完之後再存入，供未來使用
             k_data = {"type": "warmup", "data": k_tensor}
             v_data = {"type": "warmup", "data": v_tensor}
             self.kv_manager.store_chunk(k_data, v_data)
             
-            return self.attn_core.compute_attention(
-                q_tensor, 
-                self.kv_manager, 
-                rotary_emb_module=self.rotary_emb_module, 
-                position_ids=position_ids
-            )
+            return attn_output
 
-        # === 1. [優先] 計算 Attention (使用原始 BF16) ===
-        # 這是為了確保精度：使用無損的當前 token 進行計算
+        # === 1. 正常層：先計算 Attention (PyTorch Path) ===
         attn_output = self.attn_core.compute_attention(
             q_tensor, 
             self.kv_manager,
@@ -63,9 +66,8 @@ class TransformerLayerController(nn.Module):
             position_ids=position_ids
         )
 
-        # === 2. 量化流程 (為了存給未來使用) ===
+        # === 2. 量化與儲存流程 ===
         SINK_LENGTH = 4
-        
         k_to_isolate = k_tensor.clone()
         v_to_isolate = v_tensor.clone()
         
@@ -78,13 +80,11 @@ class TransformerLayerController(nn.Module):
 
         # B. Outlier Isolation
         if is_decoding_step:
-            # Decoding: 跳過 isolate，避免把唯一 token 當 outlier
             k_dense = k_to_isolate
             v_dense = v_to_isolate
             k_sp_val, k_sp_idx = torch.empty(0, device=k_tensor.device), torch.empty(0, device=k_tensor.device)
             v_sp_val, v_sp_idx = torch.empty(0, device=v_tensor.device), torch.empty(0, device=v_tensor.device)
         else:
-            # Prefill: 正常執行
             k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(k_to_isolate, outlier_dim=-2)
             v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(v_to_isolate, outlier_dim=-1)
 
@@ -131,7 +131,6 @@ class TransformerLayerController(nn.Module):
             "sparse_indices": v_sp_idx
         }
 
-        # F. Store
         self.kv_manager.store_chunk(k_data, v_data)
         
         return attn_output
