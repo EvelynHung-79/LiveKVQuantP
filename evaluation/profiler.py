@@ -29,7 +29,7 @@ class MemoryProfiler:
 
     def start(self):
         """開始測量：重置記憶體統計，記錄開始時間"""
-        torch.cuda.empty_cache()
+        # torch.cuda.empty_cache()
         torch.cuda.reset_peak_memory_stats()
         torch.cuda.synchronize() # 確保之前的運算都結束
         self.start_time = time.perf_counter()
