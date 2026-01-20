@@ -1,4 +1,5 @@
 import torch
+from collections import deque
 from ..utils.ema_utils import update_clipped_ema
 
 class StatisticsManager:
@@ -6,8 +7,7 @@ class StatisticsManager:
         self.alpha = config.ema_alpha
         self.clip_n = config.clip_factor_n
         self.mu_t_prev = None 
-        # [還原重點] 舊版預設有 History
-        self.history = []
+        self.history = deque(maxlen=100)
 
     def reset(self):
         self.mu_t_prev = None
@@ -18,8 +18,8 @@ class StatisticsManager:
         m_t = torch.amax(torch.abs(k_tensor), dim=-2, keepdim=True) 
         mu_t = update_clipped_ema(m_t, self.mu_t_prev, self.alpha, self.clip_n)
         
-        # [還原重點] 包含這個同步操作 (雖然慢，但這是你之前的版本)
-        self.history.append((m_t.detach().cpu(), mu_t.detach().cpu()))
+        # 為了避免拖慢速度，只有在真正需要 debug 時才建議開啟這行
+        # self.history.append((m_t.detach().cpu(), mu_t.detach().cpu()))
         
         self.mu_t_prev = mu_t
         return mu_t

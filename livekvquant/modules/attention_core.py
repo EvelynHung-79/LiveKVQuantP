@@ -2,8 +2,6 @@ import torch
 import torch.nn.functional as F
 import math
 from transformers.models.llama.modeling_llama import apply_rotary_pos_emb
-from ..utils.quant_utils import dequantize_symmetric
-from ..utils.outliers import restore_outliers
 
 try:
     from .kernels import fused_kv_attention, fused_value_attention
@@ -14,23 +12,6 @@ except ImportError:
 class AttentionCore:
     def __init__(self, config):
         self.config = config
-
-    def _reconstruct_tensor(self, chunk_data: dict, target_dtype: torch.dtype) -> torch.Tensor:
-        if chunk_data["type"] == "warmup":
-            return chunk_data["data"].to(dtype=target_dtype)
-        
-        dequantized = dequantize_symmetric(
-            chunk_data["quantized_data"], 
-            chunk_data["scale"]
-        )
-        
-        reconstructed = restore_outliers(
-            dequantized, 
-            chunk_data["sparse_values"], 
-            chunk_data["sparse_indices"]
-        )
-        
-        return reconstructed.to(dtype=target_dtype)
 
     def compute_attention(self, q_tensor, kv_manager, 
                           current_k=None, current_v=None, 
@@ -83,12 +64,10 @@ class AttentionCore:
                 
                 return output.unsqueeze(2)
 
-        # 2. PyTorch Fallback 路徑 (保留原樣以支援 Prefill 或 CPU)
-        k_chunks, v_chunks = kv_manager.get_all_chunks()
+        # 2. PyTorch Fallback 路徑 
         target_dtype = q_tensor.dtype
         
-        k_list = [self._reconstruct_tensor(c, target_dtype) for c in k_chunks]
-        v_list = [self._reconstruct_tensor(c, target_dtype) for c in v_chunks]
+        k_list, v_list = kv_manager.get_reconstructed_cache(target_dtype)
         
         if current_k is not None:
             k_list.append(current_k.to(dtype=target_dtype))
