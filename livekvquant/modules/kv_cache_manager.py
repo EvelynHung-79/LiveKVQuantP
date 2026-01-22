@@ -30,11 +30,6 @@ class KVCacheManager:
         k_list = [c.reconstruct(target_dtype) for c in self._k_chunks]
         v_list = [c.reconstruct(target_dtype) for c in self._v_chunks]
         return k_list, v_list
-    
-    def get_cache_view(self):
-        # 目前架構僅支援 List-based (PyTorch Path)
-        # 若需要支援 Triton，需改寫 storage 為預先分配的 Buffer
-        raise NotImplementedError("List-based manager does not support get_cache_view (Triton Path).")
 
     def clear(self):
         self._k_chunks = []
