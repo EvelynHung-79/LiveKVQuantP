@@ -23,7 +23,7 @@ set -e
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples 3
 
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples 10
-python scripts/run_liveKVQuantP.py --task_type qasper --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples 20
+python scripts/run_liveKVQuantP.py --task_type single-doc --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --chunk_size 128 --num_samples -1
 # python scripts/run_liveKVQuantP.py --task_type multifieldqa_en --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
 
 echo "All Done!"

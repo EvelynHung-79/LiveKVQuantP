@@ -9,7 +9,8 @@ class AttentionCore:
 
     def compute_attention(self, q_tensor, kv_manager, 
                           current_k=None, current_v=None, 
-                          rotary_emb_module=None, position_ids=None):
+                          rotary_emb_module=None, position_ids=None,
+                          k_is_rotated=False): # [New] 新增參數
         
         target_dtype = q_tensor.dtype
         
@@ -25,15 +26,19 @@ class AttentionCore:
         k_full = torch.cat(k_list, dim=-2)
         v_full = torch.cat(v_list, dim=-2)
         
-        # RoPE
+        # RoPE 邏輯修改
         if rotary_emb_module is not None and position_ids is not None:
-            k_len = k_full.shape[-2]
-            k_pos_ids = torch.arange(0, k_len, device=k_full.device, dtype=torch.long).unsqueeze(0)
-            cos_k, sin_k = rotary_emb_module(k_full, k_pos_ids)
-            _, k_full = apply_rotary_pos_emb(k_full, k_full, cos_k, sin_k)
-
+            # 1. 總是對 Q 進行 RoPE (因為 Q 總是當前最新的，通常還沒轉)
             cos_q, sin_q = rotary_emb_module(q_tensor, position_ids)
             q_tensor, _ = apply_rotary_pos_emb(q_tensor, q_tensor, cos_q, sin_q)
+
+            # 2. 只有在 K 還沒旋轉時，才對 K 做 RoPE
+            if not k_is_rotated:
+                k_len = k_full.shape[-2]
+                k_pos_ids = torch.arange(0, k_len, device=k_full.device, dtype=torch.long).unsqueeze(0)
+                cos_k, sin_k = rotary_emb_module(k_full, k_pos_ids)
+                _, k_full = apply_rotary_pos_emb(k_full, k_full, cos_k, sin_k)
+            # else: k_full 已經包含全量的 Post-RoPE Keys，直接使用
         
         # GQA Expand
         num_q_heads = q_tensor.size(1)
