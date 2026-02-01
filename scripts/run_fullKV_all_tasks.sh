@@ -27,3 +27,6 @@ python scripts/run_liveKVQuantP.py --task_type single-doc --ema_alpha 0.2 --clip
 # python scripts/run_liveKVQuantP.py --task_type multifieldqa_en --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
 
 echo "All Done!"
+
+# To run this script in the background and log output to a file, use:
+# nohup bash scripts/run_fullKV_all_tasks.sh > run_log.txt 2>&1 &
