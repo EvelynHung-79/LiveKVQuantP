@@ -48,29 +48,6 @@ class LiveKVQuantModel:
         self._inject_controllers()
         self.model.eval()
 
-    @staticmethod
-    def _patch_rope_frequency(module, head_dim, device):
-        """
-        [Refactor] 提取 RoPE Patch 邏輯。
-        修正 RoPE 的頻率設定 (Base=500000.0) 以支援長文本，並強制更新緩存。
-        """
-        try:
-            base = 500000.0
-            inv_freq = 1.0 / (base ** (torch.arange(0, head_dim, 2, dtype=torch.float32, device=device) / head_dim))
-            
-            if hasattr(module, "inv_freq"):
-                # 保持原始 dtype (通常是 float32)
-                orig_dtype = module.inv_freq.dtype if isinstance(module.inv_freq, torch.Tensor) else torch.float32
-                module.inv_freq = inv_freq.to(dtype=orig_dtype)
-                
-                # 清除緩存，強制模型重新計算
-                if hasattr(module, "cos_cached"): module.cos_cached = None
-                if hasattr(module, "sin_cached"): module.sin_cached = None
-                if hasattr(module, "_cos_cached"): module._cos_cached = None
-                if hasattr(module, "_sin_cached"): module._sin_cached = None
-        except Exception as e:
-            logger.error(f"Failed to patch RoPE for module {module}: {e}")
-
     def _inject_controllers(self):
         """
         將 LayerController 注入到模型的每一層 Attention 中，並替換 Forward 方法。
@@ -89,7 +66,6 @@ class LiveKVQuantModel:
         global_rotary_emb = None
         if hasattr(self.model.model, "rotary_emb"):
             global_rotary_emb = self.model.model.rotary_emb
-            self._patch_rope_frequency(global_rotary_emb, head_dim, self.device)
 
         # 2. Inject per layer
         for i, layer in enumerate(self.layers):
@@ -99,7 +75,6 @@ class LiveKVQuantModel:
             rope_module = None
             if hasattr(layer.self_attn, "rotary_emb"):
                 rope_module = layer.self_attn.rotary_emb
-                self._patch_rope_frequency(rope_module, head_dim, self.device)
             
             # Link RoPE to Controller
             if rope_module is None and global_rotary_emb is not None:

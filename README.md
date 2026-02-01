@@ -68,6 +68,8 @@ python scripts/run_liveKVQuantP.py \
   --model_id meta-llama/Meta-Llama-3-8B-Instruct \
   --input_mode dummy \
   --chunk_size 512
+
+nohup bash scripts/run_fullKV_all_tasks.sh > run_log.txt 2>&1 &
 ```
 
 **模式 B：LongBench 資料集評估**
