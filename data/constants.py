@@ -59,6 +59,13 @@ TASK_OUTPUT_LEN = {
     "gov_report": 512,
     "qmsum": 512,
     "multi_news": 512,
+    "trec": 64,
+    "triviaqa": 32,
+    "samsum": 128,
+    "passage_count": 32,
+    "passage_retrieval_en": 32,
+    "lcc": 64,
+    "repobench-p": 64
 }
 
 def get_task_list(version, task_type):
