@@ -9,3 +9,6 @@ __pycache__
 data/longbench_v1/
 data/longbench_v2/
 ema_plots/
+
+#Finch Folder
+baselines/finch/finchenv/

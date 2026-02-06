@@ -17,7 +17,7 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
 
 1. **建立並啟用虛擬環境（強烈建議）：**
    ```bash
-   python -m venv venv
+   python3.11 -m venv venv
    source venv/bin/activate      # Linux/Mac
    # venv\Scripts\activate       # Windows
    ```

@@ -1,0 +1,38 @@
+nohup: ignoring input
+[[36m2026-02-06 20:35:20,181[0m][[34maccelerate.utils.other[0m][[33mWARNING[0m] - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.[0m
+[[36m2026-02-06 20:35:20,181[0m][[34m__main__[0m][[32mINFO[0m] - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+[0m
+[[36m2026-02-06 20:35:20,181[0m][[34m__main__[0m][[32mINFO[0m] - Instantiating <transformers.AutoTokenizer.from_pretrained>[0m
+[[36m2026-02-06 20:35:20,999[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:21,220[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:21,431[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:21,630[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:21,835[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:22,041[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:22,248[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:22,459[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"[0m
+[[36m2026-02-06 20:35:22,655[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:22,862[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:23,531[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:23,742[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: GET https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:23,767[0m][[34m__main__[0m][[32mINFO[0m] - Instantiating <context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained>[0m
+[[36m2026-02-06 20:35:24,260[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:24,471[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json "HTTP/1.1 200 OK"[0m
+
+Loading weights: 100%|██████████| 291/291 [00:02<00:00, 123.05it/s, Materializing param=model.norm.weight]
+[[36m2026-02-06 20:35:28,062[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:28,281[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/generation_config.json "HTTP/1.1 200 OK"[0m
+[[36m2026-02-06 20:35:28,489[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct/resolve/main/custom_generate/generate.py "HTTP/1.1 307 Temporary Redirect"[0m
+[[36m2026-02-06 20:35:28,709[0m][[34mhttpx[0m][[32mINFO[0m] - HTTP Request: HEAD https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"[0m
+[[36m2026-02-06 20:35:28,710[0m][[34m__main__[0m][[32mINFO[0m] - Instantiating <context_compression.trainers.trainer.Trainer>[0m
+Error executing job with overrides: ['+experiments_longbench_narrativeqa=evaluate_llama_compress_zeroshot_qa_narrativeqa', 'custom_datasets=narrative_qa_custom', 'models.pretrained_model_name_or_path=meta-llama/Meta-Llama-3.1-8B-Instruct', 'tokenizers.pretrained_model_name_or_path=meta-llama/Meta-Llama-3.1-8B-Instruct', 'trainers.evaluation_config.output_dir=./results/llama3_narrativeqa']
+Error locating target 'context_compression.trainers.trainer.Trainer', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: trainers
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
