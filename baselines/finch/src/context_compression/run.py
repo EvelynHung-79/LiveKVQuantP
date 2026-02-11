@@ -7,6 +7,10 @@ import transformers
 from accelerate import Accelerator
 from omegaconf import DictConfig
 import torch
+from omegaconf import OmegaConf
+
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("transformers").setLevel(logging.WARNING)
 
 # from nn_core.common import PROJECT_ROOT
 from pathlib import Path
@@ -62,7 +66,7 @@ def run(cfg: DictConfig):
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
-        level=logging.INFO,
+        level=logging.WARNING,
     )
     logger.info(accelerator.state, main_process_only=False)
     if accelerator.is_local_main_process:
@@ -77,9 +81,21 @@ def run(cfg: DictConfig):
 
     # Instantiate model
     logger.info(f"Instantiating <{cfg.models['_target_']}>")
+    # 強制注入與 LiveKVQuantP 一致的設定
+
+    OmegaConf.set_struct(cfg.models, False) # 允許新增 key
+    cfg.models.torch_dtype = "bfloat16"
+    cfg.models.device_map = "auto"
+    cfg.models.low_cpu_mem_usage = True # 你的方法沒用，但能解決 Finch 目前的加載崩潰問題
+
+    logger.info(f"Model config check - torch_dtype: {cfg.models.get('torch_dtype', 'Not Found')}")
+    logger.info(f"Model config check - device_map: {cfg.models.get('device_map', 'Not Found')}")
     model = hydra.utils.instantiate(cfg.models)
-    if model.dtype == torch.float32:
-        model = model.half()
+    logger.info(f"Actual Model dtype: {model.dtype}")
+    logger.info(f"Model is on device: {model.device}")
+
+    # if model.dtype == torch.float32:
+    #     model = model.half()
     if not cfg.trainers.mode == "eval":
         print_trainable_parameters(model=model)
 

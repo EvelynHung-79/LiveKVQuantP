@@ -1,7 +1,12 @@
 _target_: "context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
 pretrained_model_name_or_path: None
+torch_dtype: bfloat16
+device_map: auto
+trust_remote_code: True
+# 確保以下參數「不存在」或為 False，避免觸發 bitsandbytes
+load_in_4bit: False
+load_in_8bit: False
 config:
   _target_: "transformers.AutoConfig.from_pretrained"
   pretrained_model_name_or_path: None
   trust_remote_code: True
-trust_remote_code: True

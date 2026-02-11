@@ -1,13 +1,26 @@
+# _target_: "context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
+# pretrained_model_name_or_path: None
+# config:
+#   _target_: "transformers.AutoConfig.from_pretrained"
+#   pretrained_model_name_or_path: None
+#   trust_remote_code: True
+# trust_remote_code: True
+# quantization_config:
+#   _target_: "transformers.BitsAndBytesConfig"
+#   load_in_4bit: True
+#   bnb_4bit_quant_type: "nf4"
+#   bnb_4bit_compute_dtype: float16
+#   bnb_4bit_use_double_quant: True
+
+# 請將內容修改為與 causal_llama_compress_model.yaml 一致，並明確關閉量化
 _target_: "context_compression.models.modeling_llama.LlamaForCompressedCausalLM.from_pretrained"
 pretrained_model_name_or_path: None
+torch_dtype: bfloat16
+device_map: auto
+trust_remote_code: True
+load_in_4bit: False  # 強制關閉
+load_in_8bit: False  # 強制關閉
 config:
   _target_: "transformers.AutoConfig.from_pretrained"
   pretrained_model_name_or_path: None
   trust_remote_code: True
-trust_remote_code: True
-quantization_config:
-  _target_: "transformers.BitsAndBytesConfig"
-  load_in_4bit: True
-  bnb_4bit_quant_type: "nf4"
-  bnb_4bit_compute_dtype: float16
-  bnb_4bit_use_double_quant: True
