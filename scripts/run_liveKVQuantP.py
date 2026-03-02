@@ -59,6 +59,11 @@ def main():
         logger.error(f"Model load failed: {e}")
         return
     
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+        allocated_mem_gb = torch.cuda.memory_allocated() / (1024 ** 3)
+        logger.info(f"📊 [Memory] GPU Allocated (Model + Context): {allocated_mem_gb:.2f} GB")
+
     # 2. Components
     profiler = MemoryProfiler()
     evaluator = LongBenchEvaluator(

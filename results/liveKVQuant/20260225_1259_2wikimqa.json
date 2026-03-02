@@ -1,0 +1,1823 @@
+{
+    "task": "2wikimqa",
+    "version": "v1",
+    "args": {
+        "input_mode": "longbench",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "2wikimqa",
+        "num_samples": -1,
+        "output_len": 64,
+        "chunk_size": 512,
+        "n_warmup": 1,
+        "bits": 4,
+        "ema_alpha": 0.2,
+        "clip_factor_n": 4.0,
+        "outlier_ratio": 0.01
+    },
+    "avg_score": 0.4388137963401122,
+    "avg_latency_ms": 5721.553256389452,
+    "max_peak_memory_mb": 18059.5107421875,
+    "details": [
+        {
+            "index": 0,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Ozalj",
+            "ground_truth": "Ozalj",
+            "peak_memory_mb": 16550.72607421875,
+            "latency_ms": 5598.002854996594
+        },
+        {
+            "index": 1,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Elizabeth",
+            "ground_truth": "John the Baptist",
+            "peak_memory_mb": 16538.5048828125,
+            "latency_ms": 4396.036815014668
+        },
+        {
+            "index": 2,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The film Man at Bath is directed by Christophe Honoré, however, no information is provided about the director of the film working at a particular location.",
+            "ground_truth": "Cahiers du cinéma",
+            "peak_memory_mb": 16458.66845703125,
+            "latency_ms": 8550.98208997515
+        },
+        {
+            "index": 3,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "no",
+            "peak_memory_mb": 17178.5673828125,
+            "latency_ms": 8398.52202500333
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "c. 1532",
+            "ground_truth": "1510",
+            "peak_memory_mb": 16618.3388671875,
+            "latency_ms": 5230.337678018259
+        },
+        {
+            "index": 5,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "George Sondes, 1st Earl of Feversham",
+            "ground_truth": "Edward Watson",
+            "peak_memory_mb": 16618.33984375,
+            "latency_ms": 6557.619710016297
+        },
+        {
+            "index": 6,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1341",
+            "ground_truth": "16 September 1360",
+            "peak_memory_mb": 16618.3408203125,
+            "latency_ms": 4943.314353993628
+        },
+        {
+            "index": 7,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Alboin",
+            "ground_truth": "Cunimund",
+            "peak_memory_mb": 17178.56689453125,
+            "latency_ms": 8373.704800993437
+        },
+        {
+            "index": 8,
+            "score": 0.8571428571428571,
+            "metric": "F1",
+            "output": "St Patrick's College, Dublin",
+            "ground_truth": "St Patrick's College",
+            "peak_memory_mb": 16378.70751953125,
+            "latency_ms": 4145.4231920070015
+        },
+        {
+            "index": 9,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Bob Jones University",
+            "ground_truth": "Bob Jones University",
+            "peak_memory_mb": 16618.3408203125,
+            "latency_ms": 5138.133177009877
+        },
+        {
+            "index": 10,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The House Of The Seven Hawks",
+            "ground_truth": "The House Of The Seven Hawks",
+            "peak_memory_mb": 17739.169921875,
+            "latency_ms": 13717.89717199863
+        },
+        {
+            "index": 11,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Margaret of Provence",
+            "ground_truth": "Marie of Hohenstaufen",
+            "peak_memory_mb": 16431.14599609375,
+            "latency_ms": 3639.6954740048386
+        },
+        {
+            "index": 12,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "William Busac",
+            "ground_truth": "Guy II, Count of Soissons",
+            "peak_memory_mb": 15817.1064453125,
+            "latency_ms": 1459.3723299913108
+        },
+        {
+            "index": 13,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1805",
+            "ground_truth": "26 April 1872",
+            "peak_memory_mb": 16297.6201171875,
+            "latency_ms": 3164.6779099828564
+        },
+        {
+            "index": 14,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "United States",
+            "ground_truth": "America",
+            "peak_memory_mb": 16458.66943359375,
+            "latency_ms": 4126.916158973472
+        },
+        {
+            "index": 15,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Edward Buzzell",
+            "ground_truth": "Ona Munson",
+            "peak_memory_mb": 17739.16845703125,
+            "latency_ms": 12584.844677010551
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1993 or 1971",
+            "ground_truth": "The Death Of Black King",
+            "peak_memory_mb": 16416.72119140625,
+            "latency_ms": 1949.9108739837538
+        },
+        {
+            "index": 17,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "no",
+            "peak_memory_mb": 16778.13623046875,
+            "latency_ms": 5494.93546798476
+        },
+        {
+            "index": 18,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "no",
+            "peak_memory_mb": 15953.77880859375,
+            "latency_ms": 642.4754030012991
+        },
+        {
+            "index": 19,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Mysore",
+            "ground_truth": "Mysore",
+            "peak_memory_mb": 16297.62158203125,
+            "latency_ms": 3365.229590999661
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Hamar",
+            "ground_truth": "Kristiania",
+            "peak_memory_mb": 16101.29443359375,
+            "latency_ms": 2327.077758993255
+        },
+        {
+            "index": 21,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Lee Strasberg Theatre and Film Institute.",
+            "ground_truth": "Lee Strasberg Theatre and Film Institute",
+            "peak_memory_mb": 17098.482421875,
+            "latency_ms": 9205.791524000233
+        },
+        {
+            "index": 22,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Larry Cohen",
+            "ground_truth": "Hell Up In Harlem",
+            "peak_memory_mb": 17418.8251953125,
+            "latency_ms": 10044.475671980763
+        },
+        {
+            "index": 23,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Cipriano Castro.",
+            "ground_truth": "Cipriano Castro",
+            "peak_memory_mb": 16778.138671875,
+            "latency_ms": 6520.708833995741
+        },
+        {
+            "index": 24,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Jack Arnold",
+            "ground_truth": "Monster On The Campus",
+            "peak_memory_mb": 16858.224609375,
+            "latency_ms": 6362.0187919877935
+        },
+        {
+            "index": 25,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Altuğ Çelikbilek",
+            "ground_truth": "Altuğ Çelikbilek",
+            "peak_memory_mb": 16011.1953125,
+            "latency_ms": 1446.5331849933136
+        },
+        {
+            "index": 26,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "\"Jugband Blues\"",
+            "ground_truth": "Jugband Blues",
+            "peak_memory_mb": 16217.53515625,
+            "latency_ms": 3321.173053991515
+        },
+        {
+            "index": 27,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16377.7080078125,
+            "latency_ms": 3560.724269016646
+        },
+        {
+            "index": 28,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Rathold Rátót",
+            "ground_truth": "Leustach Rátót",
+            "peak_memory_mb": 16538.5029296875,
+            "latency_ms": 4925.457803008612
+        },
+        {
+            "index": 29,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Kathmandu Valley",
+            "ground_truth": "Nepal",
+            "peak_memory_mb": 16618.3388671875,
+            "latency_ms": 5199.440015014261
+        },
+        {
+            "index": 30,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "Arthur Acheson, 1st Earl of Gosford",
+            "ground_truth": "Archibald Acheson, 2nd Earl of Gosford",
+            "peak_memory_mb": 16538.5048828125,
+            "latency_ms": 6043.153024016647
+        },
+        {
+            "index": 31,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "J. Paul Getty",
+            "ground_truth": "Jean Paul Getty",
+            "peak_memory_mb": 16778.13623046875,
+            "latency_ms": 5984.943626011955
+        },
+        {
+            "index": 32,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "output": "In Michael's case, the answer is: Goring-on-Thames, Oxfordshire",
+            "ground_truth": "Goring-on-Thames, Oxfordshire",
+            "peak_memory_mb": 17979.42724609375,
+            "latency_ms": 18730.919267982244
+        },
+        {
+            "index": 33,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16544.27294921875,
+            "latency_ms": 2740.579593984876
+        },
+        {
+            "index": 34,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Wooden Crosses",
+            "ground_truth": "Wooden Crosses",
+            "peak_memory_mb": 16458.6669921875,
+            "latency_ms": 4208.660751988646
+        },
+        {
+            "index": 35,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "Above Rubies (1932) came out earlier than The Magic Aster (2009).",
+            "ground_truth": "Above Rubies",
+            "peak_memory_mb": 16194.64697265625,
+            "latency_ms": 4628.00605801749
+        },
+        {
+            "index": 36,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Longshot",
+            "ground_truth": "Blue Blood And Red",
+            "peak_memory_mb": 16538.5029296875,
+            "latency_ms": 4509.033918991918
+        },
+        {
+            "index": 37,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "Perth, Western Australia.",
+            "ground_truth": "Castlemaine, Victoria, Australia",
+            "peak_memory_mb": 16137.44970703125,
+            "latency_ms": 2946.149619994685
+        },
+        {
+            "index": 38,
+            "score": 0.3636363636363636,
+            "metric": "F1",
+            "output": "Paul De Scherff (14 July 1820) was born earlier than Lyudmyla Olyanovska (20 February 1993).",
+            "ground_truth": "Lyudmyla Olyanovska",
+            "peak_memory_mb": 16938.3095703125,
+            "latency_ms": 11705.309678975027
+        },
+        {
+            "index": 39,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Yıldız Palace.",
+            "ground_truth": "Constantinople",
+            "peak_memory_mb": 16538.5048828125,
+            "latency_ms": 5142.769645026419
+        },
+        {
+            "index": 40,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "It is not specified in the passage what the place of birth of Charles the Fat is.",
+            "ground_truth": "East Francia",
+            "peak_memory_mb": 16538.505859375,
+            "latency_ms": 7007.264064974152
+        },
+        {
+            "index": 41,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Tex And The Lord Of The Deep",
+            "ground_truth": "Henry Goes Arizona",
+            "peak_memory_mb": 16057.6142578125,
+            "latency_ms": 2793.4537719993386
+        },
+        {
+            "index": 42,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Wales",
+            "ground_truth": "United Kingdom",
+            "peak_memory_mb": 17339.73779296875,
+            "latency_ms": 9234.064472024329
+        },
+        {
+            "index": 43,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Djamaluddin Malik was born on 13 February 1917, Leroy Prinz was not mentioned in any of the passages but he directed All",
+            "ground_truth": "All-American Co-Ed",
+            "peak_memory_mb": 16698.177734375,
+            "latency_ms": 10102.284527994925
+        },
+        {
+            "index": 44,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Buenos Aires.",
+            "ground_truth": "Buenos Aires",
+            "peak_memory_mb": 16377.7080078125,
+            "latency_ms": 4060.4247829760425
+        },
+        {
+            "index": 45,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Elizabeth Helene von Vieregg",
+            "ground_truth": "Charlotte Amalie of Hesse-Kassel",
+            "peak_memory_mb": 16938.30859375,
+            "latency_ms": 7439.922135003144
+        },
+        {
+            "index": 46,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Heidelberg.",
+            "ground_truth": "Brunswick",
+            "peak_memory_mb": 16433.29052734375,
+            "latency_ms": 3929.8506699851714
+        },
+        {
+            "index": 47,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Rupilia Faustina",
+            "ground_truth": "Vibia Sabina",
+            "peak_memory_mb": 16362.65966796875,
+            "latency_ms": 3863.958318979712
+        },
+        {
+            "index": 48,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Riding The California Trail",
+            "ground_truth": "Bajo Otro Sol",
+            "peak_memory_mb": 15756.2470703125,
+            "latency_ms": 1359.8013969894964
+        },
+        {
+            "index": 49,
+            "score": 0.3636363636363636,
+            "metric": "F1",
+            "output": "Lisa Azuelos is the daughter of French singer Marie Laforêt.",
+            "ground_truth": "Marie Laforêt",
+            "peak_memory_mb": 16217.53564453125,
+            "latency_ms": 4416.097973007709
+        },
+        {
+            "index": 50,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Val Kilmer",
+            "ground_truth": "Sandra Nelson",
+            "peak_memory_mb": 17739.1689453125,
+            "latency_ms": 12594.60031701019
+        },
+        {
+            "index": 51,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "May 19, 1669",
+            "ground_truth": "May 19, 1669",
+            "peak_memory_mb": 16618.34130859375,
+            "latency_ms": 5738.545184984105
+        },
+        {
+            "index": 52,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Pamplona.",
+            "ground_truth": "Palencia",
+            "peak_memory_mb": 16297.6220703125,
+            "latency_ms": 3648.523852985818
+        },
+        {
+            "index": 53,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Miley Naa Miley Hum (2011)",
+            "ground_truth": "Miley Naa Miley Hum",
+            "peak_memory_mb": 16307.8779296875,
+            "latency_ms": 4530.916249990696
+        },
+        {
+            "index": 54,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Leonard Katzman",
+            "ground_truth": "Tom Mix In Arabia",
+            "peak_memory_mb": 16360.06201171875,
+            "latency_ms": 3706.4911060151644
+        },
+        {
+            "index": 55,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Seven In The Sun",
+            "ground_truth": "Seven In The Sun",
+            "peak_memory_mb": 16137.44921875,
+            "latency_ms": 2744.9487330159172
+        },
+        {
+            "index": 56,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dr. Socrates",
+            "ground_truth": "Dr. Socrates",
+            "peak_memory_mb": 16458.6669921875,
+            "latency_ms": 4222.801858006278
+        },
+        {
+            "index": 57,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Changeland",
+            "ground_truth": "Changeland",
+            "peak_memory_mb": 17018.6455078125,
+            "latency_ms": 7462.39942900138
+        },
+        {
+            "index": 58,
+            "score": 0.21052631578947367,
+            "metric": "F1",
+            "output": "Peter Rosegger was born on 31 July 1843 and Ruel Redinger was born on December 31, 1896.",
+            "ground_truth": "Ruel Redinger",
+            "peak_memory_mb": 16082.0380859375,
+            "latency_ms": 5002.075357013382
+        },
+        {
+            "index": 59,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Vasily Karatygin",
+            "ground_truth": "Alexandra Kolosova",
+            "peak_memory_mb": 16137.4501953125,
+            "latency_ms": 2904.92448801524
+        },
+        {
+            "index": 60,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No spouse is mentioned in passage 7.",
+            "ground_truth": "Jessi Colter",
+            "peak_memory_mb": 17178.56689453125,
+            "latency_ms": 9413.32041102578
+        },
+        {
+            "index": 61,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16151.90283203125,
+            "latency_ms": 2065.523346012924
+        },
+        {
+            "index": 62,
+            "score": 0.3076923076923077,
+            "metric": "F1",
+            "output": "Erich Haenisch died in 1966, and William Pooley died in 1629.",
+            "ground_truth": "William Pooley",
+            "peak_memory_mb": 15977.77734375,
+            "latency_ms": 3954.2187299812213
+        },
+        {
+            "index": 63,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Swedish",
+            "ground_truth": "Sweden",
+            "peak_memory_mb": 16618.34130859375,
+            "latency_ms": 4951.197977992706
+        },
+        {
+            "index": 64,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 15894.91015625,
+            "latency_ms": 1241.7433200171217
+        },
+        {
+            "index": 65,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Melody of the World.",
+            "ground_truth": "Melody Of The World",
+            "peak_memory_mb": 16618.3408203125,
+            "latency_ms": 5491.079650993925
+        },
+        {
+            "index": 66,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Seville.",
+            "ground_truth": "Madrid",
+            "peak_memory_mb": 16178.62841796875,
+            "latency_ms": 2786.1074579996057
+        },
+        {
+            "index": 67,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No answer is available based on the given passages, as there is no mention of the director's mother in the passage about the film Atomised. However, the",
+            "ground_truth": "Gisela Elsner",
+            "peak_memory_mb": 16217.53515625,
+            "latency_ms": 6763.592244999018
+        },
+        {
+            "index": 68,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "William A. Wellman",
+            "ground_truth": "La Belle Américaine",
+            "peak_memory_mb": 16377.7080078125,
+            "latency_ms": 4052.5969809968956
+        },
+        {
+            "index": 69,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Oklahoma City, Oklahoma",
+            "ground_truth": "Oklahoma City, Oklahoma",
+            "peak_memory_mb": 16217.53564453125,
+            "latency_ms": 3348.3009670162573
+        },
+        {
+            "index": 70,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dubai.",
+            "ground_truth": "Dubai",
+            "peak_memory_mb": 16458.66748046875,
+            "latency_ms": 4111.925384000642
+        },
+        {
+            "index": 71,
+            "score": 0.4444444444444445,
+            "metric": "F1",
+            "output": "La Trinité, a commune within the Nice metropolitan area.",
+            "ground_truth": "La Trinité",
+            "peak_memory_mb": 16618.34130859375,
+            "latency_ms": 6607.839243981289
+        },
+        {
+            "index": 72,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Prince Albert of Prussia",
+            "ground_truth": "Prince Albert of Prussia",
+            "peak_memory_mb": 16538.5029296875,
+            "latency_ms": 4792.265247000614
+        },
+        {
+            "index": 73,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "peak_memory_mb": 15834.91064453125,
+            "latency_ms": 604.9507090065163
+        },
+        {
+            "index": 74,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Beaulieu-sur-Loire",
+            "ground_truth": "Banbury",
+            "peak_memory_mb": 16354.86572265625,
+            "latency_ms": 4025.467042985838
+        },
+        {
+            "index": 75,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Sir Paul Gore, 1st Baronet",
+            "ground_truth": "Sir Paul Gore, 1st Baronet",
+            "peak_memory_mb": 16137.4501953125,
+            "latency_ms": 3353.3680840046145
+        },
+        {
+            "index": 76,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Egypt",
+            "ground_truth": "Fatimid caliphate",
+            "peak_memory_mb": 17418.82275390625,
+            "latency_ms": 9327.267051994568
+        },
+        {
+            "index": 77,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dayton, Ohio.",
+            "ground_truth": "Dayton, Ohio",
+            "peak_memory_mb": 16377.70654296875,
+            "latency_ms": 3900.7208140101284
+        },
+        {
+            "index": 78,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Ona Munson",
+            "ground_truth": "Ona Munson",
+            "peak_memory_mb": 17899.34130859375,
+            "latency_ms": 14221.780674008187
+        },
+        {
+            "index": 79,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Drover'S Sweetheart",
+            "ground_truth": "The Drover'S Sweetheart",
+            "peak_memory_mb": 16501.08056640625,
+            "latency_ms": 3795.5034879851155
+        },
+        {
+            "index": 80,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "North Karnataka",
+            "ground_truth": "Tumkur",
+            "peak_memory_mb": 16297.623046875,
+            "latency_ms": 3365.9867940004915
+        },
+        {
+            "index": 81,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Det Sande Ansigt.",
+            "ground_truth": "Det Sande Ansigt",
+            "peak_memory_mb": 16511.79443359375,
+            "latency_ms": 4831.194377009524
+        },
+        {
+            "index": 82,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Riyad Vinci Wadia",
+            "ground_truth": "Bomgay",
+            "peak_memory_mb": 16458.669921875,
+            "latency_ms": 4752.845582988812
+        },
+        {
+            "index": 83,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Haarlem",
+            "ground_truth": "Preslav",
+            "peak_memory_mb": 16767.4931640625,
+            "latency_ms": 5640.090358996531
+        },
+        {
+            "index": 84,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Pyrammmid",
+            "ground_truth": "Revolt Of The Praetorians",
+            "peak_memory_mb": 16297.6201171875,
+            "latency_ms": 3470.881619025022
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "yes",
+            "peak_memory_mb": 17777.14013671875,
+            "latency_ms": 12440.711864997866
+        },
+        {
+            "index": 86,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "arsenic poisoning",
+            "ground_truth": "poisoning",
+            "peak_memory_mb": 16778.1357421875,
+            "latency_ms": 5747.276982001495
+        },
+        {
+            "index": 87,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "American",
+            "ground_truth": "America",
+            "peak_memory_mb": 16767.4931640625,
+            "latency_ms": 5358.164197998121
+        },
+        {
+            "index": 88,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Hawai'i",
+            "ground_truth": "Kingdom of Hawaii",
+            "peak_memory_mb": 17498.91259765625,
+            "latency_ms": 10855.41988501791
+        },
+        {
+            "index": 89,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "1964 or 2007 \nX-Paroni came out earlier.",
+            "ground_truth": "X-Paroni",
+            "peak_memory_mb": 16319.91357421875,
+            "latency_ms": 3719.0312129969243
+        },
+        {
+            "index": 90,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Vasantha Raagam",
+            "ground_truth": "Vasantha Raagam",
+            "peak_memory_mb": 16778.13818359375,
+            "latency_ms": 6507.472874975065
+        },
+        {
+            "index": 91,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Lee Kun-hee",
+            "ground_truth": "Lee Byung-chul",
+            "peak_memory_mb": 16858.22412109375,
+            "latency_ms": 6670.102336007403
+        },
+        {
+            "index": 92,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "Charles of Valois",
+            "ground_truth": "John I, Duke of Bourbon",
+            "peak_memory_mb": 16538.5048828125,
+            "latency_ms": 4827.662533993134
+        },
+        {
+            "index": 93,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "23 October 1893",
+            "ground_truth": "27 June 1839",
+            "peak_memory_mb": 17847.7099609375,
+            "latency_ms": 13894.455910980469
+        },
+        {
+            "index": 94,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "California, USA",
+            "ground_truth": "Gura Humorului",
+            "peak_memory_mb": 16474.07421875,
+            "latency_ms": 3707.217565999599
+        },
+        {
+            "index": 95,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Jacques Lanzmann",
+            "ground_truth": "Françoise Hardy",
+            "peak_memory_mb": 16698.17578125,
+            "latency_ms": 5720.627808012068
+        },
+        {
+            "index": 96,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Charles Wheatstone.",
+            "ground_truth": "Charles Wheatstone",
+            "peak_memory_mb": 17279.359375,
+            "latency_ms": 9303.092055022717
+        },
+        {
+            "index": 97,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "Washington, D.C.",
+            "ground_truth": "Washington",
+            "peak_memory_mb": 16207.9833984375,
+            "latency_ms": 2005.5931789975148
+        },
+        {
+            "index": 98,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "London Melody",
+            "ground_truth": "London Melody",
+            "peak_memory_mb": 17660.083984375,
+            "latency_ms": 12129.523387004156
+        },
+        {
+            "index": 99,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Fernando Flaínez.",
+            "ground_truth": "Flaín Muñoz",
+            "peak_memory_mb": 16393.669921875,
+            "latency_ms": 3576.4330079837237
+        },
+        {
+            "index": 100,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Mira Sorvino",
+            "ground_truth": "Mira Sorvino",
+            "peak_memory_mb": 16458.6689453125,
+            "latency_ms": 4495.155610988149
+        },
+        {
+            "index": 101,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "yes",
+            "peak_memory_mb": 15963.49365234375,
+            "latency_ms": 1622.7970219915733
+        },
+        {
+            "index": 102,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Denmark",
+            "ground_truth": "Norway",
+            "peak_memory_mb": 16377.70654296875,
+            "latency_ms": 3564.1097229963634
+        },
+        {
+            "index": 103,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "An illness.",
+            "ground_truth": "illness",
+            "peak_memory_mb": 16479.1845703125,
+            "latency_ms": 4366.3885689747985
+        },
+        {
+            "index": 104,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Harby",
+            "ground_truth": "Harby",
+            "peak_memory_mb": 17660.08349609375,
+            "latency_ms": 11804.17013799888
+        },
+        {
+            "index": 105,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Hong Kong Film Award for Best Director",
+            "ground_truth": "Hong Kong Film Award for Best Director",
+            "peak_memory_mb": 16387.0224609375,
+            "latency_ms": 3736.5910060179885
+        },
+        {
+            "index": 106,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "3 September 1992",
+            "ground_truth": "3 September 1992",
+            "peak_memory_mb": 15897.94091796875,
+            "latency_ms": 1854.7743020171765
+        },
+        {
+            "index": 107,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Nathaniel McLenaghan",
+            "ground_truth": "Nathaniel Mclenaghan",
+            "peak_memory_mb": 16217.5341796875,
+            "latency_ms": 3245.76648499351
+        },
+        {
+            "index": 108,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "The Tisch School of the Arts.",
+            "ground_truth": "Tisch",
+            "peak_memory_mb": 16297.623046875,
+            "latency_ms": 4099.58264301531
+        },
+        {
+            "index": 109,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Cuchillos De Fuego",
+            "ground_truth": "Cuchillos De Fuego",
+            "peak_memory_mb": 16116.64892578125,
+            "latency_ms": 2781.928151991451
+        },
+        {
+            "index": 110,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Moment Of Danger",
+            "ground_truth": "Moment Of Danger",
+            "peak_memory_mb": 16458.66845703125,
+            "latency_ms": 4191.517660015961
+        },
+        {
+            "index": 111,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Rock Street Journal.",
+            "ground_truth": "De As",
+            "peak_memory_mb": 16057.61328125,
+            "latency_ms": 2411.510421981802
+        },
+        {
+            "index": 112,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Blonde from Singapore",
+            "ground_truth": "The Piper'S Price",
+            "peak_memory_mb": 16377.708984375,
+            "latency_ms": 4032.8749169711955
+        },
+        {
+            "index": 113,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16938.3076171875,
+            "latency_ms": 6467.993427009787
+        },
+        {
+            "index": 114,
+            "score": 0.3333333333333333,
+            "metric": "F1",
+            "output": "17 October 1753",
+            "ground_truth": "13 March 1753",
+            "peak_memory_mb": 16538.50390625,
+            "latency_ms": 4847.82965600607
+        },
+        {
+            "index": 115,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Frank Tuttle directed True To The Navy.",
+            "ground_truth": "No Trees In The Street",
+            "peak_memory_mb": 17098.47998046875,
+            "latency_ms": 8676.890153990826
+        },
+        {
+            "index": 116,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no information about the director of film Ninamaninja Kalpadukal in the given passages.",
+            "ground_truth": "Methala",
+            "peak_memory_mb": 16217.53515625,
+            "latency_ms": 5371.709070983343
+        },
+        {
+            "index": 117,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Alkohol",
+            "ground_truth": "Alkohol",
+            "peak_memory_mb": 16661.2939453125,
+            "latency_ms": 5323.824912018608
+        },
+        {
+            "index": 118,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Do Musafir",
+            "ground_truth": "Do Musafir",
+            "peak_memory_mb": 15905.52490234375,
+            "latency_ms": 1339.7695489984471
+        },
+        {
+            "index": 119,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "no",
+            "peak_memory_mb": 15737.0205078125,
+            "latency_ms": 990.2557239984162
+        },
+        {
+            "index": 120,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "There is no information in the given passage about the birthplace of the composers of the 1992 film \"Consenting Adults\".",
+            "ground_truth": "New York",
+            "peak_memory_mb": 16083.248046875,
+            "latency_ms": 5229.14966699318
+        },
+        {
+            "index": 121,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Contragolpe",
+            "ground_truth": "Contragolpe",
+            "peak_memory_mb": 16377.7060546875,
+            "latency_ms": 3773.940406012116
+        },
+        {
+            "index": 122,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "Nanavati Hospital, in Mumbai.",
+            "ground_truth": "Mumbai",
+            "peak_memory_mb": 16190.63330078125,
+            "latency_ms": 3439.8708700027782
+        },
+        {
+            "index": 123,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Comedians of Comedy",
+            "ground_truth": "The Comedians Of Comedy",
+            "peak_memory_mb": 16538.5029296875,
+            "latency_ms": 4955.883188988082
+        },
+        {
+            "index": 124,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Yeşim Ustaoğlu was born on 18 November 1960 in Passage 9 and directed Waiting For The Clouds. Alex Cox was",
+            "ground_truth": "Tombstone Rashomon",
+            "peak_memory_mb": 16698.1767578125,
+            "latency_ms": 10031.773799011717
+        },
+        {
+            "index": 125,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Dhuen Ki Lakeer",
+            "ground_truth": "Dhuen Ki Lakeer",
+            "peak_memory_mb": 16618.34130859375,
+            "latency_ms": 5532.237970997812
+        },
+        {
+            "index": 126,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Perdón, Viejita",
+            "ground_truth": "Perdón, Viejita",
+            "peak_memory_mb": 17739.16796875,
+            "latency_ms": 13248.977660987293
+        },
+        {
+            "index": 127,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "University of Wisconsin-Madison",
+            "ground_truth": "University of Wisconsin",
+            "peak_memory_mb": 16412.55712890625,
+            "latency_ms": 2885.063892987091
+        },
+        {
+            "index": 128,
+            "score": 0.19999999999999998,
+            "metric": "F1",
+            "output": "Dudley Russell was born on 1 December 1896, and Juan René Serrano was born on 23 February 1984.",
+            "ground_truth": "Dudley Russell",
+            "peak_memory_mb": 16458.669921875,
+            "latency_ms": 8666.310956992675
+        },
+        {
+            "index": 129,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "20 August 1936",
+            "ground_truth": "Mirjam Polkunen",
+            "peak_memory_mb": 16297.62255859375,
+            "latency_ms": 3666.817663004622
+        },
+        {
+            "index": 130,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "England",
+            "ground_truth": "Saint Petersburg",
+            "peak_memory_mb": 17660.08154296875,
+            "latency_ms": 11293.14321000129
+        },
+        {
+            "index": 131,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Eindhoven.",
+            "ground_truth": "Eindhoven",
+            "peak_memory_mb": 16366.00634765625,
+            "latency_ms": 3301.527130010072
+        },
+        {
+            "index": 132,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Women's Suffrage Journal",
+            "ground_truth": "Women'S Suffrage Journal",
+            "peak_memory_mb": 16297.62158203125,
+            "latency_ms": 3619.5368790067732
+        },
+        {
+            "index": 133,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Fairmont, West Virginia",
+            "ground_truth": "Fairmont, West Virginia",
+            "peak_memory_mb": 16217.5341796875,
+            "latency_ms": 3125.8143770101015
+        },
+        {
+            "index": 134,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Mayor Muthanna",
+            "ground_truth": "The Market Of Souls",
+            "peak_memory_mb": 16057.6123046875,
+            "latency_ms": 2318.6552159895655
+        },
+        {
+            "index": 135,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16458.6689453125,
+            "latency_ms": 4021.4216680033132
+        },
+        {
+            "index": 136,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "c. 1182",
+            "ground_truth": "Morocco",
+            "peak_memory_mb": 16538.5048828125,
+            "latency_ms": 4959.790227992926
+        },
+        {
+            "index": 137,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Ur",
+            "ground_truth": "Akkadian empire",
+            "peak_memory_mb": 17418.82666015625,
+            "latency_ms": 9891.664624999976
+        },
+        {
+            "index": 138,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Solemn Promise",
+            "ground_truth": "Tarzan The Magnificent",
+            "peak_memory_mb": 16458.669921875,
+            "latency_ms": 4507.239450991619
+        },
+        {
+            "index": 139,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Wolf Warrior",
+            "ground_truth": "Wolf Warrior",
+            "peak_memory_mb": 16297.62109375,
+            "latency_ms": 3222.8652909980156
+        },
+        {
+            "index": 140,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "Trịnh Cương",
+            "ground_truth": "Trịnh Bính",
+            "peak_memory_mb": 16377.708984375,
+            "latency_ms": 4011.3164019712713
+        },
+        {
+            "index": 141,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Austria (as Naftuli Hertz \"Nathan\" Juran was born in the Austro-Hungarian Empire)",
+            "ground_truth": "Gura Humorului",
+            "peak_memory_mb": 16538.50537109375,
+            "latency_ms": 8330.436684016604
+        },
+        {
+            "index": 142,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "August 15, 1985.",
+            "ground_truth": "Crenshaw",
+            "peak_memory_mb": 17178.5673828125,
+            "latency_ms": 9298.644080001395
+        },
+        {
+            "index": 143,
+            "score": 0.18181818181818182,
+            "metric": "F1",
+            "output": "Tom Tykwer directed Winter Sleepers, and Dino Risi directed Poveri Milionari, however there is no information about the age of D",
+            "ground_truth": "Winter Sleepers",
+            "peak_memory_mb": 16195.36572265625,
+            "latency_ms": 6468.629921000684
+        },
+        {
+            "index": 144,
+            "score": 0.75,
+            "metric": "F1",
+            "output": "Adolf III of Berg",
+            "ground_truth": "Adolf II of Berg",
+            "peak_memory_mb": 16538.50390625,
+            "latency_ms": 4832.88637700025
+        },
+        {
+            "index": 145,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "no",
+            "peak_memory_mb": 16938.31005859375,
+            "latency_ms": 6562.453921011183
+        },
+        {
+            "index": 146,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Mülheim an der Ruhr",
+            "ground_truth": "Mülheim an der Ruhr",
+            "peak_memory_mb": 16217.53662109375,
+            "latency_ms": 3511.011722992407
+        },
+        {
+            "index": 147,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Una Prostituta Al Servizio Del Pubblico E In Regola Con Le Leggi Dello Stato",
+            "ground_truth": "Una Prostituta Al Servizio Del Pubblico E In Regola Con Le Leggi Dello Stato",
+            "peak_memory_mb": 16137.44873046875,
+            "latency_ms": 4950.456579012098
+        },
+        {
+            "index": 148,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "peak_memory_mb": 17979.4248046875,
+            "latency_ms": 14683.259040990379
+        },
+        {
+            "index": 149,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Prince Bhanurangsi Savangwongse",
+            "ground_truth": "Mongkut",
+            "peak_memory_mb": 16515.79541015625,
+            "latency_ms": 5412.023679004051
+        },
+        {
+            "index": 150,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Katherine Skipwith",
+            "ground_truth": "Lady Frances Manners",
+            "peak_memory_mb": 16286.15869140625,
+            "latency_ms": 3274.4786749826744
+        },
+        {
+            "index": 151,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Scam",
+            "ground_truth": "Cahiers du cinéma",
+            "peak_memory_mb": 17501.85693359375,
+            "latency_ms": 10667.608852992998
+        },
+        {
+            "index": 152,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Amsterdam",
+            "ground_truth": "Newport, Wales",
+            "peak_memory_mb": 16458.6669921875,
+            "latency_ms": 3947.412829991663
+        },
+        {
+            "index": 153,
+            "score": 0.4,
+            "metric": "F1",
+            "output": "Orange County, Virginia",
+            "ground_truth": "Gordonsville, Virginia",
+            "peak_memory_mb": 17498.90966796875,
+            "latency_ms": 10714.421657001367
+        },
+        {
+            "index": 154,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Romania",
+            "ground_truth": "Mangalia",
+            "peak_memory_mb": 17339.73779296875,
+            "latency_ms": 9212.441051990027
+        },
+        {
+            "index": 155,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Patrice Robitaille",
+            "ground_truth": "Félix Leclerc",
+            "peak_memory_mb": 16618.3388671875,
+            "latency_ms": 5206.627435021801
+        },
+        {
+            "index": 156,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Henri I, Duke of Nemours",
+            "ground_truth": "Jacques",
+            "peak_memory_mb": 16698.17724609375,
+            "latency_ms": 6331.560188002186
+        },
+        {
+            "index": 157,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Stephen I of Hungary",
+            "ground_truth": "Géza",
+            "peak_memory_mb": 18059.5107421875,
+            "latency_ms": 15310.389373014914
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Wang Si",
+            "ground_truth": "Yi Jiang",
+            "peak_memory_mb": 16554.25146484375,
+            "latency_ms": 3788.5335390164983
+        },
+        {
+            "index": 159,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1896",
+            "ground_truth": "November 3, 1867",
+            "peak_memory_mb": 16938.3095703125,
+            "latency_ms": 6770.170873001916
+        },
+        {
+            "index": 160,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Richard Cooper",
+            "ground_truth": "Ivy Duke",
+            "peak_memory_mb": 17681.38818359375,
+            "latency_ms": 11935.28910400346
+        },
+        {
+            "index": 161,
+            "score": 0.5,
+            "metric": "F1",
+            "output": "1813",
+            "ground_truth": "1 August 1813",
+            "peak_memory_mb": 16396.7060546875,
+            "latency_ms": 2580.633965000743
+        },
+        {
+            "index": 162,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Season Of Strangers.",
+            "ground_truth": "Season Of Strangers",
+            "peak_memory_mb": 17018.64404296875,
+            "latency_ms": 7598.145703988848
+        },
+        {
+            "index": 163,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes.",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16458.66845703125,
+            "latency_ms": 4085.876041004667
+        },
+        {
+            "index": 164,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Antoine Casavant",
+            "ground_truth": "Antoine Casavant",
+            "peak_memory_mb": 16185.36962890625,
+            "latency_ms": 3076.5385889972094
+        },
+        {
+            "index": 165,
+            "score": 0.6666666666666666,
+            "metric": "F1",
+            "output": "Oxford University",
+            "ground_truth": "Oxford",
+            "peak_memory_mb": 16412.99169921875,
+            "latency_ms": 3848.536027013324
+        },
+        {
+            "index": 166,
+            "score": 0.8000000000000002,
+            "metric": "F1",
+            "output": "Sir Hew Dalrymple, 3rd Baronet.",
+            "ground_truth": "Sir Hew Dalrymple, 2nd Baronet",
+            "peak_memory_mb": 16217.5341796875,
+            "latency_ms": 4127.699237986235
+        },
+        {
+            "index": 167,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Khud-Daar",
+            "ground_truth": "Murderer In The Fog",
+            "peak_memory_mb": 16137.45068359375,
+            "latency_ms": 2812.2452259995043
+        },
+        {
+            "index": 168,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Kurt Russell.",
+            "ground_truth": "Milla",
+            "peak_memory_mb": 17098.47998046875,
+            "latency_ms": 7849.406716006342
+        },
+        {
+            "index": 169,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Apparently there is no direct information about Catherine of Taranto, Countess of Copertino's mother death in the passages.",
+            "ground_truth": "Lecce",
+            "peak_memory_mb": 16297.6220703125,
+            "latency_ms": 6335.667031991761
+        },
+        {
+            "index": 170,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "\"Best Cutting Edge Film\" at the 2008 San Diego Film Festival, \"Audience Choice -- Feature-Length Narrative Film\" at the 2008 Cinema",
+            "ground_truth": "Prometheus Award",
+            "peak_memory_mb": 16297.62060546875,
+            "latency_ms": 7303.942553000525
+        },
+        {
+            "index": 171,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "German",
+            "ground_truth": "Duchy of Saxe-Gotha-Altenburg",
+            "peak_memory_mb": 16698.1748046875,
+            "latency_ms": 4982.302512013121
+        },
+        {
+            "index": 172,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "The Longshots",
+            "ground_truth": "Station For Two",
+            "peak_memory_mb": 17660.083984375,
+            "latency_ms": 12060.7835650153
+        },
+        {
+            "index": 173,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Kronstadt.",
+            "ground_truth": "Inverkeithing",
+            "peak_memory_mb": 16392.7607421875,
+            "latency_ms": 4023.2620169990696
+        },
+        {
+            "index": 174,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "after 1296",
+            "ground_truth": "1234",
+            "peak_memory_mb": 17498.9091796875,
+            "latency_ms": 10667.112207011087
+        },
+        {
+            "index": 175,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "1642",
+            "ground_truth": "25 July 1666",
+            "peak_memory_mb": 16938.30810546875,
+            "latency_ms": 6588.575116009451
+        },
+        {
+            "index": 176,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "The Wind's Fierce",
+            "ground_truth": "The Wind'S Fierce",
+            "peak_memory_mb": 17498.9091796875,
+            "latency_ms": 10867.358763993252
+        },
+        {
+            "index": 177,
+            "score": 0.2222222222222222,
+            "metric": "F1",
+            "output": "Suicide by drowning himself in his swimming pool.",
+            "ground_truth": "drowning",
+            "peak_memory_mb": 17178.5673828125,
+            "latency_ms": 9637.162575003458
+        },
+        {
+            "index": 178,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Abu Dhabi",
+            "ground_truth": "Abu Dhabi",
+            "peak_memory_mb": 16377.70703125,
+            "latency_ms": 3708.1694239750504
+        },
+        {
+            "index": 179,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Prenzlau",
+            "ground_truth": "Prenzlau",
+            "peak_memory_mb": 16297.6220703125,
+            "latency_ms": 3582.090406998759
+        },
+        {
+            "index": 180,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Poznań.",
+            "ground_truth": "Poznań",
+            "peak_memory_mb": 16377.70703125,
+            "latency_ms": 3998.149014019873
+        },
+        {
+            "index": 181,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Forlì",
+            "ground_truth": "Italy",
+            "peak_memory_mb": 16618.33935546875,
+            "latency_ms": 4916.496449994156
+        },
+        {
+            "index": 182,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Toronto, Ontario",
+            "ground_truth": "Toronto, Ontario",
+            "peak_memory_mb": 16217.53564453125,
+            "latency_ms": 3040.1547939982265
+        },
+        {
+            "index": 183,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Forbidden Daughters.",
+            "ground_truth": "Forbidden Daughters",
+            "peak_memory_mb": 16458.66748046875,
+            "latency_ms": 4243.328003998613
+        },
+        {
+            "index": 184,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "No",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16698.1748046875,
+            "latency_ms": 5015.292422001949
+        },
+        {
+            "index": 185,
+            "score": 0.33333333333333337,
+            "metric": "F1",
+            "output": "1 August 1975, Bogdan Țăruș \n11 July 1977, Robert Wulnikowski",
+            "ground_truth": "Bogdan Țăruș",
+            "peak_memory_mb": 16266.07275390625,
+            "latency_ms": 6269.267724012025
+        },
+        {
+            "index": 186,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Lesley Selander",
+            "ground_truth": "Sandflow",
+            "peak_memory_mb": 15977.77685546875,
+            "latency_ms": 2047.6887120166793
+        },
+        {
+            "index": 187,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Durango Valley Raiders",
+            "ground_truth": "From Corleone To Brooklyn",
+            "peak_memory_mb": 16377.70849609375,
+            "latency_ms": 3946.4012410026044
+        },
+        {
+            "index": 188,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 15781.32275390625,
+            "latency_ms": 679.4328690157272
+        },
+        {
+            "index": 189,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Vienna",
+            "ground_truth": "Vienna",
+            "peak_memory_mb": 17979.42578125,
+            "latency_ms": 14262.809228006518
+        },
+        {
+            "index": 190,
+            "score": 0.2857142857142857,
+            "metric": "F1",
+            "output": "5 March 1965, Johnny Ekström, or 7 May 1884, Hugh Evelyn Wortham.",
+            "ground_truth": "Johnny Ekström",
+            "peak_memory_mb": 16858.22412109375,
+            "latency_ms": 9953.006572992308
+        },
+        {
+            "index": 191,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Yes",
+            "ground_truth": "yes",
+            "peak_memory_mb": 16019.73779296875,
+            "latency_ms": 679.9887309898622
+        },
+        {
+            "index": 192,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "English",
+            "ground_truth": "England",
+            "peak_memory_mb": 17979.42724609375,
+            "latency_ms": 14286.704275000375
+        },
+        {
+            "index": 193,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Complications of Parkinson's disease.",
+            "ground_truth": "Parkinson",
+            "peak_memory_mb": 16539.68896484375,
+            "latency_ms": 4791.724071983481
+        },
+        {
+            "index": 194,
+            "score": 0.14814814814814814,
+            "metric": "F1",
+            "output": "Roger Wentworth of North Elmsall, Yorkshire and Margery le Despencer, by his second wife, Joyce Stafford, daughter of Sir Humphrey Stafford",
+            "ground_truth": "Roger Mortimer, 1st Earl of March",
+            "peak_memory_mb": 16458.6669921875,
+            "latency_ms": 8342.002482997486
+        },
+        {
+            "index": 195,
+            "score": 0.0,
+            "metric": "F1",
+            "output": "Ali Dinar",
+            "ground_truth": "Albertus Seba",
+            "peak_memory_mb": 16472.56787109375,
+            "latency_ms": 4340.459779981757
+        },
+        {
+            "index": 196,
+            "score": 0.25,
+            "metric": "F1",
+            "output": "Francis I d'Este",
+            "ground_truth": "Ferdinand I of the Two Sicilies",
+            "peak_memory_mb": 17418.82568359375,
+            "latency_ms": 10820.95443198341
+        },
+        {
+            "index": 197,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Prince of Arcadia",
+            "ground_truth": "Prince Of Arcadia",
+            "peak_memory_mb": 16286.9482421875,
+            "latency_ms": 3301.2749390036333
+        },
+        {
+            "index": 198,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Milan",
+            "ground_truth": "Milan",
+            "peak_memory_mb": 16217.53564453125,
+            "latency_ms": 2875.6670040020254
+        },
+        {
+            "index": 199,
+            "score": 1.0,
+            "metric": "F1",
+            "output": "Köln",
+            "ground_truth": "Köln",
+            "peak_memory_mb": 16356.59228515625,
+            "latency_ms": 3500.3066759963986
+        }
+    ]
+}
