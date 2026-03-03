@@ -32,7 +32,9 @@ def main():
 
     logger.info(f"Loading Model: {args.model_id}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
-    
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+        
     # 1. 載入原生 HF 模型
     model = AutoModelForCausalLM.from_pretrained(
         args.model_id, 

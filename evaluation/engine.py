@@ -51,10 +51,12 @@ class LongBenchEvaluator:
 
             inputs = self.tokenizer(final_input_text, return_tensors="pt", add_special_tokens=False)
             input_ids = inputs.input_ids
-            
+            attention_mask = inputs.attention_mask
+
             # C. Truncation (現在這個函數只做 Tensor 操作，很快)
             input_ids = truncate_input_ids(input_ids, max_input_len, self.tokenizer)
             input_ids = input_ids.to(self.model.device)
+            attention_mask = attention_mask[:, :input_ids.shape[1]].to(self.model.device)
 
             # D. Inference
             profiler.start()
@@ -67,6 +69,7 @@ class LongBenchEvaluator:
                         # Case 2: 原生 HuggingFace Model 
                         output_ids = self.model.generate(
                             input_ids, 
+                            attention_mask=attention_mask,
                             max_new_tokens=current_output_len,
                             use_cache=True,
                             pad_token_id=self.tokenizer.pad_token_id,
@@ -114,7 +117,7 @@ class LongBenchEvaluator:
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M")
         subdir = "liveKVQuant" if hasattr(self.model, "controllers") else "baselines/fullKV"
-        output_filename = f"{timestamp}_{task_name}.json"
+        output_filename = f"{timestamp}_{self.bench_version}_{task_name}.json"
         output_path = os.path.join(self.output_dir, subdir, output_filename)
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         

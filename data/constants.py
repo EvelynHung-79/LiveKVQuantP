@@ -19,12 +19,12 @@ V1_TASK_GROUPS = {
 }
 
 V2_DOMAIN_MAP = {
-    "single-doc": "single-document",
-    "multi-doc": "multi-document",
-    "summarization": "summarization",
-    "long-context": "long in-context",
-    "dialogue": "long dialogue",
-    "code": "code repository",
+    "single-doc": "Single-Document QA",
+    "multi-doc": "Multi-Document QA",
+    "long-context": "Long In-context Learning",
+    "dialogue": "Long-dialogue History Understanding",
+    "code": "Code Repository Understanding",
+    "structured": "Long Structured Data Understanding",
     "all": "all"
 }
 
@@ -69,7 +69,6 @@ TASK_OUTPUT_LEN = {
 }
 
 def get_task_list(version, task_type):
-    """根據版本和輸入的 task_type 字串回傳任務列表"""
     task_type_lower = task_type.lower()
     
     if version == "v1":
@@ -77,7 +76,8 @@ def get_task_list(version, task_type):
             return V1_TASK_GROUPS[task_type_lower]
         return [task_type]
         
-    elif version == "v2":
+    elif version == "v2": # 支援 --bench_version 2
+        # 如果在 map 中就用 map 的全名，否則直接用傳入的字串
         domain = V2_DOMAIN_MAP.get(task_type_lower, task_type)
         return [domain]
     

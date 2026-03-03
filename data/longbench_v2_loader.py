@@ -1,39 +1,45 @@
 import logging
-from datasets import load_dataset
+import os
+import json
+from datasets import load_dataset, Dataset
 
 logger = logging.getLogger(__name__)
 
 class LongBenchV2Loader:
-    """
-    [New] 專門負責 LongBench v2 數據集。
-    特性:
-    1. Dataset ID: 'zai-org/LongBench-v2'
-    2. 結構: 單選題 (A/B/C/D)，無 'answers' 列表，只有 'answer' 欄位。
-    3. 長度: 8k ~ 2M，適合壓力測試。
-    """
-
-    def __init__(self, task_name: str = "all", split: str = "train"):
+    def __init__(self, task_name: str = "all", split: str = "train", data_dir: str = "data/longbench_v2/"):
         """
         Args:
-            task_name: 若指定 (如 "Single-Document QA")，則只載入該類別；"all" 則載入全部。
+            task_name: Domain 名稱 (例如 "Single-Document QA")
+            data_dir: divide.py 儲存檔案的資料夾
         """
         self.task_name = task_name
-        logger.info(f"Loading LongBench v2 dataset: {task_name} (split={split})...")
         
-        try:
-            # v2 只有一個 'default' config，數據都在 'train' split
-            # self.dataset = load_dataset("zai-org/LongBench-v2", "default", split=split)
-            self.dataset = load_dataset('THUDM/LongBench-v2', split=split)
-        except Exception as e:
-            logger.error(f"Failed to load LongBench v2: {e}")
-            raise e
+        # 1. 建立對應的本地檔名 (依照 divide.py 的邏輯：空格變底線，橫線變底線)
+        # 例如 "Single-Document QA" -> "Single_Document_QA.json"
+        sanitized_name = task_name.replace(" ", "_").replace("-", "_")
+        local_path = os.path.join(data_dir, f"{sanitized_name}.json")
 
-        # 過濾特定任務類別 (Domain)
-        if task_name.lower() != "all":
-            original_len = len(self.dataset)
-            # v2 使用 'domain' 欄位來分類
-            self.dataset = self.dataset.filter(lambda x: task_name.lower() in x['domain'].lower())
-            logger.info(f"Filtered by domain '{task_name}': {original_len} -> {len(self.dataset)}")
+        # 2. 優先讀取本地檔案
+        if os.path.exists(local_path) and task_name.lower() != "all":
+            logger.info(f"Loading LongBench v2 from local file: {local_path}")
+            with open(local_path, 'r', encoding='utf-8') as f:
+                raw_data = json.load(f)
+                # 將 List 轉換為 HuggingFace Dataset 格式，維持後續 API 一致性
+                self.dataset = Dataset.from_list(raw_data)
+        else:
+            # 如果本地沒檔案或指定 "all"，則走原始載入邏輯
+            logger.info(f"Loading LongBench v2 from HuggingFace (Domain: {task_name})...")
+            try:
+                self.dataset = load_dataset('THUDM/LongBench-v2', split=split)
+                if task_name.lower() != "all":
+                    self.dataset = self.dataset.filter(
+                        lambda x: task_name.lower() in x['domain'].lower()
+                    )
+            except Exception as e:
+                logger.error(f"Failed to load LongBench v2: {e}")
+                raise e
+
+        logger.info(f"Successfully loaded {len(self.dataset)} samples.")
 
     def __len__(self):
         return len(self.dataset)
@@ -45,6 +51,7 @@ class LongBenchV2Loader:
         # 格式參考 LongBench v2 官方評測
         prompt = (
             f"Read the following context and answer the question by choosing the correct option (A, B, C, or D).\n\n"
+            f"Please output ONLY the single letter (A, B, C, or D) of the correct option and nothing else.\n\n"
             f"Context:\n{context}\n\n"
             f"Question:\n{question}\n\n"
             f"Options:\n"
