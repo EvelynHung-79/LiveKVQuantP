@@ -5,19 +5,19 @@
         "input_mode": "longbench",
         "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
         "bench_version": "v1",
-        "task_type": "musique",
+        "task_type": "multi-doc",
         "num_samples": -1,
         "output_len": 64,
         "chunk_size": 512,
-        "n_warmup": 1,
+        "n_warmup": 2,
         "bits": 4,
         "ema_alpha": 0.2,
         "clip_factor_n": 4.0,
         "outlier_ratio": 0.01
     },
-    "avg_score": 0.29010477022977016,
-    "avg_latency_ms": 15567.138037901022,
-    "max_peak_memory_mb": 18059.5107421875,
+    "avg_score": 0.30127341974755767,
+    "avg_latency_ms": 10141.567422747612,
+    "max_peak_memory_mb": 18071.5380859375,
     "details": [
         {
             "index": 0,
@@ -25,35 +25,35 @@
             "metric": "F1",
             "output": "Salma Hayek",
             "ground_truth": "Maria Bello",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 16727.852383977734
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9972.538001835346
         },
         {
             "index": 1,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Joliot-Curie experiment.",
+            "output": "Polonium experiments using alpha particles to bombard beryllium with alpha particles, producing an unusual form of radiation.",
             "ground_truth": "Manhattan Project",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 16452.671117993305
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 13976.144462823868
         },
         {
             "index": 2,
             "score": 0.0,
             "metric": "F1",
-            "output": "Merseyside",
+            "output": "Merseyside.",
             "ground_truth": "Knowsley",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 14883.745174010983
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9839.935410767794
         },
         {
             "index": 3,
             "score": 0.0,
             "metric": "F1",
-            "output": "No information on the child is found in the passage.",
+            "output": "It's not possible to determine the child of the Italian navigator who sailed for England and explored the eastern coast of the continent Francisco Bojado's birthplace is",
             "ground_truth": "Sebastian Cabot",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 17213.057426997693
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 16312.78020516038
         },
         {
             "index": 4,
@@ -61,17 +61,17 @@
             "metric": "F1",
             "output": "Dr. Maggie Sullivan",
             "ground_truth": "Sherry Boucher",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15799.549900984857
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10252.075545489788
         },
         {
             "index": 5,
             "score": 0.0,
             "metric": "F1",
-            "output": "No answer found.",
+            "output": "There is no mention of Peter Till's sports team beating the winner of the 1894-95 FA Cup in the given passages.",
             "ground_truth": "1 December 2010",
-            "peak_memory_mb": 18002.56005859375,
-            "latency_ms": 15576.866699004313
+            "peak_memory_mb": 18014.99365234375,
+            "latency_ms": 15120.584521442652
         },
         {
             "index": 6,
@@ -79,8 +79,8 @@
             "metric": "F1",
             "output": "Tatum O'Neal",
             "ground_truth": "Tatum O'Neal",
-            "peak_memory_mb": 17979.42626953125,
-            "latency_ms": 15537.98313299194
+            "peak_memory_mb": 17991.45361328125,
+            "latency_ms": 10104.714136570692
         },
         {
             "index": 7,
@@ -88,17 +88,17 @@
             "metric": "F1",
             "output": "2",
             "ground_truth": "22",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 14868.903763999697
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9486.510246992111
         },
         {
             "index": 8,
-            "score": 1.0,
+            "score": 0.0,
             "metric": "F1",
-            "output": "1912",
+            "output": "1946.",
             "ground_truth": "1912",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 13360.080056998413
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 8779.633477330208
         },
         {
             "index": 9,
@@ -106,8 +106,8 @@
             "metric": "F1",
             "output": "ATS-6",
             "ground_truth": "ATS - 6 (Applications Technology Satellite - 6)",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 15051.643081998918
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 9723.418533802032
         },
         {
             "index": 10,
@@ -115,17 +115,17 @@
             "metric": "F1",
             "output": "James Meredith",
             "ground_truth": "James Howard Meredith",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15040.819474990712
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9648.84128794074
         },
         {
             "index": 11,
-            "score": 1.0,
+            "score": 0.28571428571428575,
             "metric": "F1",
-            "output": "The University of Cambridge",
+            "output": "The Royal Society of Chemistry.",
             "ground_truth": "University of Cambridge",
-            "peak_memory_mb": 17899.3408203125,
-            "latency_ms": 14698.173549986677
+            "peak_memory_mb": 17911.8681640625,
+            "latency_ms": 9893.041539937258
         },
         {
             "index": 12,
@@ -133,8 +133,8 @@
             "metric": "F1",
             "output": "Tom Hood",
             "ground_truth": "Tom Hood",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15903.669399995124
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10048.009470105171
         },
         {
             "index": 13,
@@ -142,17 +142,17 @@
             "metric": "F1",
             "output": "Jennifer Connelly",
             "ground_truth": "Jennifer Connelly",
-            "peak_memory_mb": 17979.4248046875,
-            "latency_ms": 14867.973351996625
+            "peak_memory_mb": 17991.4521484375,
+            "latency_ms": 9620.380710810423
         },
         {
             "index": 14,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Caledon River is a tributary of the Orange River. The Orange River drains into the Atlantic Ocean.",
+            "output": "The source of the river that is the mouth of the Caledon River is not explicitly stated in the given passages. The passages mention the Caledon River",
             "ground_truth": "Thaba Putsoa",
-            "peak_memory_mb": 17498.91015625,
-            "latency_ms": 15078.274931001943
+            "peak_memory_mb": 17510.9375,
+            "latency_ms": 12565.595608204603
         },
         {
             "index": 15,
@@ -160,26 +160,26 @@
             "metric": "F1",
             "output": "Rialto Bridge",
             "ground_truth": "Rialto Bridge",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15444.40322497394
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9992.034297436476
         },
         {
             "index": 16,
             "score": 0.0,
             "metric": "F1",
-            "output": "They did not gain control of the government branch that determines the rules of the US Senate.",
+            "output": "The party that gained control of Congress in the midterm elections in 1946 was the Republican Party. The Senate determines the rules of the US House.",
             "ground_truth": "January 2015",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 18869.588003028184
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 15847.205877304077
         },
         {
             "index": 17,
-            "score": 0.3333333333333333,
+            "score": 0.5,
             "metric": "F1",
-            "output": "London and Vassar College",
+            "output": "Clifton College, England; London; The Juilliard School.",
             "ground_truth": "Clifton College",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 16018.495949014323
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 12134.715877473354
         },
         {
             "index": 18,
@@ -187,8 +187,8 @@
             "metric": "F1",
             "output": "Tirnovadjik (Malko Tarnovo)",
             "ground_truth": "Malko Tarnovo Municipality",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 17557.872624020092
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 11822.948910295963
         },
         {
             "index": 19,
@@ -196,17 +196,17 @@
             "metric": "F1",
             "output": "Nina Sky",
             "ground_truth": "Natalie Albino",
-            "peak_memory_mb": 18011.25634765625,
-            "latency_ms": 15369.213747995673
+            "peak_memory_mb": 18023.62744140625,
+            "latency_ms": 9889.96047154069
         },
         {
             "index": 20,
             "score": 1.0,
             "metric": "F1",
-            "output": "The University of Toronto",
+            "output": "University of Toronto.",
             "ground_truth": "University of Toronto",
-            "peak_memory_mb": 17979.42626953125,
-            "latency_ms": 15363.42050501844
+            "peak_memory_mb": 17991.45361328125,
+            "latency_ms": 10090.594589710236
         },
         {
             "index": 21,
@@ -214,26 +214,26 @@
             "metric": "F1",
             "output": "1999",
             "ground_truth": "1986",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15172.933847992681
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9723.460592329502
         },
         {
             "index": 22,
-            "score": 0.4444444444444445,
+            "score": 0.25,
             "metric": "F1",
-            "output": "Pure Food and Drug Act",
+            "output": "The Food and Drug Administration (FDA).",
             "ground_truth": "Food Safety Modernization Act (FSMA)",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15761.76362897968
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 10813.908871263266
         },
         {
             "index": 23,
             "score": 0.0,
             "metric": "F1",
-            "output": "Johan Ferrier",
+            "output": "Xanana Gusmão",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17899.34228515625,
-            "latency_ms": 14890.785102004884
+            "peak_memory_mb": 17911.86962890625,
+            "latency_ms": 10030.936099588871
         },
         {
             "index": 24,
@@ -241,8 +241,8 @@
             "metric": "F1",
             "output": "Ernie K-Doe",
             "ground_truth": "General Edward Pakenham",
-            "peak_memory_mb": 18025.25732421875,
-            "latency_ms": 15754.78295297944
+            "peak_memory_mb": 18037.53466796875,
+            "latency_ms": 10253.551870584488
         },
         {
             "index": 25,
@@ -250,8 +250,8 @@
             "metric": "F1",
             "output": "Ocala.",
             "ground_truth": "in Northern Florida",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 14885.776302020531
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9635.044671595097
         },
         {
             "index": 26,
@@ -259,44 +259,44 @@
             "metric": "F1",
             "output": "World Taekwondo Federation",
             "ground_truth": "Thomas Bach",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 16262.090422998881
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10685.600128024817
         },
         {
             "index": 27,
             "score": 0.0,
             "metric": "F1",
-            "output": "1916.",
+            "output": "During World War I.",
             "ground_truth": "1964",
-            "peak_memory_mb": 17899.34130859375,
-            "latency_ms": 14482.397247018525
+            "peak_memory_mb": 17911.86865234375,
+            "latency_ms": 9745.80468609929
         },
         {
             "index": 28,
             "score": 0.0,
             "metric": "F1",
-            "output": "Susilo Bambang Yudhoyono",
+            "output": "East Timor",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17899.3408203125,
-            "latency_ms": 16072.274293022929
+            "peak_memory_mb": 17911.8681640625,
+            "latency_ms": 9301.751162856817
         },
         {
             "index": 29,
-            "score": 0.06666666666666667,
+            "score": 0.3636363636363636,
             "metric": "F1",
-            "output": "Elizabeth II was the previous queen of England, and she was married to Prince Philip of Greece and Denmark. There is no information about the current queen of England in",
+            "output": "Elizabeth II's spouse is Philip Mountbatten, Duke of Edinburgh.",
             "ground_truth": "Philip Mountbatten",
-            "peak_memory_mb": 17899.33984375,
-            "latency_ms": 20904.939856001874
+            "peak_memory_mb": 17911.8671875,
+            "latency_ms": 11607.605788856745
         },
         {
             "index": 30,
             "score": 0.0,
             "metric": "F1",
-            "output": "1839 (Ronda)",
+            "output": "1839",
             "ground_truth": "1065",
-            "peak_memory_mb": 17098.4814453125,
-            "latency_ms": 8710.775043989997
+            "peak_memory_mb": 17110.5087890625,
+            "latency_ms": 5085.746962577105
         },
         {
             "index": 31,
@@ -304,8 +304,8 @@
             "metric": "F1",
             "output": "Trying to find a potential buyer for all of its operations in Finland and is doing similar market research concerning Swedish operations.",
             "ground_truth": "trying to find a potential buyer for all of its operations in Finland",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 20083.669327985262
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 14097.153827548027
         },
         {
             "index": 32,
@@ -313,8 +313,8 @@
             "metric": "F1",
             "output": "Keturah",
             "ground_truth": "Keturah",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15273.045529989759
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9846.382431685925
         },
         {
             "index": 33,
@@ -322,8 +322,8 @@
             "metric": "F1",
             "output": "Da Nang",
             "ground_truth": "South Central Coast",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 13563.452389993472
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 8805.025346577168
         },
         {
             "index": 34,
@@ -331,8 +331,8 @@
             "metric": "F1",
             "output": "Michael Bublé",
             "ground_truth": "Michael Bublé",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15405.690777988639
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9971.157111227512
         },
         {
             "index": 35,
@@ -340,8 +340,8 @@
             "metric": "F1",
             "output": "BEC Recordings",
             "ground_truth": "Fair Trade Services",
-            "peak_memory_mb": 17498.9111328125,
-            "latency_ms": 11346.47598999436
+            "peak_memory_mb": 17510.9384765625,
+            "latency_ms": 7323.527492582798
         },
         {
             "index": 36,
@@ -349,8 +349,8 @@
             "metric": "F1",
             "output": "King Gustav Vasa",
             "ground_truth": "Svante Stensson Sture",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15767.546854011016
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 10215.382378548384
         },
         {
             "index": 37,
@@ -358,35 +358,35 @@
             "metric": "F1",
             "output": "Triumph",
             "ground_truth": "TML Entertainment",
-            "peak_memory_mb": 17252.40380859375,
-            "latency_ms": 8749.649520992534
+            "peak_memory_mb": 17264.43115234375,
+            "latency_ms": 5561.827380210161
         },
         {
             "index": 38,
             "score": 0.0,
             "metric": "F1",
-            "output": "Xanana Gusmão",
+            "output": "Zeferino Martins",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17819.255859375,
-            "latency_ms": 14569.80029999977
+            "peak_memory_mb": 17831.283203125,
+            "latency_ms": 9156.76736831665
         },
         {
             "index": 39,
             "score": 0.0,
             "metric": "F1",
-            "output": "There is no information in the passages about the place where Titian died or how many times the plague occurred there.",
+            "output": "We do not have enough information about the city where Flora's painter died.",
             "ground_truth": "22",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 20208.611093985382
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 12806.163214147091
         },
         {
             "index": 40,
             "score": 0.0,
             "metric": "F1",
-            "output": "Outagamie",
+            "output": "Brown County.",
             "ground_truth": "Green Bay",
-            "peak_memory_mb": 17739.16796875,
-            "latency_ms": 13155.89346899651
+            "peak_memory_mb": 17751.1953125,
+            "latency_ms": 8382.129117846489
         },
         {
             "index": 41,
@@ -394,44 +394,44 @@
             "metric": "F1",
             "output": "Fort Davis",
             "ground_truth": "Fort Davis",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15331.779398984509
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9908.914595842361
         },
         {
             "index": 42,
             "score": 0.0,
             "metric": "F1",
-            "output": "Michael J. Fox",
+            "output": "Elisabeth Shue",
             "ground_truth": "Claudia Wells",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 13778.108429018175
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 9162.349220365286
         },
         {
             "index": 43,
             "score": 0.0,
             "metric": "F1",
-            "output": "Job 19:20",
+            "output": "Job 19:20 \n\nNote: The passage actually does not reference a specific part of a book about Mary. It is a biblical reference in Job 19",
             "ground_truth": "Genesis 3:15",
-            "peak_memory_mb": 17979.42626953125,
-            "latency_ms": 15563.5302879964
+            "peak_memory_mb": 17991.45361328125,
+            "latency_ms": 15972.640499472618
         },
         {
             "index": 44,
             "score": 0.0,
             "metric": "F1",
-            "output": "Appleton",
+            "output": "Brown",
             "ground_truth": "Green Bay",
-            "peak_memory_mb": 17991.37548828125,
-            "latency_ms": 15060.718500986695
+            "peak_memory_mb": 18003.90283203125,
+            "latency_ms": 9480.497982352972
         },
         {
             "index": 45,
             "score": 0.0,
             "metric": "F1",
-            "output": "1",
+            "output": "3",
             "ground_truth": "22",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 14679.570744978264
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9387.678623199463
         },
         {
             "index": 46,
@@ -439,35 +439,35 @@
             "metric": "F1",
             "output": "The Orange River.",
             "ground_truth": "Thaba Putsoa",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15624.494404997677
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10087.315510958433
         },
         {
             "index": 47,
-            "score": 0.0,
+            "score": 0.20689655172413796,
             "metric": "F1",
-            "output": "Common Sense became immensely popular mainly because Paine appealed to widespread convictions that monarchy was preposterous and had a heathenish origin, and that tyranny,",
+            "output": "Common Sense crystallized sentiment for independence in 1776, spreading 100,000 copies in three months to the two million residents of the 13 colonies,",
             "ground_truth": "crystallized the rebellious demand for independence from Great Britain",
-            "peak_memory_mb": 18057.3212890625,
-            "latency_ms": 22276.15142602008
+            "peak_memory_mb": 18069.3642578125,
+            "latency_ms": 16362.504851073027
         },
         {
             "index": 48,
-            "score": 0.8,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Pearl River",
+            "output": "Pearl River County.",
             "ground_truth": "Pearl River County",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 14987.766809004825
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 10077.525924891233
         },
         {
             "index": 49,
-            "score": 0.0,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Heureux Anniversaire",
+            "output": "The African Queen",
             "ground_truth": "The African Queen",
-            "peak_memory_mb": 17979.70263671875,
-            "latency_ms": 16044.81137698167
+            "peak_memory_mb": 17992.29248046875,
+            "latency_ms": 9888.573165982962
         },
         {
             "index": 50,
@@ -475,8 +475,8 @@
             "metric": "F1",
             "output": "The African Queen",
             "ground_truth": "The African Queen",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15588.035635009874
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10083.574917167425
         },
         {
             "index": 51,
@@ -484,8 +484,8 @@
             "metric": "F1",
             "output": "Manchester City",
             "ground_truth": "Egypt national football team",
-            "peak_memory_mb": 17960.27490234375,
-            "latency_ms": 14474.470448010834
+            "peak_memory_mb": 17972.30224609375,
+            "latency_ms": 9291.92864522338
         },
         {
             "index": 52,
@@ -493,8 +493,8 @@
             "metric": "F1",
             "output": "Golestan province, Iran",
             "ground_truth": "in the north-east of the country south of the Caspian Sea",
-            "peak_memory_mb": 17018.64453125,
-            "latency_ms": 8064.622127014445
+            "peak_memory_mb": 17030.421875,
+            "latency_ms": 5247.606351971626
         },
         {
             "index": 53,
@@ -502,8 +502,8 @@
             "metric": "F1",
             "output": "John D. Loudermilk",
             "ground_truth": "John D. Loudermilk",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 16276.888682012213
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 10682.605043053627
         },
         {
             "index": 54,
@@ -511,8 +511,8 @@
             "metric": "F1",
             "output": "National Institute of Dramatic Art (NIDA)",
             "ground_truth": "National Institute of Dramatic Art",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 17143.861085991375
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 11219.968345016241
         },
         {
             "index": 55,
@@ -520,35 +520,35 @@
             "metric": "F1",
             "output": "Nikki Haley",
             "ground_truth": "Abu Ubaidah",
-            "peak_memory_mb": 17819.2548828125,
-            "latency_ms": 13860.16187898349
+            "peak_memory_mb": 17831.2822265625,
+            "latency_ms": 8835.115317255259
         },
         {
             "index": 56,
-            "score": 0.0,
+            "score": 0.5,
             "metric": "F1",
-            "output": "Deptford",
+            "output": "The River Ravensbourne",
             "ground_truth": "River Thames",
-            "peak_memory_mb": 17660.08251953125,
-            "latency_ms": 12102.81695399317
+            "peak_memory_mb": 17673.10986328125,
+            "latency_ms": 8115.06424844265
         },
         {
             "index": 57,
             "score": 0.0,
             "metric": "F1",
-            "output": "1929",
+            "output": "1929-1931.",
             "ground_truth": "January 2015",
-            "peak_memory_mb": 17899.341796875,
-            "latency_ms": 14359.67726999661
+            "peak_memory_mb": 17911.869140625,
+            "latency_ms": 10120.431762188673
         },
         {
             "index": 58,
             "score": 0.0,
             "metric": "F1",
-            "output": "No information is available in the provided passage to answer this question.",
+            "output": "Jason Todd",
             "ground_truth": "Nightwing / Dick Grayson",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 17626.102233014535
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9648.773740977049
         },
         {
             "index": 59,
@@ -556,80 +556,80 @@
             "metric": "F1",
             "output": "1989",
             "ground_truth": "1989",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 16093.915712001035
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9874.452158808708
         },
         {
             "index": 60,
             "score": 0.0,
             "metric": "F1",
-            "output": "Appleton",
+            "output": "Wisconsin",
             "ground_truth": "Green Bay",
-            "peak_memory_mb": 17178.56689453125,
-            "latency_ms": 8522.339403018123
+            "peak_memory_mb": 17190.59423828125,
+            "latency_ms": 5411.732241511345
         },
         {
             "index": 61,
-            "score": 0.5,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Joey Lawrence",
+            "output": "Matthew Lawrence",
             "ground_truth": "Matthew Lawrence",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 13563.78744301037
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 8596.288569271564
         },
         {
             "index": 62,
-            "score": 0.0,
+            "score": 1.0,
             "metric": "F1",
-            "output": "David \n\n(Jimmy Perry)",
+            "output": "Matthew Lawrence",
             "ground_truth": "Matthew Lawrence",
-            "peak_memory_mb": 18015.59912109375,
-            "latency_ms": 16295.139163004933
+            "peak_memory_mb": 18027.93896484375,
+            "latency_ms": 9717.16831997037
         },
         {
             "index": 63,
             "score": 0.0,
             "metric": "F1",
-            "output": "There is no mention of the team that Arthur James was a member of beating the 1894-95 FA cup winner in the passage.",
+            "output": "1938",
             "ground_truth": "1 December 2010",
-            "peak_memory_mb": 18022.1181640625,
-            "latency_ms": 21659.10085500218
+            "peak_memory_mb": 18034.4111328125,
+            "latency_ms": 9750.924184918404
         },
         {
             "index": 64,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Free Software Directory (FSD) is a project of the Free Software Foundation (FSF).",
+            "output": "UNESCO",
             "ground_truth": "Richard Stallman",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 19669.57660301705
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9903.82220596075
         },
         {
             "index": 65,
-            "score": 0.4,
+            "score": 0.5,
             "metric": "F1",
-            "output": "The Egyptian pantheon",
+            "output": "Egyptian",
             "ground_truth": "ancient Egyptian religion",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15573.744661989622
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9706.262856721878
         },
         {
             "index": 66,
-            "score": 0.0,
+            "score": 0.4,
             "metric": "F1",
-            "output": "Virginia",
+            "output": "Calvin Coolidge was born in Plymouth Notch, Vermont.",
             "ground_truth": "Plymouth Notch",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 14865.386460005539
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 11934.690061956644
         },
         {
             "index": 67,
             "score": 0.5714285714285715,
             "metric": "F1",
-            "output": "Claudia Wells and Elisabeth Shue.",
+            "output": "Claudia Wells and Elisabeth Shue",
             "ground_truth": "Claudia Wells",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 16525.242878007703
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 11022.151783108711
         },
         {
             "index": 68,
@@ -637,26 +637,26 @@
             "metric": "F1",
             "output": "Sire Records",
             "ground_truth": "Kanine Records",
-            "peak_memory_mb": 16522.79638671875,
-            "latency_ms": 4505.078054004116
+            "peak_memory_mb": 16535.373046875,
+            "latency_ms": 2841.603897511959
         },
         {
             "index": 69,
             "score": 0.0,
             "metric": "F1",
-            "output": "Ernst Mach was a physicist, not an employee.",
+            "output": "Ernst Mach was an Austrian physicist and philosopher.",
             "ground_truth": "Charles University",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 17079.075985006057
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 11194.276604801416
         },
         {
             "index": 70,
             "score": 0.22222222222222224,
             "metric": "F1",
-            "output": "10 to 13 years.",
+            "output": "12 to 13 years.",
             "ground_truth": "average lifespan at 9.4 years",
-            "peak_memory_mb": 17819.255859375,
-            "latency_ms": 14578.582012996776
+            "peak_memory_mb": 17831.283203125,
+            "latency_ms": 9552.660547196865
         },
         {
             "index": 71,
@@ -664,8 +664,8 @@
             "metric": "F1",
             "output": "Estanislau da Silva",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 15645.403189992066
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 10264.157511293888
         },
         {
             "index": 72,
@@ -673,8 +673,8 @@
             "metric": "F1",
             "output": "Tarnów",
             "ground_truth": "Aden",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 14966.019341984065
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9665.763068944216
         },
         {
             "index": 73,
@@ -682,53 +682,53 @@
             "metric": "F1",
             "output": "American football",
             "ground_truth": "sports league",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15329.523977008648
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9901.70867368579
         },
         {
             "index": 74,
-            "score": 0.8,
+            "score": 0.6666666666666666,
             "metric": "F1",
-            "output": "A powerful Scottish clan",
+            "output": "A powerful Scottish clan historically",
             "ground_truth": "Scottish clan",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15520.630421000533
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 10249.827478080988
         },
         {
             "index": 75,
             "score": 1.0,
             "metric": "F1",
-            "output": "Fleur-de-lis",
+            "output": "The fleur-de-lis",
             "ground_truth": "fleur - de-lis",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15770.181667001452
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 10472.876735031605
         },
         {
             "index": 76,
-            "score": 0.6666666666666666,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Greek",
+            "output": "Greek mythology",
             "ground_truth": "Greek mythology",
-            "peak_memory_mb": 17578.99609375,
-            "latency_ms": 11275.399598001968
+            "peak_memory_mb": 17591.0234375,
+            "latency_ms": 7357.092149555683
         },
         {
             "index": 77,
-            "score": 0.4,
+            "score": 0.5714285714285715,
             "metric": "F1",
-            "output": "The Citadel, The Military College of South Carolina",
+            "output": "The College of Charleston",
             "ground_truth": "College of Charles Towne",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 16948.376307991566
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10273.87411147356
         },
         {
             "index": 78,
-            "score": 0.09523809523809525,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Cuyahoga County shares a border with Geauga County, that contains the town, that is near the city, that is the birthplace of the performer",
+            "output": "Cuyahoga",
             "ground_truth": "Cabarrus County",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 22469.097993016476
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10436.608422547579
         },
         {
             "index": 79,
@@ -736,26 +736,26 @@
             "metric": "F1",
             "output": "Clatskanie",
             "ground_truth": "Clatskanie",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15343.10786498827
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9950.147420167923
         },
         {
             "index": 80,
             "score": 0.0,
             "metric": "F1",
-            "output": "The discovery of the neutron made by James Chadwick",
+            "output": "Moseley's 1913 experiment",
             "ground_truth": "Manhattan Project",
-            "peak_memory_mb": 18000.3916015625,
-            "latency_ms": 17183.89561897493
+            "peak_memory_mb": 18012.8408203125,
+            "latency_ms": 10927.158530801535
         },
         {
             "index": 81,
-            "score": 0.3333333333333333,
+            "score": 0.1,
             "metric": "F1",
-            "output": "Robert Ludlum's Bourne novels",
+            "output": "Bud Halliday's manipulations by NSA assisted by a wet-work outfit known as Black River.",
             "ground_truth": "the novel of the same name by Robert Ludlum",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 15943.897082004696
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 13290.281254798174
         },
         {
             "index": 82,
@@ -763,8 +763,8 @@
             "metric": "F1",
             "output": "Bill Gates",
             "ground_truth": "ease of use and enhanced support for Plug and Play",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 14788.477852998767
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 9531.237680464983
         },
         {
             "index": 83,
@@ -772,17 +772,17 @@
             "metric": "F1",
             "output": "Aaron Benward and Scott Reeves.",
             "ground_truth": "Aaron Benward",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 16546.881312999176
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10908.593636006117
         },
         {
             "index": 84,
             "score": 0.0,
             "metric": "F1",
-            "output": "1",
+            "output": "Unknown",
             "ground_truth": "22",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 14832.491499983007
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9479.5534722507
         },
         {
             "index": 85,
@@ -790,17 +790,17 @@
             "metric": "F1",
             "output": "1986",
             "ground_truth": "1986",
-            "peak_memory_mb": 17899.3388671875,
-            "latency_ms": 13898.642721003853
+            "peak_memory_mb": 17911.8662109375,
+            "latency_ms": 8972.422916442156
         },
         {
             "index": 86,
             "score": 0.6666666666666666,
             "metric": "F1",
-            "output": "Johanne Luise Pätges (later Johanne Luise Heiberg)",
+            "output": "Johanne Luise Pätges",
             "ground_truth": "Johanne Luise Heiberg",
-            "peak_memory_mb": 17924.11181640625,
-            "latency_ms": 18143.679008004256
+            "peak_memory_mb": 17936.13916015625,
+            "latency_ms": 10398.156125098467
         },
         {
             "index": 87,
@@ -808,8 +808,8 @@
             "metric": "F1",
             "output": "Geena Davis",
             "ground_truth": "Dottie Hinson",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 14922.107994003454
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9832.2394490242
         },
         {
             "index": 88,
@@ -817,53 +817,53 @@
             "metric": "F1",
             "output": "NES",
             "ground_truth": "NES",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 14918.201043998124
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9507.175091654062
         },
         {
             "index": 89,
             "score": 0.0,
             "metric": "F1",
-            "output": "There is no information in the given passages about Alan O'Neil being a member of the sports team that beat the winner of the 1894-95 FA",
+            "output": "There is no information about the team Alan O'Neil was a member of in the passage provided, so the answer cannot be determined.",
             "ground_truth": "1 December 2010",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 22437.77442901046
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 15403.342109173536
         },
         {
             "index": 90,
             "score": 0.0,
             "metric": "F1",
-            "output": "There is no information in the given passages about the spouse of the person who plays Batman in the Lego Batman Movie.",
+            "output": "Warner Bros. didn't output any information about the spouse of the actor who plays Batman in the Lego Batman Movie.",
             "ground_truth": "Amy Poehler",
-            "peak_memory_mb": 17899.33935546875,
-            "latency_ms": 18915.991178015247
+            "peak_memory_mb": 17911.86669921875,
+            "latency_ms": 13636.23259589076
         },
         {
             "index": 91,
             "score": 0.0,
             "metric": "F1",
-            "output": "There is no passage that directly mentions the region where Baton a feu originated and the reduction of its population by the black death. However, Passage 4 mentions that",
+            "output": "There is no information about by how much of the population of the region where Baton a feu originated reduced by the black death in the given passages.",
             "ground_truth": "30% to 65%",
-            "peak_memory_mb": 17739.16796875,
-            "latency_ms": 19154.08027099329
+            "peak_memory_mb": 17751.1953125,
+            "latency_ms": 13767.52881333232
         },
         {
             "index": 92,
-            "score": 0.5,
+            "score": 0.0,
             "metric": "F1",
-            "output": "1769",
+            "output": "No information about the explorer is present in the passage about Con-Test's record label.",
             "ground_truth": "August 3, 1769",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15360.44535500696
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 13300.826195627451
         },
         {
             "index": 93,
             "score": 0.0,
             "metric": "F1",
-            "output": "Toronto",
+            "output": "Broken Social Scene",
             "ground_truth": "Casa Loma",
-            "peak_memory_mb": 17899.3408203125,
-            "latency_ms": 14041.763234010432
+            "peak_memory_mb": 17911.8681640625,
+            "latency_ms": 9509.449817240238
         },
         {
             "index": 94,
@@ -871,17 +871,17 @@
             "metric": "F1",
             "output": "Aaron Spelling",
             "ground_truth": "Min Zhou",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15394.857992010657
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9910.89378297329
         },
         {
             "index": 95,
             "score": 0.0,
             "metric": "F1",
-            "output": "Hannah",
+            "output": "Peggy Lipton",
             "ground_truth": "Meg Ryan",
-            "peak_memory_mb": 17996.0517578125,
-            "latency_ms": 15208.76825900632
+            "peak_memory_mb": 18008.5322265625,
+            "latency_ms": 10516.293305903673
         },
         {
             "index": 96,
@@ -889,17 +889,17 @@
             "metric": "F1",
             "output": "Andrew Scheer",
             "ground_truth": "Andrew Scheer",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15602.861507999478
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10081.504676491022
         },
         {
             "index": 97,
             "score": 0.0,
             "metric": "F1",
-            "output": "3:00 Central European Time.",
+            "output": "There is no information in the passage about Fuser and Alberto traveling to the country where they meet the indigenous couple.",
             "ground_truth": "24:00",
-            "peak_memory_mb": 17819.2548828125,
-            "latency_ms": 14580.379238992464
+            "peak_memory_mb": 17831.2822265625,
+            "latency_ms": 13000.225879251957
         },
         {
             "index": 98,
@@ -907,17 +907,17 @@
             "metric": "F1",
             "output": "2008",
             "ground_truth": "1970s",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15333.231928991154
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9889.688055962324
         },
         {
             "index": 99,
             "score": 0.0,
             "metric": "F1",
-            "output": "1946-47 Second Division season",
+            "output": "1946-47",
             "ground_truth": "1 December 2010",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 15895.150611002464
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 9881.219759583473
         },
         {
             "index": 100,
@@ -925,17 +925,17 @@
             "metric": "F1",
             "output": "2005",
             "ground_truth": "2005",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15099.526698002592
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9697.05094397068
         },
         {
             "index": 101,
-            "score": 0.4,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Oregon State Beaver",
+            "output": "The Beavers",
             "ground_truth": "Benny Beaver",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15225.65681199194
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9800.841752439737
         },
         {
             "index": 102,
@@ -943,8 +943,8 @@
             "metric": "F1",
             "output": "Jennifer Connelly",
             "ground_truth": "Jennifer Connelly",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15187.68650101265
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9781.296700239182
         },
         {
             "index": 103,
@@ -952,35 +952,35 @@
             "metric": "F1",
             "output": "Clark Gable",
             "ground_truth": "Laurence Olivier",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15460.215739003615
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10097.632586956024
         },
         {
             "index": 104,
-            "score": 1.0,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Lucy Mack Smith.",
+            "output": "Emma Hale",
             "ground_truth": "Lucy Mack Smith",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15983.516003994737
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9702.372081577778
         },
         {
             "index": 105,
             "score": 0.0,
             "metric": "F1",
-            "output": "I couldn't find the information of Merrill Elam's birthplace in the given passages.",
+            "output": "The passage does not specify the current mayor of the city where Merrill Elam was born. However, according to Passage 3, Merrill Elam was born in",
             "ground_truth": "Lance Bottoms",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 19126.064173993655
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 15879.91452589631
         },
         {
             "index": 106,
-            "score": 0.5,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Cuyahoga County",
+            "output": "Cuyahoga",
             "ground_truth": "Cabarrus County",
-            "peak_memory_mb": 17998.21923828125,
-            "latency_ms": 15848.001417994965
+            "peak_memory_mb": 18010.68408203125,
+            "latency_ms": 10099.616412073374
         },
         {
             "index": 107,
@@ -988,8 +988,8 @@
             "metric": "F1",
             "output": "ATS-6",
             "ground_truth": "ATS - 6 (Applications Technology Satellite - 6)",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15548.53482102044
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10067.990738898516
         },
         {
             "index": 108,
@@ -997,8 +997,8 @@
             "metric": "F1",
             "output": "Paterson River",
             "ground_truth": "Hunter River",
-            "peak_memory_mb": 16925.23291015625,
-            "latency_ms": 6804.538406984648
+            "peak_memory_mb": 16937.26025390625,
+            "latency_ms": 4318.934619426727
         },
         {
             "index": 109,
@@ -1006,17 +1006,17 @@
             "metric": "F1",
             "output": "1,362,359",
             "ground_truth": "1,335,907",
-            "peak_memory_mb": 18046.36181640625,
-            "latency_ms": 16009.267954010284
+            "peak_memory_mb": 18058.48291015625,
+            "latency_ms": 10286.440871655941
         },
         {
             "index": 110,
             "score": 0.0,
             "metric": "F1",
-            "output": "Toledo",
+            "output": "Pulaski",
             "ground_truth": "Green Bay",
-            "peak_memory_mb": 17899.34228515625,
-            "latency_ms": 25141.44424299593
+            "peak_memory_mb": 17911.86962890625,
+            "latency_ms": 9650.369491428137
         },
         {
             "index": 111,
@@ -1024,26 +1024,26 @@
             "metric": "F1",
             "output": "Susilo Bambang Yudhoyono",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17819.255859375,
-            "latency_ms": 24732.124403002672
+            "peak_memory_mb": 17831.283203125,
+            "latency_ms": 10260.071739554405
         },
         {
             "index": 112,
             "score": 0.0,
             "metric": "F1",
-            "output": "Faith Bevan",
+            "output": "There is no mention of a child of the male star of the 1921 film Money.",
             "ground_truth": "Anthony Ainley",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 15102.020336984424
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 13127.50592827797
         },
         {
             "index": 113,
             "score": 0.0,
             "metric": "F1",
-            "output": "None",
+            "output": "New Orleans",
             "ground_truth": "fleur - de-lis",
-            "peak_memory_mb": 18013.4296875,
-            "latency_ms": 15056.16138401092
+            "peak_memory_mb": 18025.78515625,
+            "latency_ms": 9746.31068110466
         },
         {
             "index": 114,
@@ -1051,35 +1051,35 @@
             "metric": "F1",
             "output": "Tanzania",
             "ground_truth": "Tanzania",
-            "peak_memory_mb": 17819.2529296875,
-            "latency_ms": 23428.191617014818
+            "peak_memory_mb": 17831.2802734375,
+            "latency_ms": 8683.967679738998
         },
         {
             "index": 115,
             "score": 0.0,
             "metric": "F1",
-            "output": "Josh Groban",
+            "output": "Nathan Cochran",
             "ground_truth": "Michael Bublé",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 27695.50707002054
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10285.67710891366
         },
         {
             "index": 116,
             "score": 0.0,
             "metric": "F1",
-            "output": "Conservative Party of Canada",
+            "output": "The Reform Party of Canada",
             "ground_truth": "Andrew Scheer",
-            "peak_memory_mb": 18022.1181640625,
-            "latency_ms": 15863.678576017264
+            "peak_memory_mb": 18034.4111328125,
+            "latency_ms": 10335.307728499174
         },
         {
             "index": 117,
-            "score": 0.3076923076923077,
+            "score": 0.2222222222222222,
             "metric": "F1",
-            "output": "The Atlantic Ocean, approximately 570 kilometres (350 mi) off the western coast of the African continent.",
+            "output": "Atlantic Ocean, approximately 570 kilometres (350 mi) off the western coast of the African continent, near Senegal, The Gambia, and Mauritania.",
             "ground_truth": "central Atlantic Ocean",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 19938.15093798912
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 16406.434454023838
         },
         {
             "index": 118,
@@ -1087,35 +1087,35 @@
             "metric": "F1",
             "output": "Ben Affleck",
             "ground_truth": "Fred O'Bannion",
-            "peak_memory_mb": 17899.3408203125,
-            "latency_ms": 14461.420503997942
+            "peak_memory_mb": 17911.8681640625,
+            "latency_ms": 9342.157743871212
         },
         {
             "index": 119,
             "score": 0.0,
             "metric": "F1",
-            "output": "Barney Stinson is played by Neil Patrick Harris",
+            "output": "Neil Patrick Harris",
             "ground_truth": "Nightwing / Dick Grayson",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 17083.31981798983
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9914.69071060419
         },
         {
             "index": 120,
-            "score": 0.125,
+            "score": 0.14814814814814817,
             "metric": "F1",
-            "output": "Nothing, the answer is not in the passage.",
+            "output": "None of the passages mention what the singer of \"Moon River\" in the movie Breakfast at Tiffany's won a Tony for.",
             "ground_truth": "for Best Performance by a Leading Actress in a Play in Ondine",
-            "peak_memory_mb": 17418.82421875,
-            "latency_ms": 11654.604803014081
+            "peak_memory_mb": 17430.8515625,
+            "latency_ms": 10748.343221843243
         },
         {
             "index": 121,
             "score": 0.0,
             "metric": "F1",
-            "output": "Belgrade",
+            "output": "Montenegro",
             "ground_truth": "Pristina",
-            "peak_memory_mb": 17899.33984375,
-            "latency_ms": 14058.434908976778
+            "peak_memory_mb": 17911.8671875,
+            "latency_ms": 9210.518795996904
         },
         {
             "index": 122,
@@ -1123,62 +1123,62 @@
             "metric": "F1",
             "output": "Orange River",
             "ground_truth": "Thaba Putsoa",
-            "peak_memory_mb": 17258.65185546875,
-            "latency_ms": 8981.4502549998
+            "peak_memory_mb": 17270.67919921875,
+            "latency_ms": 5717.065554112196
         },
         {
             "index": 123,
             "score": 0.0,
             "metric": "F1",
-            "output": "No one.",
+            "output": "Lea Thompson",
             "ground_truth": "Claudia Wells",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15397.846952982945
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9924.599476158619
         },
         {
             "index": 124,
             "score": 0.0,
             "metric": "F1",
-            "output": "Lori Alan",
+            "output": "Pearl",
             "ground_truth": "Mr. Lawrence",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15619.556022982579
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9875.317059457302
         },
         {
             "index": 125,
-            "score": 0.5,
+            "score": 0.28571428571428575,
             "metric": "F1",
-            "output": "280-279 BC",
+            "output": "280 BC to 279 BC",
             "ground_truth": "323–272 BC",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15792.05131699564
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10676.258962601423
         },
         {
             "index": 126,
             "score": 0.0,
             "metric": "F1",
-            "output": "Liquidation.",
+            "output": "liquidation",
             "ground_truth": "trying to find a potential buyer for all of its operations in Finland",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15366.385470988462
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9709.237102419138
         },
         {
             "index": 127,
             "score": 0.0,
             "metric": "F1",
-            "output": "19th century",
+            "output": "1862",
             "ground_truth": "15 February 1942",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15206.321061006747
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9587.356641888618
         },
         {
             "index": 128,
             "score": 0.0,
             "metric": "F1",
-            "output": "East Timor",
+            "output": "Zeferino Martins",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17979.4248046875,
-            "latency_ms": 14820.374286995502
+            "peak_memory_mb": 17991.4521484375,
+            "latency_ms": 9816.632483154535
         },
         {
             "index": 129,
@@ -1186,8 +1186,8 @@
             "metric": "F1",
             "output": "Brandi Carlile",
             "ground_truth": "Phil Hanseroth",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15565.567885991186
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10075.72777196765
         },
         {
             "index": 130,
@@ -1195,8 +1195,8 @@
             "metric": "F1",
             "output": "Thailand",
             "ground_truth": "Ko Phi Phi Leh",
-            "peak_memory_mb": 18044.1728515625,
-            "latency_ms": 15246.65608300711
+            "peak_memory_mb": 18056.3095703125,
+            "latency_ms": 9765.232838690281
         },
         {
             "index": 131,
@@ -1204,26 +1204,26 @@
             "metric": "F1",
             "output": "Aaron Spelling",
             "ground_truth": "Min Zhou",
-            "peak_memory_mb": 17899.33935546875,
-            "latency_ms": 14162.312281987397
+            "peak_memory_mb": 17911.86669921875,
+            "latency_ms": 9365.56326970458
         },
         {
             "index": 132,
-            "score": 0.0,
+            "score": 0.3333333333333333,
             "metric": "F1",
-            "output": "Fort Mitchell is not the answer to the given question. \nHowever, Fort Mitchell is the location where Snappy Tomato Pizza started, but the question asked \"In",
+            "output": "Fort Mitchell, Kentucky",
             "ground_truth": "Kenton County",
-            "peak_memory_mb": 17979.4248046875,
-            "latency_ms": 21621.89348199172
+            "peak_memory_mb": 17991.4521484375,
+            "latency_ms": 9811.238422989845
         },
         {
             "index": 133,
-            "score": 0.25,
+            "score": 0.14285714285714288,
             "metric": "F1",
-            "output": "Best Director.",
+            "output": "None, according to the passage, the note about Best actor winner Ang Lee becoming the first non-Caucasian winner is a notable achievement but it does not",
             "ground_truth": "nominated for an Academy Award for Best Supporting Actor",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15660.659607994603
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 16467.18716621399
         },
         {
             "index": 134,
@@ -1231,44 +1231,44 @@
             "metric": "F1",
             "output": "1 January 1986",
             "ground_truth": "1 January 1986",
-            "peak_memory_mb": 17996.0517578125,
-            "latency_ms": 15886.796720995335
+            "peak_memory_mb": 18008.5322265625,
+            "latency_ms": 10328.16819101572
         },
         {
             "index": 135,
-            "score": 0.09999999999999999,
+            "score": 0.1111111111111111,
             "metric": "F1",
-            "output": "A&M Records (Canada) and in 1995 through Koch Entertainment (Europe); it was later reissued in 2004 through Solid Gold Records.",
+            "output": "A&M Records (Canada) and in 1995 through Koch Entertainment (Europe), later reissued in 2004 through Solid Gold Records.",
             "ground_truth": "Attic Records",
-            "peak_memory_mb": 16618.34130859375,
-            "latency_ms": 9766.04856501217
+            "peak_memory_mb": 16630.36865234375,
+            "latency_ms": 7217.997077852488
         },
         {
             "index": 136,
-            "score": 0.0,
+            "score": 0.4,
             "metric": "F1",
-            "output": "The majority party in the House of Representatives gained control of the body which approves members of the Cabinet in 2014, when the Republicans gained a majority in the",
+            "output": "October 29, 2015",
             "ground_truth": "January 2015",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 22247.254531015642
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10715.093065053225
         },
         {
             "index": 137,
             "score": 0.0,
             "metric": "F1",
-            "output": "Barton Distilleries",
+            "output": "Prismian",
             "ground_truth": "fleur - de-lis",
-            "peak_memory_mb": 18046.36181640625,
-            "latency_ms": 15821.651053003734
+            "peak_memory_mb": 18058.48291015625,
+            "latency_ms": 9894.760061055422
         },
         {
             "index": 138,
             "score": 0.0,
             "metric": "F1",
-            "output": "Wenzhou",
+            "output": "Wenzhou, Zhejiang",
             "ground_truth": "Yongjia County",
-            "peak_memory_mb": 17819.2548828125,
-            "latency_ms": 13750.41290099034
+            "peak_memory_mb": 17831.2822265625,
+            "latency_ms": 9642.789512872696
         },
         {
             "index": 139,
@@ -1276,8 +1276,8 @@
             "metric": "F1",
             "output": "Karen Fairchild",
             "ground_truth": "Karen Fairchild",
-            "peak_memory_mb": 17993.88037109375,
-            "latency_ms": 15336.682080000173
+            "peak_memory_mb": 18006.37646484375,
+            "latency_ms": 9897.752113640308
         },
         {
             "index": 140,
@@ -1285,8 +1285,8 @@
             "metric": "F1",
             "output": "Toronto",
             "ground_truth": "Casa Loma",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 14878.983645001426
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 9668.426424264908
         },
         {
             "index": 141,
@@ -1294,26 +1294,26 @@
             "metric": "F1",
             "output": "Natalie Wood",
             "ground_truth": "Lana Wood",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15479.21171199414
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 10008.956078439951
         },
         {
             "index": 142,
             "score": 1.0,
             "metric": "F1",
-            "output": "Tunis",
+            "output": "Rome",
             "ground_truth": "La Goulette",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15597.160291014006
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9899.635672569275
         },
         {
             "index": 143,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Old Prussian language died out in the 18th century and the Old Prussian ethnic group became completely Germanized.",
+            "output": "The last remaining Germans left in November 1949 (1,401 persons) and January 1950 (7 persons).",
             "ground_truth": "names were replaced by new Russian names",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 20701.461487013148
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 14634.904142469168
         },
         {
             "index": 144,
@@ -1321,8 +1321,8 @@
             "metric": "F1",
             "output": "Charles County",
             "ground_truth": "Charles County",
-            "peak_memory_mb": 17418.8251953125,
-            "latency_ms": 10378.164753987221
+            "peak_memory_mb": 17430.8525390625,
+            "latency_ms": 6599.721658974886
         },
         {
             "index": 145,
@@ -1330,35 +1330,35 @@
             "metric": "F1",
             "output": "2014",
             "ground_truth": "January 2015",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 14751.173099997686
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 9500.200968235731
         },
         {
             "index": 146,
             "score": 0.0,
             "metric": "F1",
-            "output": "15 consecutive wins including friendlies",
+            "output": "15",
             "ground_truth": "continental treble",
-            "peak_memory_mb": 18033.26904296875,
-            "latency_ms": 16052.424756024266
+            "peak_memory_mb": 18045.48388671875,
+            "latency_ms": 9521.893095225096
         },
         {
             "index": 147,
             "score": 0.0,
             "metric": "F1",
-            "output": "No one, the passages do not mention that connection.",
+            "output": "Holland Taylor",
             "ground_truth": "Joyce Van Patten",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 17074.147540988633
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9787.983413785696
         },
         {
             "index": 148,
             "score": 0.0,
             "metric": "F1",
-            "output": "Bobby Brown",
+            "output": "Bobby J. Brown",
             "ground_truth": "a Western District uniformed officer",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15559.658233018126
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10496.993247419596
         },
         {
             "index": 149,
@@ -1366,8 +1366,8 @@
             "metric": "F1",
             "output": "1986",
             "ground_truth": "1986",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15384.643527009757
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10100.48608854413
         },
         {
             "index": 150,
@@ -1375,17 +1375,17 @@
             "metric": "F1",
             "output": "1992",
             "ground_truth": "2016",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15175.620659982087
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9702.819503843784
         },
         {
             "index": 151,
-            "score": 0.6666666666666666,
+            "score": 0.8571428571428571,
             "metric": "F1",
-            "output": "His brother-in-law, Rabbi Menachem Mendel Schneersohn.",
+            "output": "Rabbi Menachem Mendel Schneersohn",
             "ground_truth": "Menachem Mendel Schneersohn",
-            "peak_memory_mb": 17899.33984375,
-            "latency_ms": 17532.425241020974
+            "peak_memory_mb": 17911.8671875,
+            "latency_ms": 11039.481941610575
         },
         {
             "index": 152,
@@ -1393,53 +1393,53 @@
             "metric": "F1",
             "output": "Josh Groban",
             "ground_truth": "Michael Bublé",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 16009.310513007222
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10099.991355091333
         },
         {
             "index": 153,
             "score": 0.0,
             "metric": "F1",
-            "output": "Neil Simon",
+            "output": "The NSA",
             "ground_truth": "ADM Michael S. Rogers",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 14900.124620005954
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9569.639157503843
         },
         {
             "index": 154,
             "score": 0.0,
             "metric": "F1",
-            "output": "The information is not provided in the given passages.",
+            "output": "There is no information in the given passages about the team that Terry Twell was a member of beating the 1894-95 winner of the FA Cup.",
             "ground_truth": "1 December 2010",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 16800.56105199037
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 16037.742428481579
         },
         {
             "index": 155,
             "score": 0.5,
             "metric": "F1",
-            "output": "Francis Bacon.",
+            "output": "Francis Bacon",
             "ground_truth": "Nicholas Bacon",
-            "peak_memory_mb": 17899.34130859375,
-            "latency_ms": 14714.578277984401
+            "peak_memory_mb": 17911.86865234375,
+            "latency_ms": 9377.493888139725
         },
         {
             "index": 156,
             "score": 0.0,
             "metric": "F1",
-            "output": "Lesotho",
+            "output": "The Orange River Basin",
             "ground_truth": "Thaba Putsoa",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15230.690099007916
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 10015.015088021755
         },
         {
             "index": 157,
-            "score": 0.0,
+            "score": 0.4,
             "metric": "F1",
-            "output": "I couldn't find the answer in the given passages.",
+            "output": "Egypt",
             "ground_truth": "Egypt national football team",
-            "peak_memory_mb": 17991.712890625,
-            "latency_ms": 17325.283163023414
+            "peak_memory_mb": 18004.224609375,
+            "latency_ms": 9550.203811377287
         },
         {
             "index": 158,
@@ -1447,8 +1447,8 @@
             "metric": "F1",
             "output": "1958",
             "ground_truth": "La Goulette",
-            "peak_memory_mb": 17984.10205078125,
-            "latency_ms": 15118.009920988698
+            "peak_memory_mb": 17996.66064453125,
+            "latency_ms": 9885.378789156675
         },
         {
             "index": 159,
@@ -1456,80 +1456,80 @@
             "metric": "F1",
             "output": "2 million",
             "ground_truth": "2 million",
-            "peak_memory_mb": 17979.4248046875,
-            "latency_ms": 14732.955298008164
+            "peak_memory_mb": 17991.4521484375,
+            "latency_ms": 9441.913809627295
         },
         {
             "index": 160,
             "score": 0.0,
             "metric": "F1",
-            "output": "Linda Cardellini.",
+            "output": "Linda Cardellini",
             "ground_truth": "Jennifer Connelly",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 16111.367064004298
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10303.30204218626
         },
         {
             "index": 161,
             "score": 0.4,
             "metric": "F1",
-            "output": "Clarke County",
+            "output": "Hall County",
             "ground_truth": "Presque Isle County",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15589.589598996099
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9908.746808767319
         },
         {
             "index": 162,
-            "score": 0.0,
+            "score": 0.22222222222222224,
             "metric": "F1",
-            "output": "Jay-Z",
+            "output": "Jay-Z's relationships.",
             "ground_truth": "three different relationships he had in the past",
-            "peak_memory_mb": 17981.904296875,
-            "latency_ms": 15182.981379010016
+            "peak_memory_mb": 17994.478515625,
+            "latency_ms": 10326.671835035086
         },
         {
             "index": 163,
-            "score": 0.5,
+            "score": 0.4,
             "metric": "F1",
-            "output": "Idaho",
+            "output": "Notus, Idaho",
             "ground_truth": "Canyon County",
-            "peak_memory_mb": 17899.341796875,
-            "latency_ms": 14409.029274014756
+            "peak_memory_mb": 17911.869140625,
+            "latency_ms": 9614.291202276945
         },
         {
             "index": 164,
             "score": 0.0,
             "metric": "F1",
-            "output": "Christopher McDonald played the husband of the actress who played Thelma in Thelma and Louise.",
+            "output": "Christopher McDonald",
             "ground_truth": "Bill Pullman",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 19342.20172499772
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9666.629254817963
         },
         {
             "index": 165,
-            "score": 0.0,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Iran",
+            "output": "The Dutch East Indies",
             "ground_truth": "Dutch East Indies",
-            "peak_memory_mb": 17979.42626953125,
-            "latency_ms": 14641.923303017393
+            "peak_memory_mb": 17991.45361328125,
+            "latency_ms": 9926.96725577116
         },
         {
             "index": 166,
-            "score": 0.0,
+            "score": 0.4,
             "metric": "F1",
-            "output": "Tanzania",
+            "output": "Niassa Province.",
             "ground_truth": "Cabo Delgado Province",
-            "peak_memory_mb": 17418.82470703125,
-            "latency_ms": 10414.951472019311
+            "peak_memory_mb": 17430.85205078125,
+            "latency_ms": 6864.450171589851
         },
         {
             "index": 167,
             "score": 1.0,
             "metric": "F1",
-            "output": "Association for Computing Machinery (ACM)",
+            "output": "Association for Computing Machinery",
             "ground_truth": "Association for Computing Machinery",
-            "peak_memory_mb": 17819.255859375,
-            "latency_ms": 14873.441557982005
+            "peak_memory_mb": 17831.283203125,
+            "latency_ms": 9096.545852720737
         },
         {
             "index": 168,
@@ -1537,8 +1537,8 @@
             "metric": "F1",
             "output": "Guadalupe County.",
             "ground_truth": "Bell County",
-            "peak_memory_mb": 17979.42578125,
-            "latency_ms": 15742.482867004583
+            "peak_memory_mb": 17991.453125,
+            "latency_ms": 10267.223414033651
         },
         {
             "index": 169,
@@ -1546,8 +1546,8 @@
             "metric": "F1",
             "output": "Nuevo Laredo",
             "ground_truth": "Tamaulipas",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15618.973117001588
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10280.371978878975
         },
         {
             "index": 170,
@@ -1555,17 +1555,17 @@
             "metric": "F1",
             "output": "Sebastian Cabot",
             "ground_truth": "Sebastian Cabot",
-            "peak_memory_mb": 17660.08349609375,
-            "latency_ms": 12711.93150000181
+            "peak_memory_mb": 17673.11083984375,
+            "latency_ms": 8222.74961322546
         },
         {
             "index": 171,
-            "score": 0.0,
+            "score": 1.0,
             "metric": "F1",
-            "output": "Winston Churchill",
+            "output": "Colin Firth",
             "ground_truth": "Colin Firth",
-            "peak_memory_mb": 18028.64892578125,
-            "latency_ms": 15385.084266978083
+            "peak_memory_mb": 18040.89501953125,
+            "latency_ms": 10088.831342756748
         },
         {
             "index": 172,
@@ -1573,8 +1573,8 @@
             "metric": "F1",
             "output": "Colorado",
             "ground_truth": "Denver",
-            "peak_memory_mb": 17899.34033203125,
-            "latency_ms": 13928.565480018733
+            "peak_memory_mb": 17911.86767578125,
+            "latency_ms": 8913.76917436719
         },
         {
             "index": 173,
@@ -1582,17 +1582,17 @@
             "metric": "F1",
             "output": "Thailand",
             "ground_truth": "Ko Phi Phi Leh",
-            "peak_memory_mb": 17979.427734375,
-            "latency_ms": 15145.048733014846
+            "peak_memory_mb": 17991.455078125,
+            "latency_ms": 9703.576285392046
         },
         {
             "index": 174,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Billie Jean King Cup.",
+            "output": "Billie Jean King Cup",
             "ground_truth": "International Tennis Federation",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 14434.836506989086
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 9195.630211383104
         },
         {
             "index": 175,
@@ -1600,8 +1600,8 @@
             "metric": "F1",
             "output": "Xanana Gusmão",
             "ground_truth": "Francisco Guterres",
-            "peak_memory_mb": 17899.34130859375,
-            "latency_ms": 15095.829414000036
+            "peak_memory_mb": 17911.86865234375,
+            "latency_ms": 9911.059085279703
         },
         {
             "index": 176,
@@ -1609,17 +1609,17 @@
             "metric": "F1",
             "output": "George VI",
             "ground_truth": "Colin Firth",
-            "peak_memory_mb": 17986.3037109375,
-            "latency_ms": 15172.566257999279
+            "peak_memory_mb": 17998.8466796875,
+            "latency_ms": 9740.719322115183
         },
         {
             "index": 177,
             "score": 0.5,
             "metric": "F1",
-            "output": "River Ravensbourne",
+            "output": "The River Ravensbourne",
             "ground_truth": "River Thames",
-            "peak_memory_mb": 17979.42822265625,
-            "latency_ms": 15412.653737002984
+            "peak_memory_mb": 17991.45556640625,
+            "latency_ms": 10103.07427868247
         },
         {
             "index": 178,
@@ -1627,17 +1627,17 @@
             "metric": "F1",
             "output": "Tony Award and Drama Desk Award for Outstanding Revival of a Play.",
             "ground_truth": "Pulitzer Prize for Drama",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 18229.314218013315
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 12556.354854255915
         },
         {
             "index": 179,
             "score": 0.0,
             "metric": "F1",
-            "output": "ETH Zurich",
+            "output": "London",
             "ground_truth": "University of Glasgow",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 14954.980718001025
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9410.282827913761
         },
         {
             "index": 180,
@@ -1645,17 +1645,17 @@
             "metric": "F1",
             "output": "Louis Chedid",
             "ground_truth": "Louis Chedid",
-            "peak_memory_mb": 17993.88037109375,
-            "latency_ms": 15603.176684002392
+            "peak_memory_mb": 18006.37646484375,
+            "latency_ms": 10095.348592847586
         },
         {
             "index": 181,
-            "score": 0.15384615384615383,
+            "score": 0.14285714285714288,
             "metric": "F1",
-            "output": "He left Italy to act as nuncio in France.",
+            "output": "There is no information about The Gozzi Altarpiece in the given passages.",
             "ground_truth": "for the conclave in Rome",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 16829.244352004025
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 12564.395304769278
         },
         {
             "index": 182,
@@ -1663,26 +1663,26 @@
             "metric": "F1",
             "output": "Adam Smith",
             "ground_truth": "University of Cambridge",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 15349.830115010263
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 9919.311728328466
         },
         {
             "index": 183,
             "score": 0.0,
             "metric": "F1",
-            "output": "Raymond Triboulet",
+            "output": "I'm sorry I was unable to find the requested information.",
             "ground_truth": "Lech Wałęsa",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15680.873948003864
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 11651.480585336685
         },
         {
             "index": 184,
             "score": 0.0,
             "metric": "F1",
-            "output": "Grote of Sint-Laurenskerk",
+            "output": "Nieuwe Maas River",
             "ground_truth": "Het Scheur",
-            "peak_memory_mb": 18059.5107421875,
-            "latency_ms": 17224.17983302148
+            "peak_memory_mb": 18071.5380859375,
+            "latency_ms": 10691.862151026726
         },
         {
             "index": 185,
@@ -1690,8 +1690,8 @@
             "metric": "F1",
             "output": "Luke Bryan",
             "ground_truth": "Karen Fairchild",
-            "peak_memory_mb": 18033.26904296875,
-            "latency_ms": 15137.87929501268
+            "peak_memory_mb": 18045.48388671875,
+            "latency_ms": 9719.744298607111
         },
         {
             "index": 186,
@@ -1699,17 +1699,17 @@
             "metric": "F1",
             "output": "Purdue University",
             "ground_truth": "City University of New York",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15451.840840018122
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 9956.337839365005
         },
         {
             "index": 187,
-            "score": 1.0,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Green Bay",
+            "output": "Oshkosh",
             "ground_truth": "Green Bay",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 14713.248163985554
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9854.31868210435
         },
         {
             "index": 188,
@@ -1717,8 +1717,8 @@
             "metric": "F1",
             "output": "James Meredith",
             "ground_truth": "James Howard Meredith",
-            "peak_memory_mb": 17984.10205078125,
-            "latency_ms": 15119.541430001846
+            "peak_memory_mb": 17996.66064453125,
+            "latency_ms": 9865.730434656143
         },
         {
             "index": 189,
@@ -1726,26 +1726,26 @@
             "metric": "F1",
             "output": "Nia Long",
             "ground_truth": "Lacey Chabert",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15278.579322010046
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9828.240364789963
         },
         {
             "index": 190,
             "score": 1.0,
             "metric": "F1",
-            "output": "Hollywood Records",
+            "output": "Hollywood Records.",
             "ground_truth": "Hollywood Records",
-            "peak_memory_mb": 17578.9951171875,
-            "latency_ms": 11516.797483025584
+            "peak_memory_mb": 17591.0224609375,
+            "latency_ms": 7614.000808447599
         },
         {
             "index": 191,
             "score": 0.0,
             "metric": "F1",
-            "output": "Cold Crush Records.",
+            "output": "Cold Crush Records",
             "ground_truth": "Kill Rock Stars",
-            "peak_memory_mb": 16698.17626953125,
-            "latency_ms": 5851.177067001117
+            "peak_memory_mb": 16712.20361328125,
+            "latency_ms": 3595.4485796391964
         },
         {
             "index": 192,
@@ -1753,8 +1753,8 @@
             "metric": "F1",
             "output": "Emilia Galotti",
             "ground_truth": "Emilia Galotti",
-            "peak_memory_mb": 17979.42626953125,
-            "latency_ms": 15327.766331989551
+            "peak_memory_mb": 17991.45361328125,
+            "latency_ms": 9953.37775349617
         },
         {
             "index": 193,
@@ -1762,8 +1762,8 @@
             "metric": "F1",
             "output": "1938",
             "ground_truth": "the 2010 election",
-            "peak_memory_mb": 17819.25390625,
-            "latency_ms": 13402.053855010308
+            "peak_memory_mb": 17831.28125,
+            "latency_ms": 8622.441947460175
         },
         {
             "index": 194,
@@ -1771,8 +1771,8 @@
             "metric": "F1",
             "output": "1599",
             "ground_truth": "1572",
-            "peak_memory_mb": 17928.91552734375,
-            "latency_ms": 14356.667118001496
+            "peak_memory_mb": 17940.94287109375,
+            "latency_ms": 9208.835009485483
         },
         {
             "index": 195,
@@ -1780,35 +1780,35 @@
             "metric": "F1",
             "output": "Rostov",
             "ground_truth": "Yaroslavl Oblast",
-            "peak_memory_mb": 17899.3408203125,
-            "latency_ms": 14384.556965000229
+            "peak_memory_mb": 17911.8681640625,
+            "latency_ms": 9293.928761035204
         },
         {
             "index": 196,
-            "score": 1.0,
+            "score": 0.6666666666666666,
             "metric": "F1",
-            "output": "The Qatar Stars League.",
+            "output": "Qatari Stars League",
             "ground_truth": "Qatar Stars League",
-            "peak_memory_mb": 17979.4267578125,
-            "latency_ms": 15705.61452000402
+            "peak_memory_mb": 17991.4541015625,
+            "latency_ms": 10200.959868729115
         },
         {
             "index": 197,
             "score": 0.0,
             "metric": "F1",
-            "output": "The Anglo-Saxon Heptarchy was not abolished as a whole, but rather it was absorbed into the Kingdom of England.",
+            "output": "871",
             "ground_truth": "918",
-            "peak_memory_mb": 17979.42529296875,
-            "latency_ms": 20222.83333199448
+            "peak_memory_mb": 17991.45263671875,
+            "latency_ms": 9276.182781904936
         },
         {
             "index": 198,
             "score": 0.0,
             "metric": "F1",
-            "output": "$30,134",
+            "output": "$18,756",
             "ground_truth": "$59,039",
-            "peak_memory_mb": 17979.42724609375,
-            "latency_ms": 15421.733996015973
+            "peak_memory_mb": 17991.45458984375,
+            "latency_ms": 9980.361741036177
         },
         {
             "index": 199,
@@ -1816,8 +1816,8 @@
             "metric": "F1",
             "output": "Santa Clara",
             "ground_truth": "Santa Clara County",
-            "peak_memory_mb": 18050.74365234375,
-            "latency_ms": 15445.218283013673
+            "peak_memory_mb": 18062.83349609375,
+            "latency_ms": 9883.856073021889
         }
     ]
 }

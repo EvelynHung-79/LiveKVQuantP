@@ -1,28 +1,27 @@
 # --- LLM & Models (LLaMA-3 & LLaMA-2 Support) ---
 # LLaMA-3 需要 transformers >= 4.40.0
-transformers>=4.40.0
-accelerate>=0.28.0
+transformers==4.57.3
+accelerate==1.12.0
 # [重要] LLaMA-2 的 Tokenizer 依賴此套件，若無安裝會報錯
-sentencepiece>=0.2.0
-# (選用) 若你的 GPU 支援 (Ampere 架構以上)，這能加速標準 Attention 計算，但非強制
-# flash-attn>=2.5.0
+sentencepiece==0.2.1
 
 # --- Data Loading (LongBench & Wikitext) ---
-datasets>=2.19.0
+datasets==4.4.1
 
 # --- Configuration Management ---
-pyyaml>=6.0.1
+pyyaml==6.0.3
 
 # --- Numerical & Scientific Computing ---
-numpy>=1.26.0
-scipy>=1.13.0
+numpy==2.3.3
+scipy==1.16.3
 
 # --- Testing Framework ---
-pytest>=8.0.0
+pytest>=9.0.2
 
 # --- Utilities ---
-tqdm>=4.66.0
-pandas>=2.2.0
-matplotlib>=3.8.0
+tqdm>=4.67.1
+pandas>=2.3.3
+matplotlib>=3.10.8
 
-triton>=3.2.0
+triton==3.2.0
+huggingface_hub==0.36.0
