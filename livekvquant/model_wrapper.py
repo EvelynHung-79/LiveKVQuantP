@@ -144,21 +144,22 @@ class LiveKVQuantModel:
         for controller in self.controllers:
             controller.set_decoding_mode()
 
-        # 3. Decoding Loop
+        # 3. Decoding Loop（pre-allocate position_ids 避免每步都建新 tensor）
+        pos_ids = torch.tensor([[current_pos]], device=self.device, dtype=torch.long)
         for _ in range(max_new_tokens - 1):
-            position_ids = torch.tensor([[current_pos]], device=self.device)
-            outputs = self.model(input_ids=next_token, position_ids=position_ids, use_cache=False)
-            
+            outputs = self.model(input_ids=next_token, position_ids=pos_ids, use_cache=False)
+
             next_token_logits = outputs.logits[:, -1, :]
             if temperature > 0:
                 probs = torch.softmax(next_token_logits / temperature, dim=-1)
                 next_token = torch.multinomial(probs, num_samples=1)
             else:
                 next_token = torch.argmax(next_token_logits, dim=-1).unsqueeze(0)
-            
+
             generated_ids.append(next_token.item())
             current_pos += 1
-            
+            pos_ids.fill_(current_pos)
+
             if next_token.item() == self.tokenizer.eos_token_id:
                 break
                 

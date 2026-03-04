@@ -21,14 +21,13 @@ class RealTimeQuantizer:
             sink_length: 若 > 0，則前 N 個 Token 會被強制視為 Sparse 保留，
                          並從 Dense 部分移除（歸零）。
         """
-        # 1. 準備 Working Tensor (複製一份以免影響原始資料)
-        working_tensor = tensor.clone()
-        
-        # 2. Mask Sink (Pre-isolation)
-        # 在計算統計值或抓 Outlier 前，先把 Sink 區域歸零，避免它影響 Dense 的統計
+        # 1. 準備 Working Tensor
+        # 只在需要修改 sink 區域時才 clone，否則直接使用原始 tensor
         if sink_length > 0:
-            # 假設 Sequence 維度總是倒數第二維 (batch, head, seq, dim)
+            working_tensor = tensor.clone()
             working_tensor[..., :sink_length, :] = 0
+        else:
+            working_tensor = tensor
 
         # 3. 執行標準 Outlier 分離
         # dense_tensor 裡面的 outlier 已經被移除 (或平滑化)

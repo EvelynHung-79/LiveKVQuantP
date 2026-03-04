@@ -6,7 +6,7 @@ __pycache__
 .pytest_cache/
 # results/
 # *.png
-# data/longbench_v1/
+data/longbench_v1/
 data/longbench_v2/
 ema_plots/
 

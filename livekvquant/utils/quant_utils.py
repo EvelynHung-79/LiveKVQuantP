@@ -28,5 +28,6 @@ def quantize_symmetric(tensor: torch.Tensor, scale: torch.Tensor, bits: int = 4)
 def dequantize_symmetric(quantized: torch.Tensor, scale: torch.Tensor) -> torch.Tensor:
     """
     反量化： x = x_q * scale
+    直接用 scale 的 dtype（通常是 fp16/bf16）計算，避免多餘的 fp32 中間 tensor。
     """
-    return quantized.float() * scale
+    return quantized.to(scale.dtype) * scale

@@ -4,9 +4,9 @@ import os
 import json
 from tqdm import tqdm
 from datetime import datetime
-from evaluation.metrics import calculate_f1_score, calculate_accuracy
+from evaluation.metrics import calculate_f1_score, calculate_accuracy, calculate_rouge_l, calculate_edit_similarity
 from livekvquant.utils.data_utils import truncate_input_ids
-from data.constants import TASK_OUTPUT_LEN
+from data.constants import TASK_OUTPUT_LEN, V1_TASK_METRIC
 
 logger = logging.getLogger(__name__)
 
@@ -85,8 +85,16 @@ class LongBenchEvaluator:
                     score = calculate_accuracy(output_text, ground_truths)
                     metric_name = "Accuracy"
                 else:
-                    score = calculate_f1_score(output_text, ground_truths)
-                    metric_name = "F1"
+                    # v1: 根據 task 選擇官方指定的 metric
+                    metric_name = V1_TASK_METRIC.get(task_name, "F1")
+                    if metric_name == "Rouge-L":
+                        score = calculate_rouge_l(output_text, ground_truths)
+                    elif metric_name == "Accuracy":
+                        score = calculate_accuracy(output_text, ground_truths)
+                    elif metric_name == "Edit Sim":
+                        score = calculate_edit_similarity(output_text, ground_truths)
+                    else:
+                        score = calculate_f1_score(output_text, ground_truths)
                 
                 total_score += score
                 results.append({

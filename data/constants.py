@@ -68,6 +68,30 @@ TASK_OUTPUT_LEN = {
     "repobench-p": 64
 }
 
+# === LongBench v1 官方 Metric 定義 ===
+V1_TASK_METRIC = {
+    # QA tasks → F1
+    "narrativeqa": "F1",
+    "qasper": "F1",
+    "multifieldqa_en": "F1",
+    "hotpotqa": "F1",
+    "2wikimqa": "F1",
+    "musique": "F1",
+    "triviaqa": "F1",
+    # Summarization → Rouge-L
+    "gov_report": "Rouge-L",
+    "qmsum": "Rouge-L",
+    "multi_news": "Rouge-L",
+    "samsum": "Rouge-L",
+    # Classification / Synthetic → Accuracy
+    "trec": "Accuracy",
+    "passage_count": "Accuracy",
+    "passage_retrieval_en": "Accuracy",
+    # Code → Edit Similarity
+    "lcc": "Edit Sim",
+    "repobench-p": "Edit Sim",
+}
+
 def get_task_list(version, task_type):
     task_type_lower = task_type.lower()
     
