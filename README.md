@@ -21,15 +21,17 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
    source venv/bin/activate
    ```
 
-2.  **安裝相依套件：**
+2.  **Setup Environment：**
 
     ```bash
     pip install --upgrade pip
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
     pip install -r requirements.txt
 
+    # Huggingface
     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0
 
+    # Copy Dataset
     scp -P 14140 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@38.147.83.11:/root/LiveKVQuantP/data/
 
     # 拿掉 GitHub 最新 commit，但保留內容在 local
@@ -39,6 +41,8 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
     # Setup name and gmail
     git config user.name Evelyn
     git config user.email chia20010709@gmail.com
+
+    # Download Claude Code Extension
     ```
 
 3.  **配置設定：**
