@@ -4,9 +4,19 @@ import os
 import json
 from tqdm import tqdm
 from datetime import datetime, timezone, timedelta
+from transformers import StoppingCriteria, StoppingCriteriaList
 from evaluation.metrics import calculate_f1_score, calculate_accuracy, calculate_rouge_l, calculate_edit_similarity
 from livekvquant.utils.data_utils import truncate_input_ids
 from data.constants import TASK_OUTPUT_LEN, V1_TASK_METRIC
+
+
+class StopOnTokens(StoppingCriteria):
+    """Stop generation when any of the specified token IDs is generated."""
+    def __init__(self, stop_token_ids: list):
+        self.stop_token_ids = stop_token_ids
+
+    def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor, **kwargs) -> bool:
+        return input_ids[0, -1].item() in self.stop_token_ids
 
 logger = logging.getLogger(__name__)
 
@@ -55,19 +65,16 @@ class LongBenchEvaluator:
                 except:
                     final_input_text = final_prompt
 
-            # Stop sequences for completion tasks to prevent over-generation
-            # e.g. samsum should stop at \n (one-line summary), trec at \n (one-line label)
-            TASK_STOP_STRS = {
-                "trec": ["\n"],
-                "samsum": ["\n"],
-                "lcc": ["\n"],
-                "repobench-p": ["\n"],
-            }
-            extra_eos_ids = []
-            for stop_str in TASK_STOP_STRS.get(task_name, []):
-                tids = self.tokenizer(stop_str, add_special_tokens=False).input_ids
-                if tids:
-                    extra_eos_ids.append(tids[0])
+            # Resolve newline token ID for stop criteria (done once per task)
+            if i == 0:
+                # Find the real newline token by encoding a string containing \n
+                # and looking for the token that decodes back to \n
+                probe = self.tokenizer.encode(".\n.", add_special_tokens=False)
+                self._newline_token_ids = [t for t in probe if '\n' in self.tokenizer.decode([t])]
+                if task_name in {"trec", "samsum", "lcc", "repobench-p"}:
+                    logger.info(f"[{task_name}] probe '.\\.n.' -> {probe}, newline tokens: {self._newline_token_ids}")
+
+            extra_eos_ids = self._newline_token_ids if task_name in {"trec", "samsum", "lcc", "repobench-p"} else []
 
             inputs = self.tokenizer(final_input_text, return_tensors="pt", add_special_tokens=False)
             input_ids = inputs.input_ids
@@ -87,22 +94,33 @@ class LongBenchEvaluator:
                         output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len, temperature=0, eos_token_ids=extra_eos_ids or None)
                     else:
                         # Case 2: 原生 HuggingFace Model
-                        eos_ids = [self.tokenizer.eos_token_id] + extra_eos_ids
-                        output_ids = self.model.generate(
-                            input_ids,
-                            attention_mask=attention_mask,
+                        gen_kwargs = dict(
                             max_new_tokens=current_output_len,
                             use_cache=True,
                             pad_token_id=self.tokenizer.pad_token_id,
-                            eos_token_id=eos_ids,
                             do_sample=False
                         )
+                        if extra_eos_ids:
+                            gen_kwargs["stopping_criteria"] = StoppingCriteriaList([StopOnTokens(extra_eos_ids)])
+                        output_ids = self.model.generate(input_ids, attention_mask=attention_mask, **gen_kwargs)
                         # 記得要把 prompt 部分截掉，只留生成的 tokens
                         output_text = self.tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
                 
-                # E. Metrics
+                # E. Post-process output (Reference: FastKV eval_longbench.py)
+                # Safety net: truncate to first line for completion tasks
+                if task_name in {"trec", "triviaqa", "samsum"}:
+                    output_text = output_text.lstrip('\n').split('\n')[0]
+                elif task_name in {"lcc", "repobench-p"}:
+                    all_lines = output_text.lstrip('\n').split('\n')
+                    output_text = ""
+                    for line in all_lines:
+                        if ('`' not in line) and ('#' not in line) and ('//' not in line):
+                            output_text = line
+                            break
+
+                # F. Metrics
                 perf_metrics = profiler.stop(num_output_tokens=current_output_len)
-                
+
                 if self.bench_version == "v2":
                     score = calculate_accuracy(output_text, ground_truths)
                     metric_name = "Accuracy"

@@ -1,0 +1,1817 @@
+{
+    "task": "trec",
+    "version": "v1",
+    "args": {
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "bench_version": "v1",
+        "task_type": "trec",
+        "num_samples": -1,
+        "output_len": 64,
+        "effective_output_len": 64
+    },
+    "avg_score": 0.73,
+    "avg_latency_ms": 1209.722637142986,
+    "max_peak_memory_mb": 18047.93310546875,
+    "details": [
+        {
+            "index": 0,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16515.02099609375,
+            "latency_ms": 1304.0888868272305
+        },
+        {
+            "index": 1,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17761.07763671875,
+            "latency_ms": 1749.9249428510666
+        },
+        {
+            "index": 2,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Color",
+            "ground_truth": "Color",
+            "peak_memory_mb": 16632.66455078125,
+            "latency_ms": 899.5447605848312
+        },
+        {
+            "index": 3,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17229.3173828125,
+            "latency_ms": 1316.6516982018948
+        },
+        {
+            "index": 4,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Product",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 17025.486328125,
+            "latency_ms": 1177.7274794876575
+        },
+        {
+            "index": 5,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17966.8583984375,
+            "latency_ms": 1989.6174669265747
+        },
+        {
+            "index": 6,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 15986.3955078125,
+            "latency_ms": 493.2527206838131
+        },
+        {
+            "index": 7,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16735.056640625,
+            "latency_ms": 1047.648012638092
+        },
+        {
+            "index": 8,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Currency",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 16832.67529296875,
+            "latency_ms": 1043.4241890907288
+        },
+        {
+            "index": 9,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Description of something",
+            "ground_truth": "Description of something",
+            "peak_memory_mb": 16149.0478515625,
+            "latency_ms": 621.7151060700417
+        },
+        {
+            "index": 10,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Event",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17030.94384765625,
+            "latency_ms": 1183.3709627389908
+        },
+        {
+            "index": 11,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17012.1064453125,
+            "latency_ms": 1180.575653910637
+        },
+        {
+            "index": 12,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16907.02099609375,
+            "latency_ms": 1118.2846426963806
+        },
+        {
+            "index": 13,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17787.03466796875,
+            "latency_ms": 1778.949085623026
+        },
+        {
+            "index": 14,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17031.95166015625,
+            "latency_ms": 1186.3258965313435
+        },
+        {
+            "index": 15,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16709.2373046875,
+            "latency_ms": 969.9259549379349
+        },
+        {
+            "index": 16,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16784.03515625,
+            "latency_ms": 1056.3917681574821
+        },
+        {
+            "index": 17,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 17053.41357421875,
+            "latency_ms": 1295.1310202479362
+        },
+        {
+            "index": 18,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 15812.68798828125,
+            "latency_ms": 377.56599485874176
+        },
+        {
+            "index": 19,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16052.43017578125,
+            "latency_ms": 567.0898295938969
+        },
+        {
+            "index": 20,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Percent, fraction",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 17941.51513671875,
+            "latency_ms": 1995.0972124934196
+        },
+        {
+            "index": 21,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16200.66748046875,
+            "latency_ms": 673.9864945411682
+        },
+        {
+            "index": 22,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16471.57177734375,
+            "latency_ms": 886.3406106829643
+        },
+        {
+            "index": 23,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Expression abbreviated",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16517.1376953125,
+            "latency_ms": 839.1014263033867
+        },
+        {
+            "index": 24,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 15912.619140625,
+            "latency_ms": 422.2487434744835
+        },
+        {
+            "index": 25,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Organ of body",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17422.2197265625,
+            "latency_ms": 1569.132700562477
+        },
+        {
+            "index": 26,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Description of something",
+            "peak_memory_mb": 17700.82666015625,
+            "latency_ms": 1774.4811326265335
+        },
+        {
+            "index": 27,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16831.392578125,
+            "latency_ms": 1085.0137621164322
+        },
+        {
+            "index": 28,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Mountain",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16590.35791015625,
+            "latency_ms": 856.7107655107975
+        },
+        {
+            "index": 29,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17235.8564453125,
+            "latency_ms": 1339.9622552096844
+        },
+        {
+            "index": 30,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16124.4873046875,
+            "latency_ms": 563.175555318594
+        },
+        {
+            "index": 31,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 17360.7373046875,
+            "latency_ms": 1513.110388070345
+        },
+        {
+            "index": 32,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other number",
+            "ground_truth": "Temperature",
+            "peak_memory_mb": 16044.7646484375,
+            "latency_ms": 536.2839996814728
+        },
+        {
+            "index": 33,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17613.86962890625,
+            "latency_ms": 1697.3464600741863
+        },
+        {
+            "index": 34,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 15911.69921875,
+            "latency_ms": 423.4304241836071
+        },
+        {
+            "index": 35,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16506.25634765625,
+            "latency_ms": 810.975693166256
+        },
+        {
+            "index": 36,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Musical instrument",
+            "ground_truth": "Musical instrument",
+            "peak_memory_mb": 15938.326171875,
+            "latency_ms": 462.3643346130848
+        },
+        {
+            "index": 37,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16835.53955078125,
+            "latency_ms": 1057.7130354940891
+        },
+        {
+            "index": 38,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Lasting time of somethin",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 16342.48291015625,
+            "latency_ms": 888.8232931494713
+        },
+        {
+            "index": 39,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Disease and medicine",
+            "peak_memory_mb": 17074.41357421875,
+            "latency_ms": 1311.493944376707
+        },
+        {
+            "index": 40,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17729.4287109375,
+            "latency_ms": 1823.2942558825016
+        },
+        {
+            "index": 41,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17789.92626953125,
+            "latency_ms": 1893.2252824306488
+        },
+        {
+            "index": 42,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17439.99072265625,
+            "latency_ms": 1626.2035369873047
+        },
+        {
+            "index": 43,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16205.1884765625,
+            "latency_ms": 623.024221509695
+        },
+        {
+            "index": 44,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17238.47021484375,
+            "latency_ms": 1411.6663672029972
+        },
+        {
+            "index": 45,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16305.001953125,
+            "latency_ms": 692.1359412372112
+        },
+        {
+            "index": 46,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Word with a special property",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 17509.75732421875,
+            "latency_ms": 1713.546447455883
+        },
+        {
+            "index": 47,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17481.9931640625,
+            "latency_ms": 1557.2801269590855
+        },
+        {
+            "index": 48,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16315.55517578125,
+            "latency_ms": 814.2148181796074
+        },
+        {
+            "index": 49,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Expression abbreviated",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 15971.83740234375,
+            "latency_ms": 497.1809647977352
+        },
+        {
+            "index": 50,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16355.3515625,
+            "latency_ms": 721.6046750545502
+        },
+        {
+            "index": 51,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17359.78955078125,
+            "latency_ms": 1453.3056542277336
+        },
+        {
+            "index": 52,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 16781.19091796875,
+            "latency_ms": 1157.5787104666233
+        },
+        {
+            "index": 53,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other entity",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17506.6689453125,
+            "latency_ms": 1614.581547677517
+        },
+        {
+            "index": 54,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Currency",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 16664.4169921875,
+            "latency_ms": 949.469055980444
+        },
+        {
+            "index": 55,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 15787.54296875,
+            "latency_ms": 348.1944054365158
+        },
+        {
+            "index": 56,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16870.79345703125,
+            "latency_ms": 1110.1108938455582
+        },
+        {
+            "index": 57,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16211.619140625,
+            "latency_ms": 711.7275223135948
+        },
+        {
+            "index": 58,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " County",
+            "ground_truth": "City",
+            "peak_memory_mb": 15776.7177734375,
+            "latency_ms": 332.4892595410347
+        },
+        {
+            "index": 59,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17693.56640625,
+            "latency_ms": 1785.8101539313793
+        },
+        {
+            "index": 60,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other entity",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16006.11474609375,
+            "latency_ms": 516.2697657942772
+        },
+        {
+            "index": 61,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 15980.42333984375,
+            "latency_ms": 501.6713924705982
+        },
+        {
+            "index": 62,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Lasting time of somethin",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 17947.720703125,
+            "latency_ms": 2151.8998853862286
+        },
+        {
+            "index": 63,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 15963.12646484375,
+            "latency_ms": 497.13822081685066
+        },
+        {
+            "index": 64,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Vehicle",
+            "ground_truth": "Product",
+            "peak_memory_mb": 17931.720703125,
+            "latency_ms": 1938.7233704328537
+        },
+        {
+            "index": 65,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other entity",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 15808.2685546875,
+            "latency_ms": 381.19738176465034
+        },
+        {
+            "index": 66,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16497.283203125,
+            "latency_ms": 872.4236041307449
+        },
+        {
+            "index": 67,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Color",
+            "ground_truth": "Color",
+            "peak_memory_mb": 17250.89794921875,
+            "latency_ms": 1394.1640481352806
+        },
+        {
+            "index": 68,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Mountain",
+            "peak_memory_mb": 16300.421875,
+            "latency_ms": 719.2844562232494
+        },
+        {
+            "index": 69,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other entity",
+            "ground_truth": "Plant",
+            "peak_memory_mb": 16657.7890625,
+            "latency_ms": 981.0925349593163
+        },
+        {
+            "index": 70,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 17516.69580078125,
+            "latency_ms": 1592.4304015934467
+        },
+        {
+            "index": 71,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17846.037109375,
+            "latency_ms": 1915.0263145565987
+        },
+        {
+            "index": 72,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16834.8125,
+            "latency_ms": 1097.4592752754688
+        },
+        {
+            "index": 73,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17737.7353515625,
+            "latency_ms": 1840.1653245091438
+        },
+        {
+            "index": 74,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Country",
+            "ground_truth": "Country",
+            "peak_memory_mb": 16057.51708984375,
+            "latency_ms": 514.190535992384
+        },
+        {
+            "index": 75,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16232.84619140625,
+            "latency_ms": 716.1708287894726
+        },
+        {
+            "index": 76,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17901.400390625,
+            "latency_ms": 1985.8760870993137
+        },
+        {
+            "index": 77,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 18018.85400390625,
+            "latency_ms": 2005.2015036344528
+        },
+        {
+            "index": 78,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16368.31298828125,
+            "latency_ms": 733.9836694300175
+        },
+        {
+            "index": 79,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17017.57763671875,
+            "latency_ms": 1235.052403062582
+        },
+        {
+            "index": 80,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17847.6953125,
+            "latency_ms": 1854.0520407259464
+        },
+        {
+            "index": 81,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Continent",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16667.53271484375,
+            "latency_ms": 953.4060396254063
+        },
+        {
+            "index": 82,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 17176.15673828125,
+            "latency_ms": 1320.4322159290314
+        },
+        {
+            "index": 83,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17166.9365234375,
+            "latency_ms": 1376.7844513058662
+        },
+        {
+            "index": 84,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17959.22216796875,
+            "latency_ms": 1999.990489333868
+        },
+        {
+            "index": 85,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 16505.36083984375,
+            "latency_ms": 934.9345341324806
+        },
+        {
+            "index": 86,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17993.123046875,
+            "latency_ms": 1987.339075654745
+        },
+        {
+            "index": 87,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17788.0244140625,
+            "latency_ms": 1806.8435452878475
+        },
+        {
+            "index": 88,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16069.3173828125,
+            "latency_ms": 592.0085571706295
+        },
+        {
+            "index": 89,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16296.1123046875,
+            "latency_ms": 747.5186474621296
+        },
+        {
+            "index": 90,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17191.4287109375,
+            "latency_ms": 1369.251649826765
+        },
+        {
+            "index": 91,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16688.5283203125,
+            "latency_ms": 1029.9913696944714
+        },
+        {
+            "index": 92,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17855.56396484375,
+            "latency_ms": 1922.5350953638554
+        },
+        {
+            "index": 93,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17235.65771484375,
+            "latency_ms": 1386.3549828529358
+        },
+        {
+            "index": 94,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17772.0,
+            "latency_ms": 1801.172148436308
+        },
+        {
+            "index": 95,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17879.2421875,
+            "latency_ms": 1868.7385767698288
+        },
+        {
+            "index": 96,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17539.6591796875,
+            "latency_ms": 1614.1016334295273
+        },
+        {
+            "index": 97,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Mountain",
+            "peak_memory_mb": 17981.4423828125,
+            "latency_ms": 2007.7904909849167
+        },
+        {
+            "index": 98,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Manner of an action",
+            "ground_truth": "Techniques and method",
+            "peak_memory_mb": 17903.1279296875,
+            "latency_ms": 2058.6891435086727
+        },
+        {
+            "index": 99,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16659.189453125,
+            "latency_ms": 984.7126938402653
+        },
+        {
+            "index": 100,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17958.728515625,
+            "latency_ms": 1966.182418167591
+        },
+        {
+            "index": 101,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17835.54541015625,
+            "latency_ms": 1850.8907184004784
+        },
+        {
+            "index": 102,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15814.51318359375,
+            "latency_ms": 431.0019202530384
+        },
+        {
+            "index": 103,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Disease and medicine",
+            "peak_memory_mb": 17550.9765625,
+            "latency_ms": 1685.4918114840984
+        },
+        {
+            "index": 104,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "City",
+            "peak_memory_mb": 16273.79541015625,
+            "latency_ms": 703.393317759037
+        },
+        {
+            "index": 105,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17406.35498046875,
+            "latency_ms": 1520.0557671487331
+        },
+        {
+            "index": 106,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 15884.98388671875,
+            "latency_ms": 520.7592025399208
+        },
+        {
+            "index": 107,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Expression abbreviated",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16300.091796875,
+            "latency_ms": 719.5897623896599
+        },
+        {
+            "index": 108,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Title of a person",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 16420.8828125,
+            "latency_ms": 876.7959624528885
+        },
+        {
+            "index": 109,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 16185.302734375,
+            "latency_ms": 621.3771812617779
+        },
+        {
+            "index": 110,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17780.08447265625,
+            "latency_ms": 1807.826939970255
+        },
+        {
+            "index": 111,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16992.0712890625,
+            "latency_ms": 1187.3037032783031
+        },
+        {
+            "index": 112,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16143.32275390625,
+            "latency_ms": 575.9758427739143
+        },
+        {
+            "index": 113,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Height",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17150.34814453125,
+            "latency_ms": 1304.4977933168411
+        },
+        {
+            "index": 114,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16721.98291015625,
+            "latency_ms": 1053.3948093652725
+        },
+        {
+            "index": 115,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Percent, fraction",
+            "peak_memory_mb": 17850.07373046875,
+            "latency_ms": 1927.0727559924126
+        },
+        {
+            "index": 116,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 18047.93310546875,
+            "latency_ms": 2086.259465664625
+        },
+        {
+            "index": 117,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16781.451171875,
+            "latency_ms": 1104.9739643931389
+        },
+        {
+            "index": 118,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17557.232421875,
+            "latency_ms": 1727.1467223763466
+        },
+        {
+            "index": 119,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15932.025390625,
+            "latency_ms": 489.26425352692604
+        },
+        {
+            "index": 120,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Animal",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 15987.65966796875,
+            "latency_ms": 477.4428643286228
+        },
+        {
+            "index": 121,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other number",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 17028.31201171875,
+            "latency_ms": 1241.5176331996918
+        },
+        {
+            "index": 122,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17978.79052734375,
+            "latency_ms": 2046.7150509357452
+        },
+        {
+            "index": 123,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17285.810546875,
+            "latency_ms": 1493.7293380498886
+        },
+        {
+            "index": 124,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Organ of body",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16374.25927734375,
+            "latency_ms": 797.3124124109745
+        },
+        {
+            "index": 125,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15918.24560546875,
+            "latency_ms": 486.4693358540535
+        },
+        {
+            "index": 126,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Equivalent term",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17482.65478515625,
+            "latency_ms": 1603.9820276200771
+        },
+        {
+            "index": 127,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Weight",
+            "peak_memory_mb": 15941.3076171875,
+            "latency_ms": 495.7909658551216
+        },
+        {
+            "index": 128,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17533.14990234375,
+            "latency_ms": 1615.7155595719814
+        },
+        {
+            "index": 129,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 17027.16796875,
+            "latency_ms": 1273.03396910429
+        },
+        {
+            "index": 130,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Price",
+            "ground_truth": "Other entity",
+            "peak_memory_mb": 17724.11328125,
+            "latency_ms": 1775.5704298615456
+        },
+        {
+            "index": 131,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Country",
+            "ground_truth": "Country",
+            "peak_memory_mb": 16087.4638671875,
+            "latency_ms": 538.6281535029411
+        },
+        {
+            "index": 132,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 16342.9365234375,
+            "latency_ms": 721.5724438428879
+        },
+        {
+            "index": 133,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16203.4814453125,
+            "latency_ms": 745.8170391619205
+        },
+        {
+            "index": 134,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17193.8134765625,
+            "latency_ms": 1340.5135497450829
+        },
+        {
+            "index": 135,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17421.80078125,
+            "latency_ms": 1592.4058482050896
+        },
+        {
+            "index": 136,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Reason",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17663.82666015625,
+            "latency_ms": 1730.5552661418915
+        },
+        {
+            "index": 137,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17895.4775390625,
+            "latency_ms": 1925.4758208990097
+        },
+        {
+            "index": 138,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17040.31396484375,
+            "latency_ms": 1281.8061634898186
+        },
+        {
+            "index": 139,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Price",
+            "ground_truth": "Price",
+            "peak_memory_mb": 17350.49755859375,
+            "latency_ms": 1464.940931648016
+        },
+        {
+            "index": 140,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17347.40283203125,
+            "latency_ms": 1529.0912240743637
+        },
+        {
+            "index": 141,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Lasting time of somethin",
+            "ground_truth": "Lasting time of somethin",
+            "peak_memory_mb": 17833.37744140625,
+            "latency_ms": 2057.096865028143
+        },
+        {
+            "index": 142,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Color",
+            "ground_truth": "Color",
+            "peak_memory_mb": 16724.1298828125,
+            "latency_ms": 998.2946515083313
+        },
+        {
+            "index": 143,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17725.2578125,
+            "latency_ms": 1844.1368974745274
+        },
+        {
+            "index": 144,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 15971.64453125,
+            "latency_ms": 472.41993993520737
+        },
+        {
+            "index": 145,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17148.91015625,
+            "latency_ms": 1337.1286280453205
+        },
+        {
+            "index": 146,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Group or organization of person",
+            "ground_truth": "Group or organization of person",
+            "peak_memory_mb": 16785.00439453125,
+            "latency_ms": 1169.1984459757805
+        },
+        {
+            "index": 147,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Other entity",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 17631.0869140625,
+            "latency_ms": 1739.8250252008438
+        },
+        {
+            "index": 148,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17300.3671875,
+            "latency_ms": 1466.6477255523205
+        },
+        {
+            "index": 149,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " State",
+            "ground_truth": "State",
+            "peak_memory_mb": 17143.93798828125,
+            "latency_ms": 1304.4796474277973
+        },
+        {
+            "index": 150,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Animal",
+            "ground_truth": "Animal",
+            "peak_memory_mb": 17446.0234375,
+            "latency_ms": 1545.7121767103672
+        },
+        {
+            "index": 151,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17639.74755859375,
+            "latency_ms": 1744.5313781499863
+        },
+        {
+            "index": 152,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Description of a person",
+            "peak_memory_mb": 16058.32666015625,
+            "latency_ms": 518.247876316309
+        },
+        {
+            "index": 153,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16235.47265625,
+            "latency_ms": 720.2137187123299
+        },
+        {
+            "index": 154,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16755.36279296875,
+            "latency_ms": 1048.9639453589916
+        },
+        {
+            "index": 155,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 16673.0439453125,
+            "latency_ms": 1029.5746587216854
+        },
+        {
+            "index": 156,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17826.1904296875,
+            "latency_ms": 1906.258873641491
+        },
+        {
+            "index": 157,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " City",
+            "ground_truth": "City",
+            "peak_memory_mb": 17677.92626953125,
+            "latency_ms": 1723.1858186423779
+        },
+        {
+            "index": 158,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Weight",
+            "peak_memory_mb": 15865.60986328125,
+            "latency_ms": 446.473415941
+        },
+        {
+            "index": 159,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16881.70068359375,
+            "latency_ms": 1090.8846892416477
+        },
+        {
+            "index": 160,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17438.3515625,
+            "latency_ms": 1611.475519835949
+        },
+        {
+            "index": 161,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Reason",
+            "ground_truth": "Reason",
+            "peak_memory_mb": 17547.8017578125,
+            "latency_ms": 1626.1557079851627
+        },
+        {
+            "index": 162,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16315.55712890625,
+            "latency_ms": 762.8780156373978
+        },
+        {
+            "index": 163,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 17079.60205078125,
+            "latency_ms": 1264.6275348961353
+        },
+        {
+            "index": 164,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16489.69091796875,
+            "latency_ms": 818.0247433483601
+        },
+        {
+            "index": 165,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17454.39990234375,
+            "latency_ms": 1616.6643351316452
+        },
+        {
+            "index": 166,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Expression abbreviated",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16724.83447265625,
+            "latency_ms": 1029.37401086092
+        },
+        {
+            "index": 167,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17400.64599609375,
+            "latency_ms": 1558.5501082241535
+        },
+        {
+            "index": 168,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Distance, linear measure",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 16987.0576171875,
+            "latency_ms": 1281.1043411493301
+        },
+        {
+            "index": 169,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16947.98828125,
+            "latency_ms": 1165.135394781828
+        },
+        {
+            "index": 170,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16820.818359375,
+            "latency_ms": 1061.834692955017
+        },
+        {
+            "index": 171,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17317.8857421875,
+            "latency_ms": 1509.7464248538017
+        },
+        {
+            "index": 172,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Color",
+            "ground_truth": "Color",
+            "peak_memory_mb": 17597.91064453125,
+            "latency_ms": 1683.8581450283527
+        },
+        {
+            "index": 173,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16272.896484375,
+            "latency_ms": 741.8318837881088
+        },
+        {
+            "index": 174,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Currency name",
+            "ground_truth": "Currency name",
+            "peak_memory_mb": 17662.5927734375,
+            "latency_ms": 1764.3590867519379
+        },
+        {
+            "index": 175,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Element and substance",
+            "peak_memory_mb": 16812.96142578125,
+            "latency_ms": 1123.6078590154648
+        },
+        {
+            "index": 176,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16204.45166015625,
+            "latency_ms": 657.2548598051071
+        },
+        {
+            "index": 177,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17617.21728515625,
+            "latency_ms": 1757.4815228581429
+        },
+        {
+            "index": 178,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 15863.3759765625,
+            "latency_ms": 467.59092435240746
+        },
+        {
+            "index": 179,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Disease and medicine",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16155.3486328125,
+            "latency_ms": 649.7223675251007
+        },
+        {
+            "index": 180,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16755.3603515625,
+            "latency_ms": 1028.8876630365849
+        },
+        {
+            "index": 181,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Frequency of an action",
+            "ground_truth": "Other number",
+            "peak_memory_mb": 16228.09326171875,
+            "latency_ms": 758.8065452873707
+        },
+        {
+            "index": 182,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 17871.310546875,
+            "latency_ms": 1917.3633120954037
+        },
+        {
+            "index": 183,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Language",
+            "ground_truth": "Language",
+            "peak_memory_mb": 17792.0791015625,
+            "latency_ms": 1819.9525326490402
+        },
+        {
+            "index": 184,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16959.76708984375,
+            "latency_ms": 1200.1829743385315
+        },
+        {
+            "index": 185,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Individual",
+            "ground_truth": "Individual",
+            "peak_memory_mb": 16618.0712890625,
+            "latency_ms": 929.9940466880798
+        },
+        {
+            "index": 186,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 17140.57080078125,
+            "latency_ms": 1306.6567666828632
+        },
+        {
+            "index": 187,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Other location",
+            "ground_truth": "Other location",
+            "peak_memory_mb": 16557.24267578125,
+            "latency_ms": 897.7531492710114
+        },
+        {
+            "index": 188,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Sport",
+            "ground_truth": "Sport",
+            "peak_memory_mb": 16089.57861328125,
+            "latency_ms": 553.7651740014553
+        },
+        {
+            "index": 189,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Expression abbreviated",
+            "ground_truth": "Expression abbreviated",
+            "peak_memory_mb": 16938.30029296875,
+            "latency_ms": 1190.3112046420574
+        },
+        {
+            "index": 190,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17994.5634765625,
+            "latency_ms": 2067.0853815972805
+        },
+        {
+            "index": 191,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16752.076171875,
+            "latency_ms": 1017.6066979765892
+        },
+        {
+            "index": 192,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Distance, linear measure",
+            "peak_memory_mb": 17481.25634765625,
+            "latency_ms": 1643.0835537612438
+        },
+        {
+            "index": 193,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Number of something",
+            "ground_truth": "Number of something",
+            "peak_memory_mb": 17771.5302734375,
+            "latency_ms": 1880.8473497629166
+        },
+        {
+            "index": 194,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Animal",
+            "ground_truth": "Equivalent term",
+            "peak_memory_mb": 16844.009765625,
+            "latency_ms": 1077.098686248064
+        },
+        {
+            "index": 195,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Date",
+            "ground_truth": "Date",
+            "peak_memory_mb": 16585.39013671875,
+            "latency_ms": 871.4454062283039
+        },
+        {
+            "index": 196,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 17459.3916015625,
+            "latency_ms": 1619.5410080254078
+        },
+        {
+            "index": 197,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " State",
+            "ground_truth": "State",
+            "peak_memory_mb": 16018.77099609375,
+            "latency_ms": 495.30748277902603
+        },
+        {
+            "index": 198,
+            "score": 1.0,
+            "metric": "Accuracy",
+            "output": " Definition of something",
+            "ground_truth": "Definition of something",
+            "peak_memory_mb": 16784.96826171875,
+            "latency_ms": 1109.403107315302
+        },
+        {
+            "index": 199,
+            "score": 0.0,
+            "metric": "Accuracy",
+            "output": " Element and substance",
+            "ground_truth": "Food",
+            "peak_memory_mb": 16377.2197265625,
+            "latency_ms": 800.8326590061188
+        }
+    ]
+}

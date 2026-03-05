@@ -4,1813 +4,1814 @@
     "args": {
         "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
         "bench_version": "v1",
-        "task_type": "synthetic",
+        "task_type": "passage_retrieval_en",
         "num_samples": -1,
-        "output_len": 64
+        "output_len": 64,
+        "effective_output_len": 32
     },
     "avg_score": 1.0,
-    "avg_latency_ms": 2438.38689745171,
-    "max_peak_memory_mb": 18967.6142578125,
+    "avg_latency_ms": 2351.0088429041207,
+    "max_peak_memory_mb": 18964.8720703125,
     "details": [
         {
             "index": 0,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
             "peak_memory_mb": 18007.23828125,
-            "latency_ms": 3385.1831750944257
+            "latency_ms": 2448.7300254404545
         },
         {
             "index": 1,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18102.98095703125,
-            "latency_ms": 2125.551593955606
+            "peak_memory_mb": 18100.60595703125,
+            "latency_ms": 2100.3494784235954
         },
         {
             "index": 2,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18426.2294921875,
-            "latency_ms": 2399.7274856083095
+            "peak_memory_mb": 18424.4482421875,
+            "latency_ms": 2362.4548241496086
         },
         {
             "index": 3,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 17",
             "ground_truth": "Paragraph 17",
-            "peak_memory_mb": 18349.5625,
-            "latency_ms": 2322.827977128327
+            "peak_memory_mb": 18349.234375,
+            "latency_ms": 2286.5700908005238
         },
         {
             "index": 4,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 14",
             "ground_truth": "Paragraph 14",
-            "peak_memory_mb": 18282.66845703125,
-            "latency_ms": 2287.4473142437637
+            "peak_memory_mb": 18280.93408203125,
+            "latency_ms": 2250.5539134144783
         },
         {
             "index": 5,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 18225.12060546875,
-            "latency_ms": 2252.3502451367676
+            "peak_memory_mb": 18223.14013671875,
+            "latency_ms": 2210.992816835642
         },
         {
             "index": 6,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
             "peak_memory_mb": 18142.8994140625,
-            "latency_ms": 2200.043664779514
+            "latency_ms": 2145.936693996191
         },
         {
             "index": 7,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18176.30908203125,
-            "latency_ms": 2213.0051772110164
+            "peak_memory_mb": 18173.94189453125,
+            "latency_ms": 2159.8257049918175
         },
         {
             "index": 8,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
             "peak_memory_mb": 17843.43212890625,
-            "latency_ms": 1931.397810112685
+            "latency_ms": 1881.2313005328178
         },
         {
             "index": 9,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
             "peak_memory_mb": 18699.06884765625,
-            "latency_ms": 2713.5784290730953
+            "latency_ms": 2643.9745724201202
         },
         {
             "index": 10,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22.",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 18314.3798828125,
-            "latency_ms": 2384.7957332618535
+            "peak_memory_mb": 18309.6025390625,
+            "latency_ms": 2319.903541356325
         },
         {
             "index": 11,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18537.79833984375,
-            "latency_ms": 2567.5288662314415
+            "peak_memory_mb": 18530.24755859375,
+            "latency_ms": 2500.2446956932545
         },
         {
             "index": 12,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18225.11962890625,
-            "latency_ms": 2287.9271670244634
+            "peak_memory_mb": 18220.01416015625,
+            "latency_ms": 2224.2354936897755
         },
         {
             "index": 13,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
-            "peak_memory_mb": 18595.05419921875,
-            "latency_ms": 2623.320517130196
+            "peak_memory_mb": 18594.96044921875,
+            "latency_ms": 2551.513858139515
         },
         {
             "index": 14,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
             "peak_memory_mb": 18944.58740234375,
-            "latency_ms": 2959.554510191083
+            "latency_ms": 2874.5680190622807
         },
         {
             "index": 15,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18564.388671875,
-            "latency_ms": 2607.7214148826897
+            "peak_memory_mb": 18564.177734375,
+            "latency_ms": 2529.252465814352
         },
         {
             "index": 16,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 18205.21826171875,
-            "latency_ms": 2294.84236985445
+            "peak_memory_mb": 18198.79248046875,
+            "latency_ms": 2224.259678274393
         },
         {
             "index": 17,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 17",
             "ground_truth": "Paragraph 17",
-            "peak_memory_mb": 18301.81005859375,
-            "latency_ms": 2362.7863340079784
+            "peak_memory_mb": 18299.79443359375,
+            "latency_ms": 2291.5816493332386
         },
         {
             "index": 18,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 4",
             "ground_truth": "Paragraph 4",
-            "peak_memory_mb": 18487.12841796875,
-            "latency_ms": 2528.6318440921605
+            "peak_memory_mb": 18477.71044921875,
+            "latency_ms": 2449.604842811823
         },
         {
             "index": 19,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 18843.84912109375,
-            "latency_ms": 2903.813132084906
+            "peak_memory_mb": 18840.94287109375,
+            "latency_ms": 2807.8866712749004
         },
         {
             "index": 20,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18439.5888671875,
-            "latency_ms": 2487.4353338964283
+            "peak_memory_mb": 18438.3232421875,
+            "latency_ms": 2412.3806171119213
         },
         {
             "index": 21,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 18469.66357421875,
-            "latency_ms": 2516.1791648715734
+            "peak_memory_mb": 18467.44482421875,
+            "latency_ms": 2435.4555308818817
         },
         {
             "index": 22,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
             "peak_memory_mb": 18267.0869140625,
-            "latency_ms": 2355.227671097964
+            "latency_ms": 2284.404244273901
         },
         {
             "index": 23,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
-            "peak_memory_mb": 18274.95361328125,
-            "latency_ms": 2360.0892229005694
+            "peak_memory_mb": 18268.03564453125,
+            "latency_ms": 2284.5627404749393
         },
         {
             "index": 24,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 17961.28466796875,
-            "latency_ms": 2089.7026620805264
+            "peak_memory_mb": 17957.34716796875,
+            "latency_ms": 2020.714659243822
         },
         {
             "index": 25,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 17884.2939453125,
-            "latency_ms": 1988.3006168529391
+            "peak_memory_mb": 17880.9189453125,
+            "latency_ms": 1925.9715378284454
         },
         {
             "index": 26,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18792.6005859375,
-            "latency_ms": 2843.2912388816476
+            "peak_memory_mb": 18790.7724609375,
+            "latency_ms": 2748.6355490982533
         },
         {
             "index": 27,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 18328.53662109375,
-            "latency_ms": 2403.9419726468623
+            "peak_memory_mb": 18326.32177734375,
+            "latency_ms": 2321.405876427889
         },
         {
             "index": 28,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18450.74365234375,
-            "latency_ms": 2523.599987849593
+            "peak_memory_mb": 18448.33740234375,
+            "latency_ms": 2439.7696517407894
         },
         {
             "index": 29,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 17727.6611328125,
-            "latency_ms": 1898.0363039299846
+            "peak_memory_mb": 17725.1259765625,
+            "latency_ms": 1834.3742452561855
         },
         {
             "index": 30,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18546.98046875,
-            "latency_ms": 2633.6227296851575
+            "peak_memory_mb": 18545.03515625,
+            "latency_ms": 2557.514987885952
         },
         {
             "index": 31,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
             "peak_memory_mb": 18089.8671875,
-            "latency_ms": 2219.950584229082
+            "latency_ms": 2142.315600067377
         },
         {
             "index": 32,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
             "peak_memory_mb": 18628.63037109375,
-            "latency_ms": 2707.9715337604284
+            "latency_ms": 2609.6013449132442
         },
         {
             "index": 33,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 17876.68017578125,
-            "latency_ms": 1997.2335188649595
+            "peak_memory_mb": 17874.96923828125,
+            "latency_ms": 1924.5577082037926
         },
         {
             "index": 34,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 5",
             "ground_truth": "Paragraph 5",
-            "peak_memory_mb": 18388.14306640625,
-            "latency_ms": 2486.609569285065
+            "peak_memory_mb": 18389.99462890625,
+            "latency_ms": 2398.802362382412
         },
         {
             "index": 35,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
-            "peak_memory_mb": 18385.29443359375,
-            "latency_ms": 2489.787725266069
+            "peak_memory_mb": 18387.63818359375,
+            "latency_ms": 2399.067785590887
         },
         {
             "index": 36,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18559.0927734375,
-            "latency_ms": 2653.42686092481
+            "peak_memory_mb": 18552.2216796875,
+            "latency_ms": 2554.5726120471954
         },
         {
             "index": 37,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 5",
             "ground_truth": "Paragraph 5",
-            "peak_memory_mb": 18245.208984375,
-            "latency_ms": 2349.033499136567
+            "peak_memory_mb": 18243.685546875,
+            "latency_ms": 2265.0981806218624
         },
         {
             "index": 38,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
             "peak_memory_mb": 18509.4697265625,
-            "latency_ms": 2593.5515901073813
+            "latency_ms": 2496.226154267788
         },
         {
             "index": 39,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 17807.41357421875,
-            "latency_ms": 1960.4204879142344
+            "peak_memory_mb": 17802.84716796875,
+            "latency_ms": 1889.426950365305
         },
         {
             "index": 40,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
-            "peak_memory_mb": 18225.0966796875,
-            "latency_ms": 2340.520882047713
+            "peak_memory_mb": 18219.9912109375,
+            "latency_ms": 2254.614431411028
         },
         {
             "index": 41,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
-            "peak_memory_mb": 18572.1103515625,
-            "latency_ms": 2680.953040253371
+            "peak_memory_mb": 18566.0673828125,
+            "latency_ms": 2573.9952251315117
         },
         {
             "index": 42,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18171.00390625,
-            "latency_ms": 2273.441439960152
+            "peak_memory_mb": 18166.3125,
+            "latency_ms": 2183.418370783329
         },
         {
             "index": 43,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
             "peak_memory_mb": 18576.09375,
-            "latency_ms": 2682.9918860457838
+            "latency_ms": 2578.9339020848274
         },
         {
             "index": 44,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
-            "peak_memory_mb": 18103.80224609375,
-            "latency_ms": 2238.6853648349643
+            "peak_memory_mb": 18103.14599609375,
+            "latency_ms": 2160.5405434966087
         },
         {
             "index": 45,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 18714.18798828125,
-            "latency_ms": 2804.1382473893464
+            "peak_memory_mb": 18711.03173828125,
+            "latency_ms": 2695.245400071144
         },
         {
             "index": 46,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 17.",
             "ground_truth": "Paragraph 17",
-            "peak_memory_mb": 18733.4306640625,
-            "latency_ms": 2863.8476650230587
+            "peak_memory_mb": 18731.8134765625,
+            "latency_ms": 2754.708979278803
         },
         {
             "index": 47,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18161.75390625,
-            "latency_ms": 2269.984558224678
+            "peak_memory_mb": 18160.34765625,
+            "latency_ms": 2187.790658324957
         },
         {
             "index": 48,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18695.798828125,
-            "latency_ms": 2801.730657927692
+            "peak_memory_mb": 18695.498046875,
+            "latency_ms": 2689.7264569997787
         },
         {
             "index": 49,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 21",
             "ground_truth": "Paragraph 21",
-            "peak_memory_mb": 18364.87158203125,
-            "latency_ms": 2472.1866631880403
+            "peak_memory_mb": 18355.45361328125,
+            "latency_ms": 2386.0746696591377
         },
         {
             "index": 50,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18120.49365234375,
-            "latency_ms": 2247.9702099226415
+            "peak_memory_mb": 18112.14990234375,
+            "latency_ms": 2165.483735501766
         },
         {
             "index": 51,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 29",
             "ground_truth": "Paragraph 29",
-            "peak_memory_mb": 18070.1865234375,
-            "latency_ms": 2206.3297335989773
+            "peak_memory_mb": 18065.6708984375,
+            "latency_ms": 2129.4047720730305
         },
         {
             "index": 52,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18479.8271484375,
-            "latency_ms": 2575.5692957900465
+            "peak_memory_mb": 18477.2255859375,
+            "latency_ms": 2487.061496824026
         },
         {
             "index": 53,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18174.12548828125,
-            "latency_ms": 2288.662323728204
+            "peak_memory_mb": 18168.69970703125,
+            "latency_ms": 2222.3379500210285
         },
         {
             "index": 54,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
-            "peak_memory_mb": 18436.81640625,
-            "latency_ms": 2528.764883056283
+            "peak_memory_mb": 18431.29296875,
+            "latency_ms": 2438.151814043522
         },
         {
             "index": 55,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 18599.09375,
-            "latency_ms": 2699.9033968895674
+            "peak_memory_mb": 18596.1640625,
+            "latency_ms": 2609.7535714507103
         },
         {
             "index": 56,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 16",
             "ground_truth": "Paragraph 16",
-            "peak_memory_mb": 18232.07470703125,
-            "latency_ms": 2356.4525190740824
+            "peak_memory_mb": 18229.12158203125,
+            "latency_ms": 2295.2476404607296
         },
         {
             "index": 57,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 14",
             "ground_truth": "Paragraph 14",
-            "peak_memory_mb": 18070.486328125,
-            "latency_ms": 2205.2966030314565
+            "peak_memory_mb": 18062.830078125,
+            "latency_ms": 2141.820512712002
         },
         {
             "index": 58,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 29",
             "ground_truth": "Paragraph 29",
-            "peak_memory_mb": 18694.4697265625,
-            "latency_ms": 2801.876086741686
+            "peak_memory_mb": 18688.8095703125,
+            "latency_ms": 2698.7949311733246
         },
         {
             "index": 59,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
-            "peak_memory_mb": 18740.8779296875,
-            "latency_ms": 2828.486264217645
+            "peak_memory_mb": 18743.4560546875,
+            "latency_ms": 2730.716682970524
         },
         {
             "index": 60,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18646.06005859375,
-            "latency_ms": 2734.647801145911
+            "peak_memory_mb": 18642.26318359375,
+            "latency_ms": 2633.759278804064
         },
         {
             "index": 61,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
-            "peak_memory_mb": 18663.1611328125,
-            "latency_ms": 2754.1894181631505
+            "peak_memory_mb": 18657.3056640625,
+            "latency_ms": 2651.51259675622
         },
         {
             "index": 62,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18456.46630859375,
-            "latency_ms": 2547.622492071241
+            "peak_memory_mb": 18459.02880859375,
+            "latency_ms": 2471.0355661809444
         },
         {
             "index": 63,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 10",
             "ground_truth": "Paragraph 10",
-            "peak_memory_mb": 18670.56494140625,
-            "latency_ms": 2754.736023955047
+            "peak_memory_mb": 18668.76025390625,
+            "latency_ms": 2654.328592121601
         },
         {
             "index": 64,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18349.1865234375,
-            "latency_ms": 2435.5452838353813
+            "peak_memory_mb": 18348.7646484375,
+            "latency_ms": 2345.146544277668
         },
         {
             "index": 65,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 17931.560546875,
-            "latency_ms": 2089.621108956635
+            "peak_memory_mb": 17929.30419921875,
+            "latency_ms": 2015.5128203332424
         },
         {
             "index": 66,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18191.994140625,
-            "latency_ms": 2300.6939301267266
+            "peak_memory_mb": 18188.263671875,
+            "latency_ms": 2209.444347769022
         },
         {
             "index": 67,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
-            "peak_memory_mb": 18174.1162109375,
-            "latency_ms": 2289.7813860327005
+            "peak_memory_mb": 18168.6904296875,
+            "latency_ms": 2205.298651009798
         },
         {
             "index": 68,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 21",
             "ground_truth": "Paragraph 21",
             "peak_memory_mb": 18261.82470703125,
-            "latency_ms": 2383.354911580682
+            "latency_ms": 2298.0254031717777
         },
         {
             "index": 69,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18872.22021484375,
-            "latency_ms": 2971.6629181057215
+            "peak_memory_mb": 18875.09716796875,
+            "latency_ms": 2859.7765266895294
         },
         {
             "index": 70,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 5",
             "ground_truth": "Paragraph 5",
-            "peak_memory_mb": 18666.05615234375,
-            "latency_ms": 2755.93409081921
+            "peak_memory_mb": 18663.75927734375,
+            "latency_ms": 2651.5532732009888
         },
         {
             "index": 71,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 9",
             "ground_truth": "Paragraph 9",
             "peak_memory_mb": 18211.21142578125,
-            "latency_ms": 2341.395447961986
+            "latency_ms": 2256.399028003216
         },
         {
             "index": 72,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 20",
             "ground_truth": "Paragraph 20",
-            "peak_memory_mb": 17909.13720703125,
-            "latency_ms": 2072.8730759583414
+            "peak_memory_mb": 17907.146484375,
+            "latency_ms": 1994.2695125937462
         },
         {
             "index": 73,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
-            "peak_memory_mb": 18381.9384765625,
-            "latency_ms": 2487.7697778865695
+            "peak_memory_mb": 18376.4423828125,
+            "latency_ms": 2392.8742669522762
         },
         {
             "index": 74,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 18328.2392578125,
-            "latency_ms": 2429.915288928896
+            "peak_memory_mb": 18324.8759765625,
+            "latency_ms": 2336.526185274124
         },
         {
             "index": 75,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 18572.96630859375,
-            "latency_ms": 2685.835803858936
+            "peak_memory_mb": 18570.36865234375,
+            "latency_ms": 2586.1392728984356
         },
         {
             "index": 76,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
-            "peak_memory_mb": 17972.7802734375,
-            "latency_ms": 2122.6883907802403
+            "peak_memory_mb": 17970.0146484375,
+            "latency_ms": 2042.4699001014233
         },
         {
             "index": 77,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18225.09912109375,
-            "latency_ms": 2347.9163968004286
+            "peak_memory_mb": 18219.17333984375,
+            "latency_ms": 2264.7662684321404
         },
         {
             "index": 78,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 11",
             "ground_truth": "Paragraph 11",
-            "peak_memory_mb": 18073.43701171875,
-            "latency_ms": 2211.155571974814
+            "peak_memory_mb": 18072.31201171875,
+            "latency_ms": 2127.4254582822323
         },
         {
             "index": 79,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18083.78759765625,
-            "latency_ms": 2233.495100867003
+            "peak_memory_mb": 18079.65869140625,
+            "latency_ms": 2153.1990990042686
         },
         {
             "index": 80,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18102.9736328125,
-            "latency_ms": 2243.5538871213794
+            "peak_memory_mb": 18101.8486328125,
+            "latency_ms": 2159.8311439156532
         },
         {
             "index": 81,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18967.6142578125,
-            "latency_ms": 3054.3739730492234
+            "peak_memory_mb": 18964.8720703125,
+            "latency_ms": 2932.2679601609707
         },
         {
             "index": 82,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 18365.33447265625,
-            "latency_ms": 2477.986798156053
+            "peak_memory_mb": 18359.99853515625,
+            "latency_ms": 2388.883735984564
         },
         {
             "index": 83,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18031.97119140625,
-            "latency_ms": 2158.7369330227375
+            "peak_memory_mb": 18028.68994140625,
+            "latency_ms": 2081.977505236864
         },
         {
             "index": 84,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18652.537109375,
-            "latency_ms": 2740.6159741804004
+            "peak_memory_mb": 18651.552734375,
+            "latency_ms": 2637.42745667696
         },
         {
             "index": 85,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
             "peak_memory_mb": 18088.685546875,
-            "latency_ms": 2236.5925228223205
+            "latency_ms": 2157.3872044682503
         },
         {
             "index": 86,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
             "peak_memory_mb": 18006.732421875,
-            "latency_ms": 2145.610270090401
+            "latency_ms": 2066.5405057370663
         },
         {
             "index": 87,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 5",
             "ground_truth": "Paragraph 5",
-            "peak_memory_mb": 18375.05810546875,
-            "latency_ms": 2485.2239382453263
+            "peak_memory_mb": 18372.38623046875,
+            "latency_ms": 2394.0199464559555
         },
         {
             "index": 88,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18626.49267578125,
-            "latency_ms": 2716.4387707598507
+            "peak_memory_mb": 18620.99658203125,
+            "latency_ms": 2614.4089847803116
         },
         {
             "index": 89,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 17926.46533203125,
-            "latency_ms": 2077.739153057337
+            "peak_memory_mb": 17921.697265625,
+            "latency_ms": 2002.3138262331486
         },
         {
             "index": 90,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 29",
             "ground_truth": "Paragraph 29",
-            "peak_memory_mb": 18425.3623046875,
-            "latency_ms": 2520.993776153773
+            "peak_memory_mb": 18423.4873046875,
+            "latency_ms": 2431.5272495150566
         },
         {
             "index": 91,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 17850.1220703125,
-            "latency_ms": 2000.1002359203994
+            "peak_memory_mb": 17847.2626953125,
+            "latency_ms": 1928.2267950475216
         },
         {
             "index": 92,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 17",
             "ground_truth": "Paragraph 17",
-            "peak_memory_mb": 17753.927734375,
-            "latency_ms": 1935.6965720653534
+            "peak_memory_mb": 17748.5546875,
+            "latency_ms": 1866.5326684713364
         },
         {
             "index": 93,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 16",
             "ground_truth": "Paragraph 16",
-            "peak_memory_mb": 18371.5126953125,
-            "latency_ms": 2482.858310919255
+            "peak_memory_mb": 18367.3642578125,
+            "latency_ms": 2393.545415252447
         },
         {
             "index": 94,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18347.39111328125,
-            "latency_ms": 2437.0033708401024
+            "peak_memory_mb": 18344.69580078125,
+            "latency_ms": 2347.969699651003
         },
         {
             "index": 95,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 13",
             "ground_truth": "Paragraph 13",
-            "peak_memory_mb": 18660.07275390625,
-            "latency_ms": 2736.166211310774
+            "peak_memory_mb": 18654.42822265625,
+            "latency_ms": 2638.7614496052265
         },
         {
             "index": 96,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 20",
             "ground_truth": "Paragraph 20",
-            "peak_memory_mb": 18434.009765625,
-            "latency_ms": 2526.058489922434
+            "peak_memory_mb": 18429.111328125,
+            "latency_ms": 2433.703549206257
         },
         {
             "index": 97,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18.",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18962.06201171875,
-            "latency_ms": 3080.31167415902
+            "peak_memory_mb": 18962.01513671875,
+            "latency_ms": 2972.1637703478336
         },
         {
             "index": 98,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 18382.2939453125,
-            "latency_ms": 2486.5665403194726
+            "peak_memory_mb": 18373.1337890625,
+            "latency_ms": 2397.346843034029
         },
         {
             "index": 99,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
-            "peak_memory_mb": 18694.3369140625,
-            "latency_ms": 2797.124257311225
+            "peak_memory_mb": 18688.1025390625,
+            "latency_ms": 2698.721308261156
         },
         {
             "index": 100,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
-            "peak_memory_mb": 18420.43505859375,
-            "latency_ms": 2524.9577998183668
+            "peak_memory_mb": 18418.02099609375,
+            "latency_ms": 2434.410408139229
         },
         {
             "index": 101,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18742.048828125,
-            "latency_ms": 2833.1022141501307
+            "peak_memory_mb": 18744.216796875,
+            "latency_ms": 2733.8292077183723
         },
         {
             "index": 102,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 13",
             "ground_truth": "Paragraph 13",
-            "peak_memory_mb": 18381.94189453125,
-            "latency_ms": 2486.1438400112092
+            "peak_memory_mb": 18376.70751953125,
+            "latency_ms": 2397.5273855030537
         },
         {
             "index": 103,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 9",
             "ground_truth": "Paragraph 9",
-            "peak_memory_mb": 18178.900390625,
-            "latency_ms": 2291.2733829580247
+            "peak_memory_mb": 18176.814453125,
+            "latency_ms": 2212.4667651951313
         },
         {
             "index": 104,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 18572.15576171875,
-            "latency_ms": 2687.5488562509418
+            "peak_memory_mb": 18566.30419921875,
+            "latency_ms": 2593.175280839205
         },
         {
             "index": 105,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 11",
             "ground_truth": "Paragraph 11",
-            "peak_memory_mb": 18434.00732421875,
-            "latency_ms": 2528.0621079728007
+            "peak_memory_mb": 18429.10888671875,
+            "latency_ms": 2438.564408570528
         },
         {
             "index": 106,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 18732.1025390625,
-            "latency_ms": 2828.557983972132
+            "peak_memory_mb": 18726.5517578125,
+            "latency_ms": 2726.771082729101
         },
         {
             "index": 107,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
             "peak_memory_mb": 18006.51708984375,
-            "latency_ms": 2143.512991257012
+            "latency_ms": 2068.853136152029
         },
         {
             "index": 108,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 10",
             "ground_truth": "Paragraph 10",
-            "peak_memory_mb": 18438.21435546875,
-            "latency_ms": 2528.5111856646836
+            "peak_memory_mb": 18436.38623046875,
+            "latency_ms": 2438.8957656919956
         },
         {
             "index": 109,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 3",
             "ground_truth": "Paragraph 3",
-            "peak_memory_mb": 18137.07177734375,
-            "latency_ms": 2259.5005561597645
+            "peak_memory_mb": 18135.50146484375,
+            "latency_ms": 2179.79958280921
         },
         {
             "index": 110,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 10",
             "ground_truth": "Paragraph 10",
-            "peak_memory_mb": 18327.8046875,
-            "latency_ms": 2427.9633560217917
+            "peak_memory_mb": 18322.71875,
+            "latency_ms": 2340.362623333931
         },
         {
             "index": 111,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 18610.93310546875,
-            "latency_ms": 2703.785961959511
+            "peak_memory_mb": 18609.29248046875,
+            "latency_ms": 2606.651172041893
         },
         {
             "index": 112,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
             "peak_memory_mb": 18207.86669921875,
-            "latency_ms": 2343.5847382061183
+            "latency_ms": 2260.103330016136
         },
         {
             "index": 113,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18293.26171875,
-            "latency_ms": 2393.755291122943
+            "peak_memory_mb": 18288.5703125,
+            "latency_ms": 2318.836525082588
         },
         {
             "index": 114,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 20.",
             "ground_truth": "Paragraph 20",
-            "peak_memory_mb": 18327.33349609375,
-            "latency_ms": 2449.2833940312266
+            "peak_memory_mb": 18320.33349609375,
+            "latency_ms": 2364.0651665627956
         },
         {
             "index": 115,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
-            "peak_memory_mb": 18714.19921875,
-            "latency_ms": 2809.3868419528008
+            "peak_memory_mb": 18712.29296875,
+            "latency_ms": 2709.507502615452
         },
         {
             "index": 116,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
             "peak_memory_mb": 17965.4794921875,
-            "latency_ms": 2116.877983789891
+            "latency_ms": 2042.9473370313644
         },
         {
             "index": 117,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 9",
             "ground_truth": "Paragraph 9",
-            "peak_memory_mb": 18259.9462890625,
-            "latency_ms": 2365.7505358569324
+            "peak_memory_mb": 18251.3095703125,
+            "latency_ms": 2285.5067178606987
         },
         {
             "index": 118,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 14",
             "ground_truth": "Paragraph 14",
-            "peak_memory_mb": 18156.96728515625,
-            "latency_ms": 2287.9732958972454
+            "peak_memory_mb": 18153.40869140625,
+            "latency_ms": 2204.6860605478287
         },
         {
             "index": 119,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18540.923828125,
-            "latency_ms": 2657.44104096666
+            "peak_memory_mb": 18535.498046875,
+            "latency_ms": 2563.5472498834133
         },
         {
             "index": 120,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18225.115234375,
-            "latency_ms": 2351.403991691768
+            "peak_memory_mb": 18218.642578125,
+            "latency_ms": 2267.083205282688
         },
         {
             "index": 121,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 19",
             "ground_truth": "Paragraph 19",
-            "peak_memory_mb": 18904.61083984375,
-            "latency_ms": 2984.9851420149207
+            "peak_memory_mb": 18902.98974609375,
+            "latency_ms": 2876.408576965332
         },
         {
             "index": 122,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 18415.5556640625,
-            "latency_ms": 2515.5190182849765
+            "peak_memory_mb": 18411.8173828125,
+            "latency_ms": 2425.5005195736885
         },
         {
             "index": 123,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18315.7900390625,
-            "latency_ms": 2417.0191269367933
+            "peak_memory_mb": 18313.8916015625,
+            "latency_ms": 2333.950024098158
         },
         {
             "index": 124,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 17947.69677734375,
-            "latency_ms": 2105.481921695173
+            "peak_memory_mb": 17941.34912109375,
+            "latency_ms": 2033.6152873933315
         },
         {
             "index": 125,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 17882.27197265625,
-            "latency_ms": 2012.2487749904394
+            "peak_memory_mb": 17878.05322265625,
+            "latency_ms": 1942.769356071949
         },
         {
             "index": 126,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18347.81787109375,
-            "latency_ms": 2436.494695022702
+            "peak_memory_mb": 18347.06787109375,
+            "latency_ms": 2349.9830067157745
         },
         {
             "index": 127,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 11",
             "ground_truth": "Paragraph 11",
-            "peak_memory_mb": 17786.4931640625,
-            "latency_ms": 1949.3886679410934
+            "peak_memory_mb": 17782.13623046875,
+            "latency_ms": 1877.8244070708752
         },
         {
             "index": 128,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 18",
             "ground_truth": "Paragraph 18",
-            "peak_memory_mb": 18619.2529296875,
-            "latency_ms": 2714.6117431111634
+            "peak_memory_mb": 18616.4404296875,
+            "latency_ms": 2617.266997694969
         },
         {
             "index": 129,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 9",
             "ground_truth": "Paragraph 9",
-            "peak_memory_mb": 18174.08203125,
-            "latency_ms": 2290.691793896258
+            "peak_memory_mb": 18168.2265625,
+            "latency_ms": 2212.7289101481438
         },
         {
             "index": 130,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 16",
             "ground_truth": "Paragraph 16",
-            "peak_memory_mb": 17948.4677734375,
-            "latency_ms": 2106.4106612466276
+            "peak_memory_mb": 17946.3583984375,
+            "latency_ms": 2032.8284874558449
         },
         {
             "index": 131,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
             "peak_memory_mb": 18264.9208984375,
-            "latency_ms": 2380.87628595531
+            "latency_ms": 2302.483160048723
         },
         {
             "index": 132,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18275.66357421875,
-            "latency_ms": 2389.6812396124005
+            "peak_memory_mb": 18271.61669921875,
+            "latency_ms": 2305.8529905974865
         },
         {
             "index": 133,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18225.1103515625,
-            "latency_ms": 2349.16754020378
+            "peak_memory_mb": 18219.8681640625,
+            "latency_ms": 2265.755772590637
         },
         {
             "index": 134,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
-            "peak_memory_mb": 18284.58349609375,
-            "latency_ms": 2389.783744700253
+            "peak_memory_mb": 18283.31787109375,
+            "latency_ms": 2310.2584034204483
         },
         {
             "index": 135,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18564.36767578125,
-            "latency_ms": 2670.189102180302
+            "peak_memory_mb": 18564.15673828125,
+            "latency_ms": 2578.057438135147
         },
         {
             "index": 136,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 20",
             "ground_truth": "Paragraph 20",
-            "peak_memory_mb": 18556.20458984375,
-            "latency_ms": 2662.70621586591
+            "peak_memory_mb": 18548.16552734375,
+            "latency_ms": 2571.2057538330555
         },
         {
             "index": 137,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 29",
             "ground_truth": "Paragraph 29",
-            "peak_memory_mb": 18327.341796875,
-            "latency_ms": 2415.8185343258083
+            "peak_memory_mb": 18320.341796875,
+            "latency_ms": 2333.984963595867
         },
         {
             "index": 138,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
             "peak_memory_mb": 18207.38037109375,
-            "latency_ms": 2342.8640216588974
+            "latency_ms": 2262.619771063328
         },
         {
             "index": 139,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 18519.96435546875,
-            "latency_ms": 2633.651304990053
+            "peak_memory_mb": 18514.96044921875,
+            "latency_ms": 2545.4878993332386
         },
         {
             "index": 140,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18694.72021484375,
-            "latency_ms": 2797.9569868184626
+            "peak_memory_mb": 18690.01708984375,
+            "latency_ms": 2704.8816718161106
         },
         {
             "index": 141,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 4",
             "ground_truth": "Paragraph 4",
-            "peak_memory_mb": 18070.22998046875,
-            "latency_ms": 2209.231061860919
+            "peak_memory_mb": 18065.45263671875,
+            "latency_ms": 2135.2116875350475
         },
         {
             "index": 142,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 29",
             "ground_truth": "Paragraph 29",
-            "peak_memory_mb": 18591.91162109375,
-            "latency_ms": 2692.5595863722265
+            "peak_memory_mb": 18584.68896484375,
+            "latency_ms": 2598.9210084080696
         },
         {
             "index": 143,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 11",
             "ground_truth": "Paragraph 11",
-            "peak_memory_mb": 18102.99951171875,
-            "latency_ms": 2244.803170207888
+            "peak_memory_mb": 18100.62451171875,
+            "latency_ms": 2167.491130530834
         },
         {
             "index": 144,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18650.42822265625,
-            "latency_ms": 2738.588706124574
+            "peak_memory_mb": 18648.92822265625,
+            "latency_ms": 2643.0181115865707
         },
         {
             "index": 145,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 22",
             "ground_truth": "Paragraph 22",
-            "peak_memory_mb": 18206.6884765625,
-            "latency_ms": 2341.8775722384453
+            "peak_memory_mb": 18206.1962890625,
+            "latency_ms": 2259.9685080349445
         },
         {
             "index": 146,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18182.12451171875,
-            "latency_ms": 2290.8186418935657
+            "peak_memory_mb": 18180.39013671875,
+            "latency_ms": 2212.6841247081757
         },
         {
             "index": 147,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18282.470703125,
-            "latency_ms": 2390.03238780424
+            "peak_memory_mb": 18280.689453125,
+            "latency_ms": 2308.737464249134
         },
         {
             "index": 148,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 18451.263671875,
-            "latency_ms": 2548.286267090589
+            "peak_memory_mb": 18450.962890625,
+            "latency_ms": 2462.5967256724834
         },
         {
             "index": 149,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 18189.46435546875,
-            "latency_ms": 2295.6814728677273
+            "peak_memory_mb": 18182.06982421875,
+            "latency_ms": 2213.157992810011
         },
         {
             "index": 150,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 11",
             "ground_truth": "Paragraph 11",
-            "peak_memory_mb": 18041.5712890625,
-            "latency_ms": 2164.617244154215
+            "peak_memory_mb": 18040.5400390625,
+            "latency_ms": 2091.951221227646
         },
         {
             "index": 151,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18542.037109375,
-            "latency_ms": 2656.9636962376535
+            "peak_memory_mb": 18539.552734375,
+            "latency_ms": 2563.351172953844
         },
         {
             "index": 152,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 16",
             "ground_truth": "Paragraph 16",
-            "peak_memory_mb": 17793.5966796875,
-            "latency_ms": 1951.4142638072371
+            "peak_memory_mb": 17791.8623046875,
+            "latency_ms": 1883.51746276021
         },
         {
             "index": 153,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 18347.37451171875,
-            "latency_ms": 2440.0687059387565
+            "peak_memory_mb": 18345.63232421875,
+            "latency_ms": 2350.853741168976
         },
         {
             "index": 154,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18626.10107421875,
-            "latency_ms": 2713.852344080806
+            "peak_memory_mb": 18625.05419921875,
+            "latency_ms": 2617.6886707544327
         },
         {
             "index": 155,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 17838.6953125,
-            "latency_ms": 1995.3503469005227
+            "peak_memory_mb": 17834.36328125,
+            "latency_ms": 1925.689984112978
         },
         {
             "index": 156,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 28",
             "ground_truth": "Paragraph 28",
-            "peak_memory_mb": 18572.85595703125,
-            "latency_ms": 2687.3974190093577
+            "peak_memory_mb": 18569.87548828125,
+            "latency_ms": 2591.949447989464
         },
         {
             "index": 157,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18192.12890625,
-            "latency_ms": 2294.381505344063
+            "peak_memory_mb": 18187.08984375,
+            "latency_ms": 2218.404769897461
         },
         {
             "index": 158,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18817.5478515625,
-            "latency_ms": 2901.3946279883385
+            "peak_memory_mb": 18815.1416015625,
+            "latency_ms": 2799.087021499872
         },
         {
             "index": 159,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 16",
             "ground_truth": "Paragraph 16",
-            "peak_memory_mb": 18681.4677734375,
-            "latency_ms": 2767.8289762698114
+            "peak_memory_mb": 18673.5498046875,
+            "latency_ms": 2667.523693293333
         },
         {
             "index": 160,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 17858.76513671875,
-            "latency_ms": 1998.7421743571758
+            "peak_memory_mb": 17858.01513671875,
+            "latency_ms": 1931.0382716357708
         },
         {
             "index": 161,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
             "peak_memory_mb": 18263.4853515625,
-            "latency_ms": 2382.906153332442
+            "latency_ms": 2300.307624042034
         },
         {
             "index": 162,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 18000.3828125,
-            "latency_ms": 2138.546874281019
+            "peak_memory_mb": 17997.34765625,
+            "latency_ms": 2063.6709965765476
         },
         {
             "index": 163,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 15",
             "ground_truth": "Paragraph 15",
-            "peak_memory_mb": 18250.5986328125,
-            "latency_ms": 2365.2144260704517
+            "peak_memory_mb": 18247.0126953125,
+            "latency_ms": 2282.550260424614
         },
         {
             "index": 164,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 14",
             "ground_truth": "Paragraph 14",
             "peak_memory_mb": 18089.14697265625,
-            "latency_ms": 2236.460256855935
+            "latency_ms": 2160.249687731266
         },
         {
             "index": 165,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
-            "peak_memory_mb": 18317.6318359375,
-            "latency_ms": 2416.725262068212
+            "peak_memory_mb": 18316.5068359375,
+            "latency_ms": 2334.1780118644238
         },
         {
             "index": 166,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 18137.41259765625,
-            "latency_ms": 2259.3528451398015
+            "peak_memory_mb": 18131.91650390625,
+            "latency_ms": 2182.1844466030598
         },
         {
             "index": 167,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 17973.34130859375,
-            "latency_ms": 2120.4623309895396
+            "peak_memory_mb": 17970.71630859375,
+            "latency_ms": 2056.698903441429
         },
         {
             "index": 168,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 5",
             "ground_truth": "Paragraph 5",
-            "peak_memory_mb": 18228.04638671875,
-            "latency_ms": 2348.252708092332
+            "peak_memory_mb": 18227.90576171875,
+            "latency_ms": 2271.215032786131
         },
         {
             "index": 169,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
-            "peak_memory_mb": 17980.5712890625,
-            "latency_ms": 2119.8527300730348
+            "peak_memory_mb": 17974.3017578125,
+            "latency_ms": 2051.3871498405933
         },
         {
             "index": 170,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
             "peak_memory_mb": 18008.72998046875,
-            "latency_ms": 2137.6136490143836
+            "latency_ms": 2066.164046525955
         },
         {
             "index": 171,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8.",
             "ground_truth": "Paragraph 8",
             "peak_memory_mb": 18016.017578125,
-            "latency_ms": 2172.3603010177612
+            "latency_ms": 2101.4388725161552
         },
         {
             "index": 172,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 20",
             "ground_truth": "Paragraph 20",
-            "peak_memory_mb": 18365.041015625,
-            "latency_ms": 2477.4482641369104
+            "peak_memory_mb": 18357.341796875,
+            "latency_ms": 2396.879702806473
         },
         {
             "index": 173,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
-            "peak_memory_mb": 18053.6767578125,
-            "latency_ms": 2198.9833749830723
+            "peak_memory_mb": 18051.2158203125,
+            "latency_ms": 2136.348020285368
         },
         {
             "index": 174,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 23",
             "ground_truth": "Paragraph 23",
-            "peak_memory_mb": 17913.35546875,
-            "latency_ms": 2073.2680931687355
+            "peak_memory_mb": 17911.75830078125,
+            "latency_ms": 2008.873250335455
         },
         {
             "index": 175,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18678.5009765625,
-            "latency_ms": 2756.239167880267
+            "peak_memory_mb": 18670.8916015625,
+            "latency_ms": 2665.1487797498703
         },
         {
             "index": 176,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 7",
             "ground_truth": "Paragraph 7",
-            "peak_memory_mb": 18817.37353515625,
-            "latency_ms": 2904.767972882837
+            "peak_memory_mb": 18814.20166015625,
+            "latency_ms": 2799.1337589919567
         },
         {
             "index": 177,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 10.",
             "ground_truth": "Paragraph 10",
-            "peak_memory_mb": 17914.9150390625,
-            "latency_ms": 2108.0800741910934
+            "peak_memory_mb": 17913.62841796875,
+            "latency_ms": 2040.123838931322
         },
         {
             "index": 178,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18372.52880859375,
-            "latency_ms": 2480.8429586701095
+            "peak_memory_mb": 18368.80224609375,
+            "latency_ms": 2396.6291956603527
         },
         {
             "index": 179,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 9",
             "ground_truth": "Paragraph 9",
-            "peak_memory_mb": 18296.5830078125,
-            "latency_ms": 2407.3526789434254
+            "peak_memory_mb": 18292.8759765625,
+            "latency_ms": 2329.4773437082767
         },
         {
             "index": 180,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 17",
             "ground_truth": "Paragraph 17",
-            "peak_memory_mb": 18591.9267578125,
-            "latency_ms": 2688.079530838877
+            "peak_memory_mb": 18588.7548828125,
+            "latency_ms": 2595.198657363653
         },
         {
             "index": 181,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18663.20703125,
-            "latency_ms": 2753.144331742078
+            "peak_memory_mb": 18657.78125,
+            "latency_ms": 2655.896231532097
         },
         {
             "index": 182,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 10",
             "ground_truth": "Paragraph 10",
-            "peak_memory_mb": 18836.4814453125,
-            "latency_ms": 2909.007241949439
+            "peak_memory_mb": 18834.9775390625,
+            "latency_ms": 2806.150831282139
         },
         {
             "index": 183,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
-            "peak_memory_mb": 18397.3359375,
-            "latency_ms": 2505.076963920146
+            "peak_memory_mb": 18392.201171875,
+            "latency_ms": 2417.7509769797325
         },
         {
             "index": 184,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
-            "peak_memory_mb": 18031.515625,
-            "latency_ms": 2159.973885398358
+            "peak_memory_mb": 18026.3203125,
+            "latency_ms": 2085.0659161806107
         },
         {
             "index": 185,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 26",
             "ground_truth": "Paragraph 26",
             "peak_memory_mb": 18144.80322265625,
-            "latency_ms": 2280.657591763884
+            "latency_ms": 2200.0329457223415
         },
         {
             "index": 186,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 8",
             "ground_truth": "Paragraph 8",
-            "peak_memory_mb": 17883.962890625,
-            "latency_ms": 2014.6625158376992
+            "peak_memory_mb": 17880.447265625,
+            "latency_ms": 1944.1606663167477
         },
         {
             "index": 187,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 30",
             "ground_truth": "Paragraph 30",
-            "peak_memory_mb": 18461.83642578125,
-            "latency_ms": 2556.1688016168773
+            "peak_memory_mb": 18460.60205078125,
+            "latency_ms": 2464.735433459282
         },
         {
             "index": 188,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 13",
             "ground_truth": "Paragraph 13",
-            "peak_memory_mb": 18340.16064453125,
-            "latency_ms": 2436.395050957799
+            "peak_memory_mb": 18337.53564453125,
+            "latency_ms": 2347.5287333130836
         },
         {
             "index": 189,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 12",
             "ground_truth": "Paragraph 12",
-            "peak_memory_mb": 18520.583984375,
-            "latency_ms": 2632.6700020581484
+            "peak_memory_mb": 18518.068359375,
+            "latency_ms": 2541.312724351883
         },
         {
             "index": 190,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18192.21875,
-            "latency_ms": 2297.2584469243884
+            "peak_memory_mb": 18186.1328125,
+            "latency_ms": 2214.93574231863
         },
         {
             "index": 191,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 6",
             "ground_truth": "Paragraph 6",
-            "peak_memory_mb": 17864.81982421875,
-            "latency_ms": 1999.626250937581
+            "peak_memory_mb": 17861.81982421875,
+            "latency_ms": 1929.6956807374954
         },
         {
             "index": 192,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18225.1083984375,
-            "latency_ms": 2345.842751674354
+            "peak_memory_mb": 18223.8427734375,
+            "latency_ms": 2266.462381929159
         },
         {
             "index": 193,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
-            "peak_memory_mb": 18469.65771484375,
-            "latency_ms": 2554.1808139532804
+            "peak_memory_mb": 18467.91552734375,
+            "latency_ms": 2466.7034409940243
         },
         {
             "index": 194,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 24",
             "ground_truth": "Paragraph 24",
-            "peak_memory_mb": 18571.9287109375,
-            "latency_ms": 2684.8191171884537
+            "peak_memory_mb": 18565.1201171875,
+            "latency_ms": 2587.946318089962
         },
         {
             "index": 195,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 1",
             "ground_truth": "Paragraph 1",
-            "peak_memory_mb": 18311.78564453125,
-            "latency_ms": 2412.2906820848584
+            "peak_memory_mb": 18304.82080078125,
+            "latency_ms": 2327.6685997843742
         },
         {
             "index": 196,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 25",
             "ground_truth": "Paragraph 25",
-            "peak_memory_mb": 18279.24072265625,
-            "latency_ms": 2390.607016161084
+            "peak_memory_mb": 18276.63525390625,
+            "latency_ms": 2305.535800755024
         },
         {
             "index": 197,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 2",
             "ground_truth": "Paragraph 2",
-            "peak_memory_mb": 18666.037109375,
-            "latency_ms": 2755.6666787713766
+            "peak_memory_mb": 18663.740234375,
+            "latency_ms": 2656.888108700514
         },
         {
             "index": 198,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 27",
             "ground_truth": "Paragraph 27",
             "peak_memory_mb": 18023.01025390625,
-            "latency_ms": 2157.423066906631
+            "latency_ms": 2081.5618857741356
         },
         {
             "index": 199,
             "score": 1.0,
-            "metric": "F1",
+            "metric": "Accuracy",
             "output": "Paragraph 4",
             "ground_truth": "Paragraph 4",
-            "peak_memory_mb": 18681.3046875,
-            "latency_ms": 2763.459950685501
+            "peak_memory_mb": 18674.95703125,
+            "latency_ms": 2664.6130308508873
         }
     ]
 }
