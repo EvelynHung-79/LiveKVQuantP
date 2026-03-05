@@ -18,6 +18,9 @@ scipy==1.16.3
 # --- Testing Framework ---
 pytest>=9.0.2
 
+# --- Evaluation Metrics ---
+rouge==1.0.1
+
 # --- Utilities ---
 tqdm>=4.67.1
 pandas>=2.3.3

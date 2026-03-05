@@ -3,6 +3,9 @@ import string
 import re
 from collections import Counter
 from typing import List, Union
+from rouge import Rouge
+
+_rouge_scorer = Rouge()
 
 def calculate_perplexity(loss: torch.Tensor) -> float:
     """
@@ -101,47 +104,20 @@ def calculate_accuracy(prediction: str, ground_truth: Union[str, List[str]]) -> 
     return 0.0
 
 
-def _lcs_length(x: List[str], y: List[str]) -> int:
-    """計算兩個 token list 的 Longest Common Subsequence 長度。"""
-    m, n = len(x), len(y)
-    if m == 0 or n == 0:
-        return 0
-    # 空間優化：只用兩行
-    prev = [0] * (n + 1)
-    curr = [0] * (n + 1)
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            if x[i - 1] == y[j - 1]:
-                curr[j] = prev[j - 1] + 1
-            else:
-                curr[j] = max(curr[j - 1], prev[j])
-        prev, curr = curr, [0] * (n + 1)
-    return prev[n]
-
-
 def calculate_rouge_l(prediction: str, ground_truth: Union[str, List[str]]) -> float:
     """
-    計算 Rouge-L (基於 LCS 的 F1)。
-    與 LongBench 官方評估一致：對 normalize 後的 token list 計算 LCS。
+    計算 Rouge-L，使用 py-rouge 套件，與 LongBench 官方評估一致。
+    py-rouge 在 sentence level 計算 LCS 再匯總，比全文 LCS 更合理。
     """
     if isinstance(ground_truth, list):
         scores = [calculate_rouge_l(prediction, gt) for gt in ground_truth]
         return max(scores) if scores else 0.0
 
-    pred_tokens = normalize_answer(prediction).split()
-    truth_tokens = normalize_answer(ground_truth).split()
-
-    if len(pred_tokens) == 0 or len(truth_tokens) == 0:
-        return int(pred_tokens == truth_tokens)
-
-    lcs_len = _lcs_length(pred_tokens, truth_tokens)
-    if lcs_len == 0:
+    try:
+        scores = _rouge_scorer.get_scores(prediction, ground_truth)
+        return scores[0]['rouge-l']['f']
+    except Exception:
         return 0.0
-
-    precision = lcs_len / len(pred_tokens)
-    recall = lcs_len / len(truth_tokens)
-    f1 = (2 * precision * recall) / (precision + recall)
-    return f1
 
 
 def calculate_edit_similarity(prediction: str, ground_truth: Union[str, List[str]]) -> float:

@@ -18,19 +18,14 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
 1. **建立並啟用虛擬環境（強烈建議）：**
    ```bash
    python3.11 -m venv venv
-   source venv/bin/activate      # Linux/Mac
-   # venv\Scripts\activate       # Windows
+   source venv/bin/activate
    ```
 
 2.  **安裝相依套件：**
 
     ```bash
     pip install --upgrade pip
-
-    # 1. 先安裝 PyTorch (建議依照您的 CUDA 版本選擇，以下為 CUDA 12.4 範例)
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-
-    # 2. 安裝其他專案依賴
     pip install -r requirements.txt
     ```
 

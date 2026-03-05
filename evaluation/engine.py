@@ -3,7 +3,7 @@ import logging
 import os
 import json
 from tqdm import tqdm
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from evaluation.metrics import calculate_f1_score, calculate_accuracy, calculate_rouge_l, calculate_edit_similarity
 from livekvquant.utils.data_utils import truncate_input_ids
 from data.constants import TASK_OUTPUT_LEN, V1_TASK_METRIC
@@ -43,11 +43,31 @@ class LongBenchEvaluator:
             final_prompt = sample["prompt"]
 
             # B. Apply Chat Template
-            messages = [{"role": "user", "content": final_prompt}]
-            try:
-                final_input_text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-            except:
+            # Completion-style tasks (ending with "Type:", "Summary:", "Next line of code:", etc.)
+            # must NOT use chat template — the model should do raw text completion.
+            COMPLETION_TASKS = {"trec", "samsum", "lcc", "repobench-p"}
+            if task_name in COMPLETION_TASKS:
                 final_input_text = final_prompt
+            else:
+                messages = [{"role": "user", "content": final_prompt}]
+                try:
+                    final_input_text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+                except:
+                    final_input_text = final_prompt
+
+            # Stop sequences for completion tasks to prevent over-generation
+            # e.g. samsum should stop at \n (one-line summary), trec at \n (one-line label)
+            TASK_STOP_STRS = {
+                "trec": ["\n"],
+                "samsum": ["\n"],
+                "lcc": ["\n"],
+                "repobench-p": ["\n"],
+            }
+            extra_eos_ids = []
+            for stop_str in TASK_STOP_STRS.get(task_name, []):
+                tids = self.tokenizer(stop_str, add_special_tokens=False).input_ids
+                if tids:
+                    extra_eos_ids.append(tids[0])
 
             inputs = self.tokenizer(final_input_text, return_tensors="pt", add_special_tokens=False)
             input_ids = inputs.input_ids
@@ -62,17 +82,19 @@ class LongBenchEvaluator:
             profiler.start()
             try:
                 with torch.no_grad():
-                    if hasattr(self.model, "controllers"): 
+                    if hasattr(self.model, "controllers"):
                         # Case 1: LiveKVQuantModel
-                        output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len)
-                    else: 
-                        # Case 2: 原生 HuggingFace Model 
+                        output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len, temperature=0, eos_token_ids=extra_eos_ids or None)
+                    else:
+                        # Case 2: 原生 HuggingFace Model
+                        eos_ids = [self.tokenizer.eos_token_id] + extra_eos_ids
                         output_ids = self.model.generate(
-                            input_ids, 
+                            input_ids,
                             attention_mask=attention_mask,
                             max_new_tokens=current_output_len,
                             use_cache=True,
                             pad_token_id=self.tokenizer.pad_token_id,
+                            eos_token_id=eos_ids,
                             do_sample=False
                         )
                         # 記得要把 prompt 部分截掉，只留生成的 tokens
@@ -114,26 +136,29 @@ class LongBenchEvaluator:
                     results.append({"index": i, "error": "OOM", "score": 0.0})
 
         # 3. Save Results
-        self._save_results(task_name, results, total_score, args)
+        self._save_results(task_name, results, total_score, args, current_output_len)
 
-    def _save_results(self, task_name, results, total_score, args):
+    def _save_results(self, task_name, results, total_score, args, effective_output_len):
         avg_score = total_score / len(results) if results else 0.0
         avg_latency = sum([r.get("latency_ms", 0.0) for r in results]) / len(results) if results else 0.0
         max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
 
         logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
         
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+        TW_TZ = timezone(timedelta(hours=8))
+        timestamp = datetime.now(TW_TZ).strftime("%Y%m%d_%H%M")
         subdir = "liveKVQuant" if hasattr(self.model, "controllers") else "baselines/fullKV"
         output_filename = f"{timestamp}_{self.bench_version}_{task_name}.json"
         output_path = os.path.join(self.output_dir, subdir, output_filename)
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         
         with open(output_path, "w", encoding="utf-8") as f:
+            args_dict = vars(args).copy()
+            args_dict["effective_output_len"] = effective_output_len
             json.dump({
                 "task": task_name,
                 "version": self.bench_version,
-                "args": vars(args),
+                "args": args_dict,
                 "avg_score": avg_score,
                 "avg_latency_ms": avg_latency,
                 "max_peak_memory_mb": max_peak_memory,
