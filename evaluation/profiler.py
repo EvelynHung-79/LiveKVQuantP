@@ -5,8 +5,9 @@ from dataclasses import dataclass
 @dataclass
 class ProfilingResult:
     peak_memory_mb: float
+    end_to_end_latency_ms: float
     prefill_latency_ms: float
-    total_latency_ms: float
+    decode_latency_ms: float
     throughput_tokens_per_sec: float
 
 class MemoryProfiler:
@@ -33,6 +34,7 @@ class MemoryProfiler:
         torch.cuda.reset_peak_memory_stats()
         torch.cuda.synchronize() # 確保之前的運算都結束
         self.start_time = time.perf_counter()
+        self.prefill_end_time = 0.0
 
     def mark_prefill_end(self):
         """(選用) 標記 Prefill 階段結束的時間點"""
@@ -55,20 +57,23 @@ class MemoryProfiler:
         # 計算指標
         total_latency_s = self.end_time - self.start_time
         prefill_latency_s = (self.prefill_end_time - self.start_time) if self.prefill_end_time > 0 else 0
-        
+        decode_latency_s = (self.end_time - self.prefill_end_time) if self.prefill_end_time > 0 else 0
+
         # 轉換單位
         peak_memory_mb = self.peak_memory_bytes / (1024 ** 2)
-        total_latency_ms = total_latency_s * 1000
+        e2e_latency_ms = total_latency_s * 1000
         prefill_latency_ms = prefill_latency_s * 1000
-        
-        # Throughput = Output Tokens / Time (s) 
-        # 注意：如果只測 Prefill，throughput 定義可能不同，但在生成任務通常指 decoding throughput
-        throughput = num_output_tokens / total_latency_s if total_latency_s > 0 else 0
+        decode_latency_ms = decode_latency_s * 1000
+
+        # Throughput = Output Tokens / Decode Time (s)
+        decode_s = decode_latency_s if decode_latency_s > 0 else total_latency_s
+        throughput = num_output_tokens / decode_s if decode_s > 0 else 0
 
         return ProfilingResult(
             peak_memory_mb=peak_memory_mb,
+            end_to_end_latency_ms=e2e_latency_ms,
             prefill_latency_ms=prefill_latency_ms,
-            total_latency_ms=total_latency_ms,
+            decode_latency_ms=decode_latency_ms,
             throughput_tokens_per_sec=throughput
         )
 

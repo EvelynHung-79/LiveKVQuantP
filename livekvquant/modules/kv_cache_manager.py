@@ -35,11 +35,6 @@ class KVCacheManager:
         self._decode_len = 0
         self._decode_capacity = 0
 
-        # Full cache (recon + decode 合併)
-        self._k_full_cache: Optional[torch.Tensor] = None
-        self._v_full_cache: Optional[torch.Tensor] = None
-        self._full_cache_valid = False
-
         self.current_len = 0
 
     def __len__(self):
@@ -61,19 +56,20 @@ class KVCacheManager:
         self._chunk_seq_len += k_raw.shape[-2]
         self.current_len += k_raw.shape[-2]
         self._recon_valid = False
-        self._full_cache_valid = False
 
     def finalize_last_chunk(self, k_chunk: KVChunk, v_chunk: KVChunk):
         """
         將最後一個 raw chunk 替換為壓縮格式（quantized 或 warmup）。
         由 LayerController 在 attention 算完後呼叫。
+        Prefill 階段同時清掉 recon cache，避免壓縮 chunks 與重建 cache 同時佔用記憶體。
         """
         if not self._k_chunks:
             return
         self._k_chunks[-1] = k_chunk
         self._v_chunks[-1] = v_chunk
+        self._k_recon_cache = None
+        self._v_recon_cache = None
         self._recon_valid = False
-        self._full_cache_valid = False
 
     # ------------------------------------------------------------------ #
     #  Decode: Pre-allocated buffer
@@ -102,7 +98,6 @@ class KVCacheManager:
         self._v_decode_buf[..., self._decode_len:self._decode_len + n_tokens, :] = v_token
         self._decode_len += n_tokens
         self.current_len += n_tokens
-        self._full_cache_valid = False
 
     # ------------------------------------------------------------------ #
     #  Read: Lazy reconstruct
@@ -133,11 +128,8 @@ class KVCacheManager:
     def get_full_kv(self, target_dtype: torch.dtype) -> Tuple[Optional[torch.Tensor], Optional[torch.Tensor]]:
         """
         回傳完整 KV tensor (chunks + decode buffer)。
-        利用 dirty flag 避免不必要的重複 reconstruct/cat。
+        不額外 cache 合併結果，避免記憶體膨脹。
         """
-        if self._full_cache_valid and self._k_full_cache is not None:
-            return self._k_full_cache.to(dtype=target_dtype), self._v_full_cache.to(dtype=target_dtype)
-
         k, v = self._reconstruct_chunks(target_dtype)
 
         if self._decode_len > 0:
@@ -153,9 +145,6 @@ class KVCacheManager:
         if k is None:
             return None, None
 
-        self._k_full_cache = k
-        self._v_full_cache = v
-        self._full_cache_valid = True
         return k, v
 
     # ------------------------------------------------------------------ #
@@ -181,7 +170,4 @@ class KVCacheManager:
         self._v_decode_buf = None
         self._decode_len = 0
         self._decode_capacity = 0
-        self._k_full_cache = None
-        self._v_full_cache = None
-        self._full_cache_valid = False
         self.current_len = 0

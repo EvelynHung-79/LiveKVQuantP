@@ -165,7 +165,7 @@ class LiveKVQuantModel:
 
         return generated_ids
 
-    def generate(self, input_ids: torch.Tensor = None, prompt: str = None, max_new_tokens: int = 128, temperature: float = 0.7, eos_token_ids: List[int] = None) -> str:
+    def generate(self, input_ids: torch.Tensor = None, prompt: str = None, max_new_tokens: int = 128, temperature: float = 0.7, eos_token_ids: List[int] = None, on_prefill_end: callable = None) -> str:
         """
         主生成入口。
         支援 input_ids (Tensor) 或 prompt (str)。
@@ -187,6 +187,9 @@ class LiveKVQuantModel:
         with torch.inference_mode():
             # Phase A: Prefill
             current_pos, last_logits = self._prefill(input_ids)
+
+            if on_prefill_end is not None:
+                on_prefill_end()
 
             # Phase B: Decode
             generated_ids = self._decode(last_logits, current_pos, max_new_tokens, temperature, eos_token_ids)

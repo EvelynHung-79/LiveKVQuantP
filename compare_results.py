@@ -75,17 +75,42 @@ def main():
         fk = fullkv.get(task)
         lk = livekv.get(task)
 
+        def _latency(data):
+            """Extract latency fields, supporting both old and new format."""
+            if not data:
+                return {"e2e_ms": None, "prefill_ms": None, "decode_ms": None}
+            # New format
+            if 'avg_end_to_end_latency_ms' in data:
+                return {
+                    "e2e_ms": round(data['avg_end_to_end_latency_ms'], 1),
+                    "prefill_ms": round(data.get('avg_prefill_latency_ms', 0), 1),
+                    "decode_ms": round(data.get('avg_decode_latency_ms', 0), 1),
+                }
+            # Old format (backward compat)
+            return {
+                "e2e_ms": round(data['avg_latency_ms'], 1) if 'avg_latency_ms' in data else None,
+                "prefill_ms": None,
+                "decode_ms": None,
+            }
+
+        fk_lat = _latency(fk)
+        lk_lat = _latency(lk)
+
         entry = {
             "task": task,
             "category": task_to_cat.get(task, "Other"),
             "fullKV": {
                 "score": round(fk['avg_score'] * 100, 2) if fk else None,
-                "latency_ms": round(fk['avg_latency_ms'], 1) if fk and 'avg_latency_ms' in fk else None,
+                "e2e_latency_ms": fk_lat["e2e_ms"],
+                "prefill_latency_ms": fk_lat["prefill_ms"],
+                "decode_latency_ms": fk_lat["decode_ms"],
                 "max_memory_mb": round(fk['max_peak_memory_mb'], 1) if fk and 'max_peak_memory_mb' in fk else None,
             },
             "LiveKVQuant": {
                 "score": round(lk['avg_score'] * 100, 2) if lk else None,
-                "latency_ms": round(lk['avg_latency_ms'], 1) if lk and 'avg_latency_ms' in lk else None,
+                "e2e_latency_ms": lk_lat["e2e_ms"],
+                "prefill_latency_ms": lk_lat["prefill_ms"],
+                "decode_latency_ms": lk_lat["decode_ms"],
                 "max_memory_mb": round(lk['max_peak_memory_mb'], 1) if lk and 'max_peak_memory_mb' in lk else None,
             },
             "diff_score": round((lk['avg_score'] - fk['avg_score']) * 100, 2) if fk and lk else None,
@@ -96,14 +121,17 @@ def main():
     both_tasks = [t for t in ordered_tasks if t in fullkv and t in livekv]
     n = len(both_tasks)
     overall = {}
+    def _get_e2e(data):
+        return data.get('avg_end_to_end_latency_ms', data.get('avg_latency_ms', 0))
+
     if n > 0:
         overall = {
             "num_common_tasks": n,
             "fullKV_avg_score": round(sum(fullkv[t]['avg_score'] for t in both_tasks) / n * 100, 2),
             "LiveKVQuant_avg_score": round(sum(livekv[t]['avg_score'] for t in both_tasks) / n * 100, 2),
             "diff_avg_score": round((sum(livekv[t]['avg_score'] for t in both_tasks) - sum(fullkv[t]['avg_score'] for t in both_tasks)) / n * 100, 2),
-            "fullKV_avg_latency_ms": round(sum(fullkv[t].get('avg_latency_ms', 0) for t in both_tasks) / n, 1),
-            "LiveKVQuant_avg_latency_ms": round(sum(livekv[t].get('avg_latency_ms', 0) for t in both_tasks) / n, 1),
+            "fullKV_avg_e2e_latency_ms": round(sum(_get_e2e(fullkv[t]) for t in both_tasks) / n, 1),
+            "LiveKVQuant_avg_e2e_latency_ms": round(sum(_get_e2e(livekv[t]) for t in both_tasks) / n, 1),
             "fullKV_avg_memory_mb": round(sum(fullkv[t].get('max_peak_memory_mb', 0) for t in both_tasks) / n, 1),
             "LiveKVQuant_avg_memory_mb": round(sum(livekv[t].get('max_peak_memory_mb', 0) for t in both_tasks) / n, 1),
         }

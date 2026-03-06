@@ -137,7 +137,7 @@ def run_ablation_study(args):
             param_name: val,
             "PPL": ppl,
             "Peak_Memory_MB": metrics.peak_memory_mb,
-            "Latency_s": metrics.total_latency_ms / 1000
+            "Latency_s": metrics.end_to_end_latency_ms / 1000
         })
         
         # 5. 清理記憶體

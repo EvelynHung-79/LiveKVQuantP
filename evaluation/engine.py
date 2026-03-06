@@ -89,7 +89,7 @@ class LongBenchEvaluator:
                 with torch.no_grad():
                     if hasattr(self.model, "controllers"):
                         # Case 1: LiveKVQuantModel (generate returns string directly)
-                        output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len, temperature=0, eos_token_ids=extra_eos_ids or None)
+                        output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len, temperature=0, eos_token_ids=extra_eos_ids or None, on_prefill_end=profiler.mark_prefill_end)
                         perf_metrics = profiler.stop(num_output_tokens=current_output_len)
                     else:
                         # Case 2: 原生 HuggingFace Model (generate returns token ids)
@@ -132,7 +132,9 @@ class LongBenchEvaluator:
                     "output": output_text,
                     "ground_truth": ground_truths[0],
                     "peak_memory_mb": perf_metrics.peak_memory_mb,
-                    "latency_ms": perf_metrics.total_latency_ms
+                    "end_to_end_latency_ms": perf_metrics.end_to_end_latency_ms,
+                    "prefill_latency_ms": perf_metrics.prefill_latency_ms,
+                    "decode_latency_ms": perf_metrics.decode_latency_ms
                 })
 
             except Exception as e:
@@ -145,19 +147,23 @@ class LongBenchEvaluator:
         self._save_results(task_name, results, total_score, args, current_output_len)
 
     def _save_results(self, task_name, results, total_score, args, effective_output_len):
+        valid_results = [r for r in results if "error" not in r]
+        n = len(valid_results) if valid_results else 1
         avg_score = total_score / len(results) if results else 0.0
-        avg_latency = sum([r.get("latency_ms", 0.0) for r in results]) / len(results) if results else 0.0
-        max_peak_memory = max([r.get("peak_memory_mb", 0.0) for r in results]) if results else 0.0
+        avg_e2e_latency = sum(r.get("end_to_end_latency_ms", 0.0) for r in valid_results) / n
+        avg_prefill_latency = sum(r.get("prefill_latency_ms", 0.0) for r in valid_results) / n
+        avg_decode_latency = sum(r.get("decode_latency_ms", 0.0) for r in valid_results) / n
+        max_peak_memory = max((r.get("peak_memory_mb", 0.0) for r in results), default=0.0)
 
-        logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | Avg Latency: {avg_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
-        
+        logger.info(f"Task: {task_name} | Avg Score: {avg_score:.4f} | E2E: {avg_e2e_latency:.2f} ms | Prefill: {avg_prefill_latency:.2f} ms | Decode: {avg_decode_latency:.2f} ms | Max Memory: {max_peak_memory:.2f} MB")
+
         TW_TZ = timezone(timedelta(hours=8))
         timestamp = datetime.now(TW_TZ).strftime("%Y%m%d_%H%M")
         subdir = "liveKVQuant" if hasattr(self.model, "controllers") else "baselines/fullKV"
         output_filename = f"{timestamp}_{self.bench_version}_{task_name}.json"
         output_path = os.path.join(self.output_dir, subdir, output_filename)
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
+
         with open(output_path, "w", encoding="utf-8") as f:
             args_dict = vars(args).copy()
             args_dict["effective_output_len"] = effective_output_len
@@ -166,7 +172,9 @@ class LongBenchEvaluator:
                 "version": self.bench_version,
                 "args": args_dict,
                 "avg_score": avg_score,
-                "avg_latency_ms": avg_latency,
+                "avg_end_to_end_latency_ms": avg_e2e_latency,
+                "avg_prefill_latency_ms": avg_prefill_latency,
+                "avg_decode_latency_ms": avg_decode_latency,
                 "max_peak_memory_mb": max_peak_memory,
                 "details": results
             }, f, indent=4, ensure_ascii=False)
