@@ -10,8 +10,8 @@
         "effective_output_len": 128
     },
     "avg_score": 0.437530381627596,
-    "avg_latency_ms": 5617.382268086076,
-    "max_peak_memory_mb": 19621.27587890625,
+    "avg_latency_ms": 2779.1835230775177,
+    "max_peak_memory_mb": 19621.275390625,
     "details": [
         {
             "index": 0,
@@ -20,7 +20,7 @@
             "output": " Emilia is still angry.",
             "ground_truth": "Emilia is still angry.",
             "peak_memory_mb": 17582.54541015625,
-            "latency_ms": 6240.811739116907
+            "latency_ms": 2271.4641988277435
         },
         {
             "index": 1,
@@ -28,8 +28,8 @@
             "metric": "Rouge-L",
             "output": " Mico and Jeff are going to the village party. Lia is too tired after hiking. Mico is looking for a hot boy. ",
             "ground_truth": "Mico and Jeff will go to the village party. Jeff will drive.",
-            "peak_memory_mb": 15943.69921875,
-            "latency_ms": 4019.356608390808
+            "peak_memory_mb": 15943.6982421875,
+            "latency_ms": 4237.43649199605
         },
         {
             "index": 2,
@@ -38,7 +38,7 @@
             "output": " Michael can't make it today because he has to stay at the office until 8 pm.",
             "ground_truth": "Michael can't leave the office before 8 PM, so he's unable to meet with Tom. Michael will call Tom tomorrow.",
             "peak_memory_mb": 18437.2763671875,
-            "latency_ms": 6760.408814996481
+            "latency_ms": 2959.5895372331142
         },
         {
             "index": 3,
@@ -46,8 +46,8 @@
             "metric": "Rouge-L",
             "output": " Autumn has sewn a dress. Israel hasn't seen it yet. Autumn will post photos of the dress on the site soon.",
             "ground_truth": "Autumn has sewn a dress.",
-            "peak_memory_mb": 17316.86279296875,
-            "latency_ms": 5471.897900104523
+            "peak_memory_mb": 17316.86181640625,
+            "latency_ms": 2218.6556197702885
         },
         {
             "index": 4,
@@ -55,8 +55,8 @@
             "metric": "Rouge-L",
             "output": "25 years after working together in a clothes factory, Brenda and Sandra meet again. They talk about their lives, their husbands and their children. They both remember the good times they had at the factory, like the dinner dances. They decide to organize a reunion for the Lister's girls and meet up next Saturday.",
             "ground_truth": "Sandra and Brenda used to work together in the clothes factory 25 years ago. Sandra still lives in Kings Norton. Brenda lives in Stoke now. Her husband Bill died 5 years ago. They will meet in Birmingham for a lunch next Saturday about 11. They want to organize a reunion for the Lister's girls. ",
-            "peak_memory_mb": 17682.92822265625,
-            "latency_ms": 5889.732010662556
+            "peak_memory_mb": 17682.92724609375,
+            "latency_ms": 3806.2602393329144
         },
         {
             "index": 5,
@@ -64,8 +64,8 @@
             "metric": "Rouge-L",
             "output": " Leah is asking Kristi to put her ID onto the reference code to get a 20% discount coupon. Kristi will get some accumulated money for the shopping next time.",
             "ground_truth": "Kristi needs new trainers. Leah has a link for a discount coupon at an online store.",
-            "peak_memory_mb": 18716.2587890625,
-            "latency_ms": 7143.875926733017
+            "peak_memory_mb": 18716.25830078125,
+            "latency_ms": 3800.5504831671715
         },
         {
             "index": 6,
@@ -73,8 +73,8 @@
             "metric": "Rouge-L",
             "output": " Lisa and Peter talk about their health and fitness. Peter has been working out to improve his health and Lisa is thinking of doing the same. They discuss the importance of exercise, diet and sleep for good health.",
             "ground_truth": "Peter has been working out at the gym near their office lately to improve his health. Lisa is considering working out and eating better to be healthier.",
-            "peak_memory_mb": 19308.0576171875,
-            "latency_ms": 7895.206123590469
+            "peak_memory_mb": 19308.05712890625,
+            "latency_ms": 4676.797393709421
         },
         {
             "index": 7,
@@ -82,8 +82,8 @@
             "metric": "Rouge-L",
             "output": " Petra is extremely sleepy. Andy and Ezgi are bored at the office. Petra is joking about the HR woman who claims to have a black belt in karate.",
             "ground_truth": "Petra is very sleepy at work today, Andy finds the day boring, and Ezgi is working. ",
-            "peak_memory_mb": 19275.12158203125,
-            "latency_ms": 7902.498256415129
+            "peak_memory_mb": 19275.12109375,
+            "latency_ms": 4323.205109685659
         },
         {
             "index": 8,
@@ -91,8 +91,8 @@
             "metric": "Rouge-L",
             "output": " Nova and Dominic are discussing a funny trend where people are photoshopping Timothée Chalamet into artworks.",
             "ground_truth": "People are photoshopping Timothée Chalamet into artworks. Dominic and Nova agree that he looks like a 19th century man.",
-            "peak_memory_mb": 18077.09033203125,
-            "latency_ms": 6401.816014200449
+            "peak_memory_mb": 18077.08935546875,
+            "latency_ms": 2838.4726718068123
         },
         {
             "index": 9,
@@ -100,8 +100,8 @@
             "metric": "Rouge-L",
             "output": " Adele got a new dog, a 4-month-old pup biscuit lab named Chewy, or Bones. The other dogs are accepting him well, except for the cats who keep their distance. ",
             "ground_truth": "Adele got a new biscuit Labrador Chewy that is 4 months. Her cats keep their distance, and Poppy and Lulu seem to mother Chewy and Speedy wants to play.",
-            "peak_memory_mb": 16047.98388671875,
-            "latency_ms": 4312.828976660967
+            "peak_memory_mb": 16047.9833984375,
+            "latency_ms": 4252.347804605961
         },
         {
             "index": 10,
@@ -110,7 +110,7 @@
             "output": " Celine is not at home, but will come over in the evening.",
             "ground_truth": "Celine is not at home, but she will call Cara before visiting her.",
             "peak_memory_mb": 17670.94677734375,
-            "latency_ms": 5878.7332735955715
+            "latency_ms": 2171.537697315216
         },
         {
             "index": 11,
@@ -118,8 +118,8 @@
             "metric": "Rouge-L",
             "output": " Janice has watched almost all the top 50 best films of 2018, including Deadpool 2 and Avengers. Rachel is impressed.",
             "ground_truth": "Rachel sends a list of Top 50 films of 2018. Janice watched almost half of them, Deadpool 2 and Avengers included.",
-            "peak_memory_mb": 17624.35693359375,
-            "latency_ms": 5850.262865424156
+            "peak_memory_mb": 17624.35595703125,
+            "latency_ms": 2555.6543432176113
         },
         {
             "index": 12,
@@ -127,8 +127,8 @@
             "metric": "Rouge-L",
             "output": " Luke and Martial are planning to meet Jose, the coach, tomorrow to let him know they are ready to play despite their injuries.",
             "ground_truth": "luke and martial want to help the team and play despite their injuries. They will meet at carrington and go to the coach's office.",
-            "peak_memory_mb": 16538.43115234375,
-            "latency_ms": 4642.619334161282
+            "peak_memory_mb": 16538.43017578125,
+            "latency_ms": 1595.140416175127
         },
         {
             "index": 13,
@@ -136,8 +136,8 @@
             "metric": "Rouge-L",
             "output": " Sally and Rita are excited about Borns' new album and Florence's new single.",
             "ground_truth": "Sally and Rita like Borns' new album very much. Rita is also excited about Florence's new single which comes out tomorrow. Sally didn't know about it.",
-            "peak_memory_mb": 18423.4443359375,
-            "latency_ms": 6781.783815473318
+            "peak_memory_mb": 18423.443359375,
+            "latency_ms": 2883.1843696534634
         },
         {
             "index": 14,
@@ -145,8 +145,8 @@
             "metric": "Rouge-L",
             "output": " Martin won two cinema tickets by writing a short review on Facebook.",
             "ground_truth": "Martin wrote a short review and won 2 cinema tickets on FB. Martin wants Aggie to go with him this week for the new film with Redford.",
-            "peak_memory_mb": 17953.2919921875,
-            "latency_ms": 6236.6207875311375
+            "peak_memory_mb": 17953.29150390625,
+            "latency_ms": 2342.47412905097
         },
         {
             "index": 15,
@@ -154,8 +154,8 @@
             "metric": "Rouge-L",
             "output": " Max is sharing his latest music project with Jim. Jim will listen to it when he gets home.",
             "ground_truth": "Jim will check out Max's latest music project when he gets home.",
-            "peak_memory_mb": 17669.57470703125,
-            "latency_ms": 5885.07479429245
+            "peak_memory_mb": 17669.57421875,
+            "latency_ms": 2318.5179829597473
         },
         {
             "index": 16,
@@ -163,8 +163,8 @@
             "metric": "Rouge-L",
             "output": " Wanda wants to have a party. She needs Gina to take her father's car and go shopping with her on Friday.",
             "ground_truth": "Wanda wants to throw a party. She asks Gina to borrow her father's car and go do groceries together. They set the date for Friday. ",
-            "peak_memory_mb": 16393.85400390625,
-            "latency_ms": 4508.0940797924995
+            "peak_memory_mb": 16393.85302734375,
+            "latency_ms": 1458.7543569505215
         },
         {
             "index": 17,
@@ -172,8 +172,8 @@
             "metric": "Rouge-L",
             "output": " Madison found an offer for a trip to Thailand. The tickets are expensive, but the rest of the trip is cheap. Children under 12 get a 50% discount.",
             "ground_truth": "Madison considers buying flight tickets to Thailand as she has found a cheap offer with 50% discount for children under 12.",
-            "peak_memory_mb": 16074.060546875,
-            "latency_ms": 4163.2852256298065
+            "peak_memory_mb": 16074.06005859375,
+            "latency_ms": 1532.3995612561703
         },
         {
             "index": 18,
@@ -181,8 +181,8 @@
             "metric": "Rouge-L",
             "output": " Charlee is in a class about Portuguese theatre. They are preparing a performance of a Polish play translated into Portuguese.",
             "ground_truth": "Charlee is attending Portuguese theater as a subject at university. He and other students are preparing a play by Mrożek translated into Portuguese.",
-            "peak_memory_mb": 18754.89501953125,
-            "latency_ms": 7199.187036603689
+            "peak_memory_mb": 18754.89453125,
+            "latency_ms": 3439.4542686641216
         },
         {
             "index": 19,
@@ -190,8 +190,8 @@
             "metric": "Rouge-L",
             "output": " Jesse broke his razor and wants to borrow Stig's.",
             "ground_truth": "Jesse broke his razor and wants to borrow Stig's.",
-            "peak_memory_mb": 16455.48046875,
-            "latency_ms": 4597.442120313644
+            "peak_memory_mb": 16455.4794921875,
+            "latency_ms": 1119.2910075187683
         },
         {
             "index": 20,
@@ -199,8 +199,8 @@
             "metric": "Rouge-L",
             "output": " Ann will be home at 7. Meg will meet Ann at home.",
             "ground_truth": "Ann is still at school. She will be home at 7 so she can meet Meg then.",
-            "peak_memory_mb": 19186.91015625,
-            "latency_ms": 6062.16474249959
+            "peak_memory_mb": 19186.90966796875,
+            "latency_ms": 3577.3112140595913
         },
         {
             "index": 21,
@@ -208,8 +208,8 @@
             "metric": "Rouge-L",
             "output": " Angelina and Jones are meeting in town later in the afternoon.",
             "ground_truth": "Jones and Angelina will meet in town in the afternoon.",
-            "peak_memory_mb": 19102.93798828125,
-            "latency_ms": 7643.964476883411
+            "peak_memory_mb": 19102.9375,
+            "latency_ms": 3410.8019918203354
         },
         {
             "index": 22,
@@ -217,8 +217,8 @@
             "metric": "Rouge-L",
             "output": " Bella wants to talk to Clara about something. Clara is at the gym until 7. They will meet at 7:30 and have a drink. Bella will bring the wine.",
             "ground_truth": "Bella wants to talk with Clara and she will come to her place after 7:30.",
-            "peak_memory_mb": 16103.703125,
-            "latency_ms": 4190.124597400427
+            "peak_memory_mb": 16103.7021484375,
+            "latency_ms": 1568.3366619050503
         },
         {
             "index": 23,
@@ -226,8 +226,8 @@
             "metric": "Rouge-L",
             "output": " Gary is driving for Uber and is having fun. Ellie is surprised because she thought Gary would be awkward with new people.",
             "ground_truth": "Gary is a driver for Uber and he really enjoys it.",
-            "peak_memory_mb": 16983.55419921875,
-            "latency_ms": 5124.010130763054
+            "peak_memory_mb": 16983.5537109375,
+            "latency_ms": 1922.3372116684914
         },
         {
             "index": 24,
@@ -235,8 +235,8 @@
             "metric": "Rouge-L",
             "output": " Dorothea is celebrating her birthday today. ",
             "ground_truth": "Dorothea is having a birthday dinner in the town with Tom. Elena is seeing Dorothea at her party on Saturday. ",
-            "peak_memory_mb": 18646.267578125,
-            "latency_ms": 7056.646075099707
+            "peak_memory_mb": 18646.2666015625,
+            "latency_ms": 7204.079262912273
         },
         {
             "index": 25,
@@ -245,7 +245,7 @@
             "output": " Charles and Camilla are going to visit the German markets in Birmingham and Manchester. They will try the sausages and mulled wine.",
             "ground_truth": "Camilla has some errands to do on Saturday. Charles is visiting the German markets this weekend. They are talking about Christmas food and drinks.",
             "peak_memory_mb": 16458.3857421875,
-            "latency_ms": 4574.51743632555
+            "latency_ms": 1603.6088801920414
         },
         {
             "index": 26,
@@ -253,8 +253,8 @@
             "metric": "Rouge-L",
             "output": " Mary is broke and needs a few bucks. Carter will lend her the money in an hour.",
             "ground_truth": "Mary ran out of money. Carter is going to lend her some in an hour.",
-            "peak_memory_mb": 17767.044921875,
-            "latency_ms": 6000.908378511667
+            "peak_memory_mb": 17767.0439453125,
+            "latency_ms": 2384.8099783062935
         },
         {
             "index": 27,
@@ -262,8 +262,8 @@
             "metric": "Rouge-L",
             "output": " Biwott told Chloe about a series, but Chloe hasn't had time to watch it yet.",
             "ground_truth": "Chloe will watch the serious recommended by Biwott at the weekend.",
-            "peak_memory_mb": 18577.037109375,
-            "latency_ms": 6975.7242649793625
+            "peak_memory_mb": 18577.0361328125,
+            "latency_ms": 3168.242208659649
         },
         {
             "index": 28,
@@ -271,8 +271,8 @@
             "metric": "Rouge-L",
             "output": " Iris is trying to remove herself from an expense in the group, but it involves a person who has left the group. Ken and Luke are trying to help her. They decide to delete the expense and re-add it. Ken will add Julia back in the group and she will pay her share of the car rental price.",
             "ground_truth": "Iris is trying to remove herself from an expense. Ken has fixed the problem. Julia will be added to the expense again later. Gerardo will ask the people leaving early to stay in the splitwise group until the end of the month. George will stay.",
-            "peak_memory_mb": 17581.5517578125,
-            "latency_ms": 5802.639190107584
+            "peak_memory_mb": 17581.55126953125,
+            "latency_ms": 3764.994937926531
         },
         {
             "index": 29,
@@ -280,8 +280,8 @@
             "metric": "Rouge-L",
             "output": " Alex will join Huda for swimming in 2 hours.",
             "ground_truth": "Alex will go swimming toghether with Huda in two hours. ",
-            "peak_memory_mb": 19621.27587890625,
-            "latency_ms": 8330.287523567677
+            "peak_memory_mb": 19621.275390625,
+            "latency_ms": 3907.356120646
         },
         {
             "index": 30,
@@ -289,8 +289,8 @@
             "metric": "Rouge-L",
             "output": " Steve and Tina are planning to have pasta for dinner. They will go shopping together after work. They will meet in the car park. ",
             "ground_truth": "Tina and Steve are having pasta for dinner. They'll meet in the car park after Steve finishes work. They'll do the shopping together.",
-            "peak_memory_mb": 16623.47998046875,
-            "latency_ms": 4738.616362214088
+            "peak_memory_mb": 16623.47900390625,
+            "latency_ms": 4828.666094690561
         },
         {
             "index": 31,
@@ -299,7 +299,7 @@
             "output": " Christie and Katie are both tired after the party.",
             "ground_truth": "Christie and Katie are tired after the party. They both had fun.",
             "peak_memory_mb": 16852.12158203125,
-            "latency_ms": 4984.959717839956
+            "latency_ms": 1332.197591662407
         },
         {
             "index": 32,
@@ -307,8 +307,8 @@
             "metric": "Rouge-L",
             "output": " Jess had a dream about being a lion tamer. Her friends Lynn and Charlie discussed the meaning of dreams. They talked about the subconsciousness and how our brain can use random images from our memory when we dream.",
             "ground_truth": "Jess dreamt she was a lion tamer. Lynn believes that dreams mean something. Charlie has read that strangers from our dreams are actually people who we've seen before.",
-            "peak_memory_mb": 16945.16845703125,
-            "latency_ms": 5096.121072769165
+            "peak_memory_mb": 16945.16796875,
+            "latency_ms": 2436.8926659226418
         },
         {
             "index": 33,
@@ -316,8 +316,8 @@
             "metric": "Rouge-L",
             "output": " Sophie is waiting for Tina to get ready to catch the bus.",
             "ground_truth": "Tina will make it for the bus that is leaving in 3 minutes.",
-            "peak_memory_mb": 18624.05517578125,
-            "latency_ms": 7035.7661955058575
+            "peak_memory_mb": 18624.0546875,
+            "latency_ms": 2941.918347030878
         },
         {
             "index": 34,
@@ -325,8 +325,8 @@
             "metric": "Rouge-L",
             "output": " Thelma wants to look wonderful. Louisa offers to lend Thelma her red velvet dress.",
             "ground_truth": "Louisa will lend Thelma her red velvet dress.",
-            "peak_memory_mb": 15808.32373046875,
-            "latency_ms": 3896.1544558405876
+            "peak_memory_mb": 15808.3232421875,
+            "latency_ms": 893.7428891658783
         },
         {
             "index": 35,
@@ -334,8 +334,8 @@
             "metric": "Rouge-L",
             "output": " Tobias and Trevor are going to grab a beer after work.",
             "ground_truth": "Trevor will meet Tobias at his place at 9 pm.",
-            "peak_memory_mb": 18790.46875,
-            "latency_ms": 7241.03045091033
+            "peak_memory_mb": 18790.4677734375,
+            "latency_ms": 3071.5033635497093
         },
         {
             "index": 36,
@@ -343,8 +343,8 @@
             "metric": "Rouge-L",
             "output": " Anna is trying to convince Peter to use an app that helps with choosing clothes. Peter is skeptical.",
             "ground_truth": "Anna likes a new app in which you can virtually try on clothes. Peter is not quite convinced it is necessary.",
-            "peak_memory_mb": 18405.3671875,
-            "latency_ms": 6770.311366766691
+            "peak_memory_mb": 18405.3662109375,
+            "latency_ms": 2987.1788434684277
         },
         {
             "index": 37,
@@ -352,8 +352,8 @@
             "metric": "Rouge-L",
             "output": " Peadar invites people to a drink, but Clare is not in town. Annette is home sick with lung lurgy. Oli asks if people are at Jesus bar, and James says he is heading there. Anne double books herself and Helen suggests meeting at Jesus bar from 9.15. Peadar jokes about joining Oli at the bar, but Oli says he cycled around the bar but couldn't find anyone. ",
             "ground_truth": "Annette is sick. James is going to the Jesus bar. Oli couldn't find anyone near the bar.",
-            "peak_memory_mb": 18820.6416015625,
-            "latency_ms": 7277.265943586826
+            "peak_memory_mb": 18820.640625,
+            "latency_ms": 7407.795391976833
         },
         {
             "index": 38,
@@ -362,7 +362,7 @@
             "output": " Martin wants to break up with Nicole because he is asexual. Nicole is surprised but doesn't want to break up.",
             "ground_truth": "Martin is asexual. Nicole doesn't want to break up for this reason. She wants to give their relationship a try.",
             "peak_memory_mb": 18212.68798828125,
-            "latency_ms": 6540.497560054064
+            "latency_ms": 2978.4224666655064
         },
         {
             "index": 39,
@@ -370,8 +370,8 @@
             "metric": "Rouge-L",
             "output": " Dan is splitting the cost of the BBQ equally among everyone. Sara didn't eat, so she removed herself from the transaction. ",
             "ground_truth": "Dan cooked a successful BBQ meal and will split the bill via Splitwise. He invites everyone who did not eat to remove themselves. ",
-            "peak_memory_mb": 16258.9462890625,
-            "latency_ms": 4370.997134596109
+            "peak_memory_mb": 16258.94580078125,
+            "latency_ms": 4586.760975420475
         },
         {
             "index": 40,
@@ -380,7 +380,7 @@
             "output": " Andrea is taking a day off work to take her sick son to the doctor. Patrick is okay with it.",
             "ground_truth": "Andrea's son is sick, she is taking a day off and taking him to the doctor's. ",
             "peak_memory_mb": 16452.55419921875,
-            "latency_ms": 3604.0628738701344
+            "latency_ms": 1424.7166961431503
         },
         {
             "index": 41,
@@ -388,8 +388,8 @@
             "metric": "Rouge-L",
             "output": " Guido is having trouble understanding Agata's posts on Facebook. Agata explains that her Twitter posts are automatically posted to Facebook. Guido is relieved. Agata also explains that she is learning JavaScript and enjoys it. Guido is happy for her. Guido asks about Agata's husband and Agata says he doesn't complain about her new job. Guido makes a joke about Agata speaking to her husband in JavaScript language.",
             "ground_truth": "Agata has a new job, she's learning to code and she likes it. Guido doesn't understand her Facebook posts because he knows nothing about JavaScript.",
-            "peak_memory_mb": 15743.77001953125,
-            "latency_ms": 4424.580901861191
+            "peak_memory_mb": 15743.76904296875,
+            "latency_ms": 2752.0172260701656
         },
         {
             "index": 42,
@@ -397,8 +397,8 @@
             "metric": "Rouge-L",
             "output": " Julia and Gail are talking about social media. Gail likes to spy on her friends on social media. Julia is surprised that Gail does this, but Gail says it's fun. Gail has been spying on Jessica and found out that she's not as active as she posts on social media. Gail also says that Julia is straightforward and genuine on social media. Julia is upset that Hillary thinks she has no life in real life.",
             "ground_truth": "Jessica posts a lot regarding subjects she does nothing about in reality. Julia posts in a more genuine way. But Hillary thinks she does it to death and lacks real life.",
-            "peak_memory_mb": 16998.369140625,
-            "latency_ms": 5356.227904558182
+            "peak_memory_mb": 16998.36865234375,
+            "latency_ms": 3976.819857954979
         },
         {
             "index": 43,
@@ -406,8 +406,8 @@
             "metric": "Rouge-L",
             "output": " Robert visited his old office to meet Gabriel, but Gabriel has quit the office a month ago.",
             "ground_truth": "Robert texts Gabriel to arrange a get-together with him in the office at 3 pm, before he is meeting Darek. But Gabriel left the office a month ago and is at home now, so they will not meet today.",
-            "peak_memory_mb": 18969.3740234375,
-            "latency_ms": 7168.563064187765
+            "peak_memory_mb": 18969.37353515625,
+            "latency_ms": 3508.253026753664
         },
         {
             "index": 44,
@@ -415,8 +415,8 @@
             "metric": "Rouge-L",
             "output": " Willy likes Vinny's car. They will carpool together.",
             "ground_truth": "Willy and Vinny will car pool with Winny's red Mustang.",
-            "peak_memory_mb": 18214.3427734375,
-            "latency_ms": 4883.8261887431145
+            "peak_memory_mb": 18214.341796875,
+            "latency_ms": 2615.681905299425
         },
         {
             "index": 45,
@@ -424,8 +424,8 @@
             "metric": "Rouge-L",
             "output": " Quinn and Kyle are going out tonight. Kyle is leaving school at Easter and is working for his uncle. Quinn is jealous and hates school. Kyle offers to ask his uncle about a job on the building site.",
             "ground_truth": "Quinn and Kyle are going out tonight. Kyle is leaving school at Easter to work for his uncle. Quinn's parents want him to retake his GCSEs. Kyle's brother will buy alcohol and cigarettes for them. Their friend, Kirsty, is dating Nathan Baker. Quinn and Kyle will meet around 6 outside the club.",
-            "peak_memory_mb": 18080.375,
-            "latency_ms": 6385.518446564674
+            "peak_memory_mb": 18080.37451171875,
+            "latency_ms": 3510.826926678419
         },
         {
             "index": 46,
@@ -433,8 +433,8 @@
             "metric": "Rouge-L",
             "output": " Mark and Jeff are talking about a new car that one of their friends has bought. They are both very interested in driving it.",
             "ground_truth": "Jeff and Mark are amazed by his car. They bet 100 dollars who gets to drive it first.",
-            "peak_memory_mb": 15900.8759765625,
-            "latency_ms": 3980.400700122118
+            "peak_memory_mb": 15900.875,
+            "latency_ms": 1110.836450010538
         },
         {
             "index": 47,
@@ -442,8 +442,8 @@
             "metric": "Rouge-L",
             "output": " Mike will refill the hand sanitizer by the restrooms.",
             "ground_truth": "Mike will refill the hand sanitizer on Grace's request.",
-            "peak_memory_mb": 17054.40234375,
-            "latency_ms": 5190.182741731405
+            "peak_memory_mb": 17054.40185546875,
+            "latency_ms": 1526.6029350459576
         },
         {
             "index": 48,
@@ -451,8 +451,8 @@
             "metric": "Rouge-L",
             "output": " Jill is bored and wants to find a job. Nate is still at work and will call Jill when he gets off.",
             "ground_truth": "Jill is bored and has watched YouTube. Nate is at work and will call Jill when he finishes it.",
-            "peak_memory_mb": 15739.26416015625,
-            "latency_ms": 3830.598294734955
+            "peak_memory_mb": 15739.26318359375,
+            "latency_ms": 971.0985906422138
         },
         {
             "index": 49,
@@ -460,8 +460,8 @@
             "metric": "Rouge-L",
             "output": " Alexa was jealous of Hunter and Ethan, so she asked Ethan to insult Hunter. ",
             "ground_truth": "Alexa asked Ethan to insult Hunter out of jealousy.",
-            "peak_memory_mb": 18089.77880859375,
-            "latency_ms": 6393.6962224543095
+            "peak_memory_mb": 18089.77783203125,
+            "latency_ms": 6518.978551030159
         },
         {
             "index": 50,
@@ -470,7 +470,7 @@
             "output": " Anne and Catherine hate Miranda because she flirted with Tom, who is Anne's boyfriend.",
             "ground_truth": "Miranda called Tom yesterday and spoke to him in a sweet way. Anne is angry with her because Anne is dating Tom.",
             "peak_memory_mb": 16276.94287109375,
-            "latency_ms": 4415.629826486111
+            "latency_ms": 1196.37481123209
         },
         {
             "index": 51,
@@ -478,8 +478,8 @@
             "metric": "Rouge-L",
             "output": " Gene sent a package to Jack on Friday. Jack didn't receive it yet. Jack wants to check the tracking number.",
             "ground_truth": "Jack has not received yet the package Gene had sent him on Friday. She sent him the tracking number, so he could check the status of the shipment. ",
-            "peak_memory_mb": 18865.23046875,
-            "latency_ms": 7126.13919749856
+            "peak_memory_mb": 18865.2294921875,
+            "latency_ms": 3608.0530658364296
         },
         {
             "index": 52,
@@ -487,8 +487,8 @@
             "metric": "Rouge-L",
             "output": " Greg needs to stay after hours. Betsy can't pick up Johnny as she has to work long hours too.",
             "ground_truth": "Greg and Betsy have a lot of work today, so they cannot pick up Johnny from the kindergarten. However, it's Greg's turn to do it. Greg will try to find a solution.",
-            "peak_memory_mb": 18655.87841796875,
-            "latency_ms": 7065.686747431755
+            "peak_memory_mb": 18655.8779296875,
+            "latency_ms": 3338.7015350162983
         },
         {
             "index": 53,
@@ -496,8 +496,8 @@
             "metric": "Rouge-L",
             "output": " Rael is unhappy with his job. Zach suggests that Rael should consider a career in IT, as it is a good place to work with good money and no rat race. Zach offers to help Rael find a new career in IT.",
             "ground_truth": "Rael finds the atmosphere at her workplace to be unbearable. Many people switch their career paths and move to the IT sector. Rael only needs good analytical skills and an on-line course to start work in IT.",
-            "peak_memory_mb": 18344.70556640625,
-            "latency_ms": 6668.952602893114
+            "peak_memory_mb": 18344.705078125,
+            "latency_ms": 3959.9454663693905
         },
         {
             "index": 54,
@@ -505,8 +505,8 @@
             "metric": "Rouge-L",
             "output": " They will book the flight today to avoid price increase.",
             "ground_truth": "Natalia, Harriet and Lara will book flight tickets today.",
-            "peak_memory_mb": 16171.54638671875,
-            "latency_ms": 1213.6652022600174
+            "peak_memory_mb": 16171.5458984375,
+            "latency_ms": 864.2997927963734
         },
         {
             "index": 55,
@@ -515,7 +515,7 @@
             "output": " Natalie asked Monica for her famous cheesecake recipe. Monica sent it to her.",
             "ground_truth": "Natalie wants Monica's cheesecake recipe.",
             "peak_memory_mb": 17821.87646484375,
-            "latency_ms": 4989.767797291279
+            "latency_ms": 2328.114092350006
         },
         {
             "index": 56,
@@ -523,8 +523,8 @@
             "metric": "Rouge-L",
             "output": " Nancy, Phil and Vic are discussing social media platforms. They talk about Twitter, Facebook, Instagram and Tumblr.",
             "ground_truth": "Nancy asks Vic and Phil about various social media, which prompts them to discuss and compare the different platforms. Phil is not into Instagram but likes Twitter. Vic prefers Facebook over Twitter and likes Instagram. Phil and Vic both don't use Tumblr. ",
-            "peak_memory_mb": 19248.56591796875,
-            "latency_ms": 7844.142965972424
+            "peak_memory_mb": 19248.5654296875,
+            "latency_ms": 3912.3863130807877
         },
         {
             "index": 57,
@@ -532,8 +532,8 @@
             "metric": "Rouge-L",
             "output": " Amanda, Peter, and Dan are talking about a guy with dreadlocks.",
             "ground_truth": "Amanda and Peter don't like what the man in dreads looks like, but Dan does.",
-            "peak_memory_mb": 15815.51416015625,
-            "latency_ms": 3922.2853928804398
+            "peak_memory_mb": 15815.513671875,
+            "latency_ms": 760.3045925498009
         },
         {
             "index": 58,
@@ -541,8 +541,8 @@
             "metric": "Rouge-L",
             "output": " David is coming home for Christmas. Jane wants to get a gift for David's dad. David suggests an iPad.",
             "ground_truth": "David is coming home for Christmas next week.  Jane has no idea what to buy their father so David is going to order an ipad online.",
-            "peak_memory_mb": 16437.73583984375,
-            "latency_ms": 4584.601134061813
+            "peak_memory_mb": 16437.73486328125,
+            "latency_ms": 1468.7341079115868
         },
         {
             "index": 59,
@@ -550,8 +550,8 @@
             "metric": "Rouge-L",
             "output": " Sebastian is happy with his life in the last year. He has learned a lot and is satisfied with his decisions. Kevin is happy for him but is not satisfied with his own life.",
             "ground_truth": "Sebastian is very happy with his life, and shares this happiness with Kevin.",
-            "peak_memory_mb": 19119.32763671875,
-            "latency_ms": 7670.882783830166
+            "peak_memory_mb": 19119.3271484375,
+            "latency_ms": 4346.013016998768
         },
         {
             "index": 60,
@@ -559,8 +559,8 @@
             "metric": "Rouge-L",
             "output": " Lucas and Amy are looking at a photo of a cat.",
             "ground_truth": "Tony sent a photo of his cat to Amy and Lucas.",
-            "peak_memory_mb": 16185.15478515625,
-            "latency_ms": 4290.140140801668
+            "peak_memory_mb": 16185.15380859375,
+            "latency_ms": 926.4368303120136
         },
         {
             "index": 61,
@@ -568,8 +568,8 @@
             "metric": "Rouge-L",
             "output": " Colin is teasing Ava about her height, saying she is shorter than penguins. ",
             "ground_truth": "Colin informs Ava that with her height of 158 cm she is shorter than an average penguin.",
-            "peak_memory_mb": 18778.30078125,
-            "latency_ms": 7224.115204066038
+            "peak_memory_mb": 18778.2998046875,
+            "latency_ms": 7294.474113732576
         },
         {
             "index": 62,
@@ -578,7 +578,7 @@
             "output": " Natalie wants to go to a new club at Regents Street. Judy is going there this weekend and Natalie wants to go with her.",
             "ground_truth": "Natalie is checking if it's worth going to the new club at Regents Street. Denise thinks the club is great. Judy's friends also recommend the place, so Judy is going there this weekend. Natalie will go to the club with Judy, Miranda and Helen on Saturday.",
             "peak_memory_mb": 16774.4189453125,
-            "latency_ms": 4905.41110560298
+            "latency_ms": 1799.0527749061584
         },
         {
             "index": 63,
@@ -586,8 +586,8 @@
             "metric": "Rouge-L",
             "output": " Railey will buy Tiffany a burger on his way home.",
             "ground_truth": "Railey will buy Tiffany a burger.",
-            "peak_memory_mb": 17334.84033203125,
-            "latency_ms": 5241.582989692688
+            "peak_memory_mb": 17334.83984375,
+            "latency_ms": 1778.2760709524155
         },
         {
             "index": 64,
@@ -595,8 +595,8 @@
             "metric": "Rouge-L",
             "output": " Precious asked Rhonda to send the content for the November email blast, but Rhonda had already put it on Dropbox.",
             "ground_truth": "The content for November email blast is on the Dropbox, no need to send it.",
-            "peak_memory_mb": 18447.927734375,
-            "latency_ms": 6802.282989025116
+            "peak_memory_mb": 18447.9267578125,
+            "latency_ms": 3233.622681349516
         },
         {
             "index": 65,
@@ -604,8 +604,8 @@
             "metric": "Rouge-L",
             "output": " Kate broke her arm and needs to go to the hospital. She wants to know if her medical insurance covers hospital costs.",
             "ground_truth": "Kate broke her arm and she's going to the hospital. She'd like to know whether her medical insurance covers hospital costs. Greg suggests her to call Linda or ask someone at the reception about it.",
-            "peak_memory_mb": 18623.3876953125,
-            "latency_ms": 4111.631482839584
+            "peak_memory_mb": 18623.38671875,
+            "latency_ms": 3352.6667654514313
         },
         {
             "index": 66,
@@ -614,7 +614,7 @@
             "output": " The group is discussing Donald Trump's decision not to attend a ceremony, and they are all very critical of him, calling him names and making jokes about his hair and makeup.",
             "ground_truth": "Janet, Nicole, Alison, Arlene, Leslie, Ros, Eric and Sue are all complaining about Donald Trump and his absence at the ceremony. ",
             "peak_memory_mb": 15903.4765625,
-            "latency_ms": 3982.0760376751423
+            "latency_ms": 1383.126687258482
         },
         {
             "index": 67,
@@ -622,8 +622,8 @@
             "metric": "Rouge-L",
             "output": " Randolph asks Maya to buy him 5 packs of earplugs from the pharmacy.",
             "ground_truth": "Maya will buy 5 packs of earplugs for Randolph at the pharmacy.",
-            "peak_memory_mb": 17692.1943359375,
-            "latency_ms": 5899.4058929383755
+            "peak_memory_mb": 17692.19384765625,
+            "latency_ms": 2246.124070137739
         },
         {
             "index": 68,
@@ -631,8 +631,8 @@
             "metric": "Rouge-L",
             "output": " Olivia has to do her accounts and upload some videos to YouTube. Jake has had problems with copyright strikes on YouTube.",
             "ground_truth": "Olivia has to sort out her accounts and upload a few videos on YouTube. Jake is complaining that Sony Music tried to appropriate his own music.",
-            "peak_memory_mb": 17505.93115234375,
-            "latency_ms": 5079.891100525856
+            "peak_memory_mb": 17505.9306640625,
+            "latency_ms": 2284.6249416470528
         },
         {
             "index": 69,
@@ -640,8 +640,8 @@
             "metric": "Rouge-L",
             "output": " Mia and Steven are going to meet at 8 pm to have Chinese food before the movie at 9 pm.",
             "ground_truth": "Mia and Steven want to grab some Chinese at 8.",
-            "peak_memory_mb": 15660.61328125,
-            "latency_ms": 3635.4901678860188
+            "peak_memory_mb": 15660.61279296875,
+            "latency_ms": 870.9702268242836
         },
         {
             "index": 70,
@@ -649,8 +649,8 @@
             "metric": "Rouge-L",
             "output": " Sara will do the washing up. She is going to the cinema with Jack. Sam wants to join them but Sara said no.",
             "ground_truth": "Mike wants someone else to do the washing up this time. Sara agrees, but when she returns from the cinema she is at with Jack.",
-            "peak_memory_mb": 17938.87744140625,
-            "latency_ms": 6216.976344585419
+            "peak_memory_mb": 17938.876953125,
+            "latency_ms": 2786.1396819353104
         },
         {
             "index": 71,
@@ -658,8 +658,8 @@
             "metric": "Rouge-L",
             "output": " Paul will be late and will call Lena in 15 minutes to explain.",
             "ground_truth": "Lena has her keys. Paul will be home later than he thought. Paul will call Lena in 15 minutes and tell her what happened.",
-            "peak_memory_mb": 17464.19873046875,
-            "latency_ms": 5657.554719597101
+            "peak_memory_mb": 17464.19775390625,
+            "latency_ms": 1994.1881597042084
         },
         {
             "index": 72,
@@ -667,8 +667,8 @@
             "metric": "Rouge-L",
             "output": " There is a car accident on Circle Drive. Fortunately, there are no deaths.",
             "ground_truth": "There has been an accident on Circle Drive, neat Circle Mall. There are no fatalities.",
-            "peak_memory_mb": 16056.65087890625,
-            "latency_ms": 4149.39908310771
+            "peak_memory_mb": 16056.650390625,
+            "latency_ms": 931.4394481480122
         },
         {
             "index": 73,
@@ -676,8 +676,8 @@
             "metric": "Rouge-L",
             "output": " Iris is proud of Pete because he got an interview. ",
             "ground_truth": "Pete has got an interview. His wife Iris is happy because her parents are glad she found a decent man. She is joking he is famous.",
-            "peak_memory_mb": 17343.78125,
-            "latency_ms": 5517.647873610258
+            "peak_memory_mb": 17343.78076171875,
+            "latency_ms": 5587.09079772234
         },
         {
             "index": 74,
@@ -686,7 +686,7 @@
             "output": " Derek asks Judy to feed his animals on Friday and Saturday. Judy agrees.",
             "ground_truth": "Judy is staying for the weekend. Derek asks Judy to feed his animals on Friday and Saturday. Judy agrees. Derek will give her his keys on Thursday and provide Judy with details.",
             "peak_memory_mb": 17640.7568359375,
-            "latency_ms": 4702.828291803598
+            "latency_ms": 2147.0909863710403
         },
         {
             "index": 75,
@@ -694,8 +694,8 @@
             "metric": "Rouge-L",
             "output": " Tommy is back home after spending the weekend with his dad. His mum forgot to pick him up from the station so he took a bus. They had a good time angling and Tommy is looking forward to doing it again.",
             "ground_truth": "Tommy took a bus. He enjoyed the weekend with Wayne. They will talk in the evening.",
-            "peak_memory_mb": 16430.63037109375,
-            "latency_ms": 4574.124395847321
+            "peak_memory_mb": 16430.6298828125,
+            "latency_ms": 2106.0269959270954
         },
         {
             "index": 76,
@@ -703,8 +703,8 @@
             "metric": "Rouge-L",
             "output": " Tilly was supposed to be home at 4, but she got detention and will be home in 40 minutes.",
             "ground_truth": "Tilly was supposed to come home by 4 but she got a detention. The school was supposed to inform her parents about it, but didn't do it. Sam is coming back home. Tilly will be home in 40 minutes. She will call Sam then. ",
-            "peak_memory_mb": 18674.66796875,
-            "latency_ms": 7159.460641443729
+            "peak_memory_mb": 18674.66748046875,
+            "latency_ms": 3390.8128514885902
         },
         {
             "index": 77,
@@ -712,8 +712,8 @@
             "metric": "Rouge-L",
             "output": " Viola is feeling a little nervous before her wedding. Carmen is offering to help her with the preparations on Friday night.",
             "ground_truth": "Viola is having her wedding soon and still has some things to organize. Carmen comes on Friday and is willing to help Viola.",
-            "peak_memory_mb": 18582.56005859375,
-            "latency_ms": 7025.161225348711
+            "peak_memory_mb": 18582.55908203125,
+            "latency_ms": 3335.117034614086
         },
         {
             "index": 78,
@@ -721,8 +721,8 @@
             "metric": "Rouge-L",
             "output": " William is making spaghetti. He asks Olivia to buy fresh tomatoes and Beth to buy chocolate for after dinner.",
             "ground_truth": "William is making spaghetti. Olivia will buy fresh tomatoes for William. Beth will buy chocolate.",
-            "peak_memory_mb": 17276.77001953125,
-            "latency_ms": 5635.216813534498
+            "peak_memory_mb": 17276.76904296875,
+            "latency_ms": 2031.807504594326
         },
         {
             "index": 79,
@@ -730,8 +730,8 @@
             "metric": "Rouge-L",
             "output": " Leah met a creepy guy at a poetry reading. He seemed normal at first, but then he started to act weird. He knew Leah's friends and even googled her to find out more about her. He thought Leah had a crush on him because she liked a post on Facebook about him accompanying poets on the guitar.",
             "ground_truth": "Leah met a creepy guy last night at a poetry reading. He knew she speaks German and named all the friends who went to a past event with her. She didn't tell him any of this. He googled her before. Leah had liked a post mentioning him 2 weeks earlier. ",
-            "peak_memory_mb": 18982.27880859375,
-            "latency_ms": 7555.470380932093
+            "peak_memory_mb": 18982.2783203125,
+            "latency_ms": 5199.952144175768
         },
         {
             "index": 80,
@@ -739,8 +739,8 @@
             "metric": "Rouge-L",
             "output": " Jasmine and Paola like Charlie Puth and Ed Sheeran's song Galway Girl.",
             "ground_truth": "Jasmine loves Charlie Puth and his new song. Paola thinks Charlie Puth is attractive. Paola likes the song \"Galway Girl\" by Ed Sheeran.",
-            "peak_memory_mb": 17033.26708984375,
-            "latency_ms": 5402.610704302788
+            "peak_memory_mb": 17033.2666015625,
+            "latency_ms": 1849.690768867731
         },
         {
             "index": 81,
@@ -748,8 +748,8 @@
             "metric": "Rouge-L",
             "output": " Stanley is upset with his girlfriend Del for accusing him of having an affair. He is also worried about the Lidem project, as Alison is missing and hasn’t answered her phone. Stanley will try to talk to Del when she returns.",
             "ground_truth": "Del accused Stanley of having an affair, because he couldn't go with her this weekend due to his work. They've only been together for 4 months, so it's not a good sign. Now Bill and Stanley need to take care of the Lidem project. Division of tasks is on Stanley, because Alison is unreachable.",
-            "peak_memory_mb": 19295.26513671875,
-            "latency_ms": 7887.5537775456905
+            "peak_memory_mb": 19295.2646484375,
+            "latency_ms": 4918.45379024744
         },
         {
             "index": 82,
@@ -757,8 +757,8 @@
             "metric": "Rouge-L",
             "output": " Ali left his wallet at Mohammad's place. Mohammad found it and will bring it to Ali at university tomorrow.",
             "ground_truth": "Ali left his wallet at Mohammad's place. Mohammad'll bring it to uni tomorrow.",
-            "peak_memory_mb": 16881.0732421875,
-            "latency_ms": 4994.833327829838
+            "peak_memory_mb": 16881.07275390625,
+            "latency_ms": 1761.7668770253658
         },
         {
             "index": 83,
@@ -766,8 +766,8 @@
             "metric": "Rouge-L",
             "output": " Tanya is glad to hear that Rosie is feeling a bit better.",
             "ground_truth": "Rosie is better, but still not well.",
-            "peak_memory_mb": 16791.0576171875,
-            "latency_ms": 4917.69341006875
+            "peak_memory_mb": 16791.05712890625,
+            "latency_ms": 1457.971315830946
         },
         {
             "index": 84,
@@ -775,8 +775,8 @@
             "metric": "Rouge-L",
             "output": " Igor is demotivated at work and has a lot to do. John advises him to grit his teeth and get the work done, as it's only two weeks left before his notice period ends.",
             "ground_truth": "Igor has a lot of work on his notice period and he feels demotivated. John thinks he should do what he has to do nevertheless. ",
-            "peak_memory_mb": 18392.1689453125,
-            "latency_ms": 6759.46094468236
+            "peak_memory_mb": 18392.16845703125,
+            "latency_ms": 3689.0328228473663
         },
         {
             "index": 85,
@@ -784,8 +784,8 @@
             "metric": "Rouge-L",
             "output": " Kamden is not on social media but uses chat on Facebook to keep in touch with friends. He wants to see McKinley's photos.",
             "ground_truth": "Kamden hasn't used social media recently. He uses messenger only and wants to get Mckinley's photographs.",
-            "peak_memory_mb": 16214.05615234375,
-            "latency_ms": 4310.5413764715195
+            "peak_memory_mb": 16214.0556640625,
+            "latency_ms": 1409.097582101822
         },
         {
             "index": 86,
@@ -793,8 +793,8 @@
             "metric": "Rouge-L",
             "output": " Chris and his friends pushed some girls into the pool and got them to undress because they were already wet.",
             "ground_truth": "Some girls had to undress because they had been pushed into the pool.",
-            "peak_memory_mb": 16095.06005859375,
-            "latency_ms": 4192.17523932457
+            "peak_memory_mb": 16095.05908203125,
+            "latency_ms": 1202.879674732685
         },
         {
             "index": 87,
@@ -802,8 +802,8 @@
             "metric": "Rouge-L",
             "output": " Vincent broke his lamp with his bare hand while playing with his cat. ",
             "ground_truth": "Vincent's new lamp should be ready to be picked up on Tuesday.",
-            "peak_memory_mb": 16078.484375,
-            "latency_ms": 4167.233224958181
+            "peak_memory_mb": 16078.4833984375,
+            "latency_ms": 4266.782365739346
         },
         {
             "index": 88,
@@ -812,7 +812,7 @@
             "output": " Tobias found Natalie's wallet in her room.",
             "ground_truth": "Natalie's wallet is in her room.",
             "peak_memory_mb": 17805.158203125,
-            "latency_ms": 4874.992787837982
+            "latency_ms": 2073.6334063112736
         },
         {
             "index": 89,
@@ -820,8 +820,8 @@
             "metric": "Rouge-L",
             "output": " Margaret and Evans will meet on 4th and 11th. They are not sure about 18th, but they will see. They will meet on 14th if Margaret is available.",
             "ground_truth": "Margaret and Evans plan to meet at 10 on 4th and at 11 on 11th. They both are not sure when they will be able to meet next, so they will come up with a date later.",
-            "peak_memory_mb": 18195.90087890625,
-            "latency_ms": 6486.294876784086
+            "peak_memory_mb": 18195.900390625,
+            "latency_ms": 3498.1106743216515
         },
         {
             "index": 90,
@@ -829,8 +829,8 @@
             "metric": "Rouge-L",
             "output": " The agreement is about the Caspian Sea, which will have a special legal status. It will be divided into parts and be rich in resources like gas, oil and caviar.",
             "ground_truth": "In the agreement it was decided that it's neither a sea nor a lake and it will have a special legal status. They will also completely divide the seabed up. It's rich in resources, mostly gas and oil.",
-            "peak_memory_mb": 15937.5107421875,
-            "latency_ms": 4019.7441279888153
+            "peak_memory_mb": 15937.51025390625,
+            "latency_ms": 1506.9717168807983
         },
         {
             "index": 91,
@@ -838,8 +838,8 @@
             "metric": "Rouge-L",
             "output": " Aimee is looking for Maryam. She tried her number and went to her home, but she is not there. Soren thinks Maryam might have gone somewhere with her father.",
             "ground_truth": "Aimee is looking for Maryam.",
-            "peak_memory_mb": 17537.2548828125,
-            "latency_ms": 4952.266186475754
+            "peak_memory_mb": 17537.25390625,
+            "latency_ms": 2831.233933568001
         },
         {
             "index": 92,
@@ -847,8 +847,8 @@
             "metric": "Rouge-L",
             "output": " Charlie's sister passed her last exam. They want to celebrate tonight.",
             "ground_truth": "Charlie's sister has passed her last university exam. Charlie and Frank will go out to celebrate that tonight.",
-            "peak_memory_mb": 18679.240234375,
-            "latency_ms": 7095.970116555691
+            "peak_memory_mb": 18679.23974609375,
+            "latency_ms": 3028.0225351452827
         },
         {
             "index": 93,
@@ -856,8 +856,8 @@
             "metric": "Rouge-L",
             "output": " Patricia will call George in an hour.",
             "ground_truth": "Patricia cannot talk now. George will call her in about an hour.",
-            "peak_memory_mb": 17510.3466796875,
-            "latency_ms": 5708.292502909899
+            "peak_memory_mb": 17510.345703125,
+            "latency_ms": 1797.1009388566017
         },
         {
             "index": 94,
@@ -865,8 +865,8 @@
             "metric": "Rouge-L",
             "output": " Joe invites Pete to watch Deadpool 2 tonight.",
             "ground_truth": "Joe is going to watch Deadpool 2 with his fellows and Pete will join them.",
-            "peak_memory_mb": 18105.720703125,
-            "latency_ms": 6403.856266289949
+            "peak_memory_mb": 18105.72021484375,
+            "latency_ms": 2382.237493991852
         },
         {
             "index": 95,
@@ -874,8 +874,8 @@
             "metric": "Rouge-L",
             "output": " Isabella thanks Betty for sharing her work experience and invites her to do something together.",
             "ground_truth": "Isabella is grateful to Betty for sharing the information about her work yesterday. Isabella offers Betty her company, should Betty want to do something together.",
-            "peak_memory_mb": 19583.14453125,
-            "latency_ms": 8278.69912981987
+            "peak_memory_mb": 19583.14404296875,
+            "latency_ms": 4061.6960041224957
         },
         {
             "index": 96,
@@ -883,8 +883,8 @@
             "metric": "Rouge-L",
             "output": " Elena and Tom are trying to get Jeffrey's attention, but he can't see them.",
             "ground_truth": "Elena is wearing the red jacket and Jeffrey can't see her nor Tom.",
-            "peak_memory_mb": 16718.62255859375,
-            "latency_ms": 4837.388042360544
+            "peak_memory_mb": 16718.62158203125,
+            "latency_ms": 1494.5766367018223
         },
         {
             "index": 97,
@@ -892,8 +892,8 @@
             "metric": "Rouge-L",
             "output": "3 people attended the presentation, but they were all interested and engaged.",
             "ground_truth": "Kate, Milena and Regina's presentation went well. Three people came to listen to them.",
-            "peak_memory_mb": 18903.9326171875,
-            "latency_ms": 7397.018916904926
+            "peak_memory_mb": 18903.931640625,
+            "latency_ms": 3267.7049078047276
         },
         {
             "index": 98,
@@ -901,8 +901,8 @@
             "metric": "Rouge-L",
             "output": " The boss appreciated the decision to dismiss a client's request because he wanted to bring in a competitor of the client as a new client.",
             "ground_truth": "Bella and Eric dismissed a request of a client. Their boss appreciated the decision. He brings in new clients.",
-            "peak_memory_mb": 15899.962890625,
-            "latency_ms": 3990.413837134838
+            "peak_memory_mb": 15899.9619140625,
+            "latency_ms": 1138.1344646215439
         },
         {
             "index": 99,
@@ -910,8 +910,8 @@
             "metric": "Rouge-L",
             "output": " Jack is going to the casting for \"You Should Go Really\" and invites Ryan to come with him.",
             "ground_truth": "Ryan and Jack are going to the casting for a dance show.",
-            "peak_memory_mb": 17777.2109375,
-            "latency_ms": 4750.304102897644
+            "peak_memory_mb": 17777.21044921875,
+            "latency_ms": 2449.8113095760345
         },
         {
             "index": 100,
@@ -919,8 +919,8 @@
             "metric": "Rouge-L",
             "output": " Toni and Sonia are planning to go to San Sebastian. Toni recommends an Airbnb place they stayed in last year. The place is a small apartment with a room rented by an old Basque lady who is a widow. She made a tortilla for them.",
             "ground_truth": "Sonia is going to San Sebastian in a month. Toni enjoyed her the airbnb place there. Sonia isn't convinced about it and will let Toni know.",
-            "peak_memory_mb": 18395.3037109375,
-            "latency_ms": 6763.32151144743
+            "peak_memory_mb": 18395.30322265625,
+            "latency_ms": 4155.34095838666
         },
         {
             "index": 101,
@@ -928,8 +928,8 @@
             "metric": "Rouge-L",
             "output": " Nathan and Deborah are planning a trip with their girls. They will pack everything today, and tomorrow they will go to the forest with their family. Nathan will see the dentist after work, and Deborah will pick up the girls from school. They will have a quick bite at home before they leave.",
             "ground_truth": "Deborah and Nathan want to start packing today as they won't have time tomorrow. They need warm clothes for the girls so Deborah's parents could take them to the forest. Deborah and Nathan want to spend some time alone. They will have a quick bite before their leave. Nathan will be home around 6.",
-            "peak_memory_mb": 18102.19287109375,
-            "latency_ms": 6409.924414008856
+            "peak_memory_mb": 18102.1923828125,
+            "latency_ms": 4166.953824460506
         },
         {
             "index": 102,
@@ -937,8 +937,8 @@
             "metric": "Rouge-L",
             "output": " Ross wants to do karaoke tonight. Chandler is initially hesitant but agrees. He will record everything.",
             "ground_truth": "Ross wants to do karaoke. Chandler wants to record it for fun.",
-            "peak_memory_mb": 17719.2509765625,
-            "latency_ms": 6021.329332143068
+            "peak_memory_mb": 17719.25048828125,
+            "latency_ms": 2443.669319152832
         },
         {
             "index": 103,
@@ -946,8 +946,8 @@
             "metric": "Rouge-L",
             "output": " Judy is attracted to jerks. She had a bad experience with Andrew and is not sure about Bruce.",
             "ground_truth": "Judy thinks she's always attracted to bad guys.",
-            "peak_memory_mb": 16077.6396484375,
-            "latency_ms": 4171.027574688196
+            "peak_memory_mb": 16077.638671875,
+            "latency_ms": 1120.6805147230625
         },
         {
             "index": 104,
@@ -955,8 +955,8 @@
             "metric": "Rouge-L",
             "output": " Kristina is watching America's Top Model on TV. Estefania is also watching it. Jannette is late and just got home.",
             "ground_truth": "Kristina, Estefania and Jannette are watching America's Top Model.",
-            "peak_memory_mb": 16027.71044921875,
-            "latency_ms": 4116.9861741364
+            "peak_memory_mb": 16027.70947265625,
+            "latency_ms": 1393.9536772668362
         },
         {
             "index": 105,
@@ -964,8 +964,8 @@
             "metric": "Rouge-L",
             "output": " Avril invites Frank to go horse racing with her.",
             "ground_truth": "Frank will join Avril at the races at the weekend.",
-            "peak_memory_mb": 17535.35498046875,
-            "latency_ms": 5738.41879889369
+            "peak_memory_mb": 17535.3544921875,
+            "latency_ms": 1921.9241328537464
         },
         {
             "index": 106,
@@ -973,8 +973,8 @@
             "metric": "Rouge-L",
             "output": " Finn is trying to track his shipment. Jim is helping him. The package has left the warehouse and will be delivered tomorrow.",
             "ground_truth": "Jim tracks Finn's package number 45678 which will be delivered to him tomorrow. ",
-            "peak_memory_mb": 16571.45751953125,
-            "latency_ms": 4959.183424711227
+            "peak_memory_mb": 16571.45654296875,
+            "latency_ms": 1570.9680803120136
         },
         {
             "index": 107,
@@ -982,8 +982,8 @@
             "metric": "Rouge-L",
             "output": " Ben and Tom are going to a meeting at 2pm in the Oval Room. They are going to fight for something.",
             "ground_truth": "Tom will meet Ben in the Oval Room at 2pm and tells him to bring the papers. ",
-            "peak_memory_mb": 17264.76953125,
-            "latency_ms": 5767.836794257164
+            "peak_memory_mb": 17264.7685546875,
+            "latency_ms": 2149.9218866229057
         },
         {
             "index": 108,
@@ -991,8 +991,8 @@
             "metric": "Rouge-L",
             "output": " There is a roadblock on the road from the swimming pool to Waitrose. Karen is stuck after yoga. Peter is working on a presentation for the repairs team.",
             "ground_truth": "Karen got stuck on the road from the swimming pool to Waitrose so wants Peter to avoid it. Peter is not leaving until 6 as he he has to finish his presentation. Karen will see Peter in a bit.",
-            "peak_memory_mb": 17194.40283203125,
-            "latency_ms": 5654.232606291771
+            "peak_memory_mb": 17194.40234375,
+            "latency_ms": 2354.1102074086666
         },
         {
             "index": 109,
@@ -1000,8 +1000,8 @@
             "metric": "Rouge-L",
             "output": " Jose, Ricky, and Amanda wish each other a Merry Christmas and a Happy New Year. They are excited for their future travels.",
             "ground_truth": "Jose Ricky and Amanda are very enthusiastic about the new year as they will travel a lot during the summer of 2019.",
-            "peak_memory_mb": 16975.23876953125,
-            "latency_ms": 5370.116751641035
+            "peak_memory_mb": 16975.23779296875,
+            "latency_ms": 1947.6514905691147
         },
         {
             "index": 110,
@@ -1009,8 +1009,8 @@
             "metric": "Rouge-L",
             "output": " Jen is fed up with her boyfriend who is being abusive and freeloading. Jane advises her to get rid of him and move on. Jen is afraid of asking him to leave because it will cause another fight. Jane encourages her to cut her losses and move on. ",
             "ground_truth": "Jen is about to break up with her boyfriend. Jane knew from the beginning that they were not a good match. Jane is going to support Jen.",
-            "peak_memory_mb": 16677.0283203125,
-            "latency_ms": 5144.648551940918
+            "peak_memory_mb": 16677.02783203125,
+            "latency_ms": 4895.135134458542
         },
         {
             "index": 111,
@@ -1019,7 +1019,7 @@
             "output": " William is in a long queue. Emma is waiting for him to return.",
             "ground_truth": "William is coming back in 5 minutes as he had to queue for 20 minutes.",
             "peak_memory_mb": 18343.44921875,
-            "latency_ms": 6892.487842589617
+            "latency_ms": 2738.5894171893597
         },
         {
             "index": 112,
@@ -1027,8 +1027,8 @@
             "metric": "Rouge-L",
             "output": " Marta thinks Jay is a pathological liar because he talks about having a lot of money and traveling, but he actually lives in a small apartment.",
             "ground_truth": "Randy has been lying about being rich and travelling around the world, as he lives in a studio apartment in the suburbs.",
-            "peak_memory_mb": 17332.9423828125,
-            "latency_ms": 5879.118479788303
+            "peak_memory_mb": 17332.94140625,
+            "latency_ms": 2458.3333618938923
         },
         {
             "index": 113,
@@ -1036,8 +1036,8 @@
             "metric": "Rouge-L",
             "output": " Aaron is hosting a conference at school. Claire is interested in attending Jo's workshop on teamwork and Aaron's lecture on mindfulness.",
             "ground_truth": "Aaron will give two lectures during the conference about relations at school at the Sesame Street. Claire will participate in mindfulness workshop.",
-            "peak_memory_mb": 16726.421875,
-            "latency_ms": 5189.312644302845
+            "peak_memory_mb": 16726.4208984375,
+            "latency_ms": 1702.8572149574757
         },
         {
             "index": 114,
@@ -1045,8 +1045,8 @@
             "metric": "Rouge-L",
             "output": " Ann congratulates Sue and Julie on something they've accomplished. ",
             "ground_truth": "Ann, Sue and Julie did a great job and they will have a little celebration tonight.",
-            "peak_memory_mb": 16788.90576171875,
-            "latency_ms": 4467.991419136524
+            "peak_memory_mb": 16788.9052734375,
+            "latency_ms": 4808.400869369507
         },
         {
             "index": 115,
@@ -1055,7 +1055,7 @@
             "output": " David wants a new tattoo but can't decide on a design. Mike thinks a skull and rose is too common.",
             "ground_truth": "David wants to get a new tattoo but he doesn't know what exactly yet.",
             "peak_memory_mb": 16109.35302734375,
-            "latency_ms": 4753.896646201611
+            "latency_ms": 1168.4074588119984
         },
         {
             "index": 116,
@@ -1063,8 +1063,8 @@
             "metric": "Rouge-L",
             "output": " John and Andrew are playing a tank game. Andrew is not a fan of WoW because of the way it is designed. Brett's cousin met his wife in WoW. Andrew likes RPGs and thinks the Final Fantasy series is the best. He explains the plot of the last part of the series to John and Brett.",
             "ground_truth": "Brett's cousin met his wife while playing a game together. Andrew's favorite game is the Final Fantasy. Brett and John haven't heard about it.",
-            "peak_memory_mb": 16111.62060546875,
-            "latency_ms": 4780.473325401545
+            "peak_memory_mb": 16111.61962890625,
+            "latency_ms": 2353.973213583231
         },
         {
             "index": 117,
@@ -1072,8 +1072,8 @@
             "metric": "Rouge-L",
             "output": " Dima's laptop is broken because the cat spilled coffee on it. Nada lends Dima her laptop for the day.",
             "ground_truth": "Dima's laptop is broken, as her cat spilled coffee on the laptop. Dima is worried, because she has to deliver a translation for Trados tomorrow. Dima will come to Nada in an hour to borrow Nada's laptop. ",
-            "peak_memory_mb": 19419.02001953125,
-            "latency_ms": 8079.74362000823
+            "peak_memory_mb": 19419.01953125,
+            "latency_ms": 4183.292001485825
         },
         {
             "index": 118,
@@ -1081,8 +1081,8 @@
             "metric": "Rouge-L",
             "output": " Stefano and Josie are discussing the book \"Foucault's Pendulum\" by Umberto Eco. Josie finds the book weird and nerdy. Stefano thinks it's a great book and that Eco was a great author. Josie read a review by Salman Rushdie who hated the book and thought it was like a computer game. Stefano and Josie are joking about the book and its content.",
             "ground_truth": "Josie finds Eco's novel \"Foucault's Pendulum\" nerdy. Josie would like to read Eco in Italian, but she's unsure of her language abilities. Stefano considers Eco's two novels and finds them difficult. Josie has read an unfavorable review of \"Foucault's Pendulum\" by Salman Rushdie.",
-            "peak_memory_mb": 17116.90185546875,
-            "latency_ms": 5269.857533276081
+            "peak_memory_mb": 17116.9013671875,
+            "latency_ms": 3921.866215765476
         },
         {
             "index": 119,
@@ -1090,8 +1090,8 @@
             "metric": "Rouge-L",
             "output": " Fiona wants to make Tina's tart for dinner. Tina is flattered and agrees to help Fiona.",
             "ground_truth": "Fiona wants to prepare dinner for Chris. She is thinking of Tina's tart. She will help her make it.",
-            "peak_memory_mb": 16847.60546875,
-            "latency_ms": 4970.903281122446
+            "peak_memory_mb": 16847.60498046875,
+            "latency_ms": 1637.0546482503414
         },
         {
             "index": 120,
@@ -1099,8 +1099,8 @@
             "metric": "Rouge-L",
             "output": " Ewan graduated. Uncle Jayson congratulates him.",
             "ground_truth": "Uncle Jayson is pleased with Ewan's graduation.",
-            "peak_memory_mb": 17009.34375,
-            "latency_ms": 4176.950894296169
+            "peak_memory_mb": 17009.3427734375,
+            "latency_ms": 1492.3644959926605
         },
         {
             "index": 121,
@@ -1108,8 +1108,8 @@
             "metric": "Rouge-L",
             "output": " Bobby is annoyed by pharmaceutical companies inventing illnesses to sell their products. He found out that a certain illness mentioned in a commercial does not exist. He believes that pharmaceutical companies have been lying to people for a long time and that they are worth a lot of money.",
             "ground_truth": "Bobby's most annoyed by pharmaceutical companies. He believes they invent diseases to make money. He discovered that one company is selling mints as medicine for an illness that doesn't exist.",
-            "peak_memory_mb": 16546.92724609375,
-            "latency_ms": 4647.240333259106
+            "peak_memory_mb": 16546.9267578125,
+            "latency_ms": 2410.5776883661747
         },
         {
             "index": 122,
@@ -1117,8 +1117,8 @@
             "metric": "Rouge-L",
             "output": " Adele is still listening to a song that Kode recommended her. Kode has had the song in his music library for 3 years. Kode will come to Adele's home to give her a USB with the singer's album.",
             "ground_truth": "Adele is still listening to the song which Code recommended. Kode will come to Adele's home today and will give her the whole album of the same singer. ",
-            "peak_memory_mb": 17846.484375,
-            "latency_ms": 5743.187144398689
+            "peak_memory_mb": 17846.48388671875,
+            "latency_ms": 3451.2126371264458
         },
         {
             "index": 123,
@@ -1126,8 +1126,8 @@
             "metric": "Rouge-L",
             "output": " Victor has taken over Chris's company and is helping him out. David is grateful for Victor's help. ",
             "ground_truth": "Victor took over Chris's company, which was under a huge debt. He sold the office and did some changes but Chris still works there as Director. David's business goes very slow but he expects it to get better by the end of the year.",
-            "peak_memory_mb": 19134.8955078125,
-            "latency_ms": 7675.835702568293
+            "peak_memory_mb": 19134.89501953125,
+            "latency_ms": 6766.473136842251
         },
         {
             "index": 124,
@@ -1135,8 +1135,8 @@
             "metric": "Rouge-L",
             "output": " Pegah will be back at 22:00. Miriam invited some people over and was hoping Pegah would be there too.",
             "ground_truth": "Pegah is in class till 15:00. She will work from 17:00 till around 21:30. She will be back at 22:00. Miriam invited people over and wants Pegah to come. Pegah will have a cup of tea with her when she gets back. Miriam will save Pegah some wine.",
-            "peak_memory_mb": 16495.072265625,
-            "latency_ms": 3913.2697209715843
+            "peak_memory_mb": 16495.07177734375,
+            "latency_ms": 1593.658346682787
         },
         {
             "index": 125,
@@ -1144,8 +1144,8 @@
             "metric": "Rouge-L",
             "output": " Steffen is unable to go to the infinity pool because of his twisted ankle. Irene and Dan offer to give him a lift, but the car can't make it all the way up. Dan suggests that Mr. Budd's 4-wheel drive car might be able to make it. ",
             "ground_truth": "Steffen twisted his ankle yesterday and needs a lift to the infinity pool. Irene's car probably won't make it up the hill, so they'd have to park at the bottom and hike up. Mr.Budd should make it up the hill since it's a 4-wheel drive.",
-            "peak_memory_mb": 16697.52880859375,
-            "latency_ms": 4822.940900921822
+            "peak_memory_mb": 16697.52783203125,
+            "latency_ms": 4830.912388861179
         },
         {
             "index": 126,
@@ -1154,7 +1154,7 @@
             "output": " Jeremih wants Hansel to tell his sister to text back. Hansel is not interested in getting involved in Jeremih's problems.",
             "ground_truth": "Hansel will tell his sis to text Jeremih back.",
             "peak_memory_mb": 19064.6484375,
-            "latency_ms": 6288.118537515402
+            "latency_ms": 3978.3772565424442
         },
         {
             "index": 127,
@@ -1162,8 +1162,8 @@
             "metric": "Rouge-L",
             "output": " Katy, Ana and Carlton are going to see a film by Lola Arias. Carlton is interested in joining them. They are meeting at Ana's place for dinner and drinks before going to the film.",
             "ground_truth": "Katy and Ana invite Carlton to join them for a movie by Lola Arias on the making of the play he had seen. He will come to their place earlier on Saturday.",
-            "peak_memory_mb": 18699.82568359375,
-            "latency_ms": 7145.268127322197
+            "peak_memory_mb": 18699.8251953125,
+            "latency_ms": 4007.5960122048855
         },
         {
             "index": 128,
@@ -1171,8 +1171,8 @@
             "metric": "Rouge-L",
             "output": " Carl is participating in a championship with his car, an Evo 10. Duncan is supporting him and will attend the championship.",
             "ground_truth": "Carl will compete in championship this year. Duncan can't miss this event. Carl will register his family members as VIP.",
-            "peak_memory_mb": 16388.7939453125,
-            "latency_ms": 4524.864133447409
+            "peak_memory_mb": 16388.79345703125,
+            "latency_ms": 1460.5602845549583
         },
         {
             "index": 129,
@@ -1180,8 +1180,8 @@
             "metric": "Rouge-L",
             "output": " Emma is not feeling well and doesn't want Will to cook dinner. She will be home soon. ",
             "ground_truth": "Emma will be home soon and she will let Will know.",
-            "peak_memory_mb": 15793.59375,
-            "latency_ms": 3717.731937766075
+            "peak_memory_mb": 15793.5927734375,
+            "latency_ms": 3915.07425904274
         },
         {
             "index": 130,
@@ -1190,7 +1190,7 @@
             "output": " Marcus will pick Mark from the airport on Thursday at 4 p.m.",
             "ground_truth": "Marcus will pick Mark from the airport at 4pm. Anna will call Mark and give him Marcus' number.",
             "peak_memory_mb": 16139.537109375,
-            "latency_ms": 1771.2748311460018
+            "latency_ms": 957.1136832237244
         },
         {
             "index": 131,
@@ -1199,7 +1199,7 @@
             "output": " Inez is planning a food evening and wants to know when the girls can meet again. They are all excited about the idea and are looking forward to the next event.",
             "ground_truth": "Patrycja and Inez enjoyed the Italian evening. Gosia chose a great place. Alicja hasn't been to the new restaurant. They all want a Korean evening on Wednesday in two weeks time.",
             "peak_memory_mb": 17550.81689453125,
-            "latency_ms": 5755.2535608410835
+            "latency_ms": 2676.1798299849033
         },
         {
             "index": 132,
@@ -1207,8 +1207,8 @@
             "metric": "Rouge-L",
             "output": " Linda missed the train and the return ticket to Amsterdam cost 80 euros.",
             "ground_truth": "Linda missed her train and the next one is in one hour. A return to Amsterdam was 80 euros.",
-            "peak_memory_mb": 18586.34423828125,
-            "latency_ms": 5964.705310761929
+            "peak_memory_mb": 18586.34375,
+            "latency_ms": 2986.66001111269
         },
         {
             "index": 133,
@@ -1216,8 +1216,8 @@
             "metric": "Rouge-L",
             "output": " Daniel and Missy will have drinks after dinner.",
             "ground_truth": "Daniel will see Missy after 6 for drinks.",
-            "peak_memory_mb": 18305.03076171875,
-            "latency_ms": 6621.146205812693
+            "peak_memory_mb": 18305.0302734375,
+            "latency_ms": 2535.0397750735283
         },
         {
             "index": 134,
@@ -1225,8 +1225,8 @@
             "metric": "Rouge-L",
             "output": " Kaylin and Amir are joking about a picture of Cynthia with crazy hair. They are not looking forward to tomorrow.",
             "ground_truth": "Kaylin has set her alarm for tomorrow.",
-            "peak_memory_mb": 17610.8203125,
-            "latency_ms": 5827.170617878437
+            "peak_memory_mb": 17610.8193359375,
+            "latency_ms": 2381.4185298979282
         },
         {
             "index": 135,
@@ -1234,8 +1234,8 @@
             "metric": "Rouge-L",
             "output": " Alex wants to buy milk, but Martin has just bought two yesterday. Martin will buy more milk in a couple of hours.",
             "ground_truth": "Martin will get Alex two bottles of milk after he finishes the project.",
-            "peak_memory_mb": 18652.25634765625,
-            "latency_ms": 7056.646693497896
+            "peak_memory_mb": 18652.25537109375,
+            "latency_ms": 3393.305081874132
         },
         {
             "index": 136,
@@ -1243,8 +1243,8 @@
             "metric": "Rouge-L",
             "output": " Jamie was at school today, but Jack is sick. Linda wants to know if there was any important news concerning the school trip. Helen tells her that the school trip is off because half of the class is sick.",
             "ground_truth": "Jack had to miss school because he is sick. Jamie was sick a lot last year but he got better thanks to doctor Tornez at City Medical Centre, next to the mall. Linda learns the school trip has been cancelled as many students are sick.",
-            "peak_memory_mb": 16015.78662109375,
-            "latency_ms": 4108.063027262688
+            "peak_memory_mb": 16015.7861328125,
+            "latency_ms": 1709.338191896677
         },
         {
             "index": 137,
@@ -1252,8 +1252,8 @@
             "metric": "Rouge-L",
             "output": " Jamilla reminds Kiki that the audition starts at 7:30 PM. Yoyo confirms this. ",
             "ground_truth": "The audition starts at 7.30 P.M. in Antena 3.",
-            "peak_memory_mb": 15905.73486328125,
-            "latency_ms": 3994.5966601371765
+            "peak_memory_mb": 15905.73388671875,
+            "latency_ms": 3972.1666015684605
         },
         {
             "index": 138,
@@ -1262,7 +1262,7 @@
             "output": " Mike wants John's number. Ann suggests asking Mary.",
             "ground_truth": "Mike will ask Mary for John's new number.",
             "peak_memory_mb": 16565.7158203125,
-            "latency_ms": 3468.7083922326565
+            "latency_ms": 1142.4142606556416
         },
         {
             "index": 139,
@@ -1270,8 +1270,8 @@
             "metric": "Rouge-L",
             "output": " Parker and Jason are talking about the Arrowverse and the DC Universe. Parker likes the DC Universe better than the Marvel Universe. They are waiting for the latest episode of Arrow Season 7 to download.",
             "ground_truth": "Parker and Jason both prefer DC Universe to Marvel. Jason is still downloading the latest episode of Arrow season 7. ",
-            "peak_memory_mb": 16529.69873046875,
-            "latency_ms": 4764.378249645233
+            "peak_memory_mb": 16529.6982421875,
+            "latency_ms": 2033.7198823690414
         },
         {
             "index": 140,
@@ -1279,8 +1279,8 @@
             "metric": "Rouge-L",
             "output": " Helen has forgotten her laptop at home. Debbie will bring it to her at work.",
             "ground_truth": "Helen has left her laptop at home and needs it for the presentation today. Debbie will bring it to Helen's work. ",
-            "peak_memory_mb": 19282.67333984375,
-            "latency_ms": 7905.921928584576
+            "peak_memory_mb": 19282.6728515625,
+            "latency_ms": 3746.028970927
         },
         {
             "index": 141,
@@ -1288,8 +1288,8 @@
             "metric": "Rouge-L",
             "output": " Matt needs the internet connection to apply for something. Nick doesn't know what internet connection they have.",
             "ground_truth": "Nick will let Matt know when he remembers what their internet connection is.",
-            "peak_memory_mb": 18815.89404296875,
-            "latency_ms": 5683.36908146739
+            "peak_memory_mb": 18815.8935546875,
+            "latency_ms": 3402.045801281929
         },
         {
             "index": 142,
@@ -1297,8 +1297,8 @@
             "metric": "Rouge-L",
             "output": " Harry sent Jacob a song 3 days ago and Jacob forgot to listen to it. Harry is teasing Jacob about it.",
             "ground_truth": "Jacob hasn't listened to the song Harry sent him 3 days ago. Jacob will do it later tonight and let Harry know what he thinks.",
-            "peak_memory_mb": 16485.83056640625,
-            "latency_ms": 4589.205846190453
+            "peak_memory_mb": 16485.830078125,
+            "latency_ms": 1484.3238554894924
         },
         {
             "index": 143,
@@ -1306,8 +1306,8 @@
             "metric": "Rouge-L",
             "output": " Adelle is supposed to clean the hamster cage after school, but she hasn't done it yet.",
             "ground_truth": "Adelle has to clean the hamster cage after school.",
-            "peak_memory_mb": 16688.2255859375,
-            "latency_ms": 4812.131583690643
+            "peak_memory_mb": 16688.22509765625,
+            "latency_ms": 1563.7141838669777
         },
         {
             "index": 144,
@@ -1315,8 +1315,8 @@
             "metric": "Rouge-L",
             "output": " Adam is worried about May's depression. Karen also thinks it's serious and suggested a specialist. May doesn't want to see a specialist. Karen will call a friend who is a psychologist for advice.",
             "ground_truth": "Adam and Karen are worried that May suffers from depression. Karen will call her friend who is a psychologist and ask for advice. ",
-            "peak_memory_mb": 17792.75927734375,
-            "latency_ms": 6031.890571117401
+            "peak_memory_mb": 17792.75830078125,
+            "latency_ms": 3238.605137914419
         },
         {
             "index": 145,
@@ -1324,8 +1324,8 @@
             "metric": "Rouge-L",
             "output": " Erin will meet Ashley at the restaurant in the camp to do an interview.",
             "ground_truth": "Erin will meet Ashley in the restaurant for the interview. ",
-            "peak_memory_mb": 17831.24072265625,
-            "latency_ms": 6062.8289096057415
+            "peak_memory_mb": 17831.240234375,
+            "latency_ms": 2282.624039798975
         },
         {
             "index": 146,
@@ -1333,8 +1333,8 @@
             "metric": "Rouge-L",
             "output": " Lilly will be late, but Gabriel will order food for her so that it will be ready when she arrives.",
             "ground_truth": "Lilly will be late. Gabriel will order pasta with salmon and basil for her.",
-            "peak_memory_mb": 17649.09716796875,
-            "latency_ms": 5882.722649723291
+            "peak_memory_mb": 17649.0966796875,
+            "latency_ms": 2467.8527526557446
         },
         {
             "index": 147,
@@ -1342,8 +1342,8 @@
             "metric": "Rouge-L",
             "output": " Kathy and Olivia are talking about haircuts. Kathy is getting her hair cut today. Olivia is just relaxing.",
             "ground_truth": "Kathy had her hair cut.",
-            "peak_memory_mb": 17793.0283203125,
-            "latency_ms": 6025.755036622286
+            "peak_memory_mb": 17793.02734375,
+            "latency_ms": 2500.4931539297104
         },
         {
             "index": 148,
@@ -1351,8 +1351,8 @@
             "metric": "Rouge-L",
             "output": " Celine and Mark are on skates. Mark is a beginner.",
             "ground_truth": "Celine and Mark went skating, it's the first time for Mark.",
-            "peak_memory_mb": 19371.7900390625,
-            "latency_ms": 7999.614983797073
+            "peak_memory_mb": 19371.7890625,
+            "latency_ms": 3728.8993187248707
         },
         {
             "index": 149,
@@ -1360,8 +1360,8 @@
             "metric": "Rouge-L",
             "output": " Robert will help Pam with Tom's birthday by picking up balloons from a store in the city centre.",
             "ground_truth": "Robert will pick up floating balloons for Tom's birthday.",
-            "peak_memory_mb": 18505.44775390625,
-            "latency_ms": 6879.61445376277
+            "peak_memory_mb": 18505.447265625,
+            "latency_ms": 3110.5573773384094
         },
         {
             "index": 150,
@@ -1369,8 +1369,8 @@
             "metric": "Rouge-L",
             "output": " Adam has a gossip about Iga and her boyfriend. They had to cancel their weekend getaway because he couldn't change the date of the presentation. Iga is angry with him.",
             "ground_truth": "Iga and her boyfriend are not sitting together since Monday, because they had to cancel their weekend getaway. It made Iga very angry. Iga's boyfriend failed to convince a group to change the date of the presentation.",
-            "peak_memory_mb": 15959.490234375,
-            "latency_ms": 4038.66096585989
+            "peak_memory_mb": 15959.4892578125,
+            "latency_ms": 1416.6576638817787
         },
         {
             "index": 151,
@@ -1378,8 +1378,8 @@
             "metric": "Rouge-L",
             "output": " Corbin wants to report school violence in his school, Jungang high school. He is afraid of being hit by the students who are committing the violence. Dimitri is in charge of the department in charge of school violence and will help Corbin.",
             "ground_truth": "Corbin reported to the department in charge of school violence that his friend has been beaten.",
-            "peak_memory_mb": 17842.16796875,
-            "latency_ms": 6088.875848799944
+            "peak_memory_mb": 17842.16748046875,
+            "latency_ms": 3512.736674398184
         },
         {
             "index": 152,
@@ -1387,8 +1387,8 @@
             "metric": "Rouge-L",
             "output": " Jenny left her credit card at the shop and Mary is returning it to her.",
             "ground_truth": "Jenny has left her credit car at the Mary's shop.",
-            "peak_memory_mb": 18519.9658203125,
-            "latency_ms": 6921.381987631321
+            "peak_memory_mb": 18519.96533203125,
+            "latency_ms": 2981.5521612763405
         },
         {
             "index": 153,
@@ -1396,8 +1396,8 @@
             "metric": "Rouge-L",
             "output": " Simon is organizing a school concert and Freddy has been asked to sing. Simon is not sure if he has time to practice and is considering using backing tracks.",
             "ground_truth": "Freddy will sing at the school concert and send Simon 3 backing tracks.",
-            "peak_memory_mb": 17545.900390625,
-            "latency_ms": 5749.950833618641
+            "peak_memory_mb": 17545.8994140625,
+            "latency_ms": 2623.0847351253033
         },
         {
             "index": 154,
@@ -1405,8 +1405,8 @@
             "metric": "Rouge-L",
             "output": " Millie is sick and won't come today.",
             "ground_truth": "Millie is sick, so she won't come today.",
-            "peak_memory_mb": 17810.4580078125,
-            "latency_ms": 4038.12163695693
+            "peak_memory_mb": 17810.45703125,
+            "latency_ms": 2107.372108846903
         },
         {
             "index": 155,
@@ -1414,8 +1414,8 @@
             "metric": "Rouge-L",
             "output": " Oscar and Payne are going to meet at Tristano's for a coffee in half an hour.",
             "ground_truth": "Payne and Oscar will have a coffee at Tristano's in half an hour.",
-            "peak_memory_mb": 16004.8408203125,
-            "latency_ms": 4101.563151925802
+            "peak_memory_mb": 16004.84033203125,
+            "latency_ms": 1012.6275233924389
         },
         {
             "index": 156,
@@ -1423,8 +1423,8 @@
             "metric": "Rouge-L",
             "output": " Anna is going to the Muse concert with Molly.",
             "ground_truth": "Molly and Anna will go to the Muse concert in Cracow.",
-            "peak_memory_mb": 18469.9951171875,
-            "latency_ms": 6830.23189753294
+            "peak_memory_mb": 18469.994140625,
+            "latency_ms": 2692.8809992969036
         },
         {
             "index": 157,
@@ -1432,8 +1432,8 @@
             "metric": "Rouge-L",
             "output": " Sean thinks he is a tortoise, his spirit animal. Tiffany thinks he might be haunted.",
             "ground_truth": "Sean believes his spirit animal is a tortoise and Tiffany's could be a wasp. ",
-            "peak_memory_mb": 18221.95263671875,
-            "latency_ms": 6536.374371498823
+            "peak_memory_mb": 18221.95166015625,
+            "latency_ms": 2786.0353887081146
         },
         {
             "index": 158,
@@ -1441,8 +1441,8 @@
             "metric": "Rouge-L",
             "output": " Gina asked Warren if he locked the door and he said yes. ",
             "ground_truth": "Warren locked the door.",
-            "peak_memory_mb": 17097.416015625,
-            "latency_ms": 5245.062988251448
+            "peak_memory_mb": 17097.4150390625,
+            "latency_ms": 5430.706758052111
         },
         {
             "index": 159,
@@ -1451,7 +1451,7 @@
             "output": " Jason and Dory are making a video. Dory's friend is coming over the day after tomorrow. Jason has to produce the video in 2 weekends.",
             "ground_truth": "Jason wants to meet Dory over the weekend. Dory's friend is going to stay with her for a week. Jason has been working on a movie with Lucy for the past two months. Jason bought a video-creator app.",
             "peak_memory_mb": 16326.80615234375,
-            "latency_ms": 4424.240440130234
+            "latency_ms": 1656.0243777930737
         },
         {
             "index": 160,
@@ -1459,8 +1459,8 @@
             "metric": "Rouge-L",
             "output": " Susan had a great date with a man who took her to rollerskating disco.",
             "ground_truth": "Susan went on a date to the rollerskating disco and she enjoyed it. Jill doesn't find it exciting.",
-            "peak_memory_mb": 19212.70947265625,
-            "latency_ms": 7808.347929269075
+            "peak_memory_mb": 19212.70849609375,
+            "latency_ms": 3706.6340669989586
         },
         {
             "index": 161,
@@ -1468,8 +1468,8 @@
             "metric": "Rouge-L",
             "output": " Samuel and Tim are brothers, but in Samuel's language, \"Anna\" means \"elder brother\". Tim is 55 and Samuel is 35. Samuel is younger than Tim.",
             "ground_truth": "Samuel's language is Telugu, which is spoken in south east India. It has nearly 90 million speakers; it's written left to right; it's based on Brahmin script. Teluguland has 23 provinces. It's quite poor. \"Anna\" means \"elder brother\" and Thammu or Thammadu - \"younger brother\". Tim's 55, Samuel's 35.",
-            "peak_memory_mb": 16628.916015625,
-            "latency_ms": 4740.362551063299
+            "peak_memory_mb": 16628.9150390625,
+            "latency_ms": 2027.0092375576496
         },
         {
             "index": 162,
@@ -1477,8 +1477,8 @@
             "metric": "Rouge-L",
             "output": "8000 fans showed up for a meet and greet with James Charles in Birmingham. British media made negative comments about it. Ellie is a fan of James Charles and thinks the media should be more open-minded.",
             "ground_truth": "There was a meet-and-greet with James Charles in Birmingham which gathered 8000  people.",
-            "peak_memory_mb": 18113.28125,
-            "latency_ms": 6416.818201541901
+            "peak_memory_mb": 18113.2802734375,
+            "latency_ms": 3441.74375385046
         },
         {
             "index": 163,
@@ -1486,8 +1486,8 @@
             "metric": "Rouge-L",
             "output": " Hannah is watching the game, but James is going to work.",
             "ground_truth": "James is heading to work so he's not watching the game.",
-            "peak_memory_mb": 17194.958984375,
-            "latency_ms": 3854.6432740986347
+            "peak_memory_mb": 17194.95849609375,
+            "latency_ms": 1720.9091559052467
         },
         {
             "index": 164,
@@ -1495,8 +1495,8 @@
             "metric": "Rouge-L",
             "output": " Jennifer wants to watch the latest Mad Max film on Netflix with Jack and Reece. They all agree to watch it tomorrow evening.",
             "ground_truth": "Jennifer, Jack and Reece will match the latest Mad Max on Netflix tomorrow evening. Jack has already seen it.",
-            "peak_memory_mb": 18744.66162109375,
-            "latency_ms": 7175.420727580786
+            "peak_memory_mb": 18744.6611328125,
+            "latency_ms": 3542.4119234085083
         },
         {
             "index": 165,
@@ -1504,8 +1504,8 @@
             "metric": "Rouge-L",
             "output": " Allison has been awarded a scholarship, the highest possible rank she could get. Her friends are proud of her and want to celebrate.",
             "ground_truth": "Allison has got a scholarship.",
-            "peak_memory_mb": 16025.64697265625,
-            "latency_ms": 4117.851011455059
+            "peak_memory_mb": 16025.646484375,
+            "latency_ms": 1210.6739841401577
         },
         {
             "index": 166,
@@ -1513,8 +1513,8 @@
             "metric": "Rouge-L",
             "output": " Scott is being teased by his friends.",
             "ground_truth": "Ethan, Toby and Marshall are making fun of Scott.",
-            "peak_memory_mb": 19019.25341796875,
-            "latency_ms": 7551.788054406643
+            "peak_memory_mb": 19019.2529296875,
+            "latency_ms": 3165.078192949295
         },
         {
             "index": 167,
@@ -1522,8 +1522,8 @@
             "metric": "Rouge-L",
             "output": " Lisa will be back home before 11 pm.",
             "ground_truth": "Lisa isn't going home yet. Daisy wants her to be back before 11 p.m.",
-            "peak_memory_mb": 17992.9111328125,
-            "latency_ms": 6276.467893272638
+            "peak_memory_mb": 17992.91015625,
+            "latency_ms": 2280.113536864519
         },
         {
             "index": 168,
@@ -1531,8 +1531,8 @@
             "metric": "Rouge-L",
             "output": " Adam is going to take an exam and is nervous. Dave is trying to calm him down and wishes him good luck.",
             "ground_truth": "Adam is going to take an exam in ten minutes.",
-            "peak_memory_mb": 16615.96923828125,
-            "latency_ms": 4751.896791160107
+            "peak_memory_mb": 16615.96826171875,
+            "latency_ms": 1598.4875969588757
         },
         {
             "index": 169,
@@ -1540,8 +1540,8 @@
             "metric": "Rouge-L",
             "output": " Kirsten is going to post an email about insurance. Larry thinks it's a good idea. Kirsten will get her husband to sign off on it. Kirsten will also get input from Jamie and John. Larry thinks the current Board of Directors has ignored them. Kirsten will try to get a menorah in the lobby next year.",
             "ground_truth": "Larry has to read the E-mail again and make a decision with Kirsten afterwards. Kirsten has to convince her husband. Kirsten wants to include Jamie and John. Larry and Kirsten are going to arrange menorah in the lobby.",
-            "peak_memory_mb": 17729.9501953125,
-            "latency_ms": 6137.010723352432
+            "peak_memory_mb": 17729.94921875,
+            "latency_ms": 3993.8540011644363
         },
         {
             "index": 170,
@@ -1549,8 +1549,8 @@
             "metric": "Rouge-L",
             "output": " James and Mia are going to an art exhibition tomorrow. Mia is a bit stressed about it because she doesn't know Amelia well. James reassures her that Amelia is laid-back and likable.",
             "ground_truth": "James and Mia want to go to an art exhibition tomorrow. James wants Amelia to go with them but Mia isn't sure about it. James and Mia will go to his place afterwards.",
-            "peak_memory_mb": 18785.515625,
-            "latency_ms": 7225.686680525541
+            "peak_memory_mb": 18785.51513671875,
+            "latency_ms": 4048.120003193617
         },
         {
             "index": 171,
@@ -1558,8 +1558,8 @@
             "metric": "Rouge-L",
             "output": " Lauren is still needed for work tomorrow. Pam will ring Lauren in the morning to confirm the rota.",
             "ground_truth": "Pam doesn't have rota for Lauren, but Manager may give Lauren more tomorrow. Pam and Lauren will meet tomorrow and discuss Lauren's holiday. ",
-            "peak_memory_mb": 16020.4111328125,
-            "latency_ms": 2877.465583384037
+            "peak_memory_mb": 16020.41064453125,
+            "latency_ms": 1066.1734379827976
         },
         {
             "index": 172,
@@ -1567,8 +1567,8 @@
             "metric": "Rouge-L",
             "output": " Albert passed the driving exam on his 4th attempt.",
             "ground_truth": "Albert has passed his driving test on the 4th attempt.",
-            "peak_memory_mb": 17871.54345703125,
-            "latency_ms": 6108.3232797682285
+            "peak_memory_mb": 17871.54296875,
+            "latency_ms": 2223.503101617098
         },
         {
             "index": 173,
@@ -1576,8 +1576,8 @@
             "metric": "Rouge-L",
             "output": " Harris's friend Aoki died yesterday. Harris is not sure what happened yet. He hasn't seen her for a few months. ",
             "ground_truth": "Harris' friend, Aoki, who lives in Michigan, died yesterday. Harris hasn't seen her for a few months.",
-            "peak_memory_mb": 18884.62451171875,
-            "latency_ms": 7359.919905662537
+            "peak_memory_mb": 18884.62353515625,
+            "latency_ms": 7538.338594138622
         },
         {
             "index": 174,
@@ -1586,7 +1586,7 @@
             "output": " Nathan wants to buy a bike in spring. Aubrey is worried about where to keep it. Nathan has a stationary bike and rides 25 kilometers every day. His goal for the summer is 100 kilometers.",
             "ground_truth": "Nathan is planning on buying a bike in spring. He will probably store the bike on some special hooks because his apartment is small. Nathan has also bought a stationary bike to keep fit.",
             "peak_memory_mb": 16754.3837890625,
-            "latency_ms": 4870.328173041344
+            "latency_ms": 2311.252523213625
         },
         {
             "index": 175,
@@ -1594,8 +1594,8 @@
             "metric": "Rouge-L",
             "output": " Rachel got a new cat named Portia. She is allergic to cats but is taking medication to help her reactions.",
             "ground_truth": "Rachel has a new siamese cat, a girl called Portia. Rachel discovered that is allergic to cats. She is sneezing, has rashes and other allergic reactions. She takes medications that seem to help. Adam consoles Rachel.",
-            "peak_memory_mb": 16308.09375,
-            "latency_ms": 3354.6081222593784
+            "peak_memory_mb": 16308.09326171875,
+            "latency_ms": 1347.5723825395107
         },
         {
             "index": 176,
@@ -1603,8 +1603,8 @@
             "metric": "Rouge-L",
             "output": " Gino is getting ready to go out and Renee is giving him fashion advice.",
             "ground_truth": "Gino wants Renee’s advice on what to wear. She gives some hints so that he doesn't look like a waiter and recommends wearing black pants, a white shirt and brown shoes.",
-            "peak_memory_mb": 18393.82421875,
-            "latency_ms": 6752.595525234938
+            "peak_memory_mb": 18393.82373046875,
+            "latency_ms": 2907.9988710582256
         },
         {
             "index": 177,
@@ -1612,8 +1612,8 @@
             "metric": "Rouge-L",
             "output": " Amelia can't tell Emily her favourite colour.",
             "ground_truth": "Emily's favorite color is blue. Amelia can't talk about the reason behind her question with Emily.",
-            "peak_memory_mb": 16577.6484375,
-            "latency_ms": 3166.0948991775513
+            "peak_memory_mb": 16577.64794921875,
+            "latency_ms": 1113.9364168047905
         },
         {
             "index": 178,
@@ -1621,8 +1621,8 @@
             "metric": "Rouge-L",
             "output": " Benjamin is tired and wants to take a nap. He might go to the conference hall at 2 pm to meet Hilary and the French people who work on the history of food in colonial Mexico. They will go to La Cantina for Italian food.",
             "ground_truth": "Hilary has the keys to the apartment. Benjamin wants to get them and go take a nap. Hilary is having lunch with some French people at La Cantina. Hilary is meeting them at the entrance to the conference hall at 2 pm. Benjamin and Elliot might join them. They're meeting for the drinks in the evening.",
-            "peak_memory_mb": 19164.94482421875,
-            "latency_ms": 7703.50719243288
+            "peak_memory_mb": 19164.9443359375,
+            "latency_ms": 4924.557011574507
         },
         {
             "index": 179,
@@ -1630,8 +1630,8 @@
             "metric": "Rouge-L",
             "output": " Jane had a severe allergic reaction to peanuts in a cake at La Perle. She was assured that there were no peanuts in the cake, but there were crushed nuts in the crust. ",
             "ground_truth": "Jane, Anne and Ella have been to La Perle. Jane ate cheesecake and got an allergic reaction. They are getting out of ER. ",
-            "peak_memory_mb": 16369.3056640625,
-            "latency_ms": 4468.979164958
+            "peak_memory_mb": 16369.30517578125,
+            "latency_ms": 4575.554553419352
         },
         {
             "index": 180,
@@ -1640,7 +1640,7 @@
             "output": " Jane will be late for the meeting. Alex will wait for her at the left entrance. Jane has the file with xerox copies.",
             "ground_truth": "Jane will be about 10 minutes late. Alex is waiting at the left entrance and they are going to attend a meeting. This might be the last opportunity for Jane and Alex to get through to them.",
             "peak_memory_mb": 18818.18896484375,
-            "latency_ms": 7264.570191502571
+            "latency_ms": 3634.566366672516
         },
         {
             "index": 181,
@@ -1648,8 +1648,8 @@
             "metric": "Rouge-L",
             "output": " Kane recommends the new 30 seconds to mars album to Shannon.",
             "ground_truth": "Kane recommends the new 30 Seconds to Mars album to Shannon.",
-            "peak_memory_mb": 16312.21923828125,
-            "latency_ms": 4411.432709544897
+            "peak_memory_mb": 16312.21826171875,
+            "latency_ms": 1031.2548913061619
         },
         {
             "index": 182,
@@ -1657,8 +1657,8 @@
             "metric": "Rouge-L",
             "output": " Callan's Samsung S8 has a black screen. He thinks it overheats and then restarts. He's going to the store to get it fixed.",
             "ground_truth": "Callan's Samsung S8 overheats, so he's going to the store to get it repaired.",
-            "peak_memory_mb": 18021.03955078125,
-            "latency_ms": 6303.10845002532
+            "peak_memory_mb": 18021.03857421875,
+            "latency_ms": 3081.1264254152775
         },
         {
             "index": 183,
@@ -1666,8 +1666,8 @@
             "metric": "Rouge-L",
             "output": " Maya asks Boris to bring home the clothes that are hanging outside. Boris is not home, so he tells Brian to take care of it.",
             "ground_truth": "Maya wants Boris to bring clothes that are hanging outside. Brian will do that, because Boris isn't at home now.",
-            "peak_memory_mb": 16746.244140625,
-            "latency_ms": 3674.4965612888336
+            "peak_memory_mb": 16746.2431640625,
+            "latency_ms": 1818.202868103981
         },
         {
             "index": 184,
@@ -1675,8 +1675,8 @@
             "metric": "Rouge-L",
             "output": " Jane and Steven are planning to meet at 4:30 instead of 5. They will be driving 300km and Steven is confident they will make it in 2 hours. Jane is worried about the long drive and wants to meet earlier.",
             "ground_truth": "Jane wants to leave at 4.30 instead of 5 because Google Maps suggests the 300 km drive should take them at least 3 hours and she doesn't want to be late. She will wait for Steven at the main entrance.",
-            "peak_memory_mb": 16288.51171875,
-            "latency_ms": 4399.5642475783825
+            "peak_memory_mb": 16288.51123046875,
+            "latency_ms": 2191.591013222933
         },
         {
             "index": 185,
@@ -1684,8 +1684,8 @@
             "metric": "Rouge-L",
             "output": " Ray is locked out of his room and needs Max to let him in. Max is amused by the situation.",
             "ground_truth": "Ray is locked in the room from the outside and he has to pee. Max's roommate will come and let him out.",
-            "peak_memory_mb": 18122.54052734375,
-            "latency_ms": 6428.674437105656
+            "peak_memory_mb": 18122.53955078125,
+            "latency_ms": 2801.0671101510525
         },
         {
             "index": 186,
@@ -1693,8 +1693,8 @@
             "metric": "Rouge-L",
             "output": " Abigail doesn't want to take a stroll with Emma and the kids because the smog alert app is showing that the norms have been exceeded by 30% today.",
             "ground_truth": "Abigail is not going to take a stroll with the little ones. Her smog alert app is showing that the norms have been exceeded by 30% today.",
-            "peak_memory_mb": 18896.09619140625,
-            "latency_ms": 6206.688340753317
+            "peak_memory_mb": 18896.09521484375,
+            "latency_ms": 3976.387247443199
         },
         {
             "index": 187,
@@ -1702,8 +1702,8 @@
             "metric": "Rouge-L",
             "output": " Chloe is going to Megan's house tonight, but she has to come home and let the dog out first.",
             "ground_truth": "Somebody has to take the dog out. Chloe wants to go to Megan tonight and the father has to work late tonight. Chloe will have to come back home to let the dog out and then she can see Megan.",
-            "peak_memory_mb": 17357.4814453125,
-            "latency_ms": 5610.577534884214
+            "peak_memory_mb": 17357.48095703125,
+            "latency_ms": 2112.264420837164
         },
         {
             "index": 188,
@@ -1711,8 +1711,8 @@
             "metric": "Rouge-L",
             "output": " Emily accidentally broke one of Linda's green tea cups. Linda is very understanding and offers Emily the whole set of green tea cups.",
             "ground_truth": "Emily's a guest at Linda's house. She broke one of Linda's green tea cups when she was cleaning the cupboards. Linda doesn't like them and she offers Emily the whole set.",
-            "peak_memory_mb": 16511.22265625,
-            "latency_ms": 4911.63494437933
+            "peak_memory_mb": 16511.22216796875,
+            "latency_ms": 1575.5791999399662
         },
         {
             "index": 189,
@@ -1720,8 +1720,8 @@
             "metric": "Rouge-L",
             "output": " Sean overslept again.",
             "ground_truth": "Sean overslept again.",
-            "peak_memory_mb": 18263.443359375,
-            "latency_ms": 6798.111323267221
+            "peak_memory_mb": 18263.4423828125,
+            "latency_ms": 2376.391187310219
         },
         {
             "index": 190,
@@ -1729,8 +1729,8 @@
             "metric": "Rouge-L",
             "output": " Ben will wake Emma up at 4:15 PM so they can arrive in New York at 4:30 PM.",
             "ground_truth": "Emma is about to take a nap in the back of the bus to New York. Ben and Emma will be there around 4.30 pm. Ben will wake Emma up 15 minutes prior to their arrival.",
-            "peak_memory_mb": 16640.01611328125,
-            "latency_ms": 5077.9769495129585
+            "peak_memory_mb": 16640.01513671875,
+            "latency_ms": 1676.041852682829
         },
         {
             "index": 191,
@@ -1738,8 +1738,8 @@
             "metric": "Rouge-L",
             "output": " Mike and Celia are planning a holiday. Mike was thinking about Egypt, but Celia prefers Croatia.",
             "ground_truth": "Mike considers going to Egypt for holiday. It's too hot for Celia, she suggests Croatia instead. Mark likes the idea, he's never been there. ",
-            "peak_memory_mb": 18749.66015625,
-            "latency_ms": 7221.412323415279
+            "peak_memory_mb": 18749.65966796875,
+            "latency_ms": 3378.1449012458324
         },
         {
             "index": 192,
@@ -1747,8 +1747,8 @@
             "metric": "Rouge-L",
             "output": " Jason was absent today. He had a dental appointment.",
             "ground_truth": "Jason had a dental appointment today and that's why he was absent.",
-            "peak_memory_mb": 17227.92822265625,
-            "latency_ms": 5372.998021543026
+            "peak_memory_mb": 17227.92724609375,
+            "latency_ms": 1644.7223238646984
         },
         {
             "index": 193,
@@ -1756,8 +1756,8 @@
             "metric": "Rouge-L",
             "output": " Max's sister is studying in Shanghai, China. She speaks Chinese and thinks it's a good investment. Eliza thinks it's the best investment imaginable because of the large Chinese population. Rory thinks it's a good idea to speak Chinese because there are many Chinese people in the world. Max's sister is in Shanghai, which has 25 million inhabitants, making it bigger than the capital Beijing.",
             "ground_truth": "Max's sister is studying in Shanghai and she already speaks Chinese. She doesn't find the whole experience amazing but she believes it's a good investment.",
-            "peak_memory_mb": 17393.2509765625,
-            "latency_ms": 5561.613854020834
+            "peak_memory_mb": 17393.25,
+            "latency_ms": 4039.6381095051765
         },
         {
             "index": 194,
@@ -1765,8 +1765,8 @@
             "metric": "Rouge-L",
             "output": " Maddie is in Asda. John wants white bread and apples. Maddie will get Gala apples.",
             "ground_truth": "Maddie will buy a white bread and apples on John's request.",
-            "peak_memory_mb": 15741.90185546875,
-            "latency_ms": 3847.3085574805737
+            "peak_memory_mb": 15741.9013671875,
+            "latency_ms": 856.0795783996582
         },
         {
             "index": 195,
@@ -1774,8 +1774,8 @@
             "metric": "Rouge-L",
             "output": " Ana wants to visit her grandma tomorrow. Catherine will call her when she wakes up.",
             "ground_truth": "Ana wants to visit grandma tomorrow. Catherine will go with her. She will call Anna when she wakes up.",
-            "peak_memory_mb": 18603.2421875,
-            "latency_ms": 7013.41100409627
+            "peak_memory_mb": 18603.2412109375,
+            "latency_ms": 3087.6703336834908
         },
         {
             "index": 196,
@@ -1783,8 +1783,8 @@
             "metric": "Rouge-L",
             "output": " Ron sent Josh an email with something he wants Josh to have.",
             "ground_truth": "Josh should check the email from Ron. ",
-            "peak_memory_mb": 18130.732421875,
-            "latency_ms": 6431.968033313751
+            "peak_memory_mb": 18130.7314453125,
+            "latency_ms": 2490.8826760947704
         },
         {
             "index": 197,
@@ -1792,8 +1792,8 @@
             "metric": "Rouge-L",
             "output": " Mary stayed at home today.",
             "ground_truth": "Today Mary didn't go to school, she stayed at home.",
-            "peak_memory_mb": 19295.52783203125,
-            "latency_ms": 7894.871916621923
+            "peak_memory_mb": 19295.52685546875,
+            "latency_ms": 3348.689377307892
         },
         {
             "index": 198,
@@ -1801,8 +1801,8 @@
             "metric": "Rouge-L",
             "output": " Lucy is not interested in dating Johnny. She wants to go to a gig with her best friends, Maggie and the girls. They will pamper themselves at Lucy's house before the gig.",
             "ground_truth": "Johny wants to go for a gig with Lucy. She prefers to go with Maggie and her best friends. They will meet at 6 PM at her house to prepare for the evening. The gig starts at 8 PM.",
-            "peak_memory_mb": 17287.525390625,
-            "latency_ms": 5469.548612833023
+            "peak_memory_mb": 17287.5244140625,
+            "latency_ms": 2600.0939272344112
         },
         {
             "index": 199,
@@ -1810,8 +1810,8 @@
             "metric": "Rouge-L",
             "output": " Dave thanks Sam for letting him know that Nicky is no longer at Sam's place.",
             "ground_truth": "Nicky has just left Sam's place. Her phone is off.",
-            "peak_memory_mb": 19078.041015625,
-            "latency_ms": 7615.825496613979
+            "peak_memory_mb": 19078.04052734375,
+            "latency_ms": 3599.4657687842846
         }
     ]
 }

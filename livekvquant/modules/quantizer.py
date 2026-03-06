@@ -48,7 +48,7 @@ class RealTimeQuantizer:
             sink_values = tensor[..., :sink_length, :].flatten()
             
             # 這裡假設 sparse_idxs 是使用 flatten index (與原專案邏輯一致)
-            sink_indices = torch.nonzero(sink_mask.flatten(), as_tuple=False).squeeze()
+            sink_indices = torch.nonzero(sink_mask.flatten(), as_tuple=False).squeeze().to(torch.int32)
             
             # 合併 (Sink + Outliers)
             sparse_vals = torch.cat([sparse_vals, sink_values])

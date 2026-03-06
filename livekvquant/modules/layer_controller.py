@@ -38,69 +38,69 @@ class TransformerLayerController(nn.Module):
         self.is_decoding = False
 
     def forward(self, q_tensor, k_tensor, v_tensor, position_ids=None):
+        # --- RoPE for K ---
         k_rot = k_tensor
         if self.rotary_emb_module is not None and position_ids is not None:
             cos, sin = self.rotary_emb_module(v_tensor, position_ids)
             _, k_rot = apply_rotary_pos_emb(q_tensor, k_tensor, cos, sin)
 
-        # === 0. Bypass 機制 (Warmup Layers) ===
+        # === 0. Bypass 層（前幾層不量化，全 FP16）===
         if self.layer_idx < self.config.quant_start_layer:
+            # 先暫存 raw KV，讓 attention 能看到
+            if not self.is_decoding:
+                self.kv_manager.store_raw(k_rot, v_tensor)
+
             attn_output = self.attn_core.compute_attention(
-                q_tensor, self.kv_manager, 
-                current_k=k_rot, 
-                current_v=v_tensor,
-                rotary_emb_module=self.rotary_emb_module, 
+                q_tensor, self.kv_manager,
+                rotary_emb_module=self.rotary_emb_module,
                 position_ids=position_ids,
                 k_is_rotated=True
             )
-            
+
             if self.is_decoding:
                 self.kv_manager.store_decode_token(k_rot, v_tensor)
             else:
+                # Finalize: bypass 層直接存 warmup（原始精度）
                 k_chunk = KVChunk(chunk_type="warmup", data=k_rot)
                 v_chunk = KVChunk(chunk_type="warmup", data=v_tensor)
-                self.kv_manager.store_chunk(k_chunk, v_chunk)
+                self.kv_manager.finalize_last_chunk(k_chunk, v_chunk)
             return attn_output
 
-        # === 1. 正常層：先計算 Attention ===
+        # === 1. Prefill: 先暫存 raw KV → 用原始精度算 Attention ===
+        if not self.is_decoding:
+            self.kv_manager.store_raw(k_rot, v_tensor)
+
         attn_output = self.attn_core.compute_attention(
-            q_tensor, 
+            q_tensor,
             self.kv_manager,
-            current_k=k_rot, 
-            current_v=v_tensor,
             rotary_emb_module=self.rotary_emb_module,
             position_ids=position_ids,
-            k_is_rotated=True 
+            k_is_rotated=True
         )
 
+        # === 2. Decode: 直接存 FP16，不量化 ===
         if self.is_decoding:
             self.kv_manager.store_decode_token(k_rot, v_tensor)
             return attn_output
 
-        # === 2. 量化與儲存流程 (針對 k_rot) ===
+        # === 3. Attention 算完後，才做量化壓縮（延後壓縮）===
         SINK_LENGTH = 4
-        is_prefill_start = (self.chunk_idx == 0 and not self.is_decoding)
+        is_prefill_start = (self.chunk_idx == 0)
         current_sink_len = SINK_LENGTH if is_prefill_start else 0
 
-        # [Change] 量化對象改為 k_rot
+        # Outlier 分離
         k_dense, k_sp_val, k_sp_idx = self.quantizer.isolate(
-            k_rot, 
-            outlier_dim=-2, 
-            sink_length=current_sink_len
+            k_rot, outlier_dim=-2, sink_length=current_sink_len
         )
-        
-        # Value 維持不變 (Value 不需要 RoPE)
         v_dense, v_sp_val, v_sp_idx = self.quantizer.isolate(
-            v_tensor, 
-            outlier_dim=-1, 
-            sink_length=current_sink_len
+            v_tensor, outlier_dim=-1, sink_length=current_sink_len
         )
 
-        # D. Statistics Update 
+        # EMA 統計更新
         k_absmax = self.stats_manager.update_key_stats(k_dense)
         v_absmax = self.stats_manager.get_value_stats(v_dense)
 
-        # E. Quantization & Packaging 
+        # 量化 & 封裝
         is_k_warmup = (self.chunk_idx < self.config.n_warmup)
 
         if is_k_warmup:
@@ -109,21 +109,18 @@ class TransformerLayerController(nn.Module):
             k_quant, k_scale = self.quantizer.quantize_dense(k_dense, k_absmax)
             k_chunk = KVChunk(
                 chunk_type="quantized",
-                quantized_data=k_quant,
-                scale=k_scale,
-                sparse_values=k_sp_val,
-                sparse_indices=k_sp_idx
+                quantized_data=k_quant, scale=k_scale,
+                sparse_values=k_sp_val, sparse_indices=k_sp_idx
             )
 
         v_quant, v_scale = self.quantizer.quantize_dense(v_dense, v_absmax)
         v_chunk = KVChunk(
             chunk_type="quantized",
-            quantized_data=v_quant,
-            scale=v_scale,
-            sparse_values=v_sp_val,
-            sparse_indices=v_sp_idx
+            quantized_data=v_quant, scale=v_scale,
+            sparse_values=v_sp_val, sparse_indices=v_sp_idx
         )
 
-        self.kv_manager.store_chunk(k_chunk, v_chunk)
-        
+        # 用壓縮格式替換掉暫存的 raw chunk
+        self.kv_manager.finalize_last_chunk(k_chunk, v_chunk)
+
         return attn_output

@@ -14,7 +14,7 @@ def isolate_outliers(tensor: torch.Tensor, ratio: float, dim: int = None) -> Tup
         k = int(tensor.numel() * ratio)
 
     if k == 0:
-        return tensor, torch.empty(0, device=tensor.device), torch.empty(0, device=tensor.device, dtype=torch.long)
+        return tensor, torch.empty(0, device=tensor.device), torch.empty(0, device=tensor.device, dtype=torch.int32)
 
     # 2. 建立 Mask 來標記 Outlier 位置
     mask = torch.zeros_like(tensor, dtype=torch.bool)
@@ -30,8 +30,9 @@ def isolate_outliers(tensor: torch.Tensor, ratio: float, dim: int = None) -> Tup
         mask = flat_mask.view_as(tensor)
 
     # 3. 提取 sparse values 和 flat indices（只 flatten 一次）
+    # sparse_values 保持原始 dtype（bf16），sparse_indices 用 int32 節省記憶體
     flat_mask = mask.flatten()
-    sparse_indices = flat_mask.nonzero(as_tuple=True)[0]
+    sparse_indices = flat_mask.nonzero(as_tuple=True)[0].to(torch.int32)
     sparse_values = tensor.flatten()[sparse_indices]
 
     # 4. 用 masked_fill_ 原地歸零（不需 clone 整個 tensor）
@@ -46,6 +47,7 @@ def restore_outliers(dequantized_tensor: torch.Tensor,
         return dequantized_tensor
 
     # 確保 dtype 一致後，直接在 flat view 上寫入
+    # sparse_indices 可能是 int32，indexing 需要 long
     flat_recon = dequantized_tensor.to(sparse_values.dtype).flatten()
-    flat_recon[sparse_indices] = sparse_values
+    flat_recon[sparse_indices.long()] = sparse_values
     return flat_recon.view_as(dequantized_tensor)

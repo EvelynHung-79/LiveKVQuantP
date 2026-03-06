@@ -7,24 +7,16 @@ class AttentionCore:
         self.config = config
 
     def compute_attention(self, q_tensor, kv_manager,
-                          current_k=None, current_v=None,
                           rotary_emb_module=None, position_ids=None,
                           k_is_rotated=False):
-
+        """
+        計算 Attention。
+        當前 chunk 的 KV 已經透過 kv_manager.store_raw() 存入，
+        get_full_kv() 會包含所有歷史 chunks + 當前 raw chunk。
+        """
         target_dtype = q_tensor.dtype
 
-        # 使用快取的 full KV tensor，不會重複 dequantize
         k_full, v_full = kv_manager.get_full_kv(target_dtype)
-
-        if current_k is not None:
-            current_k = current_k.to(dtype=target_dtype)
-            current_v = current_v.to(dtype=target_dtype)
-            if k_full is not None:
-                k_full = torch.cat([k_full, current_k], dim=-2)
-                v_full = torch.cat([v_full, current_v], dim=-2)
-            else:
-                k_full = current_k
-                v_full = current_v
 
         if k_full is None:
             return torch.zeros_like(q_tensor)

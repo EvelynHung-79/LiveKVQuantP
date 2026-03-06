@@ -71,8 +71,6 @@ class LongBenchEvaluator:
                 # and looking for the token that decodes back to \n
                 probe = self.tokenizer.encode(".\n.", add_special_tokens=False)
                 self._newline_token_ids = [t for t in probe if '\n' in self.tokenizer.decode([t])]
-                if task_name in {"trec", "samsum", "lcc", "repobench-p"}:
-                    logger.info(f"[{task_name}] probe '.\\.n.' -> {probe}, newline tokens: {self._newline_token_ids}")
 
             extra_eos_ids = self._newline_token_ids if task_name in {"trec", "samsum", "lcc", "repobench-p"} else []
 
@@ -90,10 +88,11 @@ class LongBenchEvaluator:
             try:
                 with torch.no_grad():
                     if hasattr(self.model, "controllers"):
-                        # Case 1: LiveKVQuantModel
+                        # Case 1: LiveKVQuantModel (generate returns string directly)
                         output_text = self.model.generate(input_ids=input_ids, max_new_tokens=current_output_len, temperature=0, eos_token_ids=extra_eos_ids or None)
+                        perf_metrics = profiler.stop(num_output_tokens=current_output_len)
                     else:
-                        # Case 2: 原生 HuggingFace Model
+                        # Case 2: 原生 HuggingFace Model (generate returns token ids)
                         gen_kwargs = dict(
                             max_new_tokens=current_output_len,
                             use_cache=True,
@@ -103,23 +102,12 @@ class LongBenchEvaluator:
                         if extra_eos_ids:
                             gen_kwargs["stopping_criteria"] = StoppingCriteriaList([StopOnTokens(extra_eos_ids)])
                         output_ids = self.model.generate(input_ids, attention_mask=attention_mask, **gen_kwargs)
-                        # 記得要把 prompt 部分截掉，只留生成的 tokens
+                        perf_metrics = profiler.stop(num_output_tokens=current_output_len)
                         output_text = self.tokenizer.decode(output_ids[0][input_ids.shape[1]:], skip_special_tokens=True)
-                
-                # E. Post-process output (Reference: FastKV eval_longbench.py)
-                # Safety net: truncate to first line for completion tasks
+
+                # E. Post-process output (Reference: FastKV eval_longbench.py scorer())
                 if task_name in {"trec", "triviaqa", "samsum"}:
                     output_text = output_text.lstrip('\n').split('\n')[0]
-                elif task_name in {"lcc", "repobench-p"}:
-                    all_lines = output_text.lstrip('\n').split('\n')
-                    output_text = ""
-                    for line in all_lines:
-                        if ('`' not in line) and ('#' not in line) and ('//' not in line):
-                            output_text = line
-                            break
-
-                # F. Metrics
-                perf_metrics = profiler.stop(num_output_tokens=current_output_len)
 
                 if self.bench_version == "v2":
                     score = calculate_accuracy(output_text, ground_truths)

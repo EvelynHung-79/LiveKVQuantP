@@ -122,33 +122,22 @@ def calculate_rouge_l(prediction: str, ground_truth: Union[str, List[str]]) -> f
 
 def calculate_edit_similarity(prediction: str, ground_truth: Union[str, List[str]]) -> float:
     """
-    計算 Edit Similarity (1 - normalized edit distance)。
+    計算 Code Similarity，與 FastKV 官方一致：使用 fuzz.ratio (SequenceMatcher)。
+    Post-processing（過濾 backtick/comment 行）也在此處理，與 FastKV code_sim_score 一致。
     用於 Code Completion 任務 (lcc, repobench-p)。
     """
+    from fuzzywuzzy import fuzz
+
     if isinstance(ground_truth, list):
         scores = [calculate_edit_similarity(prediction, gt) for gt in ground_truth]
         return max(scores) if scores else 0.0
 
-    pred = prediction.strip()
-    truth = ground_truth.strip()
+    # Post-processing: extract first valid code line (Reference: FastKV code_sim_score)
+    all_lines = prediction.lstrip('\n').split('\n')
+    prediction = ""
+    for line in all_lines:
+        if ('`' not in line) and ('#' not in line) and ('//' not in line):
+            prediction = line
+            break
 
-    if len(pred) == 0 and len(truth) == 0:
-        return 1.0
-
-    # Levenshtein distance (character-level)
-    m, n = len(pred), len(truth)
-    dp = list(range(n + 1))
-    for i in range(1, m + 1):
-        prev = dp[0]
-        dp[0] = i
-        for j in range(1, n + 1):
-            temp = dp[j]
-            if pred[i - 1] == truth[j - 1]:
-                dp[j] = prev
-            else:
-                dp[j] = 1 + min(prev, dp[j], dp[j - 1])
-            prev = temp
-
-    edit_dist = dp[n]
-    max_len = max(m, n)
-    return 1.0 - edit_dist / max_len
+    return fuzz.ratio(prediction, ground_truth) / 100

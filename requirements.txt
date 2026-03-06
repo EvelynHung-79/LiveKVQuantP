@@ -20,6 +20,8 @@ pytest>=9.0.2
 
 # --- Evaluation Metrics ---
 rouge==1.0.1
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.26.1
 
 # --- Utilities ---
 tqdm>=4.67.1
