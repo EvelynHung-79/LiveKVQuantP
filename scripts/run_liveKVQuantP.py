@@ -34,20 +34,31 @@ def parse_args():
     parser.add_argument("--ema_alpha", type=float, default=0.1)
     parser.add_argument("--clip_factor_n", type=float, default=1.5)
     parser.add_argument("--outlier_ratio", type=float, default=0.01)
-    
+
+    # Ablation flags
+    parser.add_argument("--use_warmup", type=lambda x: x.lower() != 'false', default=True,
+                        help="Warmup chunk strategy (default: True). Pass 'false' to disable.")
+    parser.add_argument("--use_outlier_isolation", type=lambda x: x.lower() != 'false', default=True,
+                        help="Outlier isolation (default: True). Pass 'false' for pure dense quantization.")
+    parser.add_argument("--stats_method", type=str, choices=["ema_absmax", "ema_minmax"], default="ema_absmax",
+                        help="Statistics method for quantization scale (default: ema_absmax).")
+
     return parser.parse_args()
 
 def main():
     args = parse_args()
-    
+
     # 1. Config & Model
     config = LiveKVQuantConfig(
-        chunk_size=args.chunk_size, 
-        n_warmup=args.n_warmup, 
+        chunk_size=args.chunk_size,
+        n_warmup=args.n_warmup,
         bits=args.bits,
         ema_alpha=args.ema_alpha,
         clip_factor_n=args.clip_factor_n,
-        outlier_ratio=args.outlier_ratio
+        outlier_ratio=args.outlier_ratio,
+        use_warmup=args.use_warmup,
+        use_outlier_isolation=args.use_outlier_isolation,
+        stats_method=args.stats_method,
     )
     
     device = "cuda" if torch.cuda.is_available() else "cpu"

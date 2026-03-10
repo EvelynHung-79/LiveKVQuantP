@@ -21,6 +21,11 @@ class LiveKVQuantConfig:
     clip_factor_n: float = 2       # EMA 裁剪因子 N，避免過大波動
     outlier_ratio: float = 0.01      # 頂尖 1% 異常值保留為 FP16
     quant_start_layer: int = 3
+
+    # Ablation control flags
+    use_warmup: bool = True             # False = 從第一個 chunk 就量化 K（warmup 策略消融）
+    use_outlier_isolation: bool = True  # False = 純 dense 量化，不做 outlier 分離
+    stats_method: str = "ema_absmax"    # "ema_absmax"（現有）或 "ema_minmax"（分別追蹤正負極值）
     
 # 可以實例化配置對象直接使用
 config = LiveKVQuantConfig()

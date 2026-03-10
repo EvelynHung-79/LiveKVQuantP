@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+from flash_attn import flash_attn_func
 from transformers.models.llama.modeling_llama import apply_rotary_pos_emb
 
 class AttentionCore:
@@ -32,38 +33,27 @@ class AttentionCore:
                 cos_k, sin_k = rotary_emb_module(k_full, k_pos_ids)
                 _, k_full = apply_rotary_pos_emb(k_full, k_full, cos_k, sin_k)
 
-        # GQA Expand
-        num_q_heads = q_tensor.size(1)
-        num_k_heads = k_full.size(1)
-        if num_q_heads != num_k_heads:
-            n_rep = num_q_heads // num_k_heads
-            k_full = k_full.repeat_interleave(n_rep, dim=1)
-            v_full = v_full.repeat_interleave(n_rep, dim=1)
+        # flash_attn_func 要求 layout: (batch, seq_len, num_heads, head_dim)
+        # 目前 tensor layout: (batch, num_heads, seq_len, head_dim)
+        q = q_tensor.transpose(1, 2)    # (b, q_len, n_q_heads, hd)
+        k = k_full.transpose(1, 2)      # (b, k_len, n_kv_heads, hd)
+        v = v_full.transpose(1, 2)      # (b, k_len, n_kv_heads, hd)
 
-        # Flash Attention via SDPA（自動選擇最快的 backend）
-        is_causal = (q_tensor.shape[-2] == k_full.shape[-2] and q_tensor.shape[-2] > 1)
+        # flash_attn_func 原生支援 GQA（n_q_heads 可以是 n_kv_heads 的整數倍）
+        # 不需要 repeat_interleave，也不需要手動 attn_mask
+        is_causal = (q.shape[1] > 1)
 
-        if is_causal:
-            # Prefill 且 Q/K 長度相同：可以直接用 is_causal=True
-            attn_output = F.scaled_dot_product_attention(
-                q_tensor, k_full, v_full, is_causal=True
-            )
-        elif q_tensor.shape[-2] > 1:
-            # Prefill chunk 但前面有舊 cache（Q < K）：需要手動 causal mask
-            q_len = q_tensor.size(-2)
-            k_len = k_full.size(-2)
-            # SDPA 的 attn_mask: True = 允許 attend, False = mask 掉
-            attn_mask = ~torch.triu(
-                torch.ones(q_len, k_len, device=q_tensor.device, dtype=torch.bool),
-                diagonal=k_len - q_len + 1
-            )
-            attn_output = F.scaled_dot_product_attention(
-                q_tensor, k_full, v_full, attn_mask=attn_mask
-            )
-        else:
-            # Decode：Q length = 1，不需要 causal mask
-            attn_output = F.scaled_dot_product_attention(
-                q_tensor, k_full, v_full
-            )
+        # flash_attn 要求 fp16 或 bf16
+        input_dtype = q.dtype
+        if input_dtype not in (torch.float16, torch.bfloat16):
+            q, k, v = q.to(torch.float16), k.to(torch.float16), v.to(torch.float16)
+
+        attn_output = flash_attn_func(q, k, v, causal=is_causal)
+
+        if attn_output.dtype != input_dtype:
+            attn_output = attn_output.to(input_dtype)
+
+        # 轉回 (batch, num_heads, seq_len, head_dim)
+        attn_output = attn_output.transpose(1, 2)
 
         return attn_output

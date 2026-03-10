@@ -151,6 +151,19 @@ class KVCacheManager:
     #  Introspection (for tests / debugging)
     # ------------------------------------------------------------------ #
 
+    def pack_all_chunks(self):
+        """
+        Prefill 結束後統一對所有 quantized chunks 做 INT4 nibble packing。
+        將記憶體使用量減半，並 invalidate recon cache 讓 decode 第一步重建。
+        """
+        for k_chunk in self._k_chunks:
+            k_chunk.pack()
+        for v_chunk in self._v_chunks:
+            v_chunk.pack()
+        self._k_recon_cache = None
+        self._v_recon_cache = None
+        self._recon_valid = False
+
     def get_all_chunks(self) -> Tuple[List[KVChunk], List[KVChunk]]:
         """回傳所有壓縮的 chunk 物件（供測試/除錯用）。"""
         return list(self._k_chunks), list(self._v_chunks)

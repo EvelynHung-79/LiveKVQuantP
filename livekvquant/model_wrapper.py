@@ -185,13 +185,17 @@ class LiveKVQuantModel:
 
         # === 2. 執行生成流程 (Prefill -> Decode) ===
         with torch.inference_mode():
-            # Phase A: Prefill
+            # Phase A: Prefill（chunks 以 unpacked int8 儲存，reconstruct 不需 unpack）
             current_pos, last_logits = self._prefill(input_ids)
+
+            # Phase A.5: Deferred INT4 packing（prefill 結束後統一 pack，記憶體減半）
+            for controller in self.controllers:
+                controller.pack_kv_chunks()
 
             if on_prefill_end is not None:
                 on_prefill_end()
 
-            # Phase B: Decode
+            # Phase B: Decode（從 packed int8 讀取，每步 unpack 開銷可忽略）
             generated_ids = self._decode(last_logits, current_pos, max_new_tokens, temperature, eos_token_ids)
             
         # === 3. 輸出處理 ===

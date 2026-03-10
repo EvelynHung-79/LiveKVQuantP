@@ -31,11 +31,35 @@ class TransformerLayerController(nn.Module):
     def set_decoding_mode(self):
         self.is_decoding = True
 
+    def pack_kv_chunks(self):
+        """Prefill 結束後統一 pack 所有 KV chunks，委派給 KVCacheManager。"""
+        self.kv_manager.pack_all_chunks()
+
     def reset_cache(self):
         self.kv_manager.clear()
         self.stats_manager.reset()
         self.chunk_idx = 0
         self.is_decoding = False
+
+    @staticmethod
+    def _make_quantized_chunk(quant_result, sp_val, sp_idx):
+        """將 quantizer.quantize_dense 的回傳值封裝成 KVChunk。"""
+        if len(quant_result) == 3:
+            # Asymmetric: (quantized_data, scale, zero_point)
+            q_data, scale, zero_point = quant_result
+            return KVChunk(
+                chunk_type="quantized",
+                quantized_data=q_data, scale=scale, zero_point=zero_point,
+                sparse_values=sp_val, sparse_indices=sp_idx
+            )
+        else:
+            # Symmetric: (quantized_data, scale)
+            q_data, scale = quant_result
+            return KVChunk(
+                chunk_type="quantized",
+                quantized_data=q_data, scale=scale,
+                sparse_values=sp_val, sparse_indices=sp_idx
+            )
 
     def forward(self, q_tensor, k_tensor, v_tensor, position_ids=None):
         # --- RoPE for K ---
@@ -97,28 +121,21 @@ class TransformerLayerController(nn.Module):
         )
 
         # EMA 統計更新
-        k_absmax = self.stats_manager.update_key_stats(k_dense)
-        v_absmax = self.stats_manager.get_value_stats(v_dense)
+        # ema_absmax 回傳 tensor，ema_minmax 回傳 (max, min) tuple
+        k_stats = self.stats_manager.update_key_stats(k_dense)
+        v_stats = self.stats_manager.get_value_stats(v_dense)
 
         # 量化 & 封裝
-        is_k_warmup = (self.chunk_idx < self.config.n_warmup)
+        is_k_warmup = self.config.use_warmup and (self.chunk_idx < self.config.n_warmup)
 
         if is_k_warmup:
             k_chunk = KVChunk(chunk_type="warmup", data=k_rot)
         else:
-            k_quant, k_scale = self.quantizer.quantize_dense(k_dense, k_absmax)
-            k_chunk = KVChunk(
-                chunk_type="quantized",
-                quantized_data=k_quant, scale=k_scale,
-                sparse_values=k_sp_val, sparse_indices=k_sp_idx
-            )
+            k_result = self.quantizer.quantize_dense(k_dense, k_stats)
+            k_chunk = self._make_quantized_chunk(k_result, k_sp_val, k_sp_idx)
 
-        v_quant, v_scale = self.quantizer.quantize_dense(v_dense, v_absmax)
-        v_chunk = KVChunk(
-            chunk_type="quantized",
-            quantized_data=v_quant, scale=v_scale,
-            sparse_values=v_sp_val, sparse_indices=v_sp_idx
-        )
+        v_result = self.quantizer.quantize_dense(v_dense, v_stats)
+        v_chunk = self._make_quantized_chunk(v_result, v_sp_val, v_sp_idx)
 
         # 用壓縮格式替換掉暫存的 raw chunk
         self.kv_manager.finalize_last_chunk(k_chunk, v_chunk)
