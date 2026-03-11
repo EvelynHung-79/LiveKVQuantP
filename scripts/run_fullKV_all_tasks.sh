@@ -1,18 +1,23 @@
 #!/bin/bash
 
 set -e
-# export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
-# python scripts/run_fullKV.py   --bench_version v1   --task_type code  --num_samples -1
-
-python scripts/run_liveKVQuantP.py --task_type qasper --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --task_type multifieldqa_en --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-
-python scripts/run_liveKVQuantP.py --task_type multi-doc --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --task_type summarization --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --task_type few-shot --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# v2 full results
+python scripts/run_liveKVQuantP.py --task_type multi_news --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+python scripts/run_liveKVQuantP.py --task_type trec --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+python scripts/run_liveKVQuantP.py --task_type triviaqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
 python scripts/run_liveKVQuantP.py --task_type synthetic --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --task_type code --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+
+# ablations
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --use_warmup false
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --use_outlier_isolation false
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --stats_method ema_minmax
+
+# ablations with different chunk size
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --chunk_size 256
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --chunk_size 1024
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --chunk_size 2048
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --chunk_size 4096
 
 echo "All Done!"
 

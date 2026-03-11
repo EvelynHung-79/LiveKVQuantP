@@ -23,12 +23,13 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
     pip install --upgrade pip
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
     pip install -r requirements.txt
+    python -m pip install flash-attn --no-build-isolation
 
     # Huggingface
     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0
 
     # Copy Dataset
-    scp -P 22029 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@194.68.245.81:/root/LiveKVQuantP/data/
+    scp -P 22188 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@194.68.245.165:/root/LiveKVQuantP/data/
     scp -P 22029 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/musique.jsonl root@194.68.245.81:/root/LiveKVQuantP/data/longbench_v1/musique.jsonl
 
     # 拿掉 GitHub 最新 commit，但保留內容在 local
@@ -84,19 +85,6 @@ nohup bash scripts/run_fullKV_all_tasks.sh > run_log.txt 2>&1 &
 自動下載並載入 LongBench 資料集進行推論（需指定 `task`）。
 
 ```bash
-python scripts/run_liveKVQuantP.py \
-  --model_id meta-llama/Meta-Llama-3-8B-Instruct \
-  --input_mode longbench \
-  --task narrativeqa
-
-python scripts/run_liveKVQuantP.py \
-  --bench_version v1 \
-  --task_type single-doc \
-  --num_samples -1 \
-  --ema_alpha 1.0 \
-  --clip_factor_n 1.5 \
-  --outlier_ratio 0.05
-
 # 不錯的結果
 python scripts/run_liveKVQuantP.py \ 
   --task_type single-doc \
@@ -106,30 +94,25 @@ python scripts/run_liveKVQuantP.py \
   --num_samples -1
 ```
 
-**模式 C：互動模式 (Interactive)**
-手動輸入 Prompt 進行測試。
-
+**模式 C：消融實驗 (Ablation Studies)**
 ```bash
-python scripts/run_liveKVQuantP.py \
-  --input_mode interactive
+# 停用 warmup
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --num_samples 2 --use_warmup false
+
+# 停用 outlier isolation（純 dense 量化）
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --num_samples 2 --use_outlier_isolation false
+
+# 改用 EMA MinMax 統計
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --num_samples 2 --stats_method ema_minmax
+
 ```
 
 **模式 D：基準模型 (Baseline-FullKV)**
 
 ```bash
-python scripts/baselines/run_fullKV.py \
+python scripts/run_fullKV.py \
   --bench_version v1 \
-  --task_type single-doc \
-  --num_samples 5
-python scripts/baselines/run_fullKV.py \
-  --bench_version v1 \
-  --task_type narrativeqa \
-  --num_samples 10
-
-# 跑 single-doc 全部的結果
-python scripts/baselines/run_fullKV.py \
-  --bench_version v2 \
-  --task_type single-doc \
+  --task_type passage_count \
   --num_samples -1
 
 ```

@@ -14,12 +14,15 @@
         "ema_alpha": 0.2,
         "clip_factor_n": 4.0,
         "outlier_ratio": 0.01,
+        "use_warmup": true,
+        "use_outlier_isolation": true,
+        "stats_method": "ema_absmax",
         "effective_output_len": 128
     },
-    "avg_score": 0.29360883747969313,
-    "avg_end_to_end_latency_ms": 26309.655276666163,
-    "avg_prefill_latency_ms": 25290.415104295826,
-    "avg_decode_latency_ms": 1019.240172370337,
+    "avg_score": 0.29407485327465166,
+    "avg_end_to_end_latency_ms": 15068.51905468502,
+    "avg_prefill_latency_ms": 14066.18893693434,
+    "avg_decode_latency_ms": 1002.3301177506801,
     "max_peak_memory_mb": 26791.76513671875,
     "details": [
         {
@@ -29,20 +32,20 @@
             "output": "He is living with the Mulvilles at Wimbledon.",
             "ground_truth": "He is a guest in the home of the Mulvilles.",
             "peak_memory_mb": 20901.88671875,
-            "end_to_end_latency_ms": 24111.1901930999,
-            "prefill_latency_ms": 22936.836660141125,
-            "decode_latency_ms": 1174.3535329587758
+            "end_to_end_latency_ms": 14491.1944498308,
+            "prefill_latency_ms": 13340.791481779888,
+            "decode_latency_ms": 1150.402968050912
         },
         {
             "index": 1,
-            "score": 0.5555555555555556,
+            "score": 0.09523809523809525,
             "metric": "F1",
-            "output": "She is already deeply in love with another man.",
+            "output": "She feels gratitude and has her heart entirely engrossed by one object.",
             "ground_truth": "Because she is in unrequited love with someone else",
-            "peak_memory_mb": 20915.25390625,
-            "end_to_end_latency_ms": 22889.709372073412,
-            "prefill_latency_ms": 21807.927903952077,
-            "decode_latency_ms": 1081.781468121335
+            "peak_memory_mb": 20915.2734375,
+            "end_to_end_latency_ms": 14290.083894971758,
+            "prefill_latency_ms": 12926.166945835575,
+            "decode_latency_ms": 1363.9169491361827
         },
         {
             "index": 2,
@@ -51,9 +54,9 @@
             "output": "On Atlas' mountain within a cavern by a secret fountain.",
             "ground_truth": "The Atlas Mountains",
             "peak_memory_mb": 20736.83642578125,
-            "end_to_end_latency_ms": 3123.3253329992294,
-            "prefill_latency_ms": 2496.2324099615216,
-            "decode_latency_ms": 627.0929230377078
+            "end_to_end_latency_ms": 2878.2732358668,
+            "prefill_latency_ms": 2256.2773649115115,
+            "decode_latency_ms": 621.9958709552884
         },
         {
             "index": 3,
@@ -62,9 +65,9 @@
             "output": "To persuade Socrates to escape from prison.",
             "ground_truth": "To smuggle Socrates out of prison and into a life of exile.",
             "peak_memory_mb": 17060.787109375,
-            "end_to_end_latency_ms": 3432.9395319800824,
-            "prefill_latency_ms": 2901.250150054693,
-            "decode_latency_ms": 531.6893819253892
+            "end_to_end_latency_ms": 3090.7184949610382,
+            "prefill_latency_ms": 2571.431868011132,
+            "decode_latency_ms": 519.2866269499063
         },
         {
             "index": 4,
@@ -73,9 +76,9 @@
             "output": "He wanted to fulfill his oath to make the red cock crow on Drachenhausen.",
             "ground_truth": "Otto was so young.",
             "peak_memory_mb": 21855.98681640625,
-            "end_to_end_latency_ms": 30928.41740581207,
-            "prefill_latency_ms": 29243.72652103193,
-            "decode_latency_ms": 1684.6908847801387
+            "end_to_end_latency_ms": 17934.34895784594,
+            "prefill_latency_ms": 16280.298169935122,
+            "decode_latency_ms": 1654.050787910819
         },
         {
             "index": 5,
@@ -84,20 +87,20 @@
             "output": "At least six hours.",
             "ground_truth": "Six hours.",
             "peak_memory_mb": 21653.0537109375,
-            "end_to_end_latency_ms": 5736.861524870619,
-            "prefill_latency_ms": 5300.8333798497915,
-            "decode_latency_ms": 436.02814502082765
+            "end_to_end_latency_ms": 4650.459300959483,
+            "prefill_latency_ms": 4222.549628932029,
+            "decode_latency_ms": 427.9096720274538
         },
         {
             "index": 6,
             "score": 0.0,
             "metric": "F1",
-            "output": "With a woman who is a customer of the show.",
+            "output": "A woman, who is a stately and beautiful visitor.",
             "ground_truth": "Lisa, the blacksmith's wife.",
-            "peak_memory_mb": 20877.44921875,
-            "end_to_end_latency_ms": 22328.990488080308,
-            "prefill_latency_ms": 21201.351762050763,
-            "decode_latency_ms": 1127.638726029545
+            "peak_memory_mb": 20877.453125,
+            "end_to_end_latency_ms": 13787.166436901316,
+            "prefill_latency_ms": 12625.189315993339,
+            "decode_latency_ms": 1161.9771209079772
         },
         {
             "index": 7,
@@ -106,9 +109,9 @@
             "output": "Janosz Poha.",
             "ground_truth": "Dr. Janosz Poha",
             "peak_memory_mb": 23546.0498046875,
-            "end_to_end_latency_ms": 46372.88222601637,
-            "prefill_latency_ms": 45209.074686979875,
-            "decode_latency_ms": 1163.8075390364975
+            "end_to_end_latency_ms": 24638.85414903052,
+            "prefill_latency_ms": 23527.959132101387,
+            "decode_latency_ms": 1110.8950169291347
         },
         {
             "index": 8,
@@ -117,9 +120,9 @@
             "output": "American.",
             "ground_truth": "She is an American.",
             "peak_memory_mb": 23323.29541015625,
-            "end_to_end_latency_ms": 22337.942278012633,
-            "prefill_latency_ms": 21754.45835595019,
-            "decode_latency_ms": 583.4839220624417
+            "end_to_end_latency_ms": 13545.450072037056,
+            "prefill_latency_ms": 12985.460539115593,
+            "decode_latency_ms": 559.9895329214633
         },
         {
             "index": 9,
@@ -128,9 +131,9 @@
             "output": "The lying scribe.",
             "ground_truth": "The scribe.",
             "peak_memory_mb": 20734.486328125,
-            "end_to_end_latency_ms": 2844.190326053649,
-            "prefill_latency_ms": 2512.988907052204,
-            "decode_latency_ms": 331.2014190014452
+            "end_to_end_latency_ms": 2633.4390118718147,
+            "prefill_latency_ms": 2305.7540408335626,
+            "decode_latency_ms": 327.6849710382521
         },
         {
             "index": 10,
@@ -139,9 +142,9 @@
             "output": "His knowledge of the First World War and its tactics.",
             "ground_truth": "Because he fought in the first world war.",
             "peak_memory_mb": 21766.8701171875,
-            "end_to_end_latency_ms": 29182.740533025935,
-            "prefill_latency_ms": 27934.12675196305,
-            "decode_latency_ms": 1248.6137810628861
+            "end_to_end_latency_ms": 17160.842447075993,
+            "prefill_latency_ms": 15939.621919067577,
+            "decode_latency_ms": 1221.2205280084163
         },
         {
             "index": 11,
@@ -150,9 +153,9 @@
             "output": "Sanitary woolen uniforms, carbolic smell, and hairlessness.",
             "ground_truth": "ones that are vague",
             "peak_memory_mb": 21515.82666015625,
-            "end_to_end_latency_ms": 8255.968972109258,
-            "prefill_latency_ms": 7313.008613185957,
-            "decode_latency_ms": 942.9603589233011
+            "end_to_end_latency_ms": 6441.260118968785,
+            "prefill_latency_ms": 5523.957648081705,
+            "decode_latency_ms": 917.3024708870798
         },
         {
             "index": 12,
@@ -161,9 +164,9 @@
             "output": "Fifty years.",
             "ground_truth": "50 years",
             "peak_memory_mb": 18189.83984375,
-            "end_to_end_latency_ms": 4517.672565067187,
-            "prefill_latency_ms": 4163.1603019777685,
-            "decode_latency_ms": 354.5122630894184
+            "end_to_end_latency_ms": 3814.1923279035836,
+            "prefill_latency_ms": 3468.9685539342463,
+            "decode_latency_ms": 345.22377396933734
         },
         {
             "index": 13,
@@ -172,9 +175,9 @@
             "output": "Their daughter, Virginie.",
             "ground_truth": "Their daughter, Virgine. ",
             "peak_memory_mb": 17408.58349609375,
-            "end_to_end_latency_ms": 4579.305665101856,
-            "prefill_latency_ms": 4136.315728072077,
-            "decode_latency_ms": 442.98993702977896
+            "end_to_end_latency_ms": 3920.266681117937,
+            "prefill_latency_ms": 3487.3486140277237,
+            "decode_latency_ms": 432.9180670902133
         },
         {
             "index": 14,
@@ -183,9 +186,9 @@
             "output": "Pierre Grassou, the painter.",
             "ground_truth": "Grassou",
             "peak_memory_mb": 17406.5234375,
-            "end_to_end_latency_ms": 4827.307855011895,
-            "prefill_latency_ms": 4134.732554899529,
-            "decode_latency_ms": 692.5753001123667
+            "end_to_end_latency_ms": 4153.477045008913,
+            "prefill_latency_ms": 3626.85833289288,
+            "decode_latency_ms": 526.6187121160328
         },
         {
             "index": 15,
@@ -194,9 +197,9 @@
             "output": "The bathtub is possessed by the slime.",
             "ground_truth": "The slime gets into Dana's apartment from the bathtub.",
             "peak_memory_mb": 23545.21142578125,
-            "end_to_end_latency_ms": 46326.7677819822,
-            "prefill_latency_ms": 45039.430272066966,
-            "decode_latency_ms": 1287.3375099152327
+            "end_to_end_latency_ms": 24938.72886803001,
+            "prefill_latency_ms": 23669.545891927555,
+            "decode_latency_ms": 1269.1829761024565
         },
         {
             "index": 16,
@@ -205,9 +208,9 @@
             "output": "Elder Childers argues that the town needs a jail and improvements.",
             "ground_truth": "That a mule bone is very powerful and can be a weapon.",
             "peak_memory_mb": 23324.44482421875,
-            "end_to_end_latency_ms": 14692.058719927445,
-            "prefill_latency_ms": 13586.10437088646,
-            "decode_latency_ms": 1105.954349040985
+            "end_to_end_latency_ms": 9729.161496041343,
+            "prefill_latency_ms": 8640.90775582008,
+            "decode_latency_ms": 1088.253740221262
         },
         {
             "index": 17,
@@ -216,9 +219,9 @@
             "output": "His knowledge of the First World War and its tactics.",
             "ground_truth": "Anthony Rogers has previous wartime and combatant experience.",
             "peak_memory_mb": 21766.8701171875,
-            "end_to_end_latency_ms": 29113.555629039183,
-            "prefill_latency_ms": 27853.796842042357,
-            "decode_latency_ms": 1259.7587869968265
+            "end_to_end_latency_ms": 17237.413118127733,
+            "prefill_latency_ms": 16012.68498506397,
+            "decode_latency_ms": 1224.7281330637634
         },
         {
             "index": 18,
@@ -227,9 +230,9 @@
             "output": "Her face is twisted, misshapen.",
             "ground_truth": "Her face is blurry",
             "peak_memory_mb": 21516.07763671875,
-            "end_to_end_latency_ms": 24739.67961082235,
-            "prefill_latency_ms": 23615.388420876116,
-            "decode_latency_ms": 1124.2911899462342
+            "end_to_end_latency_ms": 15254.396805074066,
+            "prefill_latency_ms": 14170.192715944722,
+            "decode_latency_ms": 1084.2040891293436
         },
         {
             "index": 19,
@@ -238,20 +241,20 @@
             "output": "At least seven.",
             "ground_truth": "Two",
             "peak_memory_mb": 20959.14208984375,
-            "end_to_end_latency_ms": 3411.7677889298648,
-            "prefill_latency_ms": 3102.9221289791167,
-            "decode_latency_ms": 308.8456599507481
+            "end_to_end_latency_ms": 2938.9668349176645,
+            "prefill_latency_ms": 2633.9735959190875,
+            "decode_latency_ms": 304.993238998577
         },
         {
             "index": 20,
-            "score": 0.4210526315789474,
+            "score": 0.35294117647058826,
             "metric": "F1",
-            "output": "A family quarrel over the division of the money from their tin-mining venture.",
+            "output": "A family quarrel over the division of their tin-mining venture.",
             "ground_truth": "because of the division of proceeds from selling the family business.",
-            "peak_memory_mb": 17791.97998046875,
-            "end_to_end_latency_ms": 6271.340392995626,
-            "prefill_latency_ms": 5280.383274890482,
-            "decode_latency_ms": 990.9571181051433
+            "peak_memory_mb": 17791.96826171875,
+            "end_to_end_latency_ms": 5134.51971905306,
+            "prefill_latency_ms": 4287.346845958382,
+            "decode_latency_ms": 847.1728730946779
         },
         {
             "index": 21,
@@ -260,31 +263,31 @@
             "output": "2419 A.D.",
             "ground_truth": "2419.",
             "peak_memory_mb": 21763.5380859375,
-            "end_to_end_latency_ms": 28664.84828083776,
-            "prefill_latency_ms": 27803.26389078982,
-            "decode_latency_ms": 861.5843900479376
+            "end_to_end_latency_ms": 16833.166341064498,
+            "prefill_latency_ms": 16005.532796029001,
+            "decode_latency_ms": 827.6335450354964
         },
         {
             "index": 22,
             "score": 0.0,
             "metric": "F1",
-            "output": "To escape the city and find work as a harvest hand.",
+            "output": "To escape his troubles and find a new life.",
             "ground_truth": "he murdered someone",
-            "peak_memory_mb": 25850.80078125,
-            "end_to_end_latency_ms": 73490.73747103103,
-            "prefill_latency_ms": 71568.21160204709,
-            "decode_latency_ms": 1922.5258689839393
+            "peak_memory_mb": 25850.79296875,
+            "end_to_end_latency_ms": 36866.04491784237,
+            "prefill_latency_ms": 35160.45929584652,
+            "decode_latency_ms": 1705.5856219958514
         },
         {
             "index": 23,
             "score": 0.0,
             "metric": "F1",
-            "output": "A slave doing a wrong act to his master.",
+            "output": "A slave striking or reviling his master.",
             "ground_truth": "Your parents",
             "peak_memory_mb": 25494.603515625,
-            "end_to_end_latency_ms": 3528.845458989963,
-            "prefill_latency_ms": 2961.427027126774,
-            "decode_latency_ms": 567.4184318631887
+            "end_to_end_latency_ms": 3198.343661148101,
+            "prefill_latency_ms": 2678.145359037444,
+            "decode_latency_ms": 520.1983021106571
         },
         {
             "index": 24,
@@ -293,9 +296,9 @@
             "output": "Ruth Anvoy's aunt.",
             "ground_truth": "Lady Coxon is Ruth's aunt.",
             "peak_memory_mb": 20902.1455078125,
-            "end_to_end_latency_ms": 22764.00061720051,
-            "prefill_latency_ms": 21700.66394121386,
-            "decode_latency_ms": 1063.3366759866476
+            "end_to_end_latency_ms": 14117.436858126894,
+            "prefill_latency_ms": 13246.43316003494,
+            "decode_latency_ms": 871.003698091954
         },
         {
             "index": 25,
@@ -304,9 +307,9 @@
             "output": "News reporter.",
             "ground_truth": "Reiko is a reporter.",
             "peak_memory_mb": 21134.23876953125,
-            "end_to_end_latency_ms": 24418.396743945777,
-            "prefill_latency_ms": 23710.483310976997,
-            "decode_latency_ms": 707.9134329687804
+            "end_to_end_latency_ms": 14707.171591930091,
+            "prefill_latency_ms": 14050.271624000743,
+            "decode_latency_ms": 656.8999679293483
         },
         {
             "index": 26,
@@ -315,9 +318,9 @@
             "output": "Because he believes he has an implied contract with the laws of Athens.",
             "ground_truth": "Because it violates his belief in the  laws of society.",
             "peak_memory_mb": 20956.318359375,
-            "end_to_end_latency_ms": 3715.62787797302,
-            "prefill_latency_ms": 2963.171985000372,
-            "decode_latency_ms": 752.4558929726481
+            "end_to_end_latency_ms": 3400.3286480437964,
+            "prefill_latency_ms": 2662.6710209529847,
+            "decode_latency_ms": 737.6576270908117
         },
         {
             "index": 27,
@@ -326,42 +329,42 @@
             "output": "Clarence shoots him in the balls with a.38.",
             "ground_truth": "he is shot",
             "peak_memory_mb": 26563.69970703125,
-            "end_to_end_latency_ms": 84596.42883087508,
-            "prefill_latency_ms": 82269.46143596433,
-            "decode_latency_ms": 2326.967394910753
+            "end_to_end_latency_ms": 42242.685192031786,
+            "prefill_latency_ms": 40217.30520599522,
+            "decode_latency_ms": 2025.3799860365689
         },
         {
             "index": 28,
-            "score": 0.42857142857142855,
+            "score": 0.2222222222222222,
             "metric": "F1",
-            "output": "She asked the narrator to go back and destroy it.",
+            "output": "She never opened it, and it was later burnt unread after Saltram's death.",
             "ground_truth": "She declined to read it.",
             "peak_memory_mb": 26261.42578125,
-            "end_to_end_latency_ms": 22811.78894196637,
-            "prefill_latency_ms": 21681.932646082714,
-            "decode_latency_ms": 1129.8562958836555
+            "end_to_end_latency_ms": 14796.30425805226,
+            "prefill_latency_ms": 13303.541636094451,
+            "decode_latency_ms": 1492.7626219578087
         },
         {
             "index": 29,
-            "score": 0.21052631578947367,
+            "score": 0.2222222222222222,
             "metric": "F1",
-            "output": "They were twisted into a rictus of fear, with their mouths open and eyes wide and glassy.",
+            "output": "They were twisted into a rictus of fear, with mouths open and eyes wide and glassy.",
             "ground_truth": "Twisted in fear",
-            "peak_memory_mb": 21136.55078125,
-            "end_to_end_latency_ms": 25641.661804169416,
-            "prefill_latency_ms": 23789.974951185286,
-            "decode_latency_ms": 1851.6868529841304
+            "peak_memory_mb": 21136.546875,
+            "end_to_end_latency_ms": 15820.72343188338,
+            "prefill_latency_ms": 14048.079777043313,
+            "decode_latency_ms": 1772.643654840067
         },
         {
             "index": 30,
-            "score": 0.1,
+            "score": 0.10526315789473684,
             "metric": "F1",
-            "output": "He accuses Beerbohm of being shallow and not understanding the feelings of a man like him.",
+            "output": "He accuses Beerbohm of being shallow and not understanding the feelings of a great artist.",
             "ground_truth": "Beerbohm wrote a fictional story about Soames.",
             "peak_memory_mb": 20957.4267578125,
-            "end_to_end_latency_ms": 8500.865034060553,
-            "prefill_latency_ms": 7321.884992998093,
-            "decode_latency_ms": 1178.9800410624593
+            "end_to_end_latency_ms": 6652.807186124846,
+            "prefill_latency_ms": 5537.69592102617,
+            "decode_latency_ms": 1115.111265098676
         },
         {
             "index": 31,
@@ -370,9 +373,9 @@
             "output": "One week.",
             "ground_truth": "Seven days",
             "peak_memory_mb": 21138.130859375,
-            "end_to_end_latency_ms": 24256.19722204283,
-            "prefill_latency_ms": 23587.178759044036,
-            "decode_latency_ms": 669.0184629987925
+            "end_to_end_latency_ms": 14682.553902966902,
+            "prefill_latency_ms": 14035.847570979968,
+            "decode_latency_ms": 646.706331986934
         },
         {
             "index": 32,
@@ -381,9 +384,9 @@
             "output": "The child.",
             "ground_truth": "all but Jof and the Juggler",
             "peak_memory_mb": 20958.3095703125,
-            "end_to_end_latency_ms": 21739.408581051975,
-            "prefill_latency_ms": 21101.912170881405,
-            "decode_latency_ms": 637.49641017057
+            "end_to_end_latency_ms": 13484.578853007406,
+            "prefill_latency_ms": 12867.32110590674,
+            "decode_latency_ms": 617.2577471006662
         },
         {
             "index": 33,
@@ -392,9 +395,9 @@
             "output": "She played with her dogs and indulged in sentimental novels.",
             "ground_truth": "she was obsessed with novels.",
             "peak_memory_mb": 20881.548828125,
-            "end_to_end_latency_ms": 22888.281362131238,
-            "prefill_latency_ms": 21675.062409136444,
-            "decode_latency_ms": 1213.2189529947937
+            "end_to_end_latency_ms": 14425.825947895646,
+            "prefill_latency_ms": 13253.42480884865,
+            "decode_latency_ms": 1172.4011390469968
         },
         {
             "index": 34,
@@ -403,9 +406,9 @@
             "output": "Nothing.",
             "ground_truth": "HER BEAUTY",
             "peak_memory_mb": 20702.4384765625,
-            "end_to_end_latency_ms": 4684.423703001812,
-            "prefill_latency_ms": 4415.583780966699,
-            "decode_latency_ms": 268.839922035113
+            "end_to_end_latency_ms": 3995.524602010846,
+            "prefill_latency_ms": 3732.035737950355,
+            "decode_latency_ms": 263.4888640604913
         },
         {
             "index": 35,
@@ -414,9 +417,9 @@
             "output": "He feared she might give him up.",
             "ground_truth": "Her husband abused her",
             "peak_memory_mb": 22071.380859375,
-            "end_to_end_latency_ms": 31951.75805897452,
-            "prefill_latency_ms": 30831.270704977214,
-            "decode_latency_ms": 1120.487353997305
+            "end_to_end_latency_ms": 18430.200688075274,
+            "prefill_latency_ms": 17358.258069027215,
+            "decode_latency_ms": 1071.942619048059
         },
         {
             "index": 36,
@@ -425,9 +428,9 @@
             "output": "He was shot by Benson.",
             "ground_truth": "He is killed by police.",
             "peak_memory_mb": 25849.9501953125,
-            "end_to_end_latency_ms": 72409.66777293943,
-            "prefill_latency_ms": 71018.54274910875,
-            "decode_latency_ms": 1391.125023830682
+            "end_to_end_latency_ms": 36515.339436009526,
+            "prefill_latency_ms": 35156.94862790406,
+            "decode_latency_ms": 1358.3908081054688
         },
         {
             "index": 37,
@@ -436,9 +439,9 @@
             "output": "To rest and recover Holmes's health.",
             "ground_truth": "For Holmes' health.",
             "peak_memory_mb": 25494.341796875,
-            "end_to_end_latency_ms": 5893.3190810494125,
-            "prefill_latency_ms": 5313.812036067247,
-            "decode_latency_ms": 579.5070449821651
+            "end_to_end_latency_ms": 4896.457584109157,
+            "prefill_latency_ms": 4325.756852980703,
+            "decode_latency_ms": 570.7007311284542
         },
         {
             "index": 38,
@@ -447,9 +450,9 @@
             "output": "Vigo the Carpathian.",
             "ground_truth": "Vigo",
             "peak_memory_mb": 23500.62109375,
-            "end_to_end_latency_ms": 46380.50435204059,
-            "prefill_latency_ms": 45017.62134791352,
-            "decode_latency_ms": 1362.8830041270703
+            "end_to_end_latency_ms": 24988.47662913613,
+            "prefill_latency_ms": 23804.769472917542,
+            "decode_latency_ms": 1183.7071562185884
         },
         {
             "index": 39,
@@ -458,9 +461,9 @@
             "output": "By her father, who wants her to be a mere machine, and by her French waiting-maid.",
             "ground_truth": "Nature and books",
             "peak_memory_mb": 23279.73583984375,
-            "end_to_end_latency_ms": 23499.087668955326,
-            "prefill_latency_ms": 21759.15668089874,
-            "decode_latency_ms": 1739.9309880565852
+            "end_to_end_latency_ms": 14883.143559098244,
+            "prefill_latency_ms": 13150.35024494864,
+            "decode_latency_ms": 1732.7933141496032
         },
         {
             "index": 40,
@@ -469,9 +472,9 @@
             "output": "Dana's bathtub.",
             "ground_truth": "museum",
             "peak_memory_mb": 23499.7861328125,
-            "end_to_end_latency_ms": 46098.13836496323,
-            "prefill_latency_ms": 45017.19483290799,
-            "decode_latency_ms": 1080.9435320552438
+            "end_to_end_latency_ms": 24705.241434043273,
+            "prefill_latency_ms": 23681.711805053055,
+            "decode_latency_ms": 1023.529628990218
         },
         {
             "index": 41,
@@ -480,9 +483,9 @@
             "output": "Sadako, the daughter of Shizuko and Professor Ikuma.",
             "ground_truth": "Sadako Yamamura made the tape psionically.",
             "peak_memory_mb": 23279.42919921875,
-            "end_to_end_latency_ms": 24998.718106886372,
-            "prefill_latency_ms": 23641.34649094194,
-            "decode_latency_ms": 1357.3716159444302
+            "end_to_end_latency_ms": 15564.255591016263,
+            "prefill_latency_ms": 14223.462305031717,
+            "decode_latency_ms": 1340.793285984546
         },
         {
             "index": 42,
@@ -491,9 +494,9 @@
             "output": "The Prison of Socrates.",
             "ground_truth": "In Socrates Cell?",
             "peak_memory_mb": 20956.482421875,
-            "end_to_end_latency_ms": 3336.332506965846,
-            "prefill_latency_ms": 2942.211341811344,
-            "decode_latency_ms": 394.1211651545018
+            "end_to_end_latency_ms": 3045.8385429810733,
+            "prefill_latency_ms": 2654.1705960407853,
+            "decode_latency_ms": 391.66794694028795
         },
         {
             "index": 43,
@@ -502,9 +505,9 @@
             "output": "She threw herself into Mt. Mihara.",
             "ground_truth": "She committed suicide.",
             "peak_memory_mb": 21135.09326171875,
-            "end_to_end_latency_ms": 24715.913588181138,
-            "prefill_latency_ms": 23609.43776811473,
-            "decode_latency_ms": 1106.4758200664073
+            "end_to_end_latency_ms": 15138.472341001034,
+            "prefill_latency_ms": 14045.802532928064,
+            "decode_latency_ms": 1092.6698080729693
         },
         {
             "index": 44,
@@ -513,20 +516,20 @@
             "output": "There is no Bennett Landsmann or Seth Lazurus in the story.",
             "ground_truth": "because he's a lawyer",
             "peak_memory_mb": 20956.693359375,
-            "end_to_end_latency_ms": 5389.958599116653,
-            "prefill_latency_ms": 4575.050957966596,
-            "decode_latency_ms": 814.9076411500573
+            "end_to_end_latency_ms": 4554.682871792465,
+            "prefill_latency_ms": 3738.174879923463,
+            "decode_latency_ms": 816.5079918690026
         },
         {
             "index": 45,
             "score": 0.7000000000000001,
             "metric": "F1",
-            "output": "He wore the same soft black hat and gray waterproof cape consistently.",
+            "output": "He wore the same soft black hat and waterproof gray cape constantly.",
             "ground_truth": "always wore a grey waterproof cape and a soft black hat",
             "peak_memory_mb": 18297.630859375,
-            "end_to_end_latency_ms": 8172.150786034763,
-            "prefill_latency_ms": 7282.006673049182,
-            "decode_latency_ms": 890.1441129855812
+            "end_to_end_latency_ms": 6408.184258034453,
+            "prefill_latency_ms": 5533.355108927935,
+            "decode_latency_ms": 874.8291491065174
         },
         {
             "index": 46,
@@ -535,20 +538,20 @@
             "output": "Baron Frederick of Trutz-Drachen.",
             "ground_truth": "Baron Frederick",
             "peak_memory_mb": 21852.19482421875,
-            "end_to_end_latency_ms": 30408.642719965428,
-            "prefill_latency_ms": 29204.30282386951,
-            "decode_latency_ms": 1204.3398960959166
+            "end_to_end_latency_ms": 17828.167173080146,
+            "prefill_latency_ms": 16653.797389939427,
+            "decode_latency_ms": 1174.369783140719
         },
         {
             "index": 47,
-            "score": 0.0,
+            "score": 0.08695652173913045,
             "metric": "F1",
-            "output": "By her father, with the expectation of a large fortune, making her a mere machine.",
+            "output": "By her father, who wants her to be a mere machine, and by her French waiting-maid.",
             "ground_truth": "She educates herself using books and the natural world.",
             "peak_memory_mb": 21651.79931640625,
-            "end_to_end_latency_ms": 23550.98953610286,
-            "prefill_latency_ms": 21954.233990050852,
-            "decode_latency_ms": 1596.7555460520089
+            "end_to_end_latency_ms": 15020.762635860592,
+            "prefill_latency_ms": 13294.985791901127,
+            "decode_latency_ms": 1725.7768439594656
         },
         {
             "index": 48,
@@ -557,20 +560,20 @@
             "output": "Baptist",
             "ground_truth": "The Baptist's supported Dave. ",
             "peak_memory_mb": 20701.24560546875,
-            "end_to_end_latency_ms": 13325.132763944566,
-            "prefill_latency_ms": 12813.424020074308,
-            "decode_latency_ms": 511.70874387025833
+            "end_to_end_latency_ms": 9136.942187091336,
+            "prefill_latency_ms": 8637.10769917816,
+            "decode_latency_ms": 499.8344879131764
         },
         {
             "index": 49,
             "score": 0.0,
             "metric": "F1",
-            "output": "Her family, including her mother, brother, and siblings.",
+            "output": "Her family and their plans to travel to the south of France.",
             "ground_truth": "Louis Leverett",
             "peak_memory_mb": 19314.01611328125,
-            "end_to_end_latency_ms": 10141.280974028632,
-            "prefill_latency_ms": 9205.2175370045,
-            "decode_latency_ms": 936.0634370241314
+            "end_to_end_latency_ms": 7613.433295860887,
+            "prefill_latency_ms": 6679.537471849471,
+            "decode_latency_ms": 933.8958240114152
         },
         {
             "index": 50,
@@ -579,31 +582,31 @@
             "output": "Good vs. evil, loyalty, redemption, and the power of forgiveness.",
             "ground_truth": "Be responsible,keep your word and be wise and peaceful.",
             "peak_memory_mb": 21853.9111328125,
-            "end_to_end_latency_ms": 30971.251984126866,
-            "prefill_latency_ms": 29446.39173313044,
-            "decode_latency_ms": 1524.8602509964257
+            "end_to_end_latency_ms": 18167.452128836885,
+            "prefill_latency_ms": 16644.76944389753,
+            "decode_latency_ms": 1522.6826849393547
         },
         {
             "index": 51,
-            "score": 0.1875,
+            "score": 0.0,
             "metric": "F1",
-            "output": "She dies a week after watching the cursed videotape.",
+            "output": "She dies.",
             "ground_truth": "Tomoko reveals that they watched a video tape with several friends a week ago and received a strange call after watching it. Tomoko is killed while Masami watches.",
             "peak_memory_mb": 21652.525390625,
-            "end_to_end_latency_ms": 24760.76028798707,
-            "prefill_latency_ms": 23593.284491915256,
-            "decode_latency_ms": 1167.4757960718125
+            "end_to_end_latency_ms": 14718.811812112108,
+            "prefill_latency_ms": 14065.455330070108,
+            "decode_latency_ms": 653.3564820419997
         },
         {
             "index": 52,
-            "score": 0.2857142857142857,
+            "score": 0.2,
             "metric": "F1",
-            "output": "They were twisted into a rictus of fear, with their mouths open and eyes wide and glassy.",
+            "output": "They were twisted into a rictus of fear, with mouths open and eyes wide and glassy.",
             "ground_truth": "Their faces twisted in fear.",
-            "peak_memory_mb": 21136.55078125,
-            "end_to_end_latency_ms": 25507.295520044863,
-            "prefill_latency_ms": 23616.563447052613,
-            "decode_latency_ms": 1890.7320729922503
+            "peak_memory_mb": 21136.546875,
+            "end_to_end_latency_ms": 15981.36411095038,
+            "prefill_latency_ms": 14201.036917977035,
+            "decode_latency_ms": 1780.3271929733455
         },
         {
             "index": 53,
@@ -612,20 +615,20 @@
             "output": "The Sinsings.",
             "ground_truth": "The Sinsings",
             "peak_memory_mb": 21761.4560546875,
-            "end_to_end_latency_ms": 28613.113711820915,
-            "prefill_latency_ms": 27733.95201098174,
-            "decode_latency_ms": 879.1617008391768
+            "end_to_end_latency_ms": 16869.79303508997,
+            "prefill_latency_ms": 16036.787234945223,
+            "decode_latency_ms": 833.0058001447469
         },
         {
             "index": 54,
-            "score": 0.4,
+            "score": 0.25,
             "metric": "F1",
-            "output": "Abby and Ursula.",
+            "output": "Abby.",
             "ground_truth": "His girlfriend Abby and her sister Linda.",
-            "peak_memory_mb": 25850.36376953125,
-            "end_to_end_latency_ms": 72573.31378781237,
-            "prefill_latency_ms": 71167.1372759156,
-            "decode_latency_ms": 1406.1765118967742
+            "peak_memory_mb": 25850.35205078125,
+            "end_to_end_latency_ms": 36275.36748186685,
+            "prefill_latency_ms": 35178.00453794189,
+            "decode_latency_ms": 1097.3629439249635
         },
         {
             "index": 55,
@@ -634,20 +637,20 @@
             "output": "They sing a song.",
             "ground_truth": "Take their clothes off",
             "peak_memory_mb": 25495.013671875,
-            "end_to_end_latency_ms": 46330.84900001995,
-            "prefill_latency_ms": 45263.530689058825,
-            "decode_latency_ms": 1067.3183109611273
+            "end_to_end_latency_ms": 24834.22813890502,
+            "prefill_latency_ms": 23794.734484050423,
+            "decode_latency_ms": 1039.4936548545957
         },
         {
             "index": 56,
-            "score": 0.1818181818181818,
+            "score": 0.16666666666666669,
             "metric": "F1",
-            "output": "He lectures, writes, and talks, but his work is often unproductive and he relies on the Mulvilles for support.",
+            "output": "He lectures as a philosopher and writer, but his actual work is often hindered by his lack of will and dignity.",
             "ground_truth": "He does not work.",
             "peak_memory_mb": 23280.39501953125,
-            "end_to_end_latency_ms": 24206.791173201054,
-            "prefill_latency_ms": 22140.67889819853,
-            "decode_latency_ms": 2066.1122750025243
+            "end_to_end_latency_ms": 15051.155298948288,
+            "prefill_latency_ms": 13129.795843036845,
+            "decode_latency_ms": 1921.3594559114426
         },
         {
             "index": 57,
@@ -656,9 +659,9 @@
             "output": "William Falder",
             "ground_truth": "Falder",
             "peak_memory_mb": 22072.1884765625,
-            "end_to_end_latency_ms": 32137.589400867,
-            "prefill_latency_ms": 31368.12062584795,
-            "decode_latency_ms": 769.4687750190496
+            "end_to_end_latency_ms": 18102.2315279115,
+            "prefill_latency_ms": 17365.608260966837,
+            "decode_latency_ms": 736.6232669446617
         },
         {
             "index": 58,
@@ -667,9 +670,9 @@
             "output": "There is no Laura in the story, and there is no mention of her attending a medical school.",
             "ground_truth": "Laura attends Harvard Medical school.",
             "peak_memory_mb": 21841.6748046875,
-            "end_to_end_latency_ms": 5581.7246998194605,
-            "prefill_latency_ms": 4482.556825969368,
-            "decode_latency_ms": 1099.1678738500923
+            "end_to_end_latency_ms": 4820.399696007371,
+            "prefill_latency_ms": 3739.4762048497796,
+            "decode_latency_ms": 1080.9234911575913
         },
         {
             "index": 59,
@@ -678,9 +681,9 @@
             "output": "A bill for the job.",
             "ground_truth": "key to the city",
             "peak_memory_mb": 23500.6171875,
-            "end_to_end_latency_ms": 46892.03444193117,
-            "prefill_latency_ms": 45747.040898073465,
-            "decode_latency_ms": 1144.9935438577086
+            "end_to_end_latency_ms": 24930.359433870763,
+            "prefill_latency_ms": 23826.777922920883,
+            "decode_latency_ms": 1103.5815109498799
         },
         {
             "index": 60,
@@ -689,9 +692,9 @@
             "output": "A sexless, beautiful being with the grace of both male and female.",
             "ground_truth": "Hermaphroditus.",
             "peak_memory_mb": 23279.37939453125,
-            "end_to_end_latency_ms": 3326.527694007382,
-            "prefill_latency_ms": 2550.511630019173,
-            "decode_latency_ms": 776.0160639882088
+            "end_to_end_latency_ms": 3076.718700118363,
+            "prefill_latency_ms": 2327.4487061426044,
+            "decode_latency_ms": 749.2699939757586
         },
         {
             "index": 61,
@@ -699,10 +702,10 @@
             "metric": "F1",
             "output": "In the cupboard of Madame de Merret's room.",
             "ground_truth": "In a closet.",
-            "peak_memory_mb": 17372.517578125,
-            "end_to_end_latency_ms": 4855.154072167352,
-            "prefill_latency_ms": 4178.932039067149,
-            "decode_latency_ms": 676.2220331002027
+            "peak_memory_mb": 17371.66650390625,
+            "end_to_end_latency_ms": 4146.347947185859,
+            "prefill_latency_ms": 3486.1095510423183,
+            "decode_latency_ms": 660.2383961435407
         },
         {
             "index": 62,
@@ -711,20 +714,20 @@
             "output": "His son, Gabe.",
             "ground_truth": "His son Gabe",
             "peak_memory_mb": 26791.76513671875,
-            "end_to_end_latency_ms": 87791.63069790229,
-            "prefill_latency_ms": 86055.51287089474,
-            "decode_latency_ms": 1736.117827007547
+            "end_to_end_latency_ms": 42203.19049200043,
+            "prefill_latency_ms": 40732.21793491393,
+            "decode_latency_ms": 1470.9725570864975
         },
         {
             "index": 63,
             "score": 0.0,
             "metric": "F1",
-            "output": "Sanford and Altamont.",
+            "output": "Sanford",
             "ground_truth": "Eatonville",
             "peak_memory_mb": 26441.56005859375,
-            "end_to_end_latency_ms": 13745.60816003941,
-            "prefill_latency_ms": 13011.435016058385,
-            "decode_latency_ms": 734.1731439810246
+            "end_to_end_latency_ms": 9093.273137928918,
+            "prefill_latency_ms": 8653.307185973972,
+            "decode_latency_ms": 439.9659519549459
         },
         {
             "index": 64,
@@ -733,9 +736,9 @@
             "output": "Dr. Richards in his carriage.",
             "ground_truth": "The housekeeper",
             "peak_memory_mb": 19313.60009765625,
-            "end_to_end_latency_ms": 5873.364333994687,
-            "prefill_latency_ms": 5339.6796837914735,
-            "decode_latency_ms": 533.6846502032131
+            "end_to_end_latency_ms": 4812.401978997514,
+            "prefill_latency_ms": 4294.864218914881,
+            "decode_latency_ms": 517.5377600826323
         },
         {
             "index": 65,
@@ -744,9 +747,9 @@
             "output": "The demons, or his own inner self, in a symbolic and metaphysical sense.",
             "ground_truth": "One of his fellow soldiers.",
             "peak_memory_mb": 26788.05029296875,
-            "end_to_end_latency_ms": 88359.41176000051,
-            "prefill_latency_ms": 85860.18077703193,
-            "decode_latency_ms": 2499.2309829685837
+            "end_to_end_latency_ms": 43429.435634985566,
+            "prefill_latency_ms": 40968.44606893137,
+            "decode_latency_ms": 2460.989566054195
         },
         {
             "index": 66,
@@ -755,20 +758,20 @@
             "output": "There is no character named Landsmann in the story.",
             "ground_truth": "A lawyer",
             "peak_memory_mb": 26440.85546875,
-            "end_to_end_latency_ms": 5189.7705481387675,
-            "prefill_latency_ms": 4489.015846978873,
-            "decode_latency_ms": 700.7547011598945
+            "end_to_end_latency_ms": 4443.48615501076,
+            "prefill_latency_ms": 3770.051224855706,
+            "decode_latency_ms": 673.4349301550537
         },
         {
             "index": 67,
-            "score": 0.6,
+            "score": 0.7272727272727272,
             "metric": "F1",
-            "output": "Buy a good house with it.",
+            "output": "Use it to buy a good house.",
             "ground_truth": "Keep it to buy a house ",
-            "peak_memory_mb": 20862.6484375,
-            "end_to_end_latency_ms": 22950.193980010226,
-            "prefill_latency_ms": 22049.173805164173,
-            "decode_latency_ms": 901.0201748460531
+            "peak_memory_mb": 20862.65234375,
+            "end_to_end_latency_ms": 14041.002187179402,
+            "prefill_latency_ms": 13096.256563207135,
+            "decode_latency_ms": 944.7456239722669
         },
         {
             "index": 68,
@@ -777,9 +780,9 @@
             "output": "Her mother, Mrs. Abraham C. Mope, at Bangor, Maine.",
             "ground_truth": "Her mother.",
             "peak_memory_mb": 20694.85107421875,
-            "end_to_end_latency_ms": 10612.895163940266,
-            "prefill_latency_ms": 9457.564907846972,
-            "decode_latency_ms": 1155.3302560932934
+            "end_to_end_latency_ms": 7806.828239932656,
+            "prefill_latency_ms": 6670.84516887553,
+            "decode_latency_ms": 1135.983071057126
         },
         {
             "index": 69,
@@ -788,9 +791,9 @@
             "output": "One week.",
             "ground_truth": "7 days",
             "peak_memory_mb": 21138.130859375,
-            "end_to_end_latency_ms": 24525.603057118133,
-            "prefill_latency_ms": 23851.555712986737,
-            "decode_latency_ms": 674.0473441313952
+            "end_to_end_latency_ms": 14688.299590023234,
+            "prefill_latency_ms": 14024.435790022835,
+            "decode_latency_ms": 663.8638000003994
         },
         {
             "index": 70,
@@ -799,9 +802,9 @@
             "output": "Virginie Vervelle",
             "ground_truth": "Virginie.",
             "peak_memory_mb": 20958.0087890625,
-            "end_to_end_latency_ms": 4582.448707893491,
-            "prefill_latency_ms": 4167.863102862611,
-            "decode_latency_ms": 414.5856050308794
+            "end_to_end_latency_ms": 3902.756077935919,
+            "prefill_latency_ms": 3512.1771211270243,
+            "decode_latency_ms": 390.5789568088949
         },
         {
             "index": 71,
@@ -810,9 +813,9 @@
             "output": "She makes a copy of the cursed videotape and shows it to someone else.",
             "ground_truth": "She made a copy of the tape and gives it to her husband to study.",
             "peak_memory_mb": 21138.181640625,
-            "end_to_end_latency_ms": 25412.699164124206,
-            "prefill_latency_ms": 23925.0991740264,
-            "decode_latency_ms": 1487.5999900978059
+            "end_to_end_latency_ms": 15651.484216097742,
+            "prefill_latency_ms": 14182.409462984651,
+            "decode_latency_ms": 1469.074753113091
         },
         {
             "index": 72,
@@ -821,9 +824,9 @@
             "output": "A man in black with a pale face.",
             "ground_truth": "A monk.",
             "peak_memory_mb": 20958.3095703125,
-            "end_to_end_latency_ms": 22428.461698116735,
-            "prefill_latency_ms": 21370.689290110022,
-            "decode_latency_ms": 1057.7724080067128
+            "end_to_end_latency_ms": 13867.267064051703,
+            "prefill_latency_ms": 12879.279437940568,
+            "decode_latency_ms": 987.9876261111349
         },
         {
             "index": 73,
@@ -832,9 +835,9 @@
             "output": "They agree to obey the laws of the state.",
             "ground_truth": "Comply with the laws",
             "peak_memory_mb": 20649.1083984375,
-            "end_to_end_latency_ms": 3539.565696148202,
-            "prefill_latency_ms": 2967.423574067652,
-            "decode_latency_ms": 572.1421220805496
+            "end_to_end_latency_ms": 3226.654114900157,
+            "prefill_latency_ms": 2658.8867839891464,
+            "decode_latency_ms": 567.7673309110105
         },
         {
             "index": 74,
@@ -843,9 +846,9 @@
             "output": "He jumps from a height.",
             "ground_truth": "He throws himself down the stairs",
             "peak_memory_mb": 22071.373046875,
-            "end_to_end_latency_ms": 32488.044034922495,
-            "prefill_latency_ms": 31530.73561913334,
-            "decode_latency_ms": 957.3084157891572
+            "end_to_end_latency_ms": 18287.796625168994,
+            "prefill_latency_ms": 17351.228724000975,
+            "decode_latency_ms": 936.5679011680186
         },
         {
             "index": 75,
@@ -854,9 +857,9 @@
             "output": "Making a copy of the tape and showing it to someone else within a week.",
             "ground_truth": "Making a copy and showing it to someone else",
             "peak_memory_mb": 21841.6640625,
-            "end_to_end_latency_ms": 25121.776944957674,
-            "prefill_latency_ms": 23636.00551104173,
-            "decode_latency_ms": 1485.771433915943
+            "end_to_end_latency_ms": 15514.469817979261,
+            "prefill_latency_ms": 14049.7521169018,
+            "decode_latency_ms": 1464.7177010774612
         },
         {
             "index": 76,
@@ -865,20 +868,20 @@
             "output": "Brenda Tregennis.",
             "ground_truth": "Brenda.",
             "peak_memory_mb": 20957.8759765625,
-            "end_to_end_latency_ms": 5813.994014868513,
-            "prefill_latency_ms": 5288.106299005449,
-            "decode_latency_ms": 525.8877158630639
+            "end_to_end_latency_ms": 4974.738824181259,
+            "prefill_latency_ms": 4454.300743993372,
+            "decode_latency_ms": 520.438080187887
         },
         {
             "index": 77,
-            "score": 0.08333333333333334,
+            "score": 0.12903225806451615,
             "metric": "F1",
-            "output": "They pretended to leave and then secretly returned to demolish the wall.",
+            "output": "They pretended to leave the closet as empty, and then Madam de Merret secretly broke it open with a pick.",
             "ground_truth": "They stayed in the bedroom for a few days with the sounds of her lover trapped. ",
             "peak_memory_mb": 17681.9853515625,
-            "end_to_end_latency_ms": 4931.865639053285,
-            "prefill_latency_ms": 4130.606153048575,
-            "decode_latency_ms": 801.2594860047102
+            "end_to_end_latency_ms": 4715.207414003089,
+            "prefill_latency_ms": 3471.6740660369396,
+            "decode_latency_ms": 1243.5333479661494
         },
         {
             "index": 78,
@@ -887,9 +890,9 @@
             "output": "She would ramble about the garden, admire the flowers, and play with the dogs.",
             "ground_truth": "With her charity",
             "peak_memory_mb": 20884.46728515625,
-            "end_to_end_latency_ms": 23132.35732796602,
-            "prefill_latency_ms": 21577.423630980775,
-            "decode_latency_ms": 1554.9336969852448
+            "end_to_end_latency_ms": 14663.299924926832,
+            "prefill_latency_ms": 13107.94215486385,
+            "decode_latency_ms": 1555.357770062983
         },
         {
             "index": 79,
@@ -898,9 +901,9 @@
             "output": "A security guard.",
             "ground_truth": "A security guard.",
             "peak_memory_mb": 26563.69970703125,
-            "end_to_end_latency_ms": 83872.4655371625,
-            "prefill_latency_ms": 82527.38666115329,
-            "decode_latency_ms": 1345.078876009211
+            "end_to_end_latency_ms": 40949.59135400131,
+            "prefill_latency_ms": 39684.54601895064,
+            "decode_latency_ms": 1265.0453350506723
         },
         {
             "index": 80,
@@ -909,9 +912,9 @@
             "output": "Radioactive gases.",
             "ground_truth": "Radioactive gas",
             "peak_memory_mb": 26261.5,
-            "end_to_end_latency_ms": 28953.04361800663,
-            "prefill_latency_ms": 28158.757532015443,
-            "decode_latency_ms": 794.2860859911889
+            "end_to_end_latency_ms": 16972.05123398453,
+            "prefill_latency_ms": 16198.679794091731,
+            "decode_latency_ms": 773.3714398927987
         },
         {
             "index": 81,
@@ -920,20 +923,20 @@
             "output": "Izu Pacific Land.",
             "ground_truth": "Izu Oshima Island",
             "peak_memory_mb": 21513.587890625,
-            "end_to_end_latency_ms": 24310.945957899094,
-            "prefill_latency_ms": 23518.21597595699,
-            "decode_latency_ms": 792.7299819421023
+            "end_to_end_latency_ms": 14825.254346011207,
+            "prefill_latency_ms": 14047.361176926643,
+            "decode_latency_ms": 777.8931690845639
         },
         {
             "index": 82,
             "score": 0.25,
             "metric": "F1",
-            "output": "The suitcase full of cocaine.",
+            "output": "Alabama's things and the cocaine.",
             "ground_truth": "A bag that contains cocaine",
             "peak_memory_mb": 26564.5537109375,
-            "end_to_end_latency_ms": 85962.04925701022,
-            "prefill_latency_ms": 84479.03167805634,
-            "decode_latency_ms": 1483.017578953877
+            "end_to_end_latency_ms": 41264.32008901611,
+            "prefill_latency_ms": 39701.31262904033,
+            "decode_latency_ms": 1563.007459975779
         },
         {
             "index": 83,
@@ -942,20 +945,20 @@
             "output": "A hundred years.",
             "ground_truth": "100.",
             "peak_memory_mb": 26261.3193359375,
-            "end_to_end_latency_ms": 7911.857153056189,
-            "prefill_latency_ms": 7471.758283907548,
-            "decode_latency_ms": 440.0988691486418
+            "end_to_end_latency_ms": 6023.155226139352,
+            "prefill_latency_ms": 5584.6960339695215,
+            "decode_latency_ms": 438.4591921698302
         },
         {
             "index": 84,
             "score": 0.0,
             "metric": "F1",
-            "output": "He stepped on the watering-pot and spilled its contents.",
+            "output": "He stepped on the watering-pot and upset its contents.",
             "ground_truth": "Holmes accidentally kicks over a water pot",
             "peak_memory_mb": 18189.3779296875,
-            "end_to_end_latency_ms": 6023.818883113563,
-            "prefill_latency_ms": 5266.287660924718,
-            "decode_latency_ms": 757.5312221888453
+            "end_to_end_latency_ms": 5062.22596205771,
+            "prefill_latency_ms": 4303.257188061252,
+            "decode_latency_ms": 758.9687739964575
         },
         {
             "index": 85,
@@ -964,9 +967,9 @@
             "output": "A flatterer of all men and a servant of all men.",
             "ground_truth": "He would turn into an outlaw.",
             "peak_memory_mb": 17681.951171875,
-            "end_to_end_latency_ms": 3649.341339012608,
-            "prefill_latency_ms": 2913.3982290513813,
-            "decode_latency_ms": 735.9431099612266
+            "end_to_end_latency_ms": 3370.9294891450554,
+            "prefill_latency_ms": 2632.65965715982,
+            "decode_latency_ms": 738.2698319852352
         },
         {
             "index": 86,
@@ -975,9 +978,9 @@
             "output": "Hector Frome",
             "ground_truth": "Frome",
             "peak_memory_mb": 22071.365234375,
-            "end_to_end_latency_ms": 31410.23277794011,
-            "prefill_latency_ms": 30588.334379019216,
-            "decode_latency_ms": 821.8983989208937
+            "end_to_end_latency_ms": 18296.33988114074,
+            "prefill_latency_ms": 17493.472759146243,
+            "decode_latency_ms": 802.8671219944954
         },
         {
             "index": 87,
@@ -986,9 +989,9 @@
             "output": "Dana Barrett.",
             "ground_truth": "Dana",
             "peak_memory_mb": 23499.36865234375,
-            "end_to_end_latency_ms": 46052.61082784273,
-            "prefill_latency_ms": 45049.087213817984,
-            "decode_latency_ms": 1003.5236140247434
+            "end_to_end_latency_ms": 24642.51695899293,
+            "prefill_latency_ms": 23687.431537080556,
+            "decode_latency_ms": 955.0854219123721
         },
         {
             "index": 88,
@@ -997,9 +1000,9 @@
             "output": "His lack of recognition and posterity.",
             "ground_truth": "the his works are not recognized",
             "peak_memory_mb": 23279.01318359375,
-            "end_to_end_latency_ms": 8031.791074899957,
-            "prefill_latency_ms": 7389.702582964674,
-            "decode_latency_ms": 642.088491935283
+            "end_to_end_latency_ms": 6188.0490991752595,
+            "prefill_latency_ms": 5552.541511133313,
+            "decode_latency_ms": 635.5075880419463
         },
         {
             "index": 89,
@@ -1008,9 +1011,9 @@
             "output": "Eliza",
             "ground_truth": "Eliza",
             "peak_memory_mb": 20878.98583984375,
-            "end_to_end_latency_ms": 22652.1912610624,
-            "prefill_latency_ms": 22056.005015969276,
-            "decode_latency_ms": 596.1862450931221
+            "end_to_end_latency_ms": 13684.541906928644,
+            "prefill_latency_ms": 13111.481450963765,
+            "decode_latency_ms": 573.0604559648782
         },
         {
             "index": 90,
@@ -1019,20 +1022,20 @@
             "output": "The Bad Bloods.",
             "ground_truth": "The Hans",
             "peak_memory_mb": 21763.95166015625,
-            "end_to_end_latency_ms": 29712.078762007877,
-            "prefill_latency_ms": 28827.443693066016,
-            "decode_latency_ms": 884.6350689418614
+            "end_to_end_latency_ms": 17014.59867809899,
+            "prefill_latency_ms": 16181.578359100968,
+            "decode_latency_ms": 833.0203189980239
         },
         {
             "index": 91,
-            "score": 0.4,
+            "score": 0.2,
             "metric": "F1",
-            "output": "At the Lyric Theater, watching a Sonny Chiba movie.",
+            "output": "At the movies, watching a Sonny Chiba triple feature.",
             "ground_truth": "At a Detroit theater. ",
             "peak_memory_mb": 26565.123046875,
-            "end_to_end_latency_ms": 88661.55823809095,
-            "prefill_latency_ms": 86424.45140215568,
-            "decode_latency_ms": 2237.106835935265
+            "end_to_end_latency_ms": 41715.18642199226,
+            "prefill_latency_ms": 39645.49794886261,
+            "decode_latency_ms": 2069.688473129645
         },
         {
             "index": 92,
@@ -1041,20 +1044,20 @@
             "output": "He is her son.",
             "ground_truth": "It's her son",
             "peak_memory_mb": 26261.8603515625,
-            "end_to_end_latency_ms": 47073.47414596006,
-            "prefill_latency_ms": 45982.59691009298,
-            "decode_latency_ms": 1090.877235867083
+            "end_to_end_latency_ms": 24743.333068909124,
+            "prefill_latency_ms": 23707.354535115883,
+            "decode_latency_ms": 1035.9785337932408
         },
         {
             "index": 93,
             "score": 0.0,
             "metric": "F1",
-            "output": "He will be received as an enemy by the laws in the world below.",
+            "output": "He will be received as an enemy by the Laws of the world below.",
             "ground_truth": "It would have a negative effect",
             "peak_memory_mb": 23278.73486328125,
-            "end_to_end_latency_ms": 3783.5403189528733,
-            "prefill_latency_ms": 2968.97825691849,
-            "decode_latency_ms": 814.5620620343834
+            "end_to_end_latency_ms": 3604.8452560789883,
+            "prefill_latency_ms": 2822.4593470804393,
+            "decode_latency_ms": 782.385908998549
         },
         {
             "index": 94,
@@ -1063,9 +1066,9 @@
             "output": "opened the closet door.",
             "ground_truth": "Opened the closet",
             "peak_memory_mb": 17374.95166015625,
-            "end_to_end_latency_ms": 4577.664812095463,
-            "prefill_latency_ms": 4177.417949074879,
-            "decode_latency_ms": 400.246863020584
+            "end_to_end_latency_ms": 3883.7196598760784,
+            "prefill_latency_ms": 3492.8511139005423,
+            "decode_latency_ms": 390.8685459755361
         },
         {
             "index": 95,
@@ -1073,21 +1076,21 @@
             "metric": "F1",
             "output": "No one in the story.",
             "ground_truth": "Seth Lazarus",
-            "peak_memory_mb": 17558.361328125,
-            "end_to_end_latency_ms": 4868.544576922432,
-            "prefill_latency_ms": 4413.9981479384005,
-            "decode_latency_ms": 454.5464289840311
+            "peak_memory_mb": 17558.33984375,
+            "end_to_end_latency_ms": 4142.056171782315,
+            "prefill_latency_ms": 3698.6207359004766,
+            "decode_latency_ms": 443.4354358818382
         },
         {
             "index": 96,
             "score": 0.0,
             "metric": "F1",
-            "output": "He says that Grassou paints \"cheeks with pink tones like a perfumer's sign\".",
+            "output": "He says that Grassou is one of the most honest fellows on earth, and that he now saves about ten thousand francs a year and capitalizes the interest.",
             "ground_truth": "A grand master.",
-            "peak_memory_mb": 17435.91064453125,
-            "end_to_end_latency_ms": 5231.169054051861,
-            "prefill_latency_ms": 4183.340361109003,
-            "decode_latency_ms": 1047.8286929428577
+            "peak_memory_mb": 17435.88916015625,
+            "end_to_end_latency_ms": 5133.821930037811,
+            "prefill_latency_ms": 3486.306741135195,
+            "decode_latency_ms": 1647.5151889026165
         },
         {
             "index": 97,
@@ -1096,9 +1099,9 @@
             "output": "His lack of recognition as a true artist by his peers.",
             "ground_truth": "He doesn't feel he is a true artist.",
             "peak_memory_mb": 17404.884765625,
-            "end_to_end_latency_ms": 4984.958470799029,
-            "prefill_latency_ms": 4233.416517963633,
-            "decode_latency_ms": 751.5419528353959
+            "end_to_end_latency_ms": 4195.035869954154,
+            "prefill_latency_ms": 3489.690577145666,
+            "decode_latency_ms": 705.345292808488
         },
         {
             "index": 98,
@@ -1107,9 +1110,9 @@
             "output": "Blue Lou Boyle",
             "ground_truth": "A mobster named \"Blue Lou Boyle\". ",
             "peak_memory_mb": 26565.9912109375,
-            "end_to_end_latency_ms": 86043.89458103105,
-            "prefill_latency_ms": 84837.49489299953,
-            "decode_latency_ms": 1206.3996880315244
+            "end_to_end_latency_ms": 40803.50290588103,
+            "prefill_latency_ms": 39624.31151000783,
+            "decode_latency_ms": 1179.1913958732039
         },
         {
             "index": 99,
@@ -1118,20 +1121,20 @@
             "output": "He failed to report himself and was suspected of obtaining employment with a forged reference.",
             "ground_truth": "He failed to report",
             "peak_memory_mb": 26261.86474609375,
-            "end_to_end_latency_ms": 32712.698637973517,
-            "prefill_latency_ms": 31025.02707997337,
-            "decode_latency_ms": 1687.6715580001473
+            "end_to_end_latency_ms": 19153.639433905482,
+            "prefill_latency_ms": 17541.211606003344,
+            "decode_latency_ms": 1612.4278279021382
         },
         {
             "index": 100,
             "score": 1.0,
             "metric": "F1",
-            "output": "Ruth Honeywill",
+            "output": "Ruth Honeywill.",
             "ground_truth": "Ruth Honeywill",
-            "peak_memory_mb": 22073.01953125,
-            "end_to_end_latency_ms": 33486.9133119937,
-            "prefill_latency_ms": 32656.462942948565,
-            "decode_latency_ms": 830.4503690451384
+            "peak_memory_mb": 22073.0234375,
+            "end_to_end_latency_ms": 18245.26315089315,
+            "prefill_latency_ms": 17375.715978909284,
+            "decode_latency_ms": 869.5471719838679
         },
         {
             "index": 101,
@@ -1140,9 +1143,9 @@
             "output": "Tallahassee",
             "ground_truth": "Mexico.",
             "peak_memory_mb": 26563.984375,
-            "end_to_end_latency_ms": 84380.2784299478,
-            "prefill_latency_ms": 83072.90624501184,
-            "decode_latency_ms": 1307.3721849359572
+            "end_to_end_latency_ms": 40989.912108983845,
+            "prefill_latency_ms": 39719.17378692888,
+            "decode_latency_ms": 1270.7383220549673
         },
         {
             "index": 102,
@@ -1151,9 +1154,9 @@
             "output": "\"My child, I have not always treated you with kindness— God forgive me!\"",
             "ground_truth": "That she marry Charles",
             "peak_memory_mb": 26261.466796875,
-            "end_to_end_latency_ms": 23106.862949207425,
-            "prefill_latency_ms": 21633.72026500292,
-            "decode_latency_ms": 1473.142684204504
+            "end_to_end_latency_ms": 14736.881674034521,
+            "prefill_latency_ms": 13309.162721037865,
+            "decode_latency_ms": 1427.7189529966563
         },
         {
             "index": 103,
@@ -1162,31 +1165,31 @@
             "output": "Are you prepared?",
             "ground_truth": "If Antonius has succeeded in his \"one meaningful deed.\"",
             "peak_memory_mb": 20875.35400390625,
-            "end_to_end_latency_ms": 22023.302062880248,
-            "prefill_latency_ms": 21319.741705898196,
-            "decode_latency_ms": 703.5603569820523
+            "end_to_end_latency_ms": 13549.390729051083,
+            "prefill_latency_ms": 12865.181762957945,
+            "decode_latency_ms": 684.2089660931379
         },
         {
             "index": 104,
             "score": 0.0,
             "metric": "F1",
-            "output": "No one is mentioned defending Lazarus during his murder trial in the provided story.",
+            "output": "No one is mentioned defending Lazarus during his murder trial in the provided text.",
             "ground_truth": "bennett landsmann",
             "peak_memory_mb": 20649.318359375,
-            "end_to_end_latency_ms": 5372.6105249952525,
-            "prefill_latency_ms": 4465.052111074328,
-            "decode_latency_ms": 907.5584139209241
+            "end_to_end_latency_ms": 4638.859828934073,
+            "prefill_latency_ms": 3738.072207896039,
+            "decode_latency_ms": 900.7876210380346
         },
         {
             "index": 105,
             "score": 0.0,
             "metric": "F1",
-            "output": "The value of responsibility and the importance of watching over others.",
+            "output": "The value of responsibility and the importance of caring for others.",
             "ground_truth": "accomplishments",
             "peak_memory_mb": 20879.4384765625,
-            "end_to_end_latency_ms": 23116.75409716554,
-            "prefill_latency_ms": 21912.809740984812,
-            "decode_latency_ms": 1203.9443561807275
+            "end_to_end_latency_ms": 14305.141051998362,
+            "prefill_latency_ms": 13115.323814097792,
+            "decode_latency_ms": 1189.81723790057
         },
         {
             "index": 106,
@@ -1195,9 +1198,9 @@
             "output": "A man in black with a pale face.",
             "ground_truth": "a priest",
             "peak_memory_mb": 20874.9599609375,
-            "end_to_end_latency_ms": 22241.416229866445,
-            "prefill_latency_ms": 21246.760834939778,
-            "decode_latency_ms": 994.6553949266672
+            "end_to_end_latency_ms": 13877.23495787941,
+            "prefill_latency_ms": 12885.655847843736,
+            "decode_latency_ms": 991.5791100356728
         },
         {
             "index": 107,
@@ -1206,9 +1209,9 @@
             "output": "To save Ann from poverty and destruction.",
             "ground_truth": "Because her mother requested it on her deathbed.",
             "peak_memory_mb": 20878.18212890625,
-            "end_to_end_latency_ms": 22672.319405013695,
-            "prefill_latency_ms": 21674.18869608082,
-            "decode_latency_ms": 998.1307089328766
+            "end_to_end_latency_ms": 14051.701437914744,
+            "prefill_latency_ms": 13121.61423289217,
+            "decode_latency_ms": 930.0872050225735
         },
         {
             "index": 108,
@@ -1217,20 +1220,20 @@
             "output": "Dr. Leon Sterndale.",
             "ground_truth": "the devil",
             "peak_memory_mb": 20701.09814453125,
-            "end_to_end_latency_ms": 5952.399265952408,
-            "prefill_latency_ms": 5412.863170960918,
-            "decode_latency_ms": 539.5360949914902
+            "end_to_end_latency_ms": 4968.8475301954895,
+            "prefill_latency_ms": 4446.8116401694715,
+            "decode_latency_ms": 522.035890026018
         },
         {
             "index": 109,
             "score": 0.08695652173913045,
             "metric": "F1",
-            "output": "He meets Michael Newman on a deserted West Side Pier, where Michael has been tracking Jacob for a long time.",
+            "output": "Jacob first meets Michael Newman on a deserted West Side pier, where Michael is tracking him for a clinical study.",
             "ground_truth": "He treated him in Vietnam.",
             "peak_memory_mb": 26789.203125,
-            "end_to_end_latency_ms": 88547.21176507883,
-            "prefill_latency_ms": 85624.22104808502,
-            "decode_latency_ms": 2922.9907169938087
+            "end_to_end_latency_ms": 43715.28559108265,
+            "prefill_latency_ms": 40809.41111012362,
+            "decode_latency_ms": 2905.874480959028
         },
         {
             "index": 110,
@@ -1239,9 +1242,9 @@
             "output": "American.",
             "ground_truth": "American",
             "peak_memory_mb": 26441.32470703125,
-            "end_to_end_latency_ms": 22284.06857815571,
-            "prefill_latency_ms": 21695.530513999984,
-            "decode_latency_ms": 588.5380641557276
+            "end_to_end_latency_ms": 13708.710898878053,
+            "prefill_latency_ms": 13142.007871996611,
+            "decode_latency_ms": 566.7030268814415
         },
         {
             "index": 111,
@@ -1250,9 +1253,9 @@
             "output": "The Sinsings' airship.",
             "ground_truth": "The Han gang.",
             "peak_memory_mb": 21760.640625,
-            "end_to_end_latency_ms": 28878.130374941975,
-            "prefill_latency_ms": 27830.556585919112,
-            "decode_latency_ms": 1047.573789022863
+            "end_to_end_latency_ms": 17188.21167317219,
+            "prefill_latency_ms": 16163.867702009156,
+            "decode_latency_ms": 1024.3439711630344
         },
         {
             "index": 112,
@@ -1261,20 +1264,20 @@
             "output": "When Ryuji is killed by Sadako.",
             "ground_truth": "After her husband calls her",
             "peak_memory_mb": 21513.587890625,
-            "end_to_end_latency_ms": 24876.046139048412,
-            "prefill_latency_ms": 23832.17932912521,
-            "decode_latency_ms": 1043.8668099232018
+            "end_to_end_latency_ms": 15104.151156032458,
+            "prefill_latency_ms": 14061.821866082028,
+            "decode_latency_ms": 1042.3292899504304
         },
         {
             "index": 113,
-            "score": 0.125,
+            "score": 0.28571428571428575,
             "metric": "F1",
-            "output": "Miss Anvoy, and also Lady Coxon, who had been established in Britain for years.",
+            "output": "Miss Anvoy and Lady Coxon.",
             "ground_truth": "Ruth Anvoy",
             "peak_memory_mb": 20957.6533203125,
-            "end_to_end_latency_ms": 23400.859577814117,
-            "prefill_latency_ms": 21773.93032796681,
-            "decode_latency_ms": 1626.9292498473078
+            "end_to_end_latency_ms": 14057.65427602455,
+            "prefill_latency_ms": 13117.56179202348,
+            "decode_latency_ms": 940.0924840010703
         },
         {
             "index": 114,
@@ -1283,20 +1286,20 @@
             "output": "They go to the store to buy her a drink of soda water.",
             "ground_truth": "They both return to Eatonville, Florida. ",
             "peak_memory_mb": 20694.25244140625,
-            "end_to_end_latency_ms": 13953.924983041361,
-            "prefill_latency_ms": 12833.661813056096,
-            "decode_latency_ms": 1120.2631699852645
+            "end_to_end_latency_ms": 9736.615404952317,
+            "prefill_latency_ms": 8636.594082927331,
+            "decode_latency_ms": 1100.0213220249861
         },
         {
             "index": 115,
-            "score": 0.4,
+            "score": 0.16666666666666669,
             "metric": "F1",
-            "output": "The Middle Ages in Germany.",
+            "output": "The Middle Ages in Germany, specifically in the regions of Drachenhausen and Trutz-Drachen.",
             "ground_truth": "Germany",
-            "peak_memory_mb": 21853.048828125,
-            "end_to_end_latency_ms": 30170.632194029167,
-            "prefill_latency_ms": 29225.93296901323,
-            "decode_latency_ms": 944.6992250159383
+            "peak_memory_mb": 21853.107421875,
+            "end_to_end_latency_ms": 18697.536538820714,
+            "prefill_latency_ms": 16648.412921000272,
+            "decode_latency_ms": 2049.1236178204417
         },
         {
             "index": 116,
@@ -1305,31 +1308,31 @@
             "output": "He is killed by Sadako.",
             "ground_truth": "has a heart attack",
             "peak_memory_mb": 21652.1953125,
-            "end_to_end_latency_ms": 24612.181639065966,
-            "prefill_latency_ms": 23689.753957092762,
-            "decode_latency_ms": 922.427681973204
+            "end_to_end_latency_ms": 14963.348936056718,
+            "prefill_latency_ms": 14065.757050877437,
+            "decode_latency_ms": 897.5918851792812
         },
         {
             "index": 117,
             "score": 0.0,
             "metric": "F1",
-            "output": "He had one or two places, but he couldn't keep them.",
+            "output": "He had one or two places, but he didn't keep them.",
             "ground_truth": "James How & Son ",
             "peak_memory_mb": 22073.05859375,
-            "end_to_end_latency_ms": 32438.81271407008,
-            "prefill_latency_ms": 30949.162950040773,
-            "decode_latency_ms": 1489.6497640293092
+            "end_to_end_latency_ms": 18844.640793045983,
+            "prefill_latency_ms": 17376.519545912743,
+            "decode_latency_ms": 1468.12124713324
         },
         {
             "index": 118,
-            "score": 0.3333333333333333,
+            "score": 0.4,
             "metric": "F1",
-            "output": "He is living with the Mulvilles at their Wimbledon home.",
+            "output": "He is living with the Mulvilles at Wimbledon.",
             "ground_truth": "Lives with mulvilles ",
             "peak_memory_mb": 21842.2998046875,
-            "end_to_end_latency_ms": 23093.45406712964,
-            "prefill_latency_ms": 21802.409215131775,
-            "decode_latency_ms": 1291.0448519978672
+            "end_to_end_latency_ms": 14231.671845074743,
+            "prefill_latency_ms": 13116.251830011606,
+            "decode_latency_ms": 1115.4200150631368
         },
         {
             "index": 119,
@@ -1338,20 +1341,20 @@
             "output": "In the cupboard of Madame de Merret's room.",
             "ground_truth": "In the closet",
             "peak_memory_mb": 20693.892578125,
-            "end_to_end_latency_ms": 4816.137880785391,
-            "prefill_latency_ms": 4150.52171680145,
-            "decode_latency_ms": 665.6161639839411
+            "end_to_end_latency_ms": 4161.45122400485,
+            "prefill_latency_ms": 3503.9797120261937,
+            "decode_latency_ms": 657.471511978656
         },
         {
             "index": 120,
-            "score": 0.35294117647058826,
+            "score": 0.26666666666666666,
             "metric": "F1",
-            "output": "He feels his work is mocked by artists.",
+            "output": "He feels belittled by the artistic community.",
             "ground_truth": "He feels as the he is still not a real artist.",
-            "peak_memory_mb": 17407.76806640625,
-            "end_to_end_latency_ms": 4722.130662994459,
-            "prefill_latency_ms": 4141.139892861247,
-            "decode_latency_ms": 580.9907701332122
+            "peak_memory_mb": 17407.77197265625,
+            "end_to_end_latency_ms": 4119.13633486256,
+            "prefill_latency_ms": 3498.7611130345613,
+            "decode_latency_ms": 620.3752218279988
         },
         {
             "index": 121,
@@ -1360,20 +1363,20 @@
             "output": "A cursed videotape.",
             "ground_truth": "A videotape which is cursed and is rumored to bear a curse that kills the viewer in seven days after watching.",
             "peak_memory_mb": 21135.07373046875,
-            "end_to_end_latency_ms": 24443.235404789448,
-            "prefill_latency_ms": 23600.799313979223,
-            "decode_latency_ms": 842.4360908102244
+            "end_to_end_latency_ms": 14974.898233776912,
+            "prefill_latency_ms": 14197.644525906071,
+            "decode_latency_ms": 777.253707870841
         },
         {
             "index": 122,
             "score": 0.6666666666666666,
             "metric": "F1",
-            "output": "Call girl",
+            "output": "Call girl.",
             "ground_truth": "Alabama was a call girl.",
             "peak_memory_mb": 26563.69970703125,
-            "end_to_end_latency_ms": 83457.90737285279,
-            "prefill_latency_ms": 82330.23153897375,
-            "decode_latency_ms": 1127.6758338790387
+            "end_to_end_latency_ms": 40848.47152791917,
+            "prefill_latency_ms": 39667.32360096648,
+            "decode_latency_ms": 1181.1479269526899
         },
         {
             "index": 123,
@@ -1382,9 +1385,9 @@
             "output": "A demon in disguise.",
             "ground_truth": "The woman he dated and lived with after the war.",
             "peak_memory_mb": 26788.6337890625,
-            "end_to_end_latency_ms": 85634.86711191945,
-            "prefill_latency_ms": 84229.88058486953,
-            "decode_latency_ms": 1404.986527049914
+            "end_to_end_latency_ms": 42167.93683799915,
+            "prefill_latency_ms": 40796.29695811309,
+            "decode_latency_ms": 1371.639879886061
         },
         {
             "index": 124,
@@ -1393,53 +1396,53 @@
             "output": "Memories, attachments, and the soul.",
             "ground_truth": "Your memories and attachments.",
             "peak_memory_mb": 26789.7724609375,
-            "end_to_end_latency_ms": 85466.46028291434,
-            "prefill_latency_ms": 83709.61262402125,
-            "decode_latency_ms": 1756.8476588930935
+            "end_to_end_latency_ms": 42692.31255608611,
+            "prefill_latency_ms": 40962.50031911768,
+            "decode_latency_ms": 1729.812236968428
         },
         {
             "index": 125,
-            "score": 0.16666666666666669,
+            "score": 0.09523809523809525,
             "metric": "F1",
-            "output": "The implied contract that he had made with the laws of Athens.",
+            "output": "The implied contract that he had made with the laws of Athens by living there for seventy years and not leaving.",
             "ground_truth": "The social contract.",
             "peak_memory_mb": 26441.06396484375,
-            "end_to_end_latency_ms": 3662.0403109118342,
-            "prefill_latency_ms": 2952.767886919901,
-            "decode_latency_ms": 709.2724239919335
+            "end_to_end_latency_ms": 3755.187069065869,
+            "prefill_latency_ms": 2676.023384090513,
+            "decode_latency_ms": 1079.1636849753559
         },
         {
             "index": 126,
-            "score": 0.15384615384615385,
+            "score": 0.125,
             "metric": "F1",
-            "output": "He says Grassou is one of the most honest fellows on earth, who lays by twenty thousand francs a year with his notary.",
+            "output": "He says that Grassou is one of the most honest fellows on earth, who has laid by thirty-six thousand francs, and now saves about ten thousand francs a year.",
             "ground_truth": "he calls Grassou a grand master",
-            "peak_memory_mb": 17410.04345703125,
-            "end_to_end_latency_ms": 5537.467677146196,
-            "prefill_latency_ms": 4112.1621360071,
-            "decode_latency_ms": 1425.305541139096
+            "peak_memory_mb": 17409.52783203125,
+            "end_to_end_latency_ms": 5280.8260400779545,
+            "prefill_latency_ms": 3493.4735528659075,
+            "decode_latency_ms": 1787.352487212047
         },
         {
             "index": 127,
-            "score": 0.0,
+            "score": 0.5,
             "metric": "F1",
-            "output": "Sister Jones, Sister Taylor, and Sister Thomas.",
+            "output": "Elder Simms.",
             "ground_truth": "Elder Childers",
-            "peak_memory_mb": 19449.14111328125,
-            "end_to_end_latency_ms": 13582.688712980598,
-            "prefill_latency_ms": 12647.083506919444,
-            "decode_latency_ms": 935.6052060611546
+            "peak_memory_mb": 19449.11767578125,
+            "end_to_end_latency_ms": 9219.430954195559,
+            "prefill_latency_ms": 8616.098684025928,
+            "decode_latency_ms": 603.3322701696306
         },
         {
             "index": 128,
             "score": 0.0,
             "metric": "F1",
-            "output": "Locking him up in the Mayor's barn until the trial in the Baptist Church on Monday.",
+            "output": "Locking up in the Mayor's barn until the trial in the Baptist Church on Monday.",
             "ground_truth": "Jim was banished from his town for two years.",
-            "peak_memory_mb": 19450.4130859375,
-            "end_to_end_latency_ms": 14050.394041929394,
-            "prefill_latency_ms": 12647.131462115794,
-            "decode_latency_ms": 1403.2625798135996
+            "peak_memory_mb": 19450.4091796875,
+            "end_to_end_latency_ms": 10093.240597983822,
+            "prefill_latency_ms": 8621.990317944437,
+            "decode_latency_ms": 1471.250280039385
         },
         {
             "index": 129,
@@ -1448,9 +1451,9 @@
             "output": "Her son.",
             "ground_truth": "Eliza favors her son over her daughter.",
             "peak_memory_mb": 20880.64404296875,
-            "end_to_end_latency_ms": 22150.704364059493,
-            "prefill_latency_ms": 21504.49368613772,
-            "decode_latency_ms": 646.210677921772
+            "end_to_end_latency_ms": 13776.331279892474,
+            "prefill_latency_ms": 13141.360634937882,
+            "decode_latency_ms": 634.970644954592
         },
         {
             "index": 130,
@@ -1459,9 +1462,9 @@
             "output": "Otto of the Silver Hand.",
             "ground_truth": "His wise counsel and peaceful nature",
             "peak_memory_mb": 21853.8798828125,
-            "end_to_end_latency_ms": 29877.409839071333,
-            "prefill_latency_ms": 28838.511299109086,
-            "decode_latency_ms": 1038.898539962247
+            "end_to_end_latency_ms": 17659.306839108467,
+            "prefill_latency_ms": 16671.081703156233,
+            "decode_latency_ms": 988.2251359522343
         },
         {
             "index": 131,
@@ -1470,42 +1473,42 @@
             "output": "Her son, Edward.",
             "ground_truth": "Her son",
             "peak_memory_mb": 21652.501953125,
-            "end_to_end_latency_ms": 22401.926307938993,
-            "prefill_latency_ms": 21610.526639968157,
-            "decode_latency_ms": 791.3996679708362
+            "end_to_end_latency_ms": 13865.155231906101,
+            "prefill_latency_ms": 13116.655577905476,
+            "decode_latency_ms": 748.499654000625
         },
         {
             "index": 132,
-            "score": 0.5,
+            "score": 1.0,
             "metric": "F1",
-            "output": "The Wyoming Valley, near the town of Wilkes-Barre.",
+            "output": "The Wyoming Valley.",
             "ground_truth": "Wyoming Valley",
-            "peak_memory_mb": 21761.90087890625,
-            "end_to_end_latency_ms": 28851.09279002063,
-            "prefill_latency_ms": 27449.540300061926,
-            "decode_latency_ms": 1401.5524899587035
+            "peak_memory_mb": 21761.86572265625,
+            "end_to_end_latency_ms": 16794.298422988504,
+            "prefill_latency_ms": 16027.453071903437,
+            "decode_latency_ms": 766.8453510850668
         },
         {
             "index": 133,
-            "score": 0.4,
+            "score": 0.23076923076923075,
             "metric": "F1",
-            "output": "He thought Soames was a figment of Max Beerbohm's brain.",
+            "output": "He thought it was a labud sattire, but not without value as showing how seriously the young men of the eighteen-nineties took themselves.",
             "ground_truth": "He thought he was a fictional character.",
             "peak_memory_mb": 21513.83203125,
-            "end_to_end_latency_ms": 8257.01402593404,
-            "prefill_latency_ms": 7232.667419826612,
-            "decode_latency_ms": 1024.3466061074287
+            "end_to_end_latency_ms": 7463.965441100299,
+            "prefill_latency_ms": 5706.47116494365,
+            "decode_latency_ms": 1757.494276156649
         },
         {
             "index": 134,
-            "score": 0.15384615384615383,
+            "score": 0.4210526315789474,
             "metric": "F1",
-            "output": "A family quarrel over money.",
+            "output": "A family quarrel over the division of the money from their tin-mining venture.",
             "ground_truth": "The matter of the division of the proceeds from selling the family business.",
             "peak_memory_mb": 18190.203125,
-            "end_to_end_latency_ms": 5769.460438052192,
-            "prefill_latency_ms": 5246.3082580361515,
-            "decode_latency_ms": 523.1521800160408
+            "end_to_end_latency_ms": 5273.949864087626,
+            "prefill_latency_ms": 4289.757590042427,
+            "decode_latency_ms": 984.1922740451992
         },
         {
             "index": 135,
@@ -1514,20 +1517,20 @@
             "output": "There is no character named Dwyer in the story, and there is no mention of an in vitro clinic being opened.",
             "ground_truth": "Hawaii",
             "peak_memory_mb": 17682.1611328125,
-            "end_to_end_latency_ms": 5700.565003789961,
-            "prefill_latency_ms": 4388.563476968557,
-            "decode_latency_ms": 1312.0015268214047
+            "end_to_end_latency_ms": 5029.352203011513,
+            "prefill_latency_ms": 3722.0344280358404,
+            "decode_latency_ms": 1307.3177749756724
         },
         {
             "index": 136,
-            "score": 0.5,
+            "score": 0.8,
             "metric": "F1",
-            "output": "Pierre Grassou, a decorated and successful artist.",
+            "output": "Pierre Grassou, the painter.",
             "ground_truth": "Pierre Grassou.",
-            "peak_memory_mb": 17436.22119140625,
-            "end_to_end_latency_ms": 4774.5611511636525,
-            "prefill_latency_ms": 4100.924785016105,
-            "decode_latency_ms": 673.636366147548
+            "peak_memory_mb": 17436.21923828125,
+            "end_to_end_latency_ms": 4027.9841870069504,
+            "prefill_latency_ms": 3498.731564031914,
+            "decode_latency_ms": 529.2526229750365
         },
         {
             "index": 137,
@@ -1536,9 +1539,9 @@
             "output": "She was having an affair with a mysterious stranger.",
             "ground_truth": "That she was having an affair. ",
             "peak_memory_mb": 17374.5576171875,
-            "end_to_end_latency_ms": 4732.4176440015435,
-            "prefill_latency_ms": 4101.180784869939,
-            "decode_latency_ms": 631.2368591316044
+            "end_to_end_latency_ms": 4115.712094120681,
+            "prefill_latency_ms": 3495.9880399983376,
+            "decode_latency_ms": 619.7240541223437
         },
         {
             "index": 138,
@@ -1547,9 +1550,9 @@
             "output": "Shoumon bakkari, boukon ga kuru zo.",
             "ground_truth": "Frolic in brine, goblins be thine",
             "peak_memory_mb": 21136.10205078125,
-            "end_to_end_latency_ms": 24669.045044109225,
-            "prefill_latency_ms": 23376.616130117327,
-            "decode_latency_ms": 1292.4289139918983
+            "end_to_end_latency_ms": 15346.450451062992,
+            "prefill_latency_ms": 14057.228880003095,
+            "decode_latency_ms": 1289.2215710598975
         },
         {
             "index": 139,
@@ -1558,31 +1561,31 @@
             "output": "An old, abandoned, and mysterious house.",
             "ground_truth": "The ruins of an abandoned manor. ",
             "peak_memory_mb": 20957.1826171875,
-            "end_to_end_latency_ms": 4809.842196991667,
-            "prefill_latency_ms": 4239.418228156865,
-            "decode_latency_ms": 570.4239688348025
+            "end_to_end_latency_ms": 4075.454832985997,
+            "prefill_latency_ms": 3504.5877068769187,
+            "decode_latency_ms": 570.8671261090785
         },
         {
             "index": 140,
-            "score": 0.3636363636363636,
+            "score": 0.0,
             "metric": "F1",
-            "output": "Their engagement was put in jeopardy.",
+            "output": "Ruth Anvoy gave Saltram thirty pounds.",
             "ground_truth": "They broke off their engagement.",
-            "peak_memory_mb": 20865.1298828125,
-            "end_to_end_latency_ms": 22311.531896004453,
-            "prefill_latency_ms": 21424.14186312817,
-            "decode_latency_ms": 887.3900328762829
+            "peak_memory_mb": 20865.1416015625,
+            "end_to_end_latency_ms": 14168.745747068897,
+            "prefill_latency_ms": 13107.06539801322,
+            "decode_latency_ms": 1061.6803490556777
         },
         {
             "index": 141,
-            "score": 0.0,
+            "score": 0.8,
             "metric": "F1",
-            "output": "Miss Vane.",
+            "output": "Miss Violet Ray.",
             "ground_truth": "Violet Ray.",
             "peak_memory_mb": 20695.84130859375,
-            "end_to_end_latency_ms": 9622.939929133281,
-            "prefill_latency_ms": 9139.778665965423,
-            "decode_latency_ms": 483.1612631678581
+            "end_to_end_latency_ms": 7319.424035027623,
+            "prefill_latency_ms": 6834.267989033833,
+            "decode_latency_ms": 485.15604599379003
         },
         {
             "index": 142,
@@ -1591,9 +1594,9 @@
             "output": "Bill.",
             "ground_truth": "Bill",
             "peak_memory_mb": 25853.8408203125,
-            "end_to_end_latency_ms": 71518.28801492229,
-            "prefill_latency_ms": 70481.5657788422,
-            "decode_latency_ms": 1036.7222360800952
+            "end_to_end_latency_ms": 36114.33902196586,
+            "prefill_latency_ms": 35103.63729507662,
+            "decode_latency_ms": 1010.7017268892378
         },
         {
             "index": 143,
@@ -1602,9 +1605,9 @@
             "output": "Asakawa and Yoichi.",
             "ground_truth": "Masami and Tomoko",
             "peak_memory_mb": 25496.30810546875,
-            "end_to_end_latency_ms": 24468.789119040594,
-            "prefill_latency_ms": 23554.714835016057,
-            "decode_latency_ms": 914.0742840245366
+            "end_to_end_latency_ms": 14996.578430058435,
+            "prefill_latency_ms": 14087.61477493681,
+            "decode_latency_ms": 908.9636551216245
         },
         {
             "index": 144,
@@ -1613,9 +1616,9 @@
             "output": "The First World War.",
             "ground_truth": "World War 1, or The Great War",
             "peak_memory_mb": 21761.4560546875,
-            "end_to_end_latency_ms": 28536.932735005394,
-            "prefill_latency_ms": 27689.141171053052,
-            "decode_latency_ms": 847.7915639523417
+            "end_to_end_latency_ms": 16878.651439910755,
+            "prefill_latency_ms": 16040.439730044454,
+            "decode_latency_ms": 838.2117098663002
         },
         {
             "index": 145,
@@ -1624,9 +1627,9 @@
             "output": "He discovers that his own paintings are hanging in the Vervelle's home, sold to them by Elie Magus at a fraction of their true value.",
             "ground_truth": "A number of his own forgeries.",
             "peak_memory_mb": 21513.5888671875,
-            "end_to_end_latency_ms": 5728.006906108931,
-            "prefill_latency_ms": 4123.961887089536,
-            "decode_latency_ms": 1604.045019019395
+            "end_to_end_latency_ms": 5246.090370928869,
+            "prefill_latency_ms": 3519.0048220101744,
+            "decode_latency_ms": 1727.0855489186943
         },
         {
             "index": 146,
@@ -1635,20 +1638,20 @@
             "output": "Paul's death.",
             "ground_truth": "Paul's death.",
             "peak_memory_mb": 26790.9111328125,
-            "end_to_end_latency_ms": 85687.90111294948,
-            "prefill_latency_ms": 84350.97055393271,
-            "decode_latency_ms": 1336.9305590167642
+            "end_to_end_latency_ms": 42088.755836943164,
+            "prefill_latency_ms": 40806.16221996024,
+            "decode_latency_ms": 1282.593616982922
         },
         {
             "index": 147,
             "score": 0.0,
             "metric": "F1",
-            "output": "A parent and a child.",
+            "output": "A father and a master.",
             "ground_truth": "Citizens are bound to laws the same as children are bound to parents.",
             "peak_memory_mb": 26441.22509765625,
-            "end_to_end_latency_ms": 3359.700352884829,
-            "prefill_latency_ms": 2966.236050007865,
-            "decode_latency_ms": 393.4643028769642
+            "end_to_end_latency_ms": 3087.5063149724156,
+            "prefill_latency_ms": 2694.727342808619,
+            "decode_latency_ms": 392.7789721637964
         },
         {
             "index": 148,
@@ -1657,9 +1660,9 @@
             "output": "The coffin, its last cradle.",
             "ground_truth": "A coffin.",
             "peak_memory_mb": 16931.322265625,
-            "end_to_end_latency_ms": 2967.8891650401056,
-            "prefill_latency_ms": 2500.9930240921676,
-            "decode_latency_ms": 466.89614094793797
+            "end_to_end_latency_ms": 2786.216621985659,
+            "prefill_latency_ms": 2308.335587149486,
+            "decode_latency_ms": 477.88103483617306
         },
         {
             "index": 149,
@@ -1668,20 +1671,20 @@
             "output": "2419 A.D.",
             "ground_truth": "2419",
             "peak_memory_mb": 21762.283203125,
-            "end_to_end_latency_ms": 29208.258684026077,
-            "prefill_latency_ms": 28331.72166789882,
-            "decode_latency_ms": 876.5370161272585
+            "end_to_end_latency_ms": 16850.807593902573,
+            "prefill_latency_ms": 16016.459048027173,
+            "decode_latency_ms": 834.3485458754003
         },
         {
             "index": 150,
-            "score": 0.3157894736842105,
+            "score": 0.09523809523809525,
             "metric": "F1",
-            "output": "Baron Conrad's castle is attacked by Baron Henry of Trutz-Drachen.",
+            "output": "Baron Conrad is summoned to the Imperial Court to answer charges against him.",
             "ground_truth": "The nephew of Baron Frederick storms the castle and kidnaps Otto",
-            "peak_memory_mb": 21854.74609375,
-            "end_to_end_latency_ms": 31161.95068298839,
-            "prefill_latency_ms": 29471.27499198541,
-            "decode_latency_ms": 1690.6756910029799
+            "peak_memory_mb": 21854.73828125,
+            "end_to_end_latency_ms": 18334.29782721214,
+            "prefill_latency_ms": 16815.72344712913,
+            "decode_latency_ms": 1518.5743800830096
         },
         {
             "index": 151,
@@ -1690,9 +1693,9 @@
             "output": "A Mexican stand-off develops between the gangsters, their bodyguards, and the police.",
             "ground_truth": "Elliot accidentally reveals himself as an informant.",
             "peak_memory_mb": 26564.5537109375,
-            "end_to_end_latency_ms": 84065.92250382528,
-            "prefill_latency_ms": 81555.69975287654,
-            "decode_latency_ms": 2510.222750948742
+            "end_to_end_latency_ms": 42218.538276152685,
+            "prefill_latency_ms": 39715.31967911869,
+            "decode_latency_ms": 2503.2185970339924
         },
         {
             "index": 152,
@@ -1701,9 +1704,9 @@
             "output": "Eatonville.",
             "ground_truth": "Story did not mention",
             "peak_memory_mb": 26261.4208984375,
-            "end_to_end_latency_ms": 13118.888253113255,
-            "prefill_latency_ms": 12568.75286414288,
-            "decode_latency_ms": 550.1353889703751
+            "end_to_end_latency_ms": 9211.530165048316,
+            "prefill_latency_ms": 8658.06254488416,
+            "decode_latency_ms": 553.467620164156
         },
         {
             "index": 153,
@@ -1712,20 +1715,20 @@
             "output": "The late Comtesse de Merret.",
             "ground_truth": "Madame de Merret",
             "peak_memory_mb": 19313.73193359375,
-            "end_to_end_latency_ms": 4825.902258977294,
-            "prefill_latency_ms": 4251.184172928333,
-            "decode_latency_ms": 574.7180860489607
+            "end_to_end_latency_ms": 4074.476897949353,
+            "prefill_latency_ms": 3499.4354869704694,
+            "decode_latency_ms": 575.0414109788835
         },
         {
             "index": 154,
             "score": 0.0,
             "metric": "F1",
-            "output": "To marry him as soon as Miss Anvoy gave up her idea of the Endowment.",
+            "output": "To marry him after Miss Anvoy gave up her idea of the Endowment.",
             "ground_truth": "Keep the money.",
-            "peak_memory_mb": 20861.8642578125,
-            "end_to_end_latency_ms": 22896.6370660346,
-            "prefill_latency_ms": 21348.546696128324,
-            "decode_latency_ms": 1548.0903699062765
+            "peak_memory_mb": 20861.8564453125,
+            "end_to_end_latency_ms": 14526.327757863328,
+            "prefill_latency_ms": 13101.254822919145,
+            "decode_latency_ms": 1425.0729349441826
         },
         {
             "index": 155,
@@ -1734,9 +1737,9 @@
             "output": "By visiting the reading-room of the British Museum in the year 1997.",
             "ground_truth": "By selling his soul to the devil.",
             "peak_memory_mb": 20694.48095703125,
-            "end_to_end_latency_ms": 8219.568877946585,
-            "prefill_latency_ms": 7167.793479980901,
-            "decode_latency_ms": 1051.7753979656845
+            "end_to_end_latency_ms": 6704.618197865784,
+            "prefill_latency_ms": 5682.963996892795,
+            "decode_latency_ms": 1021.6542009729892
         },
         {
             "index": 156,
@@ -1745,9 +1748,9 @@
             "output": "The God Apis.",
             "ground_truth": "Apis",
             "peak_memory_mb": 18191.78466796875,
-            "end_to_end_latency_ms": 2829.5465540140867,
-            "prefill_latency_ms": 2495.1117108576,
-            "decode_latency_ms": 334.43484315648675
+            "end_to_end_latency_ms": 2637.819512048736,
+            "prefill_latency_ms": 2302.1601480431855,
+            "decode_latency_ms": 335.65936400555074
         },
         {
             "index": 157,
@@ -1756,9 +1759,9 @@
             "output": "Two people, Mortimer Tregennis and the doctor.",
             "ground_truth": "2",
             "peak_memory_mb": 17790.7197265625,
-            "end_to_end_latency_ms": 5984.297977993265,
-            "prefill_latency_ms": 5228.4118321258575,
-            "decode_latency_ms": 755.8861458674073
+            "end_to_end_latency_ms": 5041.34795605205,
+            "prefill_latency_ms": 4288.232335122302,
+            "decode_latency_ms": 753.1156209297478
         },
         {
             "index": 158,
@@ -1767,9 +1770,9 @@
             "output": "Alabama Whitman",
             "ground_truth": "Alabama Whitman",
             "peak_memory_mb": 26563.4150390625,
-            "end_to_end_latency_ms": 81816.326726228,
-            "prefill_latency_ms": 80619.42348722368,
-            "decode_latency_ms": 1196.903239004314
+            "end_to_end_latency_ms": 40805.884956847876,
+            "prefill_latency_ms": 39627.51297396608,
+            "decode_latency_ms": 1178.3719828817993
         },
         {
             "index": 159,
@@ -1778,9 +1781,9 @@
             "output": "Bill.",
             "ground_truth": "Bill",
             "peak_memory_mb": 26261.8203125,
-            "end_to_end_latency_ms": 71199.31235117838,
-            "prefill_latency_ms": 70158.68495916948,
-            "decode_latency_ms": 1040.6273920089006
+            "end_to_end_latency_ms": 36276.86148695648,
+            "prefill_latency_ms": 35260.65220683813,
+            "decode_latency_ms": 1016.2092801183462
         },
         {
             "index": 160,
@@ -1789,9 +1792,9 @@
             "output": "The Vervelle family.",
             "ground_truth": "The greats",
             "peak_memory_mb": 25494.9697265625,
-            "end_to_end_latency_ms": 4563.507061917335,
-            "prefill_latency_ms": 4126.808430068195,
-            "decode_latency_ms": 436.69863184913993
+            "end_to_end_latency_ms": 3965.05638002418,
+            "prefill_latency_ms": 3530.236625112593,
+            "decode_latency_ms": 434.81975491158664
         },
         {
             "index": 161,
@@ -1800,20 +1803,20 @@
             "output": "\"Cumbaya\"",
             "ground_truth": "Auld Lang Syne",
             "peak_memory_mb": 23501.4365234375,
-            "end_to_end_latency_ms": 45194.10668197088,
-            "prefill_latency_ms": 44224.25186797045,
-            "decode_latency_ms": 969.8548140004277
+            "end_to_end_latency_ms": 24623.323813080788,
+            "prefill_latency_ms": 23666.547432076186,
+            "decode_latency_ms": 956.7763810046017
         },
         {
             "index": 162,
-            "score": 0.5833333333333334,
+            "score": 0.8571428571428571,
             "metric": "F1",
-            "output": "That artists laugh at his work and that his name is a term of contempt in the studios.",
+            "output": "That artists laugh at his work.",
             "ground_truth": "That artists laugh at and ridicule his work.",
             "peak_memory_mb": 23279.76025390625,
-            "end_to_end_latency_ms": 5141.906657023355,
-            "prefill_latency_ms": 4114.82446687296,
-            "decode_latency_ms": 1027.082190150395
+            "end_to_end_latency_ms": 4009.4101820141077,
+            "prefill_latency_ms": 3528.035858878866,
+            "decode_latency_ms": 481.37432313524187
         },
         {
             "index": 163,
@@ -1822,9 +1825,9 @@
             "output": "Her husband, who is later revealed to be Charles, the son of her father's friend.",
             "ground_truth": "Charles",
             "peak_memory_mb": 20877.8115234375,
-            "end_to_end_latency_ms": 22969.061776064336,
-            "prefill_latency_ms": 21329.696743981913,
-            "decode_latency_ms": 1639.3650320824236
+            "end_to_end_latency_ms": 14727.447812911123,
+            "prefill_latency_ms": 13116.16609687917,
+            "decode_latency_ms": 1611.2817160319537
         },
         {
             "index": 164,
@@ -1833,9 +1836,9 @@
             "output": "An old, abandoned, and mysterious house.",
             "ground_truth": "Abandon manor",
             "peak_memory_mb": 20700.89990234375,
-            "end_to_end_latency_ms": 4833.529690979049,
-            "prefill_latency_ms": 4253.20514687337,
-            "decode_latency_ms": 580.3245441056788
+            "end_to_end_latency_ms": 4080.8692830614746,
+            "prefill_latency_ms": 3508.554554078728,
+            "decode_latency_ms": 572.3147289827466
         },
         {
             "index": 165,
@@ -1844,9 +1847,9 @@
             "output": "\"Cumbaya\"",
             "ground_truth": "Auld Lang Saye",
             "peak_memory_mb": 23504.78759765625,
-            "end_to_end_latency_ms": 45619.1268931143,
-            "prefill_latency_ms": 44646.638059057295,
-            "decode_latency_ms": 972.4888340570033
+            "end_to_end_latency_ms": 24846.514148870483,
+            "prefill_latency_ms": 23879.05152607709,
+            "decode_latency_ms": 967.4626227933913
         },
         {
             "index": 166,
@@ -1855,9 +1858,9 @@
             "output": "Near Vendome, on the banks of the Loir.",
             "ground_truth": "Near the town Vendome",
             "peak_memory_mb": 23281.1220703125,
-            "end_to_end_latency_ms": 4879.28302004002,
-            "prefill_latency_ms": 4164.639006135985,
-            "decode_latency_ms": 714.6440139040351
+            "end_to_end_latency_ms": 4231.829930795357,
+            "prefill_latency_ms": 3520.0944009702653,
+            "decode_latency_ms": 711.7355298250914
         },
         {
             "index": 167,
@@ -1866,9 +1869,9 @@
             "output": "Over a woman, Daisy Taylor.",
             "ground_truth": "For Daisy's affection. ",
             "peak_memory_mb": 19449.12548828125,
-            "end_to_end_latency_ms": 13328.45141319558,
-            "prefill_latency_ms": 12603.6245750729,
-            "decode_latency_ms": 724.8268381226808
+            "end_to_end_latency_ms": 9360.175569774583,
+            "prefill_latency_ms": 8636.02916779928,
+            "decode_latency_ms": 724.1464019753039
         },
         {
             "index": 168,
@@ -1877,9 +1880,9 @@
             "output": "Michael",
             "ground_truth": "The US Army chemical weapons division.",
             "peak_memory_mb": 26784.81005859375,
-            "end_to_end_latency_ms": 85251.9343458116,
-            "prefill_latency_ms": 84204.81253182516,
-            "decode_latency_ms": 1047.1218139864504
+            "end_to_end_latency_ms": 42026.14450803958,
+            "prefill_latency_ms": 40993.49109106697,
+            "decode_latency_ms": 1032.6534169726074
         },
         {
             "index": 169,
@@ -1888,20 +1891,20 @@
             "output": "She was frightened by her husband's departure to attack the townspeople.",
             "ground_truth": "Because she saw her husband's battle wounds",
             "peak_memory_mb": 26441.37158203125,
-            "end_to_end_latency_ms": 30532.380420947447,
-            "prefill_latency_ms": 29033.769867150113,
-            "decode_latency_ms": 1498.6105537973344
+            "end_to_end_latency_ms": 18303.33917820826,
+            "prefill_latency_ms": 16850.584644125775,
+            "decode_latency_ms": 1452.7545340824872
         },
         {
             "index": 170,
-            "score": 0.5714285714285715,
+            "score": 0.5,
             "metric": "F1",
-            "output": "Strange, beneficial dreams and visions.",
+            "output": "Strange dreams and visions of truth.",
             "ground_truth": "Strange dreams.",
             "peak_memory_mb": 21652.4755859375,
-            "end_to_end_latency_ms": 3121.251134900376,
-            "prefill_latency_ms": 2660.6742721050978,
-            "decode_latency_ms": 460.57686279527843
+            "end_to_end_latency_ms": 2740.4299618210644,
+            "prefill_latency_ms": 2324.90902999416,
+            "decode_latency_ms": 415.5209318269044
         },
         {
             "index": 171,
@@ -1910,20 +1913,20 @@
             "output": "The rue de Navarin and a country-house at Ville d'Avray.",
             "ground_truth": "In a mansion in Ville-d'Avray. ",
             "peak_memory_mb": 17406.96826171875,
-            "end_to_end_latency_ms": 5036.151399835944,
-            "prefill_latency_ms": 4129.688862012699,
-            "decode_latency_ms": 906.4625378232449
+            "end_to_end_latency_ms": 4397.97999500297,
+            "prefill_latency_ms": 3501.078692963347,
+            "decode_latency_ms": 896.9013020396233
         },
         {
             "index": 172,
-            "score": 0.13333333333333333,
+            "score": 0.14285714285714285,
             "metric": "F1",
-            "output": "To fulfill his oath and avenge his family.",
+            "output": "To avenge his family and fulfill an oath.",
             "ground_truth": "Baron Conrad killed his uncle, Baron Frederick.",
             "peak_memory_mb": 21853.8916015625,
-            "end_to_end_latency_ms": 30452.411561040208,
-            "prefill_latency_ms": 29260.61673904769,
-            "decode_latency_ms": 1191.7948219925165
+            "end_to_end_latency_ms": 17850.82365409471,
+            "prefill_latency_ms": 16661.994314054027,
+            "decode_latency_ms": 1188.8293400406837
         },
         {
             "index": 173,
@@ -1932,9 +1935,9 @@
             "output": "He was shot by Benson.",
             "ground_truth": "he was killed by the police",
             "peak_memory_mb": 25849.9501953125,
-            "end_to_end_latency_ms": 73231.95796599612,
-            "prefill_latency_ms": 71819.80676087551,
-            "decode_latency_ms": 1412.1512051206082
+            "end_to_end_latency_ms": 36875.448492821306,
+            "prefill_latency_ms": 35515.22330404259,
+            "decode_latency_ms": 1360.2251887787133
         },
         {
             "index": 174,
@@ -1943,9 +1946,9 @@
             "output": "Elder Simms",
             "ground_truth": "Elder Simms",
             "peak_memory_mb": 25494.4892578125,
-            "end_to_end_latency_ms": 13454.80808778666,
-            "prefill_latency_ms": 12871.739132795483,
-            "decode_latency_ms": 583.0689549911767
+            "end_to_end_latency_ms": 9213.934051105753,
+            "prefill_latency_ms": 8665.080033009872,
+            "decode_latency_ms": 548.8540180958807
         },
         {
             "index": 175,
@@ -1954,9 +1957,9 @@
             "output": "They stared at him, followed him, and seemed afraid of him.",
             "ground_truth": "It caused a stir.",
             "peak_memory_mb": 19313.64599609375,
-            "end_to_end_latency_ms": 8288.289566989988,
-            "prefill_latency_ms": 7339.341853978112,
-            "decode_latency_ms": 948.9477130118757
+            "end_to_end_latency_ms": 6605.390697019175,
+            "prefill_latency_ms": 5680.148266023025,
+            "decode_latency_ms": 925.2424309961498
         },
         {
             "index": 176,
@@ -1965,9 +1968,9 @@
             "output": "Abby.",
             "ground_truth": "Abby",
             "peak_memory_mb": 25850.765625,
-            "end_to_end_latency_ms": 72882.14956200682,
-            "prefill_latency_ms": 71712.49754098244,
-            "decode_latency_ms": 1169.6520210243762
+            "end_to_end_latency_ms": 36351.35468910448,
+            "prefill_latency_ms": 35237.8886861261,
+            "decode_latency_ms": 1113.4660029783845
         },
         {
             "index": 177,
@@ -1976,9 +1979,9 @@
             "output": "Governor of the state.",
             "ground_truth": "Governor",
             "peak_memory_mb": 25495.1787109375,
-            "end_to_end_latency_ms": 46181.47685402073,
-            "prefill_latency_ms": 45020.66464605741,
-            "decode_latency_ms": 1160.8122079633176
+            "end_to_end_latency_ms": 24855.423925910145,
+            "prefill_latency_ms": 23752.769235987216,
+            "decode_latency_ms": 1102.6546899229288
         },
         {
             "index": 178,
@@ -1987,42 +1990,42 @@
             "output": "It is written in a deliberately archaic, pseudo-phonetic style.",
             "ground_truth": "The English lanuage has evolved.",
             "peak_memory_mb": 23279.17822265625,
-            "end_to_end_latency_ms": 8463.463112013415,
-            "prefill_latency_ms": 7448.693253099918,
-            "decode_latency_ms": 1014.7698589134961
+            "end_to_end_latency_ms": 6537.171668140218,
+            "prefill_latency_ms": 5559.911292977631,
+            "decode_latency_ms": 977.2603751625866
         },
         {
             "index": 179,
-            "score": 0.30769230769230765,
+            "score": 0.14285714285714288,
             "metric": "F1",
-            "output": "It blocks the Ladder and kills the demons chemically.",
+            "output": "It blocks the Ladder, freeing the user's mind from demons.",
             "ground_truth": "It makes people crazy and homicidal",
             "peak_memory_mb": 26789.7724609375,
-            "end_to_end_latency_ms": 86023.81261903793,
-            "prefill_latency_ms": 83990.73332105763,
-            "decode_latency_ms": 2033.0792979802936
+            "end_to_end_latency_ms": 43301.24442791566,
+            "prefill_latency_ms": 41113.648880971596,
+            "decode_latency_ms": 2187.595546944067
         },
         {
             "index": 180,
-            "score": 0.0,
+            "score": 0.09523809523809525,
             "metric": "F1",
-            "output": "A fashionable family of three women and two men, including a brother of one of the women and an invalid invalid.",
+            "output": "A fashionable family of three women and two men, including a young man named Henry.",
             "ground_truth": "The duo meet Henry on their travels to Lisbon.",
             "peak_memory_mb": 26441.40576171875,
-            "end_to_end_latency_ms": 23868.369742063805,
-            "prefill_latency_ms": 21985.857155174017,
-            "decode_latency_ms": 1882.5125868897885
+            "end_to_end_latency_ms": 14677.99399793148,
+            "prefill_latency_ms": 13166.457954794168,
+            "decode_latency_ms": 1511.536043137312
         },
         {
             "index": 181,
-            "score": 0.5714285714285715,
+            "score": 0.1818181818181818,
             "metric": "F1",
-            "output": "In the bathroom of the hotel room.",
+            "output": "In the bathtub, after being set on fire by Alabama.",
             "ground_truth": "In the hotel.",
             "peak_memory_mb": 26563.69970703125,
-            "end_to_end_latency_ms": 83229.42120209336,
-            "prefill_latency_ms": 81572.63927697204,
-            "decode_latency_ms": 1656.7819251213223
+            "end_to_end_latency_ms": 41939.628795022145,
+            "prefill_latency_ms": 39966.602279106155,
+            "decode_latency_ms": 1973.0265159159899
         },
         {
             "index": 182,
@@ -2031,9 +2034,9 @@
             "output": "They were never in Vietnam, but in a war game in Thailand.",
             "ground_truth": "They were never deployed and were discharged for psychological reasons.",
             "peak_memory_mb": 26791.76513671875,
-            "end_to_end_latency_ms": 86258.39767907746,
-            "prefill_latency_ms": 84010.2084770333,
-            "decode_latency_ms": 2248.189202044159
+            "end_to_end_latency_ms": 43593.909239862114,
+            "prefill_latency_ms": 41395.50032699481,
+            "decode_latency_ms": 2198.4089128673077
         },
         {
             "index": 183,
@@ -2042,9 +2045,9 @@
             "output": "Leave a crack at the bottom.",
             "ground_truth": "Break a piece of the door that she may look on her lover one last time",
             "peak_memory_mb": 26441.37939453125,
-            "end_to_end_latency_ms": 4688.949673902243,
-            "prefill_latency_ms": 4196.335611864924,
-            "decode_latency_ms": 492.61406203731894
+            "end_to_end_latency_ms": 4019.978549098596,
+            "prefill_latency_ms": 3535.825494909659,
+            "decode_latency_ms": 484.15305418893695
         },
         {
             "index": 184,
@@ -2053,20 +2056,20 @@
             "output": "On Atlas' mountain within a cavern by a secret fountain.",
             "ground_truth": "Witch lives in cave on Atlas Mountains",
             "peak_memory_mb": 17312.31591796875,
-            "end_to_end_latency_ms": 3122.7091220207512,
-            "prefill_latency_ms": 2493.865619879216,
-            "decode_latency_ms": 628.8435021415353
+            "end_to_end_latency_ms": 2936.8782970122993,
+            "prefill_latency_ms": 2307.9657640773803,
+            "decode_latency_ms": 628.912532934919
         },
         {
             "index": 185,
             "score": 0.0,
             "metric": "F1",
-            "output": "With his father.",
+            "output": "With the Baron Conrad.",
             "ground_truth": "The monastery where he grew up.",
-            "peak_memory_mb": 21854.6953125,
-            "end_to_end_latency_ms": 29733.406136976555,
-            "prefill_latency_ms": 28941.1990090739,
-            "decode_latency_ms": 792.2071279026568
+            "peak_memory_mb": 21854.69921875,
+            "end_to_end_latency_ms": 17558.206979883835,
+            "prefill_latency_ms": 16694.145852932706,
+            "decode_latency_ms": 864.0611269511282
         },
         {
             "index": 186,
@@ -2075,9 +2078,9 @@
             "output": "A flatterer of all men and the servant of all men.",
             "ground_truth": "An outlaw",
             "peak_memory_mb": 21652.4912109375,
-            "end_to_end_latency_ms": 3668.4883809648454,
-            "prefill_latency_ms": 2922.7590628433973,
-            "decode_latency_ms": 745.7293181214482
+            "end_to_end_latency_ms": 3419.411221984774,
+            "prefill_latency_ms": 2680.5617338977754,
+            "decode_latency_ms": 738.8494880869985
         },
         {
             "index": 187,
@@ -2085,10 +2088,10 @@
             "metric": "F1",
             "output": "The women in his life.",
             "ground_truth": "The beauty of the women",
-            "peak_memory_mb": 18751.0126953125,
-            "end_to_end_latency_ms": 9785.599214024842,
-            "prefill_latency_ms": 9202.899140072986,
-            "decode_latency_ms": 582.7000739518553
+            "peak_memory_mb": 18751.3056640625,
+            "end_to_end_latency_ms": 7413.840469904244,
+            "prefill_latency_ms": 6832.021618029103,
+            "decode_latency_ms": 581.8188518751413
         },
         {
             "index": 188,
@@ -2096,32 +2099,32 @@
             "metric": "F1",
             "output": "The naked beauty of the soul.",
             "ground_truth": "The fears and desires of mankind.",
-            "peak_memory_mb": 18626.5302734375,
-            "end_to_end_latency_ms": 2905.5800510104746,
-            "prefill_latency_ms": 2491.938757011667,
-            "decode_latency_ms": 413.64129399880767
+            "peak_memory_mb": 18626.8232421875,
+            "end_to_end_latency_ms": 2716.029532952234,
+            "prefill_latency_ms": 2301.262564957142,
+            "decode_latency_ms": 414.7669679950923
         },
         {
             "index": 189,
-            "score": 0.5,
+            "score": 0.33333333333333337,
             "metric": "F1",
-            "output": "A mill in Chicago.",
+            "output": "The mill.",
             "ground_truth": "Bill worked in a steel mill.",
-            "peak_memory_mb": 25852.0283203125,
-            "end_to_end_latency_ms": 71692.59426509961,
-            "prefill_latency_ms": 70398.06340215728,
-            "decode_latency_ms": 1294.530862942338
+            "peak_memory_mb": 25852.0205078125,
+            "end_to_end_latency_ms": 37221.541029866785,
+            "prefill_latency_ms": 36115.00967293978,
+            "decode_latency_ms": 1106.5313569270074
         },
         {
             "index": 190,
-            "score": 0.5714285714285715,
+            "score": 1.0,
             "metric": "F1",
-            "output": "The German professor, Dr. Rudolf Staub.",
+            "output": "The German professor.",
             "ground_truth": "the German professor",
             "peak_memory_mb": 25495.26708984375,
-            "end_to_end_latency_ms": 10040.150739019737,
-            "prefill_latency_ms": 9203.736359020695,
-            "decode_latency_ms": 836.4143799990416
+            "end_to_end_latency_ms": 7198.70867789723,
+            "prefill_latency_ms": 6716.465197969228,
+            "decode_latency_ms": 482.24347992800176
         },
         {
             "index": 191,
@@ -2130,9 +2133,9 @@
             "output": "Nine pounds.",
             "ground_truth": "Ninety pounds",
             "peak_memory_mb": 22074.669921875,
-            "end_to_end_latency_ms": 31309.75162703544,
-            "prefill_latency_ms": 30564.666411140934,
-            "decode_latency_ms": 745.0852158945054
+            "end_to_end_latency_ms": 18113.173479912803,
+            "prefill_latency_ms": 17368.252750020474,
+            "decode_latency_ms": 744.9207298923284
         },
         {
             "index": 192,
@@ -2141,9 +2144,9 @@
             "output": "He stepped on the watering-pot and upset its contents.",
             "ground_truth": "Sherlock had wet the floor by overturning a water-filled pot.",
             "peak_memory_mb": 21842.6875,
-            "end_to_end_latency_ms": 6187.8760571125895,
-            "prefill_latency_ms": 5429.5021400321275,
-            "decode_latency_ms": 758.373917080462
+            "end_to_end_latency_ms": 5230.870194034651,
+            "prefill_latency_ms": 4470.241422066465,
+            "decode_latency_ms": 760.6287719681859
         },
         {
             "index": 193,
@@ -2152,9 +2155,9 @@
             "output": "He is killed by Sadako.",
             "ground_truth": "He watches the video and dies of Cardiac arrest.",
             "peak_memory_mb": 21135.08154296875,
-            "end_to_end_latency_ms": 24178.752250038087,
-            "prefill_latency_ms": 23269.318926148117,
-            "decode_latency_ms": 909.4333238899708
+            "end_to_end_latency_ms": 14959.814759902656,
+            "prefill_latency_ms": 14039.142085937783,
+            "decode_latency_ms": 920.672673964873
         },
         {
             "index": 194,
@@ -2163,20 +2166,20 @@
             "output": "Eatonville.",
             "ground_truth": "outside town",
             "peak_memory_mb": 20956.86328125,
-            "end_to_end_latency_ms": 13204.349716892466,
-            "prefill_latency_ms": 12638.596580829471,
-            "decode_latency_ms": 565.7531360629946
+            "end_to_end_latency_ms": 9197.575227823108,
+            "prefill_latency_ms": 8640.85877686739,
+            "decode_latency_ms": 556.7164509557188
         },
         {
             "index": 195,
-            "score": 0.5714285714285715,
+            "score": 0.33333333333333337,
             "metric": "F1",
-            "output": "Mortimer Tregennis and Brenda Tregennis.",
+            "output": "Mortimer Tregennis and Dr. Leon Sterndale's wife's sister, Brenda Tregennis.",
             "ground_truth": "Brenda Tregennis",
             "peak_memory_mb": 19313.76513671875,
-            "end_to_end_latency_ms": 6001.083640847355,
-            "prefill_latency_ms": 5244.220352964476,
-            "decode_latency_ms": 756.8632878828794
+            "end_to_end_latency_ms": 5570.02441980876,
+            "prefill_latency_ms": 4298.464291030541,
+            "decode_latency_ms": 1271.5601287782192
         },
         {
             "index": 196,
@@ -2185,9 +2188,9 @@
             "output": "Charred ashes of the overnight fire.",
             "ground_truth": "The remains of afire in the fireplace.",
             "peak_memory_mb": 17789.00732421875,
-            "end_to_end_latency_ms": 5839.315749937668,
-            "prefill_latency_ms": 5244.429670041427,
-            "decode_latency_ms": 594.8860798962414
+            "end_to_end_latency_ms": 4864.229429978877,
+            "prefill_latency_ms": 4292.540970956907,
+            "decode_latency_ms": 571.6884590219706
         },
         {
             "index": 197,
@@ -2196,31 +2199,31 @@
             "output": "American Radioactive Gas Corporation.",
             "ground_truth": "Radioactive gas",
             "peak_memory_mb": 21763.12841796875,
-            "end_to_end_latency_ms": 28385.5503750965,
-            "prefill_latency_ms": 27474.69280799851,
-            "decode_latency_ms": 910.8575670979917
+            "end_to_end_latency_ms": 16926.835376070812,
+            "prefill_latency_ms": 16021.38628391549,
+            "decode_latency_ms": 905.4490921553224
         },
         {
             "index": 198,
             "score": 0.0,
             "metric": "F1",
-            "output": "The child.",
+            "output": "The child, Tyan.",
             "ground_truth": "Everyone except for Jof",
             "peak_memory_mb": 21514.56396484375,
-            "end_to_end_latency_ms": 21794.9661728926,
-            "prefill_latency_ms": 21008.759401971474,
-            "decode_latency_ms": 786.206770921126
+            "end_to_end_latency_ms": 13836.611617123708,
+            "prefill_latency_ms": 13029.132651165128,
+            "decode_latency_ms": 807.4789659585804
         },
         {
             "index": 199,
-            "score": 0.13333333333333333,
+            "score": 0.125,
             "metric": "F1",
-            "output": "When Ryuji is found dead.",
+            "output": "When Ryuji is killed by Sadako.",
             "ground_truth": "She received a call from Ryuji during his last minutes alive.",
-            "peak_memory_mb": 21136.4921875,
-            "end_to_end_latency_ms": 24348.798980936408,
-            "prefill_latency_ms": 23394.57526197657,
-            "decode_latency_ms": 954.2237189598382
+            "peak_memory_mb": 21136.5,
+            "end_to_end_latency_ms": 15103.664183057845,
+            "prefill_latency_ms": 14073.473765980452,
+            "decode_latency_ms": 1030.1904170773923
         }
     ]
 }
