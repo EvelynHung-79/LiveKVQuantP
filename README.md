@@ -21,16 +21,15 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
     source venv/bin/activate
 
     pip install --upgrade pip
-    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+    pip3 install torch --index-url https://download.pytorch.org/whl/cu124
     pip install -r requirements.txt
-    python -m pip install flash-attn --no-build-isolation
-
-    # Huggingface
-    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0
+    pip install wheel
+    pip install flash-attn==2.7.4.post1 --no-build-isolation
+    
+    _EWXDELkcgPsWjrlEIpUInlBMYXDFDZbnb
 
     # Copy Dataset
-    scp -P 22188 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/ root@194.68.245.165:/root/LiveKVQuantP/data/
-    scp -P 22029 -r -i ~/.ssh/id_ed25519_evelyn_r76134115 ./longbench_v1/musique.jsonl root@194.68.245.81:/root/LiveKVQuantP/data/longbench_v1/musique.jsonl
+    scp -r ./longbench_v1/ pod:/root/LiveKVQuantP/data/
 
     # 拿掉 GitHub 最新 commit，但保留內容在 local
     git reset --soft HEAD~1
