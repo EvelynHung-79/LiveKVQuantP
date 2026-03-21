@@ -34,6 +34,7 @@ def parse_args():
     parser.add_argument("--ema_alpha", type=float, default=0.1)
     parser.add_argument("--clip_factor_n", type=float, default=1.5)
     parser.add_argument("--outlier_ratio", type=float, default=0.01)
+    parser.add_argument("--quant_start_layer", type=int, default=3, help="Layer index to start quantization from (default: 3)")
 
     # Ablation flags
     parser.add_argument("--use_warmup", type=lambda x: x.lower() != 'false', default=True,
@@ -56,6 +57,7 @@ def main():
         ema_alpha=args.ema_alpha,
         clip_factor_n=args.clip_factor_n,
         outlier_ratio=args.outlier_ratio,
+        quant_start_layer=args.quant_start_layer,
         use_warmup=args.use_warmup,
         use_outlier_isolation=args.use_outlier_isolation,
         stats_method=args.stats_method,

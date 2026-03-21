@@ -1,7 +1,8 @@
 #!/bin/bash
 
 set -e
-
+source venv/bin/activate
+# export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 # === LongBench v1: LiveKVQuantP ===
 # v2 full results
 # python scripts/run_liveKVQuantP.py --task_type triviaqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples 5
@@ -10,6 +11,9 @@ set -e
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --use_warmup false
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --use_outlier_isolation false
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --stats_method ema_minmax
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.005 --num_samples -1
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.05 --num_samples -1
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --quant_start_layer 0 --num_samples -1
 
 # ablations with different chunk size
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --chunk_size 256
