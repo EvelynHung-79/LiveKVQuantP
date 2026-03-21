@@ -30,6 +30,7 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
 
     # Copy Dataset
     scp -r ./longbench_v1/ pod:/root/LiveKVQuantP/data/
+    scp -r ./longbench_v2/ pod:/root/LiveKVQuantP/data/
 
     # 拿掉 GitHub 最新 commit，但保留內容在 local
     git reset --soft HEAD~1
