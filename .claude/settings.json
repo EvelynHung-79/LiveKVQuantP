@@ -24,7 +24,17 @@
       "WebFetch(domain:github.com)",
       "Bash(python -c \":*)",
       "Bash(python -c \"import torch; print\\(torch.__version__\\)\")",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(python3:*)",
+      "Bash(grep -n quant_start_layer /root/LiveKVQuantP/config.py /root/LiveKVQuantP/scripts/run_liveKVQuantP.py /root/LiveKVQuantP/livekvquant/*.py)",
+      "Read(//root/**)",
+      "Bash(pip3 list:*)",
+      "Bash(conda env:*)",
+      "Read(//home/**)",
+      "Read(//opt/**)",
+      "Bash(find /root -name *.jsonl -path *longbench*)",
+      "Bash(find /root -name *.json -path *LongBench*)",
+      "Bash(venv/bin/python3:*)"
     ]
   }
 }
