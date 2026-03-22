@@ -34,7 +34,11 @@
       "Read(//opt/**)",
       "Bash(find /root -name *.jsonl -path *longbench*)",
       "Bash(find /root -name *.json -path *LongBench*)",
-      "Bash(venv/bin/python3:*)"
+      "Bash(venv/bin/python3:*)",
+      "Bash(done)"
+    ],
+    "additionalDirectories": [
+      "/home/evelyn_r76134115/work/LiveKVQuantP/results/liveKVQuant/longbench_v1_result/original"
     ]
   }
 }
