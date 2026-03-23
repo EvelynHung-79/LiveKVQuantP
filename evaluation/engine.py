@@ -97,7 +97,9 @@ class LongBenchEvaluator:
                             max_new_tokens=current_output_len,
                             use_cache=True,
                             pad_token_id=self.tokenizer.pad_token_id,
-                            do_sample=False
+                            do_sample=False,
+                            temperature=None,
+                            top_p=None,
                         )
                         if extra_eos_ids:
                             gen_kwargs["stopping_criteria"] = StoppingCriteriaList([StopOnTokens(extra_eos_ids)])

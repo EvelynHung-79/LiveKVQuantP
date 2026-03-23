@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source venv/bin/activate)",
+      "Bash(python -c \"import torch; print\\(''torch:'', torch.__version__\\); print\\(''CUDA:'', torch.version.cuda\\)\")",
+      "Bash(nvcc --version)",
+      "Bash(nvidia-smi)",
+      "Bash(grep -r \"torchvision\\\\|torchaudio\" /root/LiveKVQuantP --include=*.py -l)",
+      "Bash(grep -r \"torchvision\\\\|torchaudio\" /root/LiveKVQuantP/requirements*.txt)",
+      "Bash(source /root/LiveKVQuantP/venv/bin/activate)",
+      "Bash(python -c \"import torch; print\\(''torch:'', torch.__version__\\)\")",
+      "Bash(python -c \"from flash_attn import flash_attn_func; print\\(''flash_attn OK''\\)\")",
+      "Bash(nm -D /root/LiveKVQuantP/venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)",
+      "Bash(python -c \"import torch; print\\(''ABI:'', torch._C._GLIBCXX_USE_CXX11_ABI\\)\")",
+      "Bash(python -c \"from flash_attn import flash_attn_func; print\\(''OK''\\)\")",
+      "Bash(nm -D /root/LiveKVQuantP/venv/lib/python3.11/site-packages/flash_attn_2_cuda.cpython-311-x86_64-linux-gnu.so)",
+      "Bash(pip show:*)",
+      "Bash(ls -la /root/LiveKVQuantP/venv/lib/python3.11/site-packages/flash_attn_2_cuda*.so)",
+      "Bash(python -c \"import torch; print\\(''torch:'', torch.__version__, ''| ABI:'', torch._C._GLIBCXX_USE_CXX11_ABI\\)\")",
+      "Bash(python -c \"import torch.utils.cpp_extension as ext; print\\(ext.get_default_build_root\\(\\)\\)\")",
+      "Bash(python -c \"import torch; from torch.utils.cpp_extension import _get_build_directory; print\\(torch.__config__.show\\(\\)\\)\")",
+      "Bash(gh api:*)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(python -c \":*)",
+      "Bash(python -c \"import torch; print\\(torch.__version__\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python3:*)",
+      "Bash(grep -n quant_start_layer /root/LiveKVQuantP/config.py /root/LiveKVQuantP/scripts/run_liveKVQuantP.py /root/LiveKVQuantP/livekvquant/*.py)",
+      "Read(//root/**)",
+      "Bash(pip3 list:*)",
+      "Bash(conda env:*)",
+      "Read(//home/**)",
+      "Read(//opt/**)",
+      "Bash(find /root -name *.jsonl -path *longbench*)",
+      "Bash(find /root -name *.json -path *LongBench*)",
+      "Bash(venv/bin/python3:*)",
+      "Bash(done)"
+    ],
+    "additionalDirectories": [
+      "/home/evelyn_r76134115/work/LiveKVQuantP/results/liveKVQuant/longbench_v1_result/original"
+    ]
+  }
+}
