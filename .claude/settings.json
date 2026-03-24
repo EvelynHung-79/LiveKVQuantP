@@ -36,7 +36,12 @@
       "Bash(find /root -name *.json -path *LongBench*)",
       "Bash(venv/bin/python3:*)",
       "Bash(done)",
-      "Bash(ls /home/evelyn_r76134115/work/LiveKVQuantP/analysis/figures/ablation_*)"
+      "Bash(ls /home/evelyn_r76134115/work/LiveKVQuantP/analysis/figures/ablation_*)",
+      "Bash(ls -la /home/evelyn_r76134115/work/LiveKVQuantP/analysis/figures/ablation_*)",
+      "Bash(python3 -c \":*)",
+      "Read(//home/evelyn_r76134115/work/LiveKVQuantP/analysis/**)",
+      "Bash(ls ablation_studies_executed*)",
+      "Bash(ls -la figures/ablation_*.png)"
     ],
     "additionalDirectories": [
       "/home/evelyn_r76134115/work/LiveKVQuantP/results/liveKVQuant/longbench_v1_result/original"

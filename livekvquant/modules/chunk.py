@@ -6,7 +6,6 @@ from ..utils.quant_utils import (
     dequantize_asymmetric, pack_uint4, unpack_uint4,
 )
 from ..utils.outliers import restore_outliers
-from ..utils.cuda_kernels import fused_dequant_restore
 
 @dataclass
 class KVChunk:
@@ -77,17 +76,12 @@ class KVChunk:
                 unpacked = self.quantized_data
             dequantized = dequantize_asymmetric(unpacked, self.scale, self.zero_point)
         else:
-            # Symmetric path: use fused CUDA kernel when packed (decode phase)
+            # Symmetric path
             if self._is_packed:
-                return fused_dequant_restore(
-                    self.quantized_data,
-                    self.scale,
-                    self.sparse_values,
-                    self.sparse_indices,
-                    target_dtype=target_dtype,
-                )
-            # Unpacked (prefill phase before pack_all_chunks): use PyTorch ops
-            dequantized = dequantize_symmetric(self.quantized_data, self.scale)
+                unpacked = unpack_int4(self.quantized_data)
+                dequantized = dequantize_symmetric(unpacked, self.scale)
+            else:
+                dequantized = dequantize_symmetric(self.quantized_data, self.scale)
 
         reconstructed = restore_outliers(
             dequantized,

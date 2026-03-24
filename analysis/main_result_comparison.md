@@ -139,33 +139,37 @@ Tasks most affected: **passage_retrieval_en** (Δ = −0.83), **hotpotqa** (−0
 
 ---
 
-## 3. Peak GPU Memory
+## 3. Peak GPU Memory (excl. Model Weight 14.96 GB)
+
+> **Note**: All peak GPU memory values in this section exclude the static model weight
+> (14.96 GB = 15,319 MB). Since model weight is identical across methods, the deltas
+> (Δ) between methods are unaffected.
 
 ### LongBench v1
 
 ![Memory Comparison](figures/memory.png)
 
-**Table 5 — Peak GPU Memory (MB). Δ = method − FullKV (negative = savings).**
+**Table 5 — Peak GPU Memory (MB, excl. Model Weight 14.96 GB). Δ = method − FullKV (negative = savings).**
 
 | Task | FullKV (MB) | LiveKVQuantP (MB) | Δ (MB) | KVQuant (MB) | Δ (MB) | Finch (MB) | Δ (MB) |
 |------|------------:|------------------:|-------:|-------------:|-------:|-----------:|-------:|
-| narrativeqa | 30,944 | 26,792 | -4,152 | 28,206 | -2,739 | 21,126 | -9,818 |
-| qasper | 20,414 | 19,177 | -1,237 | 24,293 | +3,879 | 16,892 | -3,522 |
-| multifieldqa_en | 18,917 | 18,071 | -846 | 22,708 | +3,790 | 18,000 | -917 |
-| hotpotqa | 19,251 | 18,350 | -901 | 23,061 | +3,810 | 17,770 | -1,480 |
-| 2wikimqa | 19,246 | 18,307 | -939 | 23,058 | +3,812 | 16,982 | -2,264 |
-| musique | 19,252 | 18,352 | -900 | 23,063 | +3,811 | 18,036 | -1,216 |
-| gov_report | 27,617 | 24,376 | -3,241 | 27,963 | +346 | 18,101 | -9,515 |
-| qmsum | 22,605 | 20,747 | -1,858 | 27,123 | +4,518 | 18,455 | -4,150 |
-| multi_news | 18,669 | 17,930 | -739 | 22,449 | +3,781 | 16,651 | -2,017 |
-| trec | 18,048 | 17,442 | -606 | 21,788 | +3,740 | 16,939 | -1,108 |
-| triviaqa | 20,904 | 19,532 | -1,372 | 24,812 | +3,908 | 18,989 | -1,915 |
-| samsum | 19,621 | 18,579 | -1,042 | 23,454 | +3,833 | 18,085 | -1,536 |
-| passage_retrieval_en | 18,965 | 18,140 | -825 | 22,761 | +3,796 | 18,215 | -750 |
-| passage_count | 22,273 | 20,516 | -1,757 | 26,405 | +4,131 | 18,320 | -3,954 |
-| lcc | 22,528 | 20,719 | -1,809 | 26,956 | +4,429 | 16,653 | -5,875 |
-| repobench-p | 24,672 | 22,207 | -2,465 | 28,179 | +3,507 | 19,046 | -5,626 |
-| **Average** | **21,495** | **19,952** | **-1,543** | **24,767** | **+3,272** | **18,016** | **-3,479** |
+| narrativeqa | 15,625 | 11,473 | -4,152 | 12,887 | -2,739 | 5,807 | -9,818 |
+| qasper | 5,095 | 3,858 | -1,237 | 8,974 | +3,879 | 1,573 | -3,522 |
+| multifieldqa_en | 3,598 | 2,752 | -846 | 7,389 | +3,790 | 2,681 | -917 |
+| hotpotqa | 3,932 | 3,031 | -901 | 7,742 | +3,810 | 2,451 | -1,480 |
+| 2wikimqa | 3,927 | 2,988 | -939 | 7,739 | +3,812 | 1,663 | -2,264 |
+| musique | 3,933 | 3,033 | -900 | 7,744 | +3,811 | 2,717 | -1,216 |
+| gov_report | 12,298 | 9,057 | -3,241 | 12,644 | +346 | 2,782 | -9,515 |
+| qmsum | 7,286 | 5,428 | -1,858 | 11,804 | +4,518 | 3,136 | -4,150 |
+| multi_news | 3,350 | 2,611 | -739 | 7,130 | +3,781 | 1,332 | -2,017 |
+| trec | 2,729 | 2,123 | -606 | 6,469 | +3,740 | 1,620 | -1,108 |
+| triviaqa | 5,585 | 4,213 | -1,372 | 9,493 | +3,908 | 3,670 | -1,915 |
+| samsum | 4,302 | 3,260 | -1,042 | 8,135 | +3,833 | 2,766 | -1,536 |
+| passage_retrieval_en | 3,646 | 2,821 | -825 | 7,442 | +3,796 | 2,896 | -750 |
+| passage_count | 6,954 | 5,197 | -1,757 | 11,086 | +4,131 | 3,001 | -3,954 |
+| lcc | 7,209 | 5,400 | -1,809 | 11,637 | +4,429 | 1,334 | -5,875 |
+| repobench-p | 9,353 | 6,888 | -2,465 | 12,860 | +3,507 | 3,727 | -5,626 |
+| **Average** | **6,176** | **4,633** | **-1,543** | **9,448** | **+3,272** | **2,697** | **-3,479** |
 
 #### Why does KVQuant use *more* memory than FullKV on v1?
 
@@ -181,17 +185,17 @@ FP16 activations and the compressed buffer in memory simultaneously, pushing pea
 
 ![v2 Memory](figures/v2_memory.png)
 
-**Table 6 — Peak GPU Memory (MB). Δ = method − FullKV.**
+**Table 6 — Peak GPU Memory (MB, excl. Model Weight 14.96 GB). Δ = method − FullKV.**
 
 | Task | FullKV | LiveKVQuantP | Δ | KVQuant | Δ | Finch | Δ |
 |------|-------:|-------------:|--:|--------:|--:|------:|--:|
-| Single-Document QA | 46,587 | 38,067 | −8,520 | 49,152 | +2,565 | 30,640 | −15,947 |
-| Multi-Document QA | 46,587 | 38,067 | −8,520 | 49,152 | +2,565 | 30,661 | −15,926 |
-| Long In-context Learning | 46,587 | 38,067 | −8,520 | 49,152 | +2,565 | 34,522 | −12,065 |
-| Long-dialogue History | 43,857 | 36,102 | −7,755 | 49,152 | +5,295 | 28,962 | −14,895 |
-| Code Repository Understanding | 46,587 | 38,067 | −8,520 | 49,152 | +2,565 | 37,796 | −8,791 |
-| Long Structured Data | 46,587 | 38,067 | −8,520 | 49,152 | +2,565 | 37,057 | −9,530 |
-| **Average** | **46,132** | **37,740** | **−8,393** | **49,152** | **+3,021** | **33,273** | **−12,859** |
+| Single-Document QA | 31,268 | 22,748 | −8,520 | 33,833 | +2,565 | 15,321 | −15,947 |
+| Multi-Document QA | 31,268 | 22,748 | −8,520 | 33,833 | +2,565 | 15,342 | −15,926 |
+| Long In-context Learning | 31,268 | 22,748 | −8,520 | 33,833 | +2,565 | 19,203 | −12,065 |
+| Long-dialogue History | 28,538 | 20,783 | −7,755 | 33,833 | +5,295 | 13,643 | −14,895 |
+| Code Repository Understanding | 31,268 | 22,748 | −8,520 | 33,833 | +2,565 | 22,477 | −8,791 |
+| Long Structured Data | 31,268 | 22,748 | −8,520 | 33,833 | +2,565 | 21,738 | −9,530 |
+| **Average** | **30,813** | **22,421** | **−8,393** | **33,833** | **+3,021** | **17,954** | **−12,859** |
 
 > On v2's longer inputs, LiveKVQuantP's dynamic allocation saves **8.4 GB** (vs. only 1.5 GB on v1),
 > because the INT4 buffer scales with actual sequence length rather than a static cap.
@@ -285,7 +289,7 @@ before decode begins), so decode benefits while prefill does not.
 | **Avg Score** | 0.4981 | 0.4860 (−0.0121) | 0.4929 (−0.0053) | 0.3189 (−0.1792) |
 | **Avg E2E Latency** | 4.82 s | 7.54 s (1.64×) | 10.78 s (2.21×) | 7.23 s (1.78×) |
 | **Avg Prefill %** | — | 62.8% | 60.9% | 64.3% |
-| **Avg Peak Memory** | 21.0 GB | 19.5 GB (−1.5) | 24.2 GB (+3.2) | 17.6 GB (−3.4) |
+| **Avg Peak Memory** | 6.0 GB | 4.5 GB (−1.5) | 9.2 GB (+3.2) | 2.6 GB (−3.4) |
 
 ### LongBench v2
 
@@ -296,7 +300,7 @@ before decode begins), so decode benefits while prefill does not.
 | **Avg Score** | 0.6731 | 0.6145 (−0.0586) | 0.1886 (−0.4845) | 0.2128 (−0.4602) |
 | **Avg E2E** | 46.9 s | 92.5 s (1.97×) | 18.8 s (OOM-skewed) | 128.4 s (2.74×) |
 | **Avg Prefill %** | — | 95.9% | 97.1% | 99.2% |
-| **Avg Peak Memory** | 45.1 GB | 36.9 GB (−8.2) | 48.0 GB (+2.9, OOM) | 32.5 GB (−12.6) |
+| **Avg Peak Memory** | 30.1 GB | 21.9 GB (−8.2) | 33.0 GB (+2.9, OOM) | 17.5 GB (−12.6) |
 
 ### Key takeaways
 
@@ -305,10 +309,12 @@ before decode begins), so decode benefits while prefill does not.
   It is the only method that generalises to v2's long contexts (−5.9% score vs −48% for others).
 - **KVQuant** works on v1 (−0.5% score) but completely fails on v2 due to its static 32 k-token buffer.
   Its apparent speed on v2 is an OOM artefact, not efficient inference.
-- **Finch** saves the most memory (−3.4 GB on v1, −12.6 GB on v2) but accuracy collapses on both
+- **Finch** saves the most memory (−3.4 GB on v1, −12.6 GB on v2, excl. model weight) but accuracy collapses on both
   (−17.9% v1, −46.0% v2), driven by GQA voting noise and excessive context eviction on long inputs.
 
 **v1 → v2 shift:**
 - Prefill% rises from ~63% to ≥96% across all methods: v2 is a **prefill-dominated** benchmark.
-- LiveKVQuantP's memory savings scale with context length: +1.5 GB savings on v1, +8.4 GB on v2.
+- LiveKVQuantP's memory savings scale with context length: 1.5 GB savings on v1, 8.4 GB on v2 (excl. model weight).
 - KV cache management quality matters far more on v2, where static pre-allocation and token dropping both fail catastrophically.
+
+> **Note**: All memory figures exclude the static model weight (14.96 GB), which is identical across methods. To recover total GPU memory, add 14.96 GB to each value.

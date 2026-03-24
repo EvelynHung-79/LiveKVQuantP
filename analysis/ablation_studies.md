@@ -94,23 +94,71 @@ Outlier ratio 控制以 FP16 稀疏方式保留的 outlier 比例。
 
 ---
 
-## 5. Score–Latency–Memory Trade-off
+## 5. EMA Alpha Sensitivity (Layer 2)
+
+EMA alpha 控制量化統計量（absmax）的指數移動平均更新速率。較小的 alpha 更加「記住歷史」，較大的 alpha 更快追蹤最新 chunk 的統計。
+
+> 所有實驗使用 quant_start_layer=3（前 3 層保留 FP16）。
+
+![EMA Alpha](figures/ablation_ema_alpha.png)
+
+| ema_alpha | Score | Δ Score | E2E (s) | Prefill (s) | Decode (s) | Mem (GB) |
+|----------:|------:|--------:|--------:|------------:|-----------:|---------:|
+| **0.1** | **0.2957** | **+0.0016** | 14.7 | 13.8 | 1.0 | 26.2 |
+| 0.2 (baseline) | 0.2941 | — | 15.1 | 14.1 | 1.0 | 26.2 |
+| 0.3 | 0.2845 | -0.0096 | 14.9 | 13.9 | 1.0 | 26.2 |
+| 0.5 | 0.2862 | -0.0079 | 14.8 | 13.8 | 1.0 | 26.2 |
+
+### Analysis
+
+- **alpha=0.1 是所有實驗中最高 score (0.2957)**，甚至略高於 baseline。較慢的 EMA 更新讓統計量更穩定，避免因單一 chunk 的極端值造成 scale 劇烈波動。
+- **alpha ≥ 0.3 後 score 下降明顯** (-0.0079 ~ -0.0096)：更新過快導致 scale 受短期波動干擾，量化 error 增大。
+- **Latency 和 Memory 完全不受 alpha 影響**：alpha 僅影響一個純量的 EMA 更新，計算成本可忽略。
+- 結論：alpha=0.1 可作為更優的預設值，或至少確認 alpha 不宜超過 0.2。
+
+---
+
+## 6. Clip Factor Sensitivity (Layer 2)
+
+Clip factor 控制量化前的 outlier clipping 範圍：value 超過 `clip_factor × scale` 的部分會被截斷。較小的值 clip 更積極，較大的值保留更多極端值。
+
+> 所有實驗使用 quant_start_layer=3（前 3 層保留 FP16）。
+
+![Clip Factor](figures/ablation_clip_factor.png)
+
+| clip_factor | Score | Δ Score | E2E (s) | Prefill (s) | Decode (s) | Mem (GB) |
+|------------:|------:|--------:|--------:|------------:|-----------:|---------:|
+| 3.0 | 0.2948 | +0.0007 | 14.9 | 13.9 | 1.0 | 26.2 |
+| **4.0 (baseline)** | **0.2941** | — | **15.1** | 14.1 | 1.0 | **26.2** |
+| 5.0 | 0.2862 | -0.0079 | 14.9 | 13.9 | 1.0 | 26.2 |
+| 7.0 | 0.2795 | -0.0146 | 14.9 | 13.9 | 1.0 | 26.2 |
+
+### Analysis
+
+- **Score 隨 clip_factor 增大而單調下降**：clip=3.0 最高 (0.2948)，clip=7.0 最低 (0.2795, -5.0%)。較大的 clip range 意味著量化的 dynamic range 被少數極端值拉大，多數正常值被壓縮到更少的 quantization bin 裡，精度下降。
+- **clip=3.0 略優於 baseline clip=4.0** (+0.0007)，但差異很小。更積極的 clipping 搭配 outlier isolation（已經分離了極端值）可以讓 dense quantization 的 range 更緊湊。
+- **Latency 和 Memory 不受影響**：clipping 是逐元素的簡單 operation，成本可忽略。
+- 結論：clip_factor=3.0~4.0 是合理範圍，不宜超過 5.0。
+
+---
+
+## 7. Score–Latency–Memory Trade-off
 
 ![Trade-off](figures/ablation_tradeoff.png)
 
-此散點圖綜合呈現所有 11 組實驗的三維 trade-off：
+此散點圖綜合呈現所有 17 組實驗的三維 trade-off：
 - **X 軸**：E2E latency (越左越快)
 - **Y 軸**：Score (越高越好)
 - **Bubble 大小**：Peak memory (越小越省)
 
 **Pareto 最優配置**：
-- **最高 score**：Baseline (0.2941, 15.1s, 26.2 GB) — 全方位最優
+- **最高 score**：alpha=0.1 (0.2957, 14.7s, 26.2 GB) — score 和 latency 均優於 baseline
 - **最低 latency**：chunk_size=4096 (0.2935, 9.7s, 27.3 GB) — 犧牲 0.2% score 換取 36% speed-up
 - **最低 memory**：quant_start_layer=0 (0.2846, 15.3s, 25.6 GB) — 犧牲 3.2% score 換取 0.6 GB
 
 ---
 
-## 6. Key Takeaways
+## 8. Key Takeaways
 
 | Finding | Impact | Recommendation |
 |---------|--------|----------------|
@@ -121,3 +169,5 @@ Outlier ratio 控制以 FP16 稀疏方式保留的 outlier 比例。
 | chunk_size=4096 適合 latency-first 場景 | score -0.2%, latency -36% | 可作為 fast mode |
 | outlier_ratio=1% 為 sweet spot | 0.5%/5% 均下降 | 預設值 |
 | 前幾層保留 FP16 值得 | 全量化 → score -3.2%, 僅省 0.6 GB | 保留預設 |
+| ema_alpha=0.1 略優於 0.2 | +0.0016 score, latency 不變 | 可考慮調降至 0.1 |
+| clip_factor 不宜超過 5.0 | clip=7.0 → score -5.0% | 維持 3.0~4.0 |
