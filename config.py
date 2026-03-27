@@ -26,6 +26,9 @@ class LiveKVQuantConfig:
     use_warmup: bool = True             # False = 從第一個 chunk 就量化 K（warmup 策略消融）
     use_outlier_isolation: bool = True  # False = 純 dense 量化，不做 outlier 分離
     stats_method: str = "ema_absmax"    # "ema_absmax"（現有）或 "ema_minmax"（分別追蹤正負極值）
+
+    # Memory optimization flags
+    use_chunked_attn: bool = False      # True = per-chunk dequant + online softmax（降低 attention peak memory）
     
 # 可以實例化配置對象直接使用
 config = LiveKVQuantConfig()

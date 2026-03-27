@@ -92,6 +92,11 @@ class KVChunk:
         return reconstructed.to(dtype=target_dtype)
 
     @property
+    def seq_len(self) -> int:
+        """回傳此 chunk 的 sequence length（dim=-2 的大小）。"""
+        return self.shape[-2]
+
+    @property
     def device(self):
         if self.data is not None:
             return self.data.device

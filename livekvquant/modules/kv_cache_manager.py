@@ -164,6 +164,21 @@ class KVCacheManager:
         self._v_recon_cache = None
         self._recon_valid = False
 
+    def iter_kv_chunks(self):
+        """
+        逐 chunk yield (k_chunk, v_chunk, kv_start_pos)，不重建整個 KV。
+        供 chunked attention 用：每次只 dequant 一個 chunk，節省 peak memory。
+        最後若有 decode buffer，yield (None, None, pos, decode_k, decode_v)。
+        """
+        pos = 0
+        for kc, vc in zip(self._k_chunks, self._v_chunks):
+            yield kc, vc, pos, None, None
+            pos += kc.seq_len
+        if self._decode_len > 0:
+            yield None, None, pos, \
+                self._k_decode_buf[..., :self._decode_len, :], \
+                self._v_decode_buf[..., :self._decode_len, :]
+
     def get_all_chunks(self) -> Tuple[List[KVChunk], List[KVChunk]]:
         """回傳所有壓縮的 chunk 物件（供測試/除錯用）。"""
         return list(self._k_chunks), list(self._v_chunks)
