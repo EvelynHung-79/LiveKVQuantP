@@ -47,6 +47,8 @@ def parse_args():
     # Memory optimization flags
     parser.add_argument("--use_chunked_attn", type=lambda x: x.lower() != 'false', default=False,
                         help="Per-chunk dequant + online softmax to reduce attention peak memory (default: False).")
+    parser.add_argument("--use_fused_int4_attn", type=lambda x: x.lower() != 'false', default=False,
+                        help="Triton fused INT4 dequant kernel: FP16 K/V never written to HBM (default: False).")
 
     return parser.parse_args()
 
@@ -66,6 +68,7 @@ def main():
         use_outlier_isolation=args.use_outlier_isolation,
         stats_method=args.stats_method,
         use_chunked_attn=args.use_chunked_attn,
+        use_fused_int4_attn=args.use_fused_int4_attn,
     )
     
     device = "cuda" if torch.cuda.is_available() else "cpu"

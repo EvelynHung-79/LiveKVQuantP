@@ -6,7 +6,8 @@ from transformers.models.llama.modeling_llama import apply_rotary_pos_emb
 class AttentionCore:
     def __init__(self, config):
         self.config = config
-        self.use_chunked_attn = getattr(config, 'use_chunked_attn', False)
+        self.use_chunked_attn    = getattr(config, 'use_chunked_attn', False)
+        self.use_fused_int4_attn = getattr(config, 'use_fused_int4_attn', False)
 
     def compute_attention_chunked(self, q_tensor, kv_manager,
                                   rotary_emb_module=None, position_ids=None):
@@ -93,6 +94,14 @@ class AttentionCore:
         當前 chunk 的 KV 已經透過 kv_manager.store_raw() 存入，
         get_full_kv() 會包含所有歷史 chunks + 當前 raw chunk。
         """
+        if self.use_fused_int4_attn:
+            from ..kernels.fused_int4_attn import fused_int4_flash_attn
+            return fused_int4_flash_attn(
+                q_tensor, kv_manager,
+                rotary_emb_module=rotary_emb_module,
+                position_ids=position_ids,
+            )
+
         if self.use_chunked_attn:
             return self.compute_attention_chunked(
                 q_tensor, kv_manager,

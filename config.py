@@ -29,6 +29,7 @@ class LiveKVQuantConfig:
 
     # Memory optimization flags
     use_chunked_attn: bool = False      # True = per-chunk dequant + online softmax（降低 attention peak memory）
+    use_fused_int4_attn: bool = False   # True = Triton fused INT4 dequant kernel（FP16 K/V 從不寫入 HBM）
     
 # 可以實例化配置對象直接使用
 config = LiveKVQuantConfig()
