@@ -24,8 +24,11 @@ LiveKVQuant-P 是一個針對大型語言模型（LLMs）在 **Prefill 階段** 
     pip3 install torch --index-url https://download.pytorch.org/whl/cu124
     pip install -r requirements.txt
     pip install wheel
-    pip install flash-attn==2.7.4.post1 --no-build-isolation
+    pip install flash-attn==2.7.4.post1 --no-build-isolation #with runpod
+    pip install flash-attn==2.7.4.post1 --no-build-isolation --no-cache-dir --no-binary flash-attn #local
     
+    git checkout claude/chunked-dequant-attn-0aT4e
+
     _EWXDELkcgPsWjrlEIpUInlBMYXDFDZbnb
 
     # Copy Dataset

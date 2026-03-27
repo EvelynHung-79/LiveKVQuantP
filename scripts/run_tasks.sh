@@ -5,13 +5,7 @@ source venv/bin/activate
 # export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 # === LongBench v1: LiveKVQuantP ===
 # v2 full results
-# python scripts/run_liveKVQuantP.py --task_type single-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-# python scripts/run_liveKVQuantP.py --task_type multi-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-# python scripts/run_liveKVQuantP.py --task_type summarization --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --task_type few-shot --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-# python scripts/run_liveKVQuantP.py --task_type synthetic --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-# python scripts/run_liveKVQuantP.py --task_type code --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-
+python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples 10 --use_fused_int4_attn true
 
 # ablations
 # python scripts/run_liveKVQuantP.py --task_type narrativeqa --ema_alpha 0.2 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1  --use_warmup false
@@ -46,12 +40,12 @@ python scripts/run_liveKVQuantP.py --task_type few-shot --ema_alpha 0.1 --clip_f
 # python scripts/run_fullKV.py --bench_version v2 --task_type structured --num_samples -1
 
 # # === LongBench v2: liveKVQuantP ===
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type single-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type multi-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type long-context --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type dialogue --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type code --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
-python scripts/run_liveKVQuantP.py --bench_version v2 --task_type structured --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type single-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type multi-doc --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type long-context --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type dialogue --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type code --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
+# python scripts/run_liveKVQuantP.py --bench_version v2 --task_type structured --ema_alpha 0.1 --clip_factor_n 4.0 --outlier_ratio 0.01 --num_samples -1
 
 echo "All Done!"
 
