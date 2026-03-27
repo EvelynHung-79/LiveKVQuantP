@@ -44,6 +44,10 @@ def parse_args():
     parser.add_argument("--stats_method", type=str, choices=["ema_absmax", "ema_minmax"], default="ema_absmax",
                         help="Statistics method for quantization scale (default: ema_absmax).")
 
+    # Memory optimization flags
+    parser.add_argument("--use_chunked_attn", type=lambda x: x.lower() != 'false', default=False,
+                        help="Per-chunk dequant + online softmax to reduce attention peak memory (default: False).")
+
     return parser.parse_args()
 
 def main():
@@ -61,6 +65,7 @@ def main():
         use_warmup=args.use_warmup,
         use_outlier_isolation=args.use_outlier_isolation,
         stats_method=args.stats_method,
+        use_chunked_attn=args.use_chunked_attn,
     )
     
     device = "cuda" if torch.cuda.is_available() else "cpu"
