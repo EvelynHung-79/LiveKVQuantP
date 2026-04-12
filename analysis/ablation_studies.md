@@ -128,7 +128,7 @@ Clip factor 控制量化前的 outlier clipping 範圍：value 超過 `clip_fact
 
 ![Trade-off](figures/ablation_tradeoff.png)
 
-此散點圖綜合呈現所有 18 組實驗的三維 trade-off：
+此散點圖綜合呈現所有 17 組實驗的三維 trade-off：
 - **X 軸**：E2E latency (越左越快)
 - **Y 軸**：Score (越高越好)
 - **Bubble 大小**：Peak memory (越小越省)
