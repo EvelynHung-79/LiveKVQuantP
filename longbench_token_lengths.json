@@ -1,0 +1,188 @@
+{
+  "v1": {
+    "2wikimqa": {
+      "count": 200,
+      "avg": 7112.76,
+      "min": 932,
+      "max": 16331,
+      "total": 1422552
+    },
+    "dureader": {
+      "count": 200,
+      "avg": 12709.12,
+      "min": 6203,
+      "max": 22685,
+      "total": 2541824
+    },
+    "gov_report": {
+      "count": 200,
+      "avg": 10241.3,
+      "min": 2020,
+      "max": 51393,
+      "total": 2048259
+    },
+    "hotpotqa": {
+      "count": 200,
+      "avg": 12798.61,
+      "min": 1749,
+      "max": 16340,
+      "total": 2559722
+    },
+    "lcc": {
+      "count": 500,
+      "avg": 3166.73,
+      "min": 990,
+      "max": 30151,
+      "total": 1583367
+    },
+    "lsht": {
+      "count": 200,
+      "avg": 18326.99,
+      "min": 4628,
+      "max": 36144,
+      "total": 3665399
+    },
+    "multi_news": {
+      "count": 200,
+      "avg": 2609.05,
+      "min": 131,
+      "max": 13936,
+      "total": 521810
+    },
+    "multifieldqa_en": {
+      "count": 150,
+      "avg": 6900.77,
+      "min": 1298,
+      "max": 14960,
+      "total": 1035115
+    },
+    "multifieldqa_zh": {
+      "count": 200,
+      "avg": 5289.41,
+      "min": 909,
+      "max": 10776,
+      "total": 1057882
+    },
+    "musique": {
+      "count": 200,
+      "avg": 15560.92,
+      "min": 6496,
+      "max": 16349,
+      "total": 3112184
+    },
+    "narrativeqa": {
+      "count": 200,
+      "avg": 29786.79,
+      "min": 7969,
+      "max": 65287,
+      "total": 5957359
+    },
+    "passage_count": {
+      "count": 200,
+      "avg": 14880.2,
+      "min": 4741,
+      "max": 28966,
+      "total": 2976040
+    },
+    "passage_retrieval_en": {
+      "count": 200,
+      "avg": 12457.85,
+      "min": 9952,
+      "max": 15145,
+      "total": 2491571
+    },
+    "qasper": {
+      "count": 200,
+      "avg": 4930.44,
+      "min": 1855,
+      "max": 21118,
+      "total": 986088
+    },
+    "qmsum": {
+      "count": 200,
+      "avg": 13867.52,
+      "min": 2584,
+      "max": 30389,
+      "total": 2773505
+    },
+    "repobench-p": {
+      "count": 500,
+      "avg": 10805.38,
+      "min": 2540,
+      "max": 39125,
+      "total": 5402690
+    },
+    "samsum": {
+      "count": 200,
+      "avg": 9149.28,
+      "min": 1386,
+      "max": 17974,
+      "total": 1829856
+    },
+    "trec": {
+      "count": 200,
+      "avg": 6767.6,
+      "min": 1866,
+      "max": 11378,
+      "total": 1353519
+    },
+    "triviaqa": {
+      "count": 200,
+      "avg": 11750.74,
+      "min": 1476,
+      "max": 23298,
+      "total": 2350147
+    },
+    "vcsum": {
+      "count": 200,
+      "avg": 10956.87,
+      "min": 830,
+      "max": 31568,
+      "total": 2191374
+    }
+  },
+  "v2": {
+    "Code_Repository_Understanding": {
+      "count": 50,
+      "avg": 1005115.54,
+      "min": 23775,
+      "max": 4144398,
+      "total": 50255777
+    },
+    "Long_In_context_Learning": {
+      "count": 81,
+      "avg": 258629.22,
+      "min": 12469,
+      "max": 1462030,
+      "total": 20948967
+    },
+    "Long_Structured_Data_Understanding": {
+      "count": 33,
+      "avg": 389392.12,
+      "min": 16412,
+      "max": 2944629,
+      "total": 12849940
+    },
+    "Long_dialogue_History_Understanding": {
+      "count": 39,
+      "avg": 73816.26,
+      "min": 22971,
+      "max": 119363,
+      "total": 2878834
+    },
+    "Multi_Document_QA": {
+      "count": 125,
+      "avg": 126574.85,
+      "min": 9929,
+      "max": 1665287,
+      "total": 15821856
+    },
+    "Single_Document_QA": {
+      "count": 175,
+      "avg": 110528.67,
+      "min": 12447,
+      "max": 860227,
+      "total": 19342518
+    }
+  }
+}

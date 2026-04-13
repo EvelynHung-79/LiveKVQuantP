@@ -10,3 +10,8 @@ data/longbench_v1/
 data/longbench_v2/
 
 run.log
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
