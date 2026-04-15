@@ -100,6 +100,9 @@ pip3 install torch --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
 pip install wheel
 pip install flash-attn==2.7.4.post1 --no-build-isolation
+
+pip install ipykernel
+python -m ipykernel install --user --name=livekv --display-name "Python (LiveKVQuantP)"
 ```
 
 ### 3. 下載資料集（選用）
