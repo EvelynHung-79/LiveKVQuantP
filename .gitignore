@@ -5,7 +5,7 @@ __pycache__
 .DS_Store
 .pytest_cache/
 # results/
-figures/
+# figures/
 data/longbench_v1/
 data/longbench_v2/
 
