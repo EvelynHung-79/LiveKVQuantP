@@ -86,32 +86,41 @@ def plot_architecture(data):
     mem    = [c[1]['mem'] / 1024 for c in configs]
     colors = ['#2d7e4a', '#5bb37f', '#d45f5f', '#d4955f', '#9467bd']
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4))
+    # 稍微增加高度 (5) 以容納旋轉後的標籤
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    ax = axes[0]
-    bars = ax.bar(labels, scores, color=colors, alpha=0.88, edgecolor='white', linewidth=0.8)
-    ax.set_ylabel('F1 Score'); ax.set_title('Score by Config'); ax.set_ylim(0.25, 0.31)
-    for b, v in zip(bars, scores):
-        ax.text(b.get_x()+b.get_width()/2, v+0.001, f'{v:.4f}', ha='center', va='bottom', fontsize=9)
+    # 定義每個子圖的參數：(數據, 單位/格式, 標題, Y軸標籤, Y軸範圍, 數值偏移)
+    plot_params = [
+        (scores, '.4f', 'Score by Config', 'F1 Score', (0.25, 0.31), 0.001),
+        (e2e,    '.1f', 'Latency by Config', 'E2E Latency (s)', None, 0.2),
+        (mem,    '.2f', 'Memory by Config', 'Peak Memory (GB)', (25.5, 27.5), 0.02)
+    ]
 
-    ax = axes[1]
-    bars = ax.bar(labels, e2e, color=colors, alpha=0.88, edgecolor='white', linewidth=0.8)
-    ax.set_ylabel('E2E Latency (s)'); ax.set_title('Latency by Config')
-    for b, v in zip(bars, e2e):
-        ax.text(b.get_x()+b.get_width()/2, v+0.2, f'{v:.1f}s', ha='center', va='bottom', fontsize=9)
+    for i, ax in enumerate(axes):
+        vals, fmt, title, ylabel, ylim, offset = plot_params[i]
+        
+        bars = ax.bar(labels, vals, color=colors, alpha=0.88, edgecolor='white', linewidth=0.8)
+        ax.set_title(title)
+        ax.set_ylabel(ylabel)
+        
+        if ylim:
+            ax.set_ylim(ylim)
 
-    ax = axes[2]
-    bars = ax.bar(labels, mem, color=colors, alpha=0.88, edgecolor='white', linewidth=0.8)
-    ax.set_ylabel('Peak Memory (GB)'); ax.set_title('Memory by Config'); ax.set_ylim(25.5, 27)
-    for b, v in zip(bars, mem):
-        ax.text(b.get_x()+b.get_width()/2, v+0.02, f'{v:.2f}', ha='center', va='bottom', fontsize=9)
+        # 關鍵修正：旋轉標籤並靠右對齊 (避免重疊)
+        ax.set_xticklabels(labels, rotation=30, ha='right')
 
-    fig.suptitle('Layer 1: Architectural Ablation (narrativeqa)', fontsize=14, y=1.02)
+        # 數值標註
+        for b, v in zip(bars, vals):
+            suffix = 's' if i == 1 else '' # Latency 子圖加上 's'
+            ax.text(b.get_x() + b.get_width()/2, v + offset, 
+                    f'{v:{fmt}}{suffix}', ha='center', va='bottom', fontsize=9)
+
+    fig.suptitle('Layer 1: Architectural Ablation (narrativeqa)', fontsize=14, y=1.05)
     fig.tight_layout()
+    
     fig.savefig(f'{FIG_DIR}/ablation_architecture.png', bbox_inches='tight', dpi=150)
     plt.show()
     print(f'Saved: {FIG_DIR}/ablation_architecture.png')
-
 
 # ── Figure 2: Chunk Size Sensitivity ─────────────────────────────────────────
 
@@ -192,7 +201,7 @@ def plot_outlier_ratio(data):
 # ── Figure 4: EMA Alpha Sensitivity ──────────────────────────────────────────
 
 def plot_ema_alpha(data):
-    configs = [('0.1\n(baseline)', data['alpha_01']), ('0.3', data['alpha_03']), ('0.5', data['alpha_05'])]
+    configs = [('0.1\n(baseline)', data['alpha_01']), ('0.2', data['alpha_02']), ('0.3', data['alpha_03']), ('0.5', data['alpha_05'])]
     labels  = [c[0] for c in configs]
     scores  = [c[1]['score'] for c in configs]
     e2e     = [c[1]['e2e'] / 1000 for c in configs]
@@ -269,12 +278,13 @@ def plot_clip_factor(data):
 # ── Figure 6: Score–Latency Trade-off ────────────────────────────────────────
 
 def plot_tradeoff(data):
+    # 統一名稱，建議這裡用簡單的 'Baseline'，大標題再寫詳細即可
     all_configs = {
         'Baseline':      data['baseline'],
-        'warmup=false':  data['no_warmup'],
-        'outlier=false': data['no_outlier'],
-        'ema_minmax':    data['ema_minmax'],
-        'qsl=0':         data['qsl_0'],
+        'w/o warmup':    data['no_warmup'],
+        'w/o outlier':   data['no_outlier'],
+        'w/ ema_minmax': data['ema_minmax'],
+        'w/o Layer Bypass': data['qsl_0'],
         'cs=256':        data['cs256'],
         'cs=1024':       data['cs1024'],
         'cs=2048':       data['cs2048'],
@@ -284,43 +294,53 @@ def plot_tradeoff(data):
         'α=0.2':         data['alpha_02'],
         'α=0.3':         data['alpha_03'],
         'α=0.5':         data['alpha_05'],
+        'clip=1':        data['clip_10'],
         'clip=3':        data['clip_30'],
         'clip=5':        data['clip_50'],
         'clip=7':        data['clip_70'],
     }
+    
     group_colors = {
-        'arch':  '#2d7e4a', 'chunk': '#1f77b4', 'ratio': '#d45f5f',
-        'hybrid':'#9467bd', 'alpha': '#ff7f0e', 'clip':  '#8c564b',
+        'arch':   '#2d7e4a', 
+        'chunk':  '#1f77b4', 
+        'ratio':  '#d45f5f',
+        'alpha':  '#ff7f0e', 
+        'clip':   '#8c564b'
     }
+    
+    # 這裡的 Key 必須與 all_configs 完全一致
     config_groups = {
-        'Baseline': 'arch', 'warmup=false': 'arch', 'outlier=false': 'arch',
-        'ema_minmax': 'arch', 'qsl=0': 'hybrid',
+        'Baseline': 'arch', 'w/o warmup': 'arch', 'w/o outlier': 'arch',
+        'w/ ema_minmax': 'arch', 'w/o Layer Bypass': 'arch',
         'cs=256': 'chunk', 'cs=1024': 'chunk', 'cs=2048': 'chunk', 'cs=4096': 'chunk',
         'or=0.5%': 'ratio', 'or=5.0%': 'ratio',
         'α=0.2': 'alpha', 'α=0.3': 'alpha', 'α=0.5': 'alpha',
-        'clip=3': 'clip', 'clip=5': 'clip', 'clip=7': 'clip',
+        'clip=1': 'clip', 'clip=3': 'clip', 'clip=5': 'clip', 'clip=7': 'clip',
     }
+
     label_offsets = {
-        # well-separated points — right side, simple nudge
-        'cs=4096':       (  8, -14),
-        'cs=2048':       (  8,   6),
-        'cs=1024':       (  8,   6),
-        'outlier=false': (  8,  -14),
-        'α=0.2':         (  8,   6),
-        'or=5.0%':       (  8,  -14),
-        'or=0.5%':       (  8,   6),
-        'qsl=0':         (  8,   6),
-        'ema_minmax':    (  8,   6),
-        'cs=256':        (  8,   6),
-        # Baseline — highest score, right side pushed up
-        'Baseline':      (  8,   6),
-        # dense cluster — clip goes LEFT, alpha/warmup goes RIGHT
-        'clip=5':        (-55,  28),   # left
-        'clip=7':        (-55,   0),   # left
-        'clip=3':        (-55, -28),   # left
-        'α=0.5':         ( 55,  28),   # right
-        'α=0.3':         ( 55,   0),   # right
-        'warmup=false':  ( 55, -28),   # right
+        'Baseline':      ( 8,   6),
+        'w/o Layer Bypass': ( 0,  12),
+        'w/ ema_minmax': ( 10,   -5),
+        'w/o outlier':   ( 8,  -5), 
+        'cs=256':        ( 8,   6),
+        'cs=1024':       ( 8,   6),
+        'cs=2048':       ( 8,   6),
+        'cs=4096':       ( 8, -14),
+        'or=0.5%':       ( 5,   10),
+        'or=5.0%':       ( 8, -14),
+
+        # Clip 系列 (左側) - 微調偏移讓標籤貼齊
+        'clip=7':        (-10,   0),   
+        'clip=5':        (-10,   8),   
+        'clip=3':        (-10,  -8),   
+        'clip=1':        (-10, -16), # 不要用 (0,0)，會擋住點
+
+        # Alpha & Warmup 系列 (右側)
+        'α=0.2':         ( 10,  16),
+        'α=0.3':         ( 10,   0),   
+        'α=0.5':         ( 10,   0),   
+        'w/o warmup':    ( 10,  -8),   
     }
 
     all_mems = [d['mem'] for d in all_configs.values()]
@@ -331,35 +351,37 @@ def plot_tradeoff(data):
     baseline = data['baseline']
     fig, ax = plt.subplots(figsize=(13, 6))
 
-    arrow_props = dict(arrowstyle='->', color='gray', lw=0.8)
     for name, d in all_configs.items():
         x, y = d['e2e'] / 1000, d['score']
+        # 繪製氣泡
         ax.scatter(x, y, s=bubble_size(d['mem']), c=group_colors[config_groups[name]],
                    alpha=0.75, edgecolors='black', linewidth=0.5, zorder=3)
-        dx, dy = label_offsets.get(name, (6, 6))
-        # draw arrow only when label is far enough from the point
-        arrowprops = arrow_props if (abs(dx) > 20 or abs(dy) > 20) else None
+        
+        # 獲取偏移量
+        dx, dy = label_offsets.get(name, (8, 0))
+        
+        # 自動決定對齊方向
+        ha_val = 'right' if dx < 0 else 'left'
+        
         ax.annotate(name, (x, y), textcoords='offset points', xytext=(dx, dy),
-                    fontsize=8, alpha=0.9, arrowprops=arrowprops)
+                    fontsize=8, alpha=0.9, ha=ha_val, va='center')
 
     ax.axhline(y=baseline['score'], color='gray', linestyle='--', alpha=0.4, linewidth=0.8)
     ax.axvline(x=baseline['e2e']/1000, color='gray', linestyle='--', alpha=0.4, linewidth=0.8)
     ax.set_xlabel('E2E Latency (s)'); ax.set_ylabel('F1 Score')
     ax.set_xlim(7, 35)
-    y_min = min(d['score'] for d in all_configs.values()) - 0.003
-    y_max = max(d['score'] for d in all_configs.values()) + 0.005
-    ax.set_ylim(y_min, y_max)
+    
+    y_vals = [d['score'] for d in all_configs.values()]
+    ax.set_ylim(min(y_vals)-0.003, max(y_vals)+0.005)
 
     legend_patches = [mpatches.Patch(color=v, label=k.title(), alpha=0.8) for k, v in group_colors.items()]
-    ax.legend(handles=legend_patches, loc='upper left', fontsize=8, title='Group', title_fontsize=8, framealpha=0.6)
+    ax.legend(handles=legend_patches, loc='upper left', fontsize=8, title='Group', framealpha=0.6)
 
-    fig.suptitle('F1 Score vs Latency Trade-off  (bubble size ∝ peak memory)', fontsize=12, y=1.01)
-    fig.subplots_adjust(left=0.07, right=0.97, top=0.93, bottom=0.1)
+    fig.suptitle('F1 Score vs Latency Trade-off (Baseline: Meta-Llama-3.1-8B)', fontsize=12, y=1.01)
+    fig.tight_layout()
     fig.savefig(f'{FIG_DIR}/ablation_tradeoff.png', bbox_inches='tight', dpi=150)
     plt.show()
-    print(f'Saved: {FIG_DIR}/ablation_tradeoff.png')
-
-
+    
 # ── Summary Table ─────────────────────────────────────────────────────────────
 
 def print_summary(data):
@@ -405,7 +427,7 @@ PLOTS = {
 if __name__ == '__main__':
     # ── Select which figures to generate ──────────────────────────────────────
     # Use 'all' to run everything, or list specific keys from PLOTS above.
-    RUN = ['tradeoff']
+    RUN = ['ema_alpha']
     # RUN = 'all'
     # RUN = ['architecture', 'tradeoff', 'summary']
     # ──────────────────────────────────────────────────────────────────────────
